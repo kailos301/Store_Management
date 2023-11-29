@@ -1,0 +1,26 @@
+<div class="col-lg-12 mb-4 d-flex align-items-center justify-content-between">
+  <a class="btn back-button btn-primary" href="javascript:history.back()">
+    <i class="fas fa-arrow-left mr-2"></i>
+    <span class="d-none d-md-inline-block d-lg-inline-block d-xl-inline-block ml-1">
+      {{'admin.store.location.backtoTables'| translate}}
+    </span>
+  </a>
+</div>
+<div class="loading-screen d-flex justify-content-center align-items-center w-100 v-70" *ngIf="locationId != 'CREATE_LOCATION' && locationStatus !== 'LOADED'">
+  <div class="d-flex flex-column text-center">
+    <div class="lds-ripple mx-auto"><div></div><div></div></div>
+  </div>
+</div>
+
+<div class="col-lg-12">
+  <div class="card list" *ngIf="locationId == 'CREATE_LOCATION' || locationStatus === 'LOADED'">
+    <div class="card-body">
+      <div class="row" >
+        <div class="col-lg-12">
+          <app-store-location-form [location]="locationId == 'CREATE_LOCATION' ? newLocation : locationRequest$ | async" [mode]="locationId == 'CREATE_LOCATION' ? 'CREATE': 'UPDATE'" (save)="locationId == 'CREATE_LOCATION' ? create($event): update($event)" (cancel)="cancel()" (delete)="delete()">
+          </app-store-location-form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

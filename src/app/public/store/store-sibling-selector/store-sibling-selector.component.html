@@ -1,0 +1,7 @@
+<div class="d-flex py-2 px-1" *ngIf="siblings.length > 1">
+  <select [(ngModel)]="selectedSibling" class="form-control" (change)="siblingSelected()">
+    <option *ngFor="let sibling of siblings" [ngValue]="sibling">
+      {{sibling.storeName}}
+    </option>
+  </select>
+</div>

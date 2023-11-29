@@ -1,0 +1,170 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import './variables';
+
+@media print {
+  body {
+    min-width: auto !important;
+    max-width: 100% !important;
+  }
+}
+//---- ADMIN BODY ----
+.admin.app {
+  .app-body {
+    margin-top: $admin-header-height;
+    @include media-breakpoint-up(lg) {
+      margin-top: $admin-header-lg-height;
+    }
+  }
+  .app-header .navbar-toggler,
+  .app-header .navbar-toggler-icon {
+    &:focus {
+      outline: initial;
+    }
+  }
+  .sidebar {
+    margin-left: -$admin-menu-width;
+    height: calc(100vh - #{$admin-header-height}) !important;
+    background: $admin-gray;
+    @include media-breakpoint-up(lg) {
+      height: calc(100vh - #{$admin-header-lg-height}) !important;
+    }
+    .nav-link {
+      color: $admin-menu-text;
+      &:hover {
+        color: #fff;
+      }
+      &.active {
+        background: $blue;
+        color: #fff;
+        .nav-icon {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .sidebar,
+  .sidebar-nav,
+  .sidebar .nav {
+    width: $admin-menu-width;
+    z-index: 9999;
+  }
+  .main {
+    margin-left: 0;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .app.sidebar-lg-show {
+    .admin.app {
+      .main {
+        margin-left: $admin-menu-width !important;
+      }
+    }
+  }
+  .app.sidebar-lg-show.brand-minimized {
+    .admin.app {
+      .main {
+        margin-left: 45px !important;
+      }
+    }
+  }
+}
+.sidebar-minimized {
+  .admin.app {
+    .sidebar,
+    .sidebar-nav,
+    .sidebar .nav {
+      @include media-breakpoint-up(lg) {
+        width: 50px;
+      }
+    }
+  }
+}
+.sidebar-minimized {
+  .sidebar {
+    .sidebar-minimizer {
+      z-index: 9999;
+    }
+  }
+ }
+ .brand-minimized .app-header .navbar-brand {
+  width: 50px !important;
+  .navbar-brand-full {
+    display: none !important;
+  }
+  .navbar-brand-minimized {
+    display: block !important;
+  }
+ }
+
+//---- ADMIN LIST ----
+// visit: https://github.com/rigasp/stores/wiki/Admin-UI-global-styling-for-lists-pages
+.breadcrumb {
+  border-bottom: 0;
+  padding-bottom: 0px !important;
+}
+
+.card.list {
+  border: 0px;
+  .card-header {
+    font-size: 1.250em;
+    border-radius: 0.25rem !important;
+    border: 0px;
+    color: #273773;
+  }
+  .card-body {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    .table thead th {
+      border: 0px;
+    }
+    .table-striped tbody tr:nth-of-type(odd) {
+      background-color: #fff;
+    }
+    .table tbody tr.grayed {
+      background-color: #f0f3f5;
+    }
+    .table th {
+      border-top: 0px;
+    }
+    .table thead th {
+      border-bottom: 0px;
+    }
+  }
+}
+
+//---- ADMIN BUTTONS ----
+.btn:focus,
+.btn.focus {
+  box-shadow: initial;
+}
+.btn-primary:focus,
+.btn-primary.focus {
+  box-shadow: initial;
+}
+
+
+//---- POPUP OVERLAY ----
+.cdk-global-scrollblock {
+    position: relative  !important;
+    width: 100%;
+    overflow-y: auto;
+    top: 0 !important;
+    left: 0 !important;
+}
+.cdk-overlay-container{
+  z-index: 9999;
+}
+
+
+//---- ADMIN CONTENT WRAPPER ----
+@include media-breakpoint-down(xs) {
+  .main .container-fluid {
+   padding: 0 !important;
+  }
+}
+
+.max-width-100 {
+  max-width: 100%;
+}

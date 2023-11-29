@@ -1,0 +1,55 @@
+@import '../registration-user-details-form/registration-user-details-form.component.scss';
+
+.app-body {
+  .card-group {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      mix-blend-mode: multiply;
+      background-repeat: no-repeat;
+      z-index: 1;
+    }
+  }
+}
+
+.leftside {
+  padding-left: 45px;
+}
+
+.rightSide {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media only screen and (device-width: 1024px) {
+  .mx-left-section {
+    margin: 0 12%;
+  }
+}
+
+@media (max-width: 768px) {
+  .border-right-3 {
+    border-right: 0 !important;
+  }
+
+  .mx-left-section {
+    margin: 0 1em;
+  }
+
+  .leftside {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .list-group-item{
+    padding: .5em 1em;
+  }
+}

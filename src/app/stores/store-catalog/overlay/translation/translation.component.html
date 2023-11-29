@@ -1,0 +1,188 @@
+<h1 mat-dialog-title class="text-blue font-size-popup-title col-lg-12">{{'admin.store.catalog.translation.translation'|translate}}</h1>
+<div mat-dialog-content>
+    <form [formGroup]="contentItemForm" *ngIf="dialogMode=='EDIT' || (dialogMode=='CREATE' && (default$ | async))">
+        <div class="row">
+            <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                <div class="col-md-3"></div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <label for="source-lang"
+                            class="lang-label col-xl-6 col-lg-6 col-md-12 col-sm-12">{{'admin.store.catalog.language.sourceLanguage'|translate}}</label>
+                        <div class="defaultLanguage col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                            <i class="fas fa-globe pr-1"></i>
+                            <label>{{(store$ | async).language.name}}</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="row">
+                        <label class="lang-label col-xl-5 col-lg-5 col-md-12 col-sm-12 required"
+                            for="languageId">{{'admin.store.catalog.language.targetLanguage'|translate}}</label>
+                        <div class="input-group col-xl-7 col-lg-7 col-md-12 col-sm-12">
+                            <span *ngIf="selectedLangLocale" class="defaultLanguage mr-1"><i class="fas fa-globe pr-1"></i></span>
+                            <select class="form-control" data-chosen="" onchange="this.dataset.chosen = this.value" (change)="onTargetLangChange(selectLangId.value)"
+                                [class.is-invalid]="getControl('languageId').invalid && (getControl('languageId').dirty || getControl('languageId').touched)"
+                                placeholder="Language" formControlName="languageId" id="languageId"
+                                [attr.disabled]=" dialogMode=='EDIT' ? true:null " #selectLangId>
+                                <option value="">{{'admin.global.pleaseSelect'|translate}}</option>
+                                <option *ngFor="let lang of getFilteredLangList()" value="{{ lang.id }}">{{ lang.name }}
+                                </option>
+                            </select>
+                            <div class="invalid-feedback"
+                                *ngIf="getControl('languageId').errors && getControl('languageId').errors.required">
+                                {{'admin.global.field.required'|translate}}
+                            </div>
+                        </div>
+                        <div class="ml-3 mt-2" *ngIf="showGoogleTranslateLink">
+                            <a class="text-decoration-underline"
+                                href="https://translate.google.com/#view=home&op=translate&sl=auto&tl={{selectedLangLocale}}&text={{(dialogMode=='CREATE' && (default$ | async).name)?(default$ | async).name:'Name'}}%0A%0A{{(dialogMode=='CREATE' && (default$ | async).priceDescription)?(default$ | async).priceDescription:'Price Description'}}%0A%0A{{(dialogMode=='CREATE' && (default$ | async).shortDescription)?(default$ | async).shortDescription:'Short Description'}}%0A%0A{{(dialogMode=='CREATE' && (default$ | async).longDescription)?(default$ | async).longDescription:'Long Description'}}"
+                                target="_blank">{{'admin.store.catalog.language.withGoogleTranslate'|translate}}</a>
+                            <span><img class="translate-icon ml-2" src="/assets/img/google-translate-icon.png" /></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" *ngIf="source != 'VARIANT_OFFER'">
+            <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                <div class="col-md-3">
+                    <label for="name" class="required">{{'admin.global.name'|translate}}</label>
+                </div>
+                <label class="col-md-4 text-break">
+                    {{(dialogMode=='CREATE' && (default$ | async).name)?(default$ | async).name:'Name'}}</label>
+                <div class="col-md-5">
+                    <div class="input-group">
+                        <input type="text" class="form-control"
+                            [class.is-invalid]="getControl('name').invalid && (getControl('name').dirty || getControl('name').touched)"
+                            [placeholder]="(dialogMode=='CREATE' && (default$ | async).name)?(default$ | async).name:'Name'"
+                            autocomplete="name" formControlName="name" id="name" maxlength="50" />
+                        <div class="invalid-feedback" *ngIf="getControl('name').errors">
+                            <span
+                                *ngIf="getControl('name').errors.required">{{'admin.global.field.required'|translate}}</span>
+                            <span
+                                *ngIf="getControl('name').errors.minlength">{{'admin.global.field.minLength'|translate:{minLength: getControl('name').errors.minlength.requiredLength} }}</span>
+                            <span
+                                *ngIf="getControl('name').errors.maxlength">{{'admin.global.field.maxLength'|translate:{maxLength: getControl('name').errors.maxlength.requiredLength} }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="source == 'VARIANT_OFFER'">
+            <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                <div class="col-md-3">
+                    <label for="priceDescription"
+                        class="required">{{'admin.store.catalog.description.priceDescription'|translate}}</label>
+                </div>
+                <label class="col-md-4 text-break">
+                    {{(dialogMode=='CREATE' && (default$ | async).priceDescription)?(default$ | async).priceDescription:'Price Description'}}
+                </label>
+                <div class="col-md-5">
+                    <div class="input-group">
+                        <input type="text" class="form-control"
+                            [class.is-invalid]="getControl('priceDescription').invalid && (getControl('priceDescription').dirty || getControl('priceDescription').touched)"
+                            [placeholder]="(dialogMode=='CREATE' && (default$ | async).priceDescription)?(default$ | async).priceDescription:'Price Description'"
+                            autocomplete="priceDescription" formControlName="priceDescription" id="priceDescription"
+                            maxlength="50" />
+                        <div class="invalid-feedback" *ngIf="getControl('priceDescription').errors">
+                            <span
+                                *ngIf="getControl('priceDescription').errors.required">{{'admin.global.field.required'|translate}}</span>
+                            <span
+                                *ngIf="getControl('priceDescription').errors.minlength">{{'admin.global.field.minLength'|translate:{minLength: getControl('priceDescription').errors.minlength.requiredLength} }}</span>
+                            <span
+                                *ngIf="getControl('priceDescription').errors.maxlength">{{'admin.global.field.maxLength'|translate:{maxLength: getControl('priceDescription').errors.maxlength.requiredLength} }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="source != 'CHILD_CATEGORY' &&  source != 'VARIANT_OFFER'">
+            <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                <div class="col-md-3">
+                    <label for="shortDescription"
+                        class="">{{'admin.store.catalog.description.shortDescription'|translate}}</label>
+                </div>
+                <label class="col-md-4 text-break">
+                    {{(dialogMode=='CREATE' && (default$ | async).shortDescription)?(default$ | async).shortDescription:'Short Description'}}
+                </label>
+                <div class="col-md-5">
+                    <div class="input-group">
+                        <input type="text" class="form-control"
+                            [placeholder]="(dialogMode=='CREATE' && (default$ | async).shortDescription)?(default$ | async).shortDescription:'Short Description'"
+                            [class.is-invalid]="getControl('shortDescription').invalid && (getControl('shortDescription').dirty || getControl('shortDescription').touched)"
+                            autocomplete="shortDescription" formControlName="shortDescription" id="shortDescription"
+                            maxlength="150" />
+                        <div class="invalid-feedback" *ngIf="getControl('shortDescription').errors">
+                            <span
+                                *ngIf="getControl('shortDescription').errors.maxlength">{{'admin.global.field.maxLength'|translate:{maxLength:getControl('shortDescription').errors.maxlength.requiredLength} }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="source != 'CHILD_OFFER' && source != 'CHILD_CATEGORY' &&  source != 'VARIANT_OFFER'">
+            <div class="form-group col-lg-12 col-md-12 col-sm-12" *ngIf="source != 'CATEGORY'">
+                <div class="col-md-3">
+                    <label for="longDescription"
+                        class="">{{'admin.store.catalog.description.longDescription'|translate}}</label>
+                </div>
+
+                <label class="col-md-4 text-break">
+                    {{(dialogMode=='CREATE' && (default$ | async).longDescription)?(default$ | async).longDescription:'Long Description'}}
+                </label>
+
+                <div class="col-md-5">
+                    <div class="input-group">
+                        <textarea class="form-control"
+                            [placeholder]="(dialogMode=='CREATE' && (default$ | async).longDescription)?(default$ | async).longDescription:'Long Description'"
+                            autocomplete="LongDescription"
+                            [class.is-invalid]="getControl('longDescription').invalid && (getControl('longDescription').dirty || getControl('longDescription').touched)"
+                            formControlName="longDescription" id="longDescription" maxlength="1000"></textarea>
+                        <div class="invalid-feedback" *ngIf="getControl('longDescription').errors">
+                            <span
+                                *ngIf="getControl('longDescription').errors.maxlength">{{'admin.global.field.maxLength'|translate:{maxLength:getControl('longDescription').errors.maxlength.requiredLength} }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-lg-12 col-md-12 col-sm-12" *ngIf="source == 'OFFER'">
+                <div class="col-md-3">
+                    <label for="priceDescription"
+                        class="">{{'admin.store.catalog.description.priceDescription'|translate}}</label>
+                </div>
+
+                <label class="col-md-4">
+                    {{(dialogMode=='CREATE' && (default$ | async).priceDescription)?(default$ | async).priceDescription:'Price Description'}}
+                </label>
+                <div class="col-md-5">
+                    <div class="input-group">
+                        <textarea class="form-control"
+                            [placeholder]="(dialogMode=='CREATE' && (default$ | async).priceDescription)?(default$ | async).priceDescription:'Price Description'"
+                            autocomplete="PriceDescription"
+                            [class.is-invalid]="getControl('priceDescription').invalid && (getControl('priceDescription').dirty || getControl('priceDescription').touched)"
+                            formControlName="priceDescription" id="priceDescription" maxlength="500"></textarea>
+                        <div class="invalid-feedback" *ngIf="getControl('priceDescription').errors">
+                            <span
+                                *ngIf="getControl('priceDescription').errors.maxlength">{{'admin.global.field.maxLength'|translate:{maxLength:getControl('priceDescription').errors.maxlength.requiredLength} }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div mat-dialog-actions>
+    <div class="col-lg-8 col-md-6 col-sm-12">
+        <button *ngIf="dialogMode=='EDIT'" type="link" class="btn btn-danger leftActions text-blue cursorPointer"
+            (click)="onDelete(contentItemForm)"><i class="fas fa-trash mr-2 pr-1 text-white"></i>{{'admin.global.delete'|translate}}</button>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="rightActions">
+            <a type="link" class="text-blue cursorPointer" (click)="onNoClick()">{{'admin.global.cancel'|translate}}</a>
+            <button [mat-dialog-close]="contentItemForm"  type="button"
+                class="btn btn-primary"><i class="fas fa-save mr-2 pr-1"></i>{{'admin.global.save'|translate}}</button>
+        </div>
+    </div>
+</div>

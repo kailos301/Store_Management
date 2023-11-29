@@ -1,0 +1,54 @@
+<div class="col-lg-12">
+    <div class="card list">
+        <div class="card-header">
+            <div>{{ 'admin.global.contactus.support' | translate }}</div>
+        </div>
+        <div class="row pt-4">
+            <div class="col-sm-10">
+                <label class="ml-2">
+                    <ul>
+                        <li class="help-li">{{'admin.global.contactus.instructions'|translate}}</li>
+                    </ul>
+                </label>
+                <div class="ml-2rem mb-3">
+                    <label class="ml-3">&ndash; <a href="https://www.gonnaorder.com/help/" target="_blank">
+                            {{'admin.global.contactus.helpCenter'|translate}}</a></label>
+                    <div class="clearfix"></div>
+                    <label class="ml-3 mt-n1">&ndash; <a href="https://www.gonnaorder.com/faq-frequently-asked-questions/"
+                            target="_blank">
+                            {{'admin.global.contactus.faq'|translate}}</a>
+                    </label>
+                    <div class="clearfix"></div>
+                    <label class="ml-3 mt-n1">&ndash; <a href="https://www.gonnaorder.com/guide"
+                            target="_blank">
+                            {{'admin.global.contactus.featuresGuide'|translate}}</a>
+                    </label>
+                </div>
+                <label class="ml-2">
+                    <ul>
+                        <li class="comment-li">{{'admin.global.contactus.gettintouch'|translate}}</li>
+                    </ul>
+                </label>
+                <div class="ml-3">
+                    <form [formGroup]="contactForm" class="pt-3 mx-3 form-align">
+                        <textarea class="form-control ml-3"
+                            [class.is-invalid]="getControl('description').invalid && (getControl('description').dirty || getControl('description').touched)"
+                            autocomplete="description" formControlName="description" id="description" rows="4"></textarea>
+                        <div class="invalid-feedback ml-4" id="descriptionError" *ngIf="getControl('description').errors">
+                            <span
+                                *ngIf="getControl('description').errors.minlength">{{'admin.global.field.minLength'|translate: {minLength: getControl('description').errors.minlength.requiredLength} }}</span>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 mb-2 mt-2 ml-2">
+                            <div class="float-right mr-n4 mb-4">
+                                <button (click)="onSubmit()" [disabled]="contactForm.invalid"
+                                    class="btn btn-primary submit-btn">
+                                    {{'admin.global.contactus.submit' | translate}}</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+</div>

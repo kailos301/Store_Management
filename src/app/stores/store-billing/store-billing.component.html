@@ -1,0 +1,30 @@
+<div class="col-lg-12">
+    <div class="card list">
+      <div class="card-header">
+        {{'admin.store.setting.billing' | translate}}
+        <app-help-icon [helpPageName]="storeBillingHelpPage"></app-help-icon>
+      </div>
+
+      <div class="card-body">
+          <button type="button" class="rounded-0 btn btn-outline-primary" routerLinkActive="btnChange" routerLink="subscriptions">
+            {{'admin.global.subscription.label'|translate}}
+          </button>
+          <button type="button" class="rounded-0 btn btn-outline-primary" routerLink="billing-details"
+            routerLinkActive="btnChange">
+            {{'admin.global.subscription.billingDetails.label'|translate}}
+          </button>
+          <button type="button" class="rounded-0 btn btn-outline-primary" routerLink="invoices"
+            routerLinkActive="btnChange">
+            {{'admin.global.subscription.invoiceLabel'|translate}}
+          </button>
+          <div>
+            <div class="row">
+              <div class="col-12">
+                <router-outlet>
+                </router-outlet>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>

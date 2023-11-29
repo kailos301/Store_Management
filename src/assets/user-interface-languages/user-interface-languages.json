@@ -1,0 +1,154 @@
+[
+    {
+        "name":"English",
+        "locale":"en"
+    },
+    {
+        "name":"Spanish",
+        "locale":"es"
+    },
+    {
+        "name": "French",
+        "locale":"fr"
+    },
+    {
+        "name": "German",
+        "locale":"de"
+    },
+    {
+        "name": "Italian",
+        "locale":"it"
+    },
+    {
+        "name": "Portuguese",
+        "locale":"pt"
+    },
+    {
+        "name": "Dutch",
+        "locale":"nl"
+    },
+    {
+        "name": "Greek",
+        "locale":"el"
+    },
+    {
+        "name": "Russian",
+        "locale":"ru"
+    },
+    {
+        "name": "Turkish",
+        "locale":"tr"
+    },
+    {
+        "name": "Korean",
+        "locale":"Ko"
+    },
+    {
+        "name": "Vietnamese",
+        "locale":"vi"
+    },
+    {
+        "name": "Hindi",
+        "locale":"hi"
+    },
+    {
+        "name": "Chinese",
+        "locale":"zh"
+    },
+    {
+        "name": "Japanese",
+        "locale":"ja"
+    },
+    {
+        "name": "Croatian",
+        "locale":"hr"
+    },
+    {
+        "name": "Serbian",
+        "locale":"sr"
+    },
+    {
+        "name": "Bulgarian",
+        "locale":"bg"
+    },
+    {
+        "name": "Macedonian",
+        "locale":"mk"
+    },
+    {
+        "name": "Czech",
+        "locale":"cs"
+    },
+    {
+        "name": "Danish",
+        "locale":"da"
+    },
+    {
+        "name": "Finnish",
+        "locale":"fi"
+    },
+    {
+        "name": "Norwegian",
+        "locale":"no"
+    },
+    {
+        "name": "Swedish",
+        "locale":"sv"
+    },
+    {
+        "name": "Bengali",
+        "locale":"bn"
+    },
+    {
+        "name": "Hungarian",
+        "locale":"hu"
+    },
+    {
+        "name": "Indonesian",
+        "locale":"id"
+    },
+    {
+        "name": "Romanian",
+        "locale":"ro"
+    },
+    {
+        "name": "Ukrainian",
+        "locale":"uk"
+    },
+    {
+        "name": "Polish",
+        "locale":"pl"
+    },
+    {
+        "name": "Bosian",
+        "locale":"bs"
+    },
+    {
+        "name": "Latvian",
+        "locale":"lv"
+    },
+    {
+        "name": "Tagalog",
+        "locale":"tl"
+    },
+    {
+        "name": "Marathi",
+        "locale":"mr"
+    },
+    {
+        "name": "Gujarati",
+        "locale":"gu"
+    },
+    {
+        "name": "Persian",
+        "locale":"fa"
+    },
+    {
+        "name": "Arabic",
+        "locale":"ar"
+    },
+    {
+        "name": "Hebrew",
+        "locale":"he"
+    }
+]

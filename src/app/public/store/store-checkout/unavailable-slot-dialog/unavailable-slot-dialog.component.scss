@@ -1,0 +1,33 @@
+@import "../../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../../node_modules/bootstrap/scss/mixins";
+
+.unavailable-slot-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.38);
+    z-index: 9999;
+    &.hide {
+        display: none !important;
+    }
+    .selection-container {
+        width: 30vw;
+        max-height: 80vh;
+        border-radius: 2px;
+        background-color: #ffffff;
+        box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.22), 0 24px 24px 0 rgba(0, 0, 0, 0.3);
+        @include media-breakpoint-down(md) {
+            width: 90vw;
+        }
+        .header-container {
+            min-height: 52px;
+        }
+        .body-container {
+            max-height: calc(80vh - 102px);
+            overflow: auto;
+        }
+    }
+}

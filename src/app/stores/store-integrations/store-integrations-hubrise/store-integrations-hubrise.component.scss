@@ -1,0 +1,14 @@
+:host {
+    form label.required:after {
+        color: red;
+        content: " *";
+    }
+}
+
+.hubriseimg {
+    max-width: 200px;
+}
+
+.italic {
+    font-style: italic;
+}

@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "Pinatatakbo ng",
+			"thankYou": "Salamat",
+			"discount": "Diskwento",
+			"viewOrder": "Tingnan ang order",
+			"errorH2": "May maling nangyari",
+			"errorUnexpected": "May di inaasahang nangyari",
+			"errorExpected": "May di inaasahang nangyari",
+			"errorMustSelectOne": "Dapat kang pumili ng isa",
+			"errorTrialExceeded": "Ang paraang ito ay hindi magagamit. Ang mahigpit na pagsusubok ay lumampas",
+			"emptyCart": "Walang item sa iyong order",
+			"optional": "opsyonal",
+			"cookies": "Ang site na ito ay gumagamit ng cookies. Sa pagtuloy ng paggamit ng website na ito, sumasang-ayon ka sa kanila",
+			"more": "higit pa",
+			"less": "mas kaunti",
+			"chooseFrom": "Pumili mula sa",
+			"standard": "standardi",
+			"days": {
+				"mon": "Lunes",
+				"tue": "Martes",
+				"wed": "Miyerkules",
+				"thu": "Huwebes",
+				"fri": "Biyernes",
+				"sat": "Sabado",
+				"sun": "Linggo"
+			},
+			"opentimelist": "Mga oras ng pagbubukas",
+			"newVersionAvailable": "Nagpapatakbo ka ng isang mas lumang bersyon ng application. I-reload ang application upang matanggap ang pinakabagong pag-update",
+			"reloadApplication": "I-reload ang application",
+			"poweredByGonnaOrder": "Pinapagana ng Gonnaorder",
+			"recents": "Recents",
+			"information": "Impormasyon",
+			"yes": "Oo",
+			"no": "Hindi",
+			"error": "Error",
+			"errorQRScanner": "Nagkaroon ng error sa QR Scanner!",
+			"confirm": "Kumpirmahin"
+		},
+		"select": {
+			"selectAtLeast": "Dapat kang pumili ng hindi bababa sa {{x}}",
+			"selectAtmost": "Maaari kang pumili ng higit sa {{x}}",
+			"selectAtleastAtMost": "Pumili ka ng hindi bababa sa {{x}} at hindi lalagpas sa {{y}}",
+			"selectBetween": "Dapat kang pumili sa pagitan ng mga halagang {{childCategory.min}} at {{childCategory.max}}."
+		},
+		"load": {
+			"loadingMessage": "Sandali lamang"
+		},
+		"itemDetails": {
+			"removeFromOrder": "Tanggalin ito sa iyong order",
+			"addToOrder": "Idagdag sa iyong order",
+			"updateOrder": "Baguhin ang iyong order"
+		},
+		"checkout": {
+			"yourOrder": "Ang iyong order",
+			"total": "Kabuuan",
+			"specialNote": "Magdagdag ng ispesyal na tala sa iyong order",
+			"howToReceiveYourOrder": "Paano mo gustong matanggap ang iyong order?",
+			"option": {
+				"pickup": "Ako mismo ang kukuha nito",
+				"addressDelivery": "Gusto ko itong matanggap sa aking address",
+				"serve": {
+					"location": "Nakaupo ako sa mesa"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "Hindi namin na i-save ang detalye ng iyong order",
+				"fieldRequired": "Kailangan ang bahaging ito",
+				"selectFutureTime": "Mangyaring pumili ng oras sa hinaharap",
+				"orderSubmissionFailed": "Ang order ay hindi maaaring isumite",
+				"ORDER_LOCATION_NOT_PRESENT": "Nawawala ang numero ng talahanayan o pangalan ng lokasyon",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "Ang ilang kinakailangang impormasyon sa customer ay nawawala",
+				"ORDER_WISH_TIME_INVALID": "Ang nais na oras ng paghiling ay nakaraan",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "Nawawala ang paraan ng paghahatid ng order",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "Hindi suportado ang paghahatid sa address",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "Ang pagsisilbi sa order ay hindi suportado",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "Ang pickup ng order ay hindi suportado",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "Ang suporta sa tinukoy na post code ay hindi suportado",
+				"OPENING_TIME_SCHEDULE_ERROR": "Ang tindahan ay sarado sa napiling oras ng wish wish",
+				"PROMOTION_NOT_ELIGIBLE": "Napili ang isang promosyon ngunit hindi ito karapat-dapat",
+				"offersUnavailableExplanation": "Ang mga item sa ibaba ay hindi magagamit sa petsa at oras na iyong tinukoy. Mangyaring mag-click sa i-update ang order upang alisin ang mga ito mula sa iyong order ng order",
+				"offersOutOfStockExplanation": "Walang sapat na mga item na magagamit",
+				"invalidVoucherCode": "Ang code ng voucher ay hindi wasto",
+				"INVALID_INPUT": "Error sa pagproseso ng mga ibinigay na detalye.",
+				"slotUnavailableExplanation": "Ang hiniling na puwang ng oras ay hindi magagamit. Mangyaring pumili ng ibang time slot o pumili ng ibang paraan ng paghahatid.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "Hindi posible na humiling ng isang order para sa parehong araw para sa tindahan na ito.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "Hindi posible na humiling ng isang order para sa parehong araw para sa iyong lugar.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "Hindi posible na humiling ng isang order para sa parehong araw para sa mga sumusunod na item:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "Hindi posible na maihatid sa iyong post code para sa hiniling na oras at araw.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "Hindi posible na maghatid ng mga order sa tiyak na oras at petsa. Mangyaring pumili ng kahalili.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "Hindi posible na pumili ng mga order sa tukoy na oras at petsa. Mangyaring pumili ng kahalili.",
+				"INTERNAL_ERROR": "Naranasan ang hindi inaasahang error. Mangyaring muling i-load ang application upang subukang muli.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "Hindi nakamit ang minimum na halagang order ng paghahatid. Magdagdag ng isa pang halagang {{AMOUNT_MISSING}} sa iyong order upang magpatuloy.",
+				"paymentFailed": "Nabigo kang magbayad online gamit ang pamamaraang ito. Pakiulit muli.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "Hindi nailapat ang mga kinakailangang promosyon",
+				"INVALID_CUSTOMER_VOUCHER": "Di-wastong Customer Voucher",
+				"slotUnavailable": "Ang napiling oras ay hindi magagamit",
+				"slotUnavailableExplanationWithSuggestion": "Ang napiling oras ay nasa nakaraan o hindi na magagamit. Susunod na magagamit na oras:",
+				"socialLoginFailed": "Hindi kami makakonekta sa iyong account",
+				"customerDetailsUpdateFailed": "Nabigong i-update ang data ng profile",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "Hindi naghahatid ang store sa lokasyon na ito",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "Hindi namin mahanap ang address na iyong ibinigay. Mangyaring i-update ang address at subukang muli o makipag-ugnay sa tindahan.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "Hindi posible na magsumite ng mga order sa tiyak na oras at petsa. Mangyaring pumili ng kahalili.",
+				"MISSING_LOCATION_TAP_ID": "Ang Tap ID ay mandatory",
+				"invalidPin": "Di-wastong pin code ng customer"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "Ang iyong order ay ihahatid sa iyo"
+					},
+					"unknown": {
+						"location": "Ang iyong order ay ihahatid sa iyo"
+					}
+				},
+				"pickup": "Pickup-in ang order",
+				"addressDelivery": "Ang iyong impormasyon"
+			},
+			"yourInformationPlease": "Ang iyong impormasyon",
+			"locationCode": "Mesa",
+			"yourName": "Ang iyong pangalan",
+			"email": "Email address",
+			"phoneNumber": "Numero ng telepono",
+			"fullName": "Buong pangalan",
+			"streetAddress": "Pangalan ng Kalye",
+			"zip": "Postal code",
+			"town": "Munisipalidad/Bayan",
+			"minimumAmount": "Kailangang ang minimum na halaga ng order ay {{amount}} para maideliver",
+			"deliveryFee": "Bayad sa pagdeliver",
+			"deliveryFeeApplicable": "Naaayon sa order na mababa sa {{amount}}",
+			"field": {
+				"generalValidation": "Ang format ng bahaging ito ay hindi tama"
+			},
+			"acceptTerm": "Jatkamalla hyväksyt {{Käyttöehdot}} ja {{Tietosuojakäytäntö}}",
+			"termsAndPolicy": "Jatkamalla hyväksyt ",
+			"acceptTerms": {
+				"and": "ja",
+				"after": ""
+			},
+			"termsOfUse": "Käyttöehdot",
+			"privacyPolicy": "Tietosuojakäytäntö",
+			"yourTable": "Ang iyon mesa",
+			"allowedCharacters": "Pinapayagang characters",
+			"wishTimeHeading": "Kailan mo nais na matanggap ang iyong order?",
+			"asSoonAsPossible": "Nais kong matanggap ito sa lalong madaling panahon",
+			"specifyWishTime": "Nais kong tukuyin kung kailan matanggap ito",
+			"specialNoteExample": "Magdagdag ng ispesyal na tala sa iyong order",
+			"cardDisabledNote": "Mangyaring ibahagi ang iyong order sa tindahan kapag handa ka na",
+			"cardHolderName": "Pangalan ng May-ari ng Card",
+			"cardNumber": "Ang iyong Numero ng Card",
+			"cvv": "CVV",
+			"itemsOutOfStock": "Ang ilang mga item ay wala nang stock",
+			"floor": "Palapag",
+			"storeClosedAtOrderWishDate": "Ang tindahan ay sarado sa nais na petsa o oras ng nais",
+			"offersNotAvailableAtOrderWishDate": "Ang ilang mga alok ay hindi magagamit sa nais na petsa o oras ng nais",
+			"updateOrder": "I-update ang order",
+			"offers": {
+				"availableQuantity": "Kasalukuyang magagamit"
+			},
+			"voucherCode": "Magpasok ng isang voucher code",
+			"validVoucherCode": "Ang voucher code ay wasto",
+			"yourRoom": "Kwarto mo",
+			"yourLocation": "Iyong lokasyon",
+			"serveOption": {
+				"location": "Gusto kong matanggap ito sa aking lokasyon",
+				"room": "Nasa kwarto ako"
+			},
+			"social": {
+				"connect": "Kumonekta sa social account"
+			},
+			"remainingValidVoucher": "Natitirang balanse sa voucher:",
+			"paymentsense": {
+				"declined": "Ang pagbabayad sa online sa pamamagitan ng Paymentsense ay tinanggihan"
+			},
+			"saveCustomerDetailsForFuture": "I-save ang iyong data sa profile para sa mga order sa hinaharap",
+			"customerDetailsUpdateSuccess": "Ang iyong data sa profile ay nai-update",
+			"logout": "Pag-logout",
+			"expiry": "Petsa ng Pag-expire(MMYY)",
+			"enterPin": "Ilagay ang PIN Number"
+		},
+		"payment": {
+			"payOnlineNow": "Piliing magbayad ngayon ng online",
+			"chooseYourPaymentMethod": "Piliin ang paraan ng pagbabayad",
+			"creditCard": "Credit card",
+			"paypal": "Paypal",
+			"submitOrder": "Isumite ang iyong order",
+			"proceedToPayment": "Magpatuloy sa pagbabayad",
+			"errorCouldNotConnect": "Hindi namin mai-connect sa piniling paraan ng pagbabayad. Mangyaring bumalik sa screen ng pagcheckout at pumili ng ibang paraan ng pagbabayad o subukang muli mamaya.",
+			"enterCreditCardInfo": "Mangyaring punan ng iyong credit o debit card",
+			"yourOrderIsReady": "Handa na ang iyong order",
+			"yourOrderIsExpected": "Inaasahan ang iyong order",
+			"errors": {
+				"valueNotValid": "Ang halagang ibinigay ay hindi tama",
+				"zipNotAvailable": "Hindi ka maaaring maglagay ng isang online delivery order sa postal code na ito. Mangyaring makipag-ugnay sa tindahan para sa karagdagang impormasyon",
+				"addressNotAvailable": "Hindi matagpuan ang address. Mangyaring pumili ng address ng kalye mula sa mga mungkahi."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "Magbayad online ngayon",
+			"digitalWallets": "Mga Digital Wallet",
+			"creditCardSecure": "Secure ang Mga Pagbabayad sa Credit Card",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "Ang iyong numero ng order",
+			"orderStatus": "Kalagayan ng order",
+			"notSubmitted": "Hindi pa nasumite",
+			"sent": "Ipinadala",
+			"ready": "Handa na",
+			"rejected": "Tinanggihan",
+			"startNewOrder": "Magsimula ng bagong order",
+			"errors": {
+				"emailProperFormat": "Mangyaring punan ng balidong email"
+			},
+			"fiilEmailAddress": "Punan ng iyong email address upang matanggap ang kopya ng iyong order",
+			"failedEmail": "Nabigong maipadala ang email",
+			"emailSent": "Naipadala ang email",
+			"received": "Natanggap",
+			"accepted": "Tinanggap",
+			"mobileAppPromotion": "Susunod na pag-order sa pamamagitan ng GonnaOrder mobile app"
+		},
+		"dialog": {
+			"ok": "OK",
+			"cancel": "Kansel"
+		},
+		"store": {
+			"currently": {
+				"closed": "Ang tindahan ay kasalukuyang sarado"
+			},
+			"time": {
+				"closed": "Ang tindahan ay sarado sa napiling oras"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "Vegetarian",
+						"vegan": "Vegan",
+						"celery": "Kintsay",
+						"wheat": "Trigo",
+						"crustaceans": "Crustacean",
+						"eggs": "Mga itlog",
+						"fish": "Isda",
+						"lupin": "Lupin",
+						"milk": "Gatas",
+						"molluscs": "Mga molusko",
+						"mustard": "Mustasa",
+						"nuts": "Mga mani",
+						"peanuts": "Mga mani",
+						"sesame": "Linga",
+						"soya": "Si soya",
+						"sulphurDioxide": "Sulphur Dioxide",
+						"halal": "Halal",
+						"barley": "Barley",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "Gumagamit ang website na ito ng cookies upang mapagbuti ang iyong karanasan, ngunit maaari kang mag-opt out kung nais mo.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "Mag-apply"
+		},
+		"cookie": {
+			"accept": "Tanggapin",
+			"reject": "Tanggihan",
+			"readMore": "Magbasa Nang Higit Pa"
+		},
+		"connect": {
+			"social": {
+				"google": "Kumonekta sa Google",
+				"facebook": "Kumonekta sa Facebook"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "Walang laman ang iyong basket",
+				"proceed": "Magpatuloy"
+			}
+		},
+		"main": {
+			"typeUrl": "Mag-type ng URL o pangalan ng tindahan",
+			"invalidUrl": "Di-wasto ang URL",
+			"scanQRCode": "Mag-scan ng QR Code",
+			"storeNotFound": "Hindi nakita ang tindahan",
+			"storeSaved": "Matagumpay na na-save ang impormasyon sa tindahan!",
+			"navigateStoreConfirm": "Mag-navigate sa tindahan?"
+		},
+		"recents": {
+			"nothingFound": "Walang nahanap dito"
+		}
+	}
+}

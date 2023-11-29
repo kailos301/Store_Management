@@ -1,0 +1,57 @@
+<app-header (locale)="onLocaleChange($event)"></app-header>
+<div class="app-body"
+     [ngClass]="{'pt-0 app-body-form':(status$ | async) !== 'FAILED','mt-2 pt-5':(status$ | async) === 'FAILED'}">
+  <main class="main d-flex align-items-center" [ngClass]="{'mt-n5':(status$ | async) === 'FAILED'}">
+    <div class="container pt-1">
+      <div class="alert-wrapper justify-content-center">
+        <div class="container text-center">
+          <div role="alert" class="alert w-100 alert-danger" *ngIf="(status$ | async) === 'FAILED'">
+            <strong>{{'admin.alerts.headerError' | translate}}</strong> {{ error$ | async }}
+          </div>
+        </div>
+      </div>
+      <ng-container *ngIf="(status$ | async) !== 'REGISTERED'">
+        <div class="card-group" [ngClass]="{'mt-0':(status$ | async) === 'FAILED'}">
+          <div class="card">
+            <div class="card-body">
+              <div class="row justify-content-center">
+                 <div class="col-6 col-md-5 border-right-3 rightSide " *ngIf="isNewRegisterUser">
+                  <div class="row mx-left-section">
+                    <div calss="col">
+                      <h2 class="text-blue mb-3 mt-md-5 mt-0">{{'admin.register.registerHeaderMessage1'|translate}}
+                        <span class="text-turquoise">{{'admin.register.registerHeaderMessage2'|translate}}</span>
+                      </h2>
+                    </div>
+                    <ul class="list-group w-100">
+                      <li class="list-group-item">
+                        <h3 class="text-blue pr-3">1.</h3>
+                        <h3 class="text-blue">{{'admin.register.registerFormStep1'|translate}}</h3>
+                      </li>
+                      <li class="list-group-item">
+                        <h3 class="text-blue pr-3">2.</h3>
+                        <h3 class="text-blue">{{'admin.register.registerFormStep2'|translate}}</h3>
+                      </li>
+                      <li class="list-group-item">
+                        <h3 class="text-blue pr-3">3.</h3>
+                        <h3 class="text-blue">{{'admin.register.registerFormStep3'|translate}}</h3>
+                      </li>
+                    </ul>
+                    <div class="w-100"></div>
+                    <div calss="col">
+                      <h3 class="text-blue my-3">{{'admin.register.registerFinalMessage'|translate}}</h3>
+                    </div>
+                  </div>
+                </div>  
+                <div class="col-6 col-md-7 leftside">
+                  <app-registration-user-details-form [languageId]="languageId" [newUser]="newUser" [social]="socialAccount"
+                                                      [registration]="true" (handleSubmit)="registerAction($event)">
+                  </app-registration-user-details-form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </main>
+</div>

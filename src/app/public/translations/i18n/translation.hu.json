@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "Powered by",
+			"thankYou": "Köszönöm",
+			"discount": "Kedvezmény",
+			"viewOrder": "Rendelés megtekintése",
+			"errorH2": "Valami nem sikerült",
+			"errorUnexpected": "Valami váratlan történt",
+			"errorExpected": "Valami váratlan történt",
+			"errorMustSelectOne": "Kérem egy értéket válasszon",
+			"errorTrialExceeded": "Ez a lehetőség nem elérhető. Próbaverzióban meglévő korlátozásokat kimerítette.",
+			"emptyCart": "Jelenleg üres a kosara.",
+			"optional": "(opcionális)",
+			"cookies": "Ez az oldal cookie-kat használ .A weboldal további használatával Ön elfogadja ezek hasznalatát.",
+			"more": "több",
+			"less": "kevésbé",
+			"chooseFrom": "Válassz",
+			"standard": "Alapértelmezett",
+			"days": {
+				"mon": "Hétfő",
+				"tue": "Kedd",
+				"wed": "Szerda",
+				"thu": "Csütörtök",
+				"fri": "Péntek",
+				"sat": "Szombat",
+				"sun": "Vasárnap"
+			},
+			"opentimelist": "Nyitvatartási Idők",
+			"newVersionAvailable": "Az alkalmazás régebbi verzióját futtatja. Töltse be újra az alkalmazást, hogy megkapja a legfrissebb frissítést",
+			"reloadApplication": "Töltse újra az alkalmazást",
+			"poweredByGonnaOrder": "Powered by Gonnaorder",
+			"recents": "Legutóbbiak",
+			"information": "Információ",
+			"yes": "Igen",
+			"no": "Nem",
+			"error": "Hiba",
+			"errorQRScanner": "Hiba történt a QR-szkennerrel!",
+			"confirm": "megerősít"
+		},
+		"select": {
+			"selectAtLeast": "Legalább {{x}} -ot kell választania",
+			"selectAtmost": "Legfeljebb {{x}} választhat",
+			"selectAtleastAtMost": "Kérem legalább ennyit {{x}} és maximum ennyit {{y}} válasszon",
+			"selectBetween": "Választania kell a {{childCategory.min}} és a {{childCategory.max}} értékek között."
+		},
+		"load": {
+			"loadingMessage": "Egy pillanat..."
+		},
+		"itemDetails": {
+			"removeFromOrder": "Termék eltávolítása a kosárból",
+			"addToOrder": "Termék hozzáadása a kosarához",
+			"updateOrder": "Kosár frissítése"
+		},
+		"checkout": {
+			"yourOrder": "Az Ön rendelése",
+			"total": "Összesen",
+			"specialNote": "Különleges megjegyzés hozzáadása rendeléséhez",
+			"howToReceiveYourOrder": "Hogyan szeretné megkapni rendelését?",
+			"option": {
+				"pickup": "Magam szeretném átvenni",
+				"addressDelivery": "Szeretném megkapni az e-mail cimemre",
+				"serve": {
+					"location": "Egy asztalnál ülök"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "Rendelésének adatait sajnos nem tudtuk elmenteni",
+				"fieldRequired": "Kötelező mezö",
+				"selectFutureTime": "Kérjük, válassza ki az időt a jövőben",
+				"orderSubmissionFailed": "A megrendelés nem nyújtható be",
+				"ORDER_LOCATION_NOT_PRESENT": "Hiányzik a táblázat száma vagy a hely neve",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "Hiányzik néhány szükséges ügyfélinformáció",
+				"ORDER_WISH_TIME_INVALID": "A kívánt kívánság ideje elmúlt",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "Hiányzik a megrendelés kézbesítési módja",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "A címre történő kézbesítés nem támogatott",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "A megrendelés kézbesítése nem támogatott",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "A megrendelés átvételét nem támogatjuk",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "A megadott irányítószámra történő kézbesítés nem támogatott",
+				"OPENING_TIME_SCHEDULE_ERROR": "Az üzlet a kiválasztott rendelési kívánság idején zárva tart",
+				"PROMOTION_NOT_ELIGIBLE": "Kiválasztott egy promóciót, de nem alkalmas",
+				"offersUnavailableExplanation": "Az alábbi elemek nem állnak rendelkezésre a megadott dátumon és időpontban. Kattintson a megrendelés frissítésére, hogy eltávolítsa őket a rendelésből",
+				"offersOutOfStockExplanation": "Nincs elég tétel",
+				"invalidVoucherCode": "Az utalvány kód érvénytelen",
+				"INVALID_INPUT": "Hiba történt a megadott részletek feldolgozása során.",
+				"slotUnavailableExplanation": "A kért időrés nem érhető el. Kérjük, válasszon egy másik idõt, vagy válasszon másik kézbesítési módot.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "Erre az üzletre nem lehet ugyanarra a napra megrendelést kérni.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "Nem lehet ugyanarra a napra megrendelést kérni az Ön területén.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "Ugyanazon a napon nem lehet megrendelést kérni a következő tételekről:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "A kért időre és napra nem lehet kézbesíteni az irányítószámát.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "A megadott időpontban és időpontban nem lehet megrendeléseket leadni. Válasszon egy alternatívát.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "A megadott időpontban és időpontban nem lehet megrendeléseket átvenni. Válasszon egy alternatívát.",
+				"INTERNAL_ERROR": "Váratlan hiba történt. Kérjük, töltse be újra az alkalmazást, és próbálkozzon újra.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "A minimális szállítási megrendelés összege nem teljesült. A folytatáshoz adjon még egy {{AMOUNT_MISSING}} értéket a rendeléséhez.",
+				"paymentFailed": "Nem sikerült online fizetnie ezzel a fizetési móddal. Kérlek próbáld újra.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "A kötelező promóciók nem lettek alkalmazva",
+				"INVALID_CUSTOMER_VOUCHER": "Érvénytelen ügyfél-utalvány",
+				"slotUnavailable": "A kiválasztott idő nem érhető el",
+				"slotUnavailableExplanationWithSuggestion": "A kiválasztott idő a múltban van, vagy már nem érhető el. Következő szabad idő:",
+				"socialLoginFailed": "Nem sikerült csatlakozni a fiókjához",
+				"customerDetailsUpdateFailed": "Nem sikerült frissíteni a profiladatokat",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "Az áruház nem szállít erre a helyre",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "Nem találjuk az Ön által megadott címet. Kérjük, frissítse a címet, és próbálkozzon újra, vagy lépjen kapcsolatba az áruházzal.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "A megadott időpontban és időpontban nem lehet megrendeléseket leadni. Kérjük, válasszon egy alternatívát.",
+				"MISSING_LOCATION_TAP_ID": "A koppintási azonosító kötelező",
+				"invalidPin": "Érvénytelen ügyfél PIN-kód"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "Megrendelését kézbesítik önnek"
+					},
+					"unknown": {
+						"location": "Megrendelését kézbesítik önnek"
+					}
+				},
+				"pickup": "Rendelés felvétele",
+				"addressDelivery": "Kérem irja le az adataid"
+			},
+			"yourInformationPlease": "Kérem irja le az adataid",
+			"locationCode": "Asztal",
+			"yourName": "Neve",
+			"email": "E-mail cime",
+			"phoneNumber": "Telefon száma",
+			"fullName": "Teljes név",
+			"streetAddress": "Utca név",
+			"zip": "Irányitószám",
+			"town": "Hejség / Város",
+			"minimumAmount": "A kiszálitáshoz a megrendelt öszegnek egy minimális oszegét be kel fizetni",
+			"deliveryFee": "Szálitási költség",
+			"deliveryFeeApplicable": "{{Amount}} alatti megrendelések esetén alkalmazható",
+			"field": {
+				"generalValidation": "A mezöformátum nem érvényes"
+			},
+			"acceptTerm": "Folytatásával elfogadja a {{Felhasználási feltételeket}} és a {{Adatvédelmi irányelveket}}",
+			"termsAndPolicy": "Folytatásával elfogadja a ",
+			"acceptTerms": {
+				"and": "és a",
+				"after": ""
+			},
+			"termsOfUse": "Felhasználási feltételeket",
+			"privacyPolicy": "Adatvédelmi irányelveket",
+			"yourTable": "A te asztalod",
+			"allowedCharacters": "Megengedett karakterek",
+			"wishTimeHeading": "Mikor szeretné megkapni a megrendelését?",
+			"asSoonAsPossible": "A lehető leghamarabb meg akarom kapni",
+			"specifyWishTime": "Meg akarom határozni, mikor kapom meg",
+			"specialNoteExample": "Különleges megjegyzés hozzáadása rendeléséhez",
+			"cardDisabledNote": "Amennyiben rendelése végleges, kérem ossza azt ",
+			"cardHolderName": "Kártyatulajdonos neve",
+			"cardNumber": "Az Ön kártyaszáma",
+			"cvv": "CVV",
+			"itemsOutOfStock": "Néhány elem nincs raktáron",
+			"floor": "Padló",
+			"storeClosedAtOrderWishDate": "Az üzlet a kívánt kívánság dátumán vagy időpontjában zárva tart",
+			"offersNotAvailableAtOrderWishDate": "Néhány ajánlat nem érhető el a kívánt kívánság dátumán vagy időpontjában",
+			"updateOrder": "Rendelés frissítése",
+			"offers": {
+				"availableQuantity": "Jelenleg elérhető"
+			},
+			"voucherCode": "Írja be az utalvány kódját",
+			"validVoucherCode": "Az utalvány kód érvényes",
+			"yourRoom": "A szobád",
+			"yourLocation": "Ön tartózkodási helyét",
+			"serveOption": {
+				"location": "A helyemen szeretném megkapni",
+				"room": "a szobámban vagyok"
+			},
+			"social": {
+				"connect": "Kapcsolatba léphet a közösségi fiókkal"
+			},
+			"remainingValidVoucher": "Az utalványon fennmaradó egyenleg:",
+			"paymentsense": {
+				"declined": "A Paymentsense-n keresztül történő online fizetést elutasították"
+			},
+			"saveCustomerDetailsForFuture": "Mentse el profiladatait a jövőbeli megrendelésekhez",
+			"customerDetailsUpdateSuccess": "Profiladatait frissítettük",
+			"logout": "Kijelentkezés",
+			"expiry": "Lejárati dátum (MMYY)",
+			"enterPin": "Írja be a PIN kódot"
+		},
+		"payment": {
+			"payOnlineNow": "Azonnali online fizetési mód kiválasztása",
+			"chooseYourPaymentMethod": "Kérem válassza ki hogyan szeretne fizetni",
+			"creditCard": "Bankkártya",
+			"paypal": "Paypal",
+			"submitOrder": "Rendelés benyújtása",
+			"proceedToPayment": "Folytatás a fizetési oldalra",
+			"errorCouldNotConnect": "A kiválasztott fizetési móddal sajnos nem tudtunk kapcsolatot létesíteni. Kérem menjen vissza a rendelés véglegesítése oldalra és válasszon másik fizetési módot, vagy próbálkozzon később.",
+			"enterCreditCardInfo": "Kérem irja be egy érvényes hitel vagy bankkártya adatait",
+			"yourOrderIsReady": "A megrendelés készen áll",
+			"yourOrderIsExpected": "A megrendelés várható",
+			"errors": {
+				"valueNotValid": "A megadott érték nem érvényes",
+				"zipNotAvailable": "Erre az irányítószámra nem lehet online kézbesítési rendelést leadni. Kérjük, további információkért vegye fel a kapcsolatot az áruházzal",
+				"addressNotAvailable": "A cím nem található. Kérjük, válasszon egy utcát a javaslatok közül."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "Online fizetés",
+			"digitalWallets": "Digitális pénztárcák",
+			"creditCardSecure": "Biztonságos hitelkártyás fizetések",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "Rendelésének száma",
+			"orderStatus": "Rendelés státusza",
+			"notSubmitted": "Nem került benyújtásra",
+			"sent": "Elküldve",
+			"ready": "Kész",
+			"rejected": "Elutasításra került",
+			"startNewOrder": "Új rendelés leadása",
+			"errors": {
+				"emailProperFormat": "Kérem érvényes e-mail címet adjon meg"
+			},
+			"fiilEmailAddress": "Kérem adja meg e-mail címét, amire rendeléséről egy másolatot küldhetünk.",
+			"failedEmail": "E-mail küldése nem járt sikerrel.",
+			"emailSent": "E-mail elküldésre került",
+			"received": "Átvett",
+			"accepted": "Elfogadott",
+			"mobileAppPromotion": "Legközelebb a GonnaOrder mobilalkalmazáson keresztül rendeljen"
+		},
+		"dialog": {
+			"ok": "Rendben",
+			"cancel": "Törölve"
+		},
+		"store": {
+			"currently": {
+				"closed": "Az üzlet jelenleg zárva tart"
+			},
+			"time": {
+				"closed": "Az üzlet a kiválasztott időpontban zárva tart"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "Vegetáriánus",
+						"vegan": "Vegán",
+						"celery": "Zeller",
+						"wheat": "Búza",
+						"crustaceans": "Rákfélék",
+						"eggs": "Tojás",
+						"fish": "Hal",
+						"lupin": "Csillagfürt",
+						"milk": "Tej",
+						"molluscs": "Puhatestűek",
+						"mustard": "Mustár",
+						"nuts": "Diófélék",
+						"peanuts": "Földimogyoró",
+						"sesame": "Szezám",
+						"soya": "Szójabab",
+						"sulphurDioxide": "A kén-dioxid",
+						"halal": "Halal",
+						"barley": "Árpa",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "Ez a weboldal cookie-kat használ az Ön élményének javítása érdekében, de ha akarja, lemondhat róla.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "Alkalmaz"
+		},
+		"cookie": {
+			"accept": "Elfogad",
+			"reject": "Elutasít",
+			"readMore": "Olvass tovább"
+		},
+		"connect": {
+			"social": {
+				"google": "Kapcsolatba léphet a Google-lal",
+				"facebook": "Csatlakozzon a Facebookhoz"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "A kosarad üres",
+				"proceed": "Folytassa"
+			}
+		},
+		"main": {
+			"typeUrl": "Írjon be egy URL-t vagy az üzlet nevét",
+			"invalidUrl": "Az URL érvénytelen",
+			"scanQRCode": "QR-kód beolvasása",
+			"storeNotFound": "Az üzlet nem található",
+			"storeSaved": "Az adatok tárolása sikeresen mentve!",
+			"navigateStoreConfirm": "Navigálni az üzletbe?"
+		},
+		"recents": {
+			"nothingFound": "Itt nem találtunk semmit"
+		}
+	}
+}

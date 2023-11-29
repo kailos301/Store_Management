@@ -1,0 +1,694 @@
+<div class="col-lg-12">
+    <div class="col-sm-12">
+        <div class="card list">
+            <div class="col-lg-12 d-flex align-items-center justify-content-between p-0 mt-3">
+                <div class="col-lg-6 col-sm-4 ">
+                    <i class="far fa-clock fs-21"></i>
+                    {{'admin.store.schedule.generalopening'|translate}}
+                </div>
+                <div class="col-lg-6 col-sm-8 input-group ">
+                    <select
+                        class="form-control"
+                        onchange="this.dataset.chosen = this.value === '0' ? '' : this.value"
+                        (change)="updateSpecialSchedule($event,'OPENING_HOURS',openingTimeSpecialScheduleId)"
+                        [ngModel]="(openingTimeScheduleId || '0')"
+                        [ngClass]="{'default-option' : openingTimeScheduleId === 0}"
+                    >
+                        <option value="0">{{'admin.store.global.openTime'|translate}}</option>
+                        <option *ngFor="let schedule of (schedules$ | async)" value="{{ schedule.id }}">
+                            {{ schedule.name }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-12 d-flex align-items-center justify-content-between p-0 mt-3">
+                <div class="col-lg-6 col-sm-4 ">
+                    <span class="material-icons-outlined">
+                        room_service
+                    </span>
+                    {{'admin.store.deliveryAtInLocation'|translate}} -
+                    {{'admin.store.schedule.orderingTimes'|translate}}
+                </div>
+                <div class="col-lg-6 col-sm-8 input-group ">
+                    <select
+                        class="form-control"
+                        onchange="this.dataset.chosen = this.value === '0' ? '' : this.value"
+                        (change)="updateSpecialSchedule($event,'SERVING_HOURS',servingSpecialScheduleId)"
+                        [ngModel]="(servingScheduleId || '0')"
+                        [ngClass]="{'default-option' : servingScheduleId === 0}"
+                    >
+                        <option value="0">{{'admin.store.schedule.orderingTimes'|translate}}</option>
+                        <option *ngFor="let schedule of (schedules$ | async)" value="{{ schedule.id }}">
+                            {{ schedule.name}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-12 d-flex align-items-center justify-content-between p-0 mt-3">
+                <div class="col-lg-6 col-sm-4 ">
+                    <span class="material-icons">
+                        shopping_basket
+                    </span>
+                    {{'admin.store.orderDeliveryMethod.pickup'|translate}} -
+                    {{'admin.store.schedule.orderingTimes'|translate}}
+                </div>
+                <div class="col-lg-6 col-sm-8 input-group ">
+                    <select
+                        class="form-control"
+                        onchange="this.dataset.chosen = this.value === '0' ? '' : this.value"
+                        (change)="updateSpecialSchedule($event,'PICKUP_HOURS',pickupTimeSpecialScheduleId)"
+                        [ngModel]="(pickupScheduleId || '0')"
+                        [ngClass]="{'default-option' : pickupScheduleId === 0}"
+                    >
+                        <option value="0">{{'admin.store.schedule.orderingTimes'|translate}}</option>
+                        <option *ngFor="let schedule of (schedules$ | async)" value="{{ schedule.id }}">
+                            {{ schedule.name}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-12 d-flex align-items-center justify-content-between p-0 mt-3">
+                <div class="col-lg-6 col-sm-4 ">
+                    <span class="material-icons">
+                        directions_bike
+                    </span>
+                    {{'admin.store.orderDeliveryMethod.deliverAtAddress'|translate}} -
+                    {{'admin.store.schedule.orderingTimes'|translate}}
+                </div>
+                <div class="col-lg-6 col-sm-8 input-group ">
+                    <select
+                        class="form-control"
+                        onchange="this.dataset.chosen = this.value === '0' ? '' : this.value"
+                        (change)="updateSpecialSchedule($event,'ADDRESS_DELIVERY_HOURS',addressDeliveryTimeSpecialScheduleId)"
+                        [ngModel]="(addressDeliveryScheduleId || '0')"
+                        [ngClass]="{'default-option' : addressDeliveryScheduleId === 0}"
+                    >
+                        <option value="0">{{'admin.store.schedule.orderingTimes'|translate}}</option>
+                        <option *ngFor="let schedule of (schedules$ | async)" value="{{ schedule.id }}">
+                            {{ schedule.name }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-12 d-flex align-items-center justify-content-between p-0">
+                <button
+                    type="button"
+                    class="btn btn-primary mt-3"
+                    [routerLink]="['/manager/stores', storeId, 'settings', 'schedules', 'create']"
+                >
+                    <i class="fas fa-plus mr-2"></i>{{'admin.store.addNewSchedule'|translate}}
+                </button>
+            </div>
+            <div class="card-body py-0">
+                <table class="table table-responsive-sm">
+                    <thead>
+                        <tr>
+                            <th>{{'admin.store.scheduleList'|translate}}</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr
+                            *ngFor="let schedule of (schedules$ | async)"
+                            [routerLink]="['/manager/stores', storeId, 'settings', 'schedules', schedule.id]"
+                            style="cursor: pointer;"
+                        >
+                            <td>{{schedule.name}}</td>
+                            <td class="text-right">
+                                <a>
+                                    <img src="assets/img/icon-forward.svg" />
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <form [formGroup]="settingsForm">
+                <div class="form-group row mb-3">
+                    <div class="col-3">
+                        <label [for]="'admin.store.setting.requestorderdateupfront'|translate">
+                            {{'admin.store.setting.requestorderdateupfront'|translate}}
+                        </label>
+                    </div>
+                    <div class="col-3 text-center">
+                        <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                        <label class="switch pt-1 mb-0" for="DELIVERY_REQUEST_ORDER_DATE_UPFRONT">
+                            <input
+                                type="checkbox"
+                                formControlName="DELIVERY_REQUEST_ORDER_DATE_UPFRONT"
+                                id="DELIVERY_REQUEST_ORDER_DATE_UPFRONT"
+                                (change)="toggleSetting()"
+                            />
+                            &nbsp;<span class="slider round"></span>
+                        </label>&nbsp;
+                        <label>{{'admin.store.enabled'|translate}}</label>
+                    </div>
+                </div>
+                <div class="form-group row mb-0">
+                    <div class="col-3">
+                        <label>
+                            {{'admin.store.schedulesSlot'|translate}}
+                        </label>
+                    </div>
+                    <div class="col-3 text-center">
+                        <input
+                            type="number"
+                            class="form-control"
+                            min="1"
+                            oninput="validity.valid||(value='');"
+                            formControlName="MAX_ITEMS_PER_SLOT"
+                            id="MAX_ITEMS_PER_SLOT"
+                            (focusout)="toggleSetting()"
+                        />
+                    </div>
+                    <div class="col-6"></div>
+                    <div class="col-3"></div>
+                    <div class="col-6 form-group explanation">
+                        {{'admin.store.schedulesSlotnote'|translate}}
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <div class="col-3"></div>
+                    <div class="col-3 text-center">
+                        <label [for]="'admin.store.deliveryAtInLocation'|translate">
+                            <span class="material-icons-outlined">
+                                room_service
+                            </span>
+                            {{'admin.store.deliveryAtInLocation'|translate}}
+                        </label>
+                    </div>
+                    <div class="col-3 text-center">
+                        <label [for]="'admin.store.orderDeliveryMethod.pickup'|translate">
+                            <span class="material-icons">
+                                shopping_basket
+                            </span>
+                            {{'admin.store.orderDeliveryMethod.pickup'|translate}}
+                        </label>
+                    </div>
+                    <div class="col-3 text-center">
+                        <label [for]="'admin.store.orderDeliveryMethod.deliverAtAddress'|translate">
+                            <span class="material-icons">
+                                directions_bike
+                            </span>
+                            {{'admin.store.orderDeliveryMethod.deliverAtAddress'|translate}}
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group row mb-3">
+                    <div class="col-3">
+                        <label [for]="'admin.store.setting.samedayordering'|translate">
+                            {{'admin.store.setting.samedayordering'|translate}}
+                        </label>
+                    </div>
+                    <div class="col-3 text-center">
+                        <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                        <label class="switch pt-1 mb-0" for="DELIVERY_IN_STORE_LOCATION_DISABLE_SAME_DAY_ORDERING">
+                            <input
+                                type="checkbox"
+                                formControlName="DELIVERY_IN_STORE_LOCATION_DISABLE_SAME_DAY_ORDERING"
+                                id="DELIVERY_IN_STORE_LOCATION_DISABLE_SAME_DAY_ORDERING"
+                                (change)="toggleSetting()"
+                            />
+                            &nbsp;<span class="slider round"></span>
+                        </label>&nbsp;
+                        <label>{{'admin.store.enabled'|translate}}</label>
+                    </div>
+                    <div class="col-3 text-center">
+                        <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                        <label class="switch pt-1 mb-0" for="DELIVERY_NO_LOCATION_DISABLE_SAME_DAY_ORDERING">
+                            <input
+                                type="checkbox"
+                                formControlName="DELIVERY_NO_LOCATION_DISABLE_SAME_DAY_ORDERING"
+                                id="DELIVERY_NO_LOCATION_DISABLE_SAME_DAY_ORDERING"
+                                (change)="toggleSetting()"
+                            />
+                            &nbsp;<span class="slider round"></span>
+                        </label>&nbsp;
+                        <label>{{'admin.store.enabled'|translate}}</label>
+                    </div>
+                    <div class="col-3 text-center">
+                        <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                        <label class="switch pt-1 mb-0" for="DELIVERY_ADDRESS_DISABLE_SAME_DAY_ORDERING">
+                            <input
+                                type="checkbox"
+                                formControlName="DELIVERY_ADDRESS_DISABLE_SAME_DAY_ORDERING"
+                                id="DELIVERY_ADDRESS_DISABLE_SAME_DAY_ORDERING"
+                                (change)="toggleSetting()"
+                            />
+                            &nbsp;<span class="slider round"></span>
+                        </label>&nbsp;
+                        <label>{{'admin.store.enabled'|translate}}</label>
+                    </div>
+                </div>
+                <div class="form-group row mb-0">
+                    <div class="col-3">
+                        <label [for]="'admin.store.schedule.assoonasPossible'|translate">
+                            {{'admin.store.schedule.requestWishTime'|translate}}<br />
+                            {{'admin.store.schedule.assoonasPossible'|translate}}
+                        </label>
+                    </div>
+                    <div class="col-3 text-center">
+                        <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                        <label class="switch pt-1 mb-0" for="DELIVERY_IN_STORE_LOCATION_CHOOSE_ASAP_ORDER_DATE">
+                            <input
+                                type="checkbox"
+                                formControlName="DELIVERY_IN_STORE_LOCATION_CHOOSE_ASAP_ORDER_DATE"
+                                id="DELIVERY_IN_STORE_LOCATION_CHOOSE_ASAP_ORDER_DATE"
+                                (change)="toggleSetting()"
+                            />
+                            &nbsp;<span class="slider round"></span>
+                        </label>&nbsp;
+                        <label>{{'admin.store.enabled'|translate}}</label>
+                    </div>
+                    <div class="col-3 text-center">
+                        <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                        <label class="switch pt-1 mb-0" for="DELIVERY_NO_LOCATION_CHOOSE_ASAP_ORDER_DATE">
+                            <input
+                                type="checkbox"
+                                formControlName="DELIVERY_NO_LOCATION_CHOOSE_ASAP_ORDER_DATE"
+                                id="DELIVERY_NO_LOCATION_CHOOSE_ASAP_ORDER_DATE"
+                                (change)="toggleSetting()"
+                            />
+                            &nbsp;<span class="slider round"></span>
+                        </label>&nbsp;
+                        <label>{{'admin.store.enabled'|translate}}</label>
+                    </div>
+                    <div class="col-3 text-center">
+                        <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                        <label class="switch pt-1 mb-0" for="DELIVERY_ADDRESS_CHOOSE_ASAP_ORDER_DATE">
+                            <input
+                                type="checkbox"
+                                formControlName="DELIVERY_ADDRESS_CHOOSE_ASAP_ORDER_DATE"
+                                id="DELIVERY_ADDRESS_CHOOSE_ASAP_ORDER_DATE"
+                                (change)="toggleSetting()"
+                            />
+                            &nbsp;<span class="slider round"></span>
+                        </label>&nbsp;
+                        <label>{{'admin.store.enabled'|translate}}</label>
+                    </div>
+                </div>
+                <div class="form-group row mb-0">
+                    <div class="col-3">
+                        <label [for]="'admin.store.schedule.futureTime'|translate">
+                            {{'admin.store.schedule.requestWishTime'|translate}}<br />
+                            {{'admin.store.schedule.futureTime'|translate}}
+                        </label>
+                    </div>
+                    <div class="col-3 text-center">
+                        <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                        <label class="switch pt-1 mb-0" for="DELIVERY_IN_STORE_LOCATION_CHOOSE_FUTURE_ORDER_DATE">
+                            <input
+                                type="checkbox"
+                                formControlName="DELIVERY_IN_STORE_LOCATION_CHOOSE_FUTURE_ORDER_DATE"
+                                id="DELIVERY_IN_STORE_LOCATION_CHOOSE_FUTURE_ORDER_DATE"
+                                (change)="toggleSetting()"
+                            />
+                            &nbsp;<span class="slider round"></span>
+                        </label>&nbsp;
+                        <label>{{'admin.store.enabled'|translate}}</label>
+                    </div>
+                    <div class="col-3 text-center">
+                        <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                        <label class="switch pt-1 mb-0" for="DELIVERY_NO_LOCATION_CHOOSE_FUTURE_ORDER_DATE">
+                            <input
+                                type="checkbox"
+                                formControlName="DELIVERY_NO_LOCATION_CHOOSE_FUTURE_ORDER_DATE"
+                                id="DELIVERY_NO_LOCATION_CHOOSE_FUTURE_ORDER_DATE"
+                                (change)="toggleSetting()"
+                            />
+                            &nbsp;<span class="slider round"></span>
+                        </label>&nbsp;
+                        <label>{{'admin.store.enabled'|translate}}</label>
+                    </div>
+                    <div class="col-3 text-center">
+                        <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                        <label class="switch pt-1 mb-0" for="DELIVERY_ADDRESS_CHOOSE_FUTURE_ORDER_DATE">
+                            <input
+                                type="checkbox"
+                                formControlName="DELIVERY_ADDRESS_CHOOSE_FUTURE_ORDER_DATE"
+                                id="DELIVERY_ADDRESS_CHOOSE_FUTURE_ORDER_DATE"
+                                (change)="toggleSetting()"
+                            />
+                            &nbsp;<span class="slider round"></span>
+                        </label>&nbsp;
+                        <label>{{'admin.store.enabled'|translate}}</label>
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <div class="col-3">
+                        <label [for]="'admin.store.schedule.wishTimeMinutes'|translate">
+                            {{'admin.store.schedule.wishTimeMinutes'|translate}}
+                        </label>
+                    </div>
+                    <div class="col-3">
+                        <input
+                            type="number"
+                            class="form-control"
+                            min="1"
+                            oninput="validity.valid||(value='');"
+                            formControlName="DELIVERY_IN_STORE_LOCATION_WISH_TIME_INTERVAL"
+                            id="DELIVERY_IN_STORE_LOCATION_WISH_TIME_INTERVAL"
+                            (focusout)="toggleSetting()"
+                        />
+                    </div>
+                    <div class="col-3">
+                        <input
+                            type="number"
+                            class="form-control"
+                            min="1"
+                            oninput="validity.valid||(value='');"
+                            formControlName="DELIVERY_NO_LOCATION_WISH_TIME_INTERVAL"
+                            id="DELIVERY_NO_LOCATION_WISH_TIME_INTERVAL"
+                            (focusout)="toggleSetting()"
+                        />
+                    </div>
+                    <div class="col-3">
+                        <input
+                            type="number"
+                            class="form-control"
+                            min="1"
+                            oninput="validity.valid||(value='');"
+                            formControlName="DELIVERY_ADDRESS_WISH_TIME_INTERVAL"
+                            id="DELIVERY_ADDRESS_WISH_TIME_INTERVAL"
+                            (focusout)="toggleSetting()"
+                        />
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <div class="col-3">
+                        <label [for]="'admin.store.schedule.displayWishTimeFormat'|translate">
+                            {{'admin.store.schedule.displayWishTimeFormat'|translate}}
+                        </label>
+                    </div>
+                    <div class="col-3 text-center">
+                        <label>{{'admin.store.schedule.times'|translate}}</label>&nbsp;
+                        <label class="switch pt-1 mb-0" for="DELIVERY_IN_STORE_LOCATION_ENABLE_SLOT_DURATION">
+                            <input
+                                type="checkbox"
+                                formControlName="DELIVERY_IN_STORE_LOCATION_ENABLE_SLOT_DURATION"
+                                id="DELIVERY_IN_STORE_LOCATION_ENABLE_SLOT_DURATION"
+                                (change)="toggleSetting()"
+                            />
+                            &nbsp;<span class="slider round"></span>
+                        </label>&nbsp;
+                        <label>{{'admin.store.schedule.timeSlots'|translate}}</label>
+                    </div>
+                    <div class="col-3 text-center">
+                        <label>{{'admin.store.schedule.times'|translate}}</label>&nbsp;
+                        <label class="switch pt-1 mb-0" for="DELIVERY_NO_LOCATION_ENABLE_SLOT_DURATION">
+                            <input
+                                type="checkbox"
+                                formControlName="DELIVERY_NO_LOCATION_ENABLE_SLOT_DURATION"
+                                id="DELIVERY_NO_LOCATION_ENABLE_SLOT_DURATION"
+                                (change)="toggleSetting()"
+                            />
+                            &nbsp;<span class="slider round"></span>
+                        </label>&nbsp;
+                        <label>{{'admin.store.schedule.timeSlots'|translate}}</label>
+                    </div>
+                    <div class="col-3 text-center">
+                        <label>{{'admin.store.schedule.times'|translate}}</label>&nbsp;
+                        <label class="switch pt-1 mb-0" for="DELIVERY_ADDRESS_ENABLE_SLOT_DURATION">
+                            <input
+                                type="checkbox"
+                                formControlName="DELIVERY_ADDRESS_ENABLE_SLOT_DURATION"
+                                id="DELIVERY_ADDRESS_ENABLE_SLOT_DURATION"
+                                (change)="toggleSetting()"
+                            />
+                            &nbsp;<span class="slider round"></span>
+                        </label>&nbsp;
+                        <label>{{'admin.store.schedule.timeSlots'|translate}}</label>
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <div class="col-3">
+                        <label [for]="'admin.store.schedule.slotDuration'|translate">
+                            {{'admin.store.schedule.slotDuration'|translate}}
+                        </label>
+                    </div>
+                    <div class="col-3">
+                        <input
+                            type="number"
+                            class="form-control"
+                            min="1"
+                            oninput="validity.valid||(value='');"
+                            formControlName="DELIVERY_IN_STORE_LOCATION_SLOT_DURATION"
+                            id="DELIVERY_IN_STORE_LOCATION_SLOT_DURATION"
+                            (focusout)="toggleSetting()"
+                        />
+                    </div>
+                    <div class="col-3">
+                        <input
+                            type="number"
+                            class="form-control"
+                            min="1"
+                            oninput="validity.valid||(value='');"
+                            formControlName="DELIVERY_NO_LOCATION_SLOT_DURATION"
+                            id="DELIVERY_NO_LOCATION_SLOT_DURATION"
+                            (focusout)="toggleSetting()"
+                        />
+                    </div>
+                    <div class="col-3">
+                        <input
+                            type="number"
+                            class="form-control"
+                            min="1"
+                            oninput="validity.valid||(value='');"
+                            formControlName="DELIVERY_ADDRESS_SLOT_DURATION"
+                            id="DELIVERY_ADDRESS_SLOT_DURATION"
+                            (focusout)="toggleSetting()"
+                        />
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <div class="col-3">
+                        <label [for]="'admin.store.schedule.limitOrder'|translate">
+                            {{'admin.store.schedule.limitOrder'|translate}}
+                        </label>
+                    </div>
+                    <div class="col-3 text-center">
+                        <label>{{'admin.store.schedule.noLimit'|translate}}</label>&nbsp;
+                        <label class="switch pt-1 mb-0" for="DELIVERY_IN_STORE_LOCATION_LIMIT_ORDER_PER_SLOT">
+                            <input
+                                type="checkbox"
+                                formControlName="DELIVERY_IN_STORE_LOCATION_LIMIT_ORDER_PER_SLOT"
+                                id="DELIVERY_IN_STORE_LOCATION_LIMIT_ORDER_PER_SLOT"
+                                (change)="toggleSetting()"
+                            />
+                            &nbsp;<span class="slider round"></span>
+                        </label>&nbsp;
+                        <label>{{'admin.store.schedule.limit'|translate}}</label>
+                    </div>
+                    <div class="col-3 text-center">
+                        <label>{{'admin.store.schedule.noLimit'|translate}}</label>&nbsp;
+                        <label class="switch pt-1 mb-0" for="DELIVERY_NO_LOCATION_LIMIT_ORDER_PER_SLOT">
+                            <input
+                                type="checkbox"
+                                formControlName="DELIVERY_NO_LOCATION_LIMIT_ORDER_PER_SLOT"
+                                id="DELIVERY_NO_LOCATION_LIMIT_ORDER_PER_SLOT"
+                                (change)="toggleSetting()"
+                            />
+                            &nbsp;<span class="slider round"></span>
+                        </label>&nbsp;
+                        <label>{{'admin.store.schedule.limit'|translate}}</label>
+                    </div>
+                    <div class="col-3 text-center">
+                        <label>{{'admin.store.schedule.noLimit'|translate}}</label>&nbsp;
+                        <label class="switch pt-1 mb-0" for="DELIVERY_ADDRESS_LIMIT_ORDER_PER_SLOT">
+                            <input
+                                type="checkbox"
+                                formControlName="DELIVERY_ADDRESS_LIMIT_ORDER_PER_SLOT"
+                                id="DELIVERY_ADDRESS_LIMIT_ORDER_PER_SLOT"
+                                (change)="toggleSetting()"
+                            />
+                            &nbsp;<span class="slider round"></span>
+                        </label>&nbsp;
+                        <label>{{'admin.store.schedule.limit'|translate}}</label>
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <div class="col-3">
+                        <label [for]="'admin.store.schedule.ordersPerSlot'|translate">
+                            {{'admin.store.schedule.ordersPerSlot'|translate}}
+                        </label>
+                    </div>
+                    <div class="col-3">
+                        <input
+                            type="number"
+                            class="form-control"
+                            min="1"
+                            oninput="validity.valid||(value='');"
+                            formControlName="DELIVERY_IN_STORE_LOCATION_ORDER_PER_SLOT"
+                            id="DELIVERY_IN_STORE_LOCATION_ORDER_PER_SLOT"
+                            (focusout)="toggleSetting()"
+                        />
+                    </div>
+                    <div class="col-3">
+                        <input
+                            type="number"
+                            class="form-control"
+                            min="1"
+                            oninput="validity.valid||(value='');"
+                            formControlName="DELIVERY_NO_LOCATION_ORDER_PER_SLOT"
+                            id="DELIVERY_NO_LOCATION_ORDER_PER_SLOT"
+                            (focusout)="toggleSetting()"
+                        />
+                    </div>
+                    <div class="col-3">
+                        <input
+                            type="number"
+                            class="form-control"
+                            min="1"
+                            oninput="validity.valid||(value='');"
+                            formControlName="DELIVERY_ADDRESS_ORDER_PER_SLOT"
+                            id="DELIVERY_ADDRESS_SLOT_DURATION"
+                            (focusout)="toggleSetting()"
+                        />
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <div class="col-3">
+                        <label [for]="'admin.store.schedule.wishTimeInFutureMinutes'|translate">
+                            {{'admin.store.schedule.wishTimeInFutureMinutes'|translate}}
+                        </label>
+                    </div>
+                    <div class="col-3">
+                        <input
+                            type="number"
+                            class="form-control"
+                            min="1"
+                            oninput="validity.valid||(value='');"
+                            formControlName="DELIVERY_IN_STORE_LOCATION_MINIMUM_WISH_TIME_FUTURE"
+                            id="DELIVERY_IN_STORE_LOCATION_MINIMUM_WISH_TIME_FUTURE"
+                            (focusout)="toggleSetting()"
+                        />
+                    </div>
+                    <div class="col-3">
+                        <input
+                            type="number"
+                            class="form-control"
+                            min="1"
+                            oninput="validity.valid||(value='');"
+                            formControlName="DELIVERY_NO_LOCATION_MINIMUM_WISH_TIME_FUTURE"
+                            id="DELIVERY_NO_LOCATION_MINIMUM_WISH_TIME_FUTURE"
+                            (focusout)="toggleSetting()"
+                        />
+                    </div>
+                    <div class="col-3">
+                        <input
+                            type="number"
+                            class="form-control"
+                            min="1"
+                            oninput="validity.valid||(value='');"
+                            formControlName="DELIVERY_ADDRESS_MINIMUM_WISH_TIME_FUTURE"
+                            id="DELIVERY_ADDRESS_MINIMUM_WISH_TIME_FUTURE"
+                            (focusout)="toggleSetting()"
+                        />
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <div class="col-3">
+                        <label [for]="'admin.store.schedule.defaultOrderingMode'|translate">
+                            {{'admin.store.schedule.defaultOrderingMode'|translate}}
+                        </label>
+                    </div>
+                    <div class="col-3">
+                        <label class="radio-container" for="IN_STORE_LOCATION">
+                            <span class="material-icons-outlined">
+                                room_service
+                            </span>
+                            {{'admin.store.deliveryAtInLocation'|translate}}
+                            <input
+                                type="radio"
+                                formControlName="DEFAULT_DELIVERY_MODE"
+                                value="IN_STORE_LOCATION"
+                                id="IN_STORE_LOCATION"
+                                (change)="toggleSetting()"
+                            />
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="col-3">
+                        <label class="radio-container" for="NO_LOCATION">
+                            <span class="material-icons">
+                                shopping_basket
+                            </span>
+                            {{'admin.store.orderDeliveryMethod.pickup'|translate}}
+                            <input
+                                type="radio"
+                                formControlName="DEFAULT_DELIVERY_MODE"
+                                value="NO_LOCATION"
+                                id="NO_LOCATION"
+                                (change)="toggleSetting()"
+                            />
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="col-3">
+                        <label class="radio-container" for="ADDRESS">
+                            <span class="material-icons">
+                                directions_bike
+                            </span>
+                            {{'admin.store.orderDeliveryMethod.deliverAtAddress'|translate}}
+                            <input
+                                type="radio"
+                                formControlName="DEFAULT_DELIVERY_MODE"
+                                value="ADDRESS"
+                                id="ADDRESS"
+                                (change)="toggleSetting()"
+                            />
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <div class="col-3">
+                        <label [for]="'admin.store.schedule.displaydesireddateandTime'|translate">
+                            {{'admin.store.schedule.displaydesireddateandTime'|translate}}
+                        </label>
+                    </div>
+                    <div class="col-3 text-center">
+                        <label>{{'admin.store.schedule.dateandTime'|translate}}</label>&nbsp;
+                        <label class="switch pt-1 mb-0" for="DELIVERY_IN_STORE_LOCATION_HIDE_FUTURE_WISH_DATE">
+                            <input
+                                type="checkbox"
+                                formControlName="DELIVERY_IN_STORE_LOCATION_HIDE_FUTURE_WISH_DATE"
+                                id="DELIVERY_IN_STORE_LOCATION_HIDE_FUTURE_WISH_DATE"
+                                (change)="toggleSetting()"
+                            />
+                            &nbsp;<span class="slider round"></span>
+                        </label>&nbsp;
+                        <label>{{'admin.store.schedule.dateOnly'|translate}}</label>
+                    </div>
+                    <div class="col-3 text-center">
+                        <label>{{'admin.store.schedule.dateandTime'|translate}}</label>&nbsp;
+                        <label class="switch pt-1 mb-0" for="DELIVERY_NO_LOCATION_HIDE_FUTURE_WISH_DATE">
+                            <input
+                                type="checkbox"
+                                formControlName="DELIVERY_NO_LOCATION_HIDE_FUTURE_WISH_DATE"
+                                id="DELIVERY_NO_LOCATION_HIDE_FUTURE_WISH_DATE"
+                                (change)="toggleSetting()"
+                            />
+                            &nbsp;<span class="slider round"></span>
+                        </label>&nbsp;
+                        <label>{{'admin.store.schedule.dateOnly'|translate}}</label>
+                    </div>
+                    <div class="col-3 text-center">
+                        <label>{{'admin.store.schedule.dateandTime'|translate}}</label>&nbsp;
+                        <label class="switch pt-1 mb-0" for="DELIVERY_ADDRESS_HIDE_FUTURE_WISH_DATE">
+                            <input
+                                type="checkbox"
+                                formControlName="DELIVERY_ADDRESS_HIDE_FUTURE_WISH_DATE"
+                                id="DELIVERY_ADDRESS_HIDE_FUTURE_WISH_DATE"
+                                (change)="toggleSetting()"
+                            />
+                            &nbsp;<span class="slider round"></span>
+                        </label>&nbsp;
+                        <label>{{'admin.store.schedule.dateOnly'|translate}}</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

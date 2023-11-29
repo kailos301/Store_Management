@@ -1,0 +1,85 @@
+<div class="row">
+    <div class="form-group col-sm-12" *ngIf="(store$ | async)">
+        <div *ngIf="translationPresent" role="alert" class="alert alert-danger">
+            <strong>{{'admin.store.catalog.translation.languageTranslation'|translate}}</strong>
+        </div>
+        <mat-accordion [togglePosition]="'before'" class="w-100">
+            <mat-expansion-panel class="offershadow">
+                <mat-expansion-panel-header class="col-lg-12" matTooltip="{{'admin.store.catalog.tooltip.translation'|translate}}">
+                    <mat-panel-title>
+                        {{'admin.store.catalog.translation.translations'|translate}}
+                        <span class="actionLink" (click)="addTranslation()">{{'admin.store.catalog.translation.addNewTranslation'|translate}}</span>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div *ngIf="content as translations">
+                    <div *ngIf="translations.length == 0 else translationsTable">
+                        {{'admin.global.noData'|translate}}
+                    </div>
+                    <ng-template #translationsTable>
+                        <table *ngIf="mode !='VARIANT_OFFER'" mat-table [dataSource]="translations" class="w-100 mat-elevation-z8">
+                            <ng-container matColumnDef="language">
+                                <th mat-header-cell *matHeaderCellDef>{{'admin.global.language'|translate}}</th>
+                                <td mat-cell *matCellDef="let element">
+                                    {{getLanguageName(element.languageId)}} </td>
+                            </ng-container>
+
+                            <!-- Name Column -->
+                            <ng-container matColumnDef="name">
+                                <th mat-header-cell *matHeaderCellDef> {{'admin.global.name'|translate}} </th>
+                                <td mat-cell *matCellDef="let element"> {{element.name}}
+                                </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="shortDescription">
+                                <th mat-header-cell *matHeaderCellDef> {{'admin.store.catalog.description.shortDescription'|translate}}
+                                </th>
+                                <td mat-cell *matCellDef="let element">
+                                    {{element.shortDescription}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="edit">
+                                <th mat-header-cell *matHeaderCellDef>
+                                </th>
+                                <td mat-cell *matCellDef="let element">
+                                    <i class="fa fa-pen text-blue">
+                                    </i>
+                                </td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr (click)="editTranslation(element)" class="cursorPointer" mat-row *matRowDef="let row; columns: displayedColumns;let element">
+                            </tr>
+                        </table>
+                        <table *ngIf="mode =='VARIANT_OFFER'"  mat-table [dataSource]="translations" class="w-100 mat-elevation-z8">
+                            <ng-container matColumnDef="language">
+                                <th mat-header-cell *matHeaderCellDef>{{'admin.global.language'|translate}}</th>
+                                <td mat-cell *matCellDef="let element">
+                                    {{getLanguageName(element.languageId)}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="priceDescription">
+                                <th mat-header-cell *matHeaderCellDef>{{'admin.store.catalog.description.priceDescription'|translate}}
+                                </th>
+                                <td mat-cell *matCellDef="let element">
+                                    {{element.priceDescription}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="edit">
+                                <th mat-header-cell *matHeaderCellDef>
+                                </th>
+                                <td mat-cell *matCellDef="let element">
+                                    <i class="fa fa-pen text-blue">
+                                    </i>
+                                </td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="variantColumns"></tr>
+                            <tr (click)="editTranslation(element)" class="cursorPointer" mat-row *matRowDef="let row; columns: variantColumns;let element">
+                            </tr>
+                        </table>
+                    </ng-template>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+</div>

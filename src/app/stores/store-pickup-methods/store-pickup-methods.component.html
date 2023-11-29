@@ -1,0 +1,81 @@
+<div class="animated fadeIn">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card list">
+                <div class="card-body py-0">
+                    <form [formGroup]="settingsForm" class="form-horizontal my-3">
+                        <div class="form-group row mb-0">
+                            <label
+                                class="col-xl-2 col-lg-3 col-md-4 form-header">{{'admin.store.settingspickupNameRequired'|translate}}</label>
+
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label>{{'admin.store.settingsOptional'|translate}}</label> &nbsp;
+
+                                    <label class="switch pt-1 mb-0">
+                                        <input type="checkbox" formControlName="PICKUP_NAME_OPTIONAL"
+                                            id="PICKUP_NAME_OPTIONAL" (change)="onSubmit()" />
+                                        &nbsp;<span class="slider round"></span>
+                                    </label>&nbsp;
+                                    <label>{{'admin.store.settingsMandatory'|translate}}</label>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-0">
+                            <label
+                                class="col-xl-2 col-lg-3 col-md-4 form-header">{{'admin.store.settingspickupEmailRequired'|translate}}</label>
+
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label>{{'admin.store.settingsOptional'|translate}}</label>&nbsp;
+
+                                    <label class="switch pt-1 mb-0">
+                                        <input type="checkbox" formControlName="PICKUP_EMAIL_OPTIONAL"
+                                            id="PICKUP_EMAIL_OPTIONAL" (change)="onSubmit()" />
+                                        &nbsp;<span class="slider round"></span>
+                                    </label>&nbsp;
+                                    <label>{{'admin.store.settingsMandatory'|translate}}</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-0">
+                            <label
+                                class="col-xl-2 col-lg-3 col-md-4 form-header">{{'admin.store.settingspickupPhoneRequired'|translate}}</label>
+
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label>{{'admin.store.settingsOptional'|translate}}</label>&nbsp;
+                                    <label class="switch pt-1 mb-0">
+                                        <input type="checkbox" formControlName="PICKUP_TEL_OPTIONAL"
+                                            id="PICKUP_TEL_OPTIONAL" (change)="onSubmit()" />
+                                        &nbsp;<span class="slider round"></span>
+                                    </label>&nbsp;
+                                    <label>{{'admin.store.settingsMandatory'|translate}}</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-0">
+                            <label
+                                class="col-xl-2 col-lg-3 col-md-4 form-header">{{'admin.store.settingspickupdisplaypickupAddress'|translate}}</label>
+
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label>{{'admin.store.settingspickupHide'|translate}}</label>&nbsp;
+                                    <label class="switch pt-1 mb-0 locationAddress">
+                                        <input type="checkbox" formControlName="DELIVERY_NO_LOCATION_SHOW_ADDRESS"
+                                            id="DELIVERY_NO_LOCATION_SHOW_ADDRESS" (change)="onSubmit()" />
+                                        &nbsp;<span class="slider round showlocationAddress"></span>
+                                    </label>&nbsp;
+                                    <label>{{'admin.store.settingspickupShow'|translate}}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

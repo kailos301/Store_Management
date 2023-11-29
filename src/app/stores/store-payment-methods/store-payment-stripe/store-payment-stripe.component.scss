@@ -1,0 +1,26 @@
+.ideal-payment-image {
+    max-height: 42px;
+}
+
+.bancontact-payment-image {
+    max-height: 42px;
+}
+
+.digital-wallets-payment-image {
+
+    display: inline;
+
+    > img {
+        max-height: 42px;
+        max-width: 10%;
+    } 
+}
+
+.preview-backdrop {
+    position: absolute;
+    top: 37%;
+    left: 0;
+    width: 15%;
+    height: 63%;
+    z-index: 2;
+}

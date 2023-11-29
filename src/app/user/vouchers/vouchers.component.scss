@@ -1,0 +1,101 @@
+.pull-right {
+  float: right;
+}
+
+.submit-btn {
+  margin-right: 10px;
+}
+
+mat-slider {
+  width: 100%;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+::ng-deep .mat-accent .mat-slider-thumb {
+  background-color: #20a8d8;
+}
+
+::ng-deep .mat-accent .mat-slider-thumb-label {
+  background-color: #20a8d8;
+}
+
+::ng-deep .mat-accent .mat-slider-track-fill {
+  background-color: #20a8d8;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.copyUrlIcon {
+  cursor: pointer;
+  font-size: 20px;
+  color: #273773;
+}
+
+.printSetupBtn {
+  float: left;
+}
+
+.printSetupIcon {
+  color: white;
+  z-index: 1;
+  position: relative;
+  left: -36px;
+}
+
+.printSetupPopupBtn {
+  position: absolute;
+  margin-left: 20px;
+  border: 1px solid white;
+  display: none;
+  z-index: 1000;
+}
+
+.showBtn {
+  display: block;
+}
+
+::ng-deep .sidebar-lg-show {
+  .cdk-overlay-pane {
+    @media screen and (device-width: 360px) and (device-height: 640px) {
+      width: 70% !important;
+    }
+
+    @media screen and (device-width: 360px) and (device-height: 740px) {
+      width: 70% !important;
+    }
+
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+      width: 70% !important;
+    }
+
+    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+      width: 70% !important;
+    }
+
+    @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+      width: 70% !important;
+    }
+  }
+}
+
+.f-size{
+  font-size: 20px;
+}
+
+@media screen and (max-width: 991px) {
+  .pro-width {
+    width: 90px;
+    padding-top: 25px;
+  }
+  
+}
+

@@ -1,0 +1,1183 @@
+{
+	"admin": {
+		"global": {
+			"delete": "Изтрий",
+			"cancel": "Отказ",
+			"ok": "Добре",
+			"reject": "Отхвърляне",
+			"create": "Създай",
+			"yes": "Да",
+			"print": "Печат",
+			"save": "Запази",
+			"no": "Не",
+			"close": "Затвори",
+			"name": "Име",
+			"firstName": "Име",
+			"language": "Език",
+			"comment": "Коментар",
+			"email": "E-mail",
+			"login": "Влизане",
+			"noData": "Няма намерени данни",
+			"field": {
+				"required": "Това поле е задължително",
+				"minLength": "Това поле трябва да съдържа минимум {{minLength}} знака",
+				"maxLength": "Това поле не може да бъде повече от {{maxLength}} знака",
+				"maxNumber": "Това поле не може да бъде повече от {{maxNumber}}",
+				"requiredValue": "Стойностите за отстъпка трябва да са по-големи от 0.",
+				"downloadFlyer": "Изтеглете флаер"
+			},
+			"description": "Описание",
+			"discount": "Отстъпка",
+			"country": "Страна",
+			"timezone": "Часова зона",
+			"pleaseSelect": "Моля изберете ...",
+			"address": "Адрес",
+			"addressLine1": "Адрес 1",
+			"addressLine2": "Адрес 2",
+			"price": "Цена",
+			"postCode": "Пощенски код",
+			"postCodePattern": "Invaild - Използвайте само буквено-цифрови",
+			"change": "Промяна",
+			"update": "Актуализация",
+			"password": "Парола",
+			"sentenceText": "и на",
+			"anyOption": "Може да бъде избран произволен брой опции",
+			"exactOneOption": "Точно една опция трябва да бъде избрана",
+			"partnerProgram": {
+				"label": "Партньорска програма",
+				"vouchers": "Ваучери",
+				"commissions": "Комисионни"
+			},
+			"voucher": {
+				"label": "Код на ваучера",
+				"voucherQuestion": "Въпрос за ваучер"
+			},
+			"subscription": {
+				"label": "Абонаменти",
+				"status": "Състояние на абонамента",
+				"endDate": "Крайна дата на абонамента",
+				"purchase": "Закупете абонамент",
+				"checkout": {
+					"stripe": "Плащане с кредитна карта",
+					"paypal": "Плащане с Paypal"
+				},
+				"price": {
+					"label": "Цена на абонамент"
+				},
+				"vat": {
+					"label": "ДДС",
+					"invalid": "ДДС номерът не е валиден",
+					"valid": "ДДС номерът е валиден"
+				},
+				"vatNumber": {
+					"label": "ДДС номер"
+				},
+				"totalPrice": {
+					"label": "Обща цена"
+				},
+				"billingDetails": {
+					"label": "Данни за фактура"
+				},
+				"continue": "Продължи",
+				"discountVoucher": {
+					"patternInvalid": "Ваучерът за отстъпка трябва да съответства на образеца „XXXX-XXXX“",
+					"invalid": "Ваучерът не е валиден",
+					"alreadyReserved": "Ваучерът вече е резервиран и не може да бъде използван",
+					"valid": "Ваучерът е валиден"
+				},
+				"vatamount": {
+					"label": "Начислена сума по ДДС"
+				},
+				"pricewithvat": {
+					"label": "Цена с ДДС"
+				},
+				"vatnotcharged": {
+					"label": "Без ДДС такса"
+				},
+				"invoiceLabel": "Фактури за покупка",
+				"extendPurchase": "Удължете абонамента",
+				"createInvoice": "Създайте фактура",
+				"updateInvoice": "Актуализиране на фактура",
+				"deleteInvoice": "Изтриване на фактура",
+				"discountPercentage": "Процент отстъпка",
+				"currency": "Валута",
+				"paymentId": "Идент. № на плащането от доставчика на плащания",
+				"partnerEmail": "Имейл за партньор"
+			},
+			"validate": {
+				"amountNumbers": "Сумата трябва да има само цифри с цифри"
+			},
+			"paymentDetails": "Подробности за плащане",
+			"termsPoliciesMsg": "Приемам",
+			"termsOfUse": "Условия за ползване",
+			"privacyPolicy": "Политика за поверителност",
+			"phoneNumber": "Телефонен номер",
+			"currentLanguage": "en",
+			"storeLabel": "Обект",
+			"contactus": {
+				"thankYou": "Благодарим Ви, че се свързахте с GonnaOrder. Ще ви отговорим по имейл възможно най -скоро.",
+				"instructions": "Намерете инструкции за това как работи приложението и отговори на често задаваните ви въпроси",
+				"gettintouch": "Не можете да намерите това, което търсите? Свържете се! Пишете ни за въпроса или проблема, с който се сблъсквате и ние ще се свържем с вас. Уверете се, че сте включили достатъчно подробности, за да можем да реагираме по-бързо",
+				"faq": "Често задаавани въпроси",
+				"helpCenter": "Помощен център",
+				"submit": "Изпращане",
+				"support": "поддържа",
+				"featuresGuide": "Ръководство за функции"
+			},
+			"uploadNow": "Качете сега",
+			"role": "Роля",
+			"administrator": "Администратор",
+			"standardUser": "Стандартен потребител",
+			"saveAndNew": "Запазване и добавяне на ново",
+			"saveAndContinue": "",
+			"next": "Следващия",
+			"type": "Тип",
+			"value": "Стойност",
+			"active": "Активен",
+			"consumed": "Консумирани",
+			"availabilityRestrictions": "Ограничения за наличност",
+			"from": "От",
+			"To": "Да се",
+			"available": "На разположение",
+			"partner": "Партньор",
+			"emailStatus": "Състояние на имейл",
+			"superAdmin": "Супер администратор",
+			"remove": "Премахване",
+			"availableTimes": "Налични времена",
+			"to": "Да се",
+			"any": "Всякакви",
+			"reloadApplication": "Презаредете приложението",
+			"newVersionAvailable": "Изпълнявате по-стара версия на приложението. Презаредете приложението, за да получите най-новата актуализация",
+			"vatPercentage": "ДДС %",
+			"phone": "Телефон",
+			"registeredAt": "Регистриран в",
+			"initialValue": "Първоначална стойност"
+		},
+		"alerts": {
+			"headerError": "Грешка!",
+			"errorOccured": "Възникна грешка",
+			"headerSuccess": "Успех!",
+			"invalidCredentials": "Невалидни предоставени идентификационни данни",
+			"accountActivated": "Вашият акаунт вече е активиран. Впишете се, за да продължите.",
+			"passwordChanged": "Вашата парола е променена. Влезте по-долу, за да продължите.",
+			"emailChanged": "Вашият имейл е променен. Влезте по-долу, за да продължите.",
+			"oopsLostMsg": "Ами сега! Изгубен си.",
+			"pageNotFound": "Страницата, която търсите, не е намерена.",
+			"problemMsg": "Нещо се обърка",
+			"pageUnavailable": "Случи се нещо неочаквано",
+			"userInvitationSuccessfull": "Регистрацията Ви беше успешна. Влезте, за да получите достъп до {{storeName}}",
+			"socialAccountLoginFailed": "Уверете се, че сте свързали своя социален акаунт, преди да се опитате да го използвате",
+			"accessDenied": "Достъпът е отказан"
+		},
+		"login": {
+			"forgetPassword": "Забравена парола?",
+			"noAccount": "Нямате акаунт?",
+			"signUp": "Регистрирайте се",
+			"social": {
+				"header": "или се свържете чрез вашия социален акаунт:",
+				"google": "Влезте с Google",
+				"facebook": "Влезте с Facebook",
+				"apple": "Влезте с Apple"
+			}
+		},
+		"account": {
+			"receiveEmailMsg": "Скоро ще получите e-mail, за да потвърдите акаунта си.",
+			"profile": "Промяна на профила",
+			"provideEmailMsg": "Моля, предоставете своя e-mail",
+			"changePassword": "Промяна на парола",
+			"logout": "Излезте от профила си",
+			"affiliate": {
+				"lastName": "Фамилия",
+				"create": "Станете партньор",
+				"pleaseVisit": "Моля посетете",
+				"profile": "Вашата профилна страница",
+				"updateInfoMsg": "Ако искате да актуализирате вашата информация"
+			},
+			"currentPassword": "Текуща парола",
+			"newPassword": "Нова парола",
+			"social": {
+				"nav": "Социални сметки",
+				"header": "Свържете социалните акаунти",
+				"google": {
+					"header": "Google акаунт",
+					"linkAccount": "Свържете профила в Google"
+				},
+				"link": {
+					"success": "Социалният акаунт беше успешно свързан"
+				},
+				"facebook": {
+					"header": "Фейсбук профил",
+					"linkAccount": "Свържете акаунт във Facebook"
+				},
+				"apple": {
+					"header": "Apple акаунт",
+					"linkAccount": "Свържете акаунта на Apple"
+				}
+			},
+			"createPassword": "Създай парола"
+		},
+		"forgot": {
+			"header": "Забравена парола",
+			"submit": "Изпращане",
+			"alreadyKnow": "Вече знаете паролата си и не искате да я променяте?",
+			"emailInvalid": "Невалиден e-mail",
+			"successHeader": "Много добре!",
+			"successMsg": "Скоро ще получите e-mail, за да нулирате паролата си.",
+			"emailNotRegister": "Този e-mail не е регистриран"
+		},
+		"updatePassword": {
+			"header": "Актуализиране на парола",
+			"subHeader": "Моля, въведете новата си парола",
+			"confirmPassword": "Потвърждение на паролата"
+		},
+		"store": {
+			"minutes": "Минути",
+			"closeOrder": "Затворете поръчката",
+			"acceptOrder": "Приемете поръчка",
+			"acceptOrderMarkReady": "Приемете поръчката и маркирайте като готов",
+			"acceptOrderEstimatedTime": "Приемете поръчката и включете приблизително време",
+			"minutesValidationMsg": "Протоколът трябва да е валидно положително число",
+			"list": {
+				"storesList": "Списък с обекти",
+				"searchByAlias": "Въведете домейна на GonnaOrder (мин. 6 знака)"
+			},
+			"storeimages": "Съхранявайте изображения",
+			"storeCreation": "Регистрирайте нов Обект",
+			"settings": "Настройки",
+			"paymentMethod": "Начин на плащане",
+			"paymentOptions": "Опции за плащане",
+			"paymentOptionsDisabled": "Опциите за плащане са деактивирани, тъй като не е активиран начин на плащане за обекта.",
+			"deliveryAtAddressOptions": "Опции за доставка до адрес",
+			"minDeliveryAmount": "Минимална сума на поръчката за доставка",
+			"deliveryFee": "Такса за доставка",
+			"order": {
+				"label": "Поръчка",
+				"orderSent": "Изпратена поръчка",
+				"orderWish": "Поръчай Желание",
+				"notifications": {
+					"receipt": "Получавайте известия за поръчки"
+				},
+				"floor": "Етаж",
+				"customerName": "Име на клиента",
+				"newestOrderSent": "Изпратена е най-новата поръчка",
+				"oldestOrderSent": "Изпратена най-старата поръчка",
+				"newestOrderWish": "Желание за най-нова поръчка",
+				"oldestOrderWish": "Най-старото желание за поръчка",
+				"newestOrderExpected": "Очаква се най-новата поръчка",
+				"oldestOrderExpected": "Очаква се най-старата поръчка",
+				"autoprint": {
+					"receipt": "Автоматично отпечатвайте входящите поръчки"
+				},
+				"orderExpected": "Очаква се поръчка",
+				"newestOrderEffective": "Най-новата ефективна поръчка",
+				"oldestOrderEffective": "Най-старата поръчка в сила",
+				"dateTimeRange": "Период от време",
+				"orderEffective": "Поръчката е ефективна",
+				"noFilter": "Без филтър",
+				"yesterday": "Вчера",
+				"lastHour": "Последен час",
+				"now": "Сега",
+				"nextHour": "Следващият час",
+				"tomorrow": "Утре",
+				"custom": "Персонализиран...",
+				"today": "Днес",
+				"orderIdentifier": "Идентификатор",
+				"changeOrder": "Промяна на поръчката"
+			},
+			"orderIsReady": "Поръчката е готова!",
+			"orderExpected": "Очаква се поръчка",
+			"orderDownload": "Изтегли",
+			"note": "Бележка",
+			"open": "Отворена",
+			"cancelled": "Отменена",
+			"rejected": "Отказани",
+			"rejectWithoutReason": "Отхвърлете поръчката без да посочвате причина",
+			"rejectWithReason": "Отхвърлете поръчката като посочите причина",
+			"closed": "Приключени",
+			"identifier": "Идентификация",
+			"deliveryMethod": "Режим на доставка",
+			"deliveryOption": "Начини на доставка",
+			"orderingDisabledMessage": "За да разрешите да поръчате режим на доставка, трябва да бъде избран",
+			"deliveryAtInLocation": "Сервирайте на маса",
+			"deliveryLocationsEnabled": "Опцията е деактивирана, защото няма дефинирани маси",
+			"orderDeliveryMethod": {
+				"deliver": "Доставка",
+				"pickup": "Взимане на място",
+				"serve": "Сервирай",
+				"deliverAtAddress": "Доставка до адрес",
+				"openTap": ""
+			},
+			"status": "Статус",
+			"amountPaid": "Платена сума",
+			"paymentStatus": "Статус на плащане",
+			"payment": {
+				"paid": "Платено",
+				"notPaid": "Неплатено",
+				"stripeTermsAndConditions": "Регистрирайки акаунта си, Вие се съгласявате с ",
+				"servicesAgreement": "Споразумение за услуги Stripe",
+				"stripeConnectedAccountAgreement": "Споразумение за акаунт, свързани със Stripe",
+				"stripeUserMsg": "Създаването на Stripe акаунт позволява получаване на поръчки чрез кредитна карта, iDEAL, Bancontact",
+				"paypalDisableMsg": "Paypal временно не се поддържа",
+				"creditCard": "Кредитна карта",
+				"bancontact": "банконтакт",
+				"iDeal": "идеален",
+				"squareUserMsg": "Създаването на квадратна сметка позволява получаване на поръчки чрез кредитна карта",
+				"vivaUserMsg": "Създаването на акаунт в Viva Wallet позволява получаване на поръчки чрез кредитна карта",
+				"digitalWallets": "Цифрови портфейли",
+				"paymentSense": {
+					"userMsg": "Създаването на акаунт в Paymentsense позволява получаването на поръчки чрез кредитна карта",
+					"jwtToken": ""
+				},
+				"rmsUserMsg": "Създаването на RMS акаунт позволява получаване на поръчки чрез кредитна карта",
+				"merchantId": "",
+				"sharedSecret": "Споделена тайна",
+				"rmsConnect": "Свържете се с RMS",
+				"paymentSenseConnect": "Свържете се с PaymentSense",
+				"jccUserMsg": "Създаването на JCC акаунт позволява получаване на поръчки чрез кредитна карта",
+				"acquirerId": "",
+				"apiSignaturePassword": "",
+				"jccConnect": "Свържете се с JCC",
+				"valueNotValid": "Предоставената стойност не е валидна",
+				"trustpaymentsUserMsg": "Създаването на акаунт в TrustPayments дава възможност за получаване на поръчки чрез кредитна карта",
+				"siteReference": "",
+				"webserviceUser": "",
+				"webservicePassword": ""
+			},
+			"date": "Дата",
+			"time": "Време",
+			"backToOrders": "Обратно към Поръчки",
+			"share": {
+				"language": {
+					"userInterfaceLanguage": "Език на потребителския интерфейс",
+					"defaultCatalogLanguage": "Език на каталога",
+					"basedOn": "Въз основа на настройките на браузъра",
+					"storeDefault": "Запазване на езика на каталога по подразбиране"
+				},
+				"sharePreviewLink": "Споделяне и преглед",
+				"sharePreview": "Споделяне и визуализация",
+				"embedCode": "Поставете на Вашия уебсайт",
+				"printQRCodes": "Печат на QR кодове",
+				"ordering": {
+					"allowDefaultOrdering": "Разрешаване на поръчка",
+					"DefaultOrdering": "По подразбиране",
+					"disableDefaultOrdering": "Деактивирано",
+					"defaultDate": "Дата по подразбиране"
+				}
+			},
+			"voucher": {
+				"list": "Списък с ваучери",
+				"createVoucher": "Създайте персонализирани ваучери",
+				"partnerStatus": "Статус на партньора",
+				"endDate": "Крайна дата",
+				"commission": "Комисиона",
+				"text": "Ваучер",
+				"numberOfVouchers": "Брой ваучери",
+				"defaultVoucherValue": "Стойност на ваучер",
+				"numberOfVoucher": "Налични ваучери, които могат да бъдат създадени",
+				"numberOfVoucherPattern": "Броят на ваучерите трябва да е цифрен",
+				"minNumberOfVoucherPattern": "Броят на ваучера трябва да е по-голям или равен на 1",
+				"commissionStatus": "Състояние на комисион",
+				"waiting_for_store_purchase": "В очакване на покупка на обекта",
+				"eligible_for_payment": "Допустими за плащане",
+				"waiting_for_finalization": "Изчакване 14 дни за финализиране",
+				"useDate": "Дата на използване на ваучера",
+				"printVoucherSetup": "Печат на ваучер",
+				"addnewdiscountVoucher": "Добавете нов ваучер за отстъпка",
+				"backtodiscountVouchers": "Обратно към ваучери за отстъпки",
+				"creatediscountVoucher": "Създайте ваучер за отстъпка",
+				"typeSingleuse": "Еднократна употреба",
+				"typeMultipleuse": "Многократна употреба",
+				"updatediscountVoucher": "Актуализирайте ваучер за отстъпка",
+				"editdiscountVoucher": "Редактирайте ваучер за отстъпка",
+				"discountVouchers": "Ваучери за отстъпки"
+			},
+			"statistics": {
+				"title": "Статистика",
+				"from": "От",
+				"to": "До",
+				"orders": "Поръчки",
+				"menuViewing": "Меню Прегледи",
+				"orderValue": "Стойност на поръчка",
+				"month": "Месец",
+				"year": "Година",
+				"submitted": "Приета",
+				"received": "Получена",
+				"total": "Обща сума",
+				"totalViewing": "Общо преглеждания",
+				"totalPaid": "Общо платено",
+				"totalNonPaid": "Общо неплатен",
+				"totalAll": "Общо всичко",
+				"orderItems": "Поръчайте артикули",
+				"orderItemSummary": "Резюме на артикула за поръчка",
+				"orderItemSummaryDescription": "Разберете общите приходи за всеки продаден продукт и вижте кои продукти са най-популярни",
+				"orderItemDetails": "Подробности за артикула за поръчка",
+				"orderItemDetailsDescription": "Получете подробен изглед на всички поръчки, който включва количеството и приходите от продуктите, продадени в тези поръчки, и датите на поръчките",
+				"orderCapture": "Записване на поръчки",
+				"monthly": "Месечно",
+				"daily": "Ежедневно",
+				"day": "Ден",
+				"period": "месечен цикъл",
+				"quantitySold": "Продадено количество",
+				"revenueLabel": "Приходи"
+			},
+			"catalog": {
+				"backToOffer": "Обратно към офертата",
+				"backToCatalog": "Обратно към каталог",
+				"backToCategory": "Назад към категорията",
+				"importTranslation": "Промяна и превод на етикети",
+				"import": "Импортиране на каталог чрез Excel",
+				"upload": "Качване на каталог",
+				"importInfo": "Можете да импортирате данни в каталога си, като използвате шаблон на Excel. Импортирането на Excel поддържа Имена на оферти, Имена на категории и предлага Кратки описания и Цена.",
+				"downloadTemplate": "Изтеглете шаблон тук",
+				"acceptImport": "Приемете и импортирайте каталог",
+				"importImage": "Импортиране на каталог от снимка",
+				"beta": "бета",
+				"importImageInfo": "Можете да импортирате данни в каталога си, като добавите снимка. Импортирането е възможно само за една категория. Уверете се, че снимката Ви е чиста и с висока резолюция. Тази функция е в бета режим.",
+				"offer": {
+					"offer": "Оферта",
+					"createOffer": "Създайте оферта",
+					"addOffer": "Добавете оферта",
+					"confirmDeleteOffer": "Сигурни ли сте, че искате да изтриете тази оферта? <br/> Това действие не може да бъде отменено.",
+					"offerImage": "Изображение на офертата",
+					"uploadImage": "Качи изображение",
+					"characteristics": {
+						"name": "Характеристики",
+						"vegetarian": "Вегетариански",
+						"vegan": "Веган",
+						"celery": "Целина",
+						"wheat": "Пшеница",
+						"crustaceans": "Ракообразни",
+						"eggs": "Яйца",
+						"fish": "Риба",
+						"lupin": "Лупин",
+						"milk": "Мляко",
+						"molluscs": "Мекотели",
+						"mustard": "Горчица",
+						"nuts": "Ядки",
+						"peanuts": "Фъстъци",
+						"sesame": "Сусам",
+						"soya": "Соя",
+						"sulphurDioxide": "Серен диоксид",
+						"halal": "Халал",
+						"barley": "Ечемик",
+						"spicy": "Пикантно"
+					},
+					"countAgainstslotcount": "Бройте срещу броя на слотовете",
+					"countAgainstslot": "Бройте срещу слота",
+					"incrementBy": "Увеличаване от",
+					"externalProductId": "Външен идентификационен номер на продукта",
+					"vatExternalId": "Външен идентификатор по ДДС",
+					"available": "На разположение",
+					"oos": "Изчерпано количество",
+					"hidden": "Скрит",
+					"unorderable": "Не подлежи на поръчка"
+				},
+				"variant": {
+					"priceVariants": "Варианти на цените",
+					"priceVariant": "Вариант на цената",
+					"assignedOfferVariations": "Натиснете тук, за да видите присвоените варианти",
+					"createPriceVariant": "Създайте ценови вариант",
+					"confirmDeleteVariant": "Сигурни ли сте, че искате да изтриете този вариант на цените? <br/> Това действие не може да бъде отменено."
+				},
+				"option": {
+					"option": "Опция",
+					"options": "Настройки",
+					"addOption": "Добавяне на опция",
+					"createOption": "Създаване на опция",
+					"confirmDeleteOption": "Сигурни ли сте, че искате да изтриете тази опция? <br/> Това действие не може да бъде отменено."
+				},
+				"category": {
+					"createCategory": "Създаване на категория",
+					"category": "Категория",
+					"addCategory": "Добавяне на категория",
+					"infoDeleteCategory": "Категорията не може да бъде изтрита, тъй като съдържа оферти. <br/> Основните предложения трябва да бъдат изтрити или преместени в други категории.",
+					"confirmDeleteCategory": "Сигурни ли сте, че искате да изтриете тази категория? <br/> Това действие не може да бъде отменено."
+				},
+				"optionGroup": {
+					"optionGroups": "Опционални групи",
+					"createOptionGroup": "Създаване на опционална група",
+					"optionGroup": "Вариантна група",
+					"addOptionGroup": "група опции",
+					"optionGroupType": "Тип опция на групата",
+					"optionA": "ОПЦИЯ A",
+					"optionB": "ОПЦИЯ Б",
+					"optionC": "ОПЦИЯ В",
+					"chooseExisting": "Изберете съществуваща опция",
+					"infoDeleteOptionGroup": "Групата с опции не може да бъде изтрита, тъй като съдържа опции. <br/> Основните опции трябва да бъдат изтрити.",
+					"confirmDeleteOptionGroup": "Сигурни ли сте, че искате да изтриете тази група опции? <br/> Това действие не може да бъде отменено."
+				},
+				"description": {
+					"priceDescription": "Описание на цената",
+					"shortDescription": "Кратко описание",
+					"longDescription": "Подробно описание"
+				},
+				"discount": {
+					"noDiscount": "Без отстъпка",
+					"percentile": "Процентна",
+					"monetary": "Парична",
+					"invalidDiscount": "Сумата на отстъпката трябва да е по-малка от цената"
+				},
+				"sellable": {
+					"isVisible": "видим"
+				},
+				"availability": {
+					"startTime": "Начален час",
+					"endTime": "Краен час",
+					"allTimeAvailability": "Наличен през цялото време. Изберете ограничение"
+				},
+				"translation": {
+					"translation": "Превод",
+					"languageTranslation": "Езиковият превод вече е наличен! Моля, изберете редактиране.",
+					"translations": "Преводи",
+					"addNewTranslation": "Добавяне на нов превод"
+				},
+				"language": {
+					"defaultCatalogLanguage": "Език на каталога по подразбиране",
+					"changeLanguage": "Смени езика",
+					"sourceLanguage": "Основен език",
+					"targetLanguage": "Целеви език",
+					"withGoogleTranslate": "Преобразуване с Google Translate"
+				},
+				"tooltip": {
+					"goToCategory": "Натиснете тук, за да видите подробности за категорията",
+					"goToOffer": "Натиснете тук, за да видите подробности за офертата",
+					"translation": "Натиснете тук, за да видите зададени преводи",
+					"goToOptionGroup": "Натиснете тук, за да видите подробности за групата с опции",
+					"goToOption": "Натиснете тук, за да видите подробности за опциите",
+					"options": "Натиснете тук, за да видите присвоените опции",
+					"goToVariant": "Натиснете тук, за да видите подробности за варианта",
+					"optionGroup": "Натиснете тук, за да видите група опции и опции",
+					"changestatus": "Промяна на състоянието"
+				},
+				"addRestriction": "Добавете ново ограничение във времето",
+				"importTranslation1": "Можете да промените текстовете на елементите от каталога чрез Excel и да ги преведете на няколко езика.",
+				"importTranslation12": "Изтеглете тук файла на Excel, който съдържа всички текстове от вашия каталог.",
+				"importTranslation2": "Файлът на excel включва езици, за които имате поне една оферта на този език.",
+				"importTranslation3": "Mağaza diliniz ve farklı diller için dosyaya dahil edilen tüm metinleri güncelleyin. Excel dosyasının yapısını değiştirmemeli, yalnızca yeni metin eklemelisiniz",
+				"importTranslation4": "Когато сте готови с промените, качете файла, за да влязат в сила промените ви",
+				"contentTranslate": "Промяна и превод на текст",
+				"contentDownload": "Възникна грешка и файлът не може да бъде изтеглен",
+				"contentFailedError": "Възникна грешка и файлът не може да бъде качен. Моля, уверете се, че структурата на файла не е променена",
+				"orderable": {
+					"isOrderable": "Може да се поръча"
+				},
+				"error": {
+					"overlappingSchedules": "Графиците не могат да бъдат запазени, тъй като периодите се припокриват",
+					"timeScopeWrong": "Времевият обхват е грешен",
+					"noDaySelect": "Няма избран ден",
+					"loadSchedules": "Възникна грешка при извличане на графика",
+					"createSchedule": "Възникна грешка при запазване на графика",
+					"updateSchedule": "При актуализирането на графика възникна грешка",
+					"deleteSchedule": "При изтриването на графика възникна грешка"
+				},
+				"update": "Актуализирайте каталога чрез Excel",
+				"acceptUpdate": "Приемане и актуализиране на каталога",
+				"importTranslationnew": "Можете да импортирате каталога си, като използвате шаблон на Excel. Можете да импортирате имена на оферти, имена на категории, описания, цени на оферти, отстъпки и данни за акциите.",
+				"importTranslationnew1": "Изтеглете шаблона на Excel и попълнете данните от каталога си",
+				"updateTranslation": "Можете да добавяте нови елементи към каталога си или да променяте съществуващите си елементи от каталога с помощта на шаблон на Excel. Можете да импортирате имена на оферти, имена на категории, описания, цени на оферти, отстъпки и данни за акциите.",
+				"updateTranslation1": "Изтеглете файла Excel от тук, който съдържа вашите каталожни данни.",
+				"updateTranslation2": "Актуализирайте полетата на офертите, които искате да промените. За тях запазете същите имена на офертите",
+				"updateTranslation3": "Добавете нови редове във файла на Excel за нови оферти, които искате да бъдат създадени",
+				"updateTranslation4": "Актуализирайте полетата в Excel, които искате да промените. Полетата за оферта трябва да останат същите, ако искате да промените конкретно",
+				"priceVariants": "Варианти на цената",
+				"catalogOptionGroup": "Група с опции",
+				"allowMultiple": "Разрешаване на множество избори на един и същ елемент",
+				"nocatalog": "Няма каталог",
+				"notable": "Няма таблици",
+				"importLink": "Импортиране на каталог от връзката",
+				"importCatalogexternalsite": "Външен сайт",
+				"importCataloglink": "Връзка",
+				"importCataloglinkimport": "Внос",
+				"catalogOfstoreimported": "Започва създаването на каталог на магазина. Може да отнеме 10-15 минути, за да завършите.",
+				"catalogFetching": "Каталогът се изтегля. Моля, опитайте отново да импортирате след час",
+				"catalogUnabletoimport": "Каталогът не може да бъде импортиран",
+				"catalogPleaseentervalidlink": "Моля, въведете валидна връзка"
+			},
+			"location": {
+				"text": "Маса",
+				"backtoTables": "Обратно към маси",
+				"create": "Добавете маса",
+				"createBulk": "Създавайте маси на едро",
+				"noOfStoreLocations": "Брой маси",
+				"error": {
+					"noStoreFound2": "Нови местоположения в обекта, за да продължите",
+					"pattern": "Невалиден етикет - Използването само на / комбинирани цифри 0-9 и главни букви A-Z и хипетични символи (-) и подчертаване (_) ",
+					"digit": "Невалиден етикет - Позволено е използването само на цифри 0-9"
+				},
+				"label": "Маса",
+				"createTableMsg": "Добавете маси на едро",
+				"locationType": "Тип местоположение",
+				"table": "Таблица",
+				"location": "Местоположение",
+				"room": "Стая",
+				"notablesFound": "Няма намерени таблици",
+				"nocatalogfound": "Не е намерен каталог",
+				"tableStatus": "Състояние на таблицата",
+				"openTap": {
+					"closed": "Затворен",
+					"open": "Отвори"
+				},
+				"status": {
+					"success": "Състоянието е актуализирано",
+					"table": {
+						"pin": "ПИН за таблица"
+					},
+					"error": "Грешка при актуализиране на състоянието"
+				},
+				"print": {
+					"qrCodes": "Отпечатайте QR кодове"
+				}
+			},
+			"locations": {
+				"text": "Маси"
+			},
+			"qr": {
+				"download": {
+					"pdf": "Изтеглете Pdf QR код за печат",
+					"image": "Изтеглете изображението QR код"
+				},
+				"downloadPrintQRStore": "Изтеглете QR код за отпечатване като pdf",
+				"downloadPrintQRAllLocation": "Изтеглете всички QR кодове на масите като pdf",
+				"downloadImageQRStore": "Изтеглете изображение с QR код",
+				"downloadImageQRAllLocation": "Изтеглете всички изображения с QR код като zip"
+			},
+			"help": {
+				"helpText": "Помощ за"
+			},
+			"users": {
+				"header": "Потребители",
+				"removeUser": "Сигурни ли сте, че искате да премахнете достъпа до обекта за този потребител? <br/> Това действие не може да бъде отменено.",
+				"inviteUser": {
+					"inviteTitle": "Поканете потребител",
+					"invitationText": "Ще бъде изпратен e-mail на следния адрес. След като потребителят приеме поканата, той ще може да управлява изцяло",
+					"invitePrimaryButton": "Поканете"
+				}
+			},
+			"region": {
+				"label": "Област"
+			},
+			"city": {
+				"label": "Град"
+			},
+			"alias": "GonnaOrder домейн",
+			"notSubscribedMsg": "Този обект не е закупил абонамент за GonnaOrder. Домейнът GonnaOrder може да бъде заявен от други обекти с валиден абонамент, докато е в пробен режим.",
+			"noActiveSubscriptionsMsg": "Можете да получите този домейн само ако закупите абонамент за GonnaOrder. Вече можете да използвате друг домейн и да го промените на желания, след като сте закупили абонамент.",
+			"domainTakenMsg": "Този GonnaOrder домейн е вече зает",
+			"aliasValidationMsg": "Домейнът трябва да съдържа най-малко 6 знака, най-малко един от които трябва да е буква „а“ до „z“. Цифрите от '0' до '9' и символите '-' и '_' са позволени. Специални знаци и главни букви не са позволени",
+			"phoneNumber": {
+				"pattern": "Използването само на цифри 0-9 е позволено."
+			},
+			"enablePaypalPaymentGonnaOrderLabel": "gonnaorder.com",
+			"preferredLanguage": {
+				"label": "Предпочитан език"
+			},
+			"catalogOverview": "Каталог",
+			"ordering": "Поръчване",
+			"details": "Детайли",
+			"paymentProvoders": "Доставчици на плащания",
+			"disabled": "Деактивирано",
+			"paymentDisabled": "Плащането е деактивирано",
+			"paymentOptional": "Плащане по избор",
+			"paymentMandatory": "Плащането е задължително",
+			"enabled": "Активирано",
+			"disconnect": "Прекъсване на връзката",
+			"accountID": "Идентификационен номер на акаунта",
+			"connectWithPaypal": "Свържете се с Paypal",
+			"connectWithStripe": "Свържете се със Stripe",
+			"paymentMethodDetailsMessage": "Изберете доставчиците на плащания, които искате да свържете",
+			"optionGroup": {
+				"atMostOneOption": "Най-много една опция може да бъде избрана ",
+				"customSelection": "Персонализиран избор",
+				"minimumRequired": "Минимален брой опции, необходими за избор",
+				"maximumAllowed": "Максимален брой опции, които могат да бъдат избрани",
+				"maximumHeigherThanMimimum": "Максималният брой трябва да бъде по-голям или равен на минималния номер"
+			},
+			"message": {
+				"errorTryAgain": "Възникна грешка. Моля, опитайте отново",
+				"storeUpdate": "Обектът е актуализиран!",
+				"actionFail": "Неуспешно действие!",
+				"loadFail": "Зареждането не бе успешно!",
+				"acessRemoveFail": "Премахването на достъпа от обекта не бе успешно",
+				"acessRemoveSuccess": "Премахнат успешно от обекта!",
+				"inviteUserFail": "Неуспешно покана на потребител!",
+				"inviteUserSuccess": "Потребителят е поканен да управлява обекта!",
+				"uploadFail": "Качването не бе успешно!",
+				"logoUploadSuccess": "Логото е качено успешно!",
+				"imageUploadSuccess": "Изображението е качено успешно!",
+				"downloadFail": "Изтеглянето се провали!",
+				"settingsUpdate": "Настройките обновени!",
+				"receiveEmailMsg": "Скоро ще получите e-mail. Следвайте връзката, за да промените своя e-mail.",
+				"profileUpdate": "Профилът е актуализиран!",
+				"translationsUpdateSuccess": "Преводите са актуализирани успешно!",
+				"saveOfferSuccess": "Офертата е запазена успешно",
+				"saveCategorySuccess": "Запазване на успеха на категорията",
+				"childCategoryOffer": "Детски категории, свързани с офертата!",
+				"childOfferCategory": "Детски оферти, свързани с категорията!",
+				"offerVaryAToffer": "Варианти на оферта, свързани с офертата!",
+				"catalogVerifySuccess": "Данните от каталога са потвърдени успешно!",
+				"catalogDataUploadSuccess": "Данните от каталога са качени успешно!",
+				"categoryDeleteSuccess": "Категорията е изтрита успешно!",
+				"offerDeleteSuccess": "Офертата е изтрита успешно!",
+				"createAvailabilitySuccess": "Създайте успех за наличност",
+				"createAvailabilityFail": "Създаването на наличност не бе успешно",
+				"locationDeleteSuccess": "Местоположение {{label}} бе изтрито успешно",
+				"noInStoreDelivery": "Имайте предвид, че местоположението в обекта за доставка вече не се поддържа",
+				"stripeDisconnect": "Stripe акаунтът е изключен",
+				"paypalDisconnect": "Paypal акаунтът е изключен",
+				"upgradeAffiliateSuccess": "Надградете подробно филиалите успешно!",
+				"loadProfileFail": "Не можахме да заредим Вашия профил. Моля, опитайте отново по-късно",
+				"verifyCatalogImageFailed": "Каталогът не може да бъде извлечен от изображението. Опитайте да импортирате изображение с по-висока разделителна способност или изображение, което има по-малка част от каталога само с една категория",
+				"verifyCatalogImageSuccess": "Изображението на каталога е потвърдено успешно!",
+				"imageRemoveSuccess": "Изображението е изтрито",
+				"logoRemoveSuccess": "Логото е изтрито",
+				"zoneRemoveFail": "Премахването на зоната от магазина не бе успешно",
+				"zoneRemoveSuccess": "Премахната зона от магазина успешно",
+				"zoneAdded": "Зона е създадена успешно",
+				"zoneUpdated": "Зоната е актуализирана успешно",
+				"CreateScheduleSuccess": "Успешно създаден",
+				"updateScheduleSuccess": "Успешно актуализиран",
+				"deleteScheduleSuccess": "Изтрито успешно",
+				"saveRuleSuccess": "Запазете успеха на правилото",
+				"deleteRuleSuccess": "Успех при изтриване на правило",
+				"saveDiscountVoucherSuccess": "Запазване на ваучер за отстъпка Успех",
+				"saveDiscountVoucherFailed": "Неуспешно запазване на ваучер за отстъпка",
+				"deleteDiscountVoucherSuccess": "Успех при изтриване на ваучер за отстъпка",
+				"locationCreateSuccess": "Таблица {{label}} е създадена успешно",
+				"locationUpdateSuccess": "Таблица {{label}} бе актуализирана успешно"
+			},
+			"rejectOrder": "Отхвърлете поръчката",
+			"paypalNotsupported": "Paypal не се поддържа",
+			"enableWithmelink": "Активирайте плащанията с вашата връзка Paypal.me",
+			"payPalmelink": "Връзка към Paypal.me",
+			"enableWithanylink": "Активиране на плащания с всяка връзка за плащане",
+			"paymentProvider": "Доставчик на плащания",
+			"paymentLink": "Линк за плащане",
+			"other": "друг",
+			"shoppingBasket": "Пазарска кошница",
+			"settingsMandatory": "Задължителен",
+			"settingsOptional": "по избор",
+			"settingspickupEmailRequired": "Изисква се имейл",
+			"settingspickupPhoneRequired": "Задължително телефон",
+			"addressDelivery": "Доставка на адрес",
+			"orderAmount": "Сума на поръчката, над която доставката е безплатна",
+			"deliveryAddressauto": "Адрес за доставка Автоматично попълване",
+			"postCodesrestrictions": "Ограничения за зона с пощенски код",
+			"restricted": "Ограничен",
+			"nonRestricted": "Не е ограничено",
+			"addressZones": "зони",
+			"addressaddnewZones": "Добавете нова зона",
+			"createDifferentaddress": "Създайте различни зони за доставяне на адреси, които имат различни настройки",
+			"backtoZones": "Обратно към зоните",
+			"minRadius": "Мин радиус",
+			"maxRadius": "Макс Радиус",
+			"unit": "Мерна единица",
+			"postCodes": "Пощенски кодове",
+			"postCodemsg": "Въведете списъка с пощенски кодове, разделени със запетая или нов ред",
+			"settingspickupNameRequired": "Изисква се име",
+			"zoneLabel": "Zona",
+			"invalidRadiusRange": "Диапазонът на радиуса е невалиден",
+			"account": {
+				"deleteUserSuccess": "Потребителският достъп до магазина е премахнат успешно",
+				"confirmDeleteUser": "Сигурни ли сте, че искате да премахнете достъпа до този магазин за този потребител? Това действие не може да бъде отменено."
+			},
+			"subscription": {
+				"storeEligibility": "Вашият магазин има право да използва GonnaOrder за до 50 разглеждания на меню или 50 поръчки на месец.\nКогато се достигнат пробните ограничения, клиентите ви няма да могат да видят менюто ви.\nМожете да закупите абонамент за GonnaOrder, за да премахнете тези ограничения.",
+				"vatprompt": {
+					"sodexobelgium": "Търговец ли сте на мрежата Sodexo? Въведете вашия ДДС номер, за да получите 50% отстъпка",
+					"eu": "Въведете своя ДДС номер, за да избегнете плащането на таксата за ДДС за онлайн покупката"
+				},
+				"sodexo": {
+					"affiliate": {
+						"prompt": "Все още не сте член на мрежата Sodexo?"
+					}
+				},
+				"active": "Активен",
+				"fourteenfreetrial": "14 дни безплатен пробен период - неограничен брой поръчки",
+				"limitedFreemium": "Ограничен Freemium - Абонирайте се, за да имате неограничени поръчки и да не губите своя GonnaOrder домейн",
+				"limitedFreemiumnumberof": "Ограничен Freemium - Достигнат е лимитът от 5 поръчки за този месец. Абонирайте се, за да имате неограничен брой поръчки и да не загубите своя домейн GonnaOrder",
+				"discountVouchers": "Ваучери за отстъпки",
+				"billing": {
+					"businessName": "Име на фирмата"
+				}
+			},
+			"applicationId": "Application ID",
+			"accessToken": "",
+			"locationId": "",
+			"clientId": "",
+			"clientSecret": "",
+			"settingsDefaultcatalogview": "Изглед на каталог по подразбиране",
+			"settingsCollapsed": "Свито",
+			"settingsExpanded": "Разширено",
+			"orderingNotification": "Имейл за известие за поръчка",
+			"orderingNotificationmessage": "Изпратете имейл на по-долу имейл адрес за всяка поръчка",
+			"settingsManagestock": "Управление на запасите",
+			"settingStocklevel": "Ниво на запасите",
+			"settingsStockcheck": "Проверка на запасите",
+			"name": "Име на магазина",
+			"thanksForstore": "Благодарим ви, че регистрирахте магазина си",
+			"uploadyourmenu": "Качете менюто си бързо и лесно",
+			"configureyourstore": "Конфигурирайте магазина си според вашите нужди",
+			"seeyourstore": "Вижте магазина си така, както го виждат клиентите ви",
+			"findinstructions": "Намерете инструкции за това как работи приложението",
+			"orderingMinutesorderready": "Минути, докато поръчката е готова",
+			"orderingDefaultestimated": "По подразбиране очакваното време в минути за поръчки за доставка и вземане, докато са готови",
+			"orderingMinimum": "Минимум",
+			"orderingMaximum": "Максимум",
+			"setting": {
+				"rules": {
+					"orderingrules": "Правила за поръчка",
+					"addnewrule": "Добавете ново правило",
+					"rules": "Правила",
+					"orderamount": "Сума на поръчката",
+					"backtorules": "Назад към правилата",
+					"status": "Състояние на правилото",
+					"conditions": "Условия",
+					"orderamountbetween": "Количество на поръчката между конкретни стойности",
+					"minorderamount": "Минимална сума на поръчката",
+					"maxaorderamount": "Максимална сума на поръчката",
+					"actions": "Действия",
+					"displayoptgroup": "Показване на група опции",
+					"optgroups": "Опционални групи",
+					"addoptgroup": "група опции",
+					"backtorule": "Назад към правило",
+					"createruleptgroup": "Създаване на опционална група",
+					"ruleoptgroup": "Вариантна група",
+					"infoDeleteORule": "Правилото не може да бъде изтрито, тъй като съдържа категория. <br/> Основната категория трябва да бъде изтрита",
+					"confirmDeleteRule": "Наистина ли искате да изтриете това правило? <br/> Това действие не може да бъде отменено.",
+					"updateRule": "Правило за актуализиране"
+				},
+				"marketing": {
+					"fb": {
+						"labelError": "Невалиден идентификатор за проследяване на пиксели във facebook",
+						"label": "Facebook Pixel",
+						"meta": "Мета таг за проверка на уебсайта на Facebook",
+						"metaError": "Невалидно съдържание на мета тагове за проверка на уебсайта на facebook",
+						"UrlError": "Невалиден URL адрес във Facebook"
+					},
+					"google": {
+						"labelError": "Невалиден код за проследяване на Google Analytics."
+					},
+					"label": "Маркетинг",
+					"GA": {
+						"label": "Google Analytics"
+					},
+					"enableFBMsg": "Активирайте проследяването на магазини с Facebook Pixel",
+					"enableGAMsg": "Активирайте проследяването на магазини с Google Analytics",
+					"Websitelink": "Връзка към уебсайт",
+					"Facebooklink": "Връзка във Facebook",
+					"Instagramlink": "Връзка в Instagram",
+					"Carditlink": "Cardit.io Връзка",
+					"SocialMedia": "Уебсайт, социални медии и свързани акаунти",
+					"SocialMediaPromote": "Популяризирайте различни начини, по които клиентите ви могат да взаимодействат с вашия бизнес",
+					"SocialMediaText": "Предварителна настройка",
+					"website": {
+						"UrlError": "Невалиден URL адрес на уебсайта на магазина"
+					},
+					"instagram": {
+						"UrlError": "Невалиден URL адрес в Instagram"
+					},
+					"cardit": {
+						"UrlError": "Невалиден URL адрес на CardIto"
+					}
+				},
+				"samedayordering": "Поръчка от същия ден",
+				"requestorderdateupfront": "Заявете предварително дата за поръчка",
+				"billing": "Таксуване",
+				"lastMile": {
+					"lastMileDeliverySoftware": "Софтуер за доставка на последната миля",
+					"connectWithMynext": "Свържете се с mynext",
+					"enterMynextCredentials": "Въведете вашите следващи идентификационни данни"
+				},
+				"integrations": {
+					"username": "Потребителско име",
+					"password": "Парола",
+					"connect": "Свържете",
+					"theCredentialsAreNotValid": "Идентификационните данни не са валидни",
+					"navName": "Интеграции",
+					"shareDataWithOtherApplications": "Споделяйте данни с други приложения",
+					"connectToHubrise": "Свържете се с HubRise",
+					"enterHubriseCredentials": "Въведете вашите идентификационни данни за HubRise",
+					"connectedToHubrise": "Свързан с HubRise",
+					"hubriseCustomerList": "Списък на клиентите",
+					"goToHubrise": "Отиди до HubRise",
+					"powersoft": {
+						"connectWithPowersoft": "",
+						"connectPowersoft": "",
+						"accessTokenmsg": "",
+						"agentCode": "",
+						"agentCodemsg": "",
+						"customerCode": "",
+						"customerCodemsg": "",
+						"emailmsg": "",
+						"connect": ""
+					}
+				},
+				"domains": "Домейни",
+				"apps": {
+					"name": "Приложения",
+					"promoteGOApp": "Популяризирайте поръчките чрез приложението GonnaOrder",
+					"promoteGOAppInfo": "Потребителите ще запазят връзката ви към магазина в приложението и ще поръчват по -лесно от мобилните си телефони",
+					"promoteCustomOApp": "Насърчавайте поръчките чрез вашето персонализирано приложение в магазина",
+					"promoteCustomAppInfo": "Свържете се с нас, за да получите вашето персонализирано мобилно приложение, което можете да популяризирате сред клиентите си",
+					"iosAppLink": "Връзка към приложението за iOS",
+					"invalidIOSAppLink": "Невалиден URL адрес на App Store",
+					"androidAppLink": "Връзка към приложението за Android",
+					"invalidAndroidAppLink": "Невалиден URL адрес на Google Play Магазин"
+				},
+				"allowOrderUpdateByStore": "Разрешаване на актуализиране на поръчки по магазини",
+				"allowOrderDeletionByStore": "Разрешаване на изтриване на поръчка от магазина",
+				"opentabordering": ""
+			},
+			"orderingEmailcustomer": "Изпратете имейл на клиента при промяна на състоянието на поръчката",
+			"orderNotificationSound": "Непрекъснато звуково известие за поръчка",
+			"schedule": {
+				"backToSchedule": "Обратно към графика",
+				"add": "Добавяне",
+				"save": "Запази",
+				"name": "Име",
+				"createScheduleItem": "Добавете нов график",
+				"editScheduleItem": "Редактиране на графика",
+				"cancel": "Отказ",
+				"startTime": "Начален час",
+				"endTime": "Краен час",
+				"delete": "Изтрий",
+				"mon": "",
+				"tue": "",
+				"wed": "",
+				"thu": "",
+				"fri": "",
+				"sat": "",
+				"sun": "",
+				"choose": "Изберете график",
+				"CreateSpecialScheduleSuccess": "Времето за отваряне се актуализира успешно",
+				"error": {
+					"CreateSpecialSchedule": "Възникна грешка при актуализиране на работното време",
+					"LoadSpecialSchedules": "Възникна грешка при извличане на работно време",
+					"DeleteSpecialSchedule": "Възникна грешка при изтриване на работното време"
+				},
+				"DeleteSpecialScheduleSuccess": "Времето за отваряне е изтрито успешно",
+				"requestWishTime": "Поискайте време за желание",
+				"assoonasPossible": "Възможно най-скоро",
+				"futureTime": "Бъдещо време",
+				"generalopening": "Общо работно време",
+				"orderingTimes": "Време за поръчка",
+				"addDaysOfWeek": "Добавете дни от седмицата",
+				"addDates": "Добавяне на дати",
+				"Include": "Включете",
+				"Exclude": "Изключете",
+				"displayStartOrding": "Показвайте желаното време в началото на поръчката",
+				"wishTimeMinutes": "Времеви интервали на желанията - минути",
+				"displayWishTimeFormat": "Показване на формата на желаното време",
+				"times": "Времена",
+				"timeSlots": "Времеви интервали",
+				"slotDuration": "Продължителност на слота - минути",
+				"limitOrder": "Ограничете поръчките на слот",
+				"noLimit": "Няма ограничение",
+				"limit": "Ограничение",
+				"ordersPerSlot": "Поръчки на слот",
+				"wishTimeInFutureMinutes": "Пожелайте време в бъдеще - минути",
+				"defaultOrderingMode": "Режим на поръчка по подразбиране",
+				"displaydesireddateandTime": "Показване на желаната дата и час",
+				"dateandTime": "Време за среща",
+				"dateOnly": "Само дата"
+			},
+			"addNewSchedule": "Добавете нов график",
+			"scheduleList": "Графици",
+			"filter": "Филтър",
+			"ready": "Готов",
+			"global": {
+				"openTime": "Работно време"
+			},
+			"defaultPaymentSelection": "Избор на плащане по подразбиране",
+			"notSelected": "Не е избрано",
+			"preselected": "Предварително избран",
+			"common": {
+				"tooltip": {
+					"option": {
+						"addOption": "Щракнете тук, за да създадете опция"
+					},
+					"movedown": {
+						"Option": "Щракнете тук, за да се придвижите надолу"
+					},
+					"moveup": {
+						"Option": "Щракнете тук, за да се придвижите нагоре"
+					}
+				}
+			},
+			"settingsDefaultVATPercentage": "ДДС по подразбиране",
+			"tableOrdering": "Поръчка на маса",
+			"settingsHidden": "Скрити",
+			"schedulesSlot": "Максимум елементи на слот",
+			"schedulesSlotnote": "Необходимо е да се посочат елементи, които се отчитат спрямо общия брой на слотовете",
+			"timeShouldFuture": "Времето трябва да е в бъдещето.",
+			"discountVoucher": "Ваучер за отстъпка",
+			"inputMinutes": "Въведени минути",
+			"selectMinutes": "Изберете минути",
+			"estimatedTime": "Очаквано време",
+			"hideorderComment": "Скриване на коментарите за поръчки",
+			"hideorderitemComment": "Скриване на коментарите за артикули за поръчки",
+			"catalogOffer": "Оферти",
+			"catalogCategory": "Категория",
+			"settingDetails": "Подробности за магазина",
+			"settingOrdering": "Поръчка на магазина",
+			"settingPayment": "Настройка на плащане",
+			"settingPickup": "Вдигни",
+			"settingDelivery": "Доставка",
+			"settingLocations": "Таблица",
+			"settingCatalog": "Магазин Каталог",
+			"settingOrderingRule": "Правило за подреждане",
+			"settingSchedules": "Графици",
+			"settingMarketing": "Маркетинг",
+			"settingDiscountVouchers": "Ваучер за отстъпка",
+			"domain": "Домейни и приложения",
+			"customDomain": {
+				"additionalCustomDomain": "Допълнителен потребителски домейн",
+				"labelError": "Стойността на домейна не е валидна"
+			},
+			"domaincustomInfo": "Можете да използвате свой собствен потребителски домейн, напр. https://example.com или поддомейн напр. https://mystore.example.com допълнително към вашия домейн GonnaOrder. Трябва да направите допълнителна конфигурация при вашия доставчик на домейн, за да работи това",
+			"catalogManageByExcel": "Управление чрез Excel",
+			"settingspickupdisplaypickupAddress": "Показване на адреса за взимане",
+			"settingspickupHide": "Крия",
+			"settingspickupShow": "Покажи",
+			"deleteStore": "Наистина ли искате да изтриете този магазин? Това действие не може да бъде отменено",
+			"deleteStoreSuccess": "Магазинът е изтрит успешно",
+			"oneClickAddToBasket": "С едно кликване добавете в кошницата",
+			"errorMinimumWishTime": "Невалидно бъдещо минимално време за желание. То трябва да бъде ненулево положително число, което е по-малко или равно на 1440",
+			"deleteStoreMsgError": "Магазинът {{storeId}} съдържа поръчки или елементи от каталога и не може да бъде изтрит",
+			"postCodesErrorMsg": "Пощенският код трябва да съдържа максимум 10 знака и трябва да бъде разделен със запетаи за множество пощенски кодове.",
+			"customers": {
+				"customers": "Клиенти",
+				"customerName": "Потребителско име",
+				"customerPhone": "Телефон на клиента",
+				"customerEmail": "Имейл на клиента",
+				"orders": "Поръчки",
+				"firstOrder": "Първа поръчка",
+				"lastOrder": "Последна поръчка"
+			},
+			"setupZones": "Зони за настройка",
+			"radiusPostCode": "Използвайте радиус",
+			"zonePostCodes": "Използвайте пощенски кодове",
+			"radiusPostCodesDetails": "Определете пощенските кодове за всяка зона",
+			"radiusPostCodesDetails1": "Определете радиус за всяка зона. Това се основава на GPS координати на клиента.",
+			"radiusPostCodesDetails2": "За да активирате тази функция, трябва да имате разрешено автоматично попълване на адреса, както и да определите GPS местоположението на вашия магазин на екрана с подробности за магазина.",
+			"zoneName": "Име на зона",
+			"zonesRestrictions": "Ограничения на зоната за доставка",
+			"enableCustomerAuthentication": "Активирайте удостоверяването на клиента",
+			"settingsDeliverypolygondescription": "Определете всяка зона в карта. Това се основава на GPS координати на клиента",
+			"settingsDeliverydraw_map": "Начертайте на картата",
+			"settingsMaperrormsg": "Моля, нарисувайте полигон за тази зона на картата",
+			"storeNotfound": "Магазинът не е намерен",
+			"externalOnlinePaymentId": "Външен идентификатор за онлайн плащане",
+			"externalNonOnlinePaymentId": "Външен идентификатор за не онлайн плащане",
+			"externalId": "Външен идентификатор",
+			"deliveryFeeExternalId": "Такса за доставка външен идентификатор",
+			"combineorders": "Комбинирайте поръчки"
+		},
+		"load": {
+			"loadingMessage": "Моля изчакайте"
+		},
+		"users": {
+			"removeAccessMsg": "Премахване на достъпа от обекта",
+			"userManage": {
+				"label": "Всички потребители"
+			},
+			"list": {
+				"inputEmail": "Въведете валиден имейл"
+			},
+			"details": {
+				"title": "Потребителски данни",
+				"id": "документ за самоличност",
+				"username": "Потребителско име",
+				"googleAccount": "Google акаунт",
+				"facebookAccount": "Фейсбук профил",
+				"backToAllUsers": "Назад към всички потребители",
+				"deleteUserSuccess": "Потребителят е изтрит успешно",
+				"updateUserSuccess": "Потребителят е актуализиран успешно",
+				"confirmDeleteUser": "Наистина ли искате да изтриете този потребител?"
+			}
+		},
+		"register": {
+			"registerTitle": "Регистрация",
+			"registerationSuccess": "Благодарим Ви за регистрацията. Скоро ще получите e-mail, за да потвърдите акаунта си.",
+			"haveAccount": "Вече имате акаунт?",
+			"emailInfo": "Ще трябва да потвърдите, че този имейл принадлежи на вас",
+			"accept": "С натискане на бутона Регистрация приемате следното",
+			"phoneNumberoptional": "Телефонен номер (незадължително)",
+			"acceptRegister": "Приеми и регистрирай",
+			"registerHeaderMessage1": "Регистрирайте бизнеса си на GonnaOrder.com",
+			"registerHeaderMessage2": "и започнете безплатния си пробен период днес",
+			"registerFormStep1": "Попълнете формуляра и потвърдете имейла си",
+			"registerFormStep2": "Влезте и създайте своя магазин",
+			"registerFormStep3": "Качете менюто си и конфигурирайте настройките",
+			"registerFinalMessage": "Вашият магазин е готов за използване с вашите клиенти!",
+			"continue": "Продължи",
+			"social": {
+				"google": "Продължете с Google",
+				"facebook": "Продължете с Facebook",
+				"apple": "Регистрирайте се в Apple"
+			}
+		},
+		"user": {
+			"profile": {
+				"updateTitle": "Актуализиране на профилa"
+			},
+			"details": {
+				"emailErrorMsgInvaild": "Невалиден e-mail",
+				"lastName": "Фамилия",
+				"confirmPassword": "Потвърдете парола",
+				"confirmPasswordErrorMsgMisMatch": "Паролите не съвпадат"
+			}
+		},
+		"passwordAuth": {
+			"passAuthButton": "Ново удостоверяване",
+			"passAuthPromt": "Моля, потвърдете паролата, за да продължите"
+		},
+		"storeError": {
+			"unExpected": "Появи се неочаквана грешка"
+		},
+		"menu": {
+			"preview": "Преглед"
+		},
+		"continue": {
+			"accept": "С натискане на бутона Продължи приемате следното"
+		},
+		"sodexo": {
+			"prompt": {
+				"purchase": "Получавайте 50% отстъпка за една година при закупуване на абонамент за GonnaOrder, ако сте член на Sodexo"
+			}
+		},
+		"printer": {
+			"printersList": "Принтери",
+			"noPrinter": "Няма регистриран принтер",
+			"registerPrinter": "Регистрирам",
+			"registerTitle": "Регистрирайте принтера",
+			"setPrinterName": "Моля, задайте името на принтера",
+			"printerName": "Име на принтера",
+			"unregisterPrinter": "Премахване на принтера от списъка",
+			"confirmUnregister": "Наистина ли ще премахнете този принтер от списъка?",
+			"selectPrinter": "Изберете принтер",
+			"selectPrinterTitle": "Моля, изберете принтер",
+			"notEmpty": "Името на принтера не трябва да е празно.",
+			"chooseAPrinter": "Изберете принтер",
+			"star": {
+				"noPrinter": "Не е открит звезден принтер!"
+			},
+			"chooseAPrinterType": "Изберете тип принтер",
+			"connectionMethod": "Метод на свързване",
+			"connectionMethodBluetooth": "",
+			"connectionMethodWiFi": "",
+			"connectionParameters": "Параметри на връзката",
+			"connectionIpOrHostName": "IP или име на хост",
+			"connectionPort": "",
+			"connectionBluetoothMacAddr": "Мак адрес",
+			"testPrint": "Тестов печат",
+			"starPrinter": {
+				"support": "Поддържат се само принтери Star",
+				"indev": "Поддръжка за Star принтери в процес на разработка"
+			},
+			"airPrinter": {
+				"support": "Поддържат се само принтери AirPrint"
+			}
+		}
+	}
+}

@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "提供",
+			"thankYou": "ありがとうございます",
+			"discount": "割引",
+			"viewOrder": "注文内容を確認",
+			"errorH2": "何かがうまくいきませんでした",
+			"errorUnexpected": "予期せぬことが起こりました",
+			"errorExpected": "予期せぬことが起こりました",
+			"errorMustSelectOne": "いずれか一つを選択してください",
+			"errorTrialExceeded": "この機能は利用できません。試用制限を超えました。",
+			"emptyCart": "カートに商品がありません",
+			"optional": "（任意）",
+			"cookies": "このサイトはクッキーを使用しています。 このウェブサイトを使用し続けることにより、あなたはそれらの使用に同意したことになります",
+			"more": "もっと",
+			"less": "もっと少なく",
+			"chooseFrom": "以下よりご選択ください",
+			"standard": "標準",
+			"days": {
+				"mon": "月曜日",
+				"tue": "火曜日",
+				"wed": "水曜日",
+				"thu": "木曜日",
+				"fri": "金曜日",
+				"sat": "土曜日",
+				"sun": "日曜日"
+			},
+			"opentimelist": "営業時間",
+			"newVersionAvailable": "古いバージョンのアプリケーションを実行しています。アプリケーションをリロードして、最新版へ更新してください",
+			"reloadApplication": "アプリケーションをリロード",
+			"poweredByGonnaOrder": "Powered by GonnaOrder",
+			"recents": "最新情報",
+			"information": "店舗情報",
+			"yes": "はい",
+			"no": "いいえ",
+			"error": "エラー",
+			"errorQRScanner": "QRスキャナでエラーが発生しました",
+			"confirm": "確認"
+		},
+		"select": {
+			"selectAtLeast": "少なくとも{{x}}個選択する必要があります",
+			"selectAtmost": "最大で{{x}}個選択できます",
+			"selectAtleastAtMost": "最低{{x}}個、最大{{y}}個選択してください。",
+			"selectBetween": "{{childCategory.min}}と{{childCategory.max}}の間でご選択ください"
+		},
+		"load": {
+			"loadingMessage": "お待ちください"
+		},
+		"itemDetails": {
+			"removeFromOrder": "こちらを注文から削除します",
+			"addToOrder": "注文に追加する",
+			"updateOrder": "注文を更新"
+		},
+		"checkout": {
+			"yourOrder": "ご注文内容",
+			"total": "合計",
+			"specialNote": "注文に関するご要望",
+			"howToReceiveYourOrder": "ご注文の受取方法",
+			"option": {
+				"pickup": "テイクアウト",
+				"addressDelivery": "ご指定場所までデリバリー",
+				"serve": {
+					"location": "店内の席"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "ご注文内容を保存できませんでした",
+				"fieldRequired": "この項目は必須です",
+				"selectFutureTime": "受取日時を選択してください",
+				"orderSubmissionFailed": "注文を送信できません",
+				"ORDER_LOCATION_NOT_PRESENT": "テーブル番号または場所の名前がありません",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "一部のお客様情報が入力されていません",
+				"ORDER_WISH_TIME_INVALID": "希望時間が過去の時間に設定されています",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "注文配送方法がありません",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "配達はご利用いただけません",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "店内でのご提供はご利用いただけません",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "受け取りでのご提供はご利用いただけません",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "ご指定の郵便番号宛への配達はご利用いただけません",
+				"OPENING_TIME_SCHEDULE_ERROR": "選択した注文希望時間は営業時間外となります",
+				"PROMOTION_NOT_ELIGIBLE": "選択されたプロモーションは対象外です",
+				"offersUnavailableExplanation": "以下の商品は、ご指定の日時にはご利用いただけません。注文の更新をクリックして、注文から削除してください",
+				"offersOutOfStockExplanation": "利用できる商品が不足しています",
+				"invalidVoucherCode": "クーポンコードが無効です",
+				"INVALID_INPUT": "処理中にエラーが発生しました。",
+				"slotUnavailableExplanation": "ご希望の時間枠は利用できません。別の時間枠を選択するか、受渡し方法を変更してください。",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "当店では当日のご注文は承っておりません。",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "ご指定の住所へは当日注文を承る事ができません",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "以下の商品については、当日のご注文は承っておりません。",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "ご希望の日時にご指定の郵便番号宛にお届けすることはできません。",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "特定の日時にご注文をお届けすることはできません。別の日時を選択してください。",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "ご指定の日時にご注文をお渡しする事ができません。別の日時を選択してください。",
+				"INTERNAL_ERROR": "予期しないエラーが発生しました。アプリケーションをリロードして再試行してください。",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "最小配達注文額が満たされていません。続行するには、あと{{AMOUNT_MISSING}}分をご注文に追加してください。",
+				"paymentFailed": "この支払い方法を使用してオンラインで支払うことができませんでした。もう一度やり直してください。",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "ご希望のプロモーションは適用されませんでした",
+				"INVALID_CUSTOMER_VOUCHER": "入力されたクーポンは無効です",
+				"slotUnavailable": "選択された時間は利用できません",
+				"slotUnavailableExplanationWithSuggestion": "選択した時間は過去又は利用不可となります。次に利用可能な時間:",
+				"socialLoginFailed": "アカウントに接続できませんでした",
+				"customerDetailsUpdateFailed": "お客様情報の更新に失敗しました",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "ご指定の場所へは配達できません",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "ご入力いただいた住所が見つかりません。住所を更新して再試行するか、店舗へご連絡をお願いします。",
+				"SERVING_HOURS_SCHEDULE_ERROR": "ご指定の日時にてご注文を承れません。他の日時をご指定ください。",
+				"MISSING_LOCATION_TAP_ID": "タップIDは必須です",
+				"invalidPin": "無効な顧客のPINコード"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "テーブルまでお持ちします"
+					},
+					"unknown": {
+						"location": "ご注文をお持ちします"
+					}
+				},
+				"pickup": "ご注文を受け取る",
+				"addressDelivery": "あなたの情報を入力してください"
+			},
+			"yourInformationPlease": "お客様情報をご入力ください",
+			"locationCode": "テーブル",
+			"yourName": "お客様名",
+			"email": "メールアドレス",
+			"phoneNumber": "電話番号",
+			"fullName": "フルネーム",
+			"streetAddress": "住所",
+			"zip": "郵便番号",
+			"town": "町/市",
+			"minimumAmount": "配送には{{amount}}個以上のご注文が必要です",
+			"deliveryFee": "配送料",
+			"deliveryFeeApplicable": "{{amount}}個未満の注文に適用されます",
+			"field": {
+				"generalValidation": "フィールドの形式が無効です"
+			},
+			"acceptTerm": "続行すると、{{利用規約}}と{{プライバシーポリシー}}に同意したことになります",
+			"termsAndPolicy": "続行すると、",
+			"acceptTerms": {
+				"and": "と",
+				"after": ""
+			},
+			"termsOfUse": "利用規約",
+			"privacyPolicy": "プライバシーポリシー",
+			"yourTable": "テーブル番号（半角数字）",
+			"allowedCharacters": "使用できる文字タイプ",
+			"wishTimeHeading": "受取希望時間",
+			"asSoonAsPossible": "準備出来次第受け取りたい",
+			"specifyWishTime": "受取時間を指定する",
+			"specialNoteExample": "ご注文にメッセージを追加します",
+			"cardDisabledNote": "ご注文が決まりましたら、{{storeName}}にご注文内容をお教えください",
+			"cardHolderName": "クレジットカード記載名",
+			"cardNumber": "カード番号",
+			"cvv": "セキュリティーコード（カード裏面に記載）",
+			"itemsOutOfStock": "売り切れの商品が含まれています",
+			"floor": "フロア",
+			"storeClosedAtOrderWishDate": "ご指定の日時は営業時間外です",
+			"offersNotAvailableAtOrderWishDate": "一部の商品は、ご希望の日時にご利用いただけません",
+			"updateOrder": "注文を更新",
+			"offers": {
+				"availableQuantity": "現在利用可能"
+			},
+			"voucherCode": "クーポンコードを入力してください",
+			"validVoucherCode": "クーポンコードは有効です",
+			"yourRoom": "お部屋番号",
+			"yourLocation": "お客様の現在地",
+			"serveOption": {
+				"location": "自分の現在地で受け取る",
+				"room": "自分の部屋で受け取る"
+			},
+			"social": {
+				"connect": "ソーシャルアカウントに接続する"
+			},
+			"remainingValidVoucher": "クーポンの残高：",
+			"paymentsense": {
+				"declined": "Paymentsense によるオンライン支払いが拒否されました"
+			},
+			"saveCustomerDetailsForFuture": "次回ご注文のためにお客様情報を保存します",
+			"customerDetailsUpdateSuccess": "お客様情報が更新されました",
+			"logout": "ログアウト",
+			"expiry": "有効期限(MMYY)",
+			"enterPin": "PIN番号を入力してください"
+		},
+		"payment": {
+			"payOnlineNow": "オンライン払いを選択",
+			"chooseYourPaymentMethod": "お支払方法を選択",
+			"creditCard": "クレジットカード",
+			"paypal": "ペイパル",
+			"submitOrder": "注文を確定する",
+			"proceedToPayment": "支払いに進む",
+			"errorCouldNotConnect": "選択した支払い方法に進めませんでした。支払い方法選択画面に戻って別の支払い方法を選択するか、しばらくしてからもう一度お試しください。",
+			"enterCreditCardInfo": "クレジットカードまたはデビットカードの情報を入力してください",
+			"yourOrderIsReady": "ご注文の準備が整いました",
+			"yourOrderIsExpected": "ご注文をお待ちしております",
+			"errors": {
+				"valueNotValid": "指定された値は無効です",
+				"zipNotAvailable": "この郵便番号宛にお届けすることはできません。詳しくはお店にお問い合わせください",
+				"addressNotAvailable": "ご指定の住所が見つかりません。候補よりご選択ください。"
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "今すぐオンラインで支払う",
+			"digitalWallets": "デジタルウォレット",
+			"creditCardSecure": "安全なクレジットカード決済",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "ご注文番号",
+			"orderStatus": "ご注文状況",
+			"notSubmitted": "まだご注文は確定されていません",
+			"sent": "注文完了",
+			"ready": "ご注文の準備が出来ました",
+			"rejected": "ご注文が拒否されました",
+			"startNewOrder": "新たに注文をする",
+			"errors": {
+				"emailProperFormat": "正しいメールアドレスを入力してください"
+			},
+			"fiilEmailAddress": "メールアドレスを入力してご注文の控えを受け取る",
+			"failedEmail": "メールを送信できませんでした",
+			"emailSent": "メールを送信しました",
+			"received": "注文内容確認中",
+			"accepted": "注文準備中",
+			"mobileAppPromotion": "GonnaOrderモバイルアプリで次回注文する"
+		},
+		"dialog": {
+			"ok": "OK",
+			"cancel": "キャンセル"
+		},
+		"store": {
+			"currently": {
+				"closed": "現在営業時間外です"
+			},
+			"time": {
+				"closed": "ご指定の時間は営業時間外です"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "ベジタリアン",
+						"vegan": "ビーガン",
+						"celery": "セロリ",
+						"wheat": "小麦",
+						"crustaceans": "甲殻類",
+						"eggs": "卵",
+						"fish": "魚",
+						"lupin": "ルピナス",
+						"milk": "乳製品",
+						"molluscs": "軟体動物",
+						"mustard": "マスタード",
+						"nuts": "ナッツ",
+						"peanuts": "ピーナッツ",
+						"sesame": "ごま",
+						"soya": "大豆",
+						"sulphurDioxide": "二酸化硫黄",
+						"halal": "ハラール",
+						"barley": "大麦",
+						"spicy": "辛い"
+					}
+				}
+			},
+			"cookie": "このウェブサイトはサービス向上の為にクッキーを使用していますが、ご希望により不使用にすることができます。",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "適用する"
+		},
+		"cookie": {
+			"accept": "受け入れる",
+			"reject": "拒否する",
+			"readMore": "続きを読む"
+		},
+		"connect": {
+			"social": {
+				"google": "Googleと接続",
+				"facebook": "Facebookと接続"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "バスケットは空です",
+				"proceed": "続行する"
+			}
+		},
+		"main": {
+			"typeUrl": "URLまたは店舗名を入力してください",
+			"invalidUrl": "URLが無効です",
+			"scanQRCode": "QRコードを読み取る",
+			"storeNotFound": "店舗が見つかりませんでした",
+			"storeSaved": "店舗情報の保存に成功しました",
+			"navigateStoreConfirm": "店舗に移動しますか？"
+		},
+		"recents": {
+			"nothingFound": "ここには何もありません"
+		}
+	}
+}

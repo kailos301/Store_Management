@@ -1,0 +1,101 @@
+<h1 class="text-center text-blue mb-3 mt-md-5 mt-0">{{'admin.register.registerTitle' | translate}}</h1>
+<div class="social-register-wrapper container row justify-content-between">
+  <!-- Google login button -->
+  <div class="google-btn row col-lg-4 mt-3 mt-xl-0" (click)="socialRegistrationAction('google')">
+    <div class="google-icon-wrapper">
+      <img class="google-icon" src="/assets/img/social/google.svg"/>
+    </div>
+    <!-- <p class="btn-text text-center">{{'admin.register.social.google' | translate}}</p> -->
+  </div>
+
+  <!-- Facebook login button -->
+  <div class="facebook-btn row col-lg-4 mt-3 mt-xl-0" (click)="socialRegistrationAction('facebook')">
+    <div class="facebook-icon-wrapper">
+      <img class="facebook-icon" src="/assets/img/social/facebook.svg"/>
+    </div>
+    <!-- <p class="btn-text font-weight-bold text-center">{{'admin.register.social.facebook' | translate}}</p> -->
+  </div>
+                    
+  <!-- Apple login button -->
+  <div class="apple-btn row col-lg-4 mt-3 mt-xl-0" (click)="signInWithApple()">
+    <div class="apple-icon-wrapper">
+      <img class="apple-icon" src="/assets/img/social/apple.svg"/>
+    </div>
+    <!-- <p class="btn-text text-center">{{'admin.register.social.apple' | translate}}</p> -->
+  </div>
+
+</div>
+
+<div>
+  <div class="or-separator">
+    <span>OR</span>
+  </div>
+</div>
+<form [formGroup]="registerForm">
+    <div class="row mb-3" [ngClass]="{'mb-xs-cust':!(email.touched && email.errors)}">
+        <div class="col-12 ">
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>{{'admin.global.email' | translate}}
+                </mat-label>
+                <input matInput formControlName="email" autocomplete="email">
+                <mat-hint>{{'admin.register.emailInfo'|translate}}</mat-hint>
+                <mat-error *ngIf="email.touched && email.errors && email.errors.required">
+                    {{'admin.global.field.required' | translate}}.
+                </mat-error>
+                <mat-error *ngIf="email.touched && email.errors && email.errors.email">
+                    {{'admin.user.details.emailErrorMsgInvaild' | translate}}.
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row mb-0-cust">
+        <div class="col-6" [ngClass]="{'mb-3':password.touched && password.errors}">
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>{{'admin.global.password' | translate}}</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" autocomplete="new-password">
+                <mat-error *ngIf="password.touched && password.errors && password.errors.required">
+                    {{'admin.global.field.required' | translate}}.
+                </mat-error>
+                <mat-error *ngIf="password.touched && password.errors && password.errors.minlength">
+                    {{'admin.global.field.minLength' | translate:{minLength : password.errors.minlength.requiredLength} }}.
+                </mat-error>
+                <mat-error *ngIf="password.touched && password.errors && password.errors.maxlength">
+                    {{'admin.global.field.maxLength' | translate:{maxLength : password.errors.maxlength.requiredLength} }}.
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="col-5 col-5-cust pr-0" [ngClass]="{'mb-3':confirmPassword.touched && confirmPassword.errors}">
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>{{'admin.user.details.confirmPassword' | translate}}</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" formControlName="confirmPassword" autocomplete="new-password">
+                <mat-error *ngIf="confirmPassword.touched && confirmPassword.errors && confirmPassword.errors.required">
+                    {{'admin.global.field.required' | translate}}.
+                </mat-error>
+                <mat-error *ngIf="confirmPassword.touched && confirmPassword.errors && confirmPassword.errors.maxlength">
+                    {{'admin.global.field.maxLength' | translate:{maxLength : confirmPassword.errors.maxlength.requiredLength} }}.
+                </mat-error>
+                <mat-error *ngIf="confirmPassword.touched && confirmPassword.errors && confirmPassword.errors.matchFields">
+                    {{'admin.user.details.confirmPasswordErrorMsgMisMatch' | translate}}.
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="col-1 pl-0" [ngClass]="{'mb-3':confirmPassword.touched && confirmPassword.errors}">
+            <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" class="pwdicon-top" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </div>
+    </div>
+    <div class="row my-3">
+        <div [class.align-center]="!registration" class="col-12">
+            <button type="button" class="btn btn-primary px-4" (click)="registerFormAction()" [disabled]="!languageId || languageId <=0">
+                {{'admin.register.continue' | translate}}
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <mat-label>{{'admin.register.haveAccount' | translate}}&nbsp;<button type="button" class="btn btn-link px-0 link-btn" (click)="goToLogin()">{{'admin.global.login' | translate}}</button>
+            </mat-label>
+        </div>
+    </div>
+</form>

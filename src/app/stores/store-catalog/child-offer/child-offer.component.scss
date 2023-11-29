@@ -1,0 +1,11 @@
+@import "../store-catalog.common.scss";
+
+.childCategoryList span{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.priceContainer{
+    .invalid-feedback{
+      display:block !important;
+    }
+  }

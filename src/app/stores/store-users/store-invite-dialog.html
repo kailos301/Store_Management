@@ -1,0 +1,59 @@
+<h1 class="text-blue col-lg-12 font-size-popup-title" mat-dialog-title>{{ 'admin.store.users.inviteUser.inviteTitle' | translate}}</h1>
+<div mat-dialog-content>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group d-lg-flex d-md-block mb-1">
+        <p class="col-lg-12 col-md-12 col-sm-12 required">{{'admin.store.users.inviteUser.invitationText' | translate }}
+          {{data.storeName}}. </p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group d-lg-flex d-md-block">
+        <label [class.col-lg-3]="('admin.global.currentLanguage'| translate) === 'mk'"
+          [class.col-lg-2]="('admin.global.currentLanguage'| translate) !== 'mk'" class="col-md-12 col-sm-12 required"
+          for="email">{{'admin.global.email' | translate}} </label>
+        <div [class.col-lg-9]="('admin.global.currentLanguage'| translate) === 'mk'"
+          [class.col-lg-10]="('admin.global.currentLanguage'| translate) !== 'mk'"
+          class="input-group col-md-12 col-sm-12">
+          <input type="text" class="form-control" placeholder="{{'admin.global.email'|translate}}" autocomplete="email"
+            [(ngModel)]="data.inviteeEmail" id="email" maxlength="50" cdkFocusInitial />
+          <div class="invalid-feedback d-block">
+            <span
+              *ngIf="data?.inviteeEmail?.length > 50">{{'admin.global.field.maxLength'| translate:{maxLength: "50"} }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 d-lg-flex d-md-block">
+      <label class="col-lg-2 col-md-12 col-sm-12">{{'admin.global.role' | translate}}</label>
+      <div class="col-lg-10 col-md-12 col-sm-12 d-flex flex-column">
+        <div class="form-group">
+          <label class="radio-container" for="STORE_ADMIN">
+            {{'admin.global.administrator' | translate}}
+            <input type="radio" value="STORE_ADMIN" [(ngModel)]="data.role" name="rolename" id="STORE_ADMIN" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label class="radio-container" for="STORE_STANDARD">
+            {{'admin.global.standardUser' | translate}}
+            <input type="radio" value="STORE_STANDARD" [(ngModel)]="data.role" name="rolename" id="STORE_STANDARD" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div mat-dialog-actions class="float-right pr-3 pb-4">
+  <button type="button" class="btn btn-primary px-4 ml-4 order-2"
+    [disabled]="data?.inviteeEmail?.trim().length == 0 || !data?.role"
+    (click)="save()">{{'admin.store.users.inviteUser.invitePrimaryButton' | translate}}</button>
+  <a type="link" class="text-blue cursorPointer text-underline order-1"
+    (click)="onNoClick()">{{'admin.global.cancel' | translate}}</a>
+</div>

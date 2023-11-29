@@ -1,0 +1,116 @@
+a {
+  color: #20a8d8 !important;
+  cursor: pointer !important;
+  text-decoration: underline !important;
+}
+
+.sc-link {
+  font-weight: bolder;
+  color: #48b9b7;
+}
+
+.w-95 {
+  width: 95% !important;
+}
+
+.aligned-items {
+  @media screen and (device-width: 360px) and (device-height: 640px) {
+    padding-left: 10px !important;
+  }
+
+  @media screen and (device-width: 360px) and (device-height: 740px) {
+    padding-left: 10px !important;
+  }
+
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    padding-left: 10px !important;
+  }
+
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+    padding-left: 10px !important;
+  }
+
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+    padding-left: 10px !important;
+  }
+}
+
+.form-align {
+  @media screen and (device-width: 360px) and (device-height: 640px) {
+    margin-top: -15px !important;
+    padding-right: 6px !important;
+  }
+
+  @media screen and (device-width: 360px) and (device-height: 740px) {
+    margin-top: -15px !important;
+    padding-right: 6px !important;
+  }
+
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    margin-top: -15px !important;
+    padding-right: 6px !important;
+  }
+
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+    margin-top: -15px !important;
+    padding-right: 6px !important;
+  }
+
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+    margin-top: -15px !important;
+    padding-right: 6px !important;
+  }
+}
+
+.padding-10 {
+  @media screen and (device-width: 360px) and (device-height: 640px) {
+    padding-left: 10px !important;
+  }
+
+  @media screen and (device-width: 360px) and (device-height: 740px) {
+    padding-left: 10px !important;
+  }
+
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    padding-left: 10px !important;
+  }
+
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+    padding-left: 10px !important;
+  }
+
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+    padding-left: 10px !important;
+  }
+}
+
+::ng-deep .sidebar-lg-show {
+  .breadcrumb {
+    @media (min-width: 320px) and (max-width: 800px) {
+      margin-top: 1rem !important;
+    }
+  }
+}
+
+.comment-li::before{
+  content: '\f27a';
+}
+.help-li::before{
+  content: '\f128';
+}
+li::before {
+    font-family: 'Font Awesome 5 Free' !important;
+  float: left;
+  margin-left: -2.5rem;
+  font-weight: bolder;
+  color: #48b9b7;
+  font-size: 20px;
+  vertical-align: middle;
+}
+ul{
+  list-style: none;
+}
+
+.ml-2rem{
+margin-left: 2rem !important;
+}

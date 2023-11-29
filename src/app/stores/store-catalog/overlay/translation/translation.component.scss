@@ -1,0 +1,42 @@
+@import "../../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../../node_modules/bootstrap/scss/mixins";
+
+.form-group{
+    display: flex;
+    @include media-breakpoint-down(md) {
+        display: inline-block;
+    }
+}
+.mat-dialog-actions .rightActions{
+    float: right;
+    button{
+        margin-left: 15px;
+    }
+    @include media-breakpoint-down(sm) {
+        float: none;
+        margin-top: 10px;
+    }
+}
+.mat-dialog-actions .leftActions{
+    float: left;
+}
+.cursorPointer{
+    cursor: pointer;
+    text-decoration: underline !important;
+}
+form label.required:after{
+    color: red;
+    content: " *";
+}
+.defaultLanguage .flagImg{
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+}
+.translate-icon{
+    width: 35px;
+}
+.lang-label{
+    white-space: nowrap;
+}

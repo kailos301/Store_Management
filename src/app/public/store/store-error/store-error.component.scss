@@ -1,0 +1,28 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+.store-info {
+  max-width: 992px;
+  background-color: #F2F0EE;
+  min-height: 80px;
+  h1 {
+    font-size: 1.25em;
+    color: #000;
+  }
+  .disclaimer {
+    font-size: 0.850em;
+    padding-left: 4px;
+  }
+}
+.content {
+  max-width: 992px;
+  h1 {
+    font-size: 1.125em;
+    color: #000;
+  }
+  .description {
+    font-size: 0.875em;
+    color: #444;
+  }
+}

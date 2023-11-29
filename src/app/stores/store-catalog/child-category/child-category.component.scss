@@ -1,0 +1,93 @@
+@import "../store-catalog.common.scss";
+
+.childOffers mat-list-option span{
+    text-decoration: underline;
+    cursor: pointer;
+    width: max-content;
+}
+.childOffers mat-list-option{
+    margin-bottom: 15px;
+}
+button{
+    margin-right: 20px;
+}
+.groupTypeExample{
+    color:#5c6873 !important;
+    display: flex;
+    @include media-breakpoint-down(md) {
+        display: inline-block;
+    }
+    .radio-container input:checked ~ .checkmark {
+        background-color: #5c6873;
+    }
+    .chk-container input:checked ~ .checkmark {
+        background-color: #5c6873;
+    }
+}
+.groupTypeContainer{
+    ::ng-deep .mat-checkbox-inner-container{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+    }
+    ::ng-deep .mat-checkbox-layout{
+        padding-left:20px;
+    }
+    ::ng-deep .mat-checkbox-frame{
+        border:0;
+    }
+    ::ng-deep .mat-checkbox-checked .mat-checkbox-background{
+        background-color: #5c6873;
+    }
+}
+.childOfferView{
+    label, .checkbox label .checkmark{
+        margin-top:10px;
+    }
+    h3 , span{
+        font-size: 14px;
+    }
+    i.editIcon{
+        font-size: 1.25em;
+    }
+    .variant-wrapper,.variant-wrapper label{
+        cursor: pointer !important;
+    }
+}
+.offerSubSection {
+    margin-bottom: 1rem;
+}
+.mnw-150px {
+    min-width: 150px;
+}
+
+.qty {
+    .value {
+        font-size: 1.125em;
+        color: #000;
+        line-height: 1.75rem;
+    }
+    .decrement,
+    .increment {
+        width: 24px;
+        height: 24px;
+        border-radius: 24px;
+        background-color: #F1F1F1;
+        &.disabled {
+            img {
+                filter: alpha(opacity=35);
+                -moz-opacity:0.35;
+                -khtml-opacity: 0.35;
+                opacity: 0.35;
+            }
+        }
+    }
+    .decrement {
+        img {
+            transform: rotate(90deg);
+        }
+    }
+}

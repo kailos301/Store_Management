@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "Dipersembahkan oleh",
+			"thankYou": "Terima Kasih",
+			"discount": "Diskon",
+			"viewOrder": "Lihat pesanan",
+			"errorH2": "Ada yang salah",
+			"errorUnexpected": "Sesuatu yang tak terduga terjadi",
+			"errorExpected": "Sesuatu yang tak terduga terjadi",
+			"errorMustSelectOne": "Anda harus memilih satu nilai",
+			"errorTrialExceeded": "Fungsi ini tidak tersedia. Batasan uji coba telah terlampaui",
+			"emptyCart": "Tidak ada barang dalam pesanan Anda",
+			"optional": "(opsional)",
+			"cookies": "Situs ini menggunakan cookie. Dengan terus menggunakan situs web ini, Anda menyetujui penggunaannya",
+			"more": "lebih",
+			"less": "kurang",
+			"chooseFrom": "Pilih dari",
+			"standard": "Standar",
+			"days": {
+				"mon": "Senin",
+				"tue": "Selasa",
+				"wed": "Rabu",
+				"thu": "Kamis",
+				"fri": "Jumat",
+				"sat": "Sabtu",
+				"sun": "Minggu"
+			},
+			"opentimelist": "Waktu pembukaan",
+			"newVersionAvailable": "Anda menjalankan aplikasi versi lama. Muat ulang aplikasi untuk menerima pembaruan terbaru",
+			"reloadApplication": "Muat ulang aplikasi",
+			"poweredByGonnaOrder": "Didukung oleh Gonnaorder",
+			"recents": "Terbaru",
+			"information": "Informasi",
+			"yes": "Ya",
+			"no": "Tidak",
+			"error": "Kesalahan",
+			"errorQRScanner": "Terjadi kesalahan dengan Pemindai QR!",
+			"confirm": "Mengonfirmasi"
+		},
+		"select": {
+			"selectAtLeast": "Anda harus memilih setidaknya {{x}}",
+			"selectAtmost": "Anda dapat memilih paling banyak {{x}}",
+			"selectAtleastAtMost": "Andah harus memilih setidaknya {{x}} dan paling banyak {{y}}",
+			"selectBetween": "Anda harus memilih antara nilai {{childCategory.min}} dan {{childCategory.max}}."
+		},
+		"load": {
+			"loadingMessage": "Tolong tunggu sebentar …"
+		},
+		"itemDetails": {
+			"removeFromOrder": "Hilangkan ini dari pesanan Anda",
+			"addToOrder": "Tambahkan ke pesanan Anda",
+			"updateOrder": "Perbarui pesanan Anda"
+		},
+		"checkout": {
+			"yourOrder": "Pesanan Anda",
+			"total": "Jumlah",
+			"specialNote": "Tambahkan pesan spesial di pesanan Anda",
+			"howToReceiveYourOrder": "Bagaimana Anda ingin menerima pesanan Anda?",
+			"option": {
+				"pickup": "Saya akan mengambilnya sendiri",
+				"addressDelivery": "Saya ingin menerimanya di alamat saya",
+				"serve": {
+					"location": "Saya duduk di meja"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "Kami tidak dapat menyimpan detail pesanan Anda",
+				"fieldRequired": "Bagian ini diperlukan",
+				"selectFutureTime": "Silakan pilih waktu di masa depan",
+				"orderSubmissionFailed": "Pesanan tidak dapat dikirim",
+				"ORDER_LOCATION_NOT_PRESENT": "Nomor tabel atau nama lokasi tidak ada",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "Beberapa informasi pelanggan yang diperlukan hilang",
+				"ORDER_WISH_TIME_INVALID": "Waktu keinginan yang diinginkan ada di masa lalu",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "Metode pengiriman pesanan tidak ada",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "Pengiriman di alamat tidak didukung",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "Melayani pesanan tidak didukung",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "Pengambilan pesanan tidak didukung",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "Pengiriman di kode pos yang ditentukan tidak didukung",
+				"OPENING_TIME_SCHEDULE_ERROR": "Toko tutup pada waktu permintaan pesanan yang dipilih",
+				"PROMOTION_NOT_ELIGIBLE": "Promosi dipilih tetapi tidak memenuhi syarat",
+				"offersUnavailableExplanation": "Item di bawah ini tidak tersedia pada tanggal dan waktu yang Anda tentukan. Harap klik perbarui pesanan untuk menghapusnya dari pesanan Anda",
+				"offersOutOfStockExplanation": "Item tidak cukup tersedia",
+				"invalidVoucherCode": "Kode voucher tidak valid",
+				"INVALID_INPUT": "Terjadi kesalahan saat memproses detail yang diberikan.",
+				"slotUnavailableExplanation": "Slot waktu yang diminta tidak tersedia. Pilih slot waktu lain atau pilih metode pengiriman lain.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "Tidak mungkin meminta pesanan pada hari yang sama untuk toko ini.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "Tidak mungkin meminta pesanan untuk hari yang sama untuk wilayah Anda.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "Tidak mungkin meminta pesanan pada hari yang sama untuk barang-barang berikut:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "Tidak mungkin mengirim ke kode pos Anda untuk waktu dan hari yang diminta.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "Tidak mungkin mengirimkan pesanan pada waktu dan tanggal tertentu. Pilih alternatif.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "Tidak mungkin mengambil pesanan pada waktu dan tanggal tertentu. Pilih alternatif.",
+				"INTERNAL_ERROR": "Terjadi kesalahan yang tidak terduga. Harap muat ulang aplikasi untuk mencoba lagi.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "Jumlah pesanan pengiriman minimum tidak terpenuhi. Tambahkan nilai {{AMOUNT_MISSING}} lainnya ke pesanan Anda untuk melanjutkan.",
+				"paymentFailed": "Anda gagal membayar online menggunakan metode pembayaran ini. Silakan coba lagi.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "Promosi yang dibutuhkan tidak diterapkan",
+				"INVALID_CUSTOMER_VOUCHER": "Voucher Pelanggan Tidak Valid",
+				"slotUnavailable": "Waktu yang dipilih tidak tersedia",
+				"slotUnavailableExplanationWithSuggestion": "Waktu yang dipilih sudah lewat atau tidak tersedia lagi. Waktu yang tersedia berikutnya:",
+				"socialLoginFailed": "Kami tidak dapat terhubung ke akun Anda",
+				"customerDetailsUpdateFailed": "Gagal memperbarui data profil",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "Toko tidak mengirim ke lokasi ini",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "Kami tidak dapat menemukan alamat yang Anda berikan. Harap perbarui alamat dan coba lagi atau hubungi toko.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "Tidak mungkin mengirimkan pesanan pada waktu dan tanggal tertentu. Silakan pilih alternatif.",
+				"MISSING_LOCATION_TAP_ID": "Ketuk ID adalah wajib",
+				"invalidPin": "Kode pin pelanggan tidak valid"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "Pesanan Anda akan dilayani untuk Anda"
+					},
+					"unknown": {
+						"location": "Pesanan Anda akan dilayani untuk Anda"
+					}
+				},
+				"pickup": "Ambil pesanan",
+				"addressDelivery": "Tolong informasi Anda"
+			},
+			"yourInformationPlease": "Tolong informasi Anda",
+			"locationCode": "Meja",
+			"yourName": "Nama Anda",
+			"email": "Email",
+			"phoneNumber": "Nomor Telepon",
+			"fullName": "Nama Lengkap",
+			"streetAddress": "Alamat",
+			"zip": "Kode Pos",
+			"town": "Kota",
+			"minimumAmount": "Jumlah minimum {{amount}} pesanan diperlukan untuk pengiriman",
+			"deliveryFee": "Ongkos kirim",
+			"deliveryFeeApplicable": "Berlaku untuk pesanan di bawah {{amount}}",
+			"field": {
+				"generalValidation": "Format bagian tidak valid"
+			},
+			"acceptTerm": "Dengan melanjutkan, Anda menerima {{Terms of use}} dan {{Privacy policy}}",
+			"termsAndPolicy": "Dengan melanjutkan, Anda menerima",
+			"acceptTerms": {
+				"and": "dan",
+				"after": ""
+			},
+			"termsOfUse": "Terms of use",
+			"privacyPolicy": "Privacy policy",
+			"yourTable": "Meja Anda",
+			"allowedCharacters": "Karakter yang diperbolehkan",
+			"wishTimeHeading": "Kapan Anda ingin menerima pesanan Anda?",
+			"asSoonAsPossible": "Saya ingin menerimanya sesegera mungkin",
+			"specifyWishTime": "Saya ingin menentukan kapan menerimanya",
+			"specialNoteExample": "f",
+			"cardDisabledNote": "Silakan bagikan pesanan Anda dengan toko ketika Anda siap",
+			"cardHolderName": "Nama pemegang kartu",
+			"cardNumber": "Nomor Kartu Anda",
+			"cvv": "CVV",
+			"itemsOutOfStock": "Beberapa item sudah habis",
+			"floor": "Lantai",
+			"storeClosedAtOrderWishDate": "Toko tutup pada tanggal atau waktu yang diinginkan",
+			"offersNotAvailableAtOrderWishDate": "Beberapa penawaran tidak tersedia pada tanggal atau waktu yang diinginkan",
+			"updateOrder": "Perbarui pesanan",
+			"offers": {
+				"availableQuantity": "Tersedia saat ini"
+			},
+			"voucherCode": "Masukkan kode voucher",
+			"validVoucherCode": "Kode voucher valid",
+			"yourRoom": "Kamar Anda",
+			"yourLocation": "Lokasimu",
+			"serveOption": {
+				"location": "Saya ingin menerimanya di lokasi saya",
+				"room": "Saya di kamar saya"
+			},
+			"social": {
+				"connect": "Terhubung dengan akun sosial"
+			},
+			"remainingValidVoucher": "Sisa saldo pada voucher:",
+			"paymentsense": {
+				"declined": "Pembayaran online melalui Paymentsense telah ditolak"
+			},
+			"saveCustomerDetailsForFuture": "Simpan data profil Anda untuk pesanan di masa mendatang",
+			"customerDetailsUpdateSuccess": "Data profil Anda telah diperbarui",
+			"logout": "Keluar",
+			"expiry": "Tanggal Kedaluwarsa (MMYY)",
+			"enterPin": "Masukkan Nomor PIN"
+		},
+		"payment": {
+			"payOnlineNow": "Pilih untuk membayar secara daring sekarang",
+			"chooseYourPaymentMethod": "Pilih metode pembayaran Anda",
+			"creditCard": "Kartu kredir",
+			"paypal": "Paypal",
+			"submitOrder": "Kirim pesanan Anda",
+			"proceedToPayment": "Lanjut ke Pembayaran",
+			"errorCouldNotConnect": "Kami tidak dapat terhubung ke prosesor pembayaran yang dipilih. Harap kembali ke layar checkout dan pilih metode pembayaran lain atau coba lagi nanti.",
+			"enterCreditCardInfo": "Silakan masukkan informasi kartu kredit atau debit Anda",
+			"yourOrderIsReady": "Pesanan Anda telah siap",
+			"yourOrderIsExpected": "Pesanan Anda telah diharapkan",
+			"errors": {
+				"valueNotValid": "Nilai yang diberikan tidak valid",
+				"zipNotAvailable": "Anda tidak dapat memesan pengiriman online ke kode pos ini. Silakan hubungi toko untuk informasi lebih lanjut",
+				"addressNotAvailable": "Alamat tidak dapat ditemukan. Silakan pilih alamat jalan dari saran."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "Bayar online sekarang",
+			"digitalWallets": "Dompet Digital",
+			"creditCardSecure": "Pembayaran Kartu Kredit yang Aman",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "Nomor pesanan Anda",
+			"orderStatus": "Status pesanan",
+			"notSubmitted": "Belum dikirim",
+			"sent": "Terkirim",
+			"ready": "Siap",
+			"rejected": "Ditolak",
+			"startNewOrder": "Mulai pesanan baru",
+			"errors": {
+				"emailProperFormat": "Silakan masukan email yang valid"
+			},
+			"fiilEmailAddress": "Isi kan alamat email Anda untuk menerima salinan pesanan Anda",
+			"failedEmail": "Gagal untuk mengirimkan email",
+			"emailSent": "Email terkirim",
+			"received": "Diterima",
+			"accepted": "Diterima",
+			"mobileAppPromotion": "Lain kali pesan melalui aplikasi seluler GonnaOrder"
+		},
+		"dialog": {
+			"ok": "OK",
+			"cancel": "Batalkan"
+		},
+		"store": {
+			"currently": {
+				"closed": "Toko saat ini tutup"
+			},
+			"time": {
+				"closed": "Toko tutup pada waktu yang dipilih"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "Vegetarian",
+						"vegan": "Vegan",
+						"celery": "Seledri",
+						"wheat": "Gandum",
+						"crustaceans": "Krustasea",
+						"eggs": "Telur",
+						"fish": "Ikan",
+						"lupin": "Lupin",
+						"milk": "susu",
+						"molluscs": "Moluska",
+						"mustard": "Moster",
+						"nuts": "Gila",
+						"peanuts": "Kacang kacangan",
+						"sesame": "Wijen",
+						"soya": "Kedelai",
+						"sulphurDioxide": "Sulfur dioksida",
+						"halal": "Halal",
+						"barley": "Jelai",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "Situs web ini menggunakan cookie untuk meningkatkan pengalaman Anda, tetapi Anda dapat memilih keluar jika Anda mau.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "Menerapkan"
+		},
+		"cookie": {
+			"accept": "Menerima",
+			"reject": "Menolak",
+			"readMore": "Baca selengkapnya"
+		},
+		"connect": {
+			"social": {
+				"google": "Terhubung dengan Google",
+				"facebook": "Terhubung dengan Facebook"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "Keranjangmu kosong",
+				"proceed": "Memproses"
+			}
+		},
+		"main": {
+			"typeUrl": "Ketik URL atau nama toko",
+			"invalidUrl": "URL tidak valid",
+			"scanQRCode": "Pindai Kode QR",
+			"storeNotFound": "Toko tidak ditemukan",
+			"storeSaved": "Simpan informasi berhasil disimpan!",
+			"navigateStoreConfirm": "Arahkan ke toko?"
+		},
+		"recents": {
+			"nothingFound": "Tidak ada yang ditemukan di sini"
+		}
+	}
+}

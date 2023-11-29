@@ -1,0 +1,16 @@
+<div class="col-lg-12">
+  <div class="card list">
+    <div class="card-header">
+      <div>{{'admin.store.storeCreation'|translate}}
+        <app-help-icon [helpPageName]="registerHelpPage"></app-help-icon>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-12">
+          <app-store-form [mode]="'CREATE'" [store$]="storeCreation$" [imageContainer]="false" (submitEvent)="onCreate($event)"></app-store-form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

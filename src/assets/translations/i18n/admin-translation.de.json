@@ -1,0 +1,1183 @@
+{
+	"admin": {
+		"global": {
+			"delete": "Löschen",
+			"cancel": "Stornieren",
+			"ok": "OK",
+			"reject": "Ablehnen",
+			"create": "Erstellen",
+			"yes": "Ja",
+			"print": "Drucken",
+			"save": "speichern",
+			"no": "Nein",
+			"close": "Bestätigen",
+			"name": "Name",
+			"firstName": "Vorname",
+			"language": "Sprache",
+			"comment": "Kommentar",
+			"email": "Email",
+			"login": "Anmeldung",
+			"noData": "Keine Daten gefunden",
+			"field": {
+				"required": "Dieses Feld wird benötigt",
+				"minLength": "Dieses Feld sollte mindestens {{minLength}} Zeichen enthalten.",
+				"maxLength": "Dieses Feld darf nicht mehr als {{maxLength}} Zeichen enthalten",
+				"maxNumber": "Dieses Feld darf nicht größer als {{maxNumber}} sein.",
+				"requiredValue": "Rabattwerte sollten größer als 0 sein.",
+				"downloadFlyer": "Flyer herunterladen"
+			},
+			"description": "Beschreibung",
+			"discount": "Rabatt",
+			"country": "Land",
+			"timezone": "Zeitzone",
+			"pleaseSelect": "Bitte auswählen ...",
+			"address": "Adresse",
+			"addressLine1": "Anschrift Zeile 1",
+			"addressLine2": "Adresszeile 2",
+			"price": "Preis",
+			"postCode": "Postleitzahl",
+			"postCodePattern": "Invaild - Verwenden Sie nur alphanumerische Zeichen",
+			"change": "Veränderung",
+			"update": "Aktualisieren",
+			"password": "Passwort",
+			"sentenceText": "und der",
+			"anyOption": "Es können beliebig viele Optionen ausgewählt werden",
+			"exactOneOption": "Es muss genau eine Optionen ausgewählt werden",
+			"partnerProgram": {
+				"label": "Partnerprogramm",
+				"vouchers": "Gutscheine",
+				"commissions": "Provisionen"
+			},
+			"voucher": {
+				"label": "Coupon Code",
+				"voucherQuestion": "Gutscheinfrage"
+			},
+			"subscription": {
+				"label": "Abonnements",
+				"status": "Abonnementstatus",
+				"endDate": "Abonnement Enddatum",
+				"purchase": "Abonnement kaufen",
+				"checkout": {
+					"stripe": "Mit Kreditkarte bezahlen",
+					"paypal": "Zahlen Sie mit PayPal"
+				},
+				"price": {
+					"label": "Einschreibegebühr"
+				},
+				"vat": {
+					"label": "MwSt",
+					"invalid": "Die Umsatzsteuer-Identifikationsnummer ist ungültig",
+					"valid": "Die Umsatzsteuer-Identifikationsnummer ist gültig"
+				},
+				"vatNumber": {
+					"label": "Umsatzsteuer-Identifikationsnummer"
+				},
+				"totalPrice": {
+					"label": "Gesamtpreis"
+				},
+				"billingDetails": {
+					"label": "Rechnungsdetails"
+				},
+				"continue": "Fortsetzen",
+				"discountVoucher": {
+					"patternInvalid": "Der Rabattgutschein muss mit dem Muster 'XXXX-XXXX' übereinstimmen.",
+					"invalid": "Gutschein ist ungültig",
+					"alreadyReserved": "Der Gutschein ist bereits reserviert und kann nicht verwendet werden",
+					"valid": "Gutschein ist gültig"
+				},
+				"vatamount": {
+					"label": "Mehrwertsteuerbetrag berechnet"
+				},
+				"pricewithvat": {
+					"label": "Preis mit MwSt"
+				},
+				"vatnotcharged": {
+					"label": "Mehrwertsteuer ausgeschlossen"
+				},
+				"invoiceLabel": "Rechnungen ",
+				"extendPurchase": "Abonnement verlängern",
+				"createInvoice": "Rechnung erstellen",
+				"updateInvoice": "Rechnung aktualisieren",
+				"deleteInvoice": "Rechnung löschen",
+				"discountPercentage": "Rabattprozentsatz",
+				"currency": "Währung",
+				"paymentId": "Zahlungs-ID des Zahlungsanbieters",
+				"partnerEmail": "Partner-E-Mail"
+			},
+			"validate": {
+				"amountNumbers": "Der Betrag sollte nur aus Ziffern bestehen"
+			},
+			"paymentDetails": "Zahlungsdetails",
+			"termsPoliciesMsg": "Ich akzeptiere das",
+			"termsOfUse": "Nutzungsbedingungen",
+			"privacyPolicy": "Datenschutz-Bestimmungen",
+			"phoneNumber": "Telefonnummer",
+			"currentLanguage": "en",
+			"storeLabel": "Geschäft",
+			"contactus": {
+				"thankYou": "Vielen Dank, dass Sie sich an GonnaOrder gewendet haben. Wir werden Ihnen so schnell wie möglich per E-Mail antworten.",
+				"instructions": "Hier finden Sie Anweisungen zur Funktionsweise der Anwendung und Antworten auf Ihre häufig gestellten Fragen",
+				"gettintouch": "Sie können nicht finden, wonach Sie suchen? In Kontakt kommen! Schreiben Sie uns über die Frage oder das Problem, mit dem Sie konfrontiert sind, und wir werden uns bei Ihnen melden. Stellen Sie sicher, dass Sie genügend Details angeben, damit wir schneller reagieren können",
+				"faq": "FAQ",
+				"helpCenter": "Hilfezentrum",
+				"submit": "einreichen",
+				"support": "Unterstützung",
+				"featuresGuide": "Funktionshandbuch"
+			},
+			"uploadNow": "Jetzt hochladen",
+			"role": "Rolle",
+			"administrator": "Administrator",
+			"standardUser": "Standardbenutzer",
+			"saveAndNew": "Speichern & Neu hinzufügen",
+			"saveAndContinue": "Speichern & fortsetzen",
+			"next": "Nächster",
+			"type": "Art",
+			"value": "Wert",
+			"active": "Aktiv",
+			"consumed": "Verbraucht",
+			"availabilityRestrictions": "Verfügbarkeitsbeschränkungen",
+			"from": "Von",
+			"To": "Bis",
+			"available": "Verfügbar",
+			"partner": "Partner",
+			"emailStatus": "E-Mail-Status",
+			"superAdmin": "höchster Vorgesetzter",
+			"remove": "Entfernen",
+			"availableTimes": "Verfügbare Zeiten",
+			"to": "Bis",
+			"any": "Irgendein",
+			"reloadApplication": "Anwendung neu laden",
+			"newVersionAvailable": "Sie führen eine ältere Version der Anwendung aus. Laden Sie die Anwendung neu, um das neueste Update zu erhalten",
+			"vatPercentage": "MwSt.%",
+			"phone": "Telefon",
+			"registeredAt": "Registriert bei",
+			"initialValue": "Ursprünglicher Wert"
+		},
+		"alerts": {
+			"headerError": "Error!",
+			"errorOccured": "Es ist ein Fehler aufgetreten",
+			"headerSuccess": "Erfolg!",
+			"invalidCredentials": "Ungültige Anmeldeinformationen angegeben.",
+			"accountActivated": "Ihr Konto ist jetzt aktiviert. Melden Sie sich unten an, um fortzufahren.",
+			"passwordChanged": "Ihr Passwort hat sich geändert. Melden Sie sich unten an, um fortzufahren.",
+			"emailChanged": "Ihre E-Mail hat sich geändert. Melden Sie sich unten an, um fortzufahren.",
+			"oopsLostMsg": "Hoppla! Du bist verloren.",
+			"pageNotFound": "Die gesuchte Seite wurde nicht gefunden.",
+			"problemMsg": "Etwas ist schief gelaufen",
+			"pageUnavailable": "Es ist etwas Unerwartetes passiert",
+			"userInvitationSuccessfull": "Ihre Registrierung war erfolgreich. Melden Sie sich an, um Zugriff auf {{storeName}} zu erhalten",
+			"socialAccountLoginFailed": "Stellen Sie sicher, dass Sie Ihr soziales Konto verknüpfen, bevor Sie versuchen, es zu verwenden",
+			"accessDenied": "Der Zugriff wird verweigert"
+		},
+		"login": {
+			"forgetPassword": "Passwort vergessen?",
+			"noAccount": "Sie haben noch keinen Konto?",
+			"signUp": "Anmelden",
+			"social": {
+				"header": "oder verbinden Sie sich über Ihr soziales Konto:",
+				"google": "Anmeldung mit Google",
+				"facebook": "Mit Facebook anmelden",
+				"apple": "Melden Sie sich bei Apple an"
+			}
+		},
+		"account": {
+			"receiveEmailMsg": "Sie erhalten in Kürze eine E-Mail zur Bestätigung Ihres Kontos.",
+			"profile": "Profiländerung",
+			"provideEmailMsg": "Bitte geben Sie Ihre E-Mail-Adresse an",
+			"changePassword": "Passwort ändern",
+			"logout": "Ausloggen",
+			"affiliate": {
+				"lastName": "Nachname",
+				"create": "Partner werden",
+				"pleaseVisit": "Bitte besuche",
+				"profile": "Ihre Profilseite",
+				"updateInfoMsg": "wenn Sie Ihre Informationen aktualisieren möchten"
+			},
+			"currentPassword": "derzeitiges Passwort",
+			"newPassword": "Neues Kennwort",
+			"social": {
+				"nav": "Soziale Konten",
+				"header": "Soziale Konten verknüpfen",
+				"google": {
+					"header": "Google Benutzerkonto",
+					"linkAccount": "Google-Konto verknüpfen"
+				},
+				"link": {
+					"success": "Das soziale Konto wurde erfolgreich verknüpft"
+				},
+				"facebook": {
+					"header": "Facebook-Account",
+					"linkAccount": "Link Facebook Account"
+				},
+				"apple": {
+					"header": "Apple-Konto",
+					"linkAccount": "Apple-Konto verknüpfen"
+				}
+			},
+			"createPassword": "Passwort erstellen"
+		},
+		"forgot": {
+			"header": "Passwort vergessen",
+			"submit": "Einreichen",
+			"alreadyKnow": "Kennen Sie Ihr Passwort bereits und möchten es nicht ändern?",
+			"emailInvalid": "E-Mail ist ungültig.",
+			"successHeader": "Gut gemacht!",
+			"successMsg": "Sie erhalten in Kürze eine E-Mail, um Ihr Passwort zurückzusetzen.",
+			"emailNotRegister": "Diese E-Mail ist nicht registriert"
+		},
+		"updatePassword": {
+			"header": "Kennwort aktualisieren",
+			"subHeader": "Bitte geben Sie Ihr neues Passwort an",
+			"confirmPassword": "Kennwort bestätigen"
+		},
+		"store": {
+			"minutes": "Protokoll",
+			"closeOrder": "Bestellung bestätigen",
+			"acceptOrder": "Bestellung annehmen",
+			"acceptOrderMarkReady": "Bestellung annehmen und als fertig markieren",
+			"acceptOrderEstimatedTime": "Bestellung annehmen und geschätzte Zeit angeben",
+			"minutesValidationMsg": "Das Protokoll sollte eine gültige positive Zahl sein",
+			"list": {
+				"storesList": "Geschäftsliste",
+				"searchByAlias": "Geben Sie die GonnaOrder-Domain ein (mindestens 6 Zeichen)."
+			},
+			"storeimages": "Bilder speichern",
+			"storeCreation": "Neuen Shop registrieren",
+			"settings": "Die Einstellungen",
+			"paymentMethod": "Bezahlverfahren",
+			"paymentOptions": "Zahlungsmöglichkeiten",
+			"paymentOptionsDisabled": "Zahlungsoptionen sind deaktiviert, da keine Zahlungsmethode für das Geschäft aktiviert wurde.",
+			"deliveryAtAddressOptions": "Lieferung bei Adressoptionen",
+			"minDeliveryAmount": "Mindestbestellmenge",
+			"deliveryFee": "Liefergebühr",
+			"order": {
+				"label": "Auftrag",
+				"orderSent": "Bestellung gesendet",
+				"orderWish": "Bestellwunsch",
+				"notifications": {
+					"receipt": "Erhalten Sie Benachrichtigungen für Bestellungen"
+				},
+				"floor": "Fußboden",
+				"customerName": "Kundenname",
+				"newestOrderSent": "Neueste Bestellung gesendet",
+				"oldestOrderSent": "Älteste Bestellung gesendet",
+				"newestOrderWish": "Neuester Bestellwunsch",
+				"oldestOrderWish": "Ältester Bestellwunsch",
+				"newestOrderExpected": "Neueste Bestellung erwartet",
+				"oldestOrderExpected": "Älteste Bestellung erwartet",
+				"autoprint": {
+					"receipt": "Eingehende Bestellungen automatisch drucken"
+				},
+				"orderExpected": "Bestellung erwartet",
+				"newestOrderEffective": "Neueste Bestellung wirksam",
+				"oldestOrderEffective": "Älteste Bestellung wirksam",
+				"dateTimeRange": "Datum Zeitbereich",
+				"orderEffective": "Bestellung wirksam",
+				"noFilter": "Kein Filter",
+				"yesterday": "Gestern",
+				"lastHour": "Letzte Stunde",
+				"now": "Jetzt",
+				"nextHour": "Nächste Stunde",
+				"tomorrow": "Morgen",
+				"custom": "Benutzerdefiniert...",
+				"today": "Heute",
+				"orderIdentifier": "Kennung",
+				"changeOrder": "Bestellung ändern"
+			},
+			"orderIsReady": "Bestellung ist fertig!",
+			"orderExpected": "Bestellung erwartet",
+			"orderDownload": "Herunterladen",
+			"note": "Hinweis",
+			"open": "Offen",
+			"cancelled": "Abgelehnt",
+			"rejected": "Abgelehnt",
+			"rejectWithoutReason": "Bestellung ohne Angabe von Gründen ablehnen",
+			"rejectWithReason": "Bestellung einschließlich Grund ablehnen",
+			"closed": "Bestätigt",
+			"identifier": "Kennung",
+			"deliveryMethod": "Liefermodus",
+			"deliveryOption": "Liefermodi",
+			"orderingDisabledMessage": "Um die Bestellung zu ermöglichen, muss ein Versandmodus ausgewählt werden",
+			"deliveryAtInLocation": "An einem Tisch servieren",
+			"deliveryLocationsEnabled": "Option ist deaktiviert, da keine Tabellen definiert sind",
+			"orderDeliveryMethod": {
+				"deliver": "Liefern",
+				"pickup": "Abholen",
+				"serve": "Dienen",
+				"deliverAtAddress": "Lieferung an Adresse",
+				"openTap": ""
+			},
+			"status": "Status",
+			"amountPaid": "Bezahlter Betrag",
+			"paymentStatus": "Zahlungsstatus",
+			"payment": {
+				"paid": "Bezahlt",
+				"notPaid": "Nicht bezahlt",
+				"stripeTermsAndConditions": "Mit der Registrierung Ihres Kontos stimmen Sie dem zu",
+				"servicesAgreement": "Stripe Services Agreement",
+				"stripeConnectedAccountAgreement": "Stripe Connected Account Agreement",
+				"stripeUserMsg": "Das Erstellen eines Stripe-Kontos ermöglicht den Empfang von Bestellungen über Kreditkarte, iDEAL, Bancontact",
+				"paypalDisableMsg": "Paypal wird vorübergehend nicht unterstützt",
+				"creditCard": "Kreditkarte",
+				"bancontact": "Bankontakt",
+				"iDeal": "Ideal",
+				"squareUserMsg": "Das Erstellen eines Square-Kontos ermöglicht den Empfang von Bestellungen per Kreditkarte",
+				"vivaUserMsg": "Durch das Erstellen eines Viva Wallet-Kontos können Bestellungen per Kreditkarte entgegengenommen werden",
+				"digitalWallets": "Digitale Geldbörsen",
+				"paymentSense": {
+					"userMsg": "Das Erstellen eines Paymentsense-Kontos ermöglicht den Empfang von Bestellungen per Kreditkarte",
+					"jwtToken": ""
+				},
+				"rmsUserMsg": "Das Erstellen eines RMS-Kontos ermöglicht den Empfang von Bestellungen per Kreditkarte",
+				"merchantId": "",
+				"sharedSecret": "Geteiltes Geheimnis",
+				"rmsConnect": "Verbinden Sie sich mit RMS",
+				"paymentSenseConnect": "Verbinden Sie sich mit PaymentSense",
+				"jccUserMsg": "Das Erstellen eines JCC-Kontos ermöglicht den Empfang von Bestellungen per Kreditkarte",
+				"acquirerId": "",
+				"apiSignaturePassword": "",
+				"jccConnect": "Verbinden Sie sich mit JCC",
+				"valueNotValid": "Der angegebene Wert ist ungültig",
+				"trustpaymentsUserMsg": "Das Erstellen eines TrustPayments-Kontos ermöglicht den Empfang von Bestellungen per Kreditkarte",
+				"siteReference": "",
+				"webserviceUser": "",
+				"webservicePassword": ""
+			},
+			"date": "Datum",
+			"time": "Zeit",
+			"backToOrders": "Zurück zu Bestellungen",
+			"share": {
+				"language": {
+					"userInterfaceLanguage": "Sprache der Benutzeroberfläche",
+					"defaultCatalogLanguage": "Katalogsprache",
+					"basedOn": "Basierend auf den Browsereinstellungen",
+					"storeDefault": "Standardkatalogsprache des Geschäfts"
+				},
+				"sharePreviewLink": "Share & Preview Link",
+				"sharePreview": "Teilen & Vorschau",
+				"embedCode": "In Ihre Website einbetten",
+				"printQRCodes": "QR-Codes drucken",
+				"ordering": {
+					"allowDefaultOrdering": "Bestellung zulassen",
+					"DefaultOrdering": "Standard",
+					"disableDefaultOrdering": "Behindert",
+					"defaultDate": "Standarddatum"
+				}
+			},
+			"voucher": {
+				"list": "Gutscheinliste",
+				"createVoucher": "Erstellen Sie benutzerdefinierte Gutscheine",
+				"partnerStatus": "Partnerstatus",
+				"endDate": "Endtermin",
+				"commission": "Kommission",
+				"text": "Gutschein",
+				"numberOfVouchers": "Anzahl der Gutscheine",
+				"defaultVoucherValue": "Gutscheinwert",
+				"numberOfVoucher": "Verfügbare Gutscheine, die erstellt werden können",
+				"numberOfVoucherPattern": "Die Anzahl der Gutscheine muss eine Ziffer sein",
+				"minNumberOfVoucherPattern": "Die Anzahl der Gutscheine muss größer oder gleich 1 sein",
+				"commissionStatus": "Provisionsstatus",
+				"waiting_for_store_purchase": "Warten auf den Kauf im Geschäft",
+				"eligible_for_payment": "Zahlungsberechtigt",
+				"waiting_for_finalization": "Warten Sie 14 Tage auf die Fertigstellung",
+				"useDate": "Datum der Verwendung des Gutscheins",
+				"printVoucherSetup": "Gutschein drucken",
+				"addnewdiscountVoucher": "Neuen Rabattgutschein hinzufügen",
+				"backtodiscountVouchers": "Zurück zu Rabattgutscheinen",
+				"creatediscountVoucher": "Rabattgutschein erstellen",
+				"typeSingleuse": "Einweg",
+				"typeMultipleuse": "Mehrfachverwendung",
+				"updatediscountVoucher": "Rabattgutschein aktualisieren",
+				"editdiscountVoucher": "Rabattgutschein bearbeiten",
+				"discountVouchers": "Rabattgutscheine"
+			},
+			"statistics": {
+				"title": "Statistiken",
+				"from": "Von",
+				"to": "Zu",
+				"orders": "Aufträge",
+				"menuViewing": "Menüansichten",
+				"orderValue": "Bestellwert",
+				"month": "Monat",
+				"year": "Jahr",
+				"submitted": "Eingereicht",
+				"received": "Empfangen",
+				"total": "Gesamt",
+				"totalViewing": "Gesamtbetrachtung",
+				"totalPaid": "Ganz bezahlt",
+				"totalNonPaid": "Insgesamt nicht bezahlt",
+				"totalAll": "Insgesamt",
+				"orderItems": "Auftragspositionen",
+				"orderItemSummary": "Artikelzusammenfassung bestellen",
+				"orderItemSummaryDescription": "Verstehen Sie den Gesamtumsatz für jedes verkaufte Produkt und sehen Sie, welche Produkte am beliebtesten sind",
+				"orderItemDetails": "Bestellartikel Details",
+				"orderItemDetailsDescription": "Erhalten Sie eine detaillierte Ansicht aller Bestellungen, die die Menge und den Umsatz der in diesen Bestellungen verkauften Produkte sowie die Daten der Bestellungen enthält",
+				"orderCapture": "Auftragserfassung",
+				"monthly": "Monatlich",
+				"daily": "Täglich",
+				"day": "Tag",
+				"period": "Zeitraum",
+				"quantitySold": "Menge verkauft",
+				"revenueLabel": "Einnahmen"
+			},
+			"catalog": {
+				"backToOffer": "Zurück zum Angebot",
+				"backToCatalog": "Zurück zum Katalog",
+				"backToCategory": "Zurück zur Kategorie",
+				"importTranslation": "Etiketten ändern und übersetzen",
+				"import": "Katalog über Excel importieren",
+				"upload": "Katalog hochladen",
+				"importInfo": "Sie können Daten mithilfe einer Excel-Vorlage in Ihre Katalogdaten importieren. Der Excel-Import unterstützt Angebotsnamen oder Kategorienamen oder Angebotskurzbeschreibungen und Angebotspreise.",
+				"downloadTemplate": "Hier können Sie die Vorlage herunterladen",
+				"acceptImport": "Katalog akzeptieren und importieren",
+				"importImage": "Katalog aus Foto importieren",
+				"beta": "beta",
+				"importImageInfo": "Sie können Daten in Ihre Katalogdaten importieren, indem Sie ein Foto Ihres Katalogs hinzufügen. Der Import funktioniert für Teile des Katalogs, die eine einzelne Kategorie haben. Stellen Sie sicher, dass Ihr Foto mit hoher Auflösung klar ist. Diese Funktion befindet sich im Beta-Modus.",
+				"offer": {
+					"offer": "Angebot",
+					"createOffer": "Angebot erstellen",
+					"addOffer": "Angebot hinzufügen",
+					"confirmDeleteOffer": "Möchten Sie dieses Angebot wirklich löschen? <br/> Diese Aktion kann nicht rückgängig gemacht werden.",
+					"offerImage": "Bild anbieten",
+					"uploadImage": "Bild hochladen",
+					"characteristics": {
+						"name": "Eigenschaften",
+						"vegetarian": "Vegetarisch",
+						"vegan": "Vegan",
+						"celery": "Sellerie",
+						"wheat": "Weizen",
+						"crustaceans": "Krebstiere",
+						"eggs": "Eier",
+						"fish": "Fisch",
+						"lupin": "Lupine",
+						"milk": "Milch",
+						"molluscs": "Weichtiere",
+						"mustard": "Senf",
+						"nuts": "Nüsse",
+						"peanuts": "Erdnüsse",
+						"sesame": "Sesam",
+						"soya": "Soja",
+						"sulphurDioxide": "Schwefeldioxid",
+						"halal": "Halal",
+						"barley": "Gerste",
+						"spicy": "Würzig"
+					},
+					"countAgainstslotcount": "Gegen Slotanzahl zählen",
+					"countAgainstslot": "Gegen Steckplatz zählen",
+					"incrementBy": "Inkrement durch",
+					"externalProductId": "Externe Produkt-ID",
+					"vatExternalId": "Externe MwSt.-ID",
+					"available": "Erhältlich",
+					"oos": "Ausverkauft",
+					"hidden": "Versteckt",
+					"unorderable": "Nicht bestellbar"
+				},
+				"variant": {
+					"priceVariants": "Preisvarianten",
+					"priceVariant": "Preisvariante",
+					"assignedOfferVariations": "Klicken Sie hier, um die zugewiesenen Variationen anzuzeigen",
+					"createPriceVariant": "Preisvariante erstellen",
+					"confirmDeleteVariant": "Möchten Sie diese Preisvariante wirklich löschen? <br/> Diese Aktion kann nicht rückgängig gemacht werden."
+				},
+				"option": {
+					"option": "Möglichkeit",
+					"options": "Optionen",
+					"addOption": "Option hinzufügen",
+					"createOption": "Option hinzufügen",
+					"confirmDeleteOption": "Möchten Sie diese Option wirklich löschen? <br/> Diese Aktion kann nicht rückgängig gemacht werden."
+				},
+				"category": {
+					"createCategory": "Kategorie erstellen",
+					"category": "Kategorie",
+					"addCategory": "Kategorie hinzufügen",
+					"infoDeleteCategory": "Die Kategorie kann nicht gelöscht werden, da sie Angebote enthält. <br/> Die zugrunde liegenden Angebote müssen gelöscht oder in andere Kategorien verschoben werden.",
+					"confirmDeleteCategory": "Möchten Sie diese Kategorie wirklich löschen? <br/> Diese Aktion kann nicht rückgängig gemacht werden."
+				},
+				"optionGroup": {
+					"optionGroups": "Optionsgruppen",
+					"createOptionGroup": "Optionsgruppe erstellen",
+					"optionGroup": "Optionsgruppe",
+					"addOptionGroup": "Optionsgruppe hinzufügen",
+					"optionGroupType": "Optionsgruppentyp",
+					"optionA": "OPTION A.",
+					"optionB": "OPTION B.",
+					"optionC": "OPTION C.",
+					"chooseExisting": "Wählen Sie Vorhandene Optionsgruppe",
+					"infoDeleteOptionGroup": "Die Optionsgruppe kann nicht gelöscht werden, da sie Optionen enthält. <br/> Die zugrunde liegenden Optionen müssen gelöscht werden.",
+					"confirmDeleteOptionGroup": "Möchten Sie diese Optionsgruppe wirklich löschen? <br/> Diese Aktion kann nicht rückgängig gemacht werden."
+				},
+				"description": {
+					"priceDescription": "Preisbeschreibung",
+					"shortDescription": "kurze Beschreibung",
+					"longDescription": "Lange Beschreibung"
+				},
+				"discount": {
+					"noDiscount": "Kein Rabatt",
+					"percentile": "Procent",
+					"monetary": "Geld",
+					"invalidDiscount": "Der Rabattbetrag sollte unter dem Preisbetrag liegen"
+				},
+				"sellable": {
+					"isVisible": "Sichtbar"
+				},
+				"availability": {
+					"startTime": "Startzeit",
+					"endTime": "Endzeit",
+					"allTimeAvailability": "Immer verfügbar. Einschränkung auswählen."
+				},
+				"translation": {
+					"translation": "Übersetzung",
+					"languageTranslation": "Sprachübersetzung bereits vorhanden! Bitte wählen Sie Bearbeiten.",
+					"translations": "Übersetzungen",
+					"addNewTranslation": "Neue Übersetzung hinzufügen"
+				},
+				"language": {
+					"defaultCatalogLanguage": "Standardkatalogsprache",
+					"changeLanguage": "Sprache ändern",
+					"sourceLanguage": "Ausgangssprache",
+					"targetLanguage": "Zielsprache",
+					"withGoogleTranslate": "Mit Google Translate konvertieren"
+				},
+				"tooltip": {
+					"goToCategory": "Klicken Sie hier, um Kategoriedetails anzuzeigen",
+					"goToOffer": "Klicken Sie hier, um die Angebotsdetails anzuzeigen",
+					"translation": "Klicken Sie hier, um die zugewiesenen Übersetzungen anzuzeigen",
+					"goToOptionGroup": "Klicken Sie hier, um Details zur Optionsgruppe anzuzeigen",
+					"goToOption": "Klicken Sie hier, um Optionsdetails anzuzeigen",
+					"options": "Klicken Sie hier, um die zugewiesenen Optionen anzuzeigen",
+					"goToVariant": "Klicken Sie hier, um Details zur Variante anzuzeigen",
+					"optionGroup": "Klicken Sie hier, um die Optionsgruppe und die Optionen anzuzeigen",
+					"changestatus": "Status ändern"
+				},
+				"addRestriction": "Neue Zeitbeschränkung hinzufügen",
+				"importTranslation1": "Sie können die Texte der Katalogelemente über Excel ändern und in mehrere Sprachen übersetzen.",
+				"importTranslation12": "Laden Sie hier die Excel-Datei herunter, die alle Texte Ihres Katalogs enthält.",
+				"importTranslation2": "Die Excel-Datei enthält Sprachen, für die Sie mindestens ein Angebot in dieser Sprache haben.",
+				"importTranslation3": "Aktualisieren Sie alle in der Datei enthaltenen Texte für Ihre Geschäftssprache und für die verschiedenen Sprachen. Sie sollten die Struktur der Excel-Datei nicht ändern, sondern nur neue Texte hinzufügen",
+				"importTranslation4": "Wenn Sie mit den Änderungen fertig sind, laden Sie die Datei hoch, damit Ihre Änderungen wirksam werden",
+				"contentTranslate": "Text ändern und übersetzen",
+				"contentDownload": "Ein Fehler ist aufgetreten und die Datei kann nicht heruntergeladen werden",
+				"contentFailedError": "Ein Fehler ist aufgetreten und die Datei kann nicht hochgeladen werden. Bitte stellen Sie sicher, dass die Struktur der Datei nicht geändert wurde",
+				"orderable": {
+					"isOrderable": "Bestellbar"
+				},
+				"error": {
+					"overlappingSchedules": "Die Zeitpläne können nicht gespeichert werden, da sich die Zeiträume überschneiden",
+					"timeScopeWrong": "Zeitrahmen ist falsch",
+					"noDaySelect": "Es ist kein Tag ausgewählt",
+					"loadSchedules": "Beim Abrufen des Zeitplans ist ein Fehler aufgetreten",
+					"createSchedule": "Beim Speichern des Zeitplans ist ein Fehler aufgetreten",
+					"updateSchedule": "Beim Aktualisieren des Zeitplans ist ein Fehler aufgetreten",
+					"deleteSchedule": "Beim Löschen des Zeitplans ist ein Fehler aufgetreten"
+				},
+				"update": "Katalog über Excel aktualisieren",
+				"acceptUpdate": "Katalog akzeptieren und aktualisieren",
+				"importTranslationnew": "Sie können Ihren Katalog mithilfe einer Excel-Vorlage importieren. Sie können Angebotsnamen, Kategorienamen, Beschreibungen, Angebotspreise, Rabatte und Bestandsdaten importieren.",
+				"importTranslationnew1": "Laden Sie die Excel-Vorlage herunter und geben Sie Ihre Katalogdaten ein",
+				"updateTranslation": "Sie können Ihrem Katalog neue Elemente hinzufügen oder Ihre vorhandenen Katalogelemente mithilfe einer Excel-Vorlage ändern. Sie können Angebotsnamen, Kategorienamen, Beschreibungen, Angebotspreise, Rabatte und Bestandsdaten importieren.",
+				"updateTranslation1": "Laden Sie hier die Excel-Datei herunter, die Ihre Katalogdaten enthält.",
+				"updateTranslation2": "Aktualisieren Sie die Felder der Angebote, die Sie ändern möchten. Behalten Sie für diese die Angebotsnamen bei",
+				"updateTranslation3": "Fügen Sie der Excel-Datei neue Zeilen für neue Angebote hinzu, die Sie erstellen möchten",
+				"updateTranslation4": "Aktualisieren Sie die Felder in Excel, die Sie ändern möchten. Die Angebotsfelder sollten gleich bleiben, wenn Sie bestimmte Änderungen vornehmen möchten",
+				"priceVariants": "Preisvarianten",
+				"catalogOptionGroup": "Optionsgruppe",
+				"allowMultiple": "Erlaube mehrere Auswahlen desselben Elements",
+				"nocatalog": "Es gibt keinen Katalog",
+				"notable": "Es gibt keine Tabellen",
+				"importLink": "Katalog von Link importieren",
+				"importCatalogexternalsite": "Externe Seite",
+				"importCataloglink": "Verknüpfung",
+				"importCataloglinkimport": "Importieren",
+				"catalogOfstoreimported": "Die Katalogerstellung des Shops hat begonnen. Es kann 10-15 Minuten dauern, bis es fertig ist.",
+				"catalogFetching": "Der Katalog wird geholt. Bitte versuchen Sie nach einer Stunde erneut, den Import durchzuführen",
+				"catalogUnabletoimport": "Der Katalog konnte nicht importiert werden",
+				"catalogPleaseentervalidlink": "Bitte geben Sie einen gültigen Link ein"
+			},
+			"location": {
+				"text": "Tisch",
+				"backtoTables": "Zurück zu den Tischen",
+				"create": "Tisch hinzufügen",
+				"createBulk": "Fügen Sie Tischen in großen Mengen hinzu",
+				"noOfStoreLocations": "Anzahl der Tischen",
+				"error": {
+					"noStoreFound2": "Neue Filialen werden fortgesetzt",
+					"pattern": "Ungültige Bezeichnung - Die Verwendung von nur / Kombinationsziffern 0-9 und Großbuchstaben A-Z sowie Hypens (-) und Unterstrich (_) ist zulässig.",
+					"digit": "Ungültige Bezeichnung - Die Verwendung von nur Ziffern 0-9 ist zulässig"
+				},
+				"label": "Tischname oder -nummer",
+				"createTableMsg": "Fügen Sie Tischen in großen Mengen hinzu",
+				"locationType": "Standorttyp",
+				"table": "Tisch",
+				"location": "Ort",
+				"room": "Zimmer",
+				"notablesFound": "Keine Tabellen gefunden",
+				"nocatalogfound": "Kein Katalog gefunden",
+				"tableStatus": "Tabellenstatus",
+				"openTap": {
+					"closed": "Abgeschlossen",
+					"open": "Offen"
+				},
+				"status": {
+					"success": "Der Status wurde aktualisiert",
+					"table": {
+						"pin": "Tabellen-PIN"
+					},
+					"error": "Fehler beim Aktualisieren des Status"
+				},
+				"print": {
+					"qrCodes": "QR-Codes drucken"
+				}
+			},
+			"locations": {
+				"text": "Tischen"
+			},
+			"qr": {
+				"download": {
+					"pdf": "PDF-QR-Code herunterladen Drucken",
+					"image": "Laden Sie den Image QR-Code herunter"
+				},
+				"downloadPrintQRStore": "Laden Sie den QR-Code als PDF herunter",
+				"downloadPrintQRAllLocation": "Laden Sie alle Tisch-QR-Code-Ausdrucke als PDF herunter",
+				"downloadImageQRStore": "Laden Sie das QR-Code-Bild herunter",
+				"downloadImageQRAllLocation": "Laden Sie alle QR-Code-Bilder als Zip herunter"
+			},
+			"help": {
+				"helpText": "Hilfe weiter"
+			},
+			"users": {
+				"header": "Benutzer",
+				"removeUser": "Möchten Sie diesem Benutzer wirklich den Zugriff auf diesen Speicher entziehen? <br/> Diese Aktion kann nicht rückgängig gemacht werden.",
+				"inviteUser": {
+					"inviteTitle": "Benutzer einladen",
+					"invitationText": "Eine E-Mail wird an die unten angegebene E-Mail-Adresse gesendet. Sobald der Benutzer die Einladung angenommen hat, kann er sie vollständig verwalten",
+					"invitePrimaryButton": "Einladen"
+				}
+			},
+			"region": {
+				"label": "Region"
+			},
+			"city": {
+				"label": "Stadt"
+			},
+			"alias": "GonnaOrder Domain",
+			"notSubscribedMsg": "Dieser Shop hat kein GonnaOrder-Abonnement gekauft. Die GonnaOrder-Domain kann von anderen Geschäften mit gültigem Abonnement im Testmodus beansprucht werden.",
+			"noActiveSubscriptionsMsg": "Sie können diese Domain nur erhalten, wenn Sie ein GonnaOrder-Abonnement erwerben. Sie können jetzt eine andere Domain verwenden und diese nach dem Kauf eines Abonnements in die gewünschte Domain ändern.",
+			"domainTakenMsg": "Diese Gonnaorder-Domain ist bereits vergeben",
+			"aliasValidationMsg": "Die Domain sollte mindestens 6 Zeichen enthalten, von denen mindestens eines ein Buchstabe 'a' bis 'z' sein sollte. Die Ziffern '0' bis '9' und die Symbole '-' und '_' sind zulässig. Sonderzeichen und Großbuchstaben sind nicht zulässig",
+			"phoneNumber": {
+				"pattern": "Die Verwendung von nur Ziffern 0-9 ist zulässig."
+			},
+			"enablePaypalPaymentGonnaOrderLabel": "gonnaorder.com",
+			"preferredLanguage": {
+				"label": "Bevorzugte Sprache"
+			},
+			"catalogOverview": "Katalog",
+			"ordering": "Bestellung",
+			"details": "Einzelheiten",
+			"paymentProvoders": "Zahlungsanbieter",
+			"disabled": "Behindert",
+			"paymentDisabled": "Zahlung deaktiviert",
+			"paymentOptional": "Zahlung Optional",
+			"paymentMandatory": "Zahlung obligatorisch",
+			"enabled": "aktiviert",
+			"disconnect": "Trennen",
+			"accountID": "Konto-ID",
+			"connectWithPaypal": "Verbinden Sie sich mit Paypal",
+			"connectWithStripe": "Mit Stripe verbinden",
+			"paymentMethodDetailsMessage": "Wählen Sie die Zahlungsanbieter aus, zu denen Sie eine Verbindung herstellen möchten",
+			"optionGroup": {
+				"atMostOneOption": "Es kann höchstens eine Optionen ausgewählt werden",
+				"customSelection": "Benutzerdefinierte Auswahl",
+				"minimumRequired": "Mindestanzahl der Optionen, die ausgewählt werden müssen",
+				"maximumAllowed": "Maximale Anzahl von Optionen, die ausgewählt werden dürfen",
+				"maximumHeigherThanMimimum": "Die maximale Anzahl sollte höher oder gleich der minimalen Anzahl sein"
+			},
+			"message": {
+				"errorTryAgain": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es noch einmal",
+				"storeUpdate": "Shop aktualisiert!",
+				"actionFail": "Aktion: fehlgeschlagen!",
+				"loadFail": "Laden fehlgeschlagen!",
+				"acessRemoveFail": "Entfernen des Zugriffs aus dem Speicher fehlgeschlagen",
+				"acessRemoveSuccess": "Erfolgreich aus dem Store entfernt!",
+				"inviteUserFail": "Benutzer konnte nicht eingeladen werden!",
+				"inviteUserSuccess": "Der Benutzer wurde eingeladen, den Shop zu verwalten!",
+				"uploadFail": "Upload fehlgeschlagen!",
+				"logoUploadSuccess": "Logo erfolgreich hochgeladen!",
+				"imageUploadSuccess": "Bild erfolgreich hochgeladen!",
+				"downloadFail": "Herunterladen fehlgeschlagen!",
+				"settingsUpdate": "Einstellungen aktualisiert!",
+				"receiveEmailMsg": "Sie erhalten in Kürze eine E-Mail. Folgen Sie dem Link, um Ihre E-Mail zu ändern.",
+				"profileUpdate": "Profil aktualisiert!",
+				"translationsUpdateSuccess": "Übersetzungen erfolgreich aktualisiert!",
+				"saveOfferSuccess": "Angebot erfolgreich gespeichert!",
+				"saveCategorySuccess": "Kategorie Erfolg speichern",
+				"childCategoryOffer": "Optionsgruppen verbunden mit dem Angebot!",
+				"childOfferCategory": "Optionen verbunden mit der Optionsgruppe!",
+				"offerVaryAToffer": "Angebotsvarianten zum Angebot!",
+				"catalogVerifySuccess": "Katalogdaten erfolgreich verifiziert!",
+				"catalogDataUploadSuccess": "Katalogdaten erfolgreich hochgeladen!",
+				"categoryDeleteSuccess": "Kategorie erfolgreich gelöscht!",
+				"offerDeleteSuccess": "Angebot erfolgreich gelöscht!",
+				"createAvailabilitySuccess": "Verfügbarkeitserfolg schaffen",
+				"createAvailabilityFail": "Verfügbarkeit erstellen fehlgeschlagen",
+				"locationDeleteSuccess": "Tisch {{label}} wurde erfolgreich gelöscht",
+				"noInStoreDelivery": "Beachten Sie, dass die Lieferung im Geschäft nicht mehr unterstützt wird",
+				"stripeDisconnect": "Stripe-Konto getrennt",
+				"paypalDisconnect": "Paypal-Konto getrennt",
+				"upgradeAffiliateSuccess": "Aktualisieren Sie die Partnerdaten erfolgreich!",
+				"loadProfileFail": "Wir konnten Ihr Profil nicht laden. Bitte versuchen Sie es später erneut",
+				"verifyCatalogImageFailed": "Der Katalog kann nicht aus dem Bild extrahiert werden. Versuchen Sie, ein Bild mit einer höheren Auflösung oder ein Bild mit einem kleineren Teil des Katalogs mit nur einer Kategorie zu importieren",
+				"verifyCatalogImageSuccess": "Katalogbild erfolgreich verifiziert!",
+				"imageRemoveSuccess": "Das Bild wurde gelöscht",
+				"logoRemoveSuccess": "Das Logo wurde gelöscht",
+				"zoneRemoveFail": "Entfernen der Zone aus dem Speicher fehlgeschlagen",
+				"zoneRemoveSuccess": "Zone erfolgreich aus dem Speicher entfernt",
+				"zoneAdded": "Zone erfolgreich erstellt",
+				"zoneUpdated": "Zone erfolgreich aktualisiert",
+				"CreateScheduleSuccess": "Erfolgreich erstellt",
+				"updateScheduleSuccess": "Erfolgreich aktualisiert",
+				"deleteScheduleSuccess": "Erfolgreich gelöscht",
+				"saveRuleSuccess": "Regelerfolg speichern",
+				"deleteRuleSuccess": "Erfolg beim Löschen von Regeln",
+				"saveDiscountVoucherSuccess": "Speichern Sie den Rabattgutschein erfolgreich",
+				"saveDiscountVoucherFailed": "Rabattgutschein speichern fehlgeschlagen",
+				"deleteDiscountVoucherSuccess": "Erfolg beim Löschen des Rabattgutscheins",
+				"locationCreateSuccess": "Tisch {{label}} wurde erfolgreich erstellt",
+				"locationUpdateSuccess": "Tisch {{label}} wurde erfolgreich aktualisiert"
+			},
+			"rejectOrder": "Bestellung ablehnen",
+			"paypalNotsupported": "Paypal wird nicht unterstützt",
+			"enableWithmelink": "Aktivieren Sie Zahlungen mit Ihrem Paypal.me-Link",
+			"payPalmelink": "Paypal.me Link",
+			"enableWithanylink": "Aktivieren Sie Zahlungen mit einem beliebigen Zahlungslink",
+			"paymentProvider": "Zahlungsanbieter",
+			"paymentLink": "Zahlungslink",
+			"other": "Andere",
+			"shoppingBasket": "Einkaufskorb",
+			"settingsMandatory": "Verpflichtend",
+			"settingsOptional": "Optional",
+			"settingspickupEmailRequired": "Email (erforderlich",
+			"settingspickupPhoneRequired": "Telefon erforderlich",
+			"addressDelivery": "Adresszustellung",
+			"orderAmount": "Bestellbetrag, ab dem die Lieferung kostenlos ist",
+			"deliveryAddressauto": "Lieferadresse Automatisch vervollständigen",
+			"postCodesrestrictions": "Einschränkungen der Postleitzahlzone",
+			"restricted": "Beschränkt",
+			"nonRestricted": "Nicht eingeschränkt",
+			"addressZones": "Zonen",
+			"addressaddnewZones": "Neue Zone hinzufügen",
+			"createDifferentaddress": "Erstellen Sie unterschiedliche Adressübermittlungszonen mit unterschiedlichen Einstellungen",
+			"backtoZones": "Zurück zu den Zonen",
+			"minRadius": "Min Radius",
+			"maxRadius": "Max Radius",
+			"unit": "Einheit",
+			"postCodes": "Postleitzahlen",
+			"postCodemsg": "Geben Sie die Liste der durch Komma oder neue Zeile getrennten Postleitzahlen ein",
+			"settingspickupNameRequired": "Name erforderlich",
+			"zoneLabel": "Zone",
+			"invalidRadiusRange": "Der Radiusbereich ist ungültig",
+			"account": {
+				"deleteUserSuccess": "Der Benutzerzugriff auf das Geschäft wurde erfolgreich entfernt",
+				"confirmDeleteUser": "Möchten Sie diesem Benutzer wirklich den Zugriff auf diesen Shop entziehen? Diese Aktion kann nicht rückgängig gemacht werden."
+			},
+			"subscription": {
+				"storeEligibility": "Ihr Geschäft kann GonnaOrder für bis zu 50 Menüansichten oder 50 Bestellungen pro Monat verwenden.\nWenn die Testbeschränkungen erreicht sind, können Ihre Kunden Ihr Menü nicht mehr sehen.\nSie können ein GonnaOrder-Abonnement erwerben, um diese Einschränkungen aufzuheben.",
+				"vatprompt": {
+					"sodexobelgium": "Sind Sie ein Händler des Sodexo-Netzwerks? Geben Sie Ihre Umsatzsteuer-Identifikationsnummer ein, um 50% Rabatt zu erhalten",
+					"eu": "Geben Sie Ihre Umsatzsteuer-Identifikationsnummer ein, um die Zahlung der Umsatzsteuergebühr für den Online-Kauf zu vermeiden"
+				},
+				"sodexo": {
+					"affiliate": {
+						"prompt": "Noch kein Mitglied des Sodexo-Netzwerks?"
+					}
+				},
+				"active": "Aktiv",
+				"fourteenfreetrial": "14 Tage kostenlose Testversion - Unbegrenzte Anzahl von Bestellungen",
+				"limitedFreemium": "Begrenztes Freemium - Abonnieren Sie, um unbegrenzte Bestellungen zu haben und Ihre GonnaOrder-Domain nicht zu verlieren",
+				"limitedFreemiumnumberof": "Limitiertes Freemium - Das Limit von 5 Bestellungen wurde für diesen Monat erreicht. Abonnieren Sie, um unbegrenzte Bestellungen zu haben und Ihre GonnaOrder-Domain nicht zu verlieren",
+				"discountVouchers": "Rabattgutscheine",
+				"billing": {
+					"businessName": "Firmenname"
+				}
+			},
+			"applicationId": "Application ID",
+			"accessToken": "",
+			"locationId": "",
+			"clientId": "",
+			"clientSecret": "",
+			"settingsDefaultcatalogview": "Standardkatalogansicht",
+			"settingsCollapsed": "Zusammengebrochen",
+			"settingsExpanded": "Erweitert",
+			"orderingNotification": "Bestellbenachrichtigung E-Mail",
+			"orderingNotificationmessage": "Eine E-Mail senden für jede Bestellung ",
+			"settingsManagestock": "Lager verwalten",
+			"settingStocklevel": "Lagerbestand",
+			"settingsStockcheck": "Lieferverfügbarkeit überprüfen",
+			"name": "Shop Name",
+			"thanksForstore": "Vielen Dank, dass Sie Ihren Shop registriert haben",
+			"uploadyourmenu": "Laden Sie Ihr Menü schnell und einfach hoch",
+			"configureyourstore": "Konfigurieren Sie Ihr Geschäft entsprechend Ihren Anforderungen",
+			"seeyourstore": "Sehen Sie Ihr Geschäft so, wie es Ihre Kunden sehen",
+			"findinstructions": "Hier finden Sie Anweisungen zur Funktionsweise der Anwendung",
+			"orderingMinutesorderready": "Minuten bis die Bestellung fertig ist",
+			"orderingDefaultestimated": "Standardmäßige geschätzte Zeit in Minuten für Liefer- und Abholaufträge, bis sie fertig sind",
+			"orderingMinimum": "Minimum",
+			"orderingMaximum": "Maximal",
+			"setting": {
+				"rules": {
+					"orderingrules": "Bestellregeln",
+					"addnewrule": "Neue Regel hinzufügen",
+					"rules": "Regeln",
+					"orderamount": "Bestellbetrag",
+					"backtorules": "Zurück zu den Regeln",
+					"status": "Regelstatus",
+					"conditions": "Bedingungen",
+					"orderamountbetween": "Bestellbetrag zwischen bestimmten Werten",
+					"minorderamount": "Minimaler Bestellbetrag",
+					"maxaorderamount": "Maximaler Bestellbetrag",
+					"actions": "Aktionen",
+					"displayoptgroup": "Optionsgruppe anzeigen",
+					"optgroups": "Optionsgruppen",
+					"addoptgroup": "Optionsgruppe hinzufügen",
+					"backtorule": "Zurück zur Regel",
+					"createruleptgroup": "Optionsgruppe erstellen",
+					"ruleoptgroup": "Optionsgruppe",
+					"infoDeleteORule": "Die Regel kann nicht gelöscht werden, da sie eine Kategorie enthält. <br/> Die zugrunde liegende Kategorie muss gelöscht werden",
+					"confirmDeleteRule": "Möchten Sie diese Regel wirklich löschen? <br/> Diese Aktion kann nicht rückgängig gemacht werden.",
+					"updateRule": "Regel aktualisieren"
+				},
+				"marketing": {
+					"fb": {
+						"labelError": "Ungültige Facebook Pixel Tracking ID",
+						"label": "Facebook Pixel",
+						"meta": "Meta-Tag zur Validierung der Facebook-Website",
+						"metaError": "Ungültiger Inhalt der Facebook-Website zur Bewertung von Meta-Tags",
+						"UrlError": "Ungültige Facebook-URL"
+					},
+					"google": {
+						"labelError": "Ungültiger Google Analytics-Tracking-Code."
+					},
+					"label": "Marketing",
+					"GA": {
+						"label": "Google Analytics"
+					},
+					"enableFBMsg": "Aktivieren Sie das Store-Tracking mit Facebook Pixel",
+					"enableGAMsg": "Aktivieren Sie die Filialverfolgung mit Google Analytics",
+					"Websitelink": "Website-Link",
+					"Facebooklink": "Facebook Link",
+					"Instagramlink": "Instagram Link",
+					"Carditlink": "Cardit.io Link",
+					"SocialMedia": "Website, soziale Medien und verknüpfte Konten",
+					"SocialMediaPromote": "Fördern Sie verschiedene Möglichkeiten, wie Ihre Kunden mit Ihrem Unternehmen interagieren können",
+					"SocialMediaText": "Erweiterte Einstellung",
+					"website": {
+						"UrlError": "Ungültige URL der Store-Website"
+					},
+					"instagram": {
+						"UrlError": "Ungültige Instagram-URL"
+					},
+					"cardit": {
+						"UrlError": "Ungültige CardIto-URL"
+					}
+				},
+				"samedayordering": "Bestellung am selben Tag",
+				"requestorderdateupfront": "Bestelldatum im Voraus anfordern",
+				"billing": "Abrechnung",
+				"lastMile": {
+					"lastMileDeliverySoftware": "Last Mile Delivery Software",
+					"connectWithMynext": "Verbinde dich mit mynext",
+					"enterMynextCredentials": "Geben Sie Ihre mynext-Anmeldeinformationen ein"
+				},
+				"integrations": {
+					"username": "Nutzername",
+					"password": "Passwort",
+					"connect": "Verbinden",
+					"theCredentialsAreNotValid": "Die Anmeldeinformationen sind ungültig",
+					"navName": "Integrationen",
+					"shareDataWithOtherApplications": "Daten mit anderen Anwendungen teilen",
+					"connectToHubrise": "Mit HubRise verbinden",
+					"enterHubriseCredentials": "Geben Sie Ihre HubRise-Zugangsdaten ein",
+					"connectedToHubrise": "Verbunden mit HubRise",
+					"hubriseCustomerList": "Kundenliste",
+					"goToHubrise": "Gehe zu HubRise",
+					"powersoft": {
+						"connectWithPowersoft": "",
+						"connectPowersoft": "",
+						"accessTokenmsg": "",
+						"agentCode": "",
+						"agentCodemsg": "",
+						"customerCode": "",
+						"customerCodemsg": "",
+						"emailmsg": "",
+						"connect": ""
+					}
+				},
+				"domains": "Domänen",
+				"apps": {
+					"name": "Apps",
+					"promoteGOApp": "Bestellen über die GonnaOrder-App bewerben",
+					"promoteGOAppInfo": "Benutzer speichern Ihren Store-Link in der App und bestellen einfacher über ihr Mobiltelefon",
+					"promoteCustomOApp": "Bewerben Sie die Bestellung über Ihre Store Custom App",
+					"promoteCustomAppInfo": "Kontaktieren Sie uns, um Ihre benutzerdefinierte mobile App zu erhalten, die Sie bei Ihren Kunden bewerben können",
+					"iosAppLink": "iOS-App-Link",
+					"invalidIOSAppLink": "Ungültige App Store-URL",
+					"androidAppLink": "Android-App-Link",
+					"invalidAndroidAppLink": "Ungültige Play Store-URL"
+				},
+				"allowOrderUpdateByStore": "Auftragsaktualisierung nach Geschäft zulassen",
+				"allowOrderDeletionByStore": "Löschen von Bestellungen durch Store zulassen",
+				"opentabordering": ""
+			},
+			"orderingEmailcustomer": "E-Mail an den Kunden bei Änderung des Bestellstatus",
+			"orderNotificationSound": "Kontinuierlicher Bestellbenachrichtigungston",
+			"schedule": {
+				"backToSchedule": "Zurück zu den Zeitplanen",
+				"add": "Hinzufügen",
+				"save": "Speichern",
+				"name": "Name",
+				"createScheduleItem": "Neuen Zeitplan hinzufügen",
+				"editScheduleItem": "Zeitplan bearbeiten",
+				"cancel": "Stornieren",
+				"startTime": "Startzeit",
+				"endTime": "Endzeit",
+				"delete": "Löschen",
+				"mon": "Mo.",
+				"tue": "Di.",
+				"wed": "Mi.",
+				"thu": "Do.",
+				"fri": "Fr.",
+				"sat": "Sa.",
+				"sun": "So.",
+				"choose": "Zeitplan auswählen",
+				"CreateSpecialScheduleSuccess": "Öffnungszeiten erfolgreich aktualisiert",
+				"error": {
+					"CreateSpecialSchedule": "Beim Aktualisieren der Öffnungszeiten ist ein Fehler aufgetreten",
+					"LoadSpecialSchedules": "Beim Abrufen der Öffnungszeiten ist ein Fehler aufgetreten",
+					"DeleteSpecialSchedule": "Beim Löschen der Öffnungszeiten ist ein Fehler aufgetreten"
+				},
+				"DeleteSpecialScheduleSuccess": "Öffnungszeiten erfolgreich gelöscht",
+				"requestWishTime": "Wunschzeit anfordern",
+				"assoonasPossible": "So schnell es geht",
+				"futureTime": "Zukunft",
+				"generalopening": "Allgemeine Öffnungszeiten",
+				"orderingTimes": "Bestellzeiten",
+				"addDaysOfWeek": "Wochentage hinzufügen",
+				"addDates": "Daten hinzufügen",
+				"Include": "Einschließen",
+				"Exclude": "Ausschließen",
+				"displayStartOrding": "Wunschzeit zu Beginn der Bestellung anzeigen",
+				"wishTimeMinutes": "Wunschzeitintervalle - Minuten",
+				"displayWishTimeFormat": "Wunschzeitformat anzeigen",
+				"times": "Zeiten",
+				"timeSlots": "Zeitfenster",
+				"slotDuration": "Slot-Dauer - Minuten",
+				"limitOrder": "Limit Bestellungen pro Slot",
+				"noLimit": "Keine Begrenzung",
+				"limit": "Grenze",
+				"ordersPerSlot": "Bestellungen pro Slot",
+				"wishTimeInFutureMinutes": "Wünsch dir Zeit für die Zukunft - Minuten",
+				"defaultOrderingMode": "Standardbestellmodus",
+				"displaydesireddateandTime": "Gewünschtes Datum und Uhrzeit anzeigen",
+				"dateandTime": "Terminzeit",
+				"dateOnly": "Nur Datum"
+			},
+			"addNewSchedule": "Neuen Zeitplan hinzufügen",
+			"scheduleList": "Zeitpläne",
+			"filter": "Filter",
+			"ready": "Bereit",
+			"global": {
+				"openTime": "Öffnungszeiten"
+			},
+			"defaultPaymentSelection": "Standard Zahlungsauswahl",
+			"notSelected": "Nicht ausgewählt",
+			"preselected": "Vorausgewählt",
+			"common": {
+				"tooltip": {
+					"option": {
+						"addOption": "Klicken Sie hier, um eine Option zu erstellen"
+					},
+					"movedown": {
+						"Option": "Klicken Sie hier, um die Option nach unten zu verschieben"
+					},
+					"moveup": {
+						"Option": "Klicken Sie hier, um die Option nach oben zu verschieben"
+					}
+				}
+			},
+			"settingsDefaultVATPercentage": "Standard-Mehrwertsteuer%",
+			"tableOrdering": "Tisch bestellung",
+			"settingsHidden": "Versteckt",
+			"schedulesSlot": "Maximale Anzahl der Artikel pro Steckplatz",
+			"schedulesSlotnote": "Elemente, die gegen die Gesamtzahl der Steckplätze angerechnet werden, müssen angegeben werden",
+			"timeShouldFuture": "Die Zeit sollte in der Zukunft liegen.",
+			"discountVoucher": "Rabatt-Gutschein",
+			"inputMinutes": "Minuten eingeben",
+			"selectMinutes": "Minuten auswählen",
+			"estimatedTime": "Geschätzte Zeit",
+			"hideorderComment": "Bestellkommentare ausblenden",
+			"hideorderitemComment": "Kommentare zum Bestellartikel ausblenden",
+			"catalogOffer": "Bietet an",
+			"catalogCategory": "Kategorie",
+			"settingDetails": "Store-Details",
+			"settingOrdering": "Ladenbestellung",
+			"settingPayment": "Zahlungseinstellung",
+			"settingPickup": "Abholen",
+			"settingDelivery": "Lieferung",
+			"settingLocations": "Tisch",
+			"settingCatalog": "Katalog speichern",
+			"settingOrderingRule": "Bestellregel",
+			"settingSchedules": "Zeitpläne",
+			"settingMarketing": "Marketing",
+			"settingDiscountVouchers": "Rabatt-Gutschein",
+			"domain": "Domains & Apps",
+			"customDomain": {
+				"additionalCustomDomain": "Zusätzliche benutzerdefinierte Domain",
+				"labelError": "Der Domänenwert ist ungültig"
+			},
+			"domaincustomInfo": "Sie können Ihre eigene benutzerdefinierte Domain verwenden, z. https://example.com oder Subdomain, z. https://mystore.example.com zusätzlich zu Ihrer GonnaOrder-Domain. Sie müssen einige zusätzliche Konfigurationen bei Ihrem Domänenanbieter vornehmen, damit dies funktioniert",
+			"catalogManageByExcel": "Über Excel verwalten",
+			"settingspickupdisplaypickupAddress": "Abholadresse anzeigen",
+			"settingspickupHide": "Ausblenden",
+			"settingspickupShow": "Show",
+			"deleteStore": "Möchten Sie diesen Shop wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden",
+			"deleteStoreSuccess": "Speicher wurde erfolgreich gelöscht",
+			"oneClickAddToBasket": "Ein Klick zum Warenkorb hinzufügen",
+			"errorMinimumWishTime": "Ungültige zukünftige Mindestwunschzeit. Es muss eine positive Zahl ungleich Null sein, die kleiner oder gleich 1440 ist",
+			"deleteStoreMsgError": "Store {{storeId}} enthält Bestellungen oder Katalogartikel und kann nicht gelöscht werden",
+			"postCodesErrorMsg": "Eine Postleitzahl sollte maximal 10 Zeichen enthalten und für mehrere Postleitzahlen durch Kommas getrennt sein.",
+			"customers": {
+				"customers": "Kunden",
+				"customerName": "German",
+				"customerPhone": "Kundentelefon",
+				"customerEmail": "Kunden-eMail",
+				"orders": "Aufträge",
+				"firstOrder": "Erste Bestellung",
+				"lastOrder": "Letzte Bestellung"
+			},
+			"setupZones": "Zonen einrichten",
+			"radiusPostCode": "Radius verwenden",
+			"zonePostCodes": "Verwenden Sie Postleitzahlen",
+			"radiusPostCodesDetails": "Definieren Sie Postleitzahlen für jede Zone",
+			"radiusPostCodesDetails1": "Definieren Sie einen Radiusbereich für jede Zone. Diese basiert auf GPS-Koordinaten des Kunden.",
+			"radiusPostCodesDetails2": "Um diese Funktion zu aktivieren, müssen Sie die automatische Vervollständigung der Adresse aktivieren und den GPS-Standort Ihres Geschäfts im Bildschirm mit den Geschäftsdetails definieren.",
+			"zoneName": "Zonenname",
+			"zonesRestrictions": "Einschränkungen der Lieferzone",
+			"enableCustomerAuthentication": "Kundenauthentifizierung aktivieren",
+			"settingsDeliverypolygondescription": "Definieren Sie jede Zone in einer Karte. Dies basiert auf GPS-Koordinaten des Kunden",
+			"settingsDeliverydraw_map": "Auf Karte zeichnen",
+			"settingsMaperrormsg": "Bitte zeichnen Sie ein Polygon für diese Zone auf der Karte",
+			"storeNotfound": "Der Laden wird nicht gefunden",
+			"externalOnlinePaymentId": "Externe Online-Zahlungs-ID",
+			"externalNonOnlinePaymentId": "Externe Nicht-Online-Zahlungs-ID",
+			"externalId": "Externe ID",
+			"deliveryFeeExternalId": "Liefergebühr externe ID",
+			"combineorders": "Bestellungen kombinieren"
+		},
+		"load": {
+			"loadingMessage": "Warten Sie mal"
+		},
+		"users": {
+			"removeAccessMsg": "Entfernen Sie den Zugriff aus dem Geschäft",
+			"userManage": {
+				"label": "Alle Nutzer"
+			},
+			"list": {
+				"inputEmail": "Geben Sie eine gültige E-Mail-Adresse ein"
+			},
+			"details": {
+				"title": "Nutzerdetails",
+				"id": "ICH WÜRDE",
+				"username": "Nutzername",
+				"googleAccount": "Google Benutzerkonto",
+				"facebookAccount": "Facebook-Konto",
+				"backToAllUsers": "Zurück zu allen Benutzern",
+				"deleteUserSuccess": "Benutzer wurde erfolgreich gelöscht",
+				"updateUserSuccess": "Benutzer wurde erfolgreich aktualisiert",
+				"confirmDeleteUser": "Möchten Sie diesen Benutzer wirklich löschen?"
+			}
+		},
+		"register": {
+			"registerTitle": "Registrieren",
+			"registerationSuccess": "Danke für ihre Registrierung. Sie erhalten in Kürze eine E-Mail zur Bestätigung Ihres Kontos.",
+			"haveAccount": "Sie haben bereits ein Konto?",
+			"emailInfo": "Sie müssen bestätigen, dass diese E-Mail Ihnen gehört",
+			"accept": "Durch Klicken auf die Schaltfläche Registrieren akzeptieren Sie Folgendes",
+			"phoneNumberoptional": "Telefonnummer (freiwillig)",
+			"acceptRegister": "Akzeptieren und registrieren",
+			"registerHeaderMessage1": "Registrieren Sie Ihr Unternehmen auf GonnaOrder.com",
+			"registerHeaderMessage2": "und starten Sie noch heute Ihre kostenlose Testversion",
+			"registerFormStep1": "Füllen Sie das Formular aus und bestätigen Sie Ihre E-Mail",
+			"registerFormStep2": "Melden Sie sich an und erstellen Sie Ihren Shop",
+			"registerFormStep3": "Laden Sie Ihr Menü hoch und konfigurieren Sie die Einstellungen",
+			"registerFinalMessage": "Ihr Geschäft ist für Ihre Kunden einsatzbereit!",
+			"continue": "Fortsetzen",
+			"social": {
+				"google": "Anmelden mit Google",
+				"facebook": "Anmelden mit Facebook",
+				"apple": "Registrieren Sie sich bei Apple"
+			}
+		},
+		"user": {
+			"profile": {
+				"updateTitle": "Profil aktualisieren"
+			},
+			"details": {
+				"emailErrorMsgInvaild": "E-Mail ist invaild",
+				"lastName": "Nachname",
+				"confirmPassword": "Kennwort bestätigen",
+				"confirmPasswordErrorMsgMisMatch": "Passwörter stimmen nicht überein"
+			}
+		},
+		"passwordAuth": {
+			"passAuthButton": "Erneut authentifizieren",
+			"passAuthPromt": "Bitte bestätigen Sie das Passwort, um fortzufahren"
+		},
+		"storeError": {
+			"unExpected": "Ein unerwarteter Fehler ist aufgetreten"
+		},
+		"menu": {
+			"preview": "Vorschau"
+		},
+		"continue": {
+			"accept": "Durch Klicken auf Fortsetzen akzeptieren Sie Folgendes"
+		},
+		"sodexo": {
+			"prompt": {
+				"purchase": "Wenn Sie ein Sodexo-Partner sind, erhalten Sie beim Kauf eines GonnaOrder-Abonnements ein Jahr lang 50% Rabatt"
+			}
+		},
+		"printer": {
+			"printersList": "Drucker",
+			"noPrinter": "Kein Drucker registriert",
+			"registerPrinter": "Registrieren",
+			"registerTitle": "Drucker registrieren",
+			"setPrinterName": "Bitte stellen Sie den Druckernamen ein",
+			"printerName": "Druckername",
+			"unregisterPrinter": "Drucker aus Liste entfernen",
+			"confirmUnregister": "Sind Sie sicher, dass Sie diesen Drucker aus der Liste entfernen werden?",
+			"selectPrinter": "Drucker auswählen",
+			"selectPrinterTitle": "Bitte wählen Sie einen Drucker",
+			"notEmpty": "Der Druckername darf nicht leer sein.",
+			"chooseAPrinter": "Wählen Sie einen Drucker",
+			"star": {
+				"noPrinter": "Kein Star-Drucker erkannt!"
+			},
+			"chooseAPrinterType": "Wählen Sie einen Druckertyp",
+			"connectionMethod": "Verbindungsmethode",
+			"connectionMethodBluetooth": "",
+			"connectionMethodWiFi": "",
+			"connectionParameters": "Verbindungsparameter",
+			"connectionIpOrHostName": "IP oder Hostname",
+			"connectionPort": "",
+			"connectionBluetoothMacAddr": "MAC-Adresse",
+			"testPrint": "Test-Druck",
+			"starPrinter": {
+				"support": "Nur Star-Drucker werden unterstützt",
+				"indev": "Unterstützung für Star-Drucker in der Entwicklung"
+			},
+			"airPrinter": {
+				"support": "Es werden nur AirPrint-Drucker unterstützt"
+			}
+		}
+	}
+}

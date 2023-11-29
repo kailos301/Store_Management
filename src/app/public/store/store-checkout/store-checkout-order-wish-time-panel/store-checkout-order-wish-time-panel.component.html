@@ -1,0 +1,51 @@
+<div #wishWrapper>
+  <div class="option-wrapper" *ngIf="shouldShowComponent()">
+    <div class="variant-wrapper">
+        <div class="section-title p-3 mb-0 pl-4 font-size-primary my-1">{{'public.checkout.wishTimeHeading' | translate}}</div>
+        <form [formGroup]="wishForm" id="availabilityRestriction" class="col-lg-12 px-0">
+          <div class="variant-wrapper radio d-flex justify-content-between align-items-center pl-0 mx-3 mt-2" [ngClass]="{'disabled': disableOrderNow}"
+            *ngIf="shouldShowAsapOrder() || (!shouldShowAsapOrder() && !shouldShowFutureOrder() && showClosedStoreMessage)">
+
+            <label for="var-dt-asap" class="d-flex flex-column w-100 container font-size-primary pl-2" [ngClass]="{'disabled': disableOrderNow}">
+              {{'public.checkout.asSoonAsPossible' | translate}}
+              <div class="text-danger font-size-secondary mb-1" *ngIf="disableOrderNow">
+                {{ 'public.store.currently.closed' | translate }}
+              </div>
+              <input type="radio" name="wishOrderDeliveryTime" value="0" formControlName="wishOrderDeliveryTime" id="var-dt-asap" (click)="setWishTime(false)"/>
+              <span class="checkmark"></span>
+            </label>
+
+          </div>
+          <div class="variant-wrapper radio no-border d-flex justify-content-between align-items-center pl-0 mx-3 mt-1" *ngIf="shouldShowFutureOrder() && (shouldShowAsapOrder() || getControl('wishOrderDeliveryTime').value === '0')">
+            <label for="var-dt-wish" class="d-flex w-100 container font-size-primary mb-0 pl-2">{{'public.checkout.specifyWishTime' | translate}}
+              <input type="radio" name="wishOrderDeliveryTime" value="1" formControlName="wishOrderDeliveryTime" id="var-dt-wish" (click)="setWishTime(true)"/>
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div
+            class="variant-wrapper col-md-12 col-sm-12 d-flex flex-wrap align-items-center"
+            [ngClass]="{'is-invalid': getControl('deliveryTime').invalid }"
+            *ngIf="getControl('wishOrderDeliveryTime').value === '1' && shouldShowFutureOrder()"
+            >
+              <app-store-checkout-order-time-selector
+                [userLang$]="userLang$"
+                [deliveryTime]="deliveryTime"
+                [showSlotSelection]="!showClosedStoreMessage"
+                [availableSlots]="availableSlots"
+                (dateChanged)="onDateChanged($event)"
+                (selectedSlotChanged)="onSelectedSlotChanged($event)"
+                [timeShowEnabled]="!checkoutService.isTimeShowDisabled()"
+              >
+              </app-store-checkout-order-time-selector>
+              <div class="invalid-feedback font-size-secondary" *ngIf="getControl('deliveryTime').errors">
+                <span *ngIf="getControl('deliveryTime').errors.required">{{'public.checkout.errors.selectFutureTime' | translate}}.</span>
+              </div>
+              <div class="text-danger font-size-secondary px-3 ml-1" *ngIf="showClosedStoreMessage">
+                {{ 'public.store.time.closed' | translate }}
+              </div>
+          </div>
+
+        </form>
+    </div>
+  </div>
+</div>

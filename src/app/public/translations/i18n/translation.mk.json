@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "Овозможено од",
+			"thankYou": "Ви благодариме",
+			"discount": "Попуст",
+			"viewOrder": "Погледни ја порачката",
+			"errorH2": "Известување",
+			"errorUnexpected": "Се слчучи нешто неочекувано",
+			"errorExpected": "Се случи нешто неочекувано",
+			"errorMustSelectOne": "Морате да одберете една од понудените опции",
+			"errorTrialExceeded": "Оваа функционалност не е достапна. Надминати се рестрикциите од пробната верзија",
+			"emptyCart": "Немате додадени производи во нарачката",
+			"optional": "(опционално)",
+			"cookies": "Овој сајт користи колачиња. Со понатамошната употреба на сајтот вие се согласувате со нивната употреба",
+			"more": "повеќе",
+			"less": "помалку",
+			"chooseFrom": "Одбери од",
+			"standard": "Стандард",
+			"days": {
+				"mon": "Понеделник",
+				"tue": "вторник",
+				"wed": "Среда",
+				"thu": "Четврток",
+				"fri": "Петок",
+				"sat": "Сабота",
+				"sun": "Недела"
+			},
+			"opentimelist": "Време на отварање",
+			"newVersionAvailable": "Používáte starší verzi aplikace. Znovu načtěte aplikaci a získejte nejnovější aktualizaci",
+			"reloadApplication": "Znovu načtěte aplikaci",
+			"poweredByGonnaOrder": "Овозможено од Gonnaorder",
+			"recents": "Неодамнешни",
+			"information": "Информации",
+			"yes": "Да",
+			"no": "бр",
+			"error": "Грешка",
+			"errorQRScanner": "Настана грешка со QR скенер!",
+			"confirm": "Потврди"
+		},
+		"select": {
+			"selectAtLeast": "Мора да изберете барем {{x}}",
+			"selectAtmost": "Може да изберете најмногу {{x}}",
+			"selectAtleastAtMost": "Мора да изберете најмалку {{x}} и најмногу {{y}}",
+			"selectBetween": "Мора да изберете помеѓу вредностите {{childCategory.min}} и {{childCategory.max}}."
+		},
+		"load": {
+			"loadingMessage": "Ве молиме причекајте ..."
+		},
+		"itemDetails": {
+			"removeFromOrder": "Отстрани од порачката",
+			"addToOrder": "Додај на порачката",
+			"updateOrder": "Ажурирај ја порачката"
+		},
+		"checkout": {
+			"yourOrder": "Вашата порачка",
+			"total": "Вкупно",
+			"specialNote": "Додај посебна забелешка за Вашата порачка",
+			"howToReceiveYourOrder": "Како би ја подигнале вашата порачка?",
+			"option": {
+				"pickup": "Јас ќе ја подигнам",
+				"addressDelivery": "Доставете ми ја на адреса",
+				"serve": {
+					"location": "Седам на маса"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "Не бевме во можност да ги зачуваме деталите за вашата порачка",
+				"fieldRequired": "Ова поле е задолжително",
+				"selectFutureTime": "Одберете време во иднина",
+				"orderSubmissionFailed": "Нарачката не може да се достави",
+				"ORDER_LOCATION_NOT_PRESENT": "Недостасува број на табела или име на локација",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "Недостасуваат некои потребни информации за клиентите",
+				"ORDER_WISH_TIME_INVALID": "Посакуваното време на желби е во минатото",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "Недостасува методот за испорака на нарачката",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "Испораката на адреса не е поддржана",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "Служењето на нарачката не е поддржано",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "Подигнувањето на нарачката не е поддржано",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "Испораката на поштенскиот код не е поддржана",
+				"OPENING_TIME_SCHEDULE_ERROR": "Продавницата е затворена по избрано време на желба за нарачка",
+				"PROMOTION_NOT_ELIGIBLE": "Избрана е промоција, но не е подобна",
+				"offersUnavailableExplanation": "Подолу, ставките не се достапни на датумот и времето што ги наведовте. Кликнете на ажурирање на нарачката за да ги отстраните од нарачката",
+				"offersOutOfStockExplanation": "Нема доволно достапни ставки",
+				"invalidVoucherCode": "Кодот на ваучерот е неважечки",
+				"INVALID_INPUT": "Грешка во обработката на дадените детали.",
+				"slotUnavailableExplanation": "Бараниот временски слот не е достапен. Изберете друг временски слот или изберете друг метод за испорака.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "Не е можно да побарате нарачка за истиот ден за оваа продавница.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "Не е можно да побарате нарачка за истиот ден за вашата област.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "Не е можно да побарате нарачка за истиот ден за следниве ставки:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "Не е можно да се достават до вашиот поштенски број за бараното време и ден.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "Není možné doručit objednávky v konkrétní čas a datum. Vyberte prosím alternativu.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "Není možné vyzvednout objednávky v konkrétní čas a datum. Vyberte prosím alternativu.",
+				"INTERNAL_ERROR": "Наиде на неочекувана грешка. Вчитајте ја повторно апликацијата за да се обидете повторно.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "Минималниот износ на нарачката за испорака не е исполнет. Додадете друга вредност од {{AMOUNT_MISSING}} во вашата нарачка за да продолжите.",
+				"paymentFailed": "Не успеавте да платите преку Интернет користејќи го овој начин на плаќање. Ве молиме обидете се повторно.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "Задолжителните промоции не се применуваат",
+				"INVALID_CUSTOMER_VOUCHER": "Невалиден ваучер за клиенти",
+				"slotUnavailable": "Избраното време не е достапно",
+				"slotUnavailableExplanationWithSuggestion": "Избраното време е во минатото или повеќе не е достапно. Следно достапно време:",
+				"socialLoginFailed": "Не можевме да се поврземе со вашата сметка",
+				"customerDetailsUpdateFailed": "Не успеа да се ажурираат податоците на профилот",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "Продавницата не доставува до оваа локација",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "Не можеме да ја најдеме адресата што ја дадовте. Ажурирајте ја адресата и обидете се повторно или контактирајте ја продавницата.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "Не е можно да се поднесат нарачки во одредено време и датум. Ве молиме изберете алтернатива.",
+				"MISSING_LOCATION_TAP_ID": "Допрете ID е задолжително",
+				"invalidPin": "Неважечки пин-код на клиентот"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "Порачката ќе ви биде сервирана"
+					},
+					"unknown": {
+						"location": "Порачката ќе ви биде сервирана"
+					}
+				},
+				"pickup": "Подигнете ја порачката",
+				"addressDelivery": "Ве молиме воведете ги вашите податоци"
+			},
+			"yourInformationPlease": "Ве молиме воведете ги вашите податоци",
+			"locationCode": "Маса",
+			"yourName": "Вашето име",
+			"email": "Емаил",
+			"phoneNumber": "Телефон",
+			"fullName": "Име и презиме",
+			"streetAddress": "Улица",
+			"zip": "Поштенски код",
+			"town": "Град",
+			"minimumAmount": "Минималната сума за порачка е {{amount}}",
+			"deliveryFee": "Трошоци за достава",
+			"deliveryFeeApplicable": "{{amount}} се однсува за порачките подолу",
+			"field": {
+				"generalValidation": "Вредноста во ова поле е со невалиден формат"
+			},
+			"acceptTerm": "Продолжувајќи да ги прифатите {{Условите за користење}} и {policy Политика на приватност}",
+			"termsAndPolicy": "Продолжувајќи да ги прифатите",
+			"acceptTerms": {
+				"and": "и",
+				"after": ""
+			},
+			"termsOfUse": "Условите за користење",
+			"privacyPolicy": "policy Политика на приватност",
+			"yourTable": "Вашата маса",
+			"allowedCharacters": "Прифатливи симболи",
+			"wishTimeHeading": "Кога сакате да ја примите вашата нарачка?",
+			"asSoonAsPossible": "Сакам да го добијам што е можно поскоро",
+			"specifyWishTime": "Сакам да прецизирам кога ќе го добијам",
+			"specialNoteExample": "Додај посебна забелешка за Вашата порачка",
+			"cardDisabledNote": "Ве молиме споделете ја порачката кога ќе бидете во можност",
+			"cardHolderName": "имател на картичката",
+			"cardNumber": "Број на вашата картичка",
+			"cvv": "CVV",
+			"itemsOutOfStock": "Некои ставки нема залиха",
+			"floor": "Кат",
+			"storeClosedAtOrderWishDate": "Продавницата е затворена на посакуваниот датум или време на желбата",
+			"offersNotAvailableAtOrderWishDate": "Некои понуди не се достапни на посакуваниот датум или време на желбата",
+			"updateOrder": "Ажурирајте ја нарачката",
+			"offers": {
+				"availableQuantity": "Моментално достапно"
+			},
+			"voucherCode": "Внесете код на ваучер",
+			"validVoucherCode": "Ваучер кодот е валиден",
+			"yourRoom": "Твојата соба",
+			"yourLocation": "Твојата локација",
+			"serveOption": {
+				"location": "Сакам да го примам на мојата локација",
+				"room": "Јас сум во мојата соба"
+			},
+			"social": {
+				"connect": "Поврзете се со социјална сметка"
+			},
+			"remainingValidVoucher": "Останато салдо на ваучерот:",
+			"paymentsense": {
+				"declined": "Интернет-плаќањето преку Paymentsense е одбиено"
+			},
+			"saveCustomerDetailsForFuture": "Зачувајте ги податоците за вашиот профил за идни нарачки",
+			"customerDetailsUpdateSuccess": "Податоците за вашиот профил се ажурирани",
+			"logout": "Одјавување",
+			"expiry": "Датум на истекување (MMYY)",
+			"enterPin": "Внесете го PIN-бројот"
+		},
+		"payment": {
+			"payOnlineNow": "Платете онлајн сега",
+			"chooseYourPaymentMethod": "Изберете го Вашиот метод на плаќање",
+			"creditCard": "со картичка",
+			"paypal": "Paypal",
+			"submitOrder": "Испратете ни ја порачката",
+			"proceedToPayment": "Продолжи кон наплата",
+			"errorCouldNotConnect": "Не можевме да воспоставиме врска со процесорот за наплата. Ве молиме вратете се на страната за плаќање и одберете друг метод на наплата или пробајте повторно подоцна.",
+			"enterCreditCardInfo": "Ве молиме воведете ги податоците за вашата кредитна или дебитна картичка",
+			"yourOrderIsReady": "Вашата порачка е спремна",
+			"yourOrderIsExpected": "Очекувајте ја вашата порачка во",
+			"errors": {
+				"valueNotValid": "Вредноста што ја воведовте не е валидна",
+				"zipNotAvailable": "Не можете да поставите нарачка за достава преку Интернет до овој поштенски код. Ве молиме контактирајте ја продавницата за повеќе информации",
+				"addressNotAvailable": "Адресата не може да се најде. Изберете улична адреса од предлозите."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "Плаќаат преку Интернет сега",
+			"digitalWallets": "Дигитални паричници",
+			"creditCardSecure": "Безбедни плаќања со кредитни картички",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "Бројот на вашата порачка",
+			"orderStatus": "Статусот на вашата порачка е",
+			"notSubmitted": "Не е се уште испратена",
+			"sent": "Испратена",
+			"ready": "Подготвена",
+			"rejected": "Одбиена",
+			"startNewOrder": "Нова порачка",
+			"errors": {
+				"emailProperFormat": "Ве молиме воведете валидна емаил адреса за да Ви доставиме копија од Вашата порачка"
+			},
+			"fiilEmailAddress": "Воведете ја Вашата емаил адреса за да добиете копија од вашата порачка",
+			"failedEmail": "Емаил пораката не беше испратена",
+			"emailSent": "Емаил пораката беше испратена",
+			"received": "Примена",
+			"accepted": "Прифатена",
+			"mobileAppPromotion": "Следниот пат нарачајте преку мобилната апликација GonnaOrder"
+		},
+		"dialog": {
+			"ok": "Во ред",
+			"cancel": "Откажи"
+		},
+		"store": {
+			"currently": {
+				"closed": "Продавницата во моментов е затворена"
+			},
+			"time": {
+				"closed": "Продавницата е затворена во избраното време"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "Вегетаријанец",
+						"vegan": "Вегански",
+						"celery": "Целер",
+						"wheat": "Wheито",
+						"crustaceans": "Ракови",
+						"eggs": "Јајца",
+						"fish": "Риба",
+						"lupin": "Лупин",
+						"milk": "Млеко",
+						"molluscs": "Мекотели",
+						"mustard": "Сенф",
+						"nuts": "Ореви",
+						"peanuts": "Кикирики",
+						"sesame": "Сусам",
+						"soya": "Соја",
+						"sulphurDioxide": "Сулфур диоксид",
+						"halal": "Halal",
+						"barley": "Ječmen",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "Оваа веб-страница користи колачиња за подобрување на вашето искуство, но можете да се исклучите доколку сакате.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "Аплицирај"
+		},
+		"cookie": {
+			"accept": "Прифати",
+			"reject": "Одбиви",
+			"readMore": "Прочитај повеќе"
+		},
+		"connect": {
+			"social": {
+				"google": "Поврзете се со Google",
+				"facebook": "Поврзете се со Фејсбук"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "Вашата корпа е празна",
+				"proceed": "Продолжи"
+			}
+		},
+		"main": {
+			"typeUrl": "Внесете URL или име на продавница",
+			"invalidUrl": "URL-то е неважечко",
+			"scanQRCode": "Скенирајте QR-код",
+			"storeNotFound": "Продавницата не беше пронајдена",
+			"storeSaved": "Информациите за складирање се успешно зачувани!",
+			"navigateStoreConfirm": "Одете до продавницата?"
+		},
+		"recents": {
+			"nothingFound": "Ништо не се најде овде"
+		}
+	}
+}

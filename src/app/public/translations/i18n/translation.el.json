@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "Powered by",
+			"thankYou": "Ευχαριστούμε",
+			"discount": "Έκπτωση",
+			"viewOrder": "Προβολή παραγγελίας",
+			"errorH2": "Κάτι πήγε στραβά",
+			"errorUnexpected": "Κάτι απροσδόκητο συνέβη",
+			"errorExpected": "Κάτι απροσδόκητο συνέβη",
+			"errorMustSelectOne": "Πρέπει να επιλέξετε μία τιμή",
+			"errorTrialExceeded": "Αυτή η λειτουργία δεν είναι διαθέσιμη. Έχει γίνει υπέρβαση των διαθέσιμων δοκιμών.",
+			"emptyCart": "Δεν υπάρχουν στοιχεία στην παραγγελία σας",
+			"optional": "(προαιρετικό)",
+			"cookies": "Αυτός ο ιστότοπος χρησιμοποιεί cookies. Συνεχίζοντας να χρησιμοποιείς αυτόν τον ιστότοπο, αποδέχεσε τη χρήση τους",
+			"more": "περισσότερα",
+			"less": "λιγότερα",
+			"chooseFrom": "Επέλεξε από",
+			"standard": "Standard",
+			"days": {
+				"mon": "Δευτέρα",
+				"tue": "Τρίτη",
+				"wed": "Τετάρτη",
+				"thu": "Πέμπτη",
+				"fri": "Παρασκευή",
+				"sat": "Σάββατο",
+				"sun": "Κυριακή"
+			},
+			"opentimelist": "Ώρες Λειτουργίας",
+			"newVersionAvailable": "Η έκδοση της εφαρμογής που χρησιμοποιείς είναι παλαιότερη. Φόρτωσε ξανά την εφαρμογή για να λάβεις την πιο πρόσφατη ενημέρωση",
+			"reloadApplication": "Επαναφόρτωση εφαρμογής",
+			"poweredByGonnaOrder": "Powered by Gonnaorder",
+			"recents": "Πρόσφατα",
+			"information": "Πληροφορίες",
+			"yes": "Ναί",
+			"no": "Οχι",
+			"error": "Λάθος",
+			"errorQRScanner": "Παρουσιάστηκε σφάλμα με το QR Scanner!",
+			"confirm": "Επιβεβαίωση"
+		},
+		"select": {
+			"selectAtLeast": "Πρέπει να επιλέξετε τουλάχιστον {{x}}",
+			"selectAtmost": "Μπορείτε να επιλέξετε το πολύ {{x}}",
+			"selectAtleastAtMost": "Πρέπει να επιλέξετε τουλάχιστον {{x}} και το πολύ {{y}}",
+			"selectBetween": "Πρέπει να επιλέξεις μεταξύ των τιμών {{childCategory.min}} και {{childCategory.max}}."
+		},
+		"load": {
+			"loadingMessage": "Μια στιγμή παρακαλώ ..."
+		},
+		"itemDetails": {
+			"removeFromOrder": "Αφαίρεση από την παραγγελία",
+			"addToOrder": "Προσθήκη στην παραγγελία",
+			"updateOrder": "Ενημέρωση παραγγελίας"
+		},
+		"checkout": {
+			"yourOrder": "Η παραγγελία σου",
+			"total": "Σύνολο",
+			"specialNote": "Σχόλια παραγγελίας",
+			"howToReceiveYourOrder": "Πώς θα ήθελες να παραλάβεις την παραγγελία σου;",
+			"option": {
+				"pickup": "Θα την παραλάβω ο ίδιος",
+				"addressDelivery": "Επιθυμώ να το λάβω στη διεύθυνση μου",
+				"serve": {
+					"location": "Κάθομαι σε ένα τραπέζι"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "Δεν μπορέσαμε να αποθηκεύσουμε τα στοιχεία της παραγγελίας σας",
+				"fieldRequired": "Αυτό το πεδίο είναι υποχρεωτικό",
+				"selectFutureTime": "Παρακαλώ επέλεξε μια ώρα στο μέλλον",
+				"orderSubmissionFailed": "Δεν είναι δυνατή η υποβολή της παραγγελίας",
+				"ORDER_LOCATION_NOT_PRESENT": "Ο αριθμός τραπεζιού ή τοποθεσίας λείπει",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "Καποια απαιτούμενα στοιχεία πελάτη λείπουν",
+				"ORDER_WISH_TIME_INVALID": "Ο επιθυμητός χρόνος της παραγγελίας είναι στο παρελθόν",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "Η μέθοδος παραδοσης δεν αναφέρεται",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "Η επιλεγόμενη μέθοδος παράδοση της παραγγελίας δεν υποστηρίζεται",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "Η επιλεγόμενη μέθοδος παράδοση της παραγγελίας δεν υποστηρίζεται",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "Η επιλεγόμενη μέθοδος παράδοση της παραγγελίας δεν υποστηρίζεται",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "Η παράδοση στον καθορισμένο ταχυδρομικό κώδικα δεν υποστηρίζεται",
+				"OPENING_TIME_SCHEDULE_ERROR": "Το κατάστημα είναι κλειστό την επιλεγμένη ώρα παραγγελίας",
+				"PROMOTION_NOT_ELIGIBLE": "Η προσφορά που επιλέχθηκε δεν είναι έγκυρη",
+				"offersUnavailableExplanation": "Τα παρακάτω είδη δεν είναι διαθέσιμα κατά την επιθυμητή ημερομηνία και την ώρα. Κάνε κλικ στην ενημέρωση της παραγγελίας για να τα αφαιρέσεις από την παραγγελία σου",
+				"offersOutOfStockExplanation": "Κάποια από τα επιλεγμένα είδη δεν είναι διαθέσιμα",
+				"invalidVoucherCode": "Ο κωδικός κουπονιού δεν είναι έγκυρος",
+				"INVALID_INPUT": "Παρουσιαστηκε σφάλμα κατά την επεξεργασία των δεδομένων",
+				"slotUnavailableExplanation": "Η ζητούμενη χρονική περίοδος δεν είναι διαθέσιμη. Επιλέξε διαφορετικό χρονικό διάστημα ή επιλέξε άλλη μέθοδο παράδοσης.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "Δεν είναι δυνατή η καταχώρηση παραγγελίας για την ίδια ημέρα για αυτό το κατάστημα.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "Δεν είναι δυνατή η καταχώρηση παραγγελίας για την ίδια ημέρα για την περιοχή σας.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "Δεν είναι δυνατή η καταχώρηση παραγγελίας για την ίδια ημέρα για τα ακόλουθα είδη:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "Δεν είναι δυνατή η παράδοση στον ταχυδρομικό σου κώδικα για την απαιτούμενη ώρα και ημέρα.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "Δεν είναι δυνατή η παράδοση παραγγελιών κατά τη συγκεκριμένη ώρα και ημερομηνία. Επιλέξτε μια εναλλακτική λύση.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "Δεν είναι δυνατή η παραλαβή παραγγελιών κατά τη συγκεκριμένη ώρα και ημερομηνία. Επιλέξτε μια εναλλακτική λύση.",
+				"INTERNAL_ERROR": "Παρουσιάστηκε μη αναμενόμενο σφάλμα. Φόρτωσε ξανά την εφαρμογή και δοκίμασε πάλι",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "Το ελάχιστο ποσό παραγγελίας παράδοσης δεν είναι αρκετό. Πρόσθεσε επιπλέον είδη αξίας {{AMOUNT_MISSING}} στην παραγγελία σου για να συνεχίσεις.",
+				"paymentFailed": "Δεν είναι δυνατή η πληρωμή με αυτή τη μέθοδο. Παρακλώ προσπάθησε ξανά",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "Δεν επιλεχθηκαν οιπροσφορές",
+				"INVALID_CUSTOMER_VOUCHER": "Το κουπόνι δεν ειναι εγκυρο",
+				"slotUnavailable": "Η επιλεγμένη ώρα δεν είναι διαθέσιμη",
+				"slotUnavailableExplanationWithSuggestion": "Η επιλεγμένη ώρα είναι στο παρελθόν ή δεν είναι πλέον διαθέσιμη. Επόμενη διαθέσιμη ώρα:",
+				"socialLoginFailed": "Δεν ήταν δυνατή η σύνδεση στον λογαριασμό σου",
+				"customerDetailsUpdateFailed": "Αποτυχία ενημέρωσης δεδομένων προφίλ",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "Το κατάστημα δεν παραδίδει σε αυτήν την τοποθεσία",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "Δεν μπορούμε να βρούμε τη διεύθυνση που δώσατε. Ενημερώστε τη διεύθυνση και δοκιμάστε ξανά ή επικοινωνήστε με το κατάστημα.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "Δεν είναι δυνατή η υποβολή παραγγελιών τη συγκεκριμένη ώρα και ημερομηνία. Επιλέξτε μια εναλλακτική λύση.",
+				"MISSING_LOCATION_TAP_ID": "Το Tap ID είναι υποχρεωτικό",
+				"invalidPin": "Μη έγκυρος κωδικός pin πελάτη"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "Η παραγγελία σου θα παραδοθεί"
+					},
+					"unknown": {
+						"location": "Η παραγγελία σου θα παραδοθεί"
+					}
+				},
+				"pickup": "Παραλαβή της παραγγελίας",
+				"addressDelivery": "Τα στοιχεία σου παρακαλώ"
+			},
+			"yourInformationPlease": "Στοιχεία Παραγγελίας",
+			"locationCode": "Τραπέζι",
+			"yourName": "Όνομα",
+			"email": "Email",
+			"phoneNumber": "Τηλέφωνο",
+			"fullName": "Πλήρες όνομα",
+			"streetAddress": "Διεύθυνση",
+			"zip": "Ταχυδρομικός κώδικας",
+			"town": "Πόλη",
+			"minimumAmount": "Απαιτείται ένα ελάχιστο ποσό παραγγελίας {{amount}} για παράδοση",
+			"deliveryFee": "Κόστος παράδοσης",
+			"deliveryFeeApplicable": "Ισχύει για παραγγελίες κάτω από {{amount}}",
+			"field": {
+				"generalValidation": "Η τιμή πεδίου δεν είναι έγκυρη"
+			},
+			"acceptTerm": "Συνεχίζοντας αποδέχεσε τους {{Όρους χρήσης}} και την {{Πολιτική απορρήτου}}",
+			"termsAndPolicy": "Συνεχίζοντας αποδέχεσε τους ",
+			"acceptTerms": {
+				"and": "και την",
+				"after": ""
+			},
+			"termsOfUse": "Όρους Χρήσης",
+			"privacyPolicy": "Πολιτική απορρήτου",
+			"yourTable": "Τραπέζι",
+			"allowedCharacters": "Επιτρεπόμενοι χαρακτήρες",
+			"wishTimeHeading": "Πότε θα ήθελες να λάβεις την παραγγελία σου;",
+			"asSoonAsPossible": "Το συντομότερο δυνατό",
+			"specifyWishTime": "Επιλογή μέρας και ώρας",
+			"specialNoteExample": "Σημείωση",
+			"cardDisabledNote": "Μοιράσου την παραγγελία σου με το κατάστημα όταν είσαι έτοιμος",
+			"cardHolderName": "Όνομα ιδιοκτήτη κάρτας",
+			"cardNumber": "Αριθμός κάρτας",
+			"cvv": "CVV",
+			"itemsOutOfStock": "Κάποια είδη δεν ειναι πλέον διαθέσιμα",
+			"floor": "Όροφος",
+			"storeClosedAtOrderWishDate": "Το κατάστημα είναι κλειστό την επιλεγμένη ημερομηνία ή ώρα",
+			"offersNotAvailableAtOrderWishDate": "Ορισμένες προσφορές δεν είναι διαθέσιμες κατά την επιλεγμένη ημερομηνία ή ώρα",
+			"updateOrder": "Ενημέρωση παραγγελίας",
+			"offers": {
+				"availableQuantity": "Διαθέσιμα"
+			},
+			"voucherCode": "Κωδικός κουπονιού",
+			"validVoucherCode": "Ο κωδικός κουπονιού είναι έγκυρος",
+			"yourRoom": "Δωμάτιο",
+			"yourLocation": "Τοποθεσία",
+			"serveOption": {
+				"location": "Θέλω να τη λάβω στην τοποθεσία μου",
+				"room": "Θέλω να τη λάβω στο δωμάτιό μου"
+			},
+			"social": {
+				"connect": "Σύνδεση με κοινωνικό λογαριασμό"
+			},
+			"remainingValidVoucher": "Υπόλοιπο στο κουπόνι:",
+			"paymentsense": {
+				"declined": "Η διαδικτυακή πληρωμή μέσω Paymentsense απορρίφθηκε"
+			},
+			"saveCustomerDetailsForFuture": "Αποθήκευση των δεδομένων του προφίλ σου για μελλοντικές παραγγελίες",
+			"customerDetailsUpdateSuccess": "Τα δεδομένα του προφίλ σου ενημερώθηκαν",
+			"logout": "Αποσύνδεση",
+			"expiry": "Ημερομηνία λήξης (MMYY)",
+			"enterPin": "Εισαγάγετε τον αριθμό PIN"
+		},
+		"payment": {
+			"payOnlineNow": "Επιλογή ηλεκτρονικής πληρωμής",
+			"chooseYourPaymentMethod": "Επιλογή μεθόδου πληρωμής",
+			"creditCard": "Πιστωτική κάρτα",
+			"paypal": "Paypal",
+			"submitOrder": "Αποστολή παραγγελίας",
+			"proceedToPayment": "Συνέχεια στην Πληρωμή",
+			"errorCouldNotConnect": "Δεν ήταν δυνατή η σύνδεση με τον επιλεγμένο επεξεργαστή πληρωμής. Επέστρεψε στην προηγούμενη οθόνη και επέλεξε μια άλλη μέθοδο πληρωμής ή δοκίμασε ξανά αργότερα.",
+			"enterCreditCardInfo": "Εισαγωγή στοιχείων πιστωτικής ή χρεωστικής κάρτας",
+			"yourOrderIsReady": "Η παραγγελία σου είναι έτοιμη",
+			"yourOrderIsExpected": "Η παραγγελία σου αναμένεται",
+			"errors": {
+				"valueNotValid": "Η τιμή που παρέχεται δεν είναι έγκυρη",
+				"zipNotAvailable": "Δεν μπορείς να παραγγείλεις ηλεκτρονικά σε αυτόν τον ταχυδρομικό κώδικα. Επικοινώνησε με το κατάστημα για περισσότερες πληροφορίες",
+				"addressNotAvailable": "Η διεύθυνση δεν μπορεί να βρεθεί. Επιλέξτε μια διεύθυνση δρόμου από τις προτάσεις."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "Ηλεκτρονική πληρωρμή",
+			"digitalWallets": "Ψηφιακά Πορτοφόλια",
+			"creditCardSecure": "Ασφαλείς πληρωμές με πιστωτική κάρτα",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "Αριθμός Παραγγελίας",
+			"orderStatus": "Κατάσταση παραγγελίας",
+			"notSubmitted": "Δεν έχει σταλεί",
+			"sent": "Έχει σταλεί",
+			"ready": "Έτοιμη",
+			"rejected": "Απορρίφθηκε",
+			"startNewOrder": "Ξεκινήσε μια νέα παραγγελία",
+			"errors": {
+				"emailProperFormat": "Το email δεν ειναι έγκυρο"
+			},
+			"fiilEmailAddress": "Συμπλήρωσε του email σου για να λάβεις ενός αντιγράφου της παραγγελίας σου",
+			"failedEmail": "Αποτυχία αποστολής email",
+			"emailSent": "Το email εστάλη",
+			"received": "Λήφθηκε",
+			"accepted": "Δεκτή",
+			"mobileAppPromotion": "Την επόμενη φορά παράγγειλε μέσω της εφαρμογής GonnaOrder για κινητά"
+		},
+		"dialog": {
+			"ok": "ΟΚ",
+			"cancel": "Ακύρωση"
+		},
+		"store": {
+			"currently": {
+				"closed": "Το κατάστημα είναι κλειστό"
+			},
+			"time": {
+				"closed": "Το κατάστημα είναι κλειστό την επιλεγμένη ώρα"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "Χορτοφάγικό",
+						"vegan": "Vegan",
+						"celery": "Σέλινο",
+						"wheat": "Σιτάρι",
+						"crustaceans": "Οστρακόδερμα",
+						"eggs": "Αυγά",
+						"fish": "Ψάρι",
+						"lupin": "Λούπινο",
+						"milk": "Γαλακτοκομικά",
+						"molluscs": "Μαλάκια",
+						"mustard": "Μουστάρδα",
+						"nuts": "Ξηροί καρποί",
+						"peanuts": "Φιστίκια",
+						"sesame": "Σουσάμι",
+						"soya": "Σόγια",
+						"sulphurDioxide": "Διοξείδιο του θείου",
+						"halal": "Χαλάλ",
+						"barley": "Κριθάρι",
+						"spicy": "Καυτερό"
+					}
+				}
+			},
+			"cookie": "Αυτός ο ιστότοπος χρησιμοποιεί cookies αλλά μπορείς να τα απορρίψεις αν επιθυμείς",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "Εφαρμογή"
+		},
+		"cookie": {
+			"accept": "Αποδοχή",
+			"reject": "Απόρριψη",
+			"readMore": "Περισσότερα"
+		},
+		"connect": {
+			"social": {
+				"google": "Σύνδεση με Google",
+				"facebook": "Σύνδεση με Facebook"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "Το καλάθι σου είναι άδειο",
+				"proceed": "Συνέχεια"
+			}
+		},
+		"main": {
+			"typeUrl": "Πληκτρολόγησηε μια διεύθυνση URL ή ένα όνομα καταστήματος",
+			"invalidUrl": "Η διεύθυνση URL δεν είναι έγκυρη",
+			"scanQRCode": "Σκανάρισμά κωδικού",
+			"storeNotFound": "Το κατάστημα δεν βρέθηκε",
+			"storeSaved": "Οι πληροφορίες του καταστήματος αποθηκεύτηκαν με επιτυχία!",
+			"navigateStoreConfirm": "Πλοήγηση στο κατάστημα;"
+		},
+		"recents": {
+			"nothingFound": "Δεν βρέθηκε τίποτα εδώ"
+		}
+	}
+}

@@ -1,0 +1,387 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card list">
+        <form [formGroup]="settingsForm" class="form-horizontal my-3">
+          <div class="card-body py-0">
+            <div class="form-group row mb-0">
+              <label class="col-xl-2 col-lg-3 col-md-4 form-header">{{'admin.store.deliveryOption'|translate}}</label>
+              <div class="col-md-8">
+                <div class="form-group row mb-1 mx-0">
+                  <label class="chk-container col-xl-3 col-lg-4 col-md-4 col-12" for="DELIVERY_IN_STORE_LOCATION"
+                    [ngStyle]="{'pointer-events': !this.deliveryLocationsEnabled || (this.orderingDisabled && (this.settings['DELIVERY_IN_STORE_LOCATION'] || this.settings['DELIVERY_NO_LOCATION'] || this.settings['DELIVERY_ADDRESS'])) ? 'none' : 'inherit'}">
+                    <span class="material-icons-outlined">
+                      room_service
+                    </span>
+                    {{'admin.store.deliveryAtInLocation'|translate}}
+                    <input 
+                    [disableControl]="orderingDisabled && (settings['DELIVERY_IN_STORE_LOCATION'] || settings['DELIVERY_NO_LOCATION'] || settings['DELIVERY_ADDRESS'])"
+                    type="checkbox" formControlName="DELIVERY_IN_STORE_LOCATION" id="DELIVERY_IN_STORE_LOCATION"
+                      (change)="onSubmit()" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <div class="row col-lg-8 col-md-8 col-12" *ngIf="hubriseConnected">
+                    <span class="mx-2">{{'admin.store.externalId'|translate}}</span>
+                    <input type="text" class="form-control col-xl-4 col-lg-6 col-md-6 col-8 externalIdInput" *ngIf="hubriseConnected"
+                      placeholder="{{'admin.store.externalId'|translate}}" autocomplete="off"
+                      (input)="onSubmit()"
+                      formControlName="DELIVERY_IN_STORE_LOCATION_EXTERNAL_ID" maxlength="100" />
+                    <div class="invalid-feedback" *ngIf="deliveryInStoreLocationExteranlId.errors">
+                      <span
+                        *ngIf="deliveryInStoreLocationExteranlId.errors.maxlength">{{'admin.global.field.maxLength'|translate:
+                        {maxLength: "100"} }}</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="explanation" *ngIf="!deliveryLocationsEnabled">
+                  {{'admin.store.deliveryLocationsEnabled'|translate}}</div>
+                <div class="form-group row mb-1 mx-0">
+                  <label class="chk-container col-xl-3 col-lg-4 col-md-4 col-12" for="DELIVERY_NO_LOCATION">
+                    <span class="material-icons">
+                      shopping_basket
+                    </span>
+                    {{'admin.store.orderDeliveryMethod.pickup'|translate}}
+                    <input
+                      [disableControl]="orderingDisabled && (settings['DELIVERY_IN_STORE_LOCATION'] || settings['DELIVERY_NO_LOCATION'] || settings['DELIVERY_ADDRESS'])"
+                      type="checkbox" formControlName="DELIVERY_NO_LOCATION" id="DELIVERY_NO_LOCATION"
+                      (change)="onSubmit()" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <div class="row col-lg-8 col-md-8 col-12" *ngIf="hubriseConnected">
+                    <span class="mx-2">{{'admin.store.externalId'|translate}}</span>
+                    <input type="text" class="form-control col-xl-4 col-lg-6 col-md-6 col-8 externalIdInput" *ngIf="hubriseConnected"
+                      placeholder="{{'admin.store.externalId'|translate}}" autocomplete="off"
+                      (input)="onSubmit()"
+                      formControlName="DELIVERY_NO_LOCATION_EXTERNAL_ID" maxlength="100" />
+                    <div class="invalid-feedback" *ngIf="deliveryNoLocationExteranlId.errors">
+                      <span
+                        *ngIf="deliveryNoLocationExteranlId.errors.maxlength">{{'admin.global.field.maxLength'|translate:
+                        {maxLength: "100"} }}</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row mb-1 mx-0">
+                  <label class="chk-container col-xl-3 col-lg-4 col-md-4 col-12" for="DELIVERY_ADDRESS">
+                    <span class="material-icons">
+                      directions_bike
+                    </span>
+                    {{'admin.store.orderDeliveryMethod.deliverAtAddress'|translate}}
+                    <input
+                      [disableControl]="orderingDisabled && (settings['DELIVERY_IN_STORE_LOCATION'] || settings['DELIVERY_NO_LOCATION'] || settings['DELIVERY_ADDRESS'])"
+                      type="checkbox" formControlName="DELIVERY_ADDRESS" id="DELIVERY_ADDRESS" (change)="onSubmit()" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <div class="row col-lg-8 col-md-8 col-12" *ngIf="hubriseConnected">
+                    <span class="mx-2">{{'admin.store.externalId'|translate}}</span>
+                    <input type="text" class="form-control col-xl-4 col-lg-6 col-md-6 col-8 externalIdInput" *ngIf="hubriseConnected"
+                      placeholder="{{'admin.store.externalId'|translate}}" autocomplete="off"
+                      (input)="onSubmit()"
+                      formControlName="DELIVERY_ADDRESS_EXTERNAL_ID" maxlength="100" />
+                    <div class="invalid-feedback" *ngIf="deliveryAddressExteranlId.errors">
+                      <span
+                        *ngIf="deliveryAddressExteranlId.errors.maxlength">{{'admin.global.field.maxLength'|translate:
+                        {maxLength: "100"} }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-xl-2 col-lg-3 col-md-4 form-header">{{'admin.store.ordering'|translate}}</label>
+              <div class="col-md-5">
+                <div class="form-group mb-0">
+                  <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                  <label class="switch pt-1 mb-0">
+                    <input type="checkbox" formControlName="ENABLE_ORDERING" id="ENABLE_ORDERING"
+                      (change)="onSubmit('ordering')" />
+                    &nbsp;<span class="slider round"></span>
+                  </label>&nbsp;
+                  <label>{{'admin.store.enabled'|translate}}</label>
+                  <div class="explanation"
+                    *ngIf="!settings['DELIVERY_IN_STORE_LOCATION'] && !settings['DELIVERY_NO_LOCATION'] && !settings['DELIVERY_ADDRESS']">
+                    {{'admin.store.orderingDisabledMessage'|translate}}</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row" *ngIf="orderingDisabled">
+              <label class="col-xl-2 col-lg-3 col-md-4 form-header">{{'admin.store.shoppingBasket'|translate}}</label>
+              <div class="col-md-5">
+                <div class="form-group mb-0">
+                  <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                  <label class="switch pt-1 mb-0">
+                    <input type="checkbox" formControlName="BASKET_ENABLED" id="BASKET_ENABLED"
+                      (change)="onSubmit('basket')" />
+                    &nbsp;<span class="slider round"></span>
+                  </label>&nbsp;
+                  <label>{{'admin.store.enabled'|translate}}</label>
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="form-group row mb-3 mb-md-0">
+              <label
+                class="col-xl-2 col-lg-3 col-md-4 form-header mb-2 mb-md-0">{{'admin.store.orderingEmailcustomer'|translate}}</label>
+              <div class="col-md-5">
+                <div class="form-group mb-0">
+                  <label>{{'admin.global.no'|translate}}</label>&nbsp;
+                  <label class="switch pt-1 mb-0">
+                    <input type="checkbox" formControlName="ORDER_NOTIFICATION_EMAIL_STATUS_CHANGE"
+                      id="ORDER_NOTIFICATION_EMAIL_STATUS_CHANGE" (change)="onSubmit()" />
+                    &nbsp;<span class="slider round"></span>
+                  </label>&nbsp;
+                  <label>{{'admin.global.yes'|translate}}</label>
+
+                </div>
+              </div>
+            </div>
+            <div class="form-group row mb-0">
+              <label class="col-xl-2 col-lg-3 col-md-4 form-header">{{'admin.store.paymentOptions'|translate}}</label>
+              <div class="col-md-5">
+                <div class="form-group explanation" *ngIf="!paymentEnabled">
+                  {{'admin.store.paymentOptionsDisabled'|translate}}
+                </div>
+                <div class="form-group">
+                  <label class="radio-container" for="PAYMENT_OPTION_DISABLED">
+                    {{'admin.store.paymentDisabled'|translate}}
+                    <input [disableControl]="!paymentEnabled || orderingDisabled" type="radio" value="disabled"
+                      formControlName="PAYMENT_OPTION" id="PAYMENT_OPTION_DISABLED" (change)="onSubmit()" />
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="form-group">
+                  <label class="radio-container" for="PAYMENT_OPTION_OPTIONAL">
+                    {{'admin.store.paymentOptional'|translate}}
+                    <input [disableControl]="!paymentEnabled || orderingDisabled" type="radio" value="optional"
+                      formControlName="PAYMENT_OPTION" id="PAYMENT_OPTION_OPTIONAL" (change)="onSubmit()" />
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="form-group">
+                  <label class="radio-container" for="PAYMENT_OPTION_MANDATORY">
+                    {{'admin.store.paymentMandatory'|translate}}
+                    <input [disableControl]="!paymentEnabled || orderingDisabled" type="radio" value="mandatory"
+                      formControlName="PAYMENT_OPTION" id="PAYMENT_OPTION_MANDATORY" (change)="onSubmit()" />
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row" *ngIf="hubriseConnected">
+              <label
+                class="col-xl-2 col-lg-3 col-md-4 form-header">{{'admin.store.externalOnlinePaymentId'|translate}}</label>
+              <div class="col-md-4">
+                <input type="text" class="form-control"
+                  placeholder="{{'admin.store.externalOnlinePaymentId'|translate}}" autocomplete="off"
+                  (input)="onSubmit()"
+                  formControlName="ONLINE_PAYMENT_EXTERNAL_ID" maxlength="100" />
+              </div>
+              <div class="invalid-feedback" *ngIf="onlinePaymentExternalId.errors">
+                <span
+                  *ngIf="onlinePaymentExternalId.errors.maxlength">{{'admin.global.field.maxLength'|translate:
+                  {maxLength: "100"} }}</span>
+              </div>
+            </div>
+            <div class="form-group row" *ngIf="hubriseConnected">
+              <label
+                class="col-xl-2 col-lg-3 col-md-4 form-header">{{'admin.store.externalNonOnlinePaymentId'|translate}}</label>
+              <div class="col-md-4">
+                <input type="text" class="form-control"
+                  placeholder="{{'admin.store.externalNonOnlinePaymentId'|translate}}" autocomplete="off"
+                  (input)="onSubmit()"
+                  formControlName="NON_ONLINE_PAYMENT_EXTERNAL_ID" maxlength="100" />
+              </div>
+              <div class="invalid-feedback" *ngIf="nonOnlinePaymentExternalId.errors">
+                <span
+                  *ngIf="nonOnlinePaymentExternalId.errors.maxlength">{{'admin.global.field.maxLength'|translate:
+                  {maxLength: "100"} }}</span>
+              </div>
+            </div>
+            <div class="form-group row mb-0">
+              <label
+                class="col-xl-2 col-lg-3 col-md-4 form-header">{{'admin.store.enableCustomerAuthentication'|translate}}</label>
+              <div class="col-md-5">
+                <div class="form-group">
+                  <label>{{'admin.global.no'|translate}}</label>&nbsp;
+                  <label class="switch pt-1 mb-0">
+                    <input type="checkbox" formControlName="ENABLE_CUSTOMER_AUTHENTICATION"
+                      id="ENABLE_CUSTOMER_AUTHENTICATION" (change)="onSubmit()" />
+                    &nbsp;<span class="slider round"></span>
+                  </label>&nbsp;
+                  <label>{{'admin.global.yes'|translate}}</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row mb-0">
+              <label class="col-xl-2 col-lg-3 col-md-4 form-header">{{'admin.store.hideorderComment'|translate}}</label>
+              <div class="col-md-5">
+                <div class="form-group">
+                  <label>{{'admin.global.no'|translate}}</label>&nbsp;
+                  <label class="switch pt-1 mb-0">
+                    <input type="checkbox" formControlName="HIDE_ORDER_COMMENTS" id="HIDE_ORDER_COMMENTS"
+                      (change)="onSubmit()" />
+                    &nbsp;<span class="slider round"></span>
+                  </label>&nbsp;
+                  <label>{{'admin.global.yes'|translate}}</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row mb-0">
+              <label
+                class="col-xl-2 col-lg-3 col-md-4 form-header">{{'admin.store.hideorderitemComment'|translate}}</label>
+              <div class="col-md-5">
+                <div class="form-group">
+                  <label>{{'admin.global.no'|translate}}</label>&nbsp;
+                  <label class="switch pt-1 mb-0">
+                    <input type="checkbox" formControlName="HIDE_ORDER_ITEM_COMMENTS" id="HIDE_ORDER_ITEM_COMMENTS"
+                      (change)="onSubmit()" />
+                    &nbsp;<span class="slider round"></span>
+                  </label>&nbsp;
+                  <label>{{'admin.global.yes'|translate}}</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row mb-0">
+              <label
+                class="col-xl-2 col-lg-3 col-md-4 form-header">{{'admin.store.oneClickAddToBasket'|translate}}</label>
+              <div class="col-md-5">
+                <div class="form-group">
+                  <label>{{'admin.global.no'|translate}}</label>&nbsp;
+                  <label class="switch pt-1 mb-0">
+                    <input type="checkbox" formControlName="ADD_BASKET_ONE_CLICK" id="ADD_BASKET_ONE_CLICK"
+                      (change)="onSubmit()" />
+                    &nbsp;<span class="slider round"></span>
+                  </label>&nbsp;
+                  <label>{{'admin.global.yes'|translate}}</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group row mb-0" *ngIf="settings['PAYMENT_OPTION'] === 'optional'">
+              <label
+                class="col-xl-2 col-lg-3 col-md-4 form-header">{{'admin.store.defaultPaymentSelection'|translate}}</label>
+              <div class="col-md-5">
+                <div class="form-group">
+                  <label>{{'admin.store.notSelected'|translate}}</label>&nbsp;
+                  <label class="switch pt-1 mb-0">
+                    <input type="checkbox" formControlName="OPTIONAL_PAYMENT_PRESELECTED"
+                      id="OPTIONAL_PAYMENT_PRESELECTED" (change)="onSubmit()" />
+                    &nbsp;<span class="slider round"></span>
+                  </label>&nbsp;
+                  <label>{{'admin.store.preselected'|translate}}</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-xl-2 col-lg-3 col-md-4 form-header">
+                {{'admin.store.orderingMinutesorderready'|translate}}</label>
+              <div class="col-md-5">
+                <div class="form-group explanation">
+                  {{'admin.store.orderingDefaultestimated'|translate}}
+                </div>
+                <div class="d-flex w-100">
+                  <span class="m-2">{{'admin.store.orderingMinimum'|translate}}</span>
+                  <input type="number" class="form-control col-lg-3 col-md-3 col-sm-12 default-number" min="0"
+                    formControlName="DEFAULT_MIN_ESTIMATED_DURATION_READY" id="DEFAULT_MIN_ESTIMATED_DURATION_READY"
+                    (input)="onSubmit()"
+                    [class.is-invalid]="defaultMinNumber.invalid && (defaultMinNumber.dirty || defaultMinNumber.touched)" />
+
+                  <span class="m-2">{{'admin.store.orderingMaximum'|translate}}</span>
+                  <input type="number" class="form-control col-lg-3 col-md-3 col-sm-12 default-number"
+                    formControlName="DEFAULT_MAX_ESTIMATED_DURATION_READY" id="DEFAULT_MAX_ESTIMATED_DURATION_READY"
+                    (input)="onSubmit()"
+                    [class.is-invalid]="defaultMaxNumber.invalid && (defaultMaxNumber.dirty || defaultMaxNumber.touched)" />
+                </div>
+                <div class="invalid-feedback d-block" *ngIf="defaultMaxNumber.errors">
+                  <span>{{'admin.global.field.maxNumber'|translate: {maxNumber: defaultMaxNumber.errors.max.max}
+                    }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row mb-0">
+            <label
+              class="col-xl-2 col-lg-3 col-md-4 form-header">{{'admin.store.orderingNotification'|translate}}</label>
+            <div class="col-md-5">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-12">
+                    <label
+                      class="col-md-12 ml-n3 form-header">{{'admin.store.orderingNotificationmessage'|translate}}</label>
+                    <div class="d-flex w-100">
+                      <input type="text" class="form-control" formControlName="ORDER_NOTIFICATION_EMAIL"
+                        [class.is-invalid]="email.invalid && (email.dirty || email.touched)" placeholder="Email"
+                        autocomplete="email" required maxlength="254" />
+                      <button class="btn btn-primary ml-4 d-flex align-self-center" (click)="onSubmit()"><i
+                          class="fas fa-save mr-2 pr-1"></i>{{'admin.global.save'|translate}}</button>
+                    </div>
+                    <div class="invalid-feedback" *ngIf="email.errors && email.errors.required">
+                      {{'admin.global.field.required'|translate}}
+                    </div>
+                    <div class="invalid-feedback" *ngIf="email.errors && email.errors.email">
+                      {{'admin.forgot.emailInvalid'|translate}}
+                    </div>
+                    <div class="invalid-feedback" *ngIf="email.errors && email.errors.maxlength">
+                      {{'admin.global.field.maxLength' | translate:{maxLength: email.errors.maxlength.requiredLength}
+                      }}.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label
+              class="col-xl-2 col-lg-3 col-md-4 form-header">{{'admin.store.orderNotificationSound'|translate}}</label>
+            <div class="col-md-5">
+              <div class="form-group">
+                <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                <label class="switch pt-1 mb-0">
+                  <input type="checkbox" formControlName="ORDER_NOTIFICATION_SOUND" id="ORDER_NOTIFICATION_SOUND"
+                    (change)="onSubmit()" />
+                  &nbsp;<span class="slider round"></span>
+                </label>&nbsp;
+                <label>{{'admin.store.enabled'|translate}}</label>
+
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label
+              class="col-xl-2 col-lg-3 col-md-4 form-header">{{'admin.store.setting.allowOrderUpdateByStore'|translate}}</label>
+            <div class="col-md-5">
+              <div class="form-group">
+                <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                <label class="switch pt-1 mb-0">
+                  <input type="checkbox" formControlName="ALLOW_ORDER_CHANGE" id="ALLOW_ORDER_CHANGE"
+                    (change)="onSubmit()" />
+                  &nbsp;<span class="slider round"></span>
+                </label>&nbsp;
+                <label>{{'admin.store.enabled'|translate}}</label>
+
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label
+              class="col-xl-2 col-lg-3 col-md-4 form-header">{{'admin.store.setting.allowOrderDeletionByStore'|translate}}</label>
+            <div class="col-md-5">
+              <div class="form-group">
+                <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                <label class="switch pt-1 mb-0">
+                  <input type="checkbox" formControlName="ALLOW_ORDER_DELETE" id="ALLOW_ORDER_DELETE"
+                    (change)="onSubmit()" />
+                  &nbsp;<span class="slider round"></span>
+                </label>&nbsp;
+                <label>{{'admin.store.enabled'|translate}}</label>
+
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

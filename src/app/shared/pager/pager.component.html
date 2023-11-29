@@ -1,0 +1,23 @@
+<ul *ngIf="totalPagesCount > 1" class="d-flex justify-content-center pagination">
+  <li class="page-item" class="action-previous-page" [hidden]="selectedPage === 1">
+    <button class="page-link" (click)="goTo(selectedPage - 1)">Previous</button>
+  </li>
+  <li *ngIf="showFirstPage" class="page-item">
+      <button class="page-link" (click)="goTo(1)">1</button>
+  </li>
+  <li *ngIf="showFirstPageDots" class="page-item">
+      <button class="page-link" style="cursor: default;">...</button>
+  </li>
+  <li class="page-item" [ngClass]="{active:page === selectedPage}" *ngFor="let page of pagesList">
+      <button class="page-link" (click)="goTo(page)">{{page}}</button>
+  </li>
+  <li *ngIf="showLastPageDots" class="page-item">
+      <button class="page-link" style="cursor: default;">...</button>
+  </li>
+  <li *ngIf="showLastPage" class="page-item">
+      <button class="page-link" (click)="goTo(totalPagesCount)">{{totalPagesCount}}</button>
+  </li>
+  <li class="page-item" position="beforeend" class="action-next-page" [hidden]="selectedPage === totalPagesCount">
+    <button class="page-link" (click)="goTo(selectedPage + 1)">Next</button>
+  </li>
+</ul>

@@ -1,0 +1,188 @@
+<div>
+  <div class="col-sm-12">
+    <div class="loading-screen d-flex justify-content-center align-items-center w-100 v-70" *ngIf="scheduleStatus !== 'LOADED'">
+      <div class="d-flex flex-column text-center">
+        <div class="lds-ripple mx-auto"><div></div><div></div></div>
+      </div>
+    </div>
+    <div class="card list" *ngIf="scheduleStatus === 'LOADED'">
+      <div class="col-lg-12 d-flex align-items-center justify-content-between p-0">
+        <a
+          *ngIf="offerId"
+          title="{{'admin.store.schedule.backToSchedule'|translate}}categoryName"
+          class="btn back-button btn-primary mb-4"
+          (click)="gotoPreviousPage()"
+        >
+          <i class="fas fa-arrow-left mr-2"></i>
+          <span class="d-none d-md-inline-block d-lg-inline-block d-xl-inline-block ml-1 text-white">
+            {{'admin.store.catalog.backToOffer'| translate}} {{offerName}}
+          </span>
+        </a>
+        <a
+          *ngIf="categoryId&&!offerId"
+          title="{{'admin.store.schedule.backToSchedule'|translate}}categoryName"
+          class="btn back-button btn-primary mb-4"
+          (click)="gotoPreviousPage()"
+        >
+          <i class="fas fa-arrow-left mr-2"></i>
+          <span class="d-none d-md-inline-block d-lg-inline-block d-xl-inline-block ml-1 text-white">
+            {{'admin.store.catalog.backToCategory'| translate}} {{categoryName}}
+          </span>
+        </a>
+        <a
+          *ngIf="!offerId&&!categoryId"
+          title="{{'admin.store.schedule.backToSchedule'|translate}}"
+          class="btn back-button btn-primary mb-4"
+          (click)="gotoPreviousPage()"
+        >
+          <i class="fas fa-arrow-left mr-2"></i>
+          <span class="d-none d-md-inline-block d-lg-inline-block d-xl-inline-block ml-1 text-white">
+            {{'admin.store.schedule.backToSchedule'| translate}}
+          </span>
+        </a>
+      </div>
+      <div class="card-header">
+        <span *ngIf="isCreateScheduleItem">
+          {{'admin.store.schedule.createScheduleItem'|translate}}
+        </span>
+        <span *ngIf="!isCreateScheduleItem">
+          {{'admin.store.schedule.editScheduleItem'|translate}}
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="mb-3 mt-2 d-flex align-items-center justify-content-between">
+          <div class="col-lg-3 pl-3">
+            <span class="required-field">{{'admin.global.name'|translate}}</span>
+          </div>
+          <div class="col-lg-7 pl-3">
+            <input *ngIf="isCreateScheduleItem" class="form-control" (change)="schedule.name = $event.target.value"/>
+            <input *ngIf="!isCreateScheduleItem" class="form-control" value="{{schedule.name}}" (change)="schedule.name = $event.target.value"/>
+          </div>
+        </div>
+        <div class="mb-4 d-flex align-items-center">
+          <div class="col-xl-3 col-md-4 col-6">
+            <button type="button" class="btn btn-primary w-100" (click)="addDaysOfWeek()">
+              <i class="fas fa-plus mr-2"></i>
+              {{'admin.store.schedule.addDaysOfWeek'|translate}}
+            </button>
+          </div>
+          <div class="col-xl-3 col-md-4 col-6 ml-3">
+            <button type="button" class="btn btn-primary w-100" (click)="addDates()">
+              <i class="fas fa-plus mr-2"></i>
+              {{'admin.store.schedule.addDates'|translate}}
+            </button>
+          </div>
+        </div>
+        <div id="schedule-container" class="col-lg-12">
+          <form
+            *ngFor="let item of scheduleItems; let i = index;"
+            [formGroup]="item.form"
+            class="col-lg-12 availabilityRestriction"
+          >
+            <hr *ngIf="i>0">
+            <div class="row">
+              <div class="col-10 p-0">
+                <div class="form-group row align-items-center" *ngIf="item.type === 'DAYS_OF_WEEK' || !item.type">
+                  <div [ngClass]="{'active': item.daysOfWeek === null || item.daysOfWeek.includes('MON'), 'btn btn-default day-btn m-0 cursorPointer text-white mon': true}" (click)="selectDay('MON',i)">{{'admin.store.schedule.mon'|translate}}</div>
+                  <div [ngClass]="{'active': item.daysOfWeek === null || item.daysOfWeek.includes('TUE'), 'btn btn-default day-btn m-2 cursorPointer text-white tue': true}" (click)="selectDay('TUE',i)">{{'admin.store.schedule.tue'|translate}}</div>
+                  <div [ngClass]="{'active': item.daysOfWeek === null || item.daysOfWeek.includes('WED'), 'btn btn-default day-btn m-2 cursorPointer text-white wed': true}" (click)="selectDay('WED',i)">{{'admin.store.schedule.wed'|translate}}</div>
+                  <div [ngClass]="{'active': item.daysOfWeek === null || item.daysOfWeek.includes('THU'), 'btn btn-default day-btn m-2 cursorPointer text-white thu': true}" (click)="selectDay('THU',i)">{{'admin.store.schedule.thu'|translate}}</div>
+                  <div [ngClass]="{'active': item.daysOfWeek === null || item.daysOfWeek.includes('FRI'), 'btn btn-default day-btn m-2 cursorPointer text-white fri': true}" (click)="selectDay('FRI',i)">{{'admin.store.schedule.fri'|translate}}</div>
+                  <div [ngClass]="{'active': item.daysOfWeek === null || item.daysOfWeek.includes('SAT'), 'btn btn-default day-btn m-2 cursorPointer text-white sat': true}" (click)="selectDay('SAT',i)">{{'admin.store.schedule.sat'|translate}}</div>
+                  <div [ngClass]="{'active': item.daysOfWeek === null || item.daysOfWeek.includes('SUN'), 'btn btn-default day-btn m-0 cursorPointer text-white sun': true}" (click)="selectDay('SUN',i)">{{'admin.store.schedule.sun'|translate}}</div>
+                </div>
+                <div class="form-group row m-0 align-items-center justify-content-center" *ngIf="item.type !== 'DAYS_OF_WEEK' && item.type">
+                  <div class="col-xl-6 col-lg-12 col-md-6 row p-0 m-0 align-items-center justify-content-center">
+                    <div class="form-group pr-4 pr-md-2 pr-lg-4 mt-3 pt-1">
+                      <label for="date">{{'admin.store.date'|translate}}:</label>
+                    </div>
+                    <mat-form-field>
+                      <input matInput readonly="readonly" [matDatepicker]="date" formControlName="schDate">
+                      <mat-datepicker-toggle matSuffix [for]="date"></mat-datepicker-toggle>
+                      <mat-datepicker #date>
+                      </mat-datepicker>
+                    </mat-form-field>
+                  </div>
+                  <div class="col-xl-6 col-lg-12 col-md-6 row p-0 m-0 mt-2 pt-1 align-items-center justify-content-center">
+                    <div class="form-group pr-4 pr-md-2 pr-lg-4 mt-2">
+                      <label for="date">{{'admin.global.type'|translate}}:</label>
+                    </div>
+                    <div class="row m-0">
+                      <label class="radio-container mr-4 mr-md-2 mr-lg-4" for="{{'DATE_INCLUSIVE' + i}}">
+                        {{'admin.store.schedule.Include'|translate}}
+                        <input type="radio" formControlName="dateType" value="DATE_INCLUSIVE" id="{{'DATE_INCLUSIVE' + i}}">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="radio-container" for="{{'DATE_EXCLUSIVE' + i}}">
+                        {{'admin.store.schedule.Exclude'|translate}}
+                        <input type="radio" formControlName="dateType" value="DATE_EXCLUSIVE" id="{{'DATE_EXCLUSIVE' + i}}">
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div *ngIf="scheduleItems.length > 1" class="col-2 text-right pr-0 mt-2">
+                <button type="button" class="btn btn-danger" (click)="removeScheduleItem(i)">
+                  <i class="fas fa-trash mr-2 pr-1 text-white"></i>
+                  {{'admin.global.delete'|translate}}
+                </button>
+              </div>
+              <div class="col-10">
+                <div class="row">
+                  <div class="form-group col-6 p-0">
+                    <div class="form-group row align-items-center m-0 justify-content-center align-items-center">
+                      <div class="form-group px-3">
+                        <label for="startTime">{{'admin.store.catalog.availability.startTime'|translate}}</label>
+                      </div>
+                      <div class="form-group">
+                        <timepicker formControlName="startTime" [showMeridian]="false"></timepicker>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-6 p-0">
+                    <div class="form-group row align-items-center m-0 justify-content-center align-items-center">
+                      <div class="form-group px-3">
+                        <label for="endTime">{{'admin.store.catalog.availability.endTime'|translate}}</label>
+                      </div>
+                      <div class="form-group">
+                        <timepicker formControlName="endTime" [showMeridian]="false"></timepicker>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="pt-1">
+          <button
+            type="button"
+            class="btn btn-primary ml-3 mr-3"
+            [disabled]="!schedule||!schedule.name"
+            (click)="createSchedule()"
+          >
+            <i class="fas fa-save mr-2 pr-1"></i>
+            {{'admin.global.save'|translate}}
+          </button>
+          <button
+            *ngIf="!isCreateScheduleItem"
+            type="button"
+            class="btn btn-danger ml-3 mr-3 float-right"
+            (click)="deleteSchedule()"
+          >
+            <i class="fas fa-trash mr-2 pr-1 text-white"></i>
+            {{'admin.global.delete'|translate}}
+          </button>
+          <a
+            type="link"
+            class="text-blue cursorPointer"
+            [routerLink]="['/manager/stores/'+storeId+'/settings/schedules']"
+          >
+            {{'admin.global.cancel'|translate}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

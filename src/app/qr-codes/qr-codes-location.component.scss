@@ -1,0 +1,23 @@
+a {
+  color: #20a8d8 !important;
+  cursor: pointer !important;
+}
+
+.qrcode-container {
+  font-size: 0.9rem;
+
+  .qr-right {
+    padding: 20px !important;
+    height: 325px;
+  }
+
+  .p-right {
+    margin-top: 80px;
+  }
+
+  @media screen and (max-width: 991px) {
+    .p-right {
+      margin-top: unset;
+    }
+  }
+}

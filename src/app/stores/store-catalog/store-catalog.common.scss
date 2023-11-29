@@ -1,0 +1,124 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+#saveOffer,#categoryDetails,#variantOffer,#saveChildOffer,#saveChildCategory,#importCatalog{
+    .form-group{
+        display: flex;
+        width: 100%;
+        @include media-breakpoint-down(md) {
+            display: inline-block;
+        }
+    }
+    .buttonGroup{
+        margin-top: 20px;
+    }
+}
+.buttonGroup{
+    .floatLeft{
+        float: left;
+    }
+    .floatRight{
+        float:right;
+        @include media-breakpoint-down(sm) {
+            float: none;
+            margin: 10px 0 0 0;
+            display: flex;
+        }
+    }
+}
+.actionLink{
+    cursor: pointer;
+    text-decoration: underline !important;
+    margin-left: 10px;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.buttonGroup a.actionLink {
+    color: #273773;
+}
+::ng-deep .cdk-overlay-container{
+    z-index: 9999;
+}
+form label.required:after{
+    color: red;
+    content: " *";
+}
+
+::ng-deep .mat-slide-toggle {
+    .mat-slide-toggle-bar {
+        width: 60px;
+        height: 34px;
+        border-radius: 34px;
+    }
+    .mat-slide-toggle-thumb-container {
+        top: 4px;
+        left: 4px;
+    }
+    .mat-slide-toggle-thumb {
+        width: 26px;
+        height: 26px;
+        background-color: #fff !important;
+    }
+    &.mat-checked {
+        .mat-slide-toggle-bar {
+        background-color: #48b9b7 !important;
+        }
+        .mat-slide-toggle-thumb-container {
+        top: 4px;
+        right: 26px;
+        left: initial;
+        }
+    }
+}
+::ng-deep .mat-pseudo-checkbox.mat-pseudo-checkbox-checked{
+    background-color: #273773 !important;
+    border: 2px solid #273773;
+    border-radius: 0;
+}
+::ng-deep .mat-primary .mat-option.mat-selected:not(.mat-option-disabled){
+    color: #23282c !important;
+}
+.subCard{
+    .buttonGroup{
+        margin-top: 10px;
+    }
+    button{
+        margin-right: 20px;
+    }
+}
+.addTimeRestrictionLink{
+    @include media-breakpoint-down(md) {
+        display: inline-block;
+        margin: 10px 0 0 3px;
+    }
+}
+.hideInSmallScreen{
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+}
+.backIcon{
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0 0 18px 6px;
+    color: #273773 !important;
+    width: max-content;
+}
+.mat-expansion-panel-header, .mat-expansion-panel-body{
+    @include media-breakpoint-down(md) {
+      padding:0 20px;
+    }
+}
+::ng-deep .mat-expansion-panel-body{
+  @include media-breakpoint-down(sm) {
+    padding:0 10px 10px !important;
+  }
+}
+::ng-deep .mat-expansion-panel-header-title{
+    @include media-breakpoint-down(sm) {
+        margin-right:0 !important;
+        display: inline-block !important;
+    }
+}

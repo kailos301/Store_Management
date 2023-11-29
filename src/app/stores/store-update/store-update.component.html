@@ -1,0 +1,11 @@
+<div class="col-lg-12">
+  <div class="card list">
+    <div class="card-body">
+      <app-store-form [store$]="storeUpdate$" 
+      [imageContainer]="true" (submitEvent)="onUpdate($event)"
+      [storeImage]="storeImage$ | async" (imageUpload)="onStoreImageUpload($event)"
+      [storeLogo]="storeLogo$ | async" (logoUpload)="onStoreLogoUpload($event)" (removePic)="onStoreRemovePics($event)"
+      ></app-store-form>
+    </div>
+  </div>
+</div>

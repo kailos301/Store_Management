@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "Drivs av",
+			"thankYou": "Tack",
+			"discount": "Rabatt",
+			"viewOrder": "Se order",
+			"errorH2": "Något fick snett",
+			"errorUnexpected": "Något oförutsett inträffade",
+			"errorExpected": "Något oförutsett inträffade",
+			"errorMustSelectOne": "Du måste välja ett värde",
+			"errorTrialExceeded": "Den här funktionen är inte tillgänglig. Test-restriktioner har överskridits",
+			"emptyCart": "Det finns inga artiklar i din order",
+			"optional": "(tillval)",
+			"cookies": "Den här sidan använder cookies. Genom att fortsätta använda den här hemsidan accepterar du deras användning",
+			"more": "mer",
+			"less": "mindre",
+			"chooseFrom": "Välja från",
+			"standard": "Standard",
+			"days": {
+				"mon": "Måndag",
+				"tue": "Tisdag",
+				"wed": "Onsdag",
+				"thu": "Torsdag",
+				"fri": "Fredag",
+				"sat": "Lördag",
+				"sun": "Söndag"
+			},
+			"opentimelist": "Öppettider",
+			"newVersionAvailable": "Du kör en äldre version av applikationen. Ladda om applikationen för att få den senaste uppdateringen",
+			"reloadApplication": "Ladda om ansökan",
+			"poweredByGonnaOrder": "Drivs av Gonnaorder",
+			"recents": "Senaste",
+			"information": "Information",
+			"yes": "Ja",
+			"no": "Nej",
+			"error": "Fel",
+			"errorQRScanner": "Fel uppstod med QR-skannern!",
+			"confirm": "Bekräfta"
+		},
+		"select": {
+			"selectAtLeast": "Du måste välja åtminstone {{x}}",
+			"selectAtmost": "Du kan välja högst {{x}}",
+			"selectAtleastAtMost": "Du måste minst välja {{x}} och som mest {{y}}",
+			"selectBetween": "Du måste välja mellan {{childCategory.min}} och {{childCategory.max}}."
+		},
+		"load": {
+			"loadingMessage": "Ett ögonblick tack …"
+		},
+		"itemDetails": {
+			"removeFromOrder": "Ta bort denna från din order",
+			"addToOrder": "Lägg till på din order",
+			"updateOrder": "Uppdatera din order"
+		},
+		"checkout": {
+			"yourOrder": "Din order",
+			"total": "Totalt",
+			"specialNote": "Lägg till ett speciellt meddelande till din order",
+			"howToReceiveYourOrder": "Hur skulle du vilja erhålla din order?",
+			"option": {
+				"pickup": "Jag kommer hämta den själv",
+				"addressDelivery": "Jag vill få den till min adress",
+				"serve": {
+					"location": "Jag sitter vid ett bord"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "Vi kunde inte spara dina orderdetaljer",
+				"fieldRequired": "Detta fält är obligatoriskt",
+				"selectFutureTime": "Välj tid i framtiden",
+				"orderSubmissionFailed": "Beställningen kan inte lämnas in",
+				"ORDER_LOCATION_NOT_PRESENT": "Tabellnummer eller platsnamn saknas",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "Viss nödvändig kundinformation saknas",
+				"ORDER_WISH_TIME_INVALID": "Den önskade önsketiden är i det förflutna",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "Beställningsleveransmetoden saknas",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "Leverans på adress stöds inte",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "Att betjäna beställningen stöds inte",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "Hämtning av beställningen stöds inte",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "Leverans med det angivna postnumret stöds inte",
+				"OPENING_TIME_SCHEDULE_ERROR": "Butiken är stängd vid den valda beställningstidpunkten",
+				"PROMOTION_NOT_ELIGIBLE": "En kampanj har valts men den är inte berättigad",
+				"offersUnavailableExplanation": "Nedanstående artiklar är inte tillgängliga vid det datum och den tid du angav. Klicka på uppdatera beställningen för att ta bort dem från din beställning",
+				"offersOutOfStockExplanation": "Det finns inte tillräckligt med artiklar",
+				"invalidVoucherCode": "Kupongkoden är ogiltig",
+				"INVALID_INPUT": "Fel vid bearbetning av de angivna uppgifterna.",
+				"slotUnavailableExplanation": "Den begärda tidsluckan är inte tillgänglig. Välj en annan tidslucka eller välj en annan leveransmetod.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "Det är inte möjligt att begära en beställning för samma dag för denna butik.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "Det är inte möjligt att begära en beställning för samma dag för ditt område.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "Det är inte möjligt att begära en beställning för samma dag för följande artiklar:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "Det är inte möjligt att leverera till ditt postnummer för önskad tid och dag.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "Det är inte möjligt att leverera beställningar vid den specifika tidpunkten och datumet. Välj ett alternativ.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "Det är inte möjligt att hämta beställningar vid den specifika tidpunkten och datumet. Välj ett alternativ.",
+				"INTERNAL_ERROR": "Oväntat fel uppstod. Ladda om programmet för att försöka igen.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "Minsta leveransorderbelopp inte uppfyllt. Lägg till ytterligare {{AMOUNT_MISSING}} värde i din beställning för att fortsätta.",
+				"paymentFailed": "Du kunde inte betala online med den här betalningsmetoden. Var god försök igen.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "Obligatoriska kampanjer har inte tillämpats",
+				"INVALID_CUSTOMER_VOUCHER": "Ogiltig kundkupong",
+				"slotUnavailable": "Den valda tiden är inte tillgänglig",
+				"slotUnavailableExplanationWithSuggestion": "Den valda tiden är tidigare eller inte tillgänglig längre. Nästa tillgängliga tid:",
+				"socialLoginFailed": "Vi kunde inte ansluta till ditt konto",
+				"customerDetailsUpdateFailed": "Det gick inte att uppdatera profildata",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "Butiken levererar inte till den här platsen",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "Vi hittar inte adressen du angav. Uppdatera adressen och försök igen eller kontakta butiken.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "Det är inte möjligt att skicka beställningar vid den specifika tidpunkten och datumet. Välj ett alternativ.",
+				"MISSING_LOCATION_TAP_ID": "Tap-ID är obligatoriskt",
+				"invalidPin": "Ogiltig kundpinkod"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "Din order kommer serveras till dig"
+					},
+					"unknown": {
+						"location": "Din order kommer serveras till dig"
+					}
+				},
+				"pickup": "Plocka upp ordern",
+				"addressDelivery": "Din information tack"
+			},
+			"yourInformationPlease": "Din information tack",
+			"locationCode": "Tabell",
+			"yourName": "Ditt namn",
+			"email": "Email",
+			"phoneNumber": "Telefonnummer",
+			"fullName": "Fullständigt namn",
+			"streetAddress": "Gatuadress",
+			"zip": "Postkod",
+			"town": "Stad/Ort",
+			"minimumAmount": "En minsta ordersumma på {{amount}} krävs för leverans",
+			"deliveryFee": "Leveransavgift",
+			"deliveryFeeApplicable": "Applicerbart för orders under {{amount}}",
+			"field": {
+				"generalValidation": "Fältformatet är inte giltigt"
+			},
+			"acceptTerm": "Genom att fortsätta accepterar du {{Användarvillkor}} och {{Sekretesspolicy}}",
+			"termsAndPolicy": "Genom att fortsätta godkänner du",
+			"acceptTerms": {
+				"and": "och",
+				"after": ""
+			},
+			"termsOfUse": "Användarvillkor",
+			"privacyPolicy": "Sekretesspolicy",
+			"yourTable": "Ditt bord",
+			"allowedCharacters": "Tiilåtna tecken",
+			"wishTimeHeading": "När vill du få din beställning?",
+			"asSoonAsPossible": "Jag vill ta emot det så snart som möjligt",
+			"specifyWishTime": "Jag vill ange när jag ska ta emot det",
+			"specialNoteExample": "Notera",
+			"cardDisabledNote": "Vänligen dela din order  när du är redo",
+			"cardHolderName": "Kortinnehavarens namn",
+			"cardNumber": "Ditt kortnummer",
+			"cvv": "CVV",
+			"itemsOutOfStock": "Vissa artiklar är slut i lager",
+			"floor": "Golv",
+			"storeClosedAtOrderWishDate": "Butiken är stängd vid önskat datum eller önskad tid",
+			"offersNotAvailableAtOrderWishDate": "Vissa erbjudanden är inte tillgängliga vid önskat datum eller önskad tid",
+			"updateOrder": "Uppdatera order",
+			"offers": {
+				"availableQuantity": "Tillgänglig för tillfället"
+			},
+			"voucherCode": "Ange en kupongkod",
+			"validVoucherCode": "Kupongkoden är giltig",
+			"yourRoom": "Ditt rum",
+			"yourLocation": "Din plats",
+			"serveOption": {
+				"location": "Jag vill ta emot det på min plats",
+				"room": "jag är i mitt rum"
+			},
+			"social": {
+				"connect": "Anslut till socialt konto"
+			},
+			"remainingValidVoucher": "Återstående saldo på kupongen:",
+			"paymentsense": {
+				"declined": "Onlinebetalningen via Paymentsense har avvisats"
+			},
+			"saveCustomerDetailsForFuture": "Spara din profildata för framtida beställningar",
+			"customerDetailsUpdateSuccess": "Din profildata har uppdaterats",
+			"logout": "Logga ut",
+			"expiry": "Sista utgångsdatum (MMÅÅ)",
+			"enterPin": "Ange PIN-koden"
+		},
+		"payment": {
+			"payOnlineNow": "Välj att betala online nu",
+			"chooseYourPaymentMethod": "Välj betalningsmetod",
+			"creditCard": "Kreditkort",
+			"paypal": "Paypal",
+			"submitOrder": "Skicka in din order",
+			"proceedToPayment": "Fortsätt till betalning",
+			"errorCouldNotConnect": "Vi kunde inte ansluta din den önskade betalnings-hanteraren. Vänligen gå tillbaka till kassan och välj en annan betalningsmetod eller försök igen senare.",
+			"enterCreditCardInfo": "Vänligen ange information om ditt kreditkort eller bankkort",
+			"yourOrderIsReady": "Din order är redo",
+			"yourOrderIsExpected": "Din order är förväntad",
+			"errors": {
+				"valueNotValid": "Det angivna värdet är inte giltigt",
+				"zipNotAvailable": "Du kan inte göra en leveransorder online till detta postnummer. Kontakta butiken för mer information",
+				"addressNotAvailable": "Adressen kan inte hittas. Välj en gatuadress från förslagen."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "Betala online nu",
+			"digitalWallets": "Digitala plånböcker",
+			"creditCardSecure": "Sikker kredittkortbetalinger",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "Ditt ordernummer",
+			"orderStatus": "Orderstatus",
+			"notSubmitted": "Inte inskickad än",
+			"sent": "Skickad",
+			"ready": "Färdig",
+			"rejected": "Nekad",
+			"startNewOrder": "Påbörja en ny order",
+			"errors": {
+				"emailProperFormat": "Vänligen ange en giltig email"
+			},
+			"fiilEmailAddress": "Fyll i din email-adress för att få kvitto på ditt köp",
+			"failedEmail": "Misslyckades med att skicka email",
+			"emailSent": "Email skickat",
+			"received": "Mottagen",
+			"accepted": "Accepterad",
+			"mobileAppPromotion": "Nästa beställning via GonnaOrder-mobilappen"
+		},
+		"dialog": {
+			"ok": "OK",
+			"cancel": "avbryt"
+		},
+		"store": {
+			"currently": {
+				"closed": "Butiken är för närvarande stängd"
+			},
+			"time": {
+				"closed": "Butiken är stängd vid vald tid"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "Vegetarian",
+						"vegan": "Vegan",
+						"celery": "Selleri",
+						"wheat": "Vete",
+						"crustaceans": "Kräftdjur",
+						"eggs": "Ägg",
+						"fish": "Fisk",
+						"lupin": "Lupin",
+						"milk": "Mjölk",
+						"molluscs": "Blötdjur",
+						"mustard": "Senap",
+						"nuts": "Nötter",
+						"peanuts": "Jordnötter",
+						"sesame": "Sesam",
+						"soya": "Soja",
+						"sulphurDioxide": "Svaveldioxid",
+						"halal": "Halal",
+						"barley": "Korn",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "Denna webbplats använder cookies för att förbättra din upplevelse, men du kan välja bort det om du vill.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "Tillämpa"
+		},
+		"cookie": {
+			"accept": "Acceptera",
+			"reject": "Avvisa",
+			"readMore": "Läs mer"
+		},
+		"connect": {
+			"social": {
+				"google": "Anslut till Google",
+				"facebook": "Anslut till Facebook"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "Din korg är tom",
+				"proceed": "Fortsätt"
+			}
+		},
+		"main": {
+			"typeUrl": "Skriv en URL eller butiksnamn",
+			"invalidUrl": "URL är ogiltig",
+			"scanQRCode": "Skanna en QR-kod",
+			"storeNotFound": "Butiken hittades inte",
+			"storeSaved": "Lagringsinformationen har sparats!",
+			"navigateStoreConfirm": "Navigera till butiken?"
+		},
+		"recents": {
+			"nothingFound": "Inget hittat här"
+		}
+	}
+}

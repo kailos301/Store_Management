@@ -1,0 +1,111 @@
+<div class="col-lg-12">
+  <div class="card list">
+    <div class="card-header">
+      <div class="text-blue description">{{'admin.account.social.header' | translate}}</div>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-12 mb-lg-2 mt-3">
+          <div class="form-group">
+            <label class="col-lg-3 col-md-12 col-sm-12 description text-blue">{{'admin.account.social.google.header' | translate}}</label>
+            <div class="input-group col-lg-9 col-md-12 col-sm-12">
+
+              <div *ngIf="hasGoogleAccount(profile$ | async); then googleAccountLinked else noGoogleAccountLinked"></div>
+
+              <ng-template #googleAccountLinked>
+                <div class="connected-google-btn" (click)="linkSocialAccount('google')">
+                  <div class="google-icon-wrapper">
+                    <img class="avatar" src="{{(profile$ | async).googleAccount.picture}}"/>
+                  </div>
+                  <!-- Large enough device, show both name and email -->
+                  <p class="btn-text d-none d-sm-block">{{socialAccountButtonText((profile$ | async).googleAccount)}}</p>
+                  <!-- Very small device, show only email -->
+                  <p class="btn-text d-block d-sm-none">{{(profile$ | async).googleAccount.email}}</p>
+                </div>
+              </ng-template>
+
+              <ng-template #noGoogleAccountLinked>
+                <div class="google-btn" (click)="linkSocialAccount('google')">
+                  <div class="google-icon-wrapper">
+                    <img class="google-icon" src="/assets/img/social/google.svg"/>
+                  </div>
+                  <p class="btn-text">{{'admin.account.social.google.linkAccount' | translate}}</p>
+                </div>
+              </ng-template>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 mb-lg-2 mt-3">
+          <div class="form-group">
+            <label class="col-lg-3 col-md-12 col-sm-12 description text-blue">{{'admin.account.social.facebook.header' | translate}}</label>
+            <div class="input-group col-lg-9 col-md-12 col-sm-12">
+
+              <div *ngIf="hasFacebookAccount(profile$ | async); then facebookAccountLinked else noFacebookAccountLinked"></div>
+
+              <ng-template #facebookAccountLinked>
+                <div class="connected-facebook-btn" (click)="linkSocialAccount('facebook')">
+                  <div class="facebook-icon-wrapper">
+                    <div class="facebook-icon"></div>
+                  </div>
+                  <!-- Large enough device, show both name and email -->
+                  <p class="btn-text d-none d-sm-block">{{socialAccountButtonText((profile$ | async).facebookAccount)}}</p>
+                  <!-- Very small device, show only email -->
+                  <p class="btn-text d-block d-sm-none">{{(profile$ | async).facebookAccount.email}}</p>
+                </div>
+              </ng-template>
+
+              <ng-template #noFacebookAccountLinked>
+                <div class="facebook-btn" (click)="linkSocialAccount('facebook')">
+                  <div class="facebook-icon-wrapper">
+                    <div class="facebook-icon"></div>
+                  </div>
+                  <p class="btn-text">{{'admin.account.social.facebook.linkAccount' | translate}}</p>
+                </div>
+              </ng-template>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="col-md-12 mb-lg-2 mt-3">
+          <div class="form-group">
+            <label class="col-lg-3 col-md-12 col-sm-12 description text-blue">{{'admin.account.social.apple.header' | translate}}</label>
+            <div class="input-group col-lg-9 col-md-12 col-sm-12">
+
+              <div *ngIf="hasAppleAccount(profile$ | async); then appleAccountLinked else noAppleAccountLinked"></div>
+
+              <ng-template #appleAccountLinked>
+                <div class="connected-apple-btn" (click)="linkWithApple()">
+                  <div class="apple-icon-wrapper">
+                    <img class="apple-icon" src="/assets/img/social/apple.png"/>
+                  </div>
+                  <!-- Large enough device, show both name and email -->
+                  <p class="btn-text d-none d-sm-block">{{socialAccountButtonText((profile$ | async).appleAccount)}}</p>
+                  <!-- Very small device, show only email -->
+                  <p class="btn-text d-block d-sm-none">{{(profile$ | async).appleAccount.email}}</p>
+                </div>
+              </ng-template>
+
+              <ng-template #noAppleAccountLinked>
+                <div class="apple-btn" (click)="linkWithApple()">
+                  <div class="apple-icon-wrapper">
+                    <img class="apple-icon" src="/assets/img/social/apple.png"/>
+                  </div>
+                  <p class="btn-text">{{'admin.account.social.apple.linkAccount' | translate}}</p>
+                </div>
+              </ng-template>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+<div class="col-lg-12">
+  <div class="card list">
+    <div class="card-header">
+      {{'admin.users.userManage.label'|translate}}
+    </div>
+    <div class="card-body">
+      <div class="col-lg-4 col-sm-12 col-xs-12 mx-auto mb-3 p-0">
+        <div class="row justify-content-center">
+          <input type="text" [(ngModel)]="email" placeholder="{{'admin.users.list.inputEmail'|translate}}" class="form-control email-input" (keyup)="validateEmail($event)" (focus)="validateEmail($event)" (blur)="emailInvalid=false" (keyup.enter)="searchUser()" />
+          <button class="btn btn-primary" (click)="searchUser()"><i class="fa fa-search"></i></button><br/>
+          <ng-container *ngIf="emailInvalid">
+            <font class="email-invalid">
+              {{'admin.forgot.emailInvalid'|translate}}
+            </font>
+          </ng-container>
+        </div>
+      </div>
+      <table class="table table-responsive-sm lg">
+        <thead>
+          <tr>
+            <th>{{'admin.global.name'|translate}}</th>
+            <th>{{'admin.global.role'|translate}}</th>
+            <th>{{'admin.global.email'|translate}}</th>
+            <th>{{'admin.global.phoneNumber'|translate}}</th>
+            <th>{{'admin.global.country'|translate}}</th>
+            <th>{{'admin.global.emailStatus'|translate}}</th>
+            <th>{{'admin.global.registeredAt'|translate}}</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody >
+          <tr *ngIf="!(users$ | async)?.data?.length">
+            <td colspan="6">{{'admin.global.noData'|translate}}</td>
+          </tr>
+          <tr *ngFor="let user of (users$ | async).data" (click)="goToUserPage(user)" title="Go To Order" class="cursor-pointer">
+            <td>{{ user.firstName + ' ' + user.lastName}}</td>
+            <td>
+              <ng-container *ngFor="let role of user.roles; index as index">
+                <ng-container *ngIf="index !== 0"> / </ng-container>
+                <ng-container *ngIf="role === 'SUPER_ADMIN'">{{'admin.global.superAdmin' | translate}}</ng-container>
+                <ng-container *ngIf="role === 'PARTNER'">{{'admin.global.partner' | translate}}</ng-container>
+                <ng-container *ngIf="role === 'STORE_ADMIN'">{{'admin.global.administrator' | translate}}</ng-container>
+                <ng-container *ngIf="role === 'STORE_STANDARD'">{{'admin.global.standardUser' | translate}}</ng-container>
+              </ng-container>
+            </td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.country?.phoneCode }}<span class="ml-1">{{ user.phoneNumber }}</span></td>
+            <td>{{ user.country?.name }}</td>
+            <td>{{ user.emailVerified }}</td>
+            <td *ngIf="dayCheck(user.registeredAt) as registeredAtDay">
+              <span class="space-nowrap">{{user.registeredAt | localizedDate:'HH:mm':locale:timezone | async }}</span>
+              <span *ngIf="registeredAtDay === DayType.YESTERDAY" class="space-nowrap"> - {{ 'admin.store.order.yesterday' | translate }}</span>
+              <span *ngIf="registeredAtDay === DayType.TODAY" class="space-nowrap"> - {{ 'admin.store.order.today' | translate }}</span>
+              <span *ngIf="registeredAtDay === DayType.TOMORROW" class="space-nowrap"> - {{ 'admin.store.order.tomorrow' | translate }}</span>
+              <span *ngIf="registeredAtDay === DayType.DEFAULT" class="space-nowrap"> - {{ user.registeredAt | localizedDate:'ddd DD MMM' :locale:timezone | async }}</span>
+            </td>
+            <td class="text-right"><img src="assets/img/icon-forward.svg" /></td>
+          </tr>
+        </tbody>
+      </table>
+      <app-pager
+        [totalPagesCount]="(users$ | async).totalPages"
+        [page]="(users$ | async).paging.page"
+        [size]="(users$ | async).paging.size"
+        (paginate)="paginate($event)"
+      >
+      </app-pager>
+    </div>
+  </div>
+</div>

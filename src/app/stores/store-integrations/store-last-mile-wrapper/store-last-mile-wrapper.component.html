@@ -1,0 +1,38 @@
+    <div class="card list">
+        <div class="card-body pt-1">
+            <div class="row">
+                <div class="col-xl-3 col-lg-4 mt-3">
+                    <img class="mynextimg" src="/assets/img/mynext.png">
+                </div>
+                <div class="col-xl-9 col-lg-8 mt-2 mt-3">
+
+                    <div *ngIf="mynextSection == 'mynext-dashboard'" class="row">
+                        <div class="col-lg-12">
+                            {{ 'admin.store.setting.lastMile.lastMileDeliverySoftware' | translate }}
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="d-flex align-items-center justify-content-between p-0">
+                                <button type="button" class="btn btn-primary mt-3" (click)="myNextCredentials()">
+                                    {{ 'admin.store.setting.lastMile.connectWithMynext' | translate }}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" *ngIf="mynextSection == 'mynext-login'">
+                        <div class="col-lg-12">
+                            <app-store-last-mile-login></app-store-last-mile-login>
+                        </div>
+                    </div>
+
+                    <div class="row" *ngIf="mynextSection == 'mynext-connect'">
+                        <div class="col-lg-12">
+                            <app-store-last-mile-mynext (myNextDetails)="updateStoreSettings($event)"
+                                [myNextData]="myNextData"></app-store-last-mile-mynext>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>

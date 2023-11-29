@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "مشغل بواسطة",
+			"thankYou": "شكراً",
+			"discount": "الخصم",
+			"viewOrder": "عرض الطلب",
+			"errorH2": "هناك خطأ",
+			"errorUnexpected": "حدث شيء غير متوقع",
+			"errorExpected": "حدث شيء غير متوقع",
+			"errorMustSelectOne": "يجب عليك اختيار قيمة واحدة",
+			"errorTrialExceeded": "هذه الوظيفة غير متاحة. تم تجاوز الحدود التجريبية",
+			"emptyCart": "لا توجد عناصر في طلبك",
+			"optional": "(اختياري)",
+			"cookies": "يستخدم هذا الموقع ملفات تعريف الارتباط. في حالة الاستمرار في استخدام هذا الموقع فإنك توافق على استخدامها",
+			"more": "أكثر",
+			"less": "أقل",
+			"chooseFrom": "اختر من",
+			"standard": "اساسي",
+			"days": {
+				"mon": "الإثنين",
+				"tue": "الثلاثاء",
+				"wed": "الأربعاء",
+				"thu": "الخميس",
+				"fri": "يوم الجمعة",
+				"sat": "يوم السبت",
+				"sun": "الأحد"
+			},
+			"opentimelist": "مواعيد العمل",
+			"newVersionAvailable": "أنت تقوم بتشغيل إصدار أقدم من التطبيق. أعد تحميل التطبيق ليصلك آخر تحديث",
+			"reloadApplication": "إعادة تحميل التطبيق",
+			"poweredByGonnaOrder": "مدعوم من Gonnaorder",
+			"recents": "حديث",
+			"information": "معلومة",
+			"yes": "نعم",
+			"no": "رقم",
+			"error": "خطأ",
+			"errorQRScanner": "حدث خطأ مع QR Scanner!",
+			"confirm": "يتأكد"
+		},
+		"select": {
+			"selectAtLeast": "يجب عليك تحديد {{x}} على الأقل",
+			"selectAtmost": "يمكنك تحديد {{x}} على الأكثر",
+			"selectAtleastAtMost": "يجب تحديد {{x}} على الأقل و {{y}} على الأكثر",
+			"selectBetween": "يجب أن تختار بين قيم {{childCategory.min}} و {{childCategory.max}}."
+		},
+		"load": {
+			"loadingMessage": "لحظة واحدة من فضلك ..."
+		},
+		"itemDetails": {
+			"removeFromOrder": "إزالة من الطلب",
+			"addToOrder": "أضف إلى طلبك",
+			"updateOrder": "حدث طلبك"
+		},
+		"checkout": {
+			"yourOrder": "طلبك",
+			"total": "المجموع",
+			"specialNote": "أضف ملاحظة خاصة إلى طلبك",
+			"howToReceiveYourOrder": "كيف تريد استلام طلبك؟",
+			"option": {
+				"pickup": "استلم الطلب من موقع المتجر",
+				"addressDelivery": "أريد استلامه على عنواني",
+				"serve": {
+					"location": "أنا أجلس على طاولة"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "لم نتمكن من حفظ تفاصيل طلبك",
+				"fieldRequired": "هذه الخانة مطلوبه",
+				"selectFutureTime": "يرجى تحديد الوقت في المستقبل",
+				"orderSubmissionFailed": "لا يمكن تقديم الطلب",
+				"ORDER_LOCATION_NOT_PRESENT": "رقم الجدول أو اسم الموقع مفقود",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "بعض معلومات العميل المطلوبة مفقودة",
+				"ORDER_WISH_TIME_INVALID": "الوقت المطلوب هو في الماضي",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "طريقة تسليم الطلب مفقودة",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "التسليم في العنوان غير مدعوم",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "تقديم الطلب غير معتمد",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "لا يتم دعم استلام الطلب",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "التسليم على الرمز البريدي المحدد غير مدعوم",
+				"OPENING_TIME_SCHEDULE_ERROR": "المتجر مغلق في وقت الطلب المحدد",
+				"PROMOTION_NOT_ELIGIBLE": "تم تحديد ترقية ولكنها غير مؤهلة",
+				"offersUnavailableExplanation": "العناصر أدناه غير متوفرة في التاريخ والوقت اللذين حددتهما. الرجاء النقر فوق تحديث الطلب لإزالتها من طلبك",
+				"offersOutOfStockExplanation": "لا توجد عناصر كافية متاحة",
+				"invalidVoucherCode": "رمز القسيمة غير صالح",
+				"INVALID_INPUT": "خطأ في معالجة التفاصيل المقدمة.",
+				"slotUnavailableExplanation": "الفترة الزمنية المطلوبة غير متاحة. الرجاء تحديد فترة زمنية مختلفة أو تحديد طريقة توصيل أخرى.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "لا يمكن طلب هذا المتجر في نفس اليوم.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "لا يمكن طلب طلب في نفس اليوم لمنطقتك.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "لا يمكن طلب طلب في نفس اليوم للعناصر التالية:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "لا يمكن التسليم إلى الرمز البريدي الخاص بك في الوقت واليوم المطلوبين.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "لا يمكن تسليم الطلبات في الوقت والتاريخ المحددين. الرجاء تحديد بديل.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "لا يمكن استلام الطلبات في الوقت والتاريخ المحددين. الرجاء تحديد بديل.",
+				"INTERNAL_ERROR": "تمت مصادفة خطأ غير متوقع. يرجى إعادة تحميل التطبيق للمحاولة مرة أخرى.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "لم يتم استيفاء الحد الأدنى لمبلغ أمر التسليم. أضف قيمة {{AMOUNT_MISSING}} أخرى لطلبك للمتابعة.",
+				"paymentFailed": "لقد فشلت في الدفع عبر الإنترنت باستخدام طريقة الدفع هذه. حاول مرة اخرى.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "الترقيات المطلوبة غير مطبقة",
+				"INVALID_CUSTOMER_VOUCHER": "قسيمة الزبون غير صالحة",
+				"slotUnavailable": "الوقت المحدد غير متوفر",
+				"slotUnavailableExplanationWithSuggestion": "الوقت المحدد في الماضي أو لم يعد متاحًا بعد الآن. الوقت المتاح التالي:",
+				"socialLoginFailed": "لم نتمكن من الاتصال بحسابك",
+				"customerDetailsUpdateFailed": "فشل تحديث بيانات الملف الشخصي",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "المتجر لا يسلم إلى هذا الموقع",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "لا يمكننا العثور على العنوان الذي قدمته. يرجى تحديث العنوان والمحاولة مرة أخرى أو الاتصال بالمتجر.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "لا يمكن تقديم الطلبات في الوقت والتاريخ المحددين. الرجاء تحديد بديل.",
+				"MISSING_LOCATION_TAP_ID": "معرف الحنفية إلزامي",
+				"invalidPin": "رمز التعريف الشخصي للعميل غير صالح"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "سيتم إعداد طلبك"
+					},
+					"unknown": {
+						"location": "سيتم إعداد طلبك"
+					}
+				},
+				"pickup": "استلم الطلب",
+				"addressDelivery": "من فضلك أدخل المعلومات الخاصة بك"
+			},
+			"yourInformationPlease": "من فضلك أدخل المعلومات الخاصة بك",
+			"locationCode": "جدول",
+			"yourName": "اسمك",
+			"email": "البريد الإلكتروني",
+			"phoneNumber": "رقم الهاتف",
+			"fullName": "الاسم بالكامل",
+			"streetAddress": "اسم الشارع",
+			"zip": "الرمز البريدي / الرمز البريدي",
+			"town": "المدينة / المدينة",
+			"minimumAmount": "مطلوب الحد الأدنى لمبلغ الطلب {{amount}} من أجل التسليم",
+			"deliveryFee": "رسوم التوصيل",
+			"deliveryFeeApplicable": "قابل للتطبيق للطلبات أقل من {{amount}}",
+			"field": {
+				"generalValidation": "التنسيق الخاص بالحقل غير صالح"
+			},
+			"acceptTerm": "من خلال المتابعة ، فإنك توافق على {{شروط الاستخدام}} و {{سياسة الخصوصية}}",
+			"termsAndPolicy": "من خلال المتابعة ، فإنك توافق على ",
+			"acceptTerms": {
+				"and": "و",
+				"after": ""
+			},
+			"termsOfUse": "شروط الاستخدام",
+			"privacyPolicy": "سياسة الخصوصية",
+			"yourTable": "الجدول الخاص بك",
+			"allowedCharacters": "الأحرف المسموح بها",
+			"wishTimeHeading": "متى تريد استلام طلبك؟",
+			"asSoonAsPossible": "أريد استلامه في أقرب وقت ممكن",
+			"specifyWishTime": "أريد تحديد موعد استلامه",
+			"specialNoteExample": "أضف ملاحظة خاصة إلى طلبك",
+			"cardDisabledNote": "يرجى مشاركة طلبك مع المتجر عندما تكون مستعدًا",
+			"cardHolderName": "إسم صاحب البطاقة",
+			"cardNumber": "رقم بطاقتك",
+			"cvv": "CVV",
+			"itemsOutOfStock": "بعض العناصر غير متوفرة في المخزون",
+			"floor": "أرضية",
+			"storeClosedAtOrderWishDate": "المتجر مغلق في التاريخ أو الوقت المطلوب",
+			"offersNotAvailableAtOrderWishDate": "بعض العروض غير متوفرة في التاريخ أو الوقت المطلوب",
+			"updateOrder": "أجل التحديث",
+			"offers": {
+				"availableQuantity": "متاح حاليا"
+			},
+			"voucherCode": "أدخل رمز القسيمة",
+			"validVoucherCode": "كود القسيمة صالح",
+			"yourRoom": "غرفتك",
+			"yourLocation": "موقعك",
+			"serveOption": {
+				"location": "أريد الحصول عليه في مكاني",
+				"room": "انا في غرفتي"
+			},
+			"social": {
+				"connect": "تواصل مع حساب التواصل الاجتماعي"
+			},
+			"remainingValidVoucher": "الرصيد المتبقي في القسيمة:",
+			"paymentsense": {
+				"declined": "تم رفض الدفع عبر الإنترنت عبر Paymentsense"
+			},
+			"saveCustomerDetailsForFuture": "حفظ بيانات ملف التعريف الخاص بك للطلبات المستقبلية",
+			"customerDetailsUpdateSuccess": "تم تحديث بيانات ملفك الشخصي",
+			"logout": "تسجيل خروج",
+			"expiry": "تاريخ انتهاء الصلاحية (MMYY)",
+			"enterPin": "أدخل رقم PIN"
+		},
+		"payment": {
+			"payOnlineNow": "أختارالدفع الالكتروني",
+			"chooseYourPaymentMethod": "اختر طريقة الدفع",
+			"creditCard": "بطاقة الائتمان",
+			"paypal": "Paypal",
+			"submitOrder": "أرسل طلبك",
+			"proceedToPayment": "انتقل إلى صفحة الدفع",
+			"errorCouldNotConnect": "تعذر الاتصال ببوابة الدفع المحددة: يرجى الرجوع إلى صفحة الدفع واختيار طريقة دفع أخرى أو إعادة المحاولة لاحقًا",
+			"enterCreditCardInfo": "يرجى إدخال معلومات بطاقة الائتمان أو الخصم الخاصة بك",
+			"yourOrderIsReady": "أصبح طلبك جاهزاً",
+			"yourOrderIsExpected": "يتوقع أن يكون طلبك",
+			"errors": {
+				"valueNotValid": "القيمة المقدمة غير صالحة",
+				"zipNotAvailable": "لا يمكنك تقديم طلب توصيل عبر الإنترنت لهذا الرمز البريدي. يرجى الاتصال بالمتجر لمزيد من المعلومات",
+				"addressNotAvailable": "لا يمكن العثور على العنوان. الرجاء تحديد عنوان شارع من الاقتراحات."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "ادفع عبر الإنترنت الآن",
+			"digitalWallets": "محافظ رقمية",
+			"creditCardSecure": "مدفوعات بطاقة الائتمان الآمنة",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "رقم طلبك",
+			"orderStatus": "حالة الطلب",
+			"notSubmitted": "لم يتم إرسال الطلب",
+			"sent": "تم إرسال الطلب",
+			"ready": "جاهز",
+			"rejected": "مرفوض",
+			"startNewOrder": "ابدأ طلب جديد",
+			"errors": {
+				"emailProperFormat": "يرجى إدخال بريد إلكتروني صحيح"
+			},
+			"fiilEmailAddress": "أدخل عنوان بريدك الإلكتروني لتلقي نسخة من طلبك",
+			"failedEmail": "فشل في إرسال البريد الإلكتروني",
+			"emailSent": "تم إرسال البريد الإلكتروني",
+			"received": "تم الاستلام",
+			"accepted": "قبلت",
+			"mobileAppPromotion": "اطلب في المرة القادمة عبر تطبيق GonnaOrder للجوال"
+		},
+		"dialog": {
+			"ok": "حسنا",
+			"cancel": "إلغاء"
+		},
+		"store": {
+			"currently": {
+				"closed": "المتجر مغلق حاليا"
+			},
+			"time": {
+				"closed": "المتجر مغلق في الوقت المحدد"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "نباتي",
+						"vegan": "نباتي",
+						"celery": "كرفس",
+						"wheat": "قمح",
+						"crustaceans": "القشريات",
+						"eggs": "بيض",
+						"fish": "سمك",
+						"lupin": "الترمس",
+						"milk": "حليب",
+						"molluscs": "الرخويات",
+						"mustard": "خردل",
+						"nuts": "المكسرات",
+						"peanuts": "الفول السوداني",
+						"sesame": "سمسم",
+						"soya": "فول الصويا",
+						"sulphurDioxide": "ثاني أكسيد الكبريت",
+						"halal": "حلال",
+						"barley": "شعير",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "يستخدم هذا الموقع ملفات تعريف الارتباط لتحسين تجربتك ، ولكن يمكنك إلغاء الاشتراك إذا كنت ترغب في ذلك.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "تطبيق"
+		},
+		"cookie": {
+			"accept": "قبول",
+			"reject": "يرفض",
+			"readMore": "اقرأ أكثر"
+		},
+		"connect": {
+			"social": {
+				"google": "تواصل مع جوجل",
+				"facebook": "تواصل مع الفيسبوك"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "سلتك فارغة",
+				"proceed": "تقدم"
+			}
+		},
+		"main": {
+			"typeUrl": "اكتب عنوان URL أو اسم المتجر",
+			"invalidUrl": "عنوان URL غير صالح",
+			"scanQRCode": "امسح رمز الاستجابة السريعة ضوئيًا",
+			"storeNotFound": "لم يتم العثور على المتجر",
+			"storeSaved": "تم حفظ معلومات المتجر بنجاح!",
+			"navigateStoreConfirm": "انتقل إلى المتجر؟"
+		},
+		"recents": {
+			"nothingFound": "لم يتم العثور على شيء هنا"
+		}
+	}
+}

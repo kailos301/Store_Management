@@ -1,0 +1,184 @@
+<div class="col-lg-12">
+  <div class="card list">
+    <div class="card-header">
+      <div>{{'admin.store.catalogOverview'|translate}}<app-help-icon [helpPageName]="catalogHelpPage"></app-help-icon>
+      </div>
+    </div>
+    <div class="card-body">
+      <div id="catalogOverview">
+        <!--<div *ngFor="let catalog of (catalog$ | async).data">-->
+        <div class="mb-3 " *ngIf="!isStoreOperator">
+          <button type="button" class="btn btn-primary px-4" (click)="loadCategoryPage('CREATE_CATEGORY')">
+            {{'admin.store.catalog.category.addCategory'|translate}}
+          </button>
+          <button type="button"
+            [ngClass]="[(catalog$ | async) && (catalog$ | async).categories!=null && (catalog$ | async).categories?.length>0 ? 'btn btn-primary px-4' : 'btn btn-primary px-4 d-none']"
+            (click)="loadOfferPage('CREATE_OFFER')">
+            {{'admin.store.catalog.offer.addOffer'|translate}}
+          </button>
+        </div>
+        <div class="loader-wrapper d-flex w-100 h-100" *ngIf="!(catalog$ | async)">
+          <div class="d-flex flex-column w-100 text-center align-self-center">
+            <div class="lds-ripple mx-auto">
+              <div></div>
+              <div></div>
+            </div>
+            <div class="loading-message">{{ "admin.load.loadingMessage" | translate }}</div>
+          </div>
+        </div>
+        <div *ngIf="(catalog$ | async) && !(catalog$ | async).categories">
+          <td colspan="5">{{'admin.global.nodata'|translate}}</td>
+        </div>
+        <div *ngIf="(catalog$ | async) && (catalog$ | async).categories as catList  ; ">
+          <mat-accordion class="example-headers-align"></mat-accordion>
+          <div cdkDropList (cdkDropListDropped)="dropCategory($event,catList)" [cdkDropListDisabled]="isStoreOperator">
+            <mat-expansion-panel *ngFor="let category of (catalog$ | async).categories" cdkDrag
+              [cdkDragStartDelay]="200" [expanded]="selectedId === category.categoryId"
+              [ngClass]="{'disabledColorNotVisible': !category.isSellable}">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="offer-custom-placeholder" *cdkDragPlaceholder></div>
+                  <div [id]="category.categoryId" class="p-0 col-lg-12 col-md-12 col-sm-12 d-flex">
+                    <span class="categoryName p-0 col-lg-6 col-md-6 col-sm-6">
+                      <a *ngIf="!isStoreOperator" (click)="loadCategoryPage(category.categoryId)"
+                        title="{{'admin.store.catalog.tooltip.goToCategory'|translate}}">{{category.name}}</a>
+                      <a *ngIf="isStoreOperator"
+                        title="{{'admin.store.catalog.tooltip.goToCategory'|translate}}">{{category.name}}</a>
+                      <i class="fa fa-pen editIcon text-blue" (click)="loadCategoryPage(category.categoryId)"
+                        title="{{'admin.store.catalog.tooltip.goToCategory'|translate}}" *ngIf="!isStoreOperator">
+                      </i>
+                    </span>
+                    <span class="createOfferLink p-0 col-lg-6 col-md-6 col-sm-6" *ngIf="!isStoreOperator">
+                      <a class="actionLink" (click)="addOfferToCategory(category.categoryId)"
+                        title="Click here to create offer">{{'admin.store.catalog.offer.addOffer'|translate}}
+                        <i class="fas fa-plus ml-2"></i>
+                      </a>
+                    </span>
+                  </div>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <div *ngIf="category.offers">
+                <div cdkDropList class="offer-list" (cdkDropListDropped)="drop($event,category.offers)"
+                  [cdkDropListDisabled]="isStoreOperator">
+                  <div class="offer-box"
+                    [ngClass]="{'disabedColorNonOrderableOrOutOfStock': !offer.isOrderable || (offer.isStockCheckEnabled && !offer.stockLevel),'disabledColorNotVisible': !offer.isSellable || (!offer.isOrderable && !offer.isSellable)}"
+                    *ngFor="let offer of category.offers" cdkDrag [cdkDragStartDelay]="200">
+                    <div class="offer-custom-placeholder" *cdkDragPlaceholder></div>
+                    <div class="offerRow">
+                      <div class="d-flex py-2 mx-3 w-100 justify-content-between">
+                        <div class="d-flex flex-fill flex-column imagealignment">
+                          <div class="item d-flex">
+                            <a class="offerName" (click)="loadOfferPage(offer.offerId)"
+                              title="{{'admin.store.catalog.tooltip.goToOffer'|translate}}">{{offer.name}}</a>
+                            <i class="fa fa-pen editIcon text-blue" (click)="loadOfferPage(offer.offerId)"
+                              title="{{'admin.store.catalog.tooltip.goToOffer'|translate}}" *ngIf="!isStoreOperator">
+                            </i>
+                          </div>
+                          <div class="priceContainer w-100" [ngClass]="{'dnone' : offer.price == 0}"
+                            (click)="loadOfferPage(offer.offerId)"
+                            title="{{'admin.store.catalog.tooltip.goToOffer'|translate}}">
+                            <div class="priceDescription d-flex flex-row flex-wrap w-100">
+                              <span *ngIf="offer.priceDescription">{{offer.priceDescription}} &nbsp;</span>
+                              <div class="price" *ngIf="!offer.discount || !offer.discountType; else discountedView">
+                                {{offer.formattedPrice}}</div>
+                              <ng-template #discountedView>
+                                <!-- <ng-container class="price d-flex" *ngIf="offer.discount && offer.discountType=='MONETARY'; else discountedPercentileView"> -->
+                                <span class="price d-flex"
+                                  *ngIf="offer.discount && offer.discountType=='MONETARY'; else discountedPercentileView">
+                                  <span class="strikethrough mr-1">{{offer.formattedPrice}}</span>
+                                  <span class="discounted-price ml-1">{{offer.formattedDiscountedPrice}}</span>
+                                  <img src="assets/img/tag.svg" class="ml-2" width="13px" />
+                                </span>
+                                <!-- </ng-container> -->
+                              </ng-template>
+                              <ng-template #discountedPercentileView>
+                                <span class="price d-flex"><span
+                                    class="strikethrough mr-1">{{offer.formattedPrice}}</span>
+                                  <span class="discounted-price ml-1">{{offer.formattedDiscountedPrice}}</span>
+                                  <img src="assets/img/tag.svg" class="ml-2" width="13px" />
+                                  <span class="discounted-price ml-2">- {{ offer.discount | number}}%</span>
+                                </span>
+                              </ng-template>
+                              <ng-container class="variantPriceContainer" *ngIf="offer.variants">
+                                <div class="d-flex max-width-100" *ngFor="let variant of offer.variants">
+                                  <span class="variantSeperator price">|</span>
+                                  <span class="price">{{variant.priceDescription}}&nbsp;
+                                    <span class="price"
+                                      *ngIf="!variant.discount || !variant.discountType; else discountedView">{{variant.formattedPrice}}</span>
+                                    <ng-template #discountedView>
+                                      <span class="price"
+                                        *ngIf="variant.discount && variant.discountType=='MONETARY'; else discountedPercentileView">
+                                        <span class="strikethrough mr-1">{{variant.formattedPrice}}</span>
+                                        <span class="discounted-price ml-1">{{variant.formattedDiscountedPrice}}</span>
+                                        <img src="assets/img/tag.svg" class="ml-2" width="13px" />
+                                      </span>
+                                    </ng-template>
+                                    <ng-template #discountedPercentileView>
+                                      <span class="price"><span
+                                          class="strikethrough mr-1">{{variant.formattedPrice}}</span>
+                                        <span class="discounted-price ml-1">{{variant.formattedDiscountedPrice}}</span>
+                                        <img src="assets/img/tag.svg" class="ml-2" width="13px" />
+                                        <span class="discounted-price ml-2">- {{ variant.discount | number}}%</span>
+                                      </span>
+                                    </ng-template>
+                                  </span>
+                                </div>
+                              </ng-container>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex">
+                            <i class="fa fa-cog cogIcon text-blue" *ngIf="isStoreOperator || isAdminOrSuperAdmin" (click)="openSettingDialog(offer)"
+                              title="{{'admin.store.catalog.tooltip.changestatus'|translate}}">
+                            </i>
+                          <img *ngIf="offer.standardImage" (click)="loadOfferPage(offer.offerId)"
+                            title="{{'admin.store.catalog.tooltip.goToOffer'|translate}}" class="item-image"
+                            src="{{ offer.standardImage }}" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </mat-expansion-panel>
+          </div>
+        </div>
+        <div class="buttonGroup d-flex" *ngIf="!isStoreOperator">
+          <button type="button" class="btn btn-primary px-4 catalogImport"
+            *ngIf="!((catalog$ | async) && (catalog$ | async).categories && (catalog$ | async) && (catalog$ | async).categories.length)"
+            (click)="loadVerifyCatalogPage('EXCEL')" [disabled]="!(catalog$ | async)">
+            {{'admin.store.catalog.import'|translate}}
+            <img src="assets/img/excel-icon.png" class="ml-2" width="15px" />
+          </button>
+          <button type="button" class="btn btn-primary px-4 catalogImport"
+            *ngIf="(catalog$ | async) && (catalog$ | async).categories && (catalog$ | async) && (catalog$ | async).categories.length"
+            (click)="loadVerifyCatalogPage('UPDATE_EXCEL')" [disabled]="!(catalog$ | async)">
+            {{'admin.store.catalog.update'|translate}}
+            <img src="assets/img/excel-icon.png" class="ml-2" width="15px" />
+          </button>
+          <button type="button"
+            *ngIf="(catalog$ | async) && (catalog$ | async).categories && (catalog$ | async) && (catalog$ | async).categories.length"
+            class="btn btn-primary px-4 catalogImport" (click)="loadVerifyCatalogPage('TRANSLATE')"
+            [disabled]="!(catalog$ | async)">
+            {{'admin.store.catalog.importTranslation'|translate}}
+            <img src="assets/img/excel-icon.png" class="ml-2" width="15px" />
+          </button>
+
+          <button type="button" class="btn btn-primary px-4 catalogImport" (click)="loadVerifyCatalogPage('IMAGE')">
+            {{'admin.store.catalog.importImage'|translate}} ({{'admin.store.catalog.beta'|translate}})
+            <i class="far fa-image ml-2"></i>
+          </button>
+          <button type="button" class="btn btn-primary px-4 catalogImportFromLink" *ngIf="isAdminOrPartnerUser"
+            (click)="loadImportCatalogByLinkPage()">
+            {{'admin.store.catalog.importLink'|translate}}
+            <i class="fas fa-link ml-2"></i>
+          </button>
+        </div>
+
+        <div *ngIf="isStoreOperator && (catalogId>0 && !((catalog$ | async).categories?.length))">
+          {{'admin.store.location.nocatalogfound'|translate}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

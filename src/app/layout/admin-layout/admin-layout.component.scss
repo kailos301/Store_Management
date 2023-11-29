@@ -1,0 +1,42 @@
+// @import "bootstrap/scss/functions";
+// @import "bootstrap/scss/variables";
+// @import "bootstrap/scss/mixins";
+@import "../../../scss/admin_layout";
+
+a.dropdown-item {
+  cursor: pointer;
+}
+.dropdown-links{
+  background-color: #F8F8F8;
+}
+.dropdown-links:hover{
+  background-color: #273773 !important;
+  color: white !important;
+}
+.adminIcons{
+  color: #73818f;
+}
+.dropdown-links:hover .adminIcons{
+  color: white !important;
+}
+.current-store {
+  font-size: 1.250em;
+  @include media-breakpoint-down(md) {
+    font-size: 1.000em;
+    padding: 0.25rem 0;
+    border-top: 1px solid $admin-gray;
+    border-bottom: 1px solid #c8ced3;
+    background-color: #fff;
+    margin-top: $admin-header-height;
+    z-index: 999;
+    -webkit-box-shadow: 0px 2px 6px 1px rgba(54,190,196,0.55);
+    -moz-box-shadow: 0px 2px 6px 1px rgba(54,190,196,0.55);
+    box-shadow: 0px 2px 6px 1px rgba(54,190,196,0.55);
+  }
+}
+.breadcrumb {
+  border-bottom: inherit;
+}
+.hidden{
+  display: none;
+}

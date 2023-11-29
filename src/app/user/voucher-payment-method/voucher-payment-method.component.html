@@ -1,0 +1,27 @@
+<div class="row mt-4">
+  <div class="col-xl-2 col-lg-3 col-md-12">
+    <span>{{'admin.store.paymentMethod' | translate}}</span>
+  </div>
+  <div class="col-xl-10 col-lg-9 col-md-12">
+    <form [formGroup]="paymentMethodForm">
+      <div class="col-sm-12 form-group p-0">
+        <textarea rows="1" class="form-control" [class.is-invalid]="getControl('paymentDetails').invalid && (getControl('paymentDetails').dirty || getControl('paymentDetails').touched)" placeholder="{{'admin.global.paymentDetails'|translate}}" formControlName="paymentDetails" maxlength="500"></textarea>
+        <div class="invalid-feedback" *ngIf="getControl('paymentDetails').errors">
+          <span *ngIf="getControl('paymentDetails').errors.maxlength">
+            {{'admin.global.field.maxLength' | translate: {maxLength: getControl('paymentDetails').errors.maxlength.requiredLength} }}
+          </span>
+        </div>
+      </div>
+    </form>
+    <div [innerHTML]="content"></div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12">
+    <div>
+      <button (click)="onSubmit()" class="btn btn-primary" [disabled]="paymentMethodForm.invalid">
+        {{'admin.global.save' | translate}}
+      </button>
+    </div>
+  </div>
+</div>

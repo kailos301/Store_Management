@@ -1,0 +1,84 @@
+<div class="col-lg-12">
+    <div class="card list">
+        <div class="card-header" id="settingsHeader">{{'admin.store.settings'|translate}}
+            <app-help-icon *ngIf="isHelpIconShow" [helpPageName]="settingsHelpPage"></app-help-icon>
+        </div>
+        <div class="card-body">
+            <div class="form-group mb-2" id="settingsTabs">
+                <div class="row pt-3 pl-3">
+                    <button type="button" class="rounded-0 btn btn-outline-primary" (click)="changeHelpTitle('details')"
+                        [ngClass]="{'active':isActive}" value="Details" routerLink="store-edit"
+                        routerLinkActive="btnChange">
+                        {{'admin.store.details'|translate}}
+                    </button>
+                    <button type="button" class="rounded-0 btn btn-outline-primary"
+                        (click)="changeHelpTitle('ordering')" value="Settings" routerLink="edit"
+                        routerLinkActive="btnChange">
+                        {{'admin.store.ordering'|translate}}
+                    </button>
+                    <button type="button" class="rounded-0 btn btn-outline-primary" (click)="changeHelpTitle('payment')"
+                        value="Payment" routerLink="payment-methods" routerLinkActive="btnChange">
+                        {{'admin.store.paymentProvoders'|translate}}
+                    </button>
+                    <button type="button" class="rounded-0 btn btn-outline-primary" (click)="changeHelpTitle('pickup')"
+                        value="Pickup" routerLink="pickup" routerLinkActive="btnChange">
+                        <i
+                            class="material-icons mr-2 pr-1">shopping_basket</i>{{'admin.store.orderDeliveryMethod.pickup'|translate}}
+                    </button>
+                    <button type="button" class="rounded-0 btn btn-outline-primary"
+                        (click)="changeHelpTitle('delivery')" value="Address Delivery" routerLink="address"
+                        routerLinkActive="btnChange">
+                        <i
+                            class="material-icons mr-2 pr-1">directions_bike</i>{{'admin.store.addressDelivery'|translate}}
+                    </button>
+                    <button type="button" class="rounded-0 btn btn-outline-primary"
+                        (click)="changeHelpTitle('locations')" value="Table Ordering" routerLink="table"
+                        routerLinkActive="btnChange">
+                        <i class="material-icons mr-2 pr-1">room_service</i>{{'admin.store.tableOrdering'|translate}}
+                    </button>
+                    <button type="button" class="rounded-0 btn btn-outline-primary" (click)="changeHelpTitle('catalog')"
+                        value="Catelog" routerLink="default-catalog" routerLinkActive="btnChange">
+                        <i class="fas fa-atlas mr-2 pr-1"></i>{{'admin.store.catalogOverview'|translate}}
+                    </button>
+                    <button type="button" class="rounded-0 btn btn-outline-primary"
+                        (click)="changeHelpTitle('OrderingRule')" value="Rules" routerLink="ordering-rules"
+                        routerLinkActive="btnChange">
+                        <i class="fas fa-cog mr-2 pr-1"></i>{{'admin.store.setting.rules.orderingrules'|translate}}
+                    </button>
+                    <button type="button" class="rounded-0 btn btn-outline-primary"
+                        (click)="changeHelpTitle('schedules')" value="Schedule" routerLink="schedules"
+                        routerLinkActive="btnChange">
+                        <i class="fas fa-calendar mr-2 pr-1"></i>{{'admin.store.scheduleList'|translate}}
+                    </button>
+                    <button type="button" class="rounded-0 btn btn-outline-primary"
+                        (click)="changeHelpTitle('marketing')" value="Marketing" routerLink="marketing"
+                        routerLinkActive="btnChange">
+                        <i class="fas fa-bullhorn mr-2 pr-1"></i>{{'admin.store.setting.marketing.label'|translate}}
+                    </button>
+                    <button type="button" class="rounded-0 btn btn-outline-primary"
+                        (click)="changeHelpTitle('discountvouchers')" value="DiscountVouchers"
+                        routerLink="discount-voucher" routerLinkActive="btnChange">
+                        <i class="fas fa-tags mr-2 pr-1"></i>{{'admin.store.voucher.discountVouchers'|translate}}
+                    </button>
+
+                    <button type="button" class="rounded-0 btn btn-outline-primary" value="store-domain"
+                        (click)="changeHelpTitle('domainandapps')"
+                        routerLink="store-domain" routerLinkActive="btnChange">
+                        <i class="fas fa-globe mr-2 pr-1"></i>{{'admin.store.domain'|translate}}
+                    </button>
+                    <button type="button" class="rounded-0 btn btn-outline-primary"
+                        (click)="changeHelpTitle('integrations')" value="Integrations"
+                        routerLink="integrations" routerLinkActive="btnChange">
+                        {{ 'admin.store.setting.integrations.navName' | translate }}
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <router-outlet>
+                    </router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

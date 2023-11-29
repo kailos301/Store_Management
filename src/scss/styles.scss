@@ -1,0 +1,208 @@
+/* You can add global styles to this file, and also import other style files */
+
+// If you want to override variables do it here
+@import "variables";
+
+// Import styles
+@import "~@coreui/coreui/scss/coreui";
+
+// If you want to add something do it here
+@import "custom";
+
+// Global elements with same style like radio buttons, checkboxes, inputboxes etc.
+@import "globals";
+
+@import "admin_layout";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+// google font
+// @import url('https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap');
+
+// custom inputs styles
+@import "inputs";
+
+// custom buttons
+@import "buttons";
+
+// tables
+@import "tables";
+
+// store
+@import "store";
+
+// order details
+@import "order_details";
+
+// statistics
+@import "statistics";
+
+// RTL styles
+@import "rtl";
+
+// Scrollbar
+@import "scrollbar";
+
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.000rem;
+  background-color: #fff;
+  height: 100vh;
+  /* Use vh as a fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+.app,
+app-dashboard,
+app-root {
+  min-height: 100 vhh;
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+.required-field::after {
+  content: " *";
+  color: red;
+}
+
+.card {
+  border: none !important;
+}
+
+.table th {
+  border-top: none !important;
+}
+
+.greyBG {
+  background-color: #ccc;
+}
+
+.orderName {
+  background: lightgrey;
+  padding: 12px;
+  color: #273773;
+  font-size: 1.25em;
+  margin: 8px 0pc;
+}
+
+.material-icons {
+  vertical-align: middle;
+}
+
+.fa,
+.far,
+.fas {
+  vertical-align: middle;
+  color: #273773;
+  font-size: 20px;
+}
+
+.btn-primary {
+
+  .fa,
+  .far,
+  .fas {
+    vertical-align: middle;
+    color: #fff;
+    font-size: 20px;
+  }
+
+  span {
+    vertical-align: middle;
+  }
+}
+
+.material-icons-outlined {
+  vertical-align: middle;
+}
+
+.btnChange {
+  color: white;
+  background-color: #273773;
+  .fa,
+  .far,
+  .fas {
+    vertical-align: middle;
+    color: #fff;
+    font-size: 20px;
+  }
+}
+
+:not(button)>.material-icons,
+.material-icons-outlined {
+  color: #273773;
+}
+
+.invite-user-dialog {
+  .mat-dialog-actions {
+    float: right;
+
+    button {
+      margin-left: 15px;
+    }
+  }
+
+  .cursorPointer {
+    cursor: pointer;
+    text-decoration: underline !important;
+  }
+}
+
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.sidebar .subscription-menu .nav-link.nav-link-warning .nav-icon {
+  color: #fff !important
+}
+.sidebar .subscription-menu .nav-link.nav-link-warning.active .nav-icon,
+.sidebar .subscription-menu .nav-link.nav-link-warning:hover .nav-icon{
+  color: #fff !important;
+}
+
+h1 {
+  font-size: 2.25em !important;
+  font-weight: 500 !important;
+  padding-top: 0.25rem !important;
+
+  @media (max-width: 1280px !important) {
+    font-size: 3.250em !important;
+    padding-top: 1.500rem !important;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding-top: 0.650rem !important;
+    padding-bottom: 0.800rem !important;
+    font-size: 2.000em !important;
+  }
+}
+
+h2 {
+  font-size: 1.75em !important;
+  font-weight: 500 !important;
+  padding-top: 0.25rem !important;
+}
+
+h3 {
+  font-size: 1.25em !important;
+  font-weight: 500 !important;
+  padding-top: 0.25rem !important;
+}
+.sidebar .nav-link.nav-link-warning {
+  background: #ff7200 !important;
+  color: #fff !important;
+}
+.sidebar .nav-link.nav-link-warning::before {
+  background: #ff7200 !important;
+  color: #fff !important;
+}
+.sidebar .nav-link.nav-link-warning:hover {
+  background: #273773 !important;
+}

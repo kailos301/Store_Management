@@ -1,0 +1,13 @@
+<div id="divLoadingAdmin" *ngIf="isLoading | async">
+  <div class="d-flex justify-content-center align-items-center w-100 h-100">
+    <div class="d-flex flex-column text-center">
+      <div class="lds-ripple mx-auto mt-auto">
+        <div></div>
+        <div></div>
+      </div>
+      <div class="loading-message">
+        {{ "admin.load.loadingMessage" | translate }}...
+      </div>
+    </div>
+  </div>
+</div>

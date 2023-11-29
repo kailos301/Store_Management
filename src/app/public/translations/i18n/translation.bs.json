@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "Омогућено од",
+			"thankYou": "Хвала",
+			"discount": "Попуст",
+			"viewOrder": "Погледај поруџбину",
+			"errorH2": "Обавештење",
+			"errorUnexpected": "Десило се нешто неочекивано",
+			"errorExpected": "Десило се нешто неочекивано",
+			"errorMustSelectOne": "Морате изабрати једну од понуђених опција",
+			"errorTrialExceeded": "Ова функционалност није доступна. Превазиђене су рестрикције пробне верзије",
+			"emptyCart": "Нисте додали производе у поруџбини",
+			"optional": "(опционално)",
+			"cookies": "Овај сајт користи колачиће. Са даљом употребом сајта ви се саглашавате са њиховом употребом",
+			"more": "više",
+			"less": "manje",
+			"chooseFrom": "Izaberite iz",
+			"standard": "Standardno",
+			"days": {
+				"mon": "Ponedeljak",
+				"tue": "Utorak",
+				"wed": "Srijeda",
+				"thu": "Četvrtak",
+				"fri": "Petak",
+				"sat": "Subota",
+				"sun": "Nedelja"
+			},
+			"opentimelist": "Vrijeme otvaranja",
+			"newVersionAvailable": "Koristite stariju verziju aplikacije. Ponovo učitajte aplikaciju da biste dobili najnovije ažuriranje",
+			"reloadApplication": "Ponovo učitaj aplikaciju",
+			"poweredByGonnaOrder": "Pokreće Gonnaorder",
+			"recents": "Nedavno",
+			"information": "Informacije",
+			"yes": "Da",
+			"no": "br",
+			"error": "Greška",
+			"errorQRScanner": "Došlo je do greške sa QR skenerom!",
+			"confirm": "Potvrdi"
+		},
+		"select": {
+			"selectAtLeast": "Morate odabrati najmanje {{x}}",
+			"selectAtmost": "Možete odabrati najviše {{x}}",
+			"selectAtleastAtMost": "Морате изабрати најмање {{x}} и највише {{y}}",
+			"selectBetween": "Morate odabrati između vrijednosti {{childCategory.min}} i {{childCategory.max}}."
+		},
+		"load": {
+			"loadingMessage": "Молимо вас сачекајте..."
+		},
+		"itemDetails": {
+			"removeFromOrder": "Склони са поруџбине",
+			"addToOrder": "Додај у поруџбину",
+			"updateOrder": "Ажурирај поруџбину"
+		},
+		"checkout": {
+			"yourOrder": "Ваша поруџбина",
+			"total": "Укупно",
+			"specialNote": "Додајте посебну напомену о Вашој поруџбини",
+			"howToReceiveYourOrder": "Како би подигли вашу поруџбину?",
+			"option": {
+				"pickup": "Ја ћу је подићи",
+				"addressDelivery": "Доставите ми на адреси",
+				"serve": {
+					"location": "Седим за столом"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "Нисмо били у могућности сачувати детаље ваше поруџбине",
+				"fieldRequired": "Ово поље је обавезно",
+				"selectFutureTime": "Molimo odaberite vrijeme u budućnosti",
+				"orderSubmissionFailed": "Narudžbu nije moguće predati",
+				"ORDER_LOCATION_NOT_PRESENT": "Nedostaje broj tablice ili naziv lokacije",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "Nedostaju neke potrebne informacije o kupcu",
+				"ORDER_WISH_TIME_INVALID": "Željeno vrijeme želja je prošlost",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "Nedostaje način isporuke narudžbe",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "Dostava na adresu nije podržana",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "Dostavljanje narudžbe nije podržano",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "Preuzimanje narudžbe nije podržano",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "Dostava navedenim poštanskim brojem nije podržana",
+				"OPENING_TIME_SCHEDULE_ERROR": "Trgovina je zatvorena u odabrano vrijeme narudžbe",
+				"PROMOTION_NOT_ELIGIBLE": "Odabrana je promocija, ali ona ne ispunjava uvjete",
+				"offersUnavailableExplanation": "Stavke u nastavku nisu dostupne u datum i vrijeme koje ste naveli. Kliknite na ažuriraj narudžbu da biste ih uklonili iz narudžbe",
+				"offersOutOfStockExplanation": "Nema dovoljno dostupnih predmeta",
+				"invalidVoucherCode": "Kôd vaučera je nevažeći",
+				"INVALID_INPUT": "Greška pri obradi danih podataka.",
+				"slotUnavailableExplanation": "Traženi vremenski interval nije dostupan. Odaberite drugi vremenski interval ili odaberite drugi način isporuke.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "Za ovu trgovinu nije moguće zatražiti narudžbu za isti dan.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "Nije moguće zatražiti narudžbu za isti dan za vaše područje.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "Nije moguće zatražiti narudžbu za isti dan za sljedeće stavke:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "Nije moguće dostaviti na poštanski broj u traženo vrijeme i dan.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "Nije moguće dostaviti narudžbe u određeno vrijeme i datum. Odaberite alternativu.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "Nije moguće preuzeti narudžbe u određeno vrijeme i datum. Odaberite alternativu.",
+				"INTERNAL_ERROR": "Došlo je do neočekivane greške. Ponovo učitajte aplikaciju da biste pokušali ponovo.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "Nije ispunjen minimalni iznos naloga za isporuku. Dodajte još jednu vrijednost od {{AMOUNT_MISSING}} u svoju narudžbu da biste nastavili.",
+				"paymentFailed": "Niste uspjeli platiti putem interneta putem ovog načina plaćanja. Molimo pokušajte ponovo.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "Ne primenjuju se potrebne promocije",
+				"INVALID_CUSTOMER_VOUCHER": "Nevažeći vaučer za kupca",
+				"slotUnavailable": "Odabrano vrijeme nije dostupno",
+				"slotUnavailableExplanationWithSuggestion": "Odabrano vrijeme je prošlost ili više nije dostupno. Sljedeće dostupno vrijeme:",
+				"socialLoginFailed": "Nismo se mogli povezati s vašim računom",
+				"customerDetailsUpdateFailed": "Ažuriranje podataka profila nije uspjelo",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "Trgovina ne dostavlja na ovu lokaciju",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "Ne možemo pronaći adresu koju ste naveli. Ažurirajte adresu i pokušajte ponovo ili kontaktirajte trgovinu.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "Nije moguće slati narudžbe u određeno vrijeme i na određeni datum. Odaberite alternativu.",
+				"MISSING_LOCATION_TAP_ID": "Tap ID je obavezan",
+				"invalidPin": "Nevažeći PIN kod klijenta"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "Поруџбина ће бити сервирана"
+					},
+					"unknown": {
+						"location": "Поруџбина ће бити сервирана"
+					}
+				},
+				"pickup": "Подигните поруџбину",
+				"addressDelivery": "Молимо вас унесите ваше податке"
+			},
+			"yourInformationPlease": "Молимо вас унесите ваше податке",
+			"locationCode": "Сто",
+			"yourName": "Ваше име",
+			"email": "Емаил",
+			"phoneNumber": "Телефон",
+			"fullName": "Име и презиме",
+			"streetAddress": "Улица",
+			"zip": "Поштански код",
+			"town": "Град",
+			"minimumAmount": "Za isporuku je potreban minimalni iznos narudžbe od {{amount}}",
+			"deliveryFee": "Цена доставе",
+			"deliveryFeeApplicable": "Односи се за поруџбине до {{amount}}",
+			"field": {
+				"generalValidation": "Вредност поља је са нетачним форматом"
+			},
+			"acceptTerm": "Postupkom prihvaćate {{Uslovi korišćenja}} i {{Politika privatnosti}}",
+			"termsAndPolicy": "Postupkom prihvaćate",
+			"acceptTerms": {
+				"and": "i",
+				"after": "તમે માનો છો"
+			},
+			"termsOfUse": "Uslovi korišćenja",
+			"privacyPolicy": "Politika privatnosti",
+			"yourTable": "Ваш сто",
+			"allowedCharacters": "Прихватљиви симболи",
+			"wishTimeHeading": "Kada želite primiti narudžbu?",
+			"asSoonAsPossible": "Želim da ga primim što je prije moguće",
+			"specifyWishTime": "Želim odrediti kada ga primiti",
+			"specialNoteExample": "Додајте посебну напомену о Вашој поруџбини",
+			"cardDisabledNote": "Молимо вас поделите поруџбину када будете у могућности",
+			"cardHolderName": "Ime vlasnika kartice",
+			"cardNumber": "Broj vaše kartice",
+			"cvv": "CVV",
+			"itemsOutOfStock": "Neke stavke nema na skladištu",
+			"floor": "Kat",
+			"storeClosedAtOrderWishDate": "Trgovina je zatvorena u željeni datum ili vrijeme",
+			"offersNotAvailableAtOrderWishDate": "Neke ponude nisu dostupne u željenom datumu ili vremenu",
+			"updateOrder": "Ažuriraj redoslijed",
+			"offers": {
+				"availableQuantity": "Trenutno dostupno"
+			},
+			"voucherCode": "Unesite kod vaučera",
+			"validVoucherCode": "Kôd vaučera je važeći",
+			"yourRoom": "Tvoja soba",
+			"yourLocation": "Tvoja lokacija",
+			"serveOption": {
+				"location": "Želim ga primiti na svojoj lokaciji",
+				"room": "Ja sam u svojoj sobi"
+			},
+			"social": {
+				"connect": "Povežite se sa društvenim računom"
+			},
+			"remainingValidVoucher": "Preostali iznos na vaučeru:",
+			"paymentsense": {
+				"declined": "Internetsko plaćanje putem Paymentsense-a je odbijeno"
+			},
+			"saveCustomerDetailsForFuture": "Spremite podatke svog profila za buduće narudžbe",
+			"customerDetailsUpdateSuccess": "Podaci vašeg profila su ažurirani",
+			"logout": "Odjaviti se",
+			"expiry": "Datum isteka (MMGG)",
+			"enterPin": "Unesite PIN broj"
+		},
+		"payment": {
+			"payOnlineNow": "Платите онлајн сада",
+			"chooseYourPaymentMethod": "Изаберите метод плаћања",
+			"creditCard": "са картицом",
+			"paypal": "Paypal",
+			"submitOrder": "Пошаљите нам поруџбину",
+			"proceedToPayment": "Продужи ка наплати",
+			"errorCouldNotConnect": "Нисмо били у могућности да успоставимо везу са процесором наплате. Молимо вас вратите се на део за наплату и изаберите други метод наплате или пробајте опет мало касније.",
+			"enterCreditCardInfo": "Молимо вас, унесите податке о вашој дебитној или кредитној картици",
+			"yourOrderIsReady": "Ваша поруџбина је спремна",
+			"yourOrderIsExpected": "Очекујте поруџбину у",
+			"errors": {
+				"valueNotValid": "Вредност коју сте унели није валидна",
+				"zipNotAvailable": "Na ovaj poštanski broj ne možete poslati nalog za internetsku dostavu. Molimo kontaktirajte trgovinu za više informacija",
+				"addressNotAvailable": "Adresa nije pronađena. Odaberite adresu iz prijedloga."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "Platite online sada",
+			"digitalWallets": "Digitalni novčanici",
+			"creditCardSecure": "Sigurno plaćanje kreditnom karticom",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "Број Ваше поруџбине",
+			"orderStatus": "Статус ваше поруџбине",
+			"notSubmitted": "Није још увек послата",
+			"sent": "Послата",
+			"ready": "Спремна",
+			"rejected": "Одбивена",
+			"startNewOrder": "Нова поруџбина",
+			"errors": {
+				"emailProperFormat": "Молимо вас унесите валидну е'маил адресу како би Вам послали копију Ваше поруџбине"
+			},
+			"fiilEmailAddress": "Унесите Вашу е'маил адресу како би Вам послали копију Ваше поруџбине",
+			"failedEmail": "Е'маил порука није послата",
+			"emailSent": "Е'маил порука је послата",
+			"received": "Примена",
+			"accepted": "Прихваћена",
+			"mobileAppPromotion": "Sljedeći put naručite putem mobilne aplikacije GonnaOrder"
+		},
+		"dialog": {
+			"ok": "У реду",
+			"cancel": "Откажи"
+		},
+		"store": {
+			"currently": {
+				"closed": "Trgovina je trenutno zatvorena"
+			},
+			"time": {
+				"closed": "Trgovina je zatvorena u odabrano vrijeme"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "Vegetarijanska",
+						"vegan": "Vegan",
+						"celery": "Celer",
+						"wheat": "Pšenica",
+						"crustaceans": "Rakovi",
+						"eggs": "Jaja",
+						"fish": "Riba",
+						"lupin": "Lupin",
+						"milk": "Mlijeko",
+						"molluscs": "Mekušci",
+						"mustard": "Senf",
+						"nuts": "Nuts",
+						"peanuts": "Kikiriki",
+						"sesame": "Sezam",
+						"soya": "Soja",
+						"sulphurDioxide": "Sumpor dioksid",
+						"halal": "Halal",
+						"barley": "Ječam",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "Ova web stranica koristi kolačiće za poboljšanje vašeg iskustva, ali ako želite želite se odjaviti.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "Prijavite se"
+		},
+		"cookie": {
+			"accept": "Prihvati",
+			"reject": "Odbiti",
+			"readMore": "Čitaj više"
+		},
+		"connect": {
+			"social": {
+				"google": "Povežite se s Googleom",
+				"facebook": "Povežite se s Facebookom"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "Vaša košarica je prazna",
+				"proceed": "Nastavite"
+			}
+		},
+		"main": {
+			"typeUrl": "Unesite URL ili naziv trgovine",
+			"invalidUrl": "URL je nevažeći",
+			"scanQRCode": "Skenirajte QR kod",
+			"storeNotFound": "Prodavnica nije pronađena",
+			"storeSaved": "Informacije o trgovini uspješno su sačuvane!",
+			"navigateStoreConfirm": "Navigacija do trgovine?"
+		},
+		"recents": {
+			"nothingFound": "Ovdje ništa nije pronađeno"
+		}
+	}
+}

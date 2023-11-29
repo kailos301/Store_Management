@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "На платформі",
+			"thankYou": "Дякую",
+			"discount": "Знижка",
+			"viewOrder": "Дивитися замовлення",
+			"errorH2": "Щось пішло не так",
+			"errorUnexpected": "Ой, щось сталося",
+			"errorExpected": "Ой, щось сталося",
+			"errorMustSelectOne": "Ви повинні вибрати одну позицію",
+			"errorTrialExceeded": "Недоступно. Час пробної версії минув",
+			"emptyCart": "У вашому кошику нічого немає",
+			"optional": "(вибірково)",
+			"cookies": "Цей сайт використовує файли cookie. Продовжуючи користуватися даним сайтом, Ви погоджуєтеся на його використання",
+			"more": "більше",
+			"less": "менше",
+			"chooseFrom": "Виберіть з",
+			"standard": "Стандартний",
+			"days": {
+				"mon": "Понеділок",
+				"tue": "Вівторок",
+				"wed": "Середа",
+				"thu": "Четвер",
+				"fri": "П’ятниця",
+				"sat": "Субота",
+				"sun": "Неділя"
+			},
+			"opentimelist": "Час роботи",
+			"newVersionAvailable": "У вас запущена старіша версія програми. Перезавантажте програму, щоб отримати останнє оновлення",
+			"reloadApplication": "Перезавантажте додаток",
+			"poweredByGonnaOrder": "Працює на Gonnaorder",
+			"recents": "Останні",
+			"information": "Інформація",
+			"yes": "Так",
+			"no": "Немає",
+			"error": "Помилка",
+			"errorQRScanner": "Сталася помилка з QR-сканером!",
+			"confirm": "Підтвердьте"
+		},
+		"select": {
+			"selectAtLeast": "Ви повинні вибрати принаймні {{x}}",
+			"selectAtmost": "Ви можете вибрати не більше {{x}}",
+			"selectAtleastAtMost": "Ви повинні вибрати не менше {{x}} и не бiльше {{y}}",
+			"selectBetween": "Ви повинні вибрати значення {{childCategory.min}} та {{childCategory.max}}."
+		},
+		"load": {
+			"loadingMessage": "Будь ласка, секунду ..."
+		},
+		"itemDetails": {
+			"removeFromOrder": "Видаліть цю позицію з замовлення",
+			"addToOrder": "Додайте до свого замовлення",
+			"updateOrder": "Оновіть своє замовлення"
+		},
+		"checkout": {
+			"yourOrder": "Ваше замовлення",
+			"total": "Всього",
+			"specialNote": "Додайте коментар до свого замовлення",
+			"howToReceiveYourOrder": "Як би ви хотіли отримати своє замовлення?",
+			"option": {
+				"pickup": "Я заберу сам",
+				"addressDelivery": "Я хочу отримати його за своєю адресою",
+				"serve": {
+					"location": "Я сиджу за столом"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "Ми не змогли зберегти деталі замовлення",
+				"fieldRequired": "Це поле є обов'язковим",
+				"selectFutureTime": "Виберіть час у майбутньому",
+				"orderSubmissionFailed": "Замовлення подати не можна",
+				"ORDER_LOCATION_NOT_PRESENT": "Номер таблиці або назва місця відсутні",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "Деяка необхідна інформація про клієнта відсутня",
+				"ORDER_WISH_TIME_INVALID": "Бажаний час побажань минув",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "Спосіб доставки замовлення відсутній",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "Доставка за адресою не підтримується",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "Обслуговування замовлення не підтримується",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "Перевірка замовлення не підтримується",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "Доставка за вказаним поштовим індексом не підтримується",
+				"OPENING_TIME_SCHEDULE_ERROR": "Магазин закритий у вибраний час побажання замовлення",
+				"PROMOTION_NOT_ELIGIBLE": "Вибрано заохочення, але воно не відповідає вимогам",
+				"offersUnavailableExplanation": "Вказані нижче дати та час недоступні нижче. Клацніть на оновити замовлення, щоб видалити їх із замовлення",
+				"offersOutOfStockExplanation": "Доступних предметів недостатньо",
+				"invalidVoucherCode": "Код ваучера недійсний",
+				"INVALID_INPUT": "Помилка обробки наданих даних.",
+				"slotUnavailableExplanation": "Запитаний часовий інтервал недоступний. Виберіть інший часовий інтервал або виберіть інший спосіб доставки.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "Nu este posibil să solicitați o comandă pentru aceeași zi pentru acest magazin.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "Nu este posibil să solicitați o comandă pentru aceeași zi pentru zona dvs.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "Nu este posibil să solicitați o comandă pentru aceeași zi pentru următoarele articole:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "Nu este posibil să livrați în codul dvs. poștal pentru ora și ziua solicitate.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "Неможливо доставити замовлення в певний час і дату. Виберіть альтернативу.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "Неможливо забрати замовлення в певний час і дату. Виберіть альтернативу.",
+				"INTERNAL_ERROR": "Виникла несподівана помилка. Перезавантажте програму, щоб спробувати ще раз.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "Мінімальна сума замовлення на доставку не виконана. Додайте ще одне значення {{AMOUNT_MISSING}} до свого замовлення, щоб продовжити.",
+				"paymentFailed": "Ви не змогли здійснити оплату в Інтернеті за допомогою цього способу оплати. Будь ласка спробуйте ще раз.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "Потрібні акції не застосовуються",
+				"INVALID_CUSTOMER_VOUCHER": "Недійсний ваучер клієнта",
+				"slotUnavailable": "Обраний час недоступний",
+				"slotUnavailableExplanationWithSuggestion": "Вибраний час минув або вже недоступний. Наступний доступний час:",
+				"socialLoginFailed": "Не вдалося підключитися до вашого облікового запису",
+				"customerDetailsUpdateFailed": "Не вдалось оновити дані профілю",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "Магазин не доставляє до цього місця",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "Ми не можемо знайти вказану вами адресу. Оновіть адресу та спробуйте ще раз або зв’яжіться з магазином.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "Неможливо подавати замовлення в певний час і дату. Виберіть альтернативу.",
+				"MISSING_LOCATION_TAP_ID": "Tap ID є обов’язковим",
+				"invalidPin": "Недійсний пін-код клієнта"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "Ваше замовлення буде вам поданий"
+					},
+					"unknown": {
+						"location": "Ваше замовлення буде вам поданий"
+					}
+				},
+				"pickup": "Забрати замовлення",
+				"addressDelivery": "Ваша інформація будь ласка"
+			},
+			"yourInformationPlease": "Ваша інформація будь ласка",
+			"locationCode": "Стола",
+			"yourName": "Ваше ім'я",
+			"email": "Електронна пошта",
+			"phoneNumber": "Номер телефону",
+			"fullName": "Повне ім'я",
+			"streetAddress": "Адрес",
+			"zip": "Поштовий iндекс",
+			"town": "Місто",
+			"minimumAmount": "Для доставки потрібна мінімальна сума замовлення {{amount}}",
+			"deliveryFee": "Плата за доставку",
+			"deliveryFeeApplicable": "Застосовується для замовлень нижче {{amount}}",
+			"field": {
+				"generalValidation": "Формат поля не є допустимим"
+			},
+			"acceptTerm": "Надалі Ви приймаєте {{Умови використання}} та {{Політика конфіденційності}}",
+			"termsAndPolicy": "Надалі Ви приймаєте ",
+			"acceptTerms": {
+				"and": "та ",
+				"after": ""
+			},
+			"termsOfUse": "Умови використання",
+			"privacyPolicy": "Політика конфіденційності",
+			"yourTable": "Ваш стіл",
+			"allowedCharacters": "Дозволені символи",
+			"wishTimeHeading": "Коли ви хочете отримати ваше замовлення?",
+			"asSoonAsPossible": "Я хочу отримати її якнайшвидше",
+			"specifyWishTime": "Я хочу вказати, коли його отримувати",
+			"specialNoteExample": "Додайте коментар до свого замовлення",
+			"cardDisabledNote": "Будь ласка, поділіться своїм замовленням з магазином, коли будете готові",
+			"cardHolderName": "ім'я власника картки",
+			"cardNumber": "Номер вашої картки",
+			"cvv": "CVV",
+			"itemsOutOfStock": "Деякі предмети відсутні в наявності",
+			"floor": "Підлога",
+			"storeClosedAtOrderWishDate": "Магазин закривається на бажану дату або час побажання",
+			"offersNotAvailableAtOrderWishDate": "Деякі пропозиції недоступні на бажану дату або час",
+			"updateOrder": "Оновити замовлення",
+			"offers": {
+				"availableQuantity": "На даний момент доступний"
+			},
+			"voucherCode": "Введіть код ваучера",
+			"validVoucherCode": "Код ваучера дійсний",
+			"yourRoom": "Твоя кімната",
+			"yourLocation": "Ваше місцезнаходження",
+			"serveOption": {
+				"location": "Я хочу отримати його у своєму місці",
+				"room": "Я в своїй кімнаті"
+			},
+			"social": {
+				"connect": "Зв’яжіться з соціальним рахунком"
+			},
+			"remainingValidVoucher": "Залишок на ваучері:",
+			"paymentsense": {
+				"declined": "Інтернет-платіж через Paymentsense відхилено"
+			},
+			"saveCustomerDetailsForFuture": "Збережіть дані свого профілю для майбутніх замовлень",
+			"customerDetailsUpdateSuccess": "Дані вашого профілю оновлені",
+			"logout": "Вийти",
+			"expiry": "Дата закінчення (ММРР)",
+			"enterPin": "Введіть PIN-код"
+		},
+		"payment": {
+			"payOnlineNow": "Виберіть оплату онлайн",
+			"chooseYourPaymentMethod": "Виберіть метод оплати",
+			"creditCard": "Кредитна картка",
+			"paypal": "PayPal",
+			"submitOrder": "Підтвердьте своє замовлення",
+			"proceedToPayment": "Перейти до оплати",
+			"errorCouldNotConnect": "Ми не змогли підключитися до вибраного платіжного процесора. Будь ласка, поверніться до екрану оформлення замовлення і виберіть інший спосіб оплати або повторіть спробу пізніше.",
+			"enterCreditCardInfo": "Будь ласка, введіть дані вашої кредитної або дебетової картки",
+			"yourOrderIsReady": "Ваше замовлення вже готове",
+			"yourOrderIsExpected": "Ваше замовлення очікується",
+			"errors": {
+				"valueNotValid": "Вказане значення не є дійсним",
+				"zipNotAvailable": "Ви не можете розмістити онлайн-замовлення на доставку за цим поштовим індексом. Будь ласка, зв'яжіться з магазином для отримання додаткової інформації",
+				"addressNotAvailable": "Адресу неможливо знайти. Будь ласка, виберіть адресу з пропозицій."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "Платіть онлайн зараз",
+			"digitalWallets": "Цифрові гаманці",
+			"creditCardSecure": "Безпечні платежі за допомогою кредитної картки",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "Ваш номер замовлення",
+			"orderStatus": "Статус замовлення",
+			"notSubmitted": "Ще не підтверджено",
+			"sent": "Відправлений",
+			"ready": "Готово",
+			"rejected": "Відхилений",
+			"startNewOrder": "Зробіть нове замовлення",
+			"errors": {
+				"emailProperFormat": "Будь ласка, введіть свою пошту"
+			},
+			"fiilEmailAddress": "Введіть свою пошту для отримання деталей свого замовлення",
+			"failedEmail": "Не вийшло відправити лист",
+			"emailSent": "Лист надіслано",
+			"received": "Отриманий",
+			"accepted": "Прийнятий",
+			"mobileAppPromotion": "Наступного разу замовляйте через мобільний додаток GonnaOrder"
+		},
+		"dialog": {
+			"ok": "ОК",
+			"cancel": "Відмінивши"
+		},
+		"store": {
+			"currently": {
+				"closed": "На даний момент магазин закритий"
+			},
+			"time": {
+				"closed": "Магазин не працює в обраний час"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "Вегетаріанська",
+						"vegan": "Веганське",
+						"celery": "Селера",
+						"wheat": "Пшениця",
+						"crustaceans": "Ракоподібні",
+						"eggs": "Яйця",
+						"fish": "Риба",
+						"lupin": "Люпин",
+						"milk": "Молоко",
+						"molluscs": "Молюски",
+						"mustard": "Гірчиця",
+						"nuts": "Горіхи",
+						"peanuts": "Арахіс",
+						"sesame": "Кунжут",
+						"soya": "Соя",
+						"sulphurDioxide": "Двоокис сірки",
+						"halal": "Халяль",
+						"barley": "Ячмінь",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "Цей веб-сайт використовує файли cookie для покращення вашого досвіду, але ви можете відмовитись, якщо хочете.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "Подати заявку"
+		},
+		"cookie": {
+			"accept": "Прийміти",
+			"reject": "Відмірити",
+			"readMore": "Читати далі"
+		},
+		"connect": {
+			"social": {
+				"google": "Зв’яжіться з Google",
+				"facebook": "Зв’яжіться з Facebook"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "Ваш кошик порожній",
+				"proceed": "Продовжуйте"
+			}
+		},
+		"main": {
+			"typeUrl": "Введіть URL-адресу або назву магазину",
+			"invalidUrl": "URL-адреса недійсна",
+			"scanQRCode": "Скануйте QR-код",
+			"storeNotFound": "Магазин не знайдено",
+			"storeSaved": "Інформацію про магазин успішно збережено!",
+			"navigateStoreConfirm": "Перейти до магазину?"
+		},
+		"recents": {
+			"nothingFound": "Тут нічого не знайдено"
+		}
+	}
+}

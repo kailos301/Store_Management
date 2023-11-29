@@ -1,0 +1,17 @@
+/* Chrome, Safari, Edge, Opera */
+#DEFAULT_MIN_ESTIMATED_DURATION_READY::-webkit-outer-spin-button,#DEFAULT_MAX_ESTIMATED_DURATION_READY::-webkit-outer-spin-button,
+#DEFAULT_MIN_ESTIMATED_DURATION_READY::-webkit-inner-spin-button,#DEFAULT_MAX_ESTIMATED_DURATION_READY::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+#DEFAULT_MIN_ESTIMATED_DURATION_READ,#DEFAULT_MAX_ESTIMATED_DURATION_READY {
+  -moz-appearance: textfield;
+}
+.form-control.default-number.is-invalid{
+ padding-right: unset !important;
+}
+.externalIdInput{
+  margin-top: -7px;
+}

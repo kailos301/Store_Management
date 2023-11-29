@@ -1,0 +1,206 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+#catalogOverview{
+  mat-expansion-panel-header .categoryName{
+    pointer-events:none;
+  }
+
+  mat-expansion-panel-header.mat-expanded .categoryName{
+    pointer-events:auto;
+  }
+  .offerName,.categoryName,.createOfferLink{
+    cursor: pointer;
+    @include media-breakpoint-down(sm) {
+      font-size: 0.875em;
+    }
+  }
+  .priceDescription{
+    cursor: pointer;
+    font-size: 1.125em;
+    @include media-breakpoint-down(sm) {
+      font-size: 0.875em;
+    }
+  }
+  .categoryName{
+    font-weight: bold;
+  }
+
+  .offerList{
+    margin-bottom: 10px;
+  }
+  .buttonGroup{
+    margin: 20px 0;
+  }
+  button{
+    margin-right: 20px;
+  }
+  .mat-expansion-panel-header, .mat-expansion-panel-body{
+      @include media-breakpoint-down(md) {
+        padding:0 10px;
+      }
+    }
+  ::ng-deep .mat-expansion-panel-body{
+    @include media-breakpoint-down(sm) {
+      padding:0 10px !important;
+    }
+  }
+}
+mat-expansion-panel-header .categoryName .editIcon{
+  display: none;
+}
+mat-expansion-panel-header.mat-expanded .categoryName .editIcon{
+    display: inline-block;
+}
+.editIcon{
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 1.25em;
+  @include media-breakpoint-down(md) {
+      font-size: 1em;
+  }
+}
+.cogIcon{
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 1.25em;
+  @include media-breakpoint-down(md) {
+      font-size: 1em;
+  }
+}
+.offerRow{
+  width: 100%;
+}
+.offerRow{
+  .item {
+    font-size: 1.125em;
+    margin-bottom: 10px;
+  }
+  .description {
+    max-width: 90%;
+    font-size: 1.125em;
+    color: rgba(0, 0, 0, 0.87);;
+    @include media-breakpoint-down(md) {
+      font-size: 0.750em;
+    }
+  }
+  .priceContainer{
+    width: max-content;
+    cursor: pointer;
+  }
+  .priceContainer,.variantPriceContainer{
+    display: flex;
+    @include media-breakpoint-down(sm) {
+      display: inline-block;
+    }
+  }
+  .price {
+    color: rgba(0, 0, 0, 0.87);;
+    width: max-content;
+    @include media-breakpoint-down(md) {
+      font-size: 1.070em;
+    }
+    .strikethrough {
+      text-decoration: line-through;
+    }
+    .discounted-price {
+      color: #FF7200;
+    }
+  }
+  .variantSeperator{
+    padding:0 5px;
+    @include media-breakpoint-down(sm) {
+      padding-left:0px;
+    }
+  }
+  .item-image {
+    width: 110px;
+    height: 73px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #f2f2f2;
+    border-radius: 2px;
+    object-fit: cover;
+  }
+}
+.offer-list {
+  border: solid 1px #273773;
+    min-height: 40px;
+    display: block;
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.offer-box {
+  padding-right: 20px;
+  border-bottom: solid 0.1px #474747 !important;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: move;
+  background: white;
+}
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.offer-box:last-child {
+  border: none;
+}
+
+.offer-list.cdk-drop-list-dragging .offer-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.offer-custom-placeholder {
+  background: #ccc;
+  border: dotted 3px #999;
+  min-height: 60px;
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+.mat-expansion-panel{
+  border-radius: 0;
+}
+mat-expansion-panel-header .createOfferLink{
+  display: none;
+}
+mat-expansion-panel-header.mat-expanded .createOfferLink{
+    display: inline-block;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1200px) {
+  .imagealignment {
+    width: 66%;
+  }
+}
+
+.disabledColorNotVisible {
+  background-color: #CCCCCC !important;
+}
+
+.disabedColorNonOrderableOrOutOfStock {
+  background-color: #F0F3F5;
+}
+
+// .borderprimary{
+//   border-left: solid 1px #273773 !important;
+// }
+
+.dnone {
+  display: none !important;
+}

@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "Powered by",
+			"thankYou": "Bedankt",
+			"discount": "Korting",
+			"viewOrder": "Bekijk bestelling",
+			"errorH2": "Er ging iets mis",
+			"errorUnexpected": "Er is iets onverwachts gebeurt",
+			"errorExpected": "Er is iets onverwachts gebeurt",
+			"errorMustSelectOne": "Je moet een waarde selecteren",
+			"errorTrialExceeded": "Deze functionaliteit is niet beschikbaar. Test restricties zijn overschreden.",
+			"emptyCart": "Er zijn geen producten in je bestelling",
+			"optional": "(optioneel)",
+			"cookies": "Deze website maakt gebruik van cookies. Door gebruik te maken van deze website accepteerd je het gebruik van deze cookies",
+			"more": "meer",
+			"less": "minder",
+			"chooseFrom": "Kiezen van",
+			"standard": "Standaard",
+			"days": {
+				"mon": "Maandag",
+				"tue": "Dinsdag",
+				"wed": "Woensdag",
+				"thu": "Donderdag",
+				"fri": "Vrijdag",
+				"sat": "Zaterdag",
+				"sun": "Zondag"
+			},
+			"opentimelist": "Openingstijden",
+			"newVersionAvailable": "U gebruikt een oudere versie van de applicatie. Laad de applicatie opnieuw om de laatste update te ontvangen",
+			"reloadApplication": "Herlaad de applicatie",
+			"poweredByGonnaOrder": "Aangedreven door Gonnaorder",
+			"recents": "Recente",
+			"information": "Informatie",
+			"yes": "Ja",
+			"no": "Nee",
+			"error": "Fout",
+			"errorQRScanner": "Er is een fout opgetreden met de QR-scanner!",
+			"confirm": "Bevestigen"
+		},
+		"select": {
+			"selectAtLeast": "Je moet minimaal {{x}} selecteren",
+			"selectAtmost": "Je kunt maximaal {{x}} selecteren",
+			"selectAtleastAtMost": "Je moet minimaal {{x}} en maximaal {{y}} selecteren",
+			"selectBetween": "U moet kiezen tussen de waarden {{childCategory.min}} en {{childCategory.max}}."
+		},
+		"load": {
+			"loadingMessage": "Een moment alsjeblieft ..."
+		},
+		"itemDetails": {
+			"removeFromOrder": "Verwijder uit je bestelling",
+			"addToOrder": "Voeg toe aan je bestelling",
+			"updateOrder": "Actualiseer je bestelling"
+		},
+		"checkout": {
+			"yourOrder": "Jouw bestelling",
+			"total": "Totaal",
+			"specialNote": "Voeg een speciale notitie toe aan je bestelling",
+			"howToReceiveYourOrder": "Hoe wil jij jouw bestelling ontvangen?",
+			"option": {
+				"pickup": "Ik haal het zelf op",
+				"addressDelivery": "Thuisbezorgen",
+				"serve": {
+					"location": "Ik zit aan een tafel"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "We konden je bestelling details niet opslaan",
+				"fieldRequired": "Dit veld moet ingevuld worden",
+				"selectFutureTime": "Tijdstrip moet in de toekomst zijn",
+				"orderSubmissionFailed": "De bestelling kan niet worden geplaatst",
+				"ORDER_LOCATION_NOT_PRESENT": "Tafelnummer of locatienaam ontbreekt",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "Sommige vereiste klantgegevens ontbreken",
+				"ORDER_WISH_TIME_INVALID": "Het gewenste wenstijdstip is verleden tijd",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "De bezorgmethode van de bestelling ontbreekt",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "Levering op adres wordt niet ondersteund",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "Het serveren van de bestelling wordt niet ondersteund",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "Het ophalen van de bestelling wordt niet ondersteund",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "Levering op de opgegeven postcode wordt niet ondersteund",
+				"OPENING_TIME_SCHEDULE_ERROR": "De winkel is gesloten op het geselecteerde bestelwensmoment",
+				"PROMOTION_NOT_ELIGIBLE": "Er is een promotie geselecteerd, maar deze komt niet in aanmerking",
+				"offersUnavailableExplanation": "De onderstaande items zijn niet beschikbaar op de door u opgegeven datum en tijd. Klik op de bestelling bijwerken om ze uit uw bestelling te verwijderen",
+				"offersOutOfStockExplanation": "Er zijn niet genoeg artikelen beschikbaar",
+				"invalidVoucherCode": "De vouchercode is ongeldig",
+				"INVALID_INPUT": "Fout bij het verwerken van de verstrekte details.",
+				"slotUnavailableExplanation": "Het gevraagde tijdvak is niet beschikbaar. Selecteer een ander tijdvak of selecteer een andere bezorgmethode.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "Het is voor deze winkel niet mogelijk om voor dezelfde dag een bestelling aan te vragen.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "Het is niet mogelijk om voor jouw regio een bestelling voor dezelfde dag aan te vragen.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "Het is niet mogelijk om voor de volgende artikelen een bestelling voor dezelfde dag aan te vragen:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "Het is niet mogelijk om op de gevraagde tijd en dag op uw postcode te bezorgen.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "Het is niet mogelijk om bestellingen op de specifieke tijd en datum te bezorgen. Selecteer een alternatief.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "Het is niet mogelijk om bestellingen op de specifieke tijd en datum af te halen. Selecteer een alternatief.",
+				"INTERNAL_ERROR": "Er is een onverwachte fout opgetreden. Laad de applicatie opnieuw om het opnieuw te proberen.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "Minimum bestelbedrag niet gehaald. Voeg nog een waarde van {{AMOUNT_MISSING}} toe aan uw bestelling om door te gaan.",
+				"paymentFailed": "U heeft met deze betaalmethode niet online betaald. Probeer het a.u.b. opnieuw.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "Vereiste promoties zijn niet toegepast",
+				"INVALID_CUSTOMER_VOUCHER": "De voucher is niet geldig",
+				"slotUnavailable": "De geselecteerde tijd is niet beschikbaar",
+				"slotUnavailableExplanationWithSuggestion": "De geselecteerde tijd is in het verleden of niet meer beschikbaar. Volgende beschikbare tijd:",
+				"socialLoginFailed": "We kunnen geen verbinding maken met uw account",
+				"customerDetailsUpdateFailed": "Kan profielgegevens niet updaten",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "De winkel levert niet op deze locatie",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "We kunnen het door u opgegeven adres niet vinden. Werk het adres bij en probeer het opnieuw of neem contact op met de winkel.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "Het is niet mogelijk om bestellingen op de specifieke tijd en datum door te geven. Selecteer een alternatief.",
+				"MISSING_LOCATION_TAP_ID": "Tik-ID is verplicht",
+				"invalidPin": "Ongeldige pincode van de klant"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "Aan tafel laten brengen"
+					},
+					"unknown": {
+						"location": "Je bestelling zal geserveerd worden"
+					}
+				},
+				"pickup": "Afhalen",
+				"addressDelivery": "Je informatie"
+			},
+			"yourInformationPlease": "Je informatie",
+			"locationCode": "Tafel Nummer",
+			"yourName": "Naam",
+			"email": "Email",
+			"phoneNumber": "Telefoonnummer",
+			"fullName": "Naam en achternaam ",
+			"streetAddress": "Adres",
+			"zip": "Postcode",
+			"town": "Woonplaats",
+			"minimumAmount": "Een minimum bedrag van {{amount}} is noodzakelijk voor een bezorging",
+			"deliveryFee": "Bezorg kosten",
+			"deliveryFeeApplicable": "Toepasbaar voor onderstaande bestellingen {{amount}}",
+			"field": {
+				"generalValidation": "Het veld waarde is niet geldig"
+			},
+			"acceptTerm": "Door verder te gaan, accepteer je de {{Gebruiksvoorwaarden}} en het {{Privacybeleid}}",
+			"termsAndPolicy": "Door verder te gaan, accepteert je de",
+			"acceptTerms": {
+				"and": "en het",
+				"after": ""
+			},
+			"termsOfUse": "Gebruiksvoorwaarden",
+			"privacyPolicy": "Privacybeleid",
+			"yourTable": "Je tafel",
+			"allowedCharacters": "Toegestane tekens",
+			"wishTimeHeading": "Gewenste tijd:",
+			"asSoonAsPossible": "Zo snel mogelijk",
+			"specifyWishTime": "Tijdsteip kiezen:",
+			"specialNoteExample": "Notitie",
+			"cardDisabledNote": "Deel je bestelling met de winkel als je klaar bent",
+			"cardHolderName": "Naam pashouder",
+			"cardNumber": "Je kaartnummer",
+			"cvv": "CVV",
+			"itemsOutOfStock": "Sommige producten zijn niet meer beschikbaar",
+			"floor": "Etage",
+			"storeClosedAtOrderWishDate": "De winkel is gesloten op de gewenste datum of tijd",
+			"offersNotAvailableAtOrderWishDate": "Sommige aanbiedingen zijn niet beschikbaar op de gewenste datum of tijd",
+			"updateOrder": "Order bijwerken",
+			"offers": {
+				"availableQuantity": "Nu verkrijgbaar"
+			},
+			"voucherCode": "Voer een vouchercode in",
+			"validVoucherCode": "De vouchercode is geldig",
+			"yourRoom": "Kamer",
+			"yourLocation": "Locatie",
+			"serveOption": {
+				"location": "Ik wil het op mijn locatie ontvangen",
+				"room": "ik ben in mijn kamer"
+			},
+			"social": {
+				"connect": "Maak verbinding met een sociaal account"
+			},
+			"remainingValidVoucher": "Resterend saldo op de voucher:",
+			"paymentsense": {
+				"declined": "De online betaling via Paymentsense is geweigerd"
+			},
+			"saveCustomerDetailsForFuture": "Bewaar uw profielgegevens voor toekomstige bestellingen",
+			"customerDetailsUpdateSuccess": "Je profielgegevens zijn bijgewerkt",
+			"logout": "Uitloggen",
+			"expiry": "Vervaldatum (MMYY)",
+			"enterPin": "Voer de pincode in"
+		},
+		"payment": {
+			"payOnlineNow": "Kies voor online te betalen ",
+			"chooseYourPaymentMethod": "Kies je betaaloptie",
+			"creditCard": "Credit card",
+			"paypal": "Paypal",
+			"submitOrder": "Bevestig je bestelling",
+			"proceedToPayment": "Ga verder naar betaling",
+			"errorCouldNotConnect": "We konden geen verbinding maken met de payment provider. Ga terug naar het afrekenscherm en selecteer een andere betaalmogelijkheid of probeer het later nog eens",
+			"enterCreditCardInfo": "Vul alstublieft je creditcard informatie in",
+			"yourOrderIsReady": "Je bestelling is klaar",
+			"yourOrderIsExpected": "Je bestelling wordt verwacht",
+			"errors": {
+				"valueNotValid": "De ingevulde waarde is niet geldig",
+				"zipNotAvailable": "Je kunt geen online bestelling plaatsen op deze postcode. Neem contact op met de winkel voor eer informatie",
+				"addressNotAvailable": "Het adres kan niet worden gevonden. Selecteer een adres uit de suggesties."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "Betaal nu online",
+			"digitalWallets": "Digitale portefeuilles",
+			"creditCardSecure": "Veilige creditcardbetalingen",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "Jouw bestelling nummer",
+			"orderStatus": "Status van jouw bestelling",
+			"notSubmitted": "Nog niet bevestigd",
+			"sent": "Verzonden",
+			"ready": "Klaar",
+			"rejected": "Afgewezen",
+			"startNewOrder": "Begin een nieuwe bestelling",
+			"errors": {
+				"emailProperFormat": "Vul alstublieft een geldig emailadres in"
+			},
+			"fiilEmailAddress": "Vul uw emailadres in om een kopie van uw bestelling te ontvangen",
+			"failedEmail": "Email versturen is mislukt",
+			"emailSent": "Email is verstuurd",
+			"received": "Ontvangen",
+			"accepted": "Bevestigd",
+			"mobileAppPromotion": "Volgende keer bestellen via de GonnaOrder mobiele app"
+		},
+		"dialog": {
+			"ok": "OK",
+			"cancel": "Annuleren"
+		},
+		"store": {
+			"currently": {
+				"closed": "De winkel is momenteel gesloten"
+			},
+			"time": {
+				"closed": "De winkel is op het geselecteerde tijdstip gesloten"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "Vegetarisch",
+						"vegan": "Veganistisch",
+						"celery": "Selderij",
+						"wheat": "Tarwe",
+						"crustaceans": "Schaaldieren",
+						"eggs": "Eieren",
+						"fish": "Vis",
+						"lupin": "Lupine",
+						"milk": "Melk",
+						"molluscs": "Weekdieren",
+						"mustard": "Mosterd",
+						"nuts": "Noten",
+						"peanuts": "Pinda's",
+						"sesame": "Sesam",
+						"soya": "Soja",
+						"sulphurDioxide": "Zwaveldioxide",
+						"halal": "Halal",
+						"barley": "Gerst",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "Deze website maakt gebruik van cookies om uw ervaring te verbeteren, maar u kunt zich afmelden als u dat wilt.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "Van toepassing zijn"
+		},
+		"cookie": {
+			"accept": "Aanvaarden",
+			"reject": "Weigeren",
+			"readMore": "Lees verder"
+		},
+		"connect": {
+			"social": {
+				"google": "Maak verbinding met Google",
+				"facebook": "Verbinden met Facebook"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "Jouw mandje is leeg",
+				"proceed": "Doorgaan"
+			}
+		},
+		"main": {
+			"typeUrl": "Typ een URL of winkelnaam",
+			"invalidUrl": "URL is ongeldig",
+			"scanQRCode": "Scan een QR-code",
+			"storeNotFound": "De winkel is niet gevonden",
+			"storeSaved": "Bewaar informatie succesvol opgeslagen!",
+			"navigateStoreConfirm": "Naar de winkel navigeren?"
+		},
+		"recents": {
+			"nothingFound": "Niets gevonden hier"
+		}
+	}
+}

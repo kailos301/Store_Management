@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "Powered by",
+			"thankYou": "Dziękujemy",
+			"discount": "Zniżka",
+			"viewOrder": "Wyświetl zamówienie",
+			"errorH2": "Coś poszło nie tak",
+			"errorUnexpected": "Stało się coś nieoczekiwanego",
+			"errorExpected": "Stało się coś nieoczekiwanego",
+			"errorMustSelectOne": "Konieczne jest wybranie jednej wartości",
+			"errorTrialExceeded": "Ta funkcja jest niedostępna. Przekroczono ilość dozwolonych prób",
+			"emptyCart": "W Twoim zamówieniu nie ma żadnych produktów",
+			"optional": "(opcjonalne)",
+			"cookies": "Ta strona korzysta z plików cookie. Kontynuując korzystanie z tej strony wyrażasz zgodę na ich użycie.",
+			"more": "więcej",
+			"less": "mniej",
+			"chooseFrom": "Wybrać z",
+			"standard": "Standard",
+			"days": {
+				"mon": "Poniedziałek",
+				"tue": "Wtorek",
+				"wed": "Środa",
+				"thu": "Czwartek",
+				"fri": "Piątek",
+				"sat": "Sobota",
+				"sun": "Niedziela"
+			},
+			"opentimelist": "Godziny Otwarcia",
+			"newVersionAvailable": "Używasz starszej wersji aplikacji. Załaduj ponownie aplikację, aby otrzymać najnowszą aktualizację",
+			"reloadApplication": "Załaduj ponownie aplikację",
+			"poweredByGonnaOrder": "Obsługiwane przez Gonnaorder",
+			"recents": "Ostatnie",
+			"information": "Informacja",
+			"yes": "tak",
+			"no": "Nie",
+			"error": "Błąd",
+			"errorQRScanner": "Wystąpił błąd skanera QR!",
+			"confirm": "Potwierdzać"
+		},
+		"select": {
+			"selectAtLeast": "Musisz wybrać co najmniej {{x}}",
+			"selectAtmost": "Możesz wybrać co najwyżej {{x}}",
+			"selectAtleastAtMost": "Konieczne jest wybranice co najmniej{{x}}, a maksymalnie {{y}}",
+			"selectBetween": "Musisz wybrać pomiędzy wartościami {{childCategory.min}} i {{childCategory.max}}."
+		},
+		"load": {
+			"loadingMessage": "Prosimy o chwilę cierpliwości"
+		},
+		"itemDetails": {
+			"removeFromOrder": "Usuń ze swojego zamówienia",
+			"addToOrder": "Dodaj do zamówienia",
+			"updateOrder": "Zaktualizuj  zamówienie"
+		},
+		"checkout": {
+			"yourOrder": "Twoje zamówienie",
+			"total": "Suma",
+			"specialNote": "Dodaj specjalną notkę do swojego zamówienia",
+			"howToReceiveYourOrder": "Jak chciał(a)byś otrzymać swoje zamówienie?",
+			"option": {
+				"pickup": "Odbiorę zamówienie osobiście",
+				"addressDelivery": "Chcę go otrzymać na mój adres",
+				"serve": {
+					"location": "Siedzę przy stole"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "Nie udało nam się zapisać szczegołów Twojego zamówienia",
+				"fieldRequired": "To pole jest wymagane",
+				"selectFutureTime": "Wybierz czas w przyszłości",
+				"orderSubmissionFailed": "Nie można złożyć zamówienia",
+				"ORDER_LOCATION_NOT_PRESENT": "Brak numeru tabeli lub nazwy lokalizacji",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "Brak niektórych wymaganych informacji o kliencie",
+				"ORDER_WISH_TIME_INVALID": "Pożądany czas życzeń już minął",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "Brak metody dostawy zamówienia",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "Dostawa na adres nie jest obsługiwana",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "Obsługa zamówienia nie jest obsługiwana",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "Odbiór zamówienia nie jest obsługiwany",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "Dostawa na podany kod pocztowy nie jest obsługiwana",
+				"OPENING_TIME_SCHEDULE_ERROR": "Sklep jest zamykany w wybranym terminie zamówienia",
+				"PROMOTION_NOT_ELIGIBLE": "Promocja została wybrana, ale nie kwalifikuje się",
+				"offersUnavailableExplanation": "Poniższe elementy nie są dostępne w podanym dniu i godzinie. Kliknij aktualizację zamówienia, aby usunąć je z zamówienia",
+				"offersOutOfStockExplanation": "Brak dostępnych elementów",
+				"invalidVoucherCode": "Kod kuponu jest nieprawidłowy",
+				"INVALID_INPUT": "Błąd podczas przetwarzania podanych informacji.",
+				"slotUnavailableExplanation": "Żądany przedział czasowy jest niedostępny. Wybierz inny przedział czasowy lub wybierz inną metodę dostawy.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "W tym sklepie nie ma możliwości złożenia zamówienia na ten sam dzień.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "Nie ma możliwości złożenia zamówienia na ten sam dzień w Twojej okolicy.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "Nie ma możliwości złożenia zamówienia na ten sam dzień na następujące pozycje:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "Nie jest możliwe dostarczenie na Twój kod pocztowy na żądaną godzinę i dzień.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "Nie ma możliwości dostarczenia zamówienia w określonym czasie i terminie. Wybierz alternatywę.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "Nie ma możliwości odbioru zamówień w określonym czasie i dniu. Wybierz alternatywę.",
+				"INTERNAL_ERROR": "Wystąpił nieoczekiwany błąd. Załaduj ponownie aplikację, aby spróbować ponownie.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "Nie osiągnięto minimalnej kwoty zamówienia dostawy. Dodaj kolejną kwotę {{AMOUNT_MISSING}} do zamówienia, aby kontynuować.",
+				"paymentFailed": "Nie udało Ci się zapłacić online przy użyciu tej metody płatności. Proszę spróbuj ponownie.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "Wymagane promocje nie są stosowane",
+				"INVALID_CUSTOMER_VOUCHER": "Nieprawidłowy kupon klienta",
+				"slotUnavailable": "Wybrany czas jest niedostępny",
+				"slotUnavailableExplanationWithSuggestion": "Wybrany czas już minął lub nie jest już dostępny. Następny dostępny termin:",
+				"socialLoginFailed": "Nie mogliśmy połączyć się z Twoim kontem",
+				"customerDetailsUpdateFailed": "Nie udało się zaktualizować danych profilu",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "Sklep nie dostarcza do tej lokalizacji",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "Nie możemy znaleźć podanego adresu. Zaktualizuj adres i spróbuj ponownie lub skontaktuj się ze sklepem.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "Nie ma możliwości złożenia zamówienia w określonym czasie i terminie. Wybierz alternatywę.",
+				"MISSING_LOCATION_TAP_ID": "Identyfikator kranu jest obowiązkowy",
+				"invalidPin": "Nieprawidłowy kod PIN klienta"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "Twoje zamówienie zostanie doręczone do Ciebie"
+					},
+					"unknown": {
+						"location": "Twoje zamówienie zostanie doręczone do Ciebie"
+					}
+				},
+				"pickup": "Odbierz zamówienie",
+				"addressDelivery": "Proszę podać swoje dane"
+			},
+			"yourInformationPlease": "Proszę podać swoje dane",
+			"locationCode": "Stół",
+			"yourName": "Twoje imię",
+			"email": "Email",
+			"phoneNumber": "Numer telefonu",
+			"fullName": "Imię i nazwisko",
+			"streetAddress": "Ulica",
+			"zip": "Kod pocztowy",
+			"town": "Miasto",
+			"minimumAmount": "Minimalna kwota zamówienia {(amount)} jest wymagana do realizacji dostawy",
+			"deliveryFee": "Opłata za dostawę",
+			"deliveryFeeApplicable": "Dotyczy zamówień poniżej {(amount)}",
+			"field": {
+				"generalValidation": "Format pola jest nieważny"
+			},
+			"acceptTerm": "Kontynuując, akceptujesz {{Warunki użytkowania}} i {{Polityka prywatności}}",
+			"termsAndPolicy": "Kontynuując, akceptujesz",
+			"acceptTerms": {
+				"and": "i",
+				"after": "तू सहमत आहेस"
+			},
+			"termsOfUse": "Warunki użytkowania",
+			"privacyPolicy": "Polityka prywatności",
+			"yourTable": "Twój stół",
+			"allowedCharacters": "Dozwolone postacie",
+			"wishTimeHeading": "Kiedy chcesz otrzymać zamówienie?",
+			"asSoonAsPossible": "Chcę to otrzymać jak najszybciej",
+			"specifyWishTime": "Chcę określić, kiedy go otrzymać",
+			"specialNoteExample": "Dodaj specjalną notkę do swojego zamówienia",
+			"cardDisabledNote": "Udostępnij zamówienie w sklepie, gdy będziesz gotowy",
+			"cardHolderName": "Imię właściciela karty",
+			"cardNumber": "Twój numer karty",
+			"cvv": "CVV",
+			"itemsOutOfStock": "Niektóre pozycje są niedostępne",
+			"floor": "Podłoga",
+			"storeClosedAtOrderWishDate": "Sklep jest zamykany w żądanym dniu lub godzinie",
+			"offersNotAvailableAtOrderWishDate": "Niektóre oferty nie są dostępne w wybranym terminie lub godzinie",
+			"updateOrder": "Zaktualizuj zamówienie",
+			"offers": {
+				"availableQuantity": "Aktualnie dostępne"
+			},
+			"voucherCode": "Wpisz kod kuponu",
+			"validVoucherCode": "Kod kuponu jest ważny",
+			"yourRoom": "Twój pokój",
+			"yourLocation": "Twoja lokalizacja",
+			"serveOption": {
+				"location": "Chcę go otrzymać w swojej lokalizacji",
+				"room": "jestem w moim pokoju"
+			},
+			"social": {
+				"connect": "Połącz się z kontem społecznościowym"
+			},
+			"remainingValidVoucher": "Pozostałe saldo na kuponie:",
+			"paymentsense": {
+				"declined": "Płatność online za pośrednictwem Paymentsense została odrzucona"
+			},
+			"saveCustomerDetailsForFuture": "Zapisz dane swojego profilu dla przyszłych zamówień",
+			"customerDetailsUpdateSuccess": "Dane Twojego profilu zostały zaktualizowane",
+			"logout": "Wyloguj",
+			"expiry": "Data ważności (MMRR)",
+			"enterPin": "Wprowadź numer PIN"
+		},
+		"payment": {
+			"payOnlineNow": "Wybierz teraz płatność online",
+			"chooseYourPaymentMethod": "Wybierz formę płatności",
+			"creditCard": "Karta kredytowa",
+			"paypal": "Paypal",
+			"submitOrder": "Złóż zamówienie",
+			"proceedToPayment": "Kontunuuj do płatności",
+			"errorCouldNotConnect": "Nie mogliśmy połączyć się z wybraną formą płatności. Wróć do ekranu płatności i wybierz inną formę płatności lub spróbuj ponownie później.",
+			"enterCreditCardInfo": "Proszę podać dane karty kredytowej lub debetowej",
+			"yourOrderIsReady": "Twoje zamówienie jest gotowe",
+			"yourOrderIsExpected": "Twoje zamówienie jest oczekiwane",
+			"errors": {
+				"valueNotValid": "Podana wartość jest nieważna",
+				"zipNotAvailable": "Nie możesz złożyć zamówienia dostawy online na ten kod pocztowy. Skontaktuj się ze sklepem, aby uzyskać więcej informacji",
+				"addressNotAvailable": "Nie można znaleźć adresu. Wybierz adres z sugestii."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "Zapłać teraz online",
+			"digitalWallets": "Portfele cyfrowe",
+			"creditCardSecure": "Bezpieczne płatności kartą kredytową",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "Numer Twojego zamówienia",
+			"orderStatus": "Status zamówienia",
+			"notSubmitted": "Jeszcze nie zlożone",
+			"sent": "Wysłane",
+			"ready": "Gotowe",
+			"rejected": "Odrzucone",
+			"startNewOrder": "Rozpocznij nowe zamówienie",
+			"errors": {
+				"emailProperFormat": "Prosimy o wprowadzenie poprawnego adresu email"
+			},
+			"fiilEmailAddress": "Wprowadź adres email żeby otrzymać kopię zamówienia",
+			"failedEmail": "Wysłanie maila nie powiodło się",
+			"emailSent": "Mail został wysłany",
+			"received": "Otrzymane",
+			"accepted": "Przyjęte",
+			"mobileAppPromotion": "Następnym razem zamów przez aplikację mobilną GonnaOrder"
+		},
+		"dialog": {
+			"ok": "OK",
+			"cancel": "Anuluj"
+		},
+		"store": {
+			"currently": {
+				"closed": "Sklep jest obecnie zamknięty"
+			},
+			"time": {
+				"closed": "Sklep jest zamknięty w wybranym czasie"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "Wegetariański",
+						"vegan": "Wegańskie",
+						"celery": "Seler",
+						"wheat": "Pszenica",
+						"crustaceans": "Skorupiaki",
+						"eggs": "Jajka",
+						"fish": "Ryba",
+						"lupin": "Łubin",
+						"milk": "mleko",
+						"molluscs": "Mięczaki",
+						"mustard": "Musztarda",
+						"nuts": "Orzechy",
+						"peanuts": "Orzeszki ziemne",
+						"sesame": "Sezam",
+						"soya": "Soja",
+						"sulphurDioxide": "Dwutlenek siarki",
+						"halal": "Halal",
+						"barley": "Jęczmień",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "Ta strona korzysta z plików cookie, aby poprawić Twoje wrażenia, ale możesz z nich zrezygnować, jeśli chcesz.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "Zastosować"
+		},
+		"cookie": {
+			"accept": "Zaakceptować",
+			"reject": "Odrzucać",
+			"readMore": "Czytaj więcej"
+		},
+		"connect": {
+			"social": {
+				"google": "Połącz się z Google",
+				"facebook": "Połącz z Facebookiem"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "Twój koszyk jest pusty",
+				"proceed": "Kontynuować"
+			}
+		},
+		"main": {
+			"typeUrl": "Wpisz adres URL lub nazwę sklepu",
+			"invalidUrl": "URL jest nieprawidłowy",
+			"scanQRCode": "Zeskanuj kod QR",
+			"storeNotFound": "Sklep nie został znaleziony",
+			"storeSaved": "Informacje o sklepie zostały pomyślnie zapisane!",
+			"navigateStoreConfirm": "Przejść do sklepu?"
+		},
+		"recents": {
+			"nothingFound": "Nic tu nie znaleziono"
+		}
+	}
+}

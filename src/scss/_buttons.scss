@@ -1,0 +1,37 @@
+.back-button {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.btn-link {
+  color: $blue;
+  text-decoration: underline !important;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  color: #000;
+}
+
+.btn-outline-primary:hover {
+  .fa,
+  .far,
+  .fas {
+    vertical-align: middle;
+    color: #fff;
+    font-size: 20px;
+  }
+}
+
+.btn-app-link {
+  border: none !important;
+  padding: 0 !important;
+  border-radius: 3px;
+  margin: 10px;
+  transition: 0.2s;
+}
+
+.btn-app-link:active {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.603);
+  transition: 0.2s;
+}

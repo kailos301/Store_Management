@@ -1,0 +1,28 @@
+.error-feedback {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 80%;
+    color: #f86c6b;
+}
+
+.not-subscribed-text {
+    font-size: 80%;
+}
+
+form label.required:after {
+    color: red;
+    content: " *";
+}
+
+hr {
+    height: 0 !important;
+      background: #48b9b7 !important;
+      display: inline-block !important;
+      width: 100%;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      border: 0;
+      border-top: 1px solid rgba(0,0,0,0.1);
+      box-sizing: content-box;
+      overflow: visible;
+}

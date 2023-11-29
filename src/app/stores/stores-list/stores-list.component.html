@@ -1,0 +1,50 @@
+<div class="col-lg-12">
+  <div class="card list">
+    <div class="card-header">
+      {{'admin.store.list.storesList'|translate}}
+    </div>
+    <div class="card-body">
+      <div class="col-md-4 col-sm-12 col-xs-12 mx-auto mb-3 p-0">
+        <input
+          type="text"
+          [(ngModel)]="aliasName"
+          placeholder="{{'admin.store.list.searchByAlias'|translate}}"
+          class="form-control search-field"
+          (keyup)="searchStore($event)"
+        />
+      </div>
+      <table class="table table-responsive-sm lg">
+        <thead>
+          <tr>
+            <th></th>
+            <th>{{'admin.global.name'|translate}}</th>
+            <th>{{'admin.store.alias'|translate}}</th>
+            <th>{{'admin.global.subscription.label'|translate}}</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngIf="!(stores$ | async)?.data?.length">
+            <td colspan="6">{{'admin.global.noData'|translate}}</td>
+          </tr>
+          <tr *ngFor="let store of (stores$ | async).data" (click)="goToStorePage(store)" title="Go To Order" class="cursor-pointer">
+            <td><img *ngIf="store?.settings?.LOGO" [src]="store?.settings?.LOGO" /></td>
+            <td>{{ store.name }}</td>
+            <td>{{ store.aliasName }}</td>
+            <td>{{ store.subscription.endDate | localizedDate:'DD MMM YYYY':locale:timezone | async }}</td>
+            <td><span *ngIf="(tagVisible$ | async) && store.tag && store.subscription.endDate">{{ store.tag }}</span></td>
+            <td class="text-right"><img src="assets/img/icon-forward.svg" /></td>
+          </tr>
+        </tbody>
+      </table>
+      <app-pager
+        [totalPagesCount]="(stores$ | async).totalPages"
+        [page]="(stores$ | async).paging.page"
+        [size]="(stores$ | async).paging.size"
+        (paginate)="paginate($event)"
+      >
+      </app-pager>
+    </div>
+  </div>
+</div>

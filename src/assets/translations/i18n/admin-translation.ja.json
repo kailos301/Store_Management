@@ -1,0 +1,1183 @@
+{
+	"admin": {
+		"global": {
+			"delete": "削除",
+			"cancel": "キャンセル",
+			"ok": "OK",
+			"reject": "拒否する",
+			"create": "作成する",
+			"yes": "はい",
+			"print": "印刷",
+			"save": "保存",
+			"no": "いいえ",
+			"close": "受注確認",
+			"name": "名前",
+			"firstName": "名",
+			"language": "言語",
+			"comment": "コメント（店舗側受注画面のみに表示）",
+			"email": "メールアドレス",
+			"login": "ログインする",
+			"noData": "何もデータが見つかりませんでした",
+			"field": {
+				"required": "この項目は必須です",
+				"minLength": "このフィールドは最小{{minLength}}桁である必要があります",
+				"maxLength": "このフィールドは{{maxLength}}文字を超えることはできません",
+				"maxNumber": "この値は{{maxNumber}}を超えることはできません",
+				"requiredValue": "割引値は0より大きくする必要があります。",
+				"downloadFlyer": "チラシをダウンロード"
+			},
+			"description": "説明",
+			"discount": "割引",
+			"country": "国",
+			"timezone": "タイムゾーン",
+			"pleaseSelect": "選んでください ...",
+			"address": "住所",
+			"addressLine1": "住所1",
+			"addressLine2": "住所2",
+			"price": "価格",
+			"postCode": "郵便番号",
+			"postCodePattern": "Invaild-英数字のみを使用してください",
+			"change": "変更",
+			"update": "更新",
+			"password": "パスワード",
+			"sentenceText": "そして",
+			"anyOption": "複数選択可",
+			"exactOneOption": "1つだけオプションをご選択ください",
+			"partnerProgram": {
+				"label": "パートナープログラム",
+				"vouchers": "バウチャー",
+				"commissions": "手数料"
+			},
+			"voucher": {
+				"label": "バウチャーコード",
+				"voucherQuestion": "クーポンコード入力欄を表示する"
+			},
+			"subscription": {
+				"label": "有料プラン契約状況",
+				"status": "有料プラン契約状態",
+				"endDate": "有料プラン終了日",
+				"purchase": "有料プランのお申込み",
+				"checkout": {
+					"stripe": "クレジットカードで支払う",
+					"paypal": "Paypalで支払う"
+				},
+				"price": {
+					"label": "有料プラン価格"
+				},
+				"vat": {
+					"label": "消費税",
+					"invalid": "VAT番号が無効です",
+					"valid": "VAT番号は有効です"
+				},
+				"vatNumber": {
+					"label": "VAT番号"
+				},
+				"totalPrice": {
+					"label": "合計金額"
+				},
+				"billingDetails": {
+					"label": "領収書宛先設定"
+				},
+				"continue": "続ける",
+				"discountVoucher": {
+					"patternInvalid": "割引クーポンはパターン「XXXX-XXXX」と一致する必要があります",
+					"invalid": "クーポンは無効です",
+					"alreadyReserved": "このクーポン番号はすでに予約されており、使用できません",
+					"valid": "クーポンは有効です"
+				},
+				"vatamount": {
+					"label": "消費税額"
+				},
+				"pricewithvat": {
+					"label": "税込価格"
+				},
+				"vatnotcharged": {
+					"label": "消費税別"
+				},
+				"invoiceLabel": "領収書発行",
+				"extendPurchase": "有料プランの期間延長",
+				"createInvoice": "請求書を作成する",
+				"updateInvoice": "請求書を更新する",
+				"deleteInvoice": "請求書を削除する",
+				"discountPercentage": "割引率",
+				"currency": "通貨",
+				"paymentId": "支払いプロバイダーの支払いID",
+				"partnerEmail": "パートナーのメールアドレス"
+			},
+			"validate": {
+				"amountNumbers": "金額は半角数字にてご入力ください"
+			},
+			"paymentDetails": "支払詳細",
+			"termsPoliciesMsg": "合意します",
+			"termsOfUse": "利用規約",
+			"privacyPolicy": "個人情報保護方針",
+			"phoneNumber": "電話番号",
+			"currentLanguage": "en",
+			"storeLabel": "店舗",
+			"contactus": {
+				"thankYou": "GonnaOrderにお問い合わせいただきありがとうございます。できるだけ早くメールで返信いたします。",
+				"instructions": "アプリケーションの使い方についての説明と、よくある質問の回答部分をご確認ください",
+				"gettintouch": "お探しのものが見つかりませんか？その場合はお問合せください！迅速に対応できるよう、可能な限り詳細をお伝えください。",
+				"faq": "よくある質問",
+				"helpCenter": "ヘルプセンター",
+				"submit": "登録する",
+				"support": "サポート",
+				"featuresGuide": "機能ガイド"
+			},
+			"uploadNow": "今すぐアップロード",
+			"role": "役割",
+			"administrator": "管理者",
+			"standardUser": "標準ユーザー",
+			"saveAndNew": "保存して新規追加",
+			"saveAndContinue": "保存して続ける",
+			"next": "次へ",
+			"type": "タイプ",
+			"value": "値",
+			"active": "利用可能",
+			"consumed": "消費",
+			"availabilityRestrictions": "利用可能期間",
+			"from": "から",
+			"To": "に",
+			"available": "利用可能",
+			"partner": "パートナー",
+			"emailStatus": "メールアドレスの状態",
+			"superAdmin": "最高管理者",
+			"remove": "削除する",
+			"availableTimes": "利用可能な時間",
+			"to": "に",
+			"any": "どれか",
+			"reloadApplication": "アプリケーションをリロード",
+			"newVersionAvailable": "古いバージョンのアプリケーションを実行しています。アプリケーションをリロードして、最新版へ更新してください",
+			"vatPercentage": "消費税率",
+			"phone": "電話",
+			"registeredAt": "で登録",
+			"initialValue": "初期値"
+		},
+		"alerts": {
+			"headerError": "エラー！",
+			"errorOccured": "エラーが発生しました。再試行してください",
+			"headerSuccess": "成功しました",
+			"invalidCredentials": "認証情報は無効です",
+			"accountActivated": "アカウントが有効になりました。 続行するには、以下からログインしてください。",
+			"passwordChanged": "パスワードが変更されました。 続行するには、以下からログインしてください。",
+			"emailChanged": "メールアドレスが変更されました。 続行するには、以下からログインしてください。",
+			"oopsLostMsg": "お客様の情報が見当たりません",
+			"pageNotFound": "お探しのページが見つかりませんでした。",
+			"problemMsg": "エラーが発生しています",
+			"pageUnavailable": "予期しないエラー",
+			"userInvitationSuccessfull": "登録は成功しました。ログインして{{storeName}}にアクセスします",
+			"socialAccountLoginFailed": "ソーシャルアカウントを使用する前に、必ずリンクしてください",
+			"accessDenied": "アクセスが拒否されました"
+		},
+		"login": {
+			"forgetPassword": "パスワードをお忘れですか？",
+			"noAccount": "アカウントをお持ちではありませんか？",
+			"signUp": "登録",
+			"social": {
+				"header": "またはソーシャルアカウントを介して接続します。",
+				"google": "Googleでサインイン",
+				"facebook": "Facebookでサインイン",
+				"apple": "Appleでサインインする"
+			}
+		},
+		"account": {
+			"receiveEmailMsg": "アカウント確認のためのメールがまもなく届きます。",
+			"profile": "私のプロフィール",
+			"provideEmailMsg": "メールアドレス",
+			"changePassword": "パスワードを変更する",
+			"logout": "ログアウト",
+			"affiliate": {
+				"lastName": "名字",
+				"create": "パートナーになる",
+				"pleaseVisit": "訪れてください",
+				"profile": "あなたのプロフィールページ",
+				"updateInfoMsg": "情報を更新したい場合"
+			},
+			"currentPassword": "現在のパスワード",
+			"newPassword": "新しいパスワード",
+			"social": {
+				"nav": "ソーシャルアカウント",
+				"header": "ソーシャルアカウントをリンクする",
+				"google": {
+					"header": "Googleアカウント",
+					"linkAccount": "Googleアカウントをリンクする"
+				},
+				"link": {
+					"success": "ソーシャルアカウントが正常にリンクされました"
+				},
+				"facebook": {
+					"header": "Facebookアカウント",
+					"linkAccount": "Facebookアカウントをリンクする"
+				},
+				"apple": {
+					"header": "Appleアカウント",
+					"linkAccount": "Appleアカウントをリンクする"
+				}
+			},
+			"createPassword": "パスワードの作成"
+		},
+		"forgot": {
+			"header": "パスワードをお忘れですか",
+			"submit": "登録",
+			"alreadyKnow": "すでにパスワードをご存知で、変更は不要ですね？",
+			"emailInvalid": "メールアドレスが無効です",
+			"successHeader": "完了！",
+			"successMsg": "パスワードをリセットするためのメールがまもなく届きます。",
+			"emailNotRegister": "このメールアドレスは登録されていません"
+		},
+		"updatePassword": {
+			"header": "パスワードを更新する",
+			"subHeader": "新しいパスワードを入力してください",
+			"confirmPassword": "パスワードを認証"
+		},
+		"store": {
+			"minutes": "分",
+			"closeOrder": "注文を確認する",
+			"acceptOrder": "注文を受け入れる",
+			"acceptOrderMarkReady": "注文を受付、直ちに準備完了にする",
+			"acceptOrderEstimatedTime": "注文を受付、準備時間を設定する",
+			"minutesValidationMsg": "「分」は正の整数で入力してください",
+			"list": {
+				"storesList": "店舗リスト",
+				"searchByAlias": "ゴナオーダードメインを入力（最低6文字）"
+			},
+			"storeimages": "店舗イメージ画像",
+			"storeCreation": "新しい店舗を登録",
+			"settings": "設定",
+			"paymentMethod": "支払方法",
+			"paymentOptions": "支払方法",
+			"paymentOptionsDisabled": "支払い方法が有効になっていないため、店舗の支払い方法は無効になっています",
+			"deliveryAtAddressOptions": "デリバリー配達",
+			"minDeliveryAmount": "デリバリーの最低注文額",
+			"deliveryFee": "配送料",
+			"order": {
+				"label": "注文",
+				"orderSent": "注文日時",
+				"orderWish": "提供期限",
+				"notifications": {
+					"receipt": "注文通知を受付ける"
+				},
+				"floor": "フロア番号",
+				"customerName": "顧客名",
+				"newestOrderSent": "注文到着順（新順）",
+				"oldestOrderSent": "注文到着順（古順）",
+				"newestOrderWish": "提供期限順（遠順）",
+				"oldestOrderWish": "提供期限順（近順）",
+				"newestOrderExpected": "予定日時順（遠順）",
+				"oldestOrderExpected": "予定日時順（近順）",
+				"autoprint": {
+					"receipt": "自動的に注文を印刷します"
+				},
+				"orderExpected": "注文予定",
+				"newestOrderEffective": "最新順の有効な注文",
+				"oldestOrderEffective": "古い順の有効な注文",
+				"dateTimeRange": "日時範囲",
+				"orderEffective": "有効な注文",
+				"noFilter": "フィルタなし",
+				"yesterday": "昨日",
+				"lastHour": "最後の時間",
+				"now": "今",
+				"nextHour": "次の時間",
+				"tomorrow": "明日",
+				"custom": "カスタム...",
+				"today": "今日",
+				"orderIdentifier": "注文番号",
+				"changeOrder": "注文の変更"
+			},
+			"orderIsReady": "ご注文の品がご準備できました！",
+			"orderExpected": "注文予定",
+			"orderDownload": "ダウンロード",
+			"note": "注意事項",
+			"open": "新規注文",
+			"cancelled": "キャンセル",
+			"rejected": "拒否済み注文",
+			"rejectWithoutReason": "理由を明記せずに注文を拒否",
+			"rejectWithReason": "理由を明記して注文を拒否",
+			"closed": "準備中",
+			"identifier": "注文番号",
+			"deliveryMethod": "配達モード",
+			"deliveryOption": "配達モード",
+			"orderingDisabledMessage": "注文を有効にするには、デリバリーを可能に設定してください",
+			"deliveryAtInLocation": "テーブル注文設定",
+			"deliveryLocationsEnabled": "具体的なテーブルが指定されていないため、オプションが無効になっています",
+			"orderDeliveryMethod": {
+				"deliver": "デリバリー",
+				"pickup": "テイクアウト",
+				"serve": "店内提供",
+				"deliverAtAddress": "デリバリー",
+				"openTap": ""
+			},
+			"status": "状態",
+			"amountPaid": "注文金額",
+			"paymentStatus": "支払い状況",
+			"payment": {
+				"paid": "支払済",
+				"notPaid": "未払い",
+				"stripeTermsAndConditions": "アカウントを登録事でこちらに同意いただいた事とみなされます",
+				"servicesAgreement": "ストライプサービス契約",
+				"stripeConnectedAccountAgreement": "ストライプ接続アカウント契約",
+				"stripeUserMsg": "ストライプアカウントを作成すると、クレジットカード、iDEAL、Bancontactを介して注文を受け取ることができます",
+				"paypalDisableMsg": "Paypalは一時的にサポートされていません",
+				"creditCard": "クレジットカード",
+				"bancontact": "Bancontact",
+				"iDeal": "iDEAL",
+				"squareUserMsg": "スクエアアカウント（Square Account）を作成すると、クレジットカードで注文を受けることができます",
+				"vivaUserMsg": "Viva Walletアカウントを作成すると、クレジットカード経由で注文を受け取ることができます",
+				"digitalWallets": "デジタルウォレット",
+				"paymentSense": {
+					"userMsg": "Paymentsenseアカウントを作成すると、クレジットカード経由で注文を受け取ることができます",
+					"jwtToken": ""
+				},
+				"rmsUserMsg": "RMSアカウントを作成することでクレジットカードでの受注が可能",
+				"merchantId": "",
+				"sharedSecret": "共有秘密",
+				"rmsConnect": "RMSと接続する",
+				"paymentSenseConnect": "PaymentSenseと接続する",
+				"jccUserMsg": "JCCアカウントを作成すると、クレジットカードでの受注が可能になります。",
+				"acquirerId": "",
+				"apiSignaturePassword": "",
+				"jccConnect": "JCCとの連携",
+				"valueNotValid": "提示された値が有効でない",
+				"trustpaymentsUserMsg": "TrustPaymentsのアカウントを作成すると、クレジットカードでの受注が可能になります。",
+				"siteReference": "",
+				"webserviceUser": "",
+				"webservicePassword": ""
+			},
+			"date": "日付",
+			"time": "時間",
+			"backToOrders": "注文に戻る",
+			"share": {
+				"language": {
+					"userInterfaceLanguage": "ユーザー言語",
+					"defaultCatalogLanguage": "メニュー表示に使用する言語",
+					"basedOn": "ブラウザの設定に基づく",
+					"storeDefault": "店舗のデフォルトのメニュー言語"
+				},
+				"sharePreviewLink": "共有＆プレビューリンク",
+				"sharePreview": "共有とプレビュー",
+				"embedCode": "あなたのウェブサイトに埋め込む",
+				"printQRCodes": "QRコード",
+				"ordering": {
+					"allowDefaultOrdering": "注文を許可する",
+					"DefaultOrdering": "デフォルト",
+					"disableDefaultOrdering": "無効",
+					"defaultDate": "デフォルトの日付"
+				}
+			},
+			"voucher": {
+				"list": "クーポン一覧",
+				"createVoucher": "クーポンを作成する",
+				"partnerStatus": "パートナー状態",
+				"endDate": "終了日",
+				"commission": "手数料",
+				"text": "クーポン",
+				"numberOfVouchers": "クーポン数",
+				"defaultVoucherValue": "クーポン金額",
+				"numberOfVoucher": "作成可能な利用可能なクーポン",
+				"numberOfVoucherPattern": "クーポン数は数字でなければなりません",
+				"minNumberOfVoucherPattern": "クーポン数は1以上である必要があります",
+				"commissionStatus": "手数料の状況",
+				"waiting_for_store_purchase": "店頭購入待ち",
+				"eligible_for_payment": "支払いの対象",
+				"waiting_for_finalization": "ファイナライズまで14日間お待ちください",
+				"useDate": "クーポン利用日",
+				"printVoucherSetup": "クーポンを印刷する",
+				"addnewdiscountVoucher": "新しい割引クーポンを追加する",
+				"backtodiscountVouchers": "割引クーポンに戻る",
+				"creatediscountVoucher": "割引クーポンを作成する",
+				"typeSingleuse": "１回使用",
+				"typeMultipleuse": "複数回使用",
+				"updatediscountVoucher": "割引クーポンを更新する",
+				"editdiscountVoucher": "割引クーポンを編集する",
+				"discountVouchers": "割引クーポン"
+			},
+			"statistics": {
+				"title": "統計",
+				"from": "から",
+				"to": "に",
+				"orders": "注文管理",
+				"menuViewing": "メニューの閲覧数",
+				"orderValue": "注文金額",
+				"month": "月",
+				"year": "年",
+				"submitted": "登録数",
+				"received": "受注数",
+				"total": "合計",
+				"totalViewing": "合計ビュー数",
+				"totalPaid": "合計販売額（支払済）",
+				"totalNonPaid": "合計販売額（未払い分）",
+				"totalAll": "総合計",
+				"orderItems": "注文商品",
+				"orderItemSummary": "注文商品の概要",
+				"orderItemSummaryDescription": "販売された各製品の総収益を理解し、どの製品が最も人気があるかを確認します",
+				"orderItemDetails": "注文商品の詳細",
+				"orderItemDetailsDescription": "これらの注文で販売された製品の数量と収益、および注文の日付を含む、すべての注文の項目別ビューを取得します",
+				"orderCapture": "注文入力",
+				"monthly": "月単位",
+				"daily": "日単位",
+				"day": "日",
+				"period": "期限",
+				"quantitySold": "販売数量",
+				"revenueLabel": "売上"
+			},
+			"catalog": {
+				"backToOffer": "商品に戻る",
+				"backToCatalog": "カタログに戻る",
+				"backToCategory": "カテゴリに戻る",
+				"importTranslation": "ラベルの変更と翻訳",
+				"import": "Excel経由でメニューをインポートする",
+				"upload": "メニューのアップロード",
+				"importInfo": "Excelテンプレートを使用して、メニューデータをインポートできます。 Excelインポートは、商品名またはカテゴリ名、または商品の簡単な説明と商品価格をサポートします。",
+				"downloadTemplate": "ここからテンプレートをダウンロード",
+				"acceptImport": "メニューを受け入れてインポ​​ートする",
+				"importImage": "写真からメニューをインポート",
+				"beta": "ベータ",
+				"importImageInfo": "メニュー画像を追加することで、メニューデータをインポートできます。インポートは、単一のカテゴリを持つカタログの部分に対して機能します。写真が高解像度で鮮明であることを確認してください。この機能はベータモードです。",
+				"offer": {
+					"offer": "商品",
+					"createOffer": "商品を作成",
+					"addOffer": "商品を追加",
+					"confirmDeleteOffer": "本当にこの商品を削除しますか？<br/>この操作は元には戻せません。",
+					"offerImage": "商品画像",
+					"uploadImage": "画像をアップロード",
+					"characteristics": {
+						"name": "特徴",
+						"vegetarian": "ベジタリアン",
+						"vegan": "ビーガン",
+						"celery": "セロリ",
+						"wheat": "小麦",
+						"crustaceans": "甲殻類",
+						"eggs": "卵",
+						"fish": "魚",
+						"lupin": "ルピナス",
+						"milk": "乳製品",
+						"molluscs": "軟体動物",
+						"mustard": "マスタード",
+						"nuts": "ナッツ",
+						"peanuts": "ピーナッツ",
+						"sesame": "ごま",
+						"soya": "大豆",
+						"sulphurDioxide": "二酸化硫黄",
+						"halal": "ハラール",
+						"barley": "大麦",
+						"spicy": "辛い"
+					},
+					"countAgainstslotcount": "スロット数に対するカウント",
+					"countAgainstslot": "スロットに対してカウント",
+					"incrementBy": "インクリメント",
+					"externalProductId": "外部製品ID",
+					"vatExternalId": "外部VAT ID",
+					"available": "利用可能",
+					"oos": "在庫切れ",
+					"hidden": "隠し",
+					"unorderable": "注文不可"
+				},
+				"variant": {
+					"priceVariants": "価格バリエーション",
+					"priceVariant": "価格バリエーション",
+					"assignedOfferVariations": "バリエーションを表示するには、ここをクリックしてください",
+					"createPriceVariant": "価格バリエーションの作成",
+					"confirmDeleteVariant": "本当にこの価格バリエーションを削除しますか？<br/>この操作は元に戻せません。"
+				},
+				"option": {
+					"option": "オプション",
+					"options": "オプション",
+					"addOption": "オプションを追加",
+					"createOption": "オプションの作成",
+					"confirmDeleteOption": "本当にこのオプションを削除しますか？<br/>この操作は元には戻せません。"
+				},
+				"category": {
+					"createCategory": "カテゴリを作成",
+					"category": "カテゴリ",
+					"addCategory": "カテゴリを追加",
+					"infoDeleteCategory": "カテゴリには商品が含まれているため、削除できません。<br/>基になる商品を削除するか、他のカテゴリに移動する必要があります。",
+					"confirmDeleteCategory": "本当にこのカテゴリを削除しますか？<br/>この操作は元には戻せません。"
+				},
+				"optionGroup": {
+					"optionGroups": "オプショングループ",
+					"createOptionGroup": "オプショングループの作成",
+					"optionGroup": "オプショングループ",
+					"addOptionGroup": "オプショングループの追加",
+					"optionGroupType": "オプショングループタイプ",
+					"optionA": "オプションA",
+					"optionB": "オプションB",
+					"optionC": "オプションC",
+					"chooseExisting": "既存のオプショングループを選択",
+					"infoDeleteOptionGroup": "このオプショングループにはオプションが含まれているため、削除できません。<br/>基になるオプションを削除する必要があります。",
+					"confirmDeleteOptionGroup": "本当にこのオプショングループを削除しますか？<br/>この操作は元には戻せません。"
+				},
+				"description": {
+					"priceDescription": "価格の説明",
+					"shortDescription": "簡単な説明",
+					"longDescription": "説明詳細"
+				},
+				"discount": {
+					"noDiscount": "割引なし",
+					"percentile": "割引（パーセンテージ）",
+					"monetary": "割引（金額）",
+					"invalidDiscount": "割引額は商品価格よりも少なくする必要があります"
+				},
+				"sellable": {
+					"isVisible": "表示"
+				},
+				"availability": {
+					"startTime": "開始時間",
+					"endTime": "終了時間",
+					"allTimeAvailability": "現在いつでも利用可となっております。営業時間を選択してください。"
+				},
+				"translation": {
+					"translation": "翻訳",
+					"languageTranslation": "既に翻訳済です！編集を選択してください。",
+					"translations": "翻訳",
+					"addNewTranslation": "新しい翻訳を追加"
+				},
+				"language": {
+					"defaultCatalogLanguage": "デフォルトのメニュー言語",
+					"changeLanguage": "言語を変更",
+					"sourceLanguage": "元々の言語",
+					"targetLanguage": "目標とする言語",
+					"withGoogleTranslate": "Google翻訳で変換"
+				},
+				"tooltip": {
+					"goToCategory": "カテゴリの詳細を表示するには、ここをクリックしてください",
+					"goToOffer": "商品の詳細を表示するには、ここをクリックしてください",
+					"translation": "割り当てられた翻訳を表示するには、ここをクリックしてください",
+					"goToOptionGroup": "オプショングループの詳細を表示するには、ここをクリックしてください",
+					"goToOption": "オプションの詳細を表示するには、ここをクリックしてください",
+					"options": "割り当てられたオプションを表示するには、ここをクリックしてください",
+					"goToVariant": "バリエーションの詳細を表示するには、ここをクリックしてください",
+					"optionGroup": "オプショングループとオプションを表示するには、ここをクリックしてください",
+					"changestatus": "ステータス変更"
+				},
+				"addRestriction": "新しい時間制限を追加",
+				"importTranslation1": "メニューアイテムのテキストをExcelで変更し、複数の言語に翻訳することができます。",
+				"importTranslation12": "メニューのすべてのテキストを含むExcelファイルをここからダウンロード。",
+				"importTranslation2": "Excelファイルには、少なくとも1つの商品にその言語が含まれている必要があります。",
+				"importTranslation3": "ファイルに含まれているすべてのテキストを、店舗の言語およびさまざまな言語に更新します。 Excelファイルの構造を変更するのではなく、新しいテキストを追加するだけです。",
+				"importTranslation4": "Excelの変更が済みましたら、下のボタンを押して該当ファイルを選択しアップロードしてください",
+				"contentTranslate": "テキストの変更と翻訳",
+				"contentDownload": "エラーが発生し、ファイルをダウンロードできません",
+				"contentFailedError": "エラーが発生し、ファイルをアップロードできません。ファイルの構造が変更されていないことを確認してください",
+				"orderable": {
+					"isOrderable": "注文可能"
+				},
+				"error": {
+					"overlappingSchedules": "期間が重複しているため、スケジュールを保存できません",
+					"timeScopeWrong": "時間範囲が間違っています",
+					"noDaySelect": "選択した日がありません",
+					"loadSchedules": "スケジュールの取得中にエラーが発生しました",
+					"createSchedule": "スケジュールの保存中にエラーが発生しました",
+					"updateSchedule": "スケジュールの更新中にエラーが発生しました",
+					"deleteSchedule": "スケジュールの削除中にエラーが発生しました"
+				},
+				"update": "Excelからメニューを更新する",
+				"acceptUpdate": "メニュー更新を受け入れる",
+				"importTranslationnew": "Excelテンプレートを使用してカタログをインポートできます。メニュー名、カテゴリ名、説明、価格、割引、および在庫数データをインポートできます。",
+				"importTranslationnew1": "Excelテンプレートをダウンロードして、メニューデータを入力します",
+				"updateTranslation": "Excelテンプレートを使用して、メニューに新しい商品を追加したり、既存のカタログアイテムを変更したりできます。メニュー名、カテゴリ名、説明、メニュー価格、割引、および在庫数データをインポートできます。",
+				"updateTranslation1": "メニューデータを含むExcelファイルをここからダウンロードします→→→",
+				"updateTranslation2": "変更したい商品の項目内容をを更新します。【注意】商品名は変更しないでください。",
+				"updateTranslation3": "新規に追加する商品はExcelファイル内に新しい行を追加して入力してください。",
+				"updateTranslation4": "既存商品の内容変更の場合、変更したい項目を更新します。商品内の特定の項目の変更を行う場合は、商品名は同じままである必要があります",
+				"priceVariants": "価格バリエーション",
+				"catalogOptionGroup": "オプショングループ",
+				"allowMultiple": "同じアイテムの複数選択を許可する",
+				"nocatalog": "メニューがありません",
+				"notable": "テーブルがありません",
+				"importLink": "リンクからカタログをインポート",
+				"importCatalogexternalsite": "外部サイト",
+				"importCataloglink": "リンク",
+				"importCataloglinkimport": "インポート",
+				"catalogOfstoreimported": "ストアのカタログ作成を開始しました。 完了するまでに10〜15分かかる場合があります。",
+				"catalogFetching": "カタログを取得しています。 1時間後にもう一度インポートしてください",
+				"catalogUnabletoimport": "カタログをインポートできませんでした",
+				"catalogPleaseentervalidlink": "有効なリンクを入力してください。"
+			},
+			"location": {
+				"text": "テーブル",
+				"backtoTables": "表に戻る",
+				"create": "テーブルを追加",
+				"createBulk": "テーブルをまとめて作成",
+				"noOfStoreLocations": "テーブル数",
+				"error": {
+					"noStoreFound2": "新しい店舗の場所へ",
+					"pattern": "無効なラベル-半角数字0〜9と大文字半角A〜Z、ハイフン（-）、アンダースコア（_）の組み合わせのみを使用できます。",
+					"digit": "無効なラベル-0〜9の数字のみ利用可能です"
+				},
+				"label": "テーブル名または番号",
+				"createTableMsg": "テーブルをまとめて追加",
+				"locationType": "場所の種類",
+				"table": "テーブル",
+				"location": "指定場所",
+				"room": "部屋",
+				"notablesFound": "テーブルが見つかりません",
+				"nocatalogfound": "メニューが見つかりません",
+				"tableStatus": "テーブルの状態",
+				"openTap": {
+					"closed": "閉じた",
+					"open": "開く"
+				},
+				"status": {
+					"success": "ステータスが更新されました",
+					"table": {
+						"pin": "テーブルPIN"
+					},
+					"error": "ステータス更新のエラー"
+				},
+				"print": {
+					"qrCodes": "QRコードを印刷する"
+				}
+			},
+			"locations": {
+				"text": "テーブル管理"
+			},
+			"qr": {
+				"download": {
+					"pdf": "QRコードのPDFをダウンロード",
+					"image": "QRコード画像をダウンロード"
+				},
+				"downloadPrintQRStore": "QRコードのPDFをダウンロード",
+				"downloadPrintQRAllLocation": "すべてのテーブルQRコードを一括でPDFダウンロード",
+				"downloadImageQRStore": "QRコード画像をダウンロード",
+				"downloadImageQRAllLocation": "すべてのQRコード画像をzipとして一括ダウンロード"
+			},
+			"help": {
+				"helpText": "ヘルプ"
+			},
+			"users": {
+				"header": "スタッフ設定",
+				"removeUser": "本当にこのユーザーのこの店舗へのアクセスを削除しますか？<br/>この操作は元には戻せません。",
+				"inviteUser": {
+					"inviteTitle": "ユーザーを招待する",
+					"invitationText": "以下のメールアドレスにメールが送信されます。ユーザーが招待を受け入れると、管理できるようになります",
+					"invitePrimaryButton": "招待する"
+				}
+			},
+			"region": {
+				"label": "都道府県"
+			},
+			"city": {
+				"label": "市区町村群"
+			},
+			"alias": "ゴナオーダードメイン",
+			"notSubscribedMsg": "この店舗はゴナオーダー有料プランを購入していません。 ゴナオーダードメインは、無料プランご利用中に有料プラン購読中の他の店舗に請求される場合があります。",
+			"noActiveSubscriptionsMsg": "このドメインは、GonnaOrder有料プランを購入した場合にのみ取得できます。有料プランを購入した後にご希望のドメインに変更が可能です。",
+			"domainTakenMsg": "このGonnaOrderドメインはすでに取得されています",
+			"aliasValidationMsg": "ドメインには少なくとも6文字が含まれている必要があり、少なくとも1つは半角a-zである必要があります。また数字の0-9、および記号「-」と「_」を使用できます。特殊文字と大文字は使用できません",
+			"phoneNumber": {
+				"pattern": "0〜9の数字のみ使用できます。"
+			},
+			"enablePaypalPaymentGonnaOrderLabel": "gonnaorder.com",
+			"preferredLanguage": {
+				"label": "優先言語"
+			},
+			"catalogOverview": "メニュー設定",
+			"ordering": "注文管理",
+			"details": "詳細",
+			"paymentProvoders": "支払いプロバイダー",
+			"disabled": "無効",
+			"paymentDisabled": "事前支払い無効",
+			"paymentOptional": "事前支払い選択可",
+			"paymentMandatory": "事前支払い必須",
+			"enabled": "有効",
+			"disconnect": "切断する",
+			"accountID": "アカウントID",
+			"connectWithPaypal": "Paypalに接続する",
+			"connectWithStripe": "Stripeと接続する",
+			"paymentMethodDetailsMessage": "接続したい支払いプロバイダーを選択します",
+			"optionGroup": {
+				"atMostOneOption": "最大1つのオプションを選択できます",
+				"customSelection": "カスタムセレクション",
+				"minimumRequired": "選択可能な合計最小オプション数",
+				"maximumAllowed": "選択可能な合計最大オプション数",
+				"maximumHeigherThanMimimum": "最大数は最小数以上である必要があります"
+			},
+			"message": {
+				"errorTryAgain": "エラーが発生しました。再試行してください",
+				"storeUpdate": "店舗が更新されました！",
+				"actionFail": "アクションが失敗しました！",
+				"loadFail": "ロードに失敗しました！",
+				"acessRemoveFail": "店舗からのアクセスの削除に失敗しました",
+				"acessRemoveSuccess": "店舗からのアクセスを正常に削除しました！",
+				"inviteUserFail": "ユーザーの招待に失敗しました！",
+				"inviteUserSuccess": "ユーザーは店舗の管理に招待されました！",
+				"uploadFail": "アップロードに失敗しました！",
+				"logoUploadSuccess": "ロゴが正常にアップロードされました！",
+				"imageUploadSuccess": "画像が正常にアップロードされました！",
+				"downloadFail": "ダウンロードに失敗しました！",
+				"settingsUpdate": "設定が更新されました！",
+				"receiveEmailMsg": "間もなくメールが届きます。メール内のリンクからメールを変更してください。",
+				"profileUpdate": "プロフィール更新完了！",
+				"translationsUpdateSuccess": "翻訳が正常に更新されました！",
+				"saveOfferSuccess": "商品の保存が成功しました",
+				"saveCategorySuccess": "カテゴリの保存が成功しました",
+				"childCategoryOffer": "商品に関連するオプショングループ！",
+				"childOfferCategory": "オプショングループに関連するオプション!",
+				"offerVaryAToffer": "商品に関連する商品バリエーション！",
+				"catalogVerifySuccess": "メニューデータの検証に成功しました！",
+				"catalogDataUploadSuccess": "メニューデータが正常にアップロードされました！",
+				"categoryDeleteSuccess": "カテゴリが正常に削除されました！",
+				"offerDeleteSuccess": "商品が正常に削除されました！",
+				"createAvailabilitySuccess": "空き状況の作成が完了しました",
+				"createAvailabilityFail": "空き状況の作成に失敗しました",
+				"locationDeleteSuccess": "テーブル{{label}}は正常に削除されました",
+				"noInStoreDelivery": "店舗内配送はサポートされません。",
+				"stripeDisconnect": "ストライプアカウントが切断されました",
+				"paypalDisconnect": "Paypalアカウントが切断されました",
+				"upgradeAffiliateSuccess": "アフィリエイト詳細がアップグレードされました！",
+				"loadProfileFail": "プロファイルを読み込めませんでした。時間を空けてもう一度やり直してください",
+				"verifyCatalogImageFailed": "画像からカタログを抽出することはできません。高解像度の画像、またはカタログの一部が1つのカテゴリのみの画像をインポートしてみてください",
+				"verifyCatalogImageSuccess": "メニュー画像の検証に成功しました！",
+				"imageRemoveSuccess": "画像が削除されました",
+				"logoRemoveSuccess": "ロゴが削除されました",
+				"zoneRemoveFail": "ゾーンの削除に失敗しました",
+				"zoneRemoveSuccess": "ゾーンを削除しました",
+				"zoneAdded": "ゾーンが正常に作成されました",
+				"zoneUpdated": "ゾーンが正常に更新されました",
+				"CreateScheduleSuccess": "正常に作成されました",
+				"updateScheduleSuccess": "正常に更新されました",
+				"deleteScheduleSuccess": "正常に削除されました",
+				"saveRuleSuccess": "ルールの保存が成功しました",
+				"deleteRuleSuccess": "ルールの削除が成功しました",
+				"saveDiscountVoucherSuccess": "割引クーポンの保存に成功しました",
+				"saveDiscountVoucherFailed": "割引クーポンの保存に失敗しました",
+				"deleteDiscountVoucherSuccess": "割引クーポンの削除に成功しました",
+				"locationCreateSuccess": "テーブル{{label}}が正常に作成されました",
+				"locationUpdateSuccess": "テーブル{{label}}が正常に更新されました"
+			},
+			"rejectOrder": "注文を拒否する",
+			"paypalNotsupported": "Paypalはサポートされていません",
+			"enableWithmelink": "Paypal.meリンクで支払いを有効にする",
+			"payPalmelink": "Paypal.meリンク",
+			"enableWithanylink": "任意の支払いリンクで支払いを有効にする",
+			"paymentProvider": "支払いプロバイダー",
+			"paymentLink": "支払いリンク",
+			"other": "その他",
+			"shoppingBasket": "買い物かご",
+			"settingsMandatory": "必須",
+			"settingsOptional": "任意",
+			"settingspickupEmailRequired": "メールアドレス入力",
+			"settingspickupPhoneRequired": "電話番号入力",
+			"addressDelivery": "デリバリー設定",
+			"orderAmount": "配達料が無料になる最低注文金額",
+			"deliveryAddressauto": "配送先住所オートコンプリート",
+			"postCodesrestrictions": "郵便番号ゾーンの制限",
+			"restricted": "制限する",
+			"nonRestricted": "制限なし",
+			"addressZones": "ゾーン",
+			"addressaddnewZones": "新しいゾーンを追加",
+			"createDifferentaddress": "配達ゾーン別設定",
+			"backtoZones": "ゾーンに戻る",
+			"minRadius": "最小半径",
+			"maxRadius": "最大半径",
+			"unit": "単位",
+			"postCodes": "郵便番号",
+			"postCodemsg": "郵便番号のリストをカンマまたは改行で区切って入力します",
+			"settingspickupNameRequired": "顧客名入力",
+			"zoneLabel": "ゾーン",
+			"invalidRadiusRange": "半径範囲が無効です",
+			"account": {
+				"deleteUserSuccess": "店舗へのユーザーアクセスは正常に削除されました",
+				"confirmDeleteUser": "このユーザーから店舗へのアクセスを削除してもよろしいですか？このアクションは元に戻せません。"
+			},
+			"subscription": {
+				"storeEligibility": "有料プランのお申込みがない場合、店舗は月に最大50回のメニュー表示または50回の受注を行うことができます。制限に達すると、お客様はメニューを見られなくなります。 有料プランをお申込み頂きますとこれらの制限を取り除くことができます。",
+				"vatprompt": {
+					"sodexobelgium": "あなたは Sodexo ネットワークの加盟店ですか? VAT 番号を入力して 30% の割引を受けてください",
+					"eu": "オンライン購入のVAT税を支払わない場合は御社のVAT番号を入力してください"
+				},
+				"sodexo": {
+					"affiliate": {
+						"prompt": "まだ Sodexo ネットワークのメンバーではありませんか?"
+					}
+				},
+				"active": "お申込み中",
+				"fourteenfreetrial": "14日間無料トライアル - 注文数は無制限",
+				"limitedFreemium": "限定フリーミアム - 注文数が無制限でGonnaOrderドメインを失わないように登録してください。",
+				"limitedFreemiumnumberof": "限定フリーミアム - 今月の注文数が5件に達しました。GonnaOrderドメインを失うことなく、無制限の注文ができるように登録してください。",
+				"discountVouchers": "割引クーポン",
+				"billing": {
+					"businessName": "商号"
+				}
+			},
+			"applicationId": "Application ID",
+			"accessToken": "アクセストークン",
+			"locationId": "ロケーションID",
+			"clientId": "クライアントID",
+			"clientSecret": "クライアントSecret",
+			"settingsDefaultcatalogview": "デフォルトのメニュー表示方法",
+			"settingsCollapsed": "折り畳み表示",
+			"settingsExpanded": "拡張表示",
+			"orderingNotification": "注文通知メール",
+			"orderingNotificationmessage": "注文ごとに以下のメールアドレスにメールを送信します",
+			"settingsManagestock": "在庫管理",
+			"settingStocklevel": "在庫数",
+			"settingsStockcheck": "在庫管理",
+			"name": "店舗名",
+			"thanksForstore": "店舗をご登録いただきありがとうございます",
+			"uploadyourmenu": "メニューをすばやく簡単にアップロード",
+			"configureyourstore": "必要に応じて店舗を構成",
+			"seeyourstore": "お客様から見える画面をプレビューする",
+			"findinstructions": "アプリケーションがどのように機能するかをご確認ください",
+			"orderingMinutesorderready": "注文の準備ができるまでの分",
+			"orderingDefaultestimated": "デリバリーとテイクアウトの注文が準備できるデフォルトの推定時間（分単位）",
+			"orderingMinimum": "最小",
+			"orderingMaximum": "最大",
+			"setting": {
+				"rules": {
+					"orderingrules": "注文ルール設定",
+					"addnewrule": "新しいルールを追加",
+					"rules": "ルール",
+					"orderamount": "注文金額",
+					"backtorules": "ルールに戻る",
+					"status": "ルールの状態",
+					"conditions": "条件",
+					"orderamountbetween": "特定の値の間の注文金額",
+					"minorderamount": "最小注文金額",
+					"maxaorderamount": "最大注文金額",
+					"actions": "動作",
+					"displayoptgroup": "選択肢のグループの表示",
+					"optgroups": "オプショングループ",
+					"addoptgroup": "オプショングループの追加",
+					"backtorule": "ルールに戻る",
+					"createruleptgroup": "オプショングループの作成",
+					"ruleoptgroup": "オプショングループ",
+					"infoDeleteORule": "ルールにはカテゴリーが含まれているため、削除できません。<br/>基になるカテゴリーを削除する必要があります",
+					"confirmDeleteRule": "このルールを削除してもよろしいですか？<br/>このアクションは元に戻せません。",
+					"updateRule": "ルールの更新"
+				},
+				"marketing": {
+					"fb": {
+						"labelError": "FacebookのピクセルトラッキングIDが無効です",
+						"label": "Facebookピクセル",
+						"meta": "FacebookWebサイト検証メタタグ",
+						"metaError": "無効なFacebookWebサイトの検証メタタグコンテンツ",
+						"UrlError": "FacebookのURLが無効です"
+					},
+					"google": {
+						"labelError": "無効なグーグルアナリティクストラッキングコード。"
+					},
+					"label": "マーケティング",
+					"GA": {
+						"label": "グーグルアナリティクス"
+					},
+					"enableFBMsg": "FacebookPixelで店舗追跡を有効にする",
+					"enableGAMsg": "GoogleAnalyticsで店舗追跡を有効にする",
+					"Websitelink": "ウェブサイトへのリンク",
+					"Facebooklink": "Facebookリンク",
+					"Instagramlink": "Instagramリンク",
+					"Carditlink": "Cardit.ioリンク",
+					"SocialMedia": "ウェブサイト、ソーシャルメディア、リンクされたアカウント",
+					"SocialMediaPromote": "さまざまな方法でお客様と店舗を繋げましょう",
+					"SocialMediaText": "高度な設定",
+					"website": {
+						"UrlError": "お店のホームページのURLが無効です"
+					},
+					"instagram": {
+						"UrlError": "InstagramのURLが無効です"
+					},
+					"cardit": {
+						"UrlError": "CardIto URL が無効です"
+					}
+				},
+				"samedayordering": "当日注文",
+				"requestorderdateupfront": "注文予約の受付",
+				"billing": "有料プラン",
+				"lastMile": {
+					"lastMileDeliverySoftware": "ラストマイルデリバリーソフトウェア",
+					"connectWithMynext": "mynextとつながる",
+					"enterMynextCredentials": "mynextの資格情報を入力してください"
+				},
+				"integrations": {
+					"username": "ユーザー名",
+					"password": "パスワード",
+					"connect": "接続する",
+					"theCredentialsAreNotValid": "資格情報が無効です",
+					"navName": "外部サービスとの接続",
+					"shareDataWithOtherApplications": "他のアプリケーションとデータを共有する",
+					"connectToHubrise": "Hubriseに接続する",
+					"enterHubriseCredentials": "Hubriseの資格情報を入力してください",
+					"connectedToHubrise": "Hubriseに接続",
+					"hubriseCustomerList": "顧客リスト",
+					"goToHubrise": "Hubriseに移動します",
+					"powersoft": {
+						"connectWithPowersoft": "",
+						"connectPowersoft": "",
+						"accessTokenmsg": "",
+						"agentCode": "",
+						"agentCodemsg": "",
+						"customerCode": "",
+						"customerCodemsg": "",
+						"emailmsg": "",
+						"connect": ""
+					}
+				},
+				"domains": "ドメイン",
+				"apps": {
+					"name": "アプリ",
+					"promoteGOApp": "GonnaOrderアプリを使って注文を促進する",
+					"promoteGOAppInfo": "お客様がアプリにお店のリンクを保存する事により、携帯端末からより簡単に注文できます",
+					"promoteCustomOApp": "お店独自のオリジナルアプリを使って注文を促進する",
+					"promoteCustomAppInfo": "より顧客にアピールできるお店独自のオリジナルアプリをご希望の方はお問い合わせください",
+					"iosAppLink": "iOSアプリリンク",
+					"invalidIOSAppLink": "AppStoreのURLが無効です",
+					"androidAppLink": "Androidアプリリンク",
+					"invalidAndroidAppLink": "PlayストアのURLが無効です"
+				},
+				"allowOrderUpdateByStore": "店舗による注文変更の許可",
+				"allowOrderDeletionByStore": "店舗による注文削除の許可",
+				"opentabordering": ""
+			},
+			"orderingEmailcustomer": "注文状況の変更についてお客様にメールを送信する",
+			"orderNotificationSound": "注文通知音を継続させる",
+			"schedule": {
+				"backToSchedule": "スケジュールに戻る",
+				"add": "追加",
+				"save": "保存",
+				"name": "名前",
+				"createScheduleItem": "新しいスケジュールを追加",
+				"editScheduleItem": "スケジュールの編集",
+				"cancel": "キャンセル",
+				"startTime": "開始時間",
+				"endTime": "終了時間",
+				"delete": "削除",
+				"mon": "月曜日",
+				"tue": "火曜日",
+				"wed": "水曜日",
+				"thu": "木曜日",
+				"fri": "金曜日",
+				"sat": "土曜日",
+				"sun": "日曜日",
+				"choose": "スケジュールを選択",
+				"CreateSpecialScheduleSuccess": "営業時間が正常に更新されました",
+				"error": {
+					"CreateSpecialSchedule": "営業時間の更新中にエラーが発生しました",
+					"LoadSpecialSchedules": "営業時間の取得中にエラーが発生しました",
+					"DeleteSpecialSchedule": "営業時間を削除する際にエラーが発生しました"
+				},
+				"DeleteSpecialScheduleSuccess": "営業時間は正常に削除されました",
+				"requestWishTime": "希望時間を伺う",
+				"assoonasPossible": "準備出来次第",
+				"futureTime": "先の日時予約",
+				"generalopening": "通常の営業時間",
+				"orderingTimes": "注文可能時間",
+				"addDaysOfWeek": "曜日を追加する",
+				"addDates": "日付を追加",
+				"Include": "含める",
+				"Exclude": "除外する",
+				"displayStartOrding": "注文開始時に希望時間を表示する",
+				"wishTimeMinutes": "希望の時間間隔-分",
+				"displayWishTimeFormat": "希望時間の表示形式",
+				"times": "時間",
+				"timeSlots": "スロット",
+				"slotDuration": "スロット-分",
+				"limitOrder": "スロットごとの注文数制限",
+				"noLimit": "制限なし",
+				"limit": "制限する",
+				"ordersPerSlot": "時間枠ごとの注文",
+				"wishTimeInFutureMinutes": "予約指定可能時間-現在から何分後",
+				"defaultOrderingMode": "デフォルトの注文モード",
+				"displaydesireddateandTime": "希望の日時を表示する",
+				"dateandTime": "日時",
+				"dateOnly": "日付のみ"
+			},
+			"addNewSchedule": "新しいスケジュールを追加",
+			"scheduleList": "スケジュール",
+			"filter": "フィルター",
+			"ready": "準備完了",
+			"global": {
+				"openTime": "営業時間"
+			},
+			"defaultPaymentSelection": "デフォルトの支払方法",
+			"notSelected": "未選択",
+			"preselected": "事前選択",
+			"common": {
+				"tooltip": {
+					"option": {
+						"addOption": "オプションを作成するには、ここをクリック"
+					},
+					"movedown": {
+						"Option": "オプションを下に移動するには、ここをクリック"
+					},
+					"moveup": {
+						"Option": "オプションを上に移動するには、ここをクリック"
+					}
+				}
+			},
+			"settingsDefaultVATPercentage": "デフォルトの消費税率",
+			"tableOrdering": "テーブル注文設定",
+			"settingsHidden": "非表示",
+			"schedulesSlot": "時間枠あたりの最大アイテム",
+			"schedulesSlotnote": "スロット総数にカウントされる項目を指定する必要があります",
+			"timeShouldFuture": "現在より先の時間を指定してください",
+			"discountVoucher": "割引クーポン",
+			"inputMinutes": "「分」を入力",
+			"selectMinutes": "「分」を選択",
+			"estimatedTime": "予定時刻",
+			"hideorderComment": "備考入力（注文全体）を非表示",
+			"hideorderitemComment": "備考入力（商品単位）を非表示",
+			"catalogOffer": "商品名",
+			"catalogCategory": "カテゴリー",
+			"settingDetails": "店舗の詳細",
+			"settingOrdering": "店舗の注文",
+			"settingPayment": "支払い設定",
+			"settingPickup": "テイクアウト",
+			"settingDelivery": "配達",
+			"settingLocations": "テーブル注文",
+			"settingCatalog": "ストアメニュー",
+			"settingOrderingRule": "注文ルール",
+			"settingSchedules": "営業時間設定",
+			"settingMarketing": "マーケティング",
+			"settingDiscountVouchers": "割引クーポン",
+			"domain": "ドメインとアプリ",
+			"customDomain": {
+				"additionalCustomDomain": "追加のカスタムドメイン",
+				"labelError": "ドメイン値が無効です"
+			},
+			"domaincustomInfo": "独自のカスタムドメインを使用できます。 https://example.comまたはサブドメイン（例： GonnaOrderドメインに加えてhttps://mystore.example.com。 これを機能させるには、ドメインプロバイダーで追加の構成を行う必要があります",
+			"catalogManageByExcel": "Excelで管理",
+			"settingspickupdisplaypickupAddress": "ピックアップ先住所",
+			"settingspickupHide": "隠す",
+			"settingspickupShow": "表示する",
+			"deleteStore": "このお店を削除してもよろしいですか？ このアクションは元に戻せません",
+			"deleteStoreSuccess": "お店は正常に削除されました",
+			"oneClickAddToBasket": "ワンクリックで買い物かごに追加",
+			"errorMinimumWishTime": "将来の最小希望時間が無効です。 1440以下のゼロ以外の正の数でなければなりません。",
+			"deleteStoreMsgError": "{{storeId}}のお店には注文またはカタログアイテムが含まれており、削除できません",
+			"postCodesErrorMsg": "郵便番号は最大10文字で、複数の郵便番号の場合はカンマで区切る必要があります。",
+			"customers": {
+				"customers": "お客様",
+				"customerName": "顧客名",
+				"customerPhone": "顧客の電話番号",
+				"customerEmail": "顧客のメールアドレス",
+				"orders": "注文管理",
+				"firstOrder": "最新注文日",
+				"lastOrder": "初回注文日"
+			},
+			"setupZones": "セットアップゾーン",
+			"radiusPostCode": "半径を使用",
+			"zonePostCodes": "郵便番号を使用する",
+			"radiusPostCodesDetails": "各ゾーンの郵便番号を定義する",
+			"radiusPostCodesDetails1": "各ゾーンの半径範囲を定義します。 これは、顧客の GPS 座標に基づいています。",
+			"radiusPostCodesDetails2": "この機能を有効にするには、住所のオートコンプリートを有効にし、店舗の詳細画面で店舗のGPS位置を定義する必要があります。",
+			"zoneName": "ゾーン名",
+			"zonesRestrictions": "配達ゾーンの制限",
+			"enableCustomerAuthentication": "顧客認証を有効にする",
+			"settingsDeliverypolygondescription": "マップで各ゾーンを定義します。 これは、お客様のGPS座標に基づいています",
+			"settingsDeliverydraw_map": "地図上に描く",
+			"settingsMaperrormsg": "このゾーンの範囲を地図上に描いてください",
+			"storeNotfound": "ストアが見つかりません。",
+			"externalOnlinePaymentId": "外部オンライン決済ID",
+			"externalNonOnlinePaymentId": "外部の非オンライン決済用ID",
+			"externalId": "外部ID",
+			"deliveryFeeExternalId": "外部idの配送料",
+			"combineorders": "注文をまとめる"
+		},
+		"load": {
+			"loadingMessage": "お待ちください"
+		},
+		"users": {
+			"removeAccessMsg": "店舗からアクセス権を取り消す",
+			"userManage": {
+				"label": "全てのユーザー"
+			},
+			"list": {
+				"inputEmail": "有効なメールアドレスを入力してください"
+			},
+			"details": {
+				"title": "ユーザーの詳細",
+				"id": "ID",
+				"username": "ユーザー名",
+				"googleAccount": "Googleアカウント",
+				"facebookAccount": "Facebookのアカウント",
+				"backToAllUsers": "すべてのユーザーに戻る",
+				"deleteUserSuccess": "ユーザーが正常に削除されました",
+				"updateUserSuccess": "ユーザーが正常に更新されました",
+				"confirmDeleteUser": "このユーザーを削除してもよろしいですか？"
+			}
+		},
+		"register": {
+			"registerTitle": "登録",
+			"registerationSuccess": "ご登録ありがとうございます。アカウントを確認するためのメールがまもなく届きます。",
+			"haveAccount": "すでにアカウントをお持ちですか？",
+			"emailInfo": "このメールアドレスが自分のものであることを確認する必要があります",
+			"accept": "[登録]ボタンをクリックすると、以下に同意された事となります",
+			"phoneNumberoptional": "電話番号（オプション）",
+			"acceptRegister": "同意して登録",
+			"registerHeaderMessage1": "GonnaOrderにお店を登録しましょう。",
+			"registerHeaderMessage2": "まずは無料で全機能をお試しください。",
+			"registerFormStep1": "メールアドレス/Google/Facebookアカウントでアカウントを作成",
+			"registerFormStep2": "ログインして店舗の基本情報を設定",
+			"registerFormStep3": "メニューの情報を登録",
+			"registerFinalMessage": "これで準備完了！",
+			"continue": "続ける",
+			"social": {
+				"google": "Googleで登録する",
+				"facebook": "Facebookで登録する",
+				"apple": "Appleに登録する"
+			}
+		},
+		"user": {
+			"profile": {
+				"updateTitle": "プロファイルの更新"
+			},
+			"details": {
+				"emailErrorMsgInvaild": "メールアドレスが無効です",
+				"lastName": "名字",
+				"confirmPassword": "パスワードを認証",
+				"confirmPasswordErrorMsgMisMatch": "パスワードが一致していません"
+			}
+		},
+		"passwordAuth": {
+			"passAuthButton": "再認証",
+			"passAuthPromt": "続行するにはパスワードを確認してください"
+		},
+		"storeError": {
+			"unExpected": "予期しないエラーが発生しました"
+		},
+		"menu": {
+			"preview": "プレビュー"
+		},
+		"continue": {
+			"accept": "[続ける]ボタンをクリックすると、次のことに同意したことになります"
+		},
+		"sodexo": {
+			"prompt": {
+				"purchase": "Sodexoアフィリエイトの場合、ゴナオーダー有料プランを購入すると、1年間50％の割引を受けられます"
+			}
+		},
+		"printer": {
+			"printersList": "プリンター",
+			"noPrinter": "プリンタが登録されていません",
+			"registerPrinter": "登録",
+			"registerTitle": "プリンタを登録する",
+			"setPrinterName": "プリンタ名を設定してください",
+			"printerName": "プリンタ名",
+			"unregisterPrinter": "リストからプリンタを削除する",
+			"confirmUnregister": "このプリンタをリストから削除してもよろしいですか？",
+			"selectPrinter": "プリンタを選択します",
+			"selectPrinterTitle": "プリンタを選択してください",
+			"notEmpty": "プリンタ名は空であってはなりません。",
+			"chooseAPrinter": "プリンターの選択",
+			"star": {
+				"noPrinter": "スタープリンターが検出されませんでした。"
+			},
+			"chooseAPrinterType": "プリンターの種類を選ぶ",
+			"connectionMethod": "接続方法",
+			"connectionMethodBluetooth": "",
+			"connectionMethodWiFi": "",
+			"connectionParameters": "接続パラメータ",
+			"connectionIpOrHostName": "IPまたはホスト名",
+			"connectionPort": "",
+			"connectionBluetoothMacAddr": "Macアドレス",
+			"testPrint": "テストプリント",
+			"starPrinter": {
+				"support": "Star社製プリンターのみ対応",
+				"indev": "スタープリンターのサポートは開発中です。"
+			},
+			"airPrinter": {
+				"support": "AirPrintプリンターのみ対応しています。"
+			}
+		}
+	}
+}

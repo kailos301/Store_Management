@@ -1,0 +1,364 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+:host {
+  height: calc(var(--vh, 1vh) * 100);
+}
+.content-wrapper {
+  // height: calc(100vh - 130px);
+  // height: calc((var(--vh, 1vh) * 100) - 74px);
+  max-width: 992px;
+  padding-bottom: 78px;
+  overflow: auto;
+}
+.store-info {
+  max-width: 992px;
+  background-color: #F2F0EE;
+  min-height: 80px;
+  h1 {
+    font-size: 1.25em;
+    color: #000;
+  }
+  .close-details {
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    background-color: rgba(255,255,255,0.68);
+   }
+  .disclaimer {
+    font-size: 0.850em;
+    padding-left: 4px;
+  }
+}
+.container {
+  max-width: 992px;
+  border: 1px solid #ddd;
+  @include media-breakpoint-down(md) {
+    border: 0;
+    border-top: 1px solid #ddd;
+  }
+  .content {
+    min-height: calc(100vh - 179px);
+    h1 {
+      font-size: 1.125em;
+      color: #000;
+    }
+    .order-number {
+      font-size: 1.563em;
+      font-weight: 400;
+    }
+    .description {
+      font-size: 1.250em;
+      font-weight: 500;
+    }
+    .order-status {
+      display: inline-block;
+      .wrapper {
+        .checkpoint {
+          position: relative;
+          width: 18px;
+          height: 18px;
+          background-color: transparent;
+          border-radius: 25px;
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-top: -3px;
+            margin-left: -3px;
+            width: 24px;
+            height: 24px;
+            background-color: white;
+            border: 1px solid #3d4a84;
+            border-radius: 25px;
+            z-index: 1;
+          }
+          &::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            width: 100%;
+            height: 1px;
+            background-color: #3d4a84;
+            z-index: 0;
+          }
+          .dot {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            top: 0;
+            left: 0;
+            background-color: transparent;
+            border-radius: 25px;
+            z-index: 1;
+          }
+        }
+        .status {
+          color: #707070;
+        }
+        .rejected {
+          display: none;
+        }
+        .sent {
+          .checkpoint {
+            &::before {
+              left: 50%;
+              margin-left: -12px;
+            }
+            &::after {
+              left: 50%;
+              margin-left: 8px;
+              width: calc(50% - 8px);
+            }
+            .dot {
+              top: 0;
+              left: 50%;
+              margin-left: -9px;
+            }
+          }
+       }
+        .received {
+          .checkpoint {
+            &::before {
+              left: 50%;
+              margin-left: -12px;
+            }
+            &::after {
+              left: 0;
+              width: 100%;
+            }
+            .dot {
+              top: 0;
+              left: 50%;
+              margin-left: -9px;
+            }
+          }
+        }
+        .ready, .rejected {
+          .checkpoint {
+            &::before {
+              left: 50%;
+              margin-left: -12px;
+            }
+            &::after {
+              right: 50%;
+              margin-right: 8px;
+              width: calc(50% - 8px);
+            }
+            .dot {
+              top: 0;
+              left: 50%;
+              margin-left: -9px;
+            }
+          }
+        }
+        &.SUBMITTED { // submitted
+          .sent {
+            .checkpoint {
+              .dot {
+                background-color: #000;
+              }
+            }
+            .status {
+              color: #000;
+            }
+          }
+        }
+        &.RECEIVED { // submitted
+          .sent {
+            .checkpoint {
+              .dot {
+                top: 4px;
+                margin-left: -5px;
+                width: 10px;
+                height: 10px;
+                background-color: #000;
+              }
+            }
+
+          }
+          .received {
+            .checkpoint {
+              .dot {
+                background-color: #000;
+              }
+            }
+            .status {
+              color: #000;
+            }
+          }
+        }
+        &.CLOSED { // submitted
+          .sent, .received {
+            .checkpoint {
+              .dot {
+                top: 4px;
+                margin-left: -5px;
+                width: 10px;
+                height: 10px;
+                background-color: #000;
+              }
+            }
+          }
+          .ready {
+            .checkpoint {
+              .dot {
+                background-color: #098b00;
+              }
+            }
+            .status {
+              color: #098b00;
+            }
+          }
+        }
+        &.CANCELED, &.CANCELLED { // rejected
+          .sent, .received {
+            .checkpoint {
+              .dot {
+                top: 4px;
+                margin-left: -5px;
+                width: 10px;
+                height: 10px;
+                background-color: #000;
+              }
+            }
+          }
+          .ready {
+            display: none;
+          }
+          .rejected {
+            display: block;
+            .checkpoint {
+              .dot {
+                background-color: #ff0909;
+              }
+            }
+            .status {
+              color: #ff0909;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.bottom-wrapper {
+  bottom: 0;
+  background-color: #fff;
+  z-index: 3;
+}
+.button-wrapper {
+  background-color: #fff;
+  max-width: 992px;
+  border: 1px solid #ddd;
+  line-height: 1.75rem;
+  .button {
+    position: relative;
+    color: #fff;
+    background-color: #000;
+    border-radius: 4px;
+  }
+}
+.email-confirmation-wrapper {
+  h3 {
+    background-color: #fff;
+    font-size: 1.000em;
+    @include media-breakpoint-down(xs) {
+      padding-left: 34px !important;
+      padding-right: 34px !important;
+    }
+  }
+  .email-confirmation-form {
+    max-width: 330px;
+    @include media-breakpoint-down(xs) {
+      max-width: 85%;
+    }
+    .btn.btn-submit {
+      padding: 0;
+      position: absolute;
+      border: 0;
+      right: 0;
+      width: 50px;
+      height: 53px;
+      z-index: 4;
+      i {
+        position: absolute;
+        margin: 0;
+        top: 17px;
+        left: 16px;
+        z-index: 1;
+        font-size: 1.250em;
+        color: #000000;
+      }
+      input[type=submit] {
+        background-color: transparent;
+        padding: 28px 10px 15px 10px;
+        border: 0px;
+        border-radius: 0;
+        color: transparent;
+        font-size: 0.875em;
+        line-height: 11px;
+        z-index: 2;
+      }
+    }
+    .is-invalid {
+      .btn.btn-submit {
+        display: none;
+      }
+    }
+
+  }
+}
+.label-as-h3 {
+  height: 22px !important;
+  height: auto !important;
+  border: 0px !important;
+  background-color: #F2F0EE;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.variant-wrapper {
+  border: 0px;
+  box-sizing: border-box;
+  padding-left: 8px;
+  padding-right: 8px;
+  min-height: 48px;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.875em;
+  color: #444;
+  &.no-border {
+    border: 0;
+  }
+  i {
+    position: absolute;
+    right: 0;
+    color: #000;
+  }
+  a, label {
+    padding: 0;
+    border: 0 !important;
+    text-decoration: none;
+  }
+}
+
+.overflow-auto {
+  scroll-behavior: smooth;
+}
+
+.overflow-auto::-webkit-scrollbar {
+  width: 7px;
+  background: white;
+}
+
+.overflow-auto::-webkit-scrollbar-thumb {
+  background-color: #c3c3c3;
+  // outline: 1px solid #888888;
+  border-radius: 20px;
+}
+
+.mobile-app-badge {
+  width: 160px;
+}

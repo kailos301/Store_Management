@@ -1,0 +1,130 @@
+<form [formGroup]="paypalForm">
+  <div class="card list">
+    <div class="row">
+      <div class="col-xl-2 col-lg-4"><img src="assets/paypal.svg" style="max-width: 220px" width="100%"></div>
+      <div class="col-xl-10 col-lg-8">
+
+        <label class="col-form-label d-block mb-2 py-0">{{'admin.store.payment.paypalDisableMsg'|translate}}</label>
+        <button class="btn btn-primary px-5" *ngIf="!paypalId" (click)="connect()"
+          disabled>{{'admin.store.connectWithPaypal'|translate}}</button>
+        <div class="form-horizontal" *ngIf="!paypalId && paypalId!=undefined">
+          <div class="form-group">
+            <label class="col-form-label" for="paypalAccount">{{'admin.store.accountID'|translate}}</label>
+            <div class="controls col-xl-4 col-lg-8 col-md-12 p-0">
+              <div class="input-group">
+                <input id="paypalAccount" class="form-control" type="text" readonly [value]="paypalId">
+                <span class="input-group-append"><button class="btn btn-danger"
+                    (click)="disconnect()">{{'admin.store.disconnect'|translate}}</button></span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{'admin.store.enabled'|translate}}</label> &nbsp;
+            <label class="switch">
+              <input type="checkbox" id="enablePaypalPayment" [checked]="paymentFlag"
+                (change)="togglePaypalMeSwitch($event)" />
+              &nbsp;<span class="slider round"></span>
+            </label>&nbsp;
+            <label>{{'admin.store.disabled'|translate}}</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body pb-0" id="paypalContainer">
+      <div class="row">
+        <div class="col-xl-2 col-lg-4 mt-n3">
+          <img src="assets/img/paypalMe.png" width="100%" style="max-width: 220px">
+        </div>
+        <div class="col-xl-10 col-lg-8">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="form-check-label">{{'admin.store.enableWithmelink'|translate}}
+                </label>&nbsp;
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                <label class="switch pt-1 mb-0">
+                  <input type="checkbox" id="POST_ORDER_PAYMENT_LINK_PAYPALME_ENABLED"
+                    formControlName="POST_ORDER_PAYMENT_LINK_PAYPALME_ENABLED"
+                    (change)="togglePaypalMeSwitch($event)" />
+                  &nbsp;<span class="slider round"></span>
+                </label>&nbsp;
+                <label>{{'admin.store.enabled'|translate}}</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-2">
+              {{'admin.store.payPalmelink'|translate}}
+            </div>
+            <div class="col-md-5">
+              <input type="text" (focusout)="onFocusOut()" formControlName="POST_ORDER_PAYMENT_LINK_PAYPALME_URL"
+                id="POST_ORDER_PAYMENT_LINK_PAYPALME_URL" class="form-control url-field" maxlength="200"
+                value="https://paypal.me/" (keyup)="checkPredefault($event,true)">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-body" id="otherContainer">
+      <div class="row">
+        <div class="col-xl-2 col-lg-4">
+          <h2 class="form-check-label font-weight-light">{{'admin.store.other'|translate}}
+          </h2>
+        </div>
+        <div class="col-xl-10 col-lg-8">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="form-check-label">{{'admin.store.enableWithanylink'|translate}}
+                </label>&nbsp;
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                <label class="switch pt-1 mb-0">
+                  <input type="checkbox" id="paymentLinkFlag" formControlName="POST_ORDER_PAYMENT_LINK_GENERAL_ENABLED"
+                    (change)="togglePaymentLinkSwitch($event)" />
+                  &nbsp;<span class="slider round"></span>
+                </label>&nbsp;
+                <label>{{'admin.store.enabled'|translate}}</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-2">
+              {{'admin.store.paymentProvider'|translate}}
+            </div>
+            <div class="col-md-5">
+              <input type="text" (focusout)="onFocusOut()" formControlName="POST_ORDER_PAYMENT_LINK_GENERAL_DESCRIPTION"
+                id="POST_ORDER_PAYMENT_LINK_GENERAL_DESCRIPTION" class="form-control" maxlength="100">
+              <div class="invalid-feedback"
+                *ngIf="getControl('POST_ORDER_PAYMENT_LINK_GENERAL_DESCRIPTION').errors?.required">
+                <span>
+                  {{'admin.global.field.required'|translate}}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col-md-2">
+              {{'admin.store.paymentLink'|translate}}
+            </div>
+            <div class="col-md-5">
+              <input type="text" (focusout)="onFocusOut()" formControlName="POST_ORDER_PAYMENT_LINK_GENERAL_URL"
+                id="POST_ORDER_PAYMENT_LINK_GENERAL_URL" maxlength="200" value="https://"
+                (keyup)="checkPredefaultPaymentLink($event, false)" class="form-control url-field">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

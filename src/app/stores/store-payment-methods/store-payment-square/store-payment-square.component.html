@@ -1,0 +1,82 @@
+<div class="card list mb-0">
+    <div class="card-body py-0">
+        <div class="row">
+            <div class="col-xl-2 col-lg-4">
+                <img src="assets/img/payment_logos/square.svg" width="100%" style="max-width: 110px">
+            </div>
+            <div class="col-xl-10 col-lg-8">
+                <label class="col-form-label d-block mb-2 py-0">{{'admin.store.payment.squareUserMsg' | translate}}</label>
+
+                <form [formGroup]="squareForm">
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            {{'admin.store.applicationId'|translate}}
+                        </div>
+                        <div class="col-md-5">
+                            <input type="password" (focusout)="updateSettings()" formControlName="SQUARE_APPLICATION_ID"
+                                class="form-control" maxlength="100">
+                            <div class="invalid-feedback" *ngIf="getControl('SQUARE_APPLICATION_ID').errors?.required">
+                                <span>
+                                    {{'admin.global.field.required'|translate}}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-2">
+                            {{'admin.store.accessToken'|translate}}
+                        </div>
+                        <div class="col-md-5">
+                            <input type="password" (focusout)="updateSettings()" formControlName="SQUARE_ACCESS_TOKEN"
+                                maxlength="100" class="form-control">
+                            <div class="invalid-feedback" *ngIf="getControl('SQUARE_ACCESS_TOKEN').errors?.required">
+                                <span>
+                                    {{'admin.global.field.required'|translate}}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-2">
+                            {{'admin.store.locationId'|translate}}
+                        </div>
+                        <div class="col-md-5">
+                            <input type="password" (focusout)="updateSettings()" formControlName="SQUARE_LOCATION_ID"
+                                maxlength="100" class="form-control">
+                            <div class="invalid-feedback" *ngIf="getControl('SQUARE_LOCATION_ID').errors?.required">
+                                <span>
+                                    {{'admin.global.field.required'|translate}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="row mt-3">
+
+                    <div class="col-md-6">
+                        <div class="form-group mb-3 mb-md-0">
+                            <label class="form-check-label">{{'admin.store.payment.creditCard'|translate}} <img
+                                    class="ml-3 cc-payment-image" src="assets/img/payment-credit-card.png">
+                            </label>&nbsp;
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb-0">
+                            <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                            <label class="switch pt-1 mb-0">
+                                <input type="checkbox" [(ngModel)]="squareEnabled" (ngModelChange)="toggleSquarePayments($event)" />
+                                &nbsp;<span class="slider round"></span>
+                            </label>&nbsp;
+                            <label>{{'admin.store.enabled'|translate}}</label>
+                        </div>
+                    </div>
+
+                </div>
+                
+
+
+            </div>
+        </div>
+    </div>
+</div>

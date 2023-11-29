@@ -1,0 +1,188 @@
+@import "~vazir-font/dist/font-face.css";
+
+html[lang="fa"], html[lang="ar"], html[lang="iw"], html[lang="ku"], html[lang="ur"] {
+  body {
+    direction: rtl;
+    font-family: Vazir, serif;
+  }
+
+  .language-container {
+    direction: ltr;
+  }
+
+  .catalog-language-selector {
+    right: unset !important;
+    left: 10px !important;
+  }
+
+  .hero {
+    .logo {
+      left: unset !important;
+      right: 18px !important;
+      @include media-breakpoint-down(md) {
+        left: unset !important;
+        right: 8px !important;
+      }
+    }
+
+    .disclaimer {
+      left: 10px !important;
+      right: unset !important;
+    }
+  }
+
+  .chevron-left {
+    left: 0 !important;
+    right: unset !important;
+  }
+
+  .chevron-right {
+    right: 0 !important;
+    left: unset !important;
+  }
+
+  .tab-content .menu-item::after {
+    right: unset !important;
+    left: 20px !important;
+  }
+
+  @media (max-width: 991.98px) {
+    .tab-content .menu-item::after {
+      right: unset !important;
+      left: 20px !important;
+    }
+  }
+
+  ul.nav-tabs {
+    padding: 0 !important;
+  }
+
+  .tab-content .menu-item .price {
+    margin: 0 0 0 8px !important;
+  }
+
+  .tab-content .menu-item .variant::before {
+    margin: 0 0 0 8px !important;
+  }
+
+  .button-wrapper .button::before {
+    right: 10px !important;
+    left: unset !important;
+  }
+
+  .button-wrapper .button::after {
+    left: 10px !important;
+    right: unset !important;
+  }
+
+  .close-details {
+    img {
+      transform: rotate(180deg);
+    }
+  }
+
+  .content {
+    .basic-info {
+      text-align: right;
+    }
+
+    .option-wrapper {
+      text-align: right;
+    }
+
+    .radio .container input {
+      left: 0;
+    }
+
+    .checkmark {
+      left: 0 !important;
+      right: unset !important;
+    }
+  }
+
+  .store-info {
+    direction: rtl;
+    text-align: right;
+
+    a.position-fixed {
+      transform: rotate(180deg);
+    }
+  }
+
+  .item-list {
+    text-align: right;
+
+    .text-right {
+      text-align: left !important;
+    }
+  }
+
+  .payment-method-wrapper {
+    direction: ltr;
+  }
+
+  .was-validated .form-control:invalid, .form-control.is-invalid {
+    background-position: left !important;
+  }
+
+  .content {
+    .description {
+      text-align: right;
+    }
+  }
+
+  .mr-1, .mx-1 {
+    margin-left: 0.25rem !important;
+    margin-right: unset !important;
+  }
+
+  .ml-1, .mx-1 {
+    margin-right: 0.25rem !important;
+    margin-left: unset !important;
+  }
+
+  .ml-2, .mx-2 {
+    margin-right: 0.5rem !important;
+    margin-left: unset !important;
+  }
+
+  .order-status {
+    .sent {
+      .checkpoint {
+        &:before {
+          left: unset !important;
+          margin-left: unset !important;
+          right: 50%;
+          margin-right: -12px;
+        }
+
+        &:after {
+          left: unset !important;
+          margin-left: unset !important;
+          right: 50%;
+          margin-right: 8px;
+          width: 100%;
+        }
+      }
+    }
+
+    .ready, .rejected {
+      .checkpoint {
+        &:before {
+          left: 50%;
+          margin-left: -12px;
+          right: 50%;
+          margin-right: -12px;
+        }
+
+        &:after {
+          right: unset !important;
+          margin-right: unset !important;
+          left: 50%;
+          margin-left: 8px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

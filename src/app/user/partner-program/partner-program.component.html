@@ -1,0 +1,21 @@
+<div class="col-md-12">
+  <div class="animated fadeIn">
+    <div class="card list">
+      <div class="card-header">{{'admin.global.partnerProgram.label' | translate}}
+        <app-help-icon [helpPageName]="partnerProgramHelpPage"></app-help-icon>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="btn-group">
+        <button type="button" class="btn btn-outline-primary" value="Vouchers" routerLink="vouchers" routerLinkActive="btnChange" [ngClass]="{'active':isActive}">
+          {{'admin.global.partnerProgram.vouchers' | translate}}
+        </button>
+        <button type="button" class="btn btn-outline-primary" value="Commissions" routerLink="commissions" routerLinkActive="btnChange">
+          {{'admin.global.partnerProgram.commissions' | translate}}
+        </button>
+      </div>
+      <router-outlet>
+      </router-outlet>
+    </div>
+  </div>
+</div>

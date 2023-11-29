@@ -1,0 +1,13 @@
+// Here you can add other styles
+.font-medium {
+  font-weight: 500 !important;
+}
+
+// mixins
+@mixin animation-transition($str) {
+  -webkit-transition: #{$str};
+  -moz-transition: #{$str};
+  -ms-transition: #{$str};
+  -o-transition: #{$str};
+  transition: #{$str};
+}

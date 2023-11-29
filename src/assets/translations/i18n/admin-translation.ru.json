@@ -1,0 +1,1183 @@
+{
+	"admin": {
+		"global": {
+			"delete": "Yдалять",
+			"cancel": "Oтмена",
+			"ok": "Хорошо",
+			"reject": "Oтклонять",
+			"create": "Создайте",
+			"yes": "да",
+			"print": "Распечатать",
+			"save": "Сохранить",
+			"no": "нет",
+			"close": "близко",
+			"name": "имя",
+			"firstName": "Имя",
+			"language": "язык",
+			"comment": "Комментарий",
+			"email": "Электронное письмо",
+			"login": "Авторизоваться",
+			"noData": "Данные не найдены",
+			"field": {
+				"required": "Это поле обязательно к заполнению",
+				"minLength": "В этом поле должно быть не менее {{minLength}} символов.",
+				"maxLength": "Это поле не может содержать более {{maxLength}} символов",
+				"maxNumber": "Это поле не может быть больше {{maxNumber}}",
+				"requiredValue": "Значения скидки должны быть больше 0.",
+				"downloadFlyer": "Скачать флаер"
+			},
+			"description": "Описание",
+			"discount": "скидка",
+			"country": "Страна",
+			"timezone": "Часовой пояс",
+			"pleaseSelect": "Пожалуйста выберите ...",
+			"address": "Адрес",
+			"addressLine1": "Адресная строка 1",
+			"addressLine2": "Адресная строка 2",
+			"price": "Цена",
+			"postCode": "Почтовый индекс",
+			"postCodePattern": "Invaild - использовать только буквенно-цифровые",
+			"change": "изменить",
+			"update": "Обновить",
+			"password": "пароль",
+			"sentenceText": "и",
+			"anyOption": "Можно выбрать любое количество опций",
+			"exactOneOption": "Точно один вариант должен быть выбран",
+			"partnerProgram": {
+				"label": "Партнерская программа",
+				"vouchers": "Ваучеры",
+				"commissions": "Комиссионные"
+			},
+			"voucher": {
+				"label": "Код ваучера",
+				"voucherQuestion": "Kupon sorusu"
+			},
+			"subscription": {
+				"label": "Подписки",
+				"status": "Статус подписки",
+				"endDate": "Дата окончания подписки",
+				"purchase": "Подписка на покупку",
+				"checkout": {
+					"stripe": "Оплатить с помощью кредитной карты",
+					"paypal": "Оплата с PayPal"
+				},
+				"price": {
+					"label": "Стоимость подписки"
+				},
+				"vat": {
+					"label": "НДС",
+					"invalid": "Номер НДС недействителен",
+					"valid": "Номер НДС действителен"
+				},
+				"vatNumber": {
+					"label": "Номер НДС"
+				},
+				"totalPrice": {
+					"label": "Итоговая цена"
+				},
+				"billingDetails": {
+					"label": "Платежные реквизиты"
+				},
+				"continue": "Продолжить",
+				"discountVoucher": {
+					"patternInvalid": "Ваучер на скидку должен соответствовать шаблону 'XXXX-XXXX'",
+					"invalid": "Ваучер не действителен",
+					"alreadyReserved": "Ваучер уже зарезервирован и не может быть использован",
+					"valid": "Ваучер действителен"
+				},
+				"vatamount": {
+					"label": "Сумма НДС взимается"
+				},
+				"pricewithvat": {
+					"label": "Цена с НДС"
+				},
+				"vatnotcharged": {
+					"label": "Без НДС"
+				},
+				"invoiceLabel": "Счета на покупку",
+				"extendPurchase": "Продлить подписку",
+				"createInvoice": "Создать счет",
+				"updateInvoice": "Обновить счет",
+				"deleteInvoice": "Удалить счет-фактуру",
+				"discountPercentage": "Скидка в процентах",
+				"currency": "валюта",
+				"paymentId": "Идентификатор платежа поставщика платежа",
+				"partnerEmail": "Электронная почта партнера"
+			},
+			"validate": {
+				"amountNumbers": "Сумма должна содержать только цифры"
+			},
+			"paymentDetails": "Детали платежа",
+			"termsPoliciesMsg": "я принимаю",
+			"termsOfUse": "Условия эксплуатации",
+			"privacyPolicy": "политика конфиденциальности",
+			"phoneNumber": "Номер телефона",
+			"currentLanguage": "en",
+			"storeLabel": "хранить",
+			"contactus": {
+				"thankYou": "Спасибо, что связались с GonnaOrder. Мы ответим вам по электронной почте в ближайшее время.",
+				"instructions": "Найти инструкции о том, как работает приложение и ответы на часто задаваемые вопросы",
+				"gettintouch": "Не можете найти то, что ищете? Связаться! Напишите нам о проблеме или проблеме, с которой вы столкнулись, и мы свяжемся с вами. Убедитесь, что вы включили достаточно информации, чтобы мы могли быстрее реагировать",
+				"faq": "Часто задаваемые вопросы",
+				"helpCenter": "Центр помощи",
+				"submit": "Разместить",
+				"support": "Служба поддержки",
+				"featuresGuide": "Руководство по функциям"
+			},
+			"uploadNow": "Загрузить сейчас",
+			"role": "Роль",
+			"administrator": "Администратор",
+			"standardUser": "Стандартный пользователь",
+			"saveAndNew": "Сохранить и добавить новый",
+			"saveAndContinue": "",
+			"next": "следующий",
+			"type": "Тип",
+			"value": "Значение",
+			"active": "Активный",
+			"consumed": "Потребляется",
+			"availabilityRestrictions": "Ограничения доступности",
+			"from": "Из",
+			"To": "Чтобы",
+			"available": "Имеется в наличии",
+			"partner": "Партнер",
+			"emailStatus": "Статус электронной почты",
+			"superAdmin": "Супер администратор",
+			"remove": "удалять",
+			"availableTimes": "Доступное время",
+			"to": "Чтобы",
+			"any": "Любой",
+			"reloadApplication": "Обновить приложение",
+			"newVersionAvailable": "Вы используете старую версию приложения. Перезагрузите приложение, чтобы получить последнее обновление",
+			"vatPercentage": "НДС%",
+			"phone": "Телефон",
+			"registeredAt": "Зарегистрировано на",
+			"initialValue": "Начальное значение"
+		},
+		"alerts": {
+			"headerError": "Ошибка!",
+			"errorOccured": "Произошла ошибка",
+			"headerSuccess": "Успех!",
+			"invalidCredentials": "Предоставлены неверные учетные данные.",
+			"accountActivated": "Ваша учетная запись активирована. Войдите ниже, чтобы продолжить.",
+			"passwordChanged": "Ваш пароль изменился. Войдите ниже, чтобы продолжить.",
+			"emailChanged": "Ваш электронный адрес изменился. Войдите ниже, чтобы продолжить.",
+			"oopsLostMsg": "К сожалению! Ты потерян.",
+			"pageNotFound": "Страница, которую вы ищете, не найдена.",
+			"problemMsg": "Что-то пошло не так",
+			"pageUnavailable": "Случилось нечто неожиданное",
+			"userInvitationSuccessfull": "Ваша регистрация прошла успешно. Войдите, чтобы получить доступ к {{storeName}}",
+			"socialAccountLoginFailed": "Убедитесь, что вы связали свою учетную запись в социальной сети, прежде чем пытаться ее использовать.",
+			"accessDenied": "Доступ запрещен"
+		},
+		"login": {
+			"forgetPassword": "забыл пароль?",
+			"noAccount": "У вас нет аккаунта?",
+			"signUp": "Подписаться",
+			"social": {
+				"header": "или подключитесь через свой социальный аккаунт:",
+				"google": "Войти через Google",
+				"facebook": "Войти с Facebook",
+				"apple": "Войти через Apple"
+			}
+		},
+		"account": {
+			"receiveEmailMsg": "Вскоре вы получите электронное письмо для подтверждения вашей учетной записи.",
+			"profile": "Изменение профиля",
+			"provideEmailMsg": "Пожалуйста, укажите вашу электронную почту",
+			"changePassword": "Изменить пароль",
+			"logout": "Выйти",
+			"affiliate": {
+				"lastName": "Фамилия",
+				"create": "Стать партнером",
+				"pleaseVisit": "Пожалуйста, посетите",
+				"profile": "страница вашего профиля",
+				"updateInfoMsg": "если вы хотите обновить свою информацию"
+			},
+			"currentPassword": "текущий пароль",
+			"newPassword": "Новый пароль",
+			"social": {
+				"nav": "Социальные аккаунты",
+				"header": "Свяжите аккаунты в социальных сетях",
+				"google": {
+					"header": "Аккаунт Google",
+					"linkAccount": "Свяжите аккаунт Google"
+				},
+				"link": {
+					"success": "Социальный аккаунт был успешно привязан"
+				},
+				"facebook": {
+					"header": "аккаунт в Фэйсбуке",
+					"linkAccount": "Свяжите аккаунт Facebook"
+				},
+				"apple": {
+					"header": "учетная запись Apple",
+					"linkAccount": "Привязать аккаунт Apple"
+				}
+			},
+			"createPassword": "Придумать пароль"
+		},
+		"forgot": {
+			"header": "Забыл пароль",
+			"submit": "Разместить",
+			"alreadyKnow": "Уже знаете свой пароль и не хотите его менять?",
+			"emailInvalid": "Адрес электронной почты недействителен.",
+			"successHeader": "Отлично сработано!",
+			"successMsg": "Вскоре вы получите электронное письмо для сброса пароля.",
+			"emailNotRegister": "Это письмо не зарегистрировано"
+		},
+		"updatePassword": {
+			"header": "Обновить пароль",
+			"subHeader": "Пожалуйста, введите ваш новый пароль",
+			"confirmPassword": "Подтвердите Пароль"
+		},
+		"store": {
+			"minutes": "минут",
+			"closeOrder": "Закрыть заказ",
+			"acceptOrder": "Принять заказ",
+			"acceptOrderMarkReady": "Принять заказ и отметить как готовый",
+			"acceptOrderEstimatedTime": "Принять заказ и указать расчетное время",
+			"minutesValidationMsg": "Протокол должен быть действительным положительным числом",
+			"list": {
+				"storesList": "Список магазинов",
+				"searchByAlias": "Входной домен GonnaOrder (не менее 6 символов)"
+			},
+			"storeimages": "Хранить изображения",
+			"storeCreation": "Зарегистрировать новый магазин",
+			"settings": "настройки",
+			"paymentMethod": "Способ оплаты",
+			"paymentOptions": "Варианты оплаты",
+			"paymentOptionsDisabled": "Варианты оплаты отключены, потому что ни один способ оплаты для магазина не был включен.",
+			"deliveryAtAddressOptions": "Доставка по адресам",
+			"minDeliveryAmount": "Минимальная сумма заказа доставки",
+			"deliveryFee": "Стоимость доставки",
+			"order": {
+				"label": "порядок",
+				"orderSent": "Заказ отправлен",
+				"orderWish": "Заказать Желание",
+				"notifications": {
+					"receipt": "Получать уведомления для заказов"
+				},
+				"floor": "Пол",
+				"customerName": "Имя Клиента",
+				"newestOrderSent": "Отправлен последний заказ",
+				"oldestOrderSent": "Самый старый заказ отправлен",
+				"newestOrderWish": "Желание новейшего заказа",
+				"oldestOrderWish": "Желание самого старого заказа",
+				"newestOrderExpected": "Ожидается новый заказ",
+				"oldestOrderExpected": "Ожидается самый старый заказ",
+				"autoprint": {
+					"receipt": "Автоматически распечатывать входящие заказы"
+				},
+				"orderExpected": "Ожидаемый заказ",
+				"newestOrderEffective": "Действует новейший заказ",
+				"oldestOrderEffective": "Действует самый старый заказ",
+				"dateTimeRange": "Дата Время Диапазон",
+				"orderEffective": "Порядок действует",
+				"noFilter": "Нет фильтра",
+				"yesterday": "Вчера",
+				"lastHour": "Последний час",
+				"now": "Сейчас же",
+				"nextHour": "Следующий час",
+				"tomorrow": "Завтра",
+				"custom": "Пользовательский ...",
+				"today": "сегодня",
+				"orderIdentifier": "Идентификатор",
+				"changeOrder": "Изменить заказ"
+			},
+			"orderIsReady": "Заказ готов!",
+			"orderExpected": "Ожидаемый заказ",
+			"orderDownload": "Скачать",
+			"note": "Запись",
+			"open": "открыто",
+			"cancelled": "отменен",
+			"rejected": "Отклонено",
+			"rejectWithoutReason": "Отклонить заказ без указания причины",
+			"rejectWithReason": "Отклонить заказ с указанием причины",
+			"closed": "Закрыто",
+			"identifier": "Идентификатор",
+			"deliveryMethod": "Режим доставки",
+			"deliveryOption": "Режимы доставки",
+			"orderingDisabledMessage": "Для включения заказа необходимо выбрать режим доставки",
+			"deliveryAtInLocation": "Подавать за столом",
+			"deliveryLocationsEnabled": "Опция отключена, поскольку таблицы не определены",
+			"orderDeliveryMethod": {
+				"deliver": "доставить",
+				"pickup": "Подобрать",
+				"serve": "обслуживать",
+				"deliverAtAddress": "Доставка по адресу",
+				"openTap": ""
+			},
+			"status": "Положение дел",
+			"amountPaid": "Оплаченная сумма",
+			"paymentStatus": "Статус платежа",
+			"payment": {
+				"paid": "оплаченный",
+				"notPaid": "Не оплачен",
+				"stripeTermsAndConditions": "Регистрируя свой аккаунт, вы соглашаетесь с",
+				"servicesAgreement": "Соглашение об услугах Stripe",
+				"stripeConnectedAccountAgreement": "Соглашение об использовании учетной записи Stripe Connected",
+				"stripeUserMsg": "Создание учетной записи Stripe позволяет получать заказы с помощью кредитной карты, iDEAL, Bancontact.",
+				"paypalDisableMsg": "Paypal временно не поддерживается",
+				"creditCard": "Кредитная карта",
+				"bancontact": "банконтакт",
+				"iDeal": "идеальный",
+				"squareUserMsg": "Создание Square Account позволяет получать заказы с помощью кредитной карты",
+				"vivaUserMsg": "Создание учетной записи Viva Wallet позволяет получать заказы с помощью кредитной карты.",
+				"digitalWallets": "Цифровые кошельки",
+				"paymentSense": {
+					"userMsg": "Создание учетной записи PaymentSense позволяет получать заказы с помощью кредитной карты.",
+					"jwtToken": ""
+				},
+				"rmsUserMsg": "Создание учетной записи RMS позволяет получать заказы по кредитной карте",
+				"merchantId": "",
+				"sharedSecret": "Поделился секретом",
+				"rmsConnect": "Подключиться к RMS",
+				"paymentSenseConnect": "Подключитесь к PaymentSense",
+				"jccUserMsg": "Создание учетной записи JCC позволяет получать заказы по кредитной карте",
+				"acquirerId": "",
+				"apiSignaturePassword": "",
+				"jccConnect": "Связаться с JCC",
+				"valueNotValid": "Указанное значение недействительно",
+				"trustpaymentsUserMsg": "Создание учетной записи TrustPayments позволяет получать заказы с помощью кредитной карты",
+				"siteReference": "",
+				"webserviceUser": "",
+				"webservicePassword": ""
+			},
+			"date": "Свидание",
+			"time": "Время",
+			"backToOrders": "Вернуться к заказам",
+			"share": {
+				"language": {
+					"userInterfaceLanguage": "Язык интерфейса пользователя",
+					"defaultCatalogLanguage": "Язык каталога",
+					"basedOn": "На основании настроек браузера",
+					"storeDefault": "Сохранить язык каталога по умолчанию"
+				},
+				"sharePreviewLink": "Поделиться & Предварительный просмотр Ссылка",
+				"sharePreview": "Поделиться & Предварительный просмотр",
+				"embedCode": "Вставить на свой сайт",
+				"printQRCodes": "Распечатать QR-коды",
+				"ordering": {
+					"allowDefaultOrdering": "Разрешить заказ",
+					"DefaultOrdering": "Дефолт",
+					"disableDefaultOrdering": "Отключено",
+					"defaultDate": "Дата по умолчанию"
+				}
+			},
+			"voucher": {
+				"list": "Список ваучеров",
+				"createVoucher": "Создание пользовательских ваучеров",
+				"partnerStatus": "Статус партнера",
+				"endDate": "Дата окончания",
+				"commission": "комиссия",
+				"text": "Ваучер",
+				"numberOfVouchers": "Количество ваучеров",
+				"defaultVoucherValue": "Стоимость ваучера",
+				"numberOfVoucher": "Доступные ваучеры, которые можно создать",
+				"numberOfVoucherPattern": "Количество ваучеров должно быть цифрой",
+				"minNumberOfVoucherPattern": "Количество ваучеров должно быть больше или равно 1",
+				"commissionStatus": "Статус комиссии",
+				"waiting_for_store_purchase": "В ожидании покупки в магазине",
+				"eligible_for_payment": "Право на оплату",
+				"waiting_for_finalization": "Ожидание 14 дней для завершения",
+				"useDate": "Дата использования ваучера",
+				"printVoucherSetup": "Ваучер на печать",
+				"addnewdiscountVoucher": "Добавить новый купон на скидку",
+				"backtodiscountVouchers": "Вернуться к скидочным купонам",
+				"creatediscountVoucher": "Создать ваучер на скидку",
+				"typeSingleuse": "Одноразового использования",
+				"typeMultipleuse": "Многократное использование",
+				"updatediscountVoucher": "Обновить купон на скидку",
+				"editdiscountVoucher": "Изменить купон на скидку",
+				"discountVouchers": "Скидочные купоны"
+			},
+			"statistics": {
+				"title": "Статистика",
+				"from": "От",
+				"to": "к",
+				"orders": "заказы",
+				"menuViewing": "Просмотр меню",
+				"orderValue": "Ценность заказа",
+				"month": "Месяц",
+				"year": "Год",
+				"submitted": "Отправлено",
+				"received": "Получил",
+				"total": "Всего",
+				"totalViewing": "Всего просмотров",
+				"totalPaid": "Итого",
+				"totalNonPaid": "Всего не оплачено",
+				"totalAll": "Всего всего",
+				"orderItems": "Товары для заказа",
+				"orderItemSummary": "Сводка позиции заказа",
+				"orderItemSummaryDescription": "Узнайте общий доход от каждого проданного продукта и узнайте, какие из них наиболее популярны.",
+				"orderItemDetails": "Детали заказа",
+				"orderItemDetailsDescription": "Получите подробный обзор всех заказов, который включает количество и выручку от проданных в этих заказах продуктов и даты заказов.",
+				"orderCapture": "Заказать захват",
+				"monthly": "Ежемесячно",
+				"daily": "Повседневная",
+				"day": "День",
+				"period": "Период",
+				"quantitySold": "Проданное количество",
+				"revenueLabel": "Доход"
+			},
+			"catalog": {
+				"backToOffer": "Вернуться к предложению",
+				"backToCatalog": "Вернуться в каталог",
+				"backToCategory": "Вернуться в категорию",
+				"importTranslation": "Изменить и перевести ярлыки",
+				"import": "Импортировать каталог через Excel",
+				"upload": "Загрузка каталога",
+				"importInfo": "Вы можете импортировать данные в данные каталога, используя шаблон Excel. Импорт Excel поддерживает имена предложений или категории или краткие описания предложений и цены предложений.",
+				"downloadTemplate": "Скачать шаблон можно здесь",
+				"acceptImport": "Принять и импортировать каталог",
+				"importImage": "Импортировать каталог из фото",
+				"beta": "бета",
+				"importImageInfo": "Вы можете импортировать данные в данные вашего каталога, добавив фотографию вашего каталога. Импорт работает для частей каталога, которые имеют одну категорию. Убедитесь, что ваша фотография четкая с высоким разрешением. Эта функция находится в бета-режиме.",
+				"offer": {
+					"offer": "Предлагает",
+					"createOffer": "Создать предложение",
+					"addOffer": "Добавить предложение",
+					"confirmDeleteOffer": "Вы уверены, что хотите удалить это предложение? <br/> Это действие нельзя отменить.",
+					"offerImage": "Предложить изображение",
+					"uploadImage": "Загрузить изображение",
+					"characteristics": {
+						"name": "Характеристики",
+						"vegetarian": "Вегетарианский",
+						"vegan": "Веганский",
+						"celery": "Сельдерей",
+						"wheat": "Пшеницы",
+						"crustaceans": "Ракообразные",
+						"eggs": "Яйца",
+						"fish": "Рыбы",
+						"lupin": "Люпин",
+						"milk": "Молоко",
+						"molluscs": "Моллюски",
+						"mustard": "Горчица",
+						"nuts": "Орехи",
+						"peanuts": "Арахис",
+						"sesame": "Кунжут",
+						"soya": "Соя",
+						"sulphurDioxide": "Диоксид серы",
+						"halal": "Халяль",
+						"barley": "Ячмень",
+						"spicy": "Пряный"
+					},
+					"countAgainstslotcount": "Подсчитайте против количества слотов",
+					"countAgainstslot": "Считайте против слота",
+					"incrementBy": "Увеличение на",
+					"externalProductId": "Идентификатор внешнего продукта",
+					"vatExternalId": "Идентификатор внешнего НДС",
+					"available": "Доступный",
+					"oos": "Распродано",
+					"hidden": "Скрытый",
+					"unorderable": "Недоступно для заказа"
+				},
+				"variant": {
+					"priceVariants": "Варианты цен",
+					"priceVariant": "Ценовой вариант",
+					"assignedOfferVariations": "Нажмите здесь, чтобы увидеть назначенные варианты",
+					"createPriceVariant": "Создать ценовой вариант",
+					"confirmDeleteVariant": "Вы действительно хотите удалить этот вариант цены? <br/> Это действие не может быть отменено."
+				},
+				"option": {
+					"option": "вариант",
+					"options": "Опции",
+					"addOption": "Добавить опцию",
+					"createOption": "Создать опцию",
+					"confirmDeleteOption": "Вы уверены, что хотите удалить эту опцию? <br/> Это действие нельзя отменить."
+				},
+				"category": {
+					"createCategory": "Создать категорию",
+					"category": "категория",
+					"addCategory": "Добавить категорию",
+					"infoDeleteCategory": "Категория не может быть удалена, так как она содержит предложения. <br/> Соответствующие предложения необходимо удалить или переместить в другие категории.",
+					"confirmDeleteCategory": "Вы действительно хотите удалить эту категорию? <br/> Это действие нельзя отменить."
+				},
+				"optionGroup": {
+					"optionGroups": "Варианты групп",
+					"createOptionGroup": "Создать группу параметров",
+					"optionGroup": "Вариант группы",
+					"addOptionGroup": "Добавить группу параметров",
+					"optionGroupType": "Тип группы параметров",
+					"optionA": "ВАРИАНТ А",
+					"optionB": "ВАРИАНТ Б",
+					"optionC": "ВАРИАНТ C",
+					"chooseExisting": "Выберите существующую группу опций",
+					"infoDeleteOptionGroup": "Невозможно удалить группу параметров, так как она содержит параметры. <br/> Основные параметры необходимо удалить.",
+					"confirmDeleteOptionGroup": "Вы действительно хотите удалить эту группу параметров? <br/> Это действие не может быть отменено."
+				},
+				"description": {
+					"priceDescription": "Описание цены",
+					"shortDescription": "Краткое описание",
+					"longDescription": "длинное описание"
+				},
+				"discount": {
+					"noDiscount": "Нет скидки",
+					"percentile": "процентиль",
+					"monetary": "монетарный",
+					"invalidDiscount": "Размер скидки должен быть меньше суммы цены"
+				},
+				"sellable": {
+					"isVisible": "видимый"
+				},
+				"availability": {
+					"startTime": "Время начала",
+					"endTime": "Время окончания",
+					"allTimeAvailability": "Доступно все время. Выберите ограничение."
+				},
+				"translation": {
+					"translation": "Перевод",
+					"languageTranslation": "Языковой перевод уже присутствует! Пожалуйста, выберите изменить.",
+					"translations": "Переводы",
+					"addNewTranslation": "Добавить новый перевод"
+				},
+				"language": {
+					"defaultCatalogLanguage": "Язык каталога по умолчанию",
+					"changeLanguage": "Изменить язык",
+					"sourceLanguage": "Исходный язык",
+					"targetLanguage": "Язык перевода",
+					"withGoogleTranslate": "Конвертировать с помощью Google Translate"
+				},
+				"tooltip": {
+					"goToCategory": "Нажмите здесь, чтобы посмотреть детали категории",
+					"goToOffer": "Нажмите здесь, чтобы просмотреть детали предложения",
+					"translation": "Нажмите здесь, чтобы увидеть назначенные переводы",
+					"goToOptionGroup": "Нажмите здесь, чтобы просмотреть детали группы опций",
+					"goToOption": "Нажмите здесь, чтобы просмотреть подробности опций",
+					"options": "Нажмите здесь, чтобы увидеть назначенные варианты",
+					"goToVariant": "Нажмите здесь, чтобы увидеть детали варианта",
+					"optionGroup": "Нажмите здесь, чтобы увидеть группу опций и опций",
+					"changestatus": "Изменить статус"
+				},
+				"addRestriction": "Добавить новое ограничение по времени",
+				"importTranslation1": "Вы можете изменить тексты элементов каталога через Excel и перевести их на несколько языков.",
+				"importTranslation12": "Загрузите файл Excel, который содержит все тексты вашего каталога.",
+				"importTranslation2": "Файл Excel содержит языки, для которых у вас есть хотя бы одно предложение на этом языке.",
+				"importTranslation3": "Обновите все тексты, включенные в файл, для языка вашего магазина и для разных языков. Вы не должны изменять структуру файла Excel, а только добавлять новые тексты",
+				"importTranslation4": "Когда вы будете готовы с изменениями, загрузите файл, чтобы ваши изменения вступили в силу",
+				"contentTranslate": "Изменить и перевести текст",
+				"contentDownload": "Произошла ошибка, и файл не может быть загружен",
+				"contentFailedError": "Произошла ошибка, и файл не может быть загружен. Пожалуйста, убедитесь, что структура файла не была изменена",
+				"orderable": {
+					"isOrderable": "упорядочиваемых"
+				},
+				"error": {
+					"overlappingSchedules": "Расписания не могут быть сохранены, поскольку периоды перекрываются",
+					"timeScopeWrong": "Диапазон времени неверен",
+					"noDaySelect": "День не выбран",
+					"loadSchedules": "Ошибка при загрузке расписания",
+					"createSchedule": "Произошла ошибка при сохранении расписания",
+					"updateSchedule": "Произошла ошибка при обновлении расписания",
+					"deleteSchedule": "При удалении расписания произошла ошибка"
+				},
+				"update": "Обновить каталог через Excel",
+				"acceptUpdate": "Принять и обновить каталог",
+				"importTranslationnew": "Вы можете импортировать свой каталог, используя шаблон Excel. Вы можете импортировать названия предложений, названия категорий, описания, цены предложений, скидки и данные о запасах.",
+				"importTranslationnew1": "Загрузите шаблон Excel и заполните данные своего каталога",
+				"updateTranslation": "Вы можете добавлять новые элементы в свой каталог или изменять существующие элементы каталога с помощью шаблона Excel. Вы можете импортировать названия предложений, названия категорий, описания, цены предложений, скидки и данные о запасах.",
+				"updateTranslation1": "Загрузите здесь файл Excel, содержащий данные вашего каталога.",
+				"updateTranslation2": "Обновите поля предложений, которые вы хотите изменить. Для них оставьте названия предложений такими же",
+				"updateTranslation3": "Добавьте новые строки в файл Excel для новых предложений, которые вы хотели бы создать",
+				"updateTranslation4": "Обновите поля в Excel, которые вы хотите изменить. Поля предложений должны остаться прежними, если вы хотите изменить конкретные",
+				"priceVariants": "Варианты цены",
+				"catalogOptionGroup": "Группа опций",
+				"allowMultiple": "Разрешить множественный выбор одного и того же элемента",
+				"nocatalog": "Нет каталога",
+				"notable": "Столов нет",
+				"importLink": "Импортировать каталог по ссылке",
+				"importCatalogexternalsite": "Внешний сайт",
+				"importCataloglink": "Ссылка на сайт",
+				"importCataloglinkimport": "Импортировать",
+				"catalogOfstoreimported": "Начато создание каталога магазина. Это может занять 10–15 минут.",
+				"catalogFetching": "Каталог загружается. Повторите попытку импорта через час",
+				"catalogUnabletoimport": "Каталог не может быть импортирован",
+				"catalogPleaseentervalidlink": "Пожалуйста, введите действительную ссылку"
+			},
+			"location": {
+				"text": "Таблица",
+				"backtoTables": "Вернуться к таблицам",
+				"create": "Добавить таблицу",
+				"createBulk": "Создавайте таблицы оптом",
+				"noOfStoreLocations": "Количество столов",
+				"error": {
+					"noStoreFound2": "новые магазины, чтобы продолжить",
+					"pattern": "Недопустимая метка - допускается использование только / комбинации цифр 0–9, прописных букв A – Z, дефисов (-) и подчеркивания (_).",
+					"digit": "Invalid Label - разрешено использование только цифр 0-9"
+				},
+				"label": "Таблица",
+				"createTableMsg": "Добавить таблицы оптом",
+				"locationType": "Тип локации",
+				"table": "Стол",
+				"location": "Место расположения",
+				"room": "Комната",
+				"notablesFound": "Таблицы не найдены",
+				"nocatalogfound": "Каталог не найден",
+				"tableStatus": "Статус таблицы",
+				"openTap": {
+					"closed": "Закрыто",
+					"open": "Открытым"
+				},
+				"status": {
+					"success": "Статус обновлен",
+					"table": {
+						"pin": "PIN-код таблицы"
+					},
+					"error": "Ошибка при обновлении статуса"
+				},
+				"print": {
+					"qrCodes": "Распечатать QR-коды"
+				}
+			},
+			"locations": {
+				"text": "таблицы"
+			},
+			"qr": {
+				"download": {
+					"pdf": "Скачать Pdf QR код Распечатать",
+					"image": "Скачать изображение QR-код"
+				},
+				"downloadPrintQRStore": "Скачать QR-код распечатать в формате PDF",
+				"downloadPrintQRAllLocation": "Скачать все таблицы QR-код печатает в формате PDF",
+				"downloadImageQRStore": "Скачать изображение QR-кода",
+				"downloadImageQRAllLocation": "Загрузить все изображения QR-кода в формате zip"
+			},
+			"help": {
+				"helpText": "Помощь по"
+			},
+			"users": {
+				"header": "пользователей",
+				"removeUser": "Вы уверены, что хотите удалить доступ к этому магазину для этого пользователя? <br/> Это действие не может быть отменено.",
+				"inviteUser": {
+					"inviteTitle": "Пригласить пользователя",
+					"invitationText": "Электронное письмо будет отправлено на указанный ниже адрес электронной почты. Как только пользователь примет приглашение, он сможет полностью управлять",
+					"invitePrimaryButton": "приглашение"
+				}
+			},
+			"region": {
+				"label": "Область"
+			},
+			"city": {
+				"label": "город"
+			},
+			"alias": "Домен GonnaOrder",
+			"notSubscribedMsg": "Этот магазин не приобрел подписку GonnaOrder. На домен GonnaOrder могут претендовать другие магазины с действующей подпиской в ​​пробном режиме.",
+			"noActiveSubscriptionsMsg": "Вы можете получить этот домен, только если вы покупаете подписку GonnaOrder. Теперь вы можете использовать другой домен и изменить его на желаемый после покупки подписки.",
+			"domainTakenMsg": "Этот домен порядка уже занят",
+			"aliasValidationMsg": "Домен должен содержать не менее 6 символов, по крайней мере один из которых должен быть буквой от «а» до «z». Допускаются цифры от 0 до 9 и символы «-» и «_». Специальные символы и заглавные буквы не допускаются",
+			"phoneNumber": {
+				"pattern": "Допускается использование только цифр 0-9."
+			},
+			"enablePaypalPaymentGonnaOrderLabel": "gonnaorder.com",
+			"preferredLanguage": {
+				"label": "Предпочтительный язык"
+			},
+			"catalogOverview": "Каталог",
+			"ordering": "заказ",
+			"details": "подробности",
+			"paymentProvoders": "Платежные системы",
+			"disabled": "Отключено",
+			"paymentDisabled": "Платеж отключен",
+			"paymentOptional": "Оплата необязательно",
+			"paymentMandatory": "Оплата обязательна",
+			"enabled": "Включено",
+			"disconnect": "Отключить",
+			"accountID": "Идентификатор аккаунта",
+			"connectWithPaypal": "Связаться с Paypal",
+			"connectWithStripe": "Связаться с полосой",
+			"paymentMethodDetailsMessage": "Выберите поставщиков платежей, к которым вы хотите подключиться",
+			"optionGroup": {
+				"atMostOneOption": "Максимум один вариант может быть выбран",
+				"customSelection": "Индивидуальный выбор",
+				"minimumRequired": "Минимальное количество опций, необходимых для выбора",
+				"maximumAllowed": "Максимальное количество опций, которые можно выбрать",
+				"maximumHeigherThanMimimum": "Максимальное число должно быть больше или равно минимальному."
+			},
+			"message": {
+				"errorTryAgain": "Произошла ошибка, пожалуйста, попробуйте еще раз",
+				"storeUpdate": "Магазин обновлен!",
+				"actionFail": "Действие не удалось!",
+				"loadFail": "Ошибка загрузки!",
+				"acessRemoveFail": "Удаление доступа из магазина не удалось",
+				"acessRemoveSuccess": "Удален доступ из магазина успешно!",
+				"inviteUserFail": "Не удалось пригласить пользователя!",
+				"inviteUserSuccess": "Пользователь был приглашен для управления магазином!",
+				"uploadFail": "Загрузка не удалась!",
+				"logoUploadSuccess": "Логотип успешно загружен!",
+				"imageUploadSuccess": "Изображение успешно загружено!",
+				"downloadFail": "Ошибка загрузки!",
+				"settingsUpdate": "Настройки обновлены!",
+				"receiveEmailMsg": "Вскоре вы получите электронное письмо. Перейдите по ссылке, чтобы изменить адрес электронной почты.",
+				"profileUpdate": "Профиль обновлен!",
+				"translationsUpdateSuccess": "Переводы успешно обновлены!",
+				"saveOfferSuccess": "Сохранить предложение успешно",
+				"saveCategorySuccess": "Сохранить категорию успеха",
+				"childCategoryOffer": "Дочерние категории, связанные с предложением!",
+				"childOfferCategory": "Детские предложения, связанные с категорией!",
+				"offerVaryAToffer": "Варианты предложений, связанные с предложением!",
+				"catalogVerifySuccess": "Данные каталога успешно проверены!",
+				"catalogDataUploadSuccess": "Данные каталога успешно загружены!",
+				"categoryDeleteSuccess": "Категория удалена Успешно!",
+				"offerDeleteSuccess": "Предложение удалено успешно!",
+				"createAvailabilitySuccess": "Успешность создания доступности",
+				"createAvailabilityFail": "Не удалось создать доступность",
+				"locationDeleteSuccess": "Местоположение {{label}} успешно удалено",
+				"noInStoreDelivery": "Обратите внимание, что доставка в магазине больше не поддерживается.",
+				"stripeDisconnect": "Аккаунт Stripe отключен",
+				"paypalDisconnect": "Аккаунт Paypal отключен",
+				"upgradeAffiliateSuccess": "Обновите информацию о партнере успешно!",
+				"loadProfileFail": "Мы не смогли загрузить ваш профиль. Пожалуйста, попробуйте позже",
+				"verifyCatalogImageFailed": "Каталог не может быть извлечен из изображения. Попробуйте импортировать изображение с более высоким разрешением или изображение с меньшей частью каталога только с одной категорией",
+				"verifyCatalogImageSuccess": "Изображение каталога успешно проверено!",
+				"imageRemoveSuccess": "Изображение было удалено",
+				"logoRemoveSuccess": "Логотип был удален",
+				"zoneRemoveFail": "Удаление зоны из магазина не удалось",
+				"zoneRemoveSuccess": "Удалена зона из магазина успешно",
+				"zoneAdded": "Зона успешно создана",
+				"zoneUpdated": "Зона успешно обновлена",
+				"CreateScheduleSuccess": "Успешно создано",
+				"updateScheduleSuccess": "Успешно обновлено",
+				"deleteScheduleSuccess": "Успешно удалено",
+				"saveRuleSuccess": "Успешное сохранение правила",
+				"deleteRuleSuccess": "Правило удаления успешно",
+				"saveDiscountVoucherSuccess": "Успешный ваучер на скидку",
+				"saveDiscountVoucherFailed": "Не удалось сохранить ваучер на скидку",
+				"deleteDiscountVoucherSuccess": "Успешное удаление дисконтного ваучера",
+				"locationCreateSuccess": "Таблица {{label}} успешно создана",
+				"locationUpdateSuccess": "Таблица {{label}} успешно обновлена"
+			},
+			"rejectOrder": "Отклонить заказ",
+			"paypalNotsupported": "Paypal не поддерживается",
+			"enableWithmelink": "Включите платежи с помощью вашей ссылки Paypal.me",
+			"payPalmelink": "Ссылка Paypal.me",
+			"enableWithanylink": "Включить платежи с помощью любой платежной ссылки",
+			"paymentProvider": "Провайдер платежей",
+			"paymentLink": "Ссылка на оплату",
+			"other": "Другой",
+			"shoppingBasket": "Корзина",
+			"settingsMandatory": "Обязательное",
+			"settingsOptional": "По желанию",
+			"settingspickupEmailRequired": "Требуется адрес электронной почты",
+			"settingspickupPhoneRequired": "Телефон требуется",
+			"addressDelivery": "Адрес доставки",
+			"orderAmount": "Сумма заказа, сверх которой доставка бесплатна",
+			"deliveryAddressauto": "Адрес доставки Автозаполнение",
+			"postCodesrestrictions": "Ограничения зоны почтового индекса",
+			"restricted": "Ограниченный",
+			"nonRestricted": "Не ограничено",
+			"addressZones": "зон",
+			"addressaddnewZones": "Добавить новую зону",
+			"createDifferentaddress": "Создание разных зон доставки адресов с разными настройками",
+			"backtoZones": "Вернуться к зонам",
+			"minRadius": "Минимальный радиус",
+			"maxRadius": "Максимальный радиус",
+			"unit": "Ед. изм",
+			"postCodes": "Почтовые коды",
+			"postCodemsg": "Введите список почтовых индексов, разделенных запятой или новой строкой",
+			"settingspickupNameRequired": "Имя обязательно",
+			"zoneLabel": "зона",
+			"invalidRadiusRange": "Диапазон радиуса недействителен",
+			"account": {
+				"deleteUserSuccess": "Доступ пользователя к магазину успешно удален",
+				"confirmDeleteUser": "Вы уверены, что хотите запретить этому пользователю доступ к этому магазину? Это действие не может быть отменено."
+			},
+			"subscription": {
+				"storeEligibility": "Ваш магазин имеет право использовать GonnaOrder до 50 просмотров меню или 50 заказов в месяц.\nПо достижении ограничений пробной версии ваши клиенты не смогут видеть ваше меню.\nВы можете приобрести подписку GonnaOrder, чтобы снять эти ограничения.",
+				"vatprompt": {
+					"sodexobelgium": "Вы продавец в сети Sodexo? Введите свой номер НДС, чтобы получить скидку 50%",
+					"eu": "Введите свой номер плательщика НДС, чтобы не платить НДС при покупке в Интернете."
+				},
+				"sodexo": {
+					"affiliate": {
+						"prompt": "Еще не являетесь участником сети Sodexo?"
+					}
+				},
+				"active": "Активный",
+				"fourteenfreetrial": "14-дневная бесплатная пробная версия - неограниченное количество заказов",
+				"limitedFreemium": "Limited Freemium - подпишитесь, чтобы иметь неограниченное количество заказов и не потерять свой домен GonnaOrder",
+				"limitedFreemiumnumberof": "Limited Freemium - в этом месяце достигнут лимит в 5 заказов. Подпишитесь, чтобы иметь неограниченное количество заказов и не потерять свой домен GonnaOrder",
+				"discountVouchers": "Скидочные купоны",
+				"billing": {
+					"businessName": "Наименование фирмы"
+				}
+			},
+			"applicationId": "Application ID",
+			"accessToken": "",
+			"locationId": "",
+			"clientId": "",
+			"clientSecret": "",
+			"settingsDefaultcatalogview": "Просмотр каталога по умолчанию",
+			"settingsCollapsed": "Свернут",
+			"settingsExpanded": "Расширенный",
+			"orderingNotification": "Электронная почта с уведомлением о заказе",
+			"orderingNotificationmessage": "Отправляйте электронное письмо на указанный ниже адрес электронной почты для каждого заказа",
+			"settingsManagestock": "Управление запасами",
+			"settingStocklevel": "Уровень запасов",
+			"settingsStockcheck": "Проверка запасов",
+			"name": "Название магазина",
+			"thanksForstore": "Спасибо за регистрацию своего магазина",
+			"uploadyourmenu": "Загрузите свое меню быстро и легко",
+			"configureyourstore": "Настройте свой магазин в соответствии со своими потребностями",
+			"seeyourstore": "Смотрите на свой магазин так, как его видят ваши покупатели",
+			"findinstructions": "Найдите инструкции о том, как работает приложение",
+			"orderingMinutesorderready": "Минуты до готовности заказа",
+			"orderingDefaultestimated": "Расчетное время по умолчанию в минутах для доставки и получения заказов до их готовности",
+			"orderingMinimum": "Минимум",
+			"orderingMaximum": "Максимум",
+			"setting": {
+				"rules": {
+					"orderingrules": "Правила заказа",
+					"addnewrule": "Добавить новое правило",
+					"rules": "Правила",
+					"orderamount": "Сумма заказа",
+					"backtorules": "Вернуться к правилам",
+					"status": "Статус правила",
+					"conditions": "Условия",
+					"orderamountbetween": "Сумма заказа между определенными значениями",
+					"minorderamount": "Минимальная сумма заказа",
+					"maxaorderamount": "Максимальная сумма заказа",
+					"actions": "Действия",
+					"displayoptgroup": "Группа опций отображения",
+					"optgroups": "Варианты групп",
+					"addoptgroup": "Добавить группу параметров",
+					"backtorule": "Вернуться к правилу",
+					"createruleptgroup": "Создать группу параметров",
+					"ruleoptgroup": "Вариант группы",
+					"infoDeleteORule": "Правило не может быть удалено, поскольку оно содержит категорию. <br/> Необходимо удалить соответствующую категорию.",
+					"confirmDeleteRule": "Вы действительно хотите удалить это правило? <br/> Это действие нельзя отменить.",
+					"updateRule": "Обновить правило"
+				},
+				"marketing": {
+					"fb": {
+						"labelError": "Недействительный идентификатор отслеживания пикселя facebook.",
+						"label": "Пиксель Facebook",
+						"meta": "Мета-тег проверки веб-сайта Facebook",
+						"metaError": "Недопустимое содержимое метатега проверки веб-сайта facebook.",
+						"UrlError": "Недействительный URL-адрес Facebook"
+					},
+					"google": {
+						"labelError": "Неверный код отслеживания Google Analytics."
+					},
+					"label": "Маркетинг",
+					"GA": {
+						"label": "Гугл Аналитика"
+					},
+					"enableFBMsg": "Включить отслеживание магазина с помощью Facebook Pixel",
+					"enableGAMsg": "Включить отслеживание магазинов с помощью Google Analytics",
+					"Websitelink": "Ссылка на сайт",
+					"Facebooklink": "Ссылка на Facebook",
+					"Instagramlink": "Ссылка в Instagram",
+					"Carditlink": "Cardit.io Ссылка",
+					"SocialMedia": "Веб-сайт, социальные сети и связанные аккаунты",
+					"SocialMediaPromote": "Продвигайте различные способы взаимодействия клиентов с вашим бизнесом.",
+					"SocialMediaText": "Предварительная настройка",
+					"website": {
+						"UrlError": "Недействительный URL-адрес веб-сайта магазина"
+					},
+					"instagram": {
+						"UrlError": "Неверный URL-адрес Instagram"
+					},
+					"cardit": {
+						"UrlError": "Недействительный URL CardIto"
+					}
+				},
+				"samedayordering": "Заказ в тот же день",
+				"requestorderdateupfront": "Запросить дату заказа заранее",
+				"billing": "Биллинг",
+				"lastMile": {
+					"lastMileDeliverySoftware": "Программное обеспечение для доставки последней мили",
+					"connectWithMynext": "Связаться с mynext",
+					"enterMynextCredentials": "Введите свои учетные данные mynext"
+				},
+				"integrations": {
+					"username": "Имя пользователя",
+					"password": "Пароль",
+					"connect": "Соединять",
+					"theCredentialsAreNotValid": "Учетные данные недействительны",
+					"navName": "Интеграции",
+					"shareDataWithOtherApplications": "Обмен данными с другими приложениями",
+					"connectToHubrise": "Подключиться к HubRise",
+					"enterHubriseCredentials": "Введите свои учетные данные HubRise",
+					"connectedToHubrise": "Подключено к HubRise",
+					"hubriseCustomerList": "Список клиентов",
+					"goToHubrise": "Перейти к HubRise",
+					"powersoft": {
+						"connectWithPowersoft": "",
+						"connectPowersoft": "",
+						"accessTokenmsg": "",
+						"agentCode": "",
+						"agentCodemsg": "",
+						"customerCode": "",
+						"customerCodemsg": "",
+						"emailmsg": "",
+						"connect": ""
+					}
+				},
+				"domains": "Домены",
+				"apps": {
+					"name": "Программы",
+					"promoteGOApp": "Продвигайте заказ через приложение GonnaOrder",
+					"promoteGOAppInfo": "Пользователи сохранят ссылку на ваш магазин в приложении, и им будет проще делать заказы со своих мобильных телефонов.",
+					"promoteCustomOApp": "Продвигайте заказы через пользовательское приложение вашего магазина",
+					"promoteCustomAppInfo": "Свяжитесь с нами, чтобы получить собственное мобильное приложение, которое вы сможете продвигать своим клиентам.",
+					"iosAppLink": "Ссылка на приложение для iOS",
+					"invalidIOSAppLink": "Недействительный URL в магазине приложений",
+					"androidAppLink": "Ссылка на приложение для Android",
+					"invalidAndroidAppLink": "Недействительный URL-адрес в Play Маркете"
+				},
+				"allowOrderUpdateByStore": "Разрешить обновление заказа по магазину",
+				"allowOrderDeletionByStore": "Разрешить удаление заказа по магазину",
+				"opentabordering": ""
+			},
+			"orderingEmailcustomer": "Написать покупателю об изменении статуса заказа",
+			"orderNotificationSound": "Непрерывный звук уведомления о заказе",
+			"schedule": {
+				"backToSchedule": "Вернуться к расписанию",
+				"add": "Добавить",
+				"save": "Сохранить",
+				"name": "название",
+				"createScheduleItem": "Добавить новое расписание",
+				"editScheduleItem": "Изменить расписание",
+				"cancel": "Oтмена",
+				"startTime": "Время начала",
+				"endTime": "Время окончания",
+				"delete": "Yдалять",
+				"mon": "",
+				"tue": "",
+				"wed": "",
+				"thu": "",
+				"fri": "",
+				"sat": "",
+				"sun": "",
+				"choose": "Выберите расписание",
+				"CreateSpecialScheduleSuccess": "Время работы обновлено успешно",
+				"error": {
+					"CreateSpecialSchedule": "Ошибка при обновлении времени работы",
+					"LoadSpecialSchedules": "Ошибка при получении времени работы",
+					"DeleteSpecialSchedule": "Ошибка при удалении времени открытия"
+				},
+				"DeleteSpecialScheduleSuccess": "Время работы успешно удалено",
+				"requestWishTime": "Запросить желаемое время",
+				"assoonasPossible": "Как можно быстрее",
+				"futureTime": "Будущее время",
+				"generalopening": "Общее время работы",
+				"orderingTimes": "Время заказа",
+				"addDaysOfWeek": "Добавить дни недели",
+				"addDates": "Добавить даты",
+				"Include": "Включают",
+				"Exclude": "Исключить",
+				"displayStartOrding": "Отображение желаемого времени в начале заказа",
+				"wishTimeMinutes": "Интервалы времени желаний - Минуты",
+				"displayWishTimeFormat": "Отображение желаемого формата времени",
+				"times": "Раз",
+				"timeSlots": "Временные интервалы",
+				"slotDuration": "Продолжительность слота - Минуты",
+				"limitOrder": "Лимит ордеров на слот",
+				"noLimit": "Безлимитный",
+				"limit": "Предел",
+				"ordersPerSlot": "Заказы на слот",
+				"wishTimeInFutureMinutes": "Желаем времени в будущем - Минуты",
+				"defaultOrderingMode": "Режим заказа по умолчанию",
+				"displaydesireddateandTime": "Отображение желаемой даты и времени",
+				"dateandTime": "Дата и время",
+				"dateOnly": "Только дата"
+			},
+			"addNewSchedule": "Добавить новое расписание",
+			"scheduleList": "Расписания",
+			"filter": "Фильтр",
+			"ready": "готовы",
+			"global": {
+				"openTime": "Время открытия"
+			},
+			"defaultPaymentSelection": "Выбор платежа по умолчанию",
+			"notSelected": "Не выбран",
+			"preselected": "Предварительно выбран",
+			"common": {
+				"tooltip": {
+					"option": {
+						"addOption": "Нажмите здесь, чтобы создать вариант"
+					},
+					"movedown": {
+						"Option": "Нажмите здесь, чтобы перейти вниз"
+					},
+					"moveup": {
+						"Option": "Нажмите здесь, чтобы перейти наверх"
+					}
+				}
+			},
+			"settingsDefaultVATPercentage": "% НДС по умолчанию",
+			"tableOrdering": "Порядок таблиц",
+			"settingsHidden": "Скрытый",
+			"schedulesSlot": "Максимальное количество предметов на слот",
+			"schedulesSlotnote": "Необходимо указать элементы, которые учитываются в общем количестве слотов.",
+			"timeShouldFuture": "Время должно быть в будущем.",
+			"discountVoucher": "Купон на скидку",
+			"inputMinutes": "Введите минуты",
+			"selectMinutes": "Выберите минуты",
+			"estimatedTime": "Расчетное время",
+			"hideorderComment": "Скрыть комментарии к заказу",
+			"hideorderitemComment": "Скрыть комментарии к позиции заказа",
+			"catalogOffer": "Предложения",
+			"catalogCategory": "Категория",
+			"settingDetails": "Подробная информация о магазине",
+			"settingOrdering": "Заказ в магазине",
+			"settingPayment": "Настройка оплаты",
+			"settingPickup": "Подбирать",
+			"settingDelivery": "Доставка",
+			"settingLocations": "Стол",
+			"settingCatalog": "Каталог магазина",
+			"settingOrderingRule": "Правило заказа",
+			"settingSchedules": "Расписания",
+			"settingMarketing": "Маркетинг",
+			"settingDiscountVouchers": "Купон на скидку",
+			"domain": "Домены и приложения",
+			"customDomain": {
+				"additionalCustomDomain": "Дополнительный пользовательский домен",
+				"labelError": "Значение домена недействительно"
+			},
+			"domaincustomInfo": "Вы можете использовать свой собственный домен, например https://example.com или субдомен, например https://mystore.example.com в дополнение к вашему домену GonnaOrder. Для того, чтобы это работало, вам необходимо выполнить дополнительную настройку у вашего провайдера домена.",
+			"catalogManageByExcel": "Управление через Excel",
+			"settingspickupdisplaypickupAddress": "Показать адрес получения",
+			"settingspickupHide": "Скрывать",
+			"settingspickupShow": "Показывать",
+			"deleteStore": "Вы уверены, что хотите удалить этот магазин? Это действие не может быть отменено",
+			"deleteStoreSuccess": "Магазин успешно удален",
+			"oneClickAddToBasket": "В один клик добавить в корзину",
+			"errorMinimumWishTime": "Недействительное время минимального желания в будущем. Это должно быть ненулевое положительное число, которое меньше или равно 1440.",
+			"deleteStoreMsgError": "Магазин {{storeId}} содержит заказы или товары из каталога и не может быть удален",
+			"postCodesErrorMsg": "Почтовый индекс должен состоять максимум из 10 символов и разделяться запятыми для нескольких почтовых индексов.",
+			"customers": {
+				"customers": "Клиенты",
+				"customerName": "имя покупателя",
+				"customerPhone": "Телефон клиента",
+				"customerEmail": "Электронная почта клиента",
+				"orders": "Russian",
+				"firstOrder": "Первый заказ",
+				"lastOrder": "Последний заказ"
+			},
+			"setupZones": "Зоны настройки",
+			"radiusPostCode": "Использовать радиус",
+			"zonePostCodes": "Использовать почтовые индексы",
+			"radiusPostCodesDetails": "Определите почтовые индексы для каждой зоны",
+			"radiusPostCodesDetails1": "Определите диапазон радиуса для каждой зоны. Это основано на GPS-координатах клиента.",
+			"radiusPostCodesDetails2": "Чтобы включить эту функцию, вам необходимо включить автозаполнение адреса, а также указать местоположение вашего магазина по GPS на экране сведений о магазине.",
+			"zoneName": "Имя зоны",
+			"zonesRestrictions": "Ограничения зоны доставки",
+			"enableCustomerAuthentication": "Включить аутентификацию клиента",
+			"settingsDeliverypolygondescription": "Определите каждую зону на карте. Это основано на GPS-координатах клиента.",
+			"settingsDeliverydraw_map": "Нарисуйте на карте",
+			"settingsMaperrormsg": "Нарисуйте многоугольник для этой зоны на карте",
+			"storeNotfound": "Магазин не найден",
+			"externalOnlinePaymentId": "Идентификатор внешнего онлайн-платежа",
+			"externalNonOnlinePaymentId": "Идентификатор внешнего платежа не в Интернете",
+			"externalId": "Внешний идентификатор",
+			"deliveryFeeExternalId": "Внешний идентификатор платы за доставку",
+			"combineorders": "Объединить заказы"
+		},
+		"load": {
+			"loadingMessage": "Подождите"
+		},
+		"users": {
+			"removeAccessMsg": "Удалить доступ из магазина",
+			"userManage": {
+				"label": "Все пользователи"
+			},
+			"list": {
+				"inputEmail": "Введите действующий адрес электронной почты"
+			},
+			"details": {
+				"title": "Детали пользователя",
+				"id": "Я БЫ",
+				"username": "Имя пользователя",
+				"googleAccount": "Аккаунт Google",
+				"facebookAccount": "Аккаунт в Фэйсбуке",
+				"backToAllUsers": "Назад ко всем пользователям",
+				"deleteUserSuccess": "Пользователь успешно удален",
+				"updateUserSuccess": "Пользователь успешно обновлен",
+				"confirmDeleteUser": "Вы уверены, что хотите удалить этого пользователя?"
+			}
+		},
+		"register": {
+			"registerTitle": "регистр",
+			"registerationSuccess": "Спасибо за вашу регистрацию. Вскоре вы получите электронное письмо для подтверждения вашей учетной записи.",
+			"haveAccount": "Уже есть аккаунт?",
+			"emailInfo": "Вам нужно будет подтвердить, что это письмо принадлежит вам",
+			"accept": "Нажимая на кнопку «Зарегистрироваться», вы принимаете следующие",
+			"phoneNumberoptional": "Телефонный номер (не обязательно)",
+			"acceptRegister": "Принять и зарегистрироваться",
+			"registerHeaderMessage1": "Зарегистрируйте свой бизнес на GonnaOrder.com",
+			"registerHeaderMessage2": "и начните бесплатную пробную версию сегодня",
+			"registerFormStep1": "Заполните форму и подтвердите свою электронную почту",
+			"registerFormStep2": "Войдите и создайте свой магазин",
+			"registerFormStep3": "Загрузите свое меню и настройте параметры",
+			"registerFinalMessage": "Ваш магазин готов к работе с вашими покупателями!",
+			"continue": "Продолжить",
+			"social": {
+				"google": "Продолжить с Google",
+				"facebook": "Продолжить с Facebook",
+				"apple": "Зарегистрируйтесь в Apple"
+			}
+		},
+		"user": {
+			"profile": {
+				"updateTitle": "Обновить профиль"
+			},
+			"details": {
+				"emailErrorMsgInvaild": "Адрес электронной почты",
+				"lastName": "Фамилия",
+				"confirmPassword": "Подтвердите Пароль",
+				"confirmPasswordErrorMsgMisMatch": "Пароли не соответствуют"
+			}
+		},
+		"passwordAuth": {
+			"passAuthButton": "Re-Authenticate",
+			"passAuthPromt": "Пожалуйста, подтвердите пароль, чтобы продолжить"
+		},
+		"storeError": {
+			"unExpected": "произошла неожиданная ошибка"
+		},
+		"menu": {
+			"preview": "предварительный просмотр"
+		},
+		"continue": {
+			"accept": "Нажимая на кнопку «Зарегистрироваться», вы принимаете следующие"
+		},
+		"sodexo": {
+			"prompt": {
+				"purchase": "Получите скидку 50% на один год при покупке подписки GonnaOrder, если вы являетесь партнером Sodexo."
+			}
+		},
+		"printer": {
+			"printersList": "Принтеры",
+			"noPrinter": "Принтер не зарегистрирован",
+			"registerPrinter": "регистр",
+			"registerTitle": "Зарегистрировать принтер",
+			"setPrinterName": "Пожалуйста, установите имя принтера",
+			"printerName": "Имя принтера",
+			"unregisterPrinter": "Удалить принтер из списка",
+			"confirmUnregister": "Вы уверены, что собираетесь удалить этот принтер из списка?",
+			"selectPrinter": "Выбрать принтер",
+			"selectPrinterTitle": "Пожалуйста, выберите принтер",
+			"notEmpty": "Имя принтера не может быть пустым.",
+			"chooseAPrinter": "Выберите принтер",
+			"star": {
+				"noPrinter": "Принтер Star не обнаружен!"
+			},
+			"chooseAPrinterType": "Выберите тип принтера",
+			"connectionMethod": "Способ подключения",
+			"connectionMethodBluetooth": "",
+			"connectionMethodWiFi": "",
+			"connectionParameters": "Параметры подключения",
+			"connectionIpOrHostName": "IP или имя хоста",
+			"connectionPort": "",
+			"connectionBluetoothMacAddr": "MAC-адрес",
+			"testPrint": "Тестовая печать",
+			"starPrinter": {
+				"support": "Поддерживаются только принтеры Star",
+				"indev": "Поддержка принтеров Star в разработке"
+			},
+			"airPrinter": {
+				"support": "Поддерживаются только принтеры AirPrint."
+			}
+		}
+	}
+}

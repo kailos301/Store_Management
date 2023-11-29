@@ -1,0 +1,167 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+
+#saveRuleOptionGroup,#saveRuleOption{
+    .form-group{
+        display: flex;
+        width: 100%;
+        @include media-breakpoint-down(md) {
+            display: inline-block;
+        }
+    }
+    .buttonGroup{
+        margin-top: 20px;
+    }
+}
+
+form label.required:after{
+    color: red;
+    content: " *";
+}
+.buttonGroup a.actionLink {
+    color: #273773;
+}
+.actionLink{
+    cursor: pointer;
+    text-decoration: underline !important;
+    margin-left: 10px;
+}
+.buttonGroup{
+    .floatLeft{
+        float: left;
+    }
+    .floatRight{
+        float:right;
+        @include media-breakpoint-down(sm) {
+            float: none;
+            margin: 10px 0 0 0;
+            display: flex;
+        }
+    }
+}
+.groupTypeExample{
+    color:#5c6873 !important;
+    display: flex;
+
+    @include media-breakpoint-down(md) {
+        display: inline-block;
+    }
+    .radio-container input:checked ~ .checkmark {
+        background-color: #5c6873;
+    }
+    .chk-container input:checked ~ .checkmark {
+        background-color: #5c6873;
+    }
+}
+.groupTypeContainer{
+    ::ng-deep .mat-checkbox-inner-container{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+    }
+    ::ng-deep .mat-checkbox-layout{
+        padding-left:20px;
+    }
+    ::ng-deep .mat-checkbox-frame{
+        border:0;
+    }
+    ::ng-deep .mat-checkbox-checked .mat-checkbox-background{
+        background-color: #5c6873;
+    }
+}
+
+// **************
+
+
+.childOfferView{
+    label, .checkbox label .checkmark{
+        margin-top:10px;
+    }
+}
+
+.childCategoryList {
+    label, .checkbox label .checkmark{
+        margin-top:10px;
+        
+    }
+    .radio .checkmark{
+        background-color: #fff;
+    }
+    .variant-wrapper,.variant-wrapper label{
+        cursor: pointer !important;
+    }
+    .optionGoupHeader , span{
+        font-size: 14px;
+        margin-left:10px;
+    }
+    i.editIcon{
+        font-size: 1.25em;
+    }
+} 
+i.fa-plus{
+    margin-left: 10px;
+}
+.offerSubSection{
+    margin-bottom: 1rem;
+}
+.optionGoupHeader{
+    background-color: #F2F0EE;
+    color: #000;
+    font-weight: 400;
+    padding-top: 12px;
+    padding-bottom: 14px;
+    cursor: pointer;
+    &.collapsible {
+      &::after {
+        content:"";
+        position: absolute;
+        background-image: url(/assets/img/icon-arrow-down.svg);
+        background-position: center center;
+        transform: rotate(180deg);
+        transform-origin: center center;
+        width: 20px;
+        height: 27px;
+        right: 24px;
+        top: 8px;
+      }
+    }
+    &.disabled {
+      color: #C1C1C1;
+      &::after {
+        opacity: 0.18;
+      }
+      &.collapsible {
+        &::after {
+          transform: rotate(90deg);
+        }
+      }
+    }
+    &.expanded {
+      &::after {
+        transform: rotate(0deg);
+      }
+    }
+}
+.optionGroupSelectionPanel a.actionLink{
+    @include media-breakpoint-down(md) {
+        margin:0;
+    }
+}
+.optionGoupHeader{
+    display:flex;
+    @include media-breakpoint-down(md) {
+        display:inline-block;
+        .actionLink{
+            margin:10px 0 0;
+            display:inline-block;
+        } 
+    }
+}
+.actionLink.invisible{
+    visibility: hidden;
+}

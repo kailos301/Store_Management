@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "Cung cấp bởi",
+			"thankYou": "Cảm ơn",
+			"discount": "Chiết khấu",
+			"viewOrder": "Xem đơn hàng",
+			"errorH2": "Có gì đó đã sai",
+			"errorUnexpected": "Có gì đó bất ngờ xảy ra",
+			"errorExpected": "Có gì đó bất ngờ xảy ra",
+			"errorMustSelectOne": "Bạn phải lựa chọn một giá trị",
+			"errorTrialExceeded": "Chức năng này không sẵn có. Đã vượt quá giới hạn lần thử",
+			"emptyCart": "Không có sản phẩm nào trong đơn hàng của bạn",
+			"optional": "(tùy chọn)",
+			"cookies": "Trang web này sử dụng cookie. Khi tiếp tục sử dụng trang web này nghĩa là bạn đồng ý với việc sử dụng chúng",
+			"more": "hơn",
+			"less": "ít hơn",
+			"chooseFrom": "Chọn từ",
+			"standard": "Tiêu chuẩn",
+			"days": {
+				"mon": "Thứ hai",
+				"tue": "Thứ ba",
+				"wed": "Thứ tư",
+				"thu": "Thứ năm",
+				"fri": "Thứ sáu",
+				"sat": "ngày thứ bảy",
+				"sun": "chủ nhật"
+			},
+			"opentimelist": "Giờ mở cửa",
+			"newVersionAvailable": "Bạn đang chạy phiên bản cũ hơn của ứng dụng. Tải lại ứng dụng để nhận bản cập nhật mới nhất",
+			"reloadApplication": "Tải lại ứng dụng",
+			"poweredByGonnaOrder": "Được cung cấp bởi Gonnaorder",
+			"recents": "Gần đây",
+			"information": "Thông tin",
+			"yes": "Đúng",
+			"no": "Không",
+			"error": "Lỗi",
+			"errorQRScanner": "Đã xảy ra lỗi với Máy quét QR!",
+			"confirm": "Xác nhận"
+		},
+		"select": {
+			"selectAtLeast": "Bạn phải chọn ít nhất {{x}}",
+			"selectAtmost": "Bạn có thể chọn nhiều nhất {{x}}",
+			"selectAtleastAtMost": "Bạn phải lựa chọn tối thiểu {{x}} và tối đa {{y}}",
+			"selectBetween": "Bạn phải chọn giữa các giá trị {{childCategory.min}} và {{childCategory.max}}."
+		},
+		"load": {
+			"loadingMessage": "Vui lòng chờ trong chốc lát…"
+		},
+		"itemDetails": {
+			"removeFromOrder": "Gỡ bỏ sản phẩm này ra khỏi đơn hàng của bạn",
+			"addToOrder": "Thêm vào đơn hàng của bạn",
+			"updateOrder": "Cập nhật đơn hàng của bạn"
+		},
+		"checkout": {
+			"yourOrder": "Đơn hàng của bạn",
+			"total": "Tổng số",
+			"specialNote": "Thêm một ghi chú đặc biệt vào đơn hàng của bạn",
+			"howToReceiveYourOrder": "Bạn muốn nhận đơn hàng của bạn theo cách nào?",
+			"option": {
+				"pickup": "Chính tôi sẽ đi lấy",
+				"addressDelivery": "Tôi muốn nhận nó tại địa chỉ của tôi",
+				"serve": {
+					"location": "Tôi đang ngồi ở bàn"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "Chúng tôi không thể lưu các chi tiết đơn hàng của bạn",
+				"fieldRequired": "Phần này bắt buộc",
+				"selectFutureTime": "Vui lòng chọn thời gian trong tương lai",
+				"orderSubmissionFailed": "Đơn đặt hàng không thể được gửi",
+				"ORDER_LOCATION_NOT_PRESENT": "Số bảng hoặc tên vị trí bị thiếu",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "Một số thông tin khách hàng bắt buộc bị thiếu",
+				"ORDER_WISH_TIME_INVALID": "Thời gian mong muốn đã qua",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "Phương thức phân phối đơn đặt hàng bị thiếu",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "Giao hàng tại địa chỉ không được hỗ trợ",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "Phục vụ đơn đặt hàng không được hỗ trợ",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "Nhận đơn đặt hàng không được hỗ trợ",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "Giao hàng tại mã bưu điện được chỉ định không được hỗ trợ",
+				"OPENING_TIME_SCHEDULE_ERROR": "Cửa hàng đóng cửa vào thời gian mong muốn của đơn hàng đã chọn",
+				"PROMOTION_NOT_ELIGIBLE": "Chương trình khuyến mại được chọn nhưng không đủ điều kiện",
+				"offersUnavailableExplanation": "Các mục dưới đây không có sẵn vào ngày và giờ bạn đã chỉ định. Vui lòng nhấp vào cập nhật đơn đặt hàng để xóa chúng khỏi đơn đặt hàng của bạn",
+				"offersOutOfStockExplanation": "Không có đủ mặt hàng có sẵn",
+				"invalidVoucherCode": "Mã phiếu thưởng không hợp lệ",
+				"INVALID_INPUT": "Lỗi khi xử lý các chi tiết được cung cấp.",
+				"slotUnavailableExplanation": "Khoảng thời gian được yêu cầu không có sẵn. Vui lòng chọn một khoảng thời gian khác hoặc chọn một phương thức phân phối khác.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "Không thể yêu cầu đặt hàng trong ngày cho cửa hàng này.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "Không thể yêu cầu đặt hàng trong ngày cho khu vực của bạn.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "Không thể yêu cầu đặt hàng trong ngày cho các mặt hàng sau:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "Không thể gửi mã bưu điện của bạn trong thời gian và ngày được yêu cầu.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "Không thể giao đơn đặt hàng vào thời gian và ngày cụ thể. Vui lòng chọn một giải pháp thay thế.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "Không thể nhận đơn đặt hàng vào thời gian và ngày cụ thể. Vui lòng chọn một giải pháp thay thế.",
+				"INTERNAL_ERROR": "Đã gặp lỗi không mong muốn. Vui lòng tải lại ứng dụng để thử lại.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "Số lượng đơn đặt hàng giao hàng tối thiểu không được đáp ứng. Thêm một giá trị {{AMOUNT_MISSING}} khác vào đơn đặt hàng của bạn để tiếp tục.",
+				"paymentFailed": "Bạn không thể thanh toán trực tuyến bằng phương thức thanh toán này. Vui lòng thử lại.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "Khuyến mại bắt buộc không được áp dụng",
+				"INVALID_CUSTOMER_VOUCHER": "Phiếu khách hàng không hợp lệ",
+				"slotUnavailable": "Thời gian đã chọn không khả dụng",
+				"slotUnavailableExplanationWithSuggestion": "Thời gian đã chọn là trong quá khứ hoặc không còn nữa. Thời gian có sẵn tiếp theo:",
+				"socialLoginFailed": "Chúng tôi không thể kết nối với tài khoản của bạn",
+				"customerDetailsUpdateFailed": "Không cập nhật được dữ liệu hồ sơ",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "Cửa hàng không giao hàng đến địa điểm này",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "Chúng tôi không thể tìm thấy địa chỉ bạn đã cung cấp. Vui lòng cập nhật địa chỉ và thử lại hoặc liên hệ với cửa hàng.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "Không thể gửi đơn đặt hàng vào thời gian và ngày cụ thể. Vui lòng chọn một giải pháp thay thế.",
+				"MISSING_LOCATION_TAP_ID": "Nhấn ID là bắt buộc",
+				"invalidPin": "Mã pin của khách hàng không hợp lệ"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "Đơn hàng của bạn sẽ được mang đến cho bạn"
+					},
+					"unknown": {
+						"location": "Đơn hàng của bạn sẽ được mang đến cho bạn"
+					}
+				},
+				"pickup": "Nhận đơn hàng",
+				"addressDelivery": "Vui lòng cung cấp thông tin của bạn"
+			},
+			"yourInformationPlease": "Vui lòng cung cấp thông tin của bạn",
+			"locationCode": "Bàn",
+			"yourName": "Tên của bạn",
+			"email": "Địa chỉ email",
+			"phoneNumber": "Số điện thoại",
+			"fullName": "Họ và tên",
+			"streetAddress": "Địa chỉ đường",
+			"zip": "Mã bưu chính/mã bưu điện",
+			"town": "Thị trấn/Thành phố",
+			"minimumAmount": "Yêu cầu số lượng đặt hàng tối thiểu {{amount}} để giao hàng",
+			"deliveryFee": "Phí giao hàng",
+			"deliveryFeeApplicable": "Áp dụng cho các đơn hàng dưới {{amount}}",
+			"field": {
+				"generalValidation": "Định dạng phần này không hợp lệ"
+			},
+			"acceptTerm": "Bằng cách tiếp tục, bạn chấp nhận {{Điều khoản sử dụng}} và {{Chính sách quyền riêng tư}}",
+			"termsAndPolicy": "Bằng cách tiếp tục, bạn chấp nhận",
+			"acceptTerms": {
+				"and": "và",
+				"after": "स्वीकार करते हैं"
+			},
+			"termsOfUse": "Điều khoản sử dụng",
+			"privacyPolicy": "Chính sách quyền riêng tư",
+			"yourTable": "Bàn của bạn",
+			"allowedCharacters": "Các kí tự được cho phép",
+			"wishTimeHeading": "Khi nào bạn muốn nhận được đơn đặt hàng của bạn?",
+			"asSoonAsPossible": "Tôi muốn nhận nó càng sớm càng tốt",
+			"specifyWishTime": "Tôi muốn xác định khi nào nhận được nó",
+			"specialNoteExample": "Thêm một ghi chú đặc biệt vào đơn hàng của bạn",
+			"cardDisabledNote": "Hãy chia sẻ đơn đặt hàng của bạn với các cửa hàng khi bạn đã sẵn sàng",
+			"cardHolderName": "Tên chủ thẻ",
+			"cardNumber": "Số thẻ của bạn",
+			"cvv": "CVV",
+			"itemsOutOfStock": "Một số mặt hàng đã hết hàng",
+			"floor": "Sàn nhà",
+			"storeClosedAtOrderWishDate": "Cửa hàng đóng cửa vào ngày hoặc giờ mong muốn",
+			"offersNotAvailableAtOrderWishDate": "Một số ưu đãi không có sẵn vào ngày hoặc giờ mong muốn",
+			"updateOrder": "Để cập nhật",
+			"offers": {
+				"availableQuantity": "Hiện đang có sẵn"
+			},
+			"voucherCode": "Nhập mã phiếu thưởng",
+			"validVoucherCode": "Mã voucher hợp lệ",
+			"yourRoom": "Phòng của bạn",
+			"yourLocation": "Vị trí của bạn",
+			"serveOption": {
+				"location": "Tôi muốn nhận nó tại địa điểm của tôi",
+				"room": "Tôi đang ở trong phòng của tôi"
+			},
+			"social": {
+				"connect": "Kết nối với tài khoản xã hội"
+			},
+			"remainingValidVoucher": "Số dư còn lại trên voucher:",
+			"paymentsense": {
+				"declined": "Thanh toán trực tuyến qua Paymentsense đã bị từ chối"
+			},
+			"saveCustomerDetailsForFuture": "Lưu dữ liệu hồ sơ của bạn cho các đơn đặt hàng trong tương lai",
+			"customerDetailsUpdateSuccess": "Dữ liệu hồ sơ của bạn đã được cập nhật",
+			"logout": "Đăng xuất",
+			"expiry": "Ngày hết hạn (MMYY)",
+			"enterPin": "Nhập số PIN"
+		},
+		"payment": {
+			"payOnlineNow": "Lựa chọn thanh toán trực tuyến bây giờ",
+			"chooseYourPaymentMethod": "Lựa chọn phương thức thanh toán của bạn",
+			"creditCard": "Thẻ tín dụng",
+			"paypal": "Paypal",
+			"submitOrder": "Gửi đơn hàng của bạn",
+			"proceedToPayment": "Thực hiện Thanh toán",
+			"errorCouldNotConnect": "Chúng tôi không thể kết nối đến trung tâm xử lý thanh toán đã lựa chọn. Vui lòng quay trở lại màn hình thanh toán và lựa chọn phương thức thanh toán khác hoặc thử lại lần nữa sau đó.",
+			"enterCreditCardInfo": "Vui lòng nhập thông tin thẻ tín dụng hoặc thẻ ghi nợ của bạn",
+			"yourOrderIsReady": "Đơn hàng của bạn đã sẵn sàng",
+			"yourOrderIsExpected": "Đơn hàng của bạn đang chờ",
+			"errors": {
+				"valueNotValid": "Giá trị cung cấp không hợp lệ",
+				"zipNotAvailable": "Bạn không thể đặt hàng giao hàng trực tuyến đến mã bưu điện này. Vui lòng liên hệ cửa hàng để biết thêm thông tin",
+				"addressNotAvailable": "Không thể tìm thấy địa chỉ. Vui lòng chọn một địa chỉ đường phố từ các đề xuất."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "Thanh toán trực tuyến ngay bây giờ",
+			"digitalWallets": "Ví kỹ thuật số",
+			"creditCardSecure": "Thanh toán bằng thẻ tín dụng an toàn",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "Số đơn hàng của bạn",
+			"orderStatus": "Tình trạng đơn hàng",
+			"notSubmitted": "Chưa gửi",
+			"sent": "Đã gửi",
+			"ready": "Sẵn sàng",
+			"rejected": "Bị từ chối",
+			"startNewOrder": "Bắt đầu một đơn hàng mới",
+			"errors": {
+				"emailProperFormat": "Vui lòng đăng nhập một địa chỉ email hợp lệ"
+			},
+			"fiilEmailAddress": "Điền địa chỉ email của bạn để nhận được một bản sao đơn hàng của bạn",
+			"failedEmail": "Không gửi email được",
+			"emailSent": "Email đã gửi được",
+			"received": "Đã nhận hàng",
+			"accepted": "Đã chấp nhận",
+			"mobileAppPromotion": "Đặt hàng lần sau qua ứng dụng di động GonnaOrder"
+		},
+		"dialog": {
+			"ok": "Đồng ý",
+			"cancel": "Hủy bỏ"
+		},
+		"store": {
+			"currently": {
+				"closed": "Cửa hàng hiện đang đóng cửa"
+			},
+			"time": {
+				"closed": "Cửa hàng đóng cửa vào thời gian đã chọn"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "Ăn chay",
+						"vegan": "Thuần chay",
+						"celery": "Rau cần tây",
+						"wheat": "Lúa mì",
+						"crustaceans": "Động vật giáp xác",
+						"eggs": "Trứng",
+						"fish": "Cá",
+						"lupin": "Lupin",
+						"milk": "Sữa",
+						"molluscs": "Động vật thân mềm",
+						"mustard": "Mù tạc",
+						"nuts": "Quả hạch",
+						"peanuts": "Đậu phộng",
+						"sesame": "Mè",
+						"soya": "Đậu nành",
+						"sulphurDioxide": "Lưu huỳnh đi-ô-xít",
+						"halal": "Halal",
+						"barley": "Lúa mạch",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "Trang web này sử dụng cookie để cải thiện trải nghiệm của bạn, nhưng bạn có thể chọn không tham gia nếu muốn.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "Ứng dụng"
+		},
+		"cookie": {
+			"accept": "Chấp Nhận",
+			"reject": "Từ Chối",
+			"readMore": "Đọc thêm"
+		},
+		"connect": {
+			"social": {
+				"google": "Kết nối với Google",
+				"facebook": "Kết nối với Facebook"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "Giỏ của bạn đang trống",
+				"proceed": "Tiến hành"
+			}
+		},
+		"main": {
+			"typeUrl": "Nhập URL hoặc tên cửa hàng",
+			"invalidUrl": "URL không hợp lệ",
+			"scanQRCode": "Quét mã QR",
+			"storeNotFound": "Cửa hàng không được tìm thấy",
+			"storeSaved": "Lưu trữ thông tin đã được lưu thành công!",
+			"navigateStoreConfirm": "Điều hướng đến cửa hàng?"
+		},
+		"recents": {
+			"nothingFound": "Không tìm thấy gì ở đây"
+		}
+	}
+}

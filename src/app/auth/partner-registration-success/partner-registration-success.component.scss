@@ -1,0 +1,53 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "../../../scss/globals";
+@import "../login/login.component";
+
+
+:host ::ng-deep { h1 {
+  font-size: 2.25em  !important;
+  font-weight: 500  !important;
+  padding-top: 0.25rem  !important;
+  @media (max-width: 1280px  !important) {
+    font-size: 3.250em  !important;
+    padding-top: 1.500rem !important;
+  }
+  @include media-breakpoint-down(lg) {
+    padding-top: 0.650rem !important;
+    padding-bottom: 0.800rem !important;
+    font-size: 2.000em !important;
+  }
+}
+label{
+  font-size: 1.125em  !important;
+  font-weight: 500  !important;
+}
+.btn-link {
+  font-size: 1.125em;
+  font-weight: bold;
+  color: $link-blue;
+}
+.btn-pre-text {
+  font-size: 1.125em;
+  font-weight: bold;
+  color: $dark-blue;
+  padding: 0.375rem 0.25rem 0.375rem 0;
+}
+.btn-primary {
+  background-color: $mint-green;
+  font-size: 1.000em;
+  border: 0;
+  // border-radius: 0.65rem !important;
+  border-radius: 0.250rem !important;
+  padding: 0.625rem 2.750rem;
+  @media (max-width: 1280px) {
+    padding: 0.600rem 2.500rem;
+  }
+}
+.signup-wrapper {
+  @media (max-width: 1280px) {
+    padding-top: 1.500rem;
+  }
+}
+}

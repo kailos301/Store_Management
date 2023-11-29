@@ -1,0 +1,37 @@
+<div class="errors-dialog d-flex flex-wrap justify-content-center align-items-center hide" #errorsDialog>
+  <div class="selection-container p-4 position-absolute">
+      <div class="header-container d-flex flex-wrap">
+          <div class="w-100">
+              <div class="text-center justify-content-center font-size-header font-weight-bold">
+                  {{'public.checkout.errors.orderSubmissionFailed' | translate}}
+                  <span class="float-right position-absolute" style="cursor: pointer;top: 5px;right:15px;"
+                      (click)="dismissErrorsDialog()"><i class="fas fa-times" style="color:black"></i></span>
+              </div>
+          </div>
+      </div>
+      <div class="errors-container py-2">
+          <div class="item-list mb-3">
+              <div class="item-wrapper text-select-none d-flex flex-column"
+                  *ngFor="let error of sameDayOrderingErrors">
+                  <div class="item flex-fill mb-1 text-unselectable">
+                      <div class="text-unselectable font-size-primary">
+                          {{'public.checkout.errors.' + error.code | translate}}
+                      </div>
+                  </div>
+                  <div class="item flex-fill ml-3 text-unselectable"
+                      *ngFor="let info of error.additionalInfo">
+                      <div class="text-unselectable font-size-secondary">
+                          • {{info.offerName}}
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="w-100 font-size-primary text-unselectable">
+              <a href="#" class="button dark d-block text-center py-3" (throttledClick)="dismissErrorsDialog()"
+                  appPreventDoubleClick [throttleTime]="5000">
+                  {{'public.dialog.ok' | translate}}
+              </a>
+          </div>
+      </div>
+  </div>
+</div>

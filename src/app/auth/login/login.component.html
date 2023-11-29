@@ -1,0 +1,128 @@
+<app-header (locale)="onLocaleChange($event)"></app-header>
+<div class="app-body pt-1 mt-1">
+  <main class="main d-flex align-items-center">
+    <div class="container px-md-5 pt-0"
+      [ngClass]="{'pt-1':(invalidCredentials$ | async)||((userVerified || partnerVerified ) && !(invalidCredentials$ | async))||(userPasswordReset && !(invalidCredentials$ | async))||(emailUpdated && !(invalidCredentials$ | async))||(userInvited && !(invalidCredentials$ | async))}">
+      <div class="alert-wrapper w-100 justify-content-center">
+        <div class="container px-md-5 text-center">
+          <div class="d-flex flex-row alert-flex-row w-100 px-2 px-sm-5">
+            <div class="d-flex w-100">
+              <div role="alert" class="alert w-100 alert-danger" *ngIf="invalidCredentials$ | async">
+                <strong>{{'admin.alerts.headerError' | translate}}</strong>
+                {{'admin.alerts.invalidCredentials' | translate}} </div>
+              <div role="alert" class="alert w-100 alert-danger" *ngIf="socialAccountLoginFailed$ | async">
+                <strong>{{'admin.alerts.headerError' | translate}}</strong>
+                {{'admin.alerts.socialAccountLoginFailed' | translate}} </div>
+              <div role="alert" class="alert w-100 alert-success"
+                *ngIf="(userVerified || partnerVerified ) && !(invalidCredentials$ | async)">
+                <strong>{{'admin.alerts.headerSuccess' | translate}}</strong>
+                {{'admin.alerts.accountActivated' | translate}} </div>
+              <div role="alert" class="alert w-100 alert-success"
+                *ngIf="userPasswordReset && !(invalidCredentials$ | async)">
+                <strong>{{'admin.alerts.headerSuccess' | translate}}</strong>
+                {{'admin.alerts.passwordChanged' | translate}} </div>
+              <div role="alert" class="alert w-100 alert-success"
+                *ngIf="emailUpdated && !(invalidCredentials$ | async)">
+                <strong>{{'admin.alerts.headerSuccess' | translate}}</strong>
+                {{'admin.alerts.emailChanged' | translate}} </div>
+              <div role="alert" class="alert w-100 alert-success" *ngIf="userInvited && !(invalidCredentials$ | async)">
+                <strong>{{'admin.alerts.headerSuccess' | translate}}</strong>
+                {{'admin.alerts.userInvitationSuccessfull' | translate:storeNameTraslationToken}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-row px-2 px-sm-5">
+        <div class="d-flex w-100 mx-auto">
+          <div class="card-group w-100 mx-md-5 mt-0">
+            <div class="card px-2 py-4 p-md-4">
+              <div class="card-body w-100 mx-auto" (keyup.enter)="loginAction()">
+                <h1 class="text-center text-blue">{{'admin.global.login' | translate}}</h1>
+
+                <div class="social-login-wrapper container row justify-content-between">
+                    <!-- Google login button -->
+                    <div class="google-btn row col-lg-4 mt-3 mt-xl-0" (click)="socialLoginAction('google')">
+                      <div class="google-icon-wrapper">
+                        <img class="google-icon" src="/assets/img/social/google.svg"/>
+                      </div>
+                      <!-- <p class="btn-text text-center">{{'admin.login.social.google' | translate}}</p> -->
+                    </div>
+
+                    <!-- Facebook login button -->
+                    <div class="facebook-btn row col-lg-4 mt-3 mt-xl-0" (click)="socialLoginAction('facebook')">
+                      <div class="facebook-icon-wrapper">
+                        <img class="facebook-icon" src="/assets/img/social/facebook.svg"/>
+                      </div>
+                      <!-- <p class="btn-text font-weight-bold text-center">{{'admin.login.social.facebook' | translate}}</p> -->
+                    </div>
+                    
+                    <!-- Apple login button -->
+                    <div class="apple-btn row col-lg-4 mt-3 mt-xl-0" (click)="signInWithApple()">
+                      <div class="apple-icon-wrapper">
+                        <img class="apple-icon" src="/assets/img/social/apple.svg"/>
+                      </div>
+                      <!-- <p class="btn-text text-center">{{'admin.login.social.apple' | translate}}</p> -->
+                    </div>
+
+                </div>
+
+                <div>
+                  <div class="or-separator">
+                    <span>OR</span>
+                  </div>
+                </div>
+
+                <form [formGroup]="loginForm" class="pb-0">
+                  <div class="row">
+                    <div class="col mb-1" [ngClass]="{'mb-3':username.touched && username.errors && username.errors.required}">
+                      <mat-form-field appearance="outline" class="mat-form-field-custom">
+                        <mat-label>{{'admin.global.email'  | translate}}
+                        </mat-label>
+                        <input matInput formControlName="username">
+                        <mat-error *ngIf="username.touched && username.errors && username.errors.required">
+                          {{'admin.global.field.required' | translate}}.
+                        </mat-error>
+                      </mat-form-field>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col">
+                      <mat-form-field appearance="outline" class="mat-form-field-custom">
+                        <mat-label>{{'admin.global.password' | translate}}</mat-label>
+                        <input matInput formControlName="password" type="password">
+                        <mat-error *ngIf="password.touched && password.errors && password.errors.required">
+                          {{'admin.global.field.required' | translate}}.
+                        </mat-error>
+                        <mat-error *ngIf="password.touched && password.errors && password.errors.minlength">
+                          {{'admin.global.field.minLength' | translate:{minLength : password.errors.minlength.requiredLength} }}.
+                        </mat-error>
+                        <mat-error *ngIf="password.touched && password.errors && password.errors.maxlength">
+                          {{'admin.global.field.maxLength' | translate:{maxLength : password.errors.maxlength.requiredLength} }}.
+                        </mat-error>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-row mb-4 mb-xs-0 justify-content-end">
+                    <button type="button" class="btn btn-link px-0"
+                      (click)="goToForgotPassword()">{{'admin.login.forgetPassword' | translate}}</button>
+                  </div>
+                  <div class="d-flex flex-row justify-content-center">
+                    <button type="button" class="btn btn-primary font-weight-bold" (click)="loginAction()">
+                      {{'admin.global.login' | translate}}
+                    </button>
+                  </div>
+
+                  <div class="signup-wrapper d-flex flex-row justify-content-center justify-content-md-start">
+                    <div class="d-flex btn-pre-text text-dark-blue">{{'admin.login.noAccount' | translate}}</div>
+                    <button type="button" class="d-flex btn btn-link px-0"
+                      (click)="goToRegistration()">{{'admin.login.signUp' | translate}}</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

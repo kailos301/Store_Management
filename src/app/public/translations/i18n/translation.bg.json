@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "Със съдействието на",
+			"thankYou": "Благодарим Ви",
+			"discount": "Отстъпка",
+			"viewOrder": "Виж поръчката",
+			"errorH2": "Нещо се обърка",
+			"errorUnexpected": "Стана нещо непредвидено",
+			"errorExpected": "Стана нещо непредвидено",
+			"errorMustSelectOne": "Посочете стойност",
+			"errorTrialExceeded": "Тази функция не е достъпна",
+			"emptyCart": "Кошницата е празна",
+			"optional": "(по избор)",
+			"cookies": "Сайтът използва бисквитки. Като продължавате да използвате нашия уебсайт Вие се съгласвате с използването им.",
+			"more": "Повече",
+			"less": "По-малко",
+			"chooseFrom": "Избирете от",
+			"standard": "стандарт",
+			"days": {
+				"mon": "Понеделник",
+				"tue": "Вторник",
+				"wed": "Сряда",
+				"thu": "Четвъртък",
+				"fri": "Петък",
+				"sat": "Събота",
+				"sun": "Неделя"
+			},
+			"opentimelist": "Работно време",
+			"newVersionAvailable": "Изпълнявате по-стара версия на приложението. Презаредете приложението, за да получите най-новата актуализация",
+			"reloadApplication": "Презаредете приложението",
+			"poweredByGonnaOrder": "Осъществено от Gonnaorder",
+			"recents": "Наскоро",
+			"information": "Информация",
+			"yes": "да",
+			"no": "Не",
+			"error": "Грешка",
+			"errorQRScanner": "Възникна грешка с QR скенера!",
+			"confirm": "Потвърдете"
+		},
+		"select": {
+			"selectAtLeast": "Трябва да изберете поне {{x}}",
+			"selectAtmost": "Можете да изберете най-много {{x}}",
+			"selectAtleastAtMost": "Посочете минимум {{x}} и максимум {{y}}",
+			"selectBetween": "Трябва да избирате между стойности {{childCategory.min}} и {{childCategory.max}}."
+		},
+		"load": {
+			"loadingMessage": "Един момент моля..."
+		},
+		"itemDetails": {
+			"removeFromOrder": "Премахнете това от поръчката",
+			"addToOrder": "Добавете към поръчката",
+			"updateOrder": "Обновете поръчката"
+		},
+		"checkout": {
+			"yourOrder": "Вашата поръчка",
+			"total": "Обща сума",
+			"specialNote": "Специални инструкции към поръчката",
+			"howToReceiveYourOrder": "Как желаете да получите поръчката",
+			"option": {
+				"pickup": "Взимане на място",
+				"addressDelivery": "Искам да получа поръчката до адрес",
+				"serve": {
+					"location": "Намирам се на маса"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "Не усяхме да запаметим данните за Вашата поръчка",
+				"fieldRequired": "Това поле е задължително",
+				"selectFutureTime": "Моля, изберете време в бъдеще",
+				"orderSubmissionFailed": "Поръчката не може да бъде подадена",
+				"ORDER_LOCATION_NOT_PRESENT": "Липсва номер на таблица или име на местоположение",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "Липсва известна информация за клиента",
+				"ORDER_WISH_TIME_INVALID": "Желаното време за желание е в миналото",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "Липсва методът за доставка на поръчката",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "Доставката на адрес не се поддържа",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "Обслужването на поръчката не се поддържа",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "Вземането на поръчката не се поддържа",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "Доставката на посочения пощенски код не се поддържа",
+				"OPENING_TIME_SCHEDULE_ERROR": "Магазинът е затворен в избраното време за желание за поръчка",
+				"PROMOTION_NOT_ELIGIBLE": "Избрана е промоция, но тя не отговаря на условията",
+				"offersUnavailableExplanation": "Елементите по-долу не са налични към датата и часа, които сте посочили. Моля, кликнете върху актуализиране на поръчката, за да ги премахнете от поръчката си",
+				"offersOutOfStockExplanation": "Няма достатъчно налични артикули",
+				"invalidVoucherCode": "Кодът на ваучера е невалиден",
+				"INVALID_INPUT": "Грешка при обработката на предоставените подробности.",
+				"slotUnavailableExplanation": "Заявеният времеви интервал не е наличен. Моля, изберете различен интервал от време или изберете друг метод за доставка.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "Не е възможно да поискате поръчка за същия ден за този магазин.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "Не е възможно да поискате поръчка за същия ден за вашия район.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "Не е възможно да поискате поръчка за същия ден за следните артикули:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "Не е възможно да доставите на вашия пощенски код за исканото време и ден.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "Не е възможно да се доставят поръчки в точното време и дата. Моля, изберете алтернатива.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "Не е възможно да се вземат поръчки в конкретния час и дата. Моля, изберете алтернатива.",
+				"INTERNAL_ERROR": "Възникна неочаквана грешка. Моля, презаредете приложението, за да опитате отново.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "Не е изпълнена минималната сума за поръчка за доставка. Добавете още една стойност от {{AMOUNT_MISSING}} към поръчката си, за да продължите.",
+				"paymentFailed": "Не успяхте да платите онлайн, използвайки този начин на плащане. Моля, опитайте отново.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "Не се прилагат необходимите промоции",
+				"INVALID_CUSTOMER_VOUCHER": "Невалиден ваучер за клиенти",
+				"slotUnavailable": "Избраното време не е налично",
+				"slotUnavailableExplanationWithSuggestion": "Избраното време е в миналото или вече не е достъпно. Следващото налично време:",
+				"socialLoginFailed": "Не можахме да се свържем с вашия акаунт",
+				"customerDetailsUpdateFailed": "Актуализирането на данните на профила не бе успешно",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "Магазинът не доставя до това място",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "Не можем да намерим посочения от вас адрес. Моля, актуализирайте адреса и опитайте отново или се свържете с магазина.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "Не е възможно да се подават поръчки в конкретния час и дата. Моля, изберете алтернатива.",
+				"MISSING_LOCATION_TAP_ID": "Tap ID е задължителен",
+				"invalidPin": "Невалиден ПИН код на клиента"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "Поръчката Ви ще бъде сервирана"
+					},
+					"unknown": {
+						"location": "Поръчката Ви ще бъде сервирана"
+					}
+				},
+				"pickup": "Вземете поръчка",
+				"addressDelivery": "Вашата информация"
+			},
+			"yourInformationPlease": "Вашата информация",
+			"locationCode": "Маса",
+			"yourName": "Вашето име",
+			"email": "E-mail",
+			"phoneNumber": "Телефон",
+			"fullName": "Вашите имена",
+			"streetAddress": "Адрес",
+			"zip": "Пощенски код",
+			"town": "Град",
+			"minimumAmount": "Минимална поръчка от {{amount}} за безплатна доставка",
+			"deliveryFee": "Такса доставка",
+			"deliveryFeeApplicable": "Приложимо за следните поръчки {{amount}}",
+			"field": {
+				"generalValidation": "Това поле не е валидно"
+			},
+			"acceptTerm": "С продължаването си приемате {{Условия за ползване}} и {{Политика за поверителност}}",
+			"termsAndPolicy": "С продължаването си приемате ",
+			"acceptTerms": {
+				"and": "и",
+				"after": ""
+			},
+			"termsOfUse": "Условия за ползване",
+			"privacyPolicy": "Политика за поверителност",
+			"yourTable": "Вашата маса",
+			"allowedCharacters": "Позволени символи",
+			"wishTimeHeading": "Кога искате да получите поръчката си?",
+			"asSoonAsPossible": "Искам да го получа възможно най-скоро",
+			"specifyWishTime": "Искам да уточня кога да го получа",
+			"specialNoteExample": "Специални инструкции към поръчката",
+			"cardDisabledNote": "Моля споделете поръчката когато е готова",
+			"cardHolderName": "Име на картодържателя",
+			"cardNumber": "Номер на вашата карта",
+			"cvv": "CVV",
+			"itemsOutOfStock": "Някои артикули са изчерпани",
+			"floor": "Етаж",
+			"storeClosedAtOrderWishDate": "Магазинът е затворен на желаната дата или час от желанието",
+			"offersNotAvailableAtOrderWishDate": "Някои оферти не са налични на желаната дата или час на желанието",
+			"updateOrder": "Актуализиране на поръчката",
+			"offers": {
+				"availableQuantity": "Достъпен в момента"
+			},
+			"voucherCode": "Въведете код на ваучер",
+			"validVoucherCode": "Кодът на ваучера е валиден",
+			"yourRoom": "Твоята стая",
+			"yourLocation": "Твоето местоположение",
+			"serveOption": {
+				"location": "Искам да го получа на моето място",
+				"room": "в стаята съм си"
+			},
+			"social": {
+				"connect": "Свържете се със социалния акаунт"
+			},
+			"remainingValidVoucher": "Остатъчен баланс по ваучера:",
+			"paymentsense": {
+				"declined": "Онлайн плащането чрез Paymentsense е отхвърлено"
+			},
+			"saveCustomerDetailsForFuture": "Запазете данните на вашия профил за бъдещи поръчки",
+			"customerDetailsUpdateSuccess": "Данните на вашия профил са актуализирани",
+			"logout": "Излез от профила си",
+			"expiry": "Дата на изтичане (MMYY)",
+			"enterPin": "Въведете ПИН номера"
+		},
+		"payment": {
+			"payOnlineNow": "Изберете за онлайн плащане",
+			"chooseYourPaymentMethod": "Изберете начин на плащане",
+			"creditCard": "Кредитна карта",
+			"paypal": "PayPal",
+			"submitOrder": "Потвърдете поръчката",
+			"proceedToPayment": "Продълете към плащане",
+			"errorCouldNotConnect": "Неуспешно плащане. Моля, изберете друг начин на плащане или опитайте отново по-късно.",
+			"enterCreditCardInfo": "Моля въведете данни за Вашата кредитна или дебитна карта",
+			"yourOrderIsReady": "Вашата поръчка е готова",
+			"yourOrderIsExpected": "Вашата поръчка се очаква",
+			"errors": {
+				"valueNotValid": "Стойността не е валидна",
+				"zipNotAvailable": "Не можете да направите онлайн поръчка за доставка до този пощенски код. Моля, свържете се с магазина за повече информация",
+				"addressNotAvailable": "Адресът не може да бъде намерен. Моля, изберете адрес от предложенията."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "Платете онлайн сега",
+			"digitalWallets": "Цифрови портфейли",
+			"creditCardSecure": "Сигурни плащания с кредитни карти",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "Номер на Вашата поръчка",
+			"orderStatus": "Статус на поръчката",
+			"notSubmitted": "Все още не е приета",
+			"sent": "Изпратена",
+			"ready": "Готова",
+			"rejected": "Отказана",
+			"startNewOrder": "Започнете нова поръчка",
+			"errors": {
+				"emailProperFormat": "Моля, въведете валиден e-mail"
+			},
+			"fiilEmailAddress": "Въведете e-mail адрес, на който да получите копие от поръчката",
+			"failedEmail": "Неуспешно изпращане",
+			"emailSent": "Изпратено",
+			"received": "Получена",
+			"accepted": "Приета",
+			"mobileAppPromotion": "Следващия път поръчайте чрез мобилното приложение GonnaOrder"
+		},
+		"dialog": {
+			"ok": "ОК",
+			"cancel": "Отмяна"
+		},
+		"store": {
+			"currently": {
+				"closed": "В момента магазинът е затворен"
+			},
+			"time": {
+				"closed": "Магазинът е затворен в избраното време"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "Вегетариански",
+						"vegan": "Веган",
+						"celery": "Целина",
+						"wheat": "Пшеница",
+						"crustaceans": "Ракообразни",
+						"eggs": "Яйца",
+						"fish": "Риба",
+						"lupin": "Лупин",
+						"milk": "Мляко",
+						"molluscs": "Мекотели",
+						"mustard": "Горчица",
+						"nuts": "Ядки",
+						"peanuts": "Фъстъци",
+						"sesame": "Сусам",
+						"soya": "Соя",
+						"sulphurDioxide": "Серен диоксид",
+						"halal": "Халал",
+						"barley": "Ечемик",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "Този уебсайт използва бисквитки, за да подобри вашето преживяване, но можете да се откажете, ако желаете.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "Приложи"
+		},
+		"cookie": {
+			"accept": "Прием",
+			"reject": "Отхвърлете",
+			"readMore": "Прочетете още"
+		},
+		"connect": {
+			"social": {
+				"google": "Свържете се с Google",
+				"facebook": "Свържете се с Facebook"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "Кошницата ви е празна",
+				"proceed": "Продължете"
+			}
+		},
+		"main": {
+			"typeUrl": "Въведете URL адрес или име на магазин",
+			"invalidUrl": "URL адресът е невалиден",
+			"scanQRCode": "Сканирайте QR код",
+			"storeNotFound": "Магазинът не е намерен",
+			"storeSaved": "Информацията за съхраняване е запазена успешно!",
+			"navigateStoreConfirm": "Навигирайте до магазина?"
+		},
+		"recents": {
+			"nothingFound": "Тук не е намерено нищо"
+		}
+	}
+}

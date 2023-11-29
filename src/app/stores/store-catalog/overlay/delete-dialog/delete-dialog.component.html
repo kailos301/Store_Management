@@ -1,0 +1,32 @@
+<div *ngIf="data.mode == 'NODELETE'">
+    <div mat-dialog-content class="row">
+        <div class="w-100 d-flex">
+            <div class="icon">
+                <i class="fa fa-info-circle text-blue">
+                </i>
+            </div>
+            <div [innerHTML]="data.message">
+            </div>
+        </div>
+    </div>
+    <div mat-dialog-actions class="mt-2">
+        <button type="button" (click)="onNoClick()" class="btn btn-primary px-4">{{'admin.global.ok'|translate}}</button>
+    </div>
+</div>
+<div *ngIf="data.mode == 'DELETE'">
+    <div mat-dialog-content>
+        <div class="w-100 d-flex">
+            <div class="icon">
+                <i class="fa fa-exclamation-triangle text-blue">
+                </i>
+            </div>
+            <div [innerHTML]="data.message">
+            </div>
+        </div>
+
+    </div>
+    <div mat-dialog-actions class="mt-2">
+        <a type="link" class="text-blue actionLink" (click)="onNoClick()">{{'admin.global.cancel'|translate}}</a>
+        <button [mat-dialog-close]="data.mode" type="button" class="btn btn-primary px-4">{{'admin.global.ok'|translate}}</button>
+    </div>
+</div>

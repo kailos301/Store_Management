@@ -1,0 +1,208 @@
+<div class="loading-screen d-flex justify-content-center align-items-center w-100 v-70" *ngIf="!isCreateOffer && offerStatus !== 'LOADED'">
+  <div class="d-flex flex-column text-center">
+    <div class="lds-ripple mx-auto"><div></div><div></div></div>
+  </div>
+</div>
+<div class="animated fadeIn" id="variantOffer" *ngIf="(!isCreateOffer && (offer$ | async)) || isCreateOffer">
+  <div class="col-sm-12">
+    <div class="card list" *ngIf="isCreateOffer || offerStatus === 'LOADED'">
+      <div class="col-lg-12 mb-4 d-flex align-items-center justify-content-between p-0">
+        <a title="{{'admin.store.catalog.backToOffer'|translate}}" class="btn back-button btn-primary"
+          (click)="goBack($event)" href="#">
+          <i class="fas fa-arrow-left mr-2"></i> <span
+            class="d-none d-md-inline-block d-lg-inline-block d-xl-inline-block ml-1">{{'admin.store.catalog.backToOffer'| translate}}
+            {{parentOfferName}}</span>
+        </a>
+      </div>
+
+      <div class="card-header">
+        <span *ngIf="isCreateOffer">{{'admin.store.catalog.variant.createPriceVariant'|translate}}</span>
+        <span *ngIf="!isCreateOffer">{{'admin.store.catalog.variant.priceVariant'|translate}} {{(offer$ | async).priceDescription}}</span>
+        <app-help-icon [helpPageName]="offerVariantHelpPage"></app-help-icon>
+      </div>
+      <div class="card-body">
+        <app-catalog-language></app-catalog-language>
+        <form [formGroup]="offerVariantForm">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="form-group">
+                <label for="priceDesc" class="col-xl-2 col-lg-3 col-md-12 col-sm-12 required">{{'admin.store.catalog.description.priceDescription'|translate}}</label>
+                <div class="input-group col-xl-10 col-lg-9 col-md-12 col-sm-12">
+                  <input type="text" class="form-control"
+                    [class.is-invalid]="getControl('priceDescription').invalid && (getControl('priceDescription').dirty || getControl('priceDescription').touched)"
+                    placeholder="{{'admin.store.catalog.description.priceDescription'|translate}}"
+                    autocomplete="off" formControlName="priceDescription"
+                    id="priceDesc" maxlength="50" />
+                  <div class="invalid-feedback" *ngIf="getControl('priceDescription').errors">
+                    <span *ngIf="getControl('priceDescription').errors.required || getControl('priceDescription').errors.whitespace">{{'admin.global.field.required'|translate}}</span>
+                    <span *ngIf="getControl('priceDescription').errors.minlength">{{'admin.global.field.minLength'|translate: {minLength: "2"} }}</span>
+                    <span *ngIf="getControl('priceDescription').errors.maxlength">{{'admin.global.field.maxLength'|translate: {maxLength: "50"} }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="form-group">
+                <label for="price" class="col-xl-2 col-lg-3 col-md-12 col-sm-12">{{'admin.global.price'|translate}}</label>
+                <div class="input-group col-xl-10 col-lg-9 col-md-12 col-sm-12 priceContainer">
+                  <app-price-input [allowNegValue]="true" [priceFormControl]="getControl('price')"></app-price-input>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="form-group">
+                <label for="discount" class="col-xl-2 col-lg-3 col-md-12 col-sm-12 required">{{'admin.global.discount'|translate}}</label>
+                <div class="input-group col-xl-10 col-lg-9 col-md-12 col-sm-12 discount">
+                  <label class="radio-container" for="monetary">
+                    {{'admin.store.catalog.discount.monetary'|translate}}
+                    <input type="radio" (click)="setMonetary()" formControlName="discountType" value="MONETARY" id="monetary">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="radio-container" for="percentile">
+                    {{'admin.store.catalog.discount.percentile'|translate}}
+                    <input type="radio" (click)="setPercentage()" formControlName="discountType" value="PERCENTILE" id="percentile">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="radio-container" for="nodiscount">
+                    {{'admin.store.catalog.discount.noDiscount'|translate}}
+                    <input type="radio" formControlName="discountType" value="NODISCOUNT" id="nodiscount">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" *ngIf="isSelected('MONETARY') || isSelected('PERCENTILE')">
+            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+              <label class="col-xl-2 col-lg-3 hideInSmallScreen"></label>
+              <div class="col-xl-10 col-lg-9 col-md-12 col-sm-12 priceContainer" *ngIf="isSelected('MONETARY')">
+                <app-price-input [priceFormControl]="getControl('discount')"></app-price-input>
+                <div class="invalid-feedback" *ngIf="offerVariantForm.errors && (getControl('discount').touched || getControl('discount').dirty || getControl('price').touched ||  getControl('price').dirty)">
+                  <span *ngIf="offerVariantForm.errors.invalidDiscount">{{'admin.store.catalog.discount.invalidDiscount'|translate}}</span>
+                </div>
+              </div>
+              <div class="col-lg-8 col-md-12 col-sm-12" *ngIf="isSelected('PERCENTILE')">
+                <select 
+                  class="form-control" 
+                  onchange="this.dataset.chosen = this.value"  
+                  formControlName="discount"
+                  [attr.placeholder]="'admin.store.discount.discount'|translate" 
+                  [ngClass]="{'default-option' : discount == 0}"
+                  (change) = "selectDiscountHandler($event)"
+                >
+                  <option value="0" >{{'admin.global.pleaseSelect'|translate}}</option>
+                  <option value="5">5%</option>
+                  <option value="10">10%</option>
+                  <option value="15">15%</option>
+                  <option value="20">20%</option>
+                  <option value="25">25%</option>
+                  <option value="30">30%</option>
+                  <option value="35">35%</option>
+                  <option value="40">40%</option>
+                  <option value="50">50%</option>
+                  <option value="60">60%</option>
+                  <option value="70">70%</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-lg-12 col-md-12 col-sm-12">
+              <label for="sellable" class="col-xl-2 col-lg-3 col-md-12 col-sm-12 required">{{'admin.store.catalog.sellable.isVisible'|translate}}</label>
+              <div class="input-group col-xl-10 col-lg-9 col-md-12 col-sm-12">
+                {{'admin.global.no'|translate}} &nbsp;<mat-slide-toggle formControlName="sellable">{{'admin.global.yes'|translate}}</mat-slide-toggle>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group col-lg-12">
+              <label for="sellable" class="col-xl-2 col-lg-3 col-md-12 col-sm-12 hideInSmallScreen"></label>
+              <div class="input-group col-xl-4 col-lg-6 col-md-12 col-sm-12"
+                *ngIf="getControl('sellable').value == 'true' || getControl('sellable').value == true">
+                <select 
+                  class="form-control" 
+                  onchange="this.dataset.chosen = this.value" 
+                  formControlName="scheduleId"
+                  id="availability"
+                  [ngClass]="{'default-option' : scheduleId == 0}"
+                  (change) = "selectScheduleIdHandler($event)"
+                >
+                  <option value="0">{{'admin.store.catalog.availability.allTimeAvailability'|translate}}</option>
+                  <option *ngFor="let item of scheduleList" value="{{ item.id }}">
+                    {{ item.name }}</option>
+                </select>
+              </div>
+              <button type="button" class="btn btn-primary" *ngIf="getControl('sellable').value == 'true' || getControl('sellable').value == true"
+                  (click)="gotoAddSchedule()">{{'admin.store.addNewSchedule'|translate}}</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="form-group">
+                <label for="externProdId" class="col-xl-2 col-lg-3 col-md-12 col-sm-12">{{'admin.store.catalog.offer.externalProductId'|translate}}</label>
+                <div class="input-group col-xl-10 col-lg-9 col-md-12 col-sm-12">
+                  <input type="text" class="form-control"
+                    [class.is-invalid]="getControl('externalProductId').invalid && (getControl('externalProductId').dirty || getControl('externalProductId').touched)"
+                    placeholder="{{'admin.store.catalog.offer.externalProductId'|translate}}"
+                    autocomplete="off" formControlName="externalProductId"
+                    id="externProdId" maxlength="100" />
+                  <div class="invalid-feedback" *ngIf="getControl('externalProductId').errors">
+                    <span
+                      *ngIf="getControl('externalProductId').errors.maxlength">{{'admin.global.field.maxLength'|translate:
+                      {maxLength: "100"} }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" *ngIf="!isCreateOffer">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="form-group">
+                <label for="externProdId" class="col-xl-2 col-lg-3 col-md-12 col-sm-12">{{'admin.store.catalog.offer.vatExternalId'|translate}}</label>
+                <div class="input-group col-xl-10 col-lg-9 col-md-12 col-sm-12">
+                  <input type="text" class="form-control"
+                    [class.is-invalid]="getControl('vatExternalId').invalid && (getControl('vatExternalId').dirty || getControl('vatExternalId').touched)"
+                    placeholder="{{'admin.store.catalog.offer.vatExternalId'|translate}}"
+                    autocomplete="off" formControlName="vatExternalId"
+                    id="externProdId" maxlength="100" />
+                  <div class="invalid-feedback" *ngIf="getControl('vatExternalId').errors">
+                    <span
+                      *ngIf="getControl('vatExternalId').errors.maxlength">{{'admin.global.field.maxLength'|translate:
+                      {maxLength: "100"} }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="!isCreateOffer">
+            <app-content-translation [content]="(offer$ | async).languageTranslation" [mode]="'VARIANT_OFFER'" (submitEvent)="updateContentItem($event)">
+            </app-content-translation>
+
+            <!--<app-store-contentitem [content]="(offer$ | async).languageTranslation" [mode]="'VARIANT_OFFER'"
+              (submitEvent)="updateContentItem($event)">
+            </app-store-contentitem>-->
+          </div>
+          <div class="row">
+            <div class="buttonGroup w-100">
+              <div class="col-8 floatLeft">
+                <button type="button" class="btn btn-primary" (click)="onOfferSave()"
+                ><i class="fas fa-save mr-2 pr-1"></i>{{'admin.global.save'|translate}}</button>
+              <a (click)="goBack($event)" title="{{'admin.store.catalog.backToOffer'|translate}}" class="actionLink">{{'admin.global.cancel'|translate}}</a>
+              </div>
+              <div class="col-4 mt-1 float-right" *ngIf="!isCreateOffer && (offer$ | async)">
+                <button (click)="deleteVariant()" title="{{'admin.global.delete'|translate}}" class="btn btn-danger float-right"><i class="fas fa-trash mr-2 pr-1 text-white"></i>{{'admin.global.delete'|translate}}</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

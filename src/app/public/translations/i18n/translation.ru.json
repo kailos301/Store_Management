@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "Powered by",
+			"thankYou": "Спасибо",
+			"discount": "Скидка",
+			"viewOrder": "Посмотреть заказ",
+			"errorH2": "Произошла ошибка",
+			"errorUnexpected": "Произошла ошибка",
+			"errorExpected": "Произошла ошибка",
+			"errorMustSelectOne": "Пожалуйста, выберите один вариант",
+			"errorTrialExceeded": "Функция недоступна. Квота пробной версии превышена.",
+			"emptyCart": "Ваша корзина пуста",
+			"optional": "необязательно",
+			"cookies": "Этот сайт использует файлы cookie. Продолжая пользоваться данным сайтом, вы соглашаетесь с их использованием",
+			"more": "Больше",
+			"less": "Меньше",
+			"chooseFrom": "Выберите из",
+			"standard": "стандарт",
+			"days": {
+				"mon": "понедельник",
+				"tue": "вторник",
+				"wed": "Среда",
+				"thu": "Четверг",
+				"fri": "Пятница",
+				"sat": "суббота",
+				"sun": "Воскресенье"
+			},
+			"opentimelist": "Время открытия",
+			"newVersionAvailable": "Вы используете старую версию приложения. Перезагрузите приложение, чтобы получить последнее обновление",
+			"reloadApplication": "Обновить приложение",
+			"poweredByGonnaOrder": "При поддержке Gonnaorder",
+			"recents": "Недавние",
+			"information": "Информация",
+			"yes": "да",
+			"no": "Нет",
+			"error": "Ошибка",
+			"errorQRScanner": "Произошла ошибка со сканером QR!",
+			"confirm": "Подтверждать"
+		},
+		"select": {
+			"selectAtLeast": "Вы должны выбрать как минимум {{x}}",
+			"selectAtmost": "Максимальное количество вариантов: {{x}}",
+			"selectAtleastAtMost": "Пожалуйста, выберите от {{x}} до {{y}} вариантов",
+			"selectBetween": "Вы должны выбрать между значениями {{childCategory.min}} и {{childCategory.max}}."
+		},
+		"load": {
+			"loadingMessage": "Пожалуйста, подождите"
+		},
+		"itemDetails": {
+			"removeFromOrder": "Убрать из корзины",
+			"addToOrder": "Добавить в корзину",
+			"updateOrder": "Обновить корзину"
+		},
+		"checkout": {
+			"yourOrder": "Ваш заказ",
+			"total": "Итого",
+			"specialNote": "Добавить заметку с особыми пожеланиями",
+			"howToReceiveYourOrder": "Способ получения заказа",
+			"option": {
+				"pickup": "Самовывоз",
+				"addressDelivery": "Я хочу, чтобы мой заказ отправили до двери",
+				"serve": {
+					"location": "Я сижу за столом"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "Нам не удалось сохранить Ваш заказ",
+				"fieldRequired": "Необходимо заполнить это поле",
+				"selectFutureTime": "Пожалуйста, выберите время в будущем",
+				"orderSubmissionFailed": "Заказ не может быть отправлен",
+				"ORDER_LOCATION_NOT_PRESENT": "Номер таблицы или название местоположения отсутствует",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "Некоторая необходимая информация о клиенте отсутствует",
+				"ORDER_WISH_TIME_INVALID": "Желаемое время желания осталось в прошлом",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "Отсутствует способ доставки заказа",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "Доставка по адресу не поддерживается",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "Обслуживание заказа не поддерживается",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "Самовывоз заказа не поддерживается",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "Доставка по указанному почтовому индексу не поддерживается",
+				"OPENING_TIME_SCHEDULE_ERROR": "Магазин закрыт в выбранное время по желанию заказа",
+				"PROMOTION_NOT_ELIGIBLE": "Акция выбрана, но не соответствует требованиям",
+				"offersUnavailableExplanation": "Перечисленные ниже элементы недоступны в указанные вами дату и время. Пожалуйста, нажмите на обновление заказа, чтобы удалить их из вашего заказа.",
+				"offersOutOfStockExplanation": "Недостаточно товаров",
+				"invalidVoucherCode": "Код ваучера недействителен",
+				"INVALID_INPUT": "Ошибка обработки предоставленных данных.",
+				"slotUnavailableExplanation": "Запрошенный временной интервал недоступен. Пожалуйста, выберите другой временной интервал или выберите другой способ доставки.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "В этом магазине невозможно запросить заказ на тот же день.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "Запросить заказ на тот же день для вашего региона невозможно.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "Невозможно запросить заказ на тот же день для следующих товаров:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "Доставка по вашему почтовому индексу в запрошенное время и день невозможна.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "Доставка заказов в определенное время и дату невозможна. Выберите альтернативу.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "Забрать заказы в определенное время и дату невозможно. Выберите альтернативу.",
+				"INTERNAL_ERROR": "Произошла непредвиденная ошибка. Пожалуйста, перезагрузите приложение, чтобы повторить попытку.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "Не соблюдена минимальная сумма заказа на доставку. Чтобы продолжить, добавьте в заказ еще одно значение {{AMOUNT_MISSING}}.",
+				"paymentFailed": "Вам не удалось произвести оплату онлайн с помощью этого способа оплаты. Пожалуйста, попробуйте еще раз.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "Обязательные рекламные акции не применяются",
+				"INVALID_CUSTOMER_VOUCHER": "Недействительный ваучер клиента",
+				"slotUnavailable": "Выбранное время недоступно",
+				"slotUnavailableExplanationWithSuggestion": "Выбранное время уже прошло или больше не доступно. Следующее доступное время:",
+				"socialLoginFailed": "Нам не удалось подключиться к вашей учетной записи",
+				"customerDetailsUpdateFailed": "Не удалось обновить данные профиля",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "Магазин не доставляет в это место",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "Мы не можем найти указанный вами адрес. Обновите адрес и попробуйте еще раз или обратитесь в магазин.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "Невозможно отправлять заказы в определенное время и дату. Выберите альтернативу.",
+				"MISSING_LOCATION_TAP_ID": "Идентификатор крана обязателен",
+				"invalidPin": "Неверный пин-код клиента"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "Ваш заказ будет отправлен вам"
+					},
+					"unknown": {
+						"location": "Ваш заказ будет отправлен вам"
+					}
+				},
+				"pickup": "Заберите заказ",
+				"addressDelivery": "Ваша информация, пожалуйста"
+			},
+			"yourInformationPlease": "Ваша информация, пожалуйста",
+			"locationCode": "Стол",
+			"yourName": "Ваше имя",
+			"email": "Электронная почта",
+			"phoneNumber": "Номер телефона",
+			"fullName": "Полное имя",
+			"streetAddress": "Адрес",
+			"zip": "Почтовый индекс",
+			"town": "Город",
+			"minimumAmount": "Для доставки необходимо сделать заказ на сумму {{amount}}",
+			"deliveryFee": "Плата за доставку",
+			"deliveryFeeApplicable": "Применимо для заказов ниже {{amount}}",
+			"field": {
+				"generalValidation": "Формат этого поля неверен"
+			},
+			"acceptTerm": "Продолжая, вы принимаете {{Условия использования}} и {{Политику конфиденциальности}}.",
+			"termsAndPolicy": "Продолжая, вы принимаете ",
+			"acceptTerms": {
+				"and": "и ",
+				"after": ""
+			},
+			"termsOfUse": "Условия использования",
+			"privacyPolicy": "Политику конфиденциальности",
+			"yourTable": "Ваш стол",
+			"allowedCharacters": "Разрешенные символы",
+			"wishTimeHeading": "Когда вы хотели бы получить свой заказ?",
+			"asSoonAsPossible": "Я хочу получить его как можно скорее",
+			"specifyWishTime": "Я хочу уточнить, когда его получить",
+			"specialNoteExample": "Добавить заметку с особыми пожеланиями",
+			"cardDisabledNote": "Пожалуйста, покажите Ваш , когда будете готовы",
+			"cardHolderName": "Имя владельца карты",
+			"cardNumber": "Номер вашей карты",
+			"cvv": "CVV",
+			"itemsOutOfStock": "Некоторых товаров нет в наличии",
+			"floor": "Пол",
+			"storeClosedAtOrderWishDate": "Магазин закрывается в желаемую дату или время",
+			"offersNotAvailableAtOrderWishDate": "Некоторые предложения недоступны в желаемую дату или время",
+			"updateOrder": "Порядок обновления",
+			"offers": {
+				"availableQuantity": "Доступно в настоящее время"
+			},
+			"voucherCode": "Введите код ваучера",
+			"validVoucherCode": "Код ваучера действителен",
+			"yourRoom": "Твоя комната",
+			"yourLocation": "Твое местонахождение",
+			"serveOption": {
+				"location": "Я хочу получить его по месту нахождения",
+				"room": "я в своей комнате"
+			},
+			"social": {
+				"connect": "Подключиться к социальной учетной записи"
+			},
+			"remainingValidVoucher": "Остаток на ваучере:",
+			"paymentsense": {
+				"declined": "Онлайн-платеж через Paymentsense отклонен"
+			},
+			"saveCustomerDetailsForFuture": "Сохраните данные вашего профиля для будущих заказов",
+			"customerDetailsUpdateSuccess": "Данные вашего профиля обновлены",
+			"logout": "Выйти",
+			"expiry": "Срок годности (ММГГ)",
+			"enterPin": "Введите PIN-код"
+		},
+		"payment": {
+			"payOnlineNow": "Оплатить онлайн сейчас",
+			"chooseYourPaymentMethod": "Пожалуйста, выберите способ оплаты",
+			"creditCard": "Кредитная карта",
+			"paypal": "PayPal",
+			"submitOrder": "Оформить заказ",
+			"proceedToPayment": "Перейти к оплате",
+			"errorCouldNotConnect": "Нам не удалось связаться с оператором платежей. Пожалуйста, выберите другой способ оплаты или попробуйте позже ещё раз.",
+			"enterCreditCardInfo": "Пожалуйста, введите данные вашей кредитной или дебетовой карты",
+			"yourOrderIsReady": "Ваш заказ готов",
+			"yourOrderIsExpected": "Ваш заказ ожидается",
+			"errors": {
+				"valueNotValid": "Указанное значение является недопустимым",
+				"zipNotAvailable": "Вы не можете оформить онлайн-заказ на этот почтовый индекс. Пожалуйста, свяжитесь с магазином для получения дополнительной информации",
+				"addressNotAvailable": "Адрес не найден. Пожалуйста, выберите почтовый адрес из предложенных."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "Оплатить онлайн сейчас",
+			"digitalWallets": "Цифровые кошельки",
+			"creditCardSecure": "Безопасные платежи по кредитной карте",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "Ваш номер заказа",
+			"orderStatus": "Статус заказа",
+			"notSubmitted": "Заказ ещё не отправлен",
+			"sent": "Заказ отправлен",
+			"ready": "Готово",
+			"rejected": "Отклонено",
+			"startNewOrder": "Оформить новый заказ",
+			"errors": {
+				"emailProperFormat": "Пожалуйста, введите действующий адрес электронной почты"
+			},
+			"fiilEmailAddress": "Пожалуйста, введите свой адрес электронной почты для получения копии заказа",
+			"failedEmail": "Не удалось отправить письмо",
+			"emailSent": "Письмо отправлено",
+			"received": "Получено",
+			"accepted": "Принято",
+			"mobileAppPromotion": "В следующий раз сделайте заказ через мобильное приложение GonnaOrder"
+		},
+		"dialog": {
+			"ok": "Принять",
+			"cancel": "Отменить"
+		},
+		"store": {
+			"currently": {
+				"closed": "Магазин в настоящее время закрыт"
+			},
+			"time": {
+				"closed": "Магазин закрыт в выбранное время"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "Вегетарианский",
+						"vegan": "Веганский",
+						"celery": "Сельдерей",
+						"wheat": "Пшеницы",
+						"crustaceans": "Ракообразные",
+						"eggs": "Яйца",
+						"fish": "Рыбы",
+						"lupin": "Люпин",
+						"milk": "Молоко",
+						"molluscs": "Моллюски",
+						"mustard": "Горчица",
+						"nuts": "Орехи",
+						"peanuts": "Арахис",
+						"sesame": "Кунжут",
+						"soya": "Соя",
+						"sulphurDioxide": "Диоксид серы",
+						"halal": "Халяль",
+						"barley": "Ячмень",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "Этот веб-сайт использует файлы cookie для улучшения вашего опыта, но вы можете отказаться, если хотите.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "Применять"
+		},
+		"cookie": {
+			"accept": "Принимать",
+			"reject": "Отклонять",
+			"readMore": "Прочитайте больше"
+		},
+		"connect": {
+			"social": {
+				"google": "Связаться с Google",
+				"facebook": "Подключитесь к Facebook"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "Ваша корзина пуста",
+				"proceed": "Продолжить"
+			}
+		},
+		"main": {
+			"typeUrl": "Введите URL или название магазина",
+			"invalidUrl": "URL-адрес недействителен",
+			"scanQRCode": "Сканировать QR-код",
+			"storeNotFound": "Магазин не найден",
+			"storeSaved": "Информация магазина успешно сохранена!",
+			"navigateStoreConfirm": "Перейти в магазин?"
+		},
+		"recents": {
+			"nothingFound": "Здесь ничего не найдено"
+		}
+	}
+}

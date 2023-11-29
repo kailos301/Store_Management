@@ -1,0 +1,33 @@
+<!-- ORDER OPTIONS -->
+<div class="option-wrapper">
+  <div class="variant-wrapper my-2">
+    <form class="mx-3 my-4" [formGroup]="specialNoteFg">
+        <div
+        class="row ta-wrapper"
+        [ngClass]="{'is-invalid': (getControl('specialNote').invalid && (getControl('specialNote').dirty)), 'populated': getControl('specialNote').value.length > 0}"
+      >
+        <div class="col-md-12 mb-0">
+          <div class="form-group mx-2 mb-0">
+            <div #igTextarea class="input-group" (click)="helper.focusTextArea(igTextarea)">
+              <textarea
+                type="text"
+                class="form-control pb-5"
+                [class.is-invalid]="getControl('specialNote', 'specialNoteFg').invalid && (getControl('specialNote', 'specialNoteFg').dirty || getControl('specialNote', 'specialNoteFg').touched)"
+                autocomplete="street-address"
+                formControlName="specialNote"
+                maxlength="256"
+                rows="2"
+                id="specialNote"
+                (focusout)="addOrderMeta('comment', 'specialNote', 'specialNoteFg')"
+              ></textarea>
+              <label for="#specialNote" class="placeholder font-size-primary">{{'public.checkout.specialNote' | translate}} {{'public.global.optional' | translate}}</label>
+            </div>
+          </div>
+          <div class="invalid-feedback font-size-secondary" *ngIf="getControl('specialNote').errors">
+            <span *ngIf="getControl('specialNote').errors.maxlength">{{'public.payment.errors.valueNotValid' | translate}}</span>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

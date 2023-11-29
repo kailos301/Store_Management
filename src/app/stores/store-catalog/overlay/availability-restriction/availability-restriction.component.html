@@ -1,0 +1,18 @@
+<h1  class="text-blue col-lg-12" mat-dialog-title>{{'admin.store.catalog.addRestriction'|translate}}</h1>
+<div mat-dialog-content>
+  <form [formGroup]="availabilityForm" id="availabilityRestriction" class="col-lg-12">
+    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+      <label for="startTime">{{'admin.store.catalog.availability.startTime'|translate}}</label>
+      <timepicker formControlName="startTime" [showMeridian]="false"></timepicker>
+    </div>
+    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+      <label for="endTime">{{'admin.store.catalog.availability.endTime'|translate}}</label>
+      <timepicker formControlName="endTime" [showMeridian]="false"></timepicker>
+    </div>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <a type="link" class="text-blue cursorPointer" (click)="onNoClick()">{{'admin.global.cancel'|translate}}</a>
+  <button [mat-dialog-close]="availabilityForm" type="button" class="btn btn-primary px-4"
+    [disabled]="availabilityForm.invalid">{{'admin.global.ok'|translate}}</button>
+</div>

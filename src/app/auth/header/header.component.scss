@@ -1,0 +1,103 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "../../../scss/variables";
+
+.navbar-light {
+  .navbar-brand {
+    padding: 30px 40px;
+    z-index: 9;
+
+    img {
+      width: 209px;
+
+      @include media-breakpoint-down(lg) {
+        width: 160px;
+      }
+
+      @include media-breakpoint-down(xs) {
+        width: 100px;
+      }
+    }
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+.mat-select-custom {
+  width: 125px !important;
+}
+
+.custom-logo-link {
+  display: inline-block;
+}
+
+.sticky-wrapper {
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.site-header {
+  padding: 20px 0;
+}
+
+.site-header .container-fluid {
+  padding: 0 75px;
+}
+
+.site-header>div>.row {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.custom-logo {
+  width: 100px;
+}
+
+.custom-lang-card {
+  z-index: 1 !important;
+  margin-right: 11% !important;
+  margin-left: 80% !important;
+  margin-top: 4% !important;
+}
+
+@media (max-width: 768px) {
+  .header-mobile-menu {
+    text-align: end;
+  }
+
+  .custom-lang-card {
+    margin-left: 70% !important;
+    margin-right: 3% !important;
+    margin-top: 15% !important;
+  }
+
+  .site-header .container-fluid {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .logo-width {
+    width: 85px;
+  }
+}
+
+@media only screen and (device-width: 768px) {
+  .custom-lang-card {
+    margin-left: 70% !important;
+    margin-right: 15% !important;
+    margin-top: 8% !important;
+  }
+}

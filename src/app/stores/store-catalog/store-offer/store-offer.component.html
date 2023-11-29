@@ -1,0 +1,712 @@
+<div class="loading-screen d-flex justify-content-center align-items-center w-100 v-70"
+  *ngIf="!isCreateOffer && offerStatus !== 'LOADED'">
+  <div class="d-flex flex-column text-center">
+    <div class="lds-ripple mx-auto">
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</div>
+<div class="col-lg-12" id="saveOffer" *ngIf="(!isCreateOffer && (offer$ | async)) || isCreateOffer">
+  <div class="card list" *ngIf="isCreateOffer || offerStatus === 'LOADED'">
+    <div class="header pt-3">
+      <div class="col-lg-12 mb-2 mb-md-4 d-flex align-items-center justify-content-between p-0">
+        <a title="{{'admin.store.catalog.backToCatalog'|translate}}" class="btn back-button btn-primary"
+          [routerLink]="['/manager/stores/'+storeId+'/catalog']"
+          [queryParams]="{selectedId:offerForm.value.categoryId}">
+          <i class="fas fa-arrow-left mr-2"></i> <span
+            class="d-none d-md-inline-block d-lg-inline-block d-xl-inline-block ml-1">{{'admin.store.catalog.backToCatalog'|
+            translate}}</span>
+        </a>
+      </div>
+      <div class="card-header">
+        <span *ngIf="isCreateOffer">{{'admin.store.catalog.offer.createOffer'|translate}}</span>
+        <span *ngIf="!isCreateOffer">{{'admin.store.catalog.offer.offer'|translate}} {{(offer$ | async).name}}</span>
+        <app-help-icon [helpPageName]="storeOfferHelpPage"></app-help-icon>
+      </div>
+    </div>
+    <div class="card-body offerDetails">
+      <form [formGroup]="offerForm">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <app-catalog-language *ngIf="isStoreOperator==false"></app-catalog-language>
+                <div class="form-group">
+                  <label for="offerName"
+                    class="col-xl-2 col-lg-3 col-md-12 col-sm-12 required">{{'admin.global.name'|translate}}</label>
+                  <div class="input-group col-xl-10 col-lg-9 col-md-12 col-sm-12">
+                    <input type="text" class="form-control" *ngIf="isStoreOperator==false"
+                      [class.is-invalid]="getControl('name').invalid && (getControl('name').dirty || getControl('name').touched)"
+                      placeholder="{{'admin.global.name'|translate}}" autocomplete="name" formControlName="name"
+                      id="offerName" minlength="2" maxlength="50" />
+                    <input type="text" class="form-control" *ngIf="isStoreOperator==true"
+                      [class.is-invalid]="getControl('name').invalid && (getControl('name').dirty || getControl('name').touched)"
+                      placeholder="{{'admin.global.name'|translate}}" autocomplete="name" formControlName="name"
+                      id="offerName" minlength="2" maxlength="50" readonly />
+                    <div class="invalid-feedback" *ngIf="getControl('name').errors">
+                      <span
+                        *ngIf="getControl('name').errors.required || getControl('name').errors.whitespace">{{'admin.global.field.required'|translate}}</span>
+                      <span *ngIf="getControl('name').errors.minlength">{{'admin.global.field.minLength'|translate:
+                        {minLength: "2"} }}</span>
+                      <span *ngIf="getControl('name').errors.maxlength">{{'admin.global.field.maxLength'|translate:
+                        {maxLength: "50"} }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" *ngIf="isStoreOperator==false">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group">
+                  <label for="shortDesc"
+                    class="col-xl-2 col-lg-3 col-md-12 col-sm-12">{{'admin.store.catalog.description.shortDescription'|translate}}</label>
+                  <div class="input-group col-xl-10 col-lg-9 col-md-12 col-sm-12">
+                    <input type="text" class="form-control"
+                      placeholder="{{'admin.store.catalog.description.shortDescription'|translate}}"
+                      [class.is-invalid]="getControl('shortDescription').invalid && (getControl('shortDescription').dirty || getControl('shortDescription').touched)"
+                      autocomplete="off" formControlName="shortDescription" id="shortDesc" maxlength="150" />
+                    <div class="invalid-feedback" *ngIf="getControl('shortDescription').errors">
+                      <span
+                        *ngIf="getControl('shortDescription').errors.maxlength">{{'admin.global.field.maxLength'|translate:
+                        {maxLength: "150"} }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" *ngIf="isStoreOperator==false">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group">
+                  <label for="longDesc"
+                    class="col-xl-2 col-lg-3 col-md-12 col-sm-12">{{'admin.store.catalog.description.longDescription'|translate}}</label>
+                  <div class="input-group col-xl-10 col-lg-9 col-md-12 col-sm-12">
+                    <textarea class="form-control"
+                      placeholder="{{'admin.store.catalog.description.longDescription'|translate}}" autocomplete="off"
+                      [class.is-invalid]="getControl('longDescription').invalid && (getControl('longDescription').dirty || getControl('longDescription').touched)"
+                      formControlName="longDescription" id="longDesc" maxlength="1000"></textarea>
+                    <div class="invalid-feedback" *ngIf="getControl('longDescription').errors">
+                      <span
+                        *ngIf="getControl('longDescription').errors.maxlength">{{'admin.global.field.maxLength'|translate:
+                        {maxLength: "1000"} }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" *ngIf="isStoreOperator==false">
+              <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                <label for="categoryId"
+                  class="col-xl-2 col-lg-3 col-md-12 col-sm-12 required">{{'admin.store.catalog.category.category'|translate}}</label>
+                <div class="input-group col-xl-10 col-lg-9 col-md-12 col-sm-12">
+                  <select class="form-control" onchange="this.dataset.chosen = this.value" formControlName="categoryId"
+                    id="categoryId" (change)="selectCategoryHandler($event)"
+                    [ngClass]="{'default-option' : categoryId == 0}"
+                    [class.is-invalid]="getControl('categoryId').invalid && (getControl('categoryId').dirty || getControl('categoryId').touched)">
+                    <option value="">{{'admin.global.pleaseSelect'|translate}}</option>
+                    <option *ngFor="let cat of getCategoryList('PARENT')" value="{{ cat.categoryId }}">{{ cat.name }}
+                    </option>
+                  </select>
+                  <div class="invalid-feedback" *ngIf="getControl('categoryId').errors">
+                    <span
+                      *ngIf="getControl('categoryId').errors.required">{{'admin.global.field.required'|translate}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" *ngIf="isStoreOperator==false">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group">
+                  <label for="price"
+                    class="col-xl-2 col-lg-3 col-md-12 col-sm-12">{{'admin.global.price'|translate}}</label>
+                  <div class="col-xl-4 col-lg-9 col-md-12 col-sm-12 priceContainer">
+                    <app-price-input [allowNegValue]="true" [priceFormControl]="getControl('price')"></app-price-input>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="row" *ngIf="isStoreOperator==false">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group">
+                  <label for="priceDesc"
+                    class="col-xl-2 col-lg-3 col-md-12 col-sm-12">{{'admin.store.catalog.description.priceDescription'|translate}}</label>
+                  <div class="input-group col-xl-10 col-lg-9 col-md-12 col-sm-12">
+                    <input type="text" class="form-control"
+                      placeholder="{{'admin.store.catalog.description.priceDescription'|translate}}"
+                      [class.is-invalid]="getControl('priceDescription').invalid && (getControl('priceDescription').dirty || getControl('priceDescription').touched)"
+                      autocomplete="off" formControlName="priceDescription" id="priceDesc" maxlength="50" />
+                    <div class="invalid-feedback" *ngIf="getControl('priceDescription').errors">
+                      <span
+                        *ngIf="getControl('priceDescription').errors.minlength">{{'admin.global.field.minLength'|translate:
+                        {minLength: "2"} }}</span>
+                      <span
+                        *ngIf="getControl('priceDescription').errors.maxlength">{{'admin.global.field.maxLength'|translate:
+                        {maxLength: "50"} }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" *ngIf="isStoreOperator==false">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group">
+                  <label for="discount"
+                    class="col-xl-2 col-lg-3 col-md-12 col-sm-12 mb-2 mb-md-0">{{'admin.global.discount'|translate}}</label>
+                  <div class="input-group col-xl-10 col-lg-9 col-md-12 col-sm-12 discount margin-left-radio">
+                    <label class="radio-container mb-2 mb-md-0" for="monetary">
+                      {{'admin.store.catalog.discount.monetary'|translate}}
+                      <input type="radio" (click)="setMonetary()" formControlName="discountType" value="MONETARY" id="monetary">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container mb-2 mb-md-0" for="percentile">
+                      {{'admin.store.catalog.discount.percentile'|translate}}
+                      <input type="radio" (click)="setPercentage()" formControlName="discountType" value="PERCENTILE"
+                        id="percentile">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container mb-2 mb-md-0" for="nodiscount">
+                      {{'admin.store.catalog.discount.noDiscount'|translate}}
+                      <input type="radio" formControlName="discountType" value="NODISCOUNT" id="nodiscount">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" *ngIf="(isSelected('MONETARY') || isSelected('PERCENTILE')) && isStoreOperator==false">
+              <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                <label class="col-xl-2 col-lg-3 hideInSmallScreen"></label>
+                <div class="col-xl-10 col-lg-9 col-md-12 col-sm-12 priceContainer" *ngIf="isSelected('MONETARY')">
+                  <app-price-input [priceFormControl]="getControl('discount')"></app-price-input>
+                  <div class="invalid-feedback"
+                    *ngIf="offerForm.errors && (getControl('discount').touched || getControl('discount').dirty || getControl('price').touched ||  getControl('price').dirty)">
+                    <span
+                      *ngIf="offerForm.errors.invalidDiscount">{{'admin.store.catalog.discount.invalidDiscount'|translate}}</span>
+                  </div>
+                </div>
+                <div class="col-xl-10 col-lg-9 col-md-12 col-sm-12" *ngIf="isSelected('PERCENTILE')">
+                  <select class="form-control" onchange="this.dataset.chosen = this.value"
+                    [attr.placeholder]="'admin.store.discount.discount'|translate" formControlName="discount"
+                    [ngClass]="{'default-option' : discount == 0}" (change)="selectDiscountHandler($event)">
+                    <option value="0">{{'admin.global.pleaseSelect'|translate}}</option>
+                    <option value="5">5%</option>
+                    <option value="10">10%</option>
+                    <option value="15">15%</option>
+                    <option value="20">20%</option>
+                    <option value="25">25%</option>
+                    <option value="30">30%</option>
+                    <option value="35">35%</option>
+                    <option value="40">40%</option>
+                    <option value="50">50%</option>
+                    <option value="60">60%</option>
+                    <option value="70">70%</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                <label for="sellable"
+                  class="col-xl-2 col-lg-3 col-md-12 col-sm-12 mb-2 mt-0 mt-md-2">{{'admin.store.catalog.sellable.isVisible'|translate}}</label>
+                <div class="input-group col-xl-10 col-lg-9 col-md-12 col-sm-12 my-2">
+                  {{'admin.global.no'|translate}} &nbsp;<mat-slide-toggle formControlName="sellable">
+                    {{'admin.global.yes'|translate}}</mat-slide-toggle>
+                </div>
+              </div>
+            </div>
+
+            <div class="row" *ngIf="isStoreOperator==false">
+              <div class="form-group col-lg-12">
+                <label for="sellable" class="col-xl-2 col-lg-3 col-md-12 col-sm-12 hideInSmallScreen"></label>
+                <div class="input-group col-xl-4 col-lg-6 col-md-12 col-sm-12"
+                  *ngIf="getControl('sellable').value == 'true' || getControl('sellable').value == true">
+                  <select class="form-control" onchange="this.dataset.chosen = this.value"
+                    (change)="selectAvailabilityHandler($event)" formControlName="scheduleId" id="availability"
+                    [ngClass]="{'default-option' : scheduleId == 0}">
+                    <option value="0">{{'admin.store.catalog.availability.allTimeAvailability'|translate}}</option>
+                    <option *ngFor="let item of scheduleList" value="{{ item.id }}">{{ item.name }}</option>
+                  </select>
+                </div>
+                <button type="button" class="btn btn-primary ml-3 ml-md-0 mt-3 mt-md-0"
+                  *ngIf="getControl('sellable').value == 'true' || getControl('sellable').value == true"
+                  (click)="gotoAddSchedule()">{{'admin.store.addNewSchedule'|translate}}</button>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                <label for="orderable"
+                  class="col-xl-2 col-lg-3 col-md-12 col-sm-12 mb-2 mt-0 mt-md-2">{{'admin.store.catalog.orderable.isOrderable'|translate}}</label>
+                <div class="input-group col-xl-10 col-lg-9 col-md-12 col-sm-12 my-2">
+                  {{'admin.global.no'|translate}} &nbsp;<mat-slide-toggle formControlName="isOrderable">
+                    {{'admin.global.yes'|translate}}</mat-slide-toggle>
+                </div>
+              </div>
+            </div>
+            <div class="row" *ngIf="isStoreOperator==false">
+              <div class="form-group col-lg-12">
+                <label for="stockCheck"
+                  class="col-xl-2 col-lg-3 col-md-12 col-sm-12">{{'admin.store.setting.samedayordering'|translate}}</label>
+                <div class="input-group col-xl-4 col-lg-6 col-md-12 col-sm-12">
+                  <div class="form-group mb-0">
+                    <label class="mt-1">{{'admin.store.disabled'|translate}}</label> &nbsp;
+                    <label class="switch mb-0">
+                      <input type="checkbox" (change)="onCharacteristicsChange($event)"
+                        value="DISABLE_SAME_DAY_ORDERING"
+                        [checked]="!isCharacteristicsChecked('DISABLE_SAME_DAY_ORDERING')" />
+                      &nbsp;<span class="slider round"></span>
+                    </label>&nbsp;
+                    <label class="mt-1">{{'admin.store.enabled'|translate}}</label> &nbsp;
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row" *ngIf="!isCreateOffer && stockManagementEnabled">
+              <div class="form-group col-lg-12 mb-0">
+                <label for="stockCheck"
+                  class="col-xl-2 col-lg-3 col-md-12 col-sm-12">{{'admin.store.settingsStockcheck'|translate}}</label>
+                <div class="input-group col-xl-4 col-lg-6 col-md-12 col-sm-12">
+                  <div class="form-group mb-0">
+                    <label class="mt-1">{{'admin.store.disabled'|translate}}</label> &nbsp;
+                    <label class="switch">
+                      <input type="checkbox" formControlName="isStockCheckEnabled" id="isStockCheckEnabled" />
+                      &nbsp;<span class="slider round"></span>
+                    </label>&nbsp;
+                    <label class="mt-1">{{'admin.store.enabled'|translate}}</label> &nbsp;
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="stockLevel"
+                    class="col-xl-3 col-lg-3 col-md-12 col-sm-12 mb-3 mb-md-0">{{'admin.store.settingStocklevel'|translate}}</label>
+                  <div class="input-group col-xl-9 col-lg-9 col-md-12 col-sm-12 mt-n1">
+                    <input type="number" class="form-control"
+                      [class.is-invalid]="getControl('stockLevel').invalid && (getControl('stockLevel').dirty || getControl('stockLevel').touched)"
+                      placeholder="{{'admin.store.settingStocklevel'|translate}}" autocomplete="stockLevel"
+                      formControlName="stockLevel" id="stockLevel" minlength="0" min="0" max="100000"
+                      maxlength="100000" />
+                    <div>
+                    </div>
+                    <div class="invalid-feedback" *ngIf="getControl('stockLevel').errors">
+                      <span
+                        *ngIf="getControl('stockLevel').errors.required || getControl('stockLevel').errors.whitespace">{{'admin.global.field.required'|translate}}</span>
+                      <span *ngIf="getControl('stockLevel').errors.min">{{'admin.global.field.minLength'|translate:
+                        {minLength: "0"} }}</span>
+                      <span *ngIf="getControl('stockLevel').errors.max">{{'admin.global.field.maxLength'|translate:
+                        {maxLength: "100000"} }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" *ngIf="maxItemPerSlot>0 && isStoreOperator==false">
+              <div class="form-group col-lg-12">
+                <label for="stockCheck"
+                  class="col-xl-2 col-lg-3 col-md-12 col-sm-12">{{'admin.store.catalog.offer.countAgainstslotcount'|translate}}</label>
+                <div class="input-group col-xl-4 col-lg-6 col-md-12 col-sm-12">
+                  <div class="form-group mb-0">
+                    <label class="mt-1"> {{'admin.global.no'|translate}}</label> &nbsp;
+                    <label class="switch mb-0">
+                      <input type="checkbox" (change)="onCountAgainstSlotsChange($event)"
+                        [checked]="getControl('countAgainstSlots').value>0?true:false" />
+                      &nbsp;<span class="slider round"></span>
+                    </label>&nbsp;
+                    <label class="mt-1">{{'admin.global.yes'|translate}}</label> &nbsp;
+                  </div>
+                </div>
+                <div class="form-group" *ngIf="maxItemPerSlot && getControl('countAgainstSlots').value >0">
+                  <label for="countAgainstSlots"
+                    class="col-xl-3 col-lg-3 col-md-12 col-sm-12">{{'admin.store.catalog.offer.incrementBy'|translate}}</label>
+                  <div class="input-group col-xl-9 col-lg-9 col-md-12 col-sm-12 mt-n1">
+                    <input type="number" class="form-control"
+                      [class.is-invalid]="getControl('countAgainstSlots').invalid && (getControl('countAgainstSlots').dirty || getControl('countAgainstSlots').touched)"
+                      placeholder="{{'admin.store.catalog.offer.incrementBy'|translate}}"
+                      autocomplete="countAgainstSlots" formControlName="countAgainstSlots" id="countAgainstSlots"
+                      minlength="0" min="0" max="100000" maxlength="100000" />
+                    <div>
+                    </div>
+                    <div class="invalid-feedback" *ngIf="getControl('countAgainstSlots').errors">
+                      <span
+                        *ngIf="getControl('countAgainstSlots').errors.required || getControl('countAgainstSlots').errors.whitespace">{{'admin.global.field.required'|translate}}</span>
+                      <span
+                        *ngIf="getControl('countAgainstSlots').errors.min">{{'admin.global.field.minLength'|translate:
+                        {minLength: "0"} }}</span>
+                      <span
+                        *ngIf="getControl('countAgainstSlots').errors.max">{{'admin.global.field.maxLength'|translate:
+                        {maxLength: "100000"} }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-sm-2 pl-30">
+                <label>{{'admin.store.catalog.offer.offerImage'|translate}}</label>
+              </div>
+              <div class="col-sm-10 pl-4 pl-30">
+                <div class="d-flex">
+                  <div>
+                    <div class="d-inline-flex image-upload" [class.no-image]="!offerStdImage">
+                      <div class="item-image" [style.background-image]="getImage(image)"
+                        *ngIf="((offerImageUrl$ | async) || offerStdImage) as image;else content"></div>
+                      <ng-template #content>
+                        <div class="item-image img bg-white"></div>
+                      </ng-template>
+                      <div class="opacity-layer"></div>
+                      <i class="fas fa-cloud-upload-alt image-upload-icon"></i>
+                      <span class="d-block text-center">{{'admin.store.catalog.offer.uploadImage'|translate}}</span>
+                      <input id="uploadImage" *ngIf="isStoreOperator==false"
+                        title="{{offerStdImage ? 'Change Offer Image' : 'Upload Offer Image'}}" type="file" name="image"
+                        (change)="fileUpload($event)" />
+                      <i class="fas fa-times-circle removeIcon" *ngIf="((offerImageUrl$ | async) || offerStdImage) && isStoreOperator==false"
+                        (click)="removeOfferImage()"></i>
+                      <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <span *ngIf="isStoreOperator==false && ((offerImageUrl$ | async) || offerStdImage)" class="download-image pl-2">
+                    <i class="fas fa-cloud-download-alt font-xl" (click)="downloadImage()"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="row" *ngIf="!isCreateOffer">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group">
+                  <label
+                    class="col-xl-2 col-lg-3 col-md-12 col-sm-12">{{'admin.store.catalog.offer.externalProductId'|translate}}</label>
+                  <div class="input-group col-xl-10 col-lg-9 col-md-12 col-sm-12">
+                    <input type="text" class="form-control" *ngIf="isStoreOperator==false"
+                      placeholder="{{'admin.store.catalog.offer.externalProductId'|translate}}" autocomplete="off"
+                      formControlName="externalProductId" maxlength="100" />
+                    <input type="text" class="form-control" *ngIf="isStoreOperator==true"
+                      placeholder="{{'admin.store.catalog.offer.externalProductId'|translate}}" autocomplete="off"
+                      formControlName="externalProductId" maxlength="100" readonly />
+                  </div>
+                  <div class="invalid-feedback" *ngIf="getControl('externalProductId').errors">
+                    <span
+                      *ngIf="getControl('externalProductId').errors.maxlength">{{'admin.global.field.maxLength'|translate:
+                      {maxLength: "100"} }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row" *ngIf="storeVatPercentage && storeVatPercentage > 0 && isStoreOperator==false">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group">
+                  <label for="vatPercentage"
+                    class="col-xl-2 col-lg-3 col-md-12 col-sm-12">{{'admin.global.vatPercentage'|translate}}</label>
+                  <div class="col-xl-4 col-lg-9 col-md-12 col-sm-12 priceContainer">
+                    <input type="number" formControlName="vatPercentage" id="vatPercentage"
+                      class="form-control percentage-field" autocomplete="off" min="0" max="100"
+                      [class.is-invalid]="getControl('vatPercentage').invalid && (getControl('vatPercentage').dirty || getControl('vatPercentage').touched)" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row" *ngIf="!isCreateOffer">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group">
+                  <label
+                    class="col-xl-2 col-lg-3 col-md-12 col-sm-12">{{'admin.store.catalog.offer.vatExternalId'|translate}}</label>
+                  <div class="input-group col-xl-10 col-lg-9 col-md-12 col-sm-12">
+                    <input type="text" class="form-control" *ngIf="isStoreOperator==false"
+                      placeholder="{{'admin.store.catalog.offer.vatExternalId'|translate}}" autocomplete="off"
+                      formControlName="vatExternalId" maxlength="100" />
+                    <input type="text" class="form-control" *ngIf="isStoreOperator==true"
+                      placeholder="{{'admin.store.catalog.offer.vatExternalId'|translate}}" autocomplete="off"
+                      formControlName="vatExternalId" maxlength="100" readonly />
+                  </div>
+                  <div class="invalid-feedback" *ngIf="getControl('vatExternalId').errors">
+                    <span
+                      *ngIf="getControl('vatExternalId').errors.maxlength">{{'admin.global.field.maxLength'|translate:
+                      {maxLength: "100"} }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row" *ngIf="!isCreateOffer && isStoreOperator==false">
+              <div class="col-lg-12">
+                <div>
+                  <app-offer-child-category [childCategories]="(offer$ | async).categories"
+                    [availableChildCategories]="getCategoryList('CHILD')" [showContent]="true" [offerName]="offerName">
+                  </app-offer-child-category>
+                  <div class="offerSubSection content">
+                    <mat-accordion [togglePosition]="'before'" class="w-100">
+                      <mat-expansion-panel class="offershadow"
+                        [expanded]="(offer$ | async).variants && (offer$ | async).variants.length > 0">
+                        <mat-expansion-panel-header class="col-lg-12"
+                          matTooltip="{{'admin.store.catalog.variant.assignedOfferVariations'|translate}}">
+                          <mat-panel-title>
+                            {{'admin.store.catalog.variant.priceVariants'|translate}}
+                            <span class="actionLink"
+                              (click)="loadOfferVariantPage('CREATE_OFFER')">{{'admin.store.catalog.variant.createPriceVariant'|translate}}</span>
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                          <div *ngIf="(offer$ | async).variants as variantList" class="variantOffers option-wrapper">
+                            <div cdkDropList (cdkDropListDropped)="dropVariant($event,variantList)">
+                              <div class="variant-wrapper radio justify-content-between align-items-center"
+                                *ngFor="let variant of (offer$ | async).variants" cdkDrag [cdkDragStartDelay]="200">
+                                <div class="offer-custom-placeholder" *cdkDragPlaceholder></div>
+                                <div class="d-flex container">
+                                  <label class="w-100 my-2">
+                                    <span matTooltip="{{'admin.store.catalog.tooltip.goToVariant'|translate}}"
+                                      (click)="loadOfferVariantPage(variant.offerId)">{{variant.priceDescription}}
+                                      <i class="fa fa-pen editIcon"></i>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </mat-expansion-panel>
+                    </mat-accordion>
+                  </div>
+                  <div class="offerSubSection content">
+                    <mat-accordion [togglePosition]="'before'" class="w-100">
+                      <mat-expansion-panel class="offershadow" [expanded]="expandCharacteristics()">
+                        <mat-expansion-panel-header class=" col-lg-12">
+                          <span matTooltipPosition="right"
+                            matTooltip="{{'admin.store.catalog.offer.characteristics.name'|translate}}">{{'admin.store.catalog.offer.characteristics.name'|translate}}
+                          </span>
+                        </mat-expansion-panel-header>
+                        <div class="col-lg-12 col-md-12 col-sm-12 character mt-3">
+                          <div class="row">
+                            <label class="chk-container col-sm-3" for="Vegetarian">
+                              {{'admin.store.catalog.offer.characteristics.vegetarian'|translate}}
+                              <input type="checkbox" value="VEGETARIAN" name="Vegetarian" id="Vegetarian"
+                                (change)="onCharacteristicsChange($event)"
+                                [checked]="isCharacteristicsChecked('VEGETARIAN')" />
+                              <span class="checkmark">
+                                <img src="/assets/img/offer-characteristics/Vegetarian.svg" class="offerIcon">
+                              </span>
+                            </label>
+                            <label class="chk-container col-sm-3" for="Vegan">
+                              {{'admin.store.catalog.offer.characteristics.vegan'|translate}}
+                              <input type="checkbox" value="VEGAN" name="Vegan" id="Vegan"
+                                (change)="onCharacteristicsChange($event)"
+                                [checked]="isCharacteristicsChecked('VEGAN')" />
+                              <span class="checkmark">
+                                <img src="/assets/img/offer-characteristics/Vegan.svg" class="offerIcon">
+                              </span>
+                            </label>
+                            <label class="chk-container col-sm-3" for="Halal">
+                              {{'admin.store.catalog.offer.characteristics.halal'|translate}}
+                              <input type="checkbox" value="HALAL" name="Halal" id="Halal"
+                                (change)="onCharacteristicsChange($event)"
+                                [checked]="isCharacteristicsChecked('HALAL')" />
+                              <span class="checkmark">
+                                <img src="/assets/img/offer-characteristics/Halal.svg" class="offerIcon">
+                              </span>
+                            </label>
+                          </div>
+                          <div class="row">
+                            <label class="chk-container col-sm-3" for="Spicy1">
+                              {{'admin.store.catalog.offer.characteristics.spicy'|translate}}
+                              <input type="checkbox" value="SPICY1" name="Spicy1" id="Spicy1"
+                                (change)="onCharacteristicsChange($event)"
+                                [checked]="isCharacteristicsChecked('SPICY1')" />
+                              <span class="checkmark">
+                                <img src="/assets/img/offer-characteristics/Spicy_1.svg" class="offerIcon">
+                              </span>
+                            </label>
+                            <label class="chk-container col-sm-3" for="Spicy2">
+                              {{'admin.store.catalog.offer.characteristics.spicy'|translate}}
+                              <input type="checkbox" value="SPICY2" name="Spicy2" id="Spicy2"
+                                (change)="onCharacteristicsChange($event)"
+                                [checked]="isCharacteristicsChecked('SPICY2')" />
+                              <span class="checkmark">
+                                <img src="/assets/img/offer-characteristics/Spicy_2.svg" class="offerIcon">
+                              </span>
+                            </label>
+                            <label class="chk-container col-sm-3" for="Spicy3">
+                              {{'admin.store.catalog.offer.characteristics.spicy'|translate}}
+                              <input type="checkbox" value="SPICY3" name="Spicy3" id="Spicy3"
+                                (change)="onCharacteristicsChange($event)"
+                                [checked]="isCharacteristicsChecked('SPICY3')" />
+                              <span class="checkmark">
+                                <img src="/assets/img/offer-characteristics/Spicy_3.svg" class="offerIcon">
+                              </span>
+                            </label>
+                          </div>
+                          <div class="row">
+                            <label class="chk-container col-sm-3" for="Celery">
+                              {{'admin.store.catalog.offer.characteristics.celery'|translate}}
+                              <input type="checkbox" value="CELERY" name="Celery" id="Celery"
+                                (change)="onCharacteristicsChange($event)"
+                                [checked]="isCharacteristicsChecked('CELERY')" />
+                              <span class="checkmark">
+                                <img src="/assets/img/offer-characteristics/Celery.svg" class="offerIcon">
+                              </span>
+                            </label>
+                            <label class="chk-container col-sm-3" for="Wheat">
+                              {{'admin.store.catalog.offer.characteristics.wheat'|translate}}
+                              <input type="checkbox" value="CEREALS_WITH_WHEAT" name="Wheat" id="Wheat"
+                                (change)="onCharacteristicsChange($event)"
+                                [checked]="isCharacteristicsChecked('CEREALS_WITH_WHEAT')" />
+                              <span class="checkmark">
+                                <img src="/assets/img/offer-characteristics/Cereals_with_Wheat.svg" class="offerIcon">
+                              </span>
+                            </label>
+                            <label class="chk-container col-sm-3" for="Crustaceans">
+                              {{'admin.store.catalog.offer.characteristics.crustaceans'|translate}}
+                              <input type="checkbox" value="CRUSTACEANS" name="Crustaceans" id="Crustaceans"
+                                (change)="onCharacteristicsChange($event)"
+                                [checked]="isCharacteristicsChecked('CRUSTACEANS')" />
+                              <span class="checkmark">
+                                <img src="/assets/img/offer-characteristics/Crustaceans.svg" class="offerIcon">
+                              </span>
+                            </label>
+                            <label class="chk-container col-sm-3" for="Eggs">
+                              {{'admin.store.catalog.offer.characteristics.eggs'|translate}}
+                              <input type="checkbox" value="EGG" name="Eggs" id="Eggs"
+                                (change)="onCharacteristicsChange($event)"
+                                [checked]="isCharacteristicsChecked('EGG')" />
+                              <span class="checkmark">
+                                <img src="/assets/img/offer-characteristics/Eggs.svg" class="offerIcon">
+                              </span>
+                            </label>
+                          </div>
+                          <div class="row">
+                            <label class="chk-container col-sm-3" for="Fish">
+                              {{'admin.store.catalog.offer.characteristics.fish'|translate}}
+                              <input type="checkbox" value="FISH" name="Fish" id="Fish"
+                                (change)="onCharacteristicsChange($event)"
+                                [checked]="isCharacteristicsChecked('FISH')" />
+                              <span class="checkmark">
+                                <img src="/assets/img/offer-characteristics/Fish.svg" class="offerIcon">
+                              </span>
+                            </label>
+                            <label class="chk-container col-sm-3" for="Lupin">
+                              {{'admin.store.catalog.offer.characteristics.lupin'|translate}}
+                              <input type="checkbox" value="LUPIN" name="Lupin" id="Lupin"
+                                (change)="onCharacteristicsChange($event)"
+                                [checked]="isCharacteristicsChecked('LUPIN')" />
+                              <span class="checkmark">
+                                <img src="/assets/img/offer-characteristics/Lupin.svg" class="offerIcon">
+                              </span>
+                            </label>
+                            <label class="chk-container col-sm-3" for="Milk">
+                              {{'admin.store.catalog.offer.characteristics.milk'|translate}}
+                              <input type="checkbox" value="MILK" name="Milk" id="Milk"
+                                (change)="onCharacteristicsChange($event)"
+                                [checked]="isCharacteristicsChecked('MILK')" />
+                              <span class="checkmark">
+                                <img src="/assets/img/offer-characteristics/Milk.svg" class="offerIcon">
+                              </span>
+                            </label>
+                            <label class="chk-container col-sm-3" for="Molluscs">
+                              {{'admin.store.catalog.offer.characteristics.molluscs'|translate}}
+                              <input type="checkbox" value="MOLLUSCS" name="Molluscs" id="Molluscs"
+                                (change)="onCharacteristicsChange($event)"
+                                [checked]="isCharacteristicsChecked('MOLLUSCS')" />
+                              <span class="checkmark">
+                                <img src="/assets/img/offer-characteristics/Molluscs.svg" class="offerIcon">
+                              </span>
+                            </label>
+                          </div>
+                          <div class="row">
+                            <label class="chk-container col-sm-3" for="Mustard">
+                              {{'admin.store.catalog.offer.characteristics.mustard'|translate}}
+                              <input type="checkbox" value="MUSTARD" name="Mustard" id="Mustard"
+                                (change)="onCharacteristicsChange($event)"
+                                [checked]="isCharacteristicsChecked('MUSTARD')" />
+                              <span class="checkmark">
+                                <img src="/assets/img/offer-characteristics/Mustard.svg" class="offerIcon">
+                              </span>
+                            </label>
+                            <label class="chk-container col-sm-3" for="Nuts">
+                              {{'admin.store.catalog.offer.characteristics.nuts'|translate}}
+                              <input type="checkbox" value="NUTS" name="Nuts" id="Nuts"
+                                (change)="onCharacteristicsChange($event)"
+                                [checked]="isCharacteristicsChecked('NUTS')" />
+                              <span class="checkmark">
+                                <img src="/assets/img/offer-characteristics/Nuts.svg" class="offerIcon">
+                              </span>
+                            </label>
+                            <label class="chk-container col-sm-3" for="Peanuts">
+                              {{'admin.store.catalog.offer.characteristics.peanuts'|translate}}
+                              <input type="checkbox" value="PEANUT" name="Peanuts" id="Peanuts"
+                                (change)="onCharacteristicsChange($event)"
+                                [checked]="isCharacteristicsChecked('PEANUT')" />
+                              <span class="checkmark">
+                                <img src="/assets/img/offer-characteristics/Peanuts.svg" class="offerIcon">
+                              </span>
+                            </label>
+                            <label class="chk-container col-sm-3" for="Sesame">
+                              {{'admin.store.catalog.offer.characteristics.sesame'|translate}}
+                              <input type="checkbox" value="SESAME" name="Sesame" id="Sesame"
+                                (change)="onCharacteristicsChange($event)"
+                                [checked]="isCharacteristicsChecked('SESAME')" />
+                              <span class="checkmark">
+                                <img src="/assets/img/offer-characteristics/Sesame.svg" class="offerIcon">
+                              </span>
+                            </label>
+                          </div>
+                          <div class="row">
+                            <label class="chk-container col-sm-3" for="Soya">
+                              {{'admin.store.catalog.offer.characteristics.soya'|translate}}
+                              <input type="checkbox" value="SOYA" name="Soya" id="Soya"
+                                (change)="onCharacteristicsChange($event)"
+                                [checked]="isCharacteristicsChecked('SOYA')" />
+                              <span class="checkmark">
+                                <img src="/assets/img/offer-characteristics/Soya.svg" class="offerIcon">
+                              </span>
+                            </label>
+                            <label class="chk-container col-sm-3" for="Sulphur_Dioxide">
+                              {{'admin.store.catalog.offer.characteristics.sulphurDioxide'|translate}}
+                              <input type="checkbox" value="SULPHUR_DIOXIDE" name="Sulphur_Dioxide" id="Sulphur_Dioxide"
+                                (change)="onCharacteristicsChange($event)"
+                                [checked]="isCharacteristicsChecked('SULPHUR_DIOXIDE')" />
+                              <span class="checkmark">
+                                <img src="/assets/img/offer-characteristics/Sulphur_Dioxide.svg" class="offerIcon">
+                              </span>
+                            </label>
+                            <label class="chk-container col-sm-3" for="barley">
+                              {{'admin.store.catalog.offer.characteristics.barley'|translate}}
+                              <input type="checkbox" value="BARLEY" name="barley" id="barley"
+                                (change)="onCharacteristicsChange($event)"
+                                [checked]="isCharacteristicsChecked('BARLEY')" />
+                              <span class="checkmark">
+                                <img src="/assets/img/offer-characteristics/Barley.svg" class="offerIcon">
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                      </mat-expansion-panel>
+                    </mat-accordion>
+                  </div>
+                  <app-content-translation [content]="(offer$ | async).languageTranslation" [mode]="'OFFER'"
+                    (submitEvent)="updateContentItem($event)">
+                  </app-content-translation>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-lg-12 footer px-0 pt-1 pb-2">
+      <button type="button" class="btn btn-primary my-1 my-md-0" (click)="onOfferSave('PARENT')"><i
+          class="fas fa-save mr-2 pr-1"></i>{{'admin.global.save'|translate}}</button>
+      <button type="button" *ngIf="isStoreOperator==false" class="btn btn-primary px-4 ml-2 my-1 my-md-0"
+        (click)="onOfferSave('CURRENT')">{{'admin.global.saveAndContinue'|translate}}</button>
+      <button type="button" *ngIf="isStoreOperator==false" class="btn btn-primary px-4 ml-2 my-1 my-md-0"
+        (click)="onOfferSave('NEW')">{{'admin.global.saveAndNew'|translate}}</button>
+      <a class="actionLink ml-2 my-1 my-md-0" title="{{'admin.store.catalog.backToCatalog'|translate}}"
+        [routerLink]="['/manager/stores/'+storeId+'/catalog']">{{'admin.global.cancel'|translate}}</a>
+      <button (click)="deleteOffer()" *ngIf="!isCreateOffer && (offer$ | async) && isStoreOperator==false"
+        title="{{'admin.global.delete'|translate}}" class="btn btn-danger float-right my-1 my-md-0"><i
+          class="fas fa-trash mr-2 pr-1 text-white"></i>{{'admin.global.delete'|translate}}</button>
+    </div>
+  </div>
+</div>
+<div class="container-fluid pl-0 px-0 footer1 bg-light pt-1 pb-2"></div>

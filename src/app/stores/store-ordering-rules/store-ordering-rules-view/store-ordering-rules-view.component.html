@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <span class="createOfferLink p-0 col-lg-6 col-md-6 col-sm-6">
+                    {{'admin.store.setting.rules.rules'|translate}}&nbsp;&nbsp;
+                    <a class="actionLink"
+                        [routerLink]="['/manager/stores/'+storeid+'/settings/ordering-rules/0']">{{'admin.store.setting.rules.addnewrule'|translate}}
+                        <i class="fas fa-plus ml-2"></i>
+                    </a>
+                </span>
+                <div class="row mt-3" *ngIf="(orderingRules$ |async) && (orderingRules$|async).length>0 ">
+                    <div class="col-md-12" *ngFor="let rule of (orderingRules$|async)">
+                        <a class="zoneName">{{'admin.store.setting.rules.orderamount'|translate}}
+                            {{(selectedStore$|async).currency.symbol}} {{rule.conditions[0].data.min}} -
+                            {{(selectedStore$|async).currency.symbol}} {{rule.conditions[0].data.max}}</a>&nbsp;
+                        <i class="fa fa-pen editIcon text-blue" (click)="gotoRule(rule.id)">
+                        </i><br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

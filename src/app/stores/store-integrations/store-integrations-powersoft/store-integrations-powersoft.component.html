@@ -1,0 +1,116 @@
+<div class="card list">
+    <div class="card-body pt-1">
+        <div class="row">
+            <div class="col-xl-3 col-lg-4 mt-3">
+                <img class="powersoft" src="/assets/img/powersoft.png">
+            </div>
+            <div class="col-xl-9 col-lg-8 mt-2 mt-3">
+                <label class="col-form-label d-block mb-0">{{'admin.store.setting.integrations.powersoft.connectWithPowersoft'|translate}}</label>
+                <button 
+                *ngIf="!showFields && !powersoftConnected"
+                (click)="onPowersoftClicked()"
+                class="btn btn-primary" 
+                >{{'admin.store.setting.integrations.powersoft.connectPowersoft'|translate}}</button>
+                <form class="form-group" [formGroup]="powersoftForm" *ngIf="showFields && !powersoftConnected">
+                    <div class="row">
+                      <div class="col-md-2">
+                        {{'admin.store.accessToken'|translate}}
+                      </div>
+                      <div class="col-md-5">
+                        <input type="text" formControlName="POWERSOFT_ACCESS_TOKEN"
+                          class="form-control" maxlength="64">
+                        <div class="invalid-feedback" *ngIf="getControl('POWERSOFT_ACCESS_TOKEN').errors?.required && getControl('POWERSOFT_ACCESS_TOKEN').touched">
+                          <span>
+                            {{'admin.global.field.required'|translate}}</span>
+                        </div>
+                        <div class="not-subscribed-text">{{'admin.store.setting.integrations.powersoft.accessTokenmsg'|translate}}</div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-md-2">
+                        {{'admin.store.setting.integrations.powersoft.agentCode'|translate}}
+                      </div>
+                      <div class="col-md-5">
+                          <input type="password"
+                              class="form-control" formControlName="POWERSOFT_AGENT_CODE" maxlength="64">
+                          <div class="invalid-feedback" *ngIf="getControl('POWERSOFT_AGENT_CODE').errors?.required && getControl('POWERSOFT_AGENT_CODE').touched">
+                              <span>
+                                  {{'admin.global.field.required'|translate}}</span>
+                          </div>
+                          <div class="not-subscribed-text">{{'admin.store.setting.integrations.powersoft.agentCodemsg'|translate}}</div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-md-2">
+                        {{'admin.store.setting.integrations.powersoft.customerCode'|translate}}
+                      </div>
+                      <div class="col-md-5">
+                          <input type="password"
+                              class="form-control" formControlName="POWERSOFT_GENERIC_CUSTOMER_CODE" maxlength="64">
+                          <div class="invalid-feedback" *ngIf="getControl('POWERSOFT_GENERIC_CUSTOMER_CODE').errors?.required && getControl('POWERSOFT_GENERIC_CUSTOMER_CODE').touched">
+                              <span>
+                                  {{'admin.global.field.required'|translate}}</span>
+                          </div>
+                          <div class="not-subscribed-text">{{'admin.store.setting.integrations.powersoft.customerCodemsg'|translate}}
+                          </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-md-2">
+                        {{'admin.global.email'|translate}}
+                      </div>
+                      <div class="col-md-5">
+                          <input type="password"
+                              class="form-control" formControlName="POWERSOFT_GENERIC_CUSTOMER_EMAIL" maxlength="100">
+                          <div class="invalid-feedback" *ngIf="getControl('POWERSOFT_GENERIC_CUSTOMER_EMAIL').errors?.required && getControl('POWERSOFT_GENERIC_CUSTOMER_EMAIL').touched">
+                              <span>
+                                  {{'admin.global.field.required'|translate}}</span>
+                          </div>
+                          <div class="not-subscribed-text">{{'admin.store.setting.integrations.powersoft.emailmsg'|translate}}</div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-md-2">
+                      </div>
+                      <div class="col-md-5 d-flex flex-row-reverse">
+                        <button class="btn btn-primary px-5" (click)="connect()">
+                          {{'admin.store.setting.integrations.powersoft.connect'|translate}}
+                        </button>
+                      </div>
+                    </div>
+                </form>
+                <div *ngIf="powersoftConnected">
+                    <div class="row">
+                        <div class="col-md-2">{{'admin.store.accessToken'|translate}}</div>
+                        <div class="col-md-4">{{this.powersoftAccessTokenID}}</div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">{{'admin.store.setting.integrations.powersoft.agentCode'|translate}}</div>
+                        <div class="col-md-4">{{this.powersoftAgentCodeID}}</div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">{{'admin.store.setting.integrations.powersoft.customerCode'|translate}}</div>
+                        <div class="col-md-4">{{this.powersoftGenercCustomerCodeID}}</div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">{{'admin.global.email'|translate}}</div>
+                        <div class="col-md-4">{{this.powersoftGenercCustomerEmailID}}</div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4"></div>
+                        <div class="col-md-2">
+                        <button class="btn btn-danger px-5" (click)="disconnect()">
+                            {{'admin.store.disconnect'|translate}}
+                        </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

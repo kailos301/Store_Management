@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "מופעל על ידי",
+			"thankYou": "תודה",
+			"discount": "הנחה",
+			"viewOrder": "הצג הזמנה",
+			"errorH2": "משהו השתבש",
+			"errorUnexpected": "קרה משהו בלתי צפוי",
+			"errorExpected": "קרה משהו בלתי צפוי",
+			"errorMustSelectOne": "עליכם לבחור ערך אחד",
+			"errorTrialExceeded": "אפשרות זו לא זמינה בגלל הגבלות גרסת הנסיון",
+			"emptyCart": "אין מוצרים בהזמנה שלכם",
+			"optional": "(אופציונלי)",
+			"cookies": "אתר זה עושה שימוש בקוקיז. על ידי המשך גלישה באתר זה, הנכם מאשרים את השימוש בהם.",
+			"more": "יותר",
+			"less": "פחות",
+			"chooseFrom": "לבחור מ",
+			"standard": "תֶקֶן",
+			"days": {
+				"mon": "יוֹם שֵׁנִי",
+				"tue": "יוֹם שְׁלִישִׁי",
+				"wed": "יום רביעי",
+				"thu": "יוֹם חֲמִישִׁי",
+				"fri": "יוֹם שִׁישִׁי",
+				"sat": "יום שבת",
+				"sun": "יוֹם רִאשׁוֹן"
+			},
+			"opentimelist": "זמני פתיחה",
+			"newVersionAvailable": "אתה מריץ גרסה ישנה יותר של היישום. טען מחדש את היישום כדי לקבל את העדכון האחרון",
+			"reloadApplication": "טען מחדש את היישום",
+			"poweredByGonnaOrder": "מופעל על ידי Gonnaorder",
+			"recents": "אחרונים",
+			"information": "מֵידָע",
+			"yes": "כן",
+			"no": "לא",
+			"error": "שְׁגִיאָה",
+			"errorQRScanner": "אירעה שגיאה בסורק QR!",
+			"confirm": "לְאַשֵׁר"
+		},
+		"select": {
+			"selectAtLeast": "עליך לבחור לפחות {{x}}",
+			"selectAtmost": "אתה יכול לבחור לכל היותר {{x}}",
+			"selectAtleastAtMost": "עליכם לבחור לפחות {{x}} ועד {{y}}",
+			"selectBetween": "עליך לבחור בין הערכים {{childCategory.min}} ו- {{childCategory.max}}."
+		},
+		"load": {
+			"loadingMessage": "רגע אחד בבקשה..."
+		},
+		"itemDetails": {
+			"removeFromOrder": "הוצא מוצר מההזמנה",
+			"addToOrder": "הוסף להזמנה",
+			"updateOrder": "עדכן הזמנה"
+		},
+		"checkout": {
+			"yourOrder": "ההזמנה שלכם",
+			"total": "סך הכל",
+			"specialNote": "הוסיפו הערה להזמנה שלכם",
+			"howToReceiveYourOrder": "איך תרצו לקבל את ההזמנה שלכם?",
+			"option": {
+				"pickup": "אאסוף אותה בעצמי",
+				"addressDelivery": "אני מעוניין לקבל את זה לכתובת שלי",
+				"serve": {
+					"location": "אני יושב ליד שולחן."
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "לא ניתן היה לשמור את פרטי ההזמנה שלכם.",
+				"fieldRequired": "שדה זה הינו חובה",
+				"selectFutureTime": "אנא בחר זמן בעתיד",
+				"orderSubmissionFailed": "לא ניתן להגיש את הצו",
+				"ORDER_LOCATION_NOT_PRESENT": "מספר הטבלה או שם המיקום חסרים",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "חסר פרטי מידע נדרשים של הלקוח",
+				"ORDER_WISH_TIME_INVALID": "זמן המשאלה הרצוי הוא בעבר",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "שיטת משלוח ההזמנה חסרה",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "משלוח בכתובת אינו נתמך",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "הגשת ההזמנה אינה נתמכת",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "איסוף ההזמנה אינו נתמך",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "מסירה במיקוד שצוין אינה נתמכת",
+				"OPENING_TIME_SCHEDULE_ERROR": "החנות סגורה במועד הרצוי להזמנה",
+				"PROMOTION_NOT_ELIGIBLE": "נבחר קידום מכירות אך אינו זכאי",
+				"offersUnavailableExplanation": "הפריטים שלהלן אינם זמינים בתאריך ובשעה שציינת. אנא לחץ על עדכן ההזמנה כדי להסיר אותם מהזמנת ההזמנה שלך",
+				"offersOutOfStockExplanation": "אין מספיק פריטים זמינים",
+				"invalidVoucherCode": "קוד השובר אינו חוקי",
+				"INVALID_INPUT": "שגיאה בעיבוד הפרטים שסופקו.",
+				"slotUnavailableExplanation": "משך הזמן המבוקש אינו זמין. אנא בחר משבצת זמן אחרת או בחר שיטת מסירה אחרת.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "לא ניתן לבקש הזמנה לאותו יום בחנות זו.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "לא ניתן לבקש הזמנה לאותו יום לאזור שלך.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "לא ניתן לבקש הזמנה לאותו יום עבור הפריטים הבאים:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "לא ניתן למסור למיקוד שלך עבור השעה והיום המבוקשים.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "לא ניתן למסור הזמנות במועד ובמועד הספציפיים. אנא בחר אלטרנטיבה.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "לא ניתן לאסוף הזמנות במועד ובמועד הספציפיים. אנא בחר אלטרנטיבה.",
+				"INTERNAL_ERROR": "אירעה שגיאה לא צפויה. אנא טען מחדש את היישום כדי לנסות שוב.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "סכום הזמנת המשלוח המינימלי לא נפגש. הוסף ערך {{AMOUNT_MISSING}} נוסף להזמנה שלך כדי להמשיך.",
+				"paymentFailed": "נכשלת בתשלום מקוון באמצעות אמצעי תשלום זה. בבקשה נסה שוב.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "מבצעים נדרשים לא הוחלו",
+				"INVALID_CUSTOMER_VOUCHER": "שובר לקוח לא חוקי",
+				"slotUnavailable": "הזמן שנבחר אינו זמין",
+				"slotUnavailableExplanationWithSuggestion": "השעה שנבחרה הייתה בעבר או שאינה זמינה יותר. הזמן הפנוי הבא:",
+				"socialLoginFailed": "לא הצלחנו להתחבר לחשבונך",
+				"customerDetailsUpdateFailed": "עדכון נתוני הפרופיל נכשל",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "החנות לא מספקת למיקום זה",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "איננו יכולים למצוא את הכתובת שסיפקת. אנא עדכן את הכתובת ונסה שוב או צור קשר עם החנות.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "לא ניתן להגיש הזמנות בזמן ובמועד הספציפי. אנא בחר חלופה.",
+				"MISSING_LOCATION_TAP_ID": "זיהוי ברז הוא חובה",
+				"invalidPin": "קוד PIN לא חוקי של לקוח"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "ההזמנה שלכם תוגש לכם"
+					},
+					"unknown": {
+						"location": "ההזמנה שלכם תוגש לכם"
+					}
+				},
+				"pickup": "אספו את ההזמנה",
+				"addressDelivery": "הפרטים שלכם בבקשה"
+			},
+			"yourInformationPlease": "הפרטים שלכם בבקשה",
+			"locationCode": "טבלה",
+			"yourName": "שמכם",
+			"email": "דואר אלקטרוני",
+			"phoneNumber": "מספר טלפון",
+			"fullName": "שם מלא",
+			"streetAddress": "כתובת רחוב",
+			"zip": "מיקוד",
+			"town": "עיר",
+			"minimumAmount": "מינימום הזמנה של {{amount}} נחוצה בשביל משלוח",
+			"deliveryFee": "דמי משלוח",
+			"deliveryFeeApplicable": "תקף לגבי הזמנות מתחת ל{{amount}}",
+			"field": {
+				"generalValidation": "פורמט לא תקין"
+			},
+			"acceptTerm": "בהמשך אתה מקבל את {{תנאי השימוש}} ואת {{מדיניות הפרטיות}}",
+			"termsAndPolicy": "בהמשך אתה מקבל את",
+			"acceptTerms": {
+				"and": "ואת ",
+				"after": ""
+			},
+			"termsOfUse": "תנאי השימוש",
+			"privacyPolicy": "מדיניות הפרטיות",
+			"yourTable": "השולחן שלכם",
+			"allowedCharacters": "אותיות תקינות",
+			"wishTimeHeading": "מתי תרצה לקבל את ההזמנה שלך?",
+			"asSoonAsPossible": "אני רוצה לקבל אותו בהקדם האפשרי",
+			"specifyWishTime": "אני רוצה לציין מתי לקבל אותו",
+			"specialNoteExample": "הוסיפו הערה להזמנה שלכם",
+			"cardDisabledNote": "אנא שתפו את ההזמנה שלכם עם החנות כשתהיו מוכנים",
+			"cardHolderName": "שם מחזיק כרטיס",
+			"cardNumber": "מספר הכרטיס שלך",
+			"cvv": "CVV",
+			"itemsOutOfStock": "חלק מהפריטים אזלו מהמלאי",
+			"floor": "קוֹמָה",
+			"storeClosedAtOrderWishDate": "החנות סגורה בתאריך או בשעה הרצויה",
+			"offersNotAvailableAtOrderWishDate": "הצעות מסוימות אינן זמינות בתאריך או בשעה הרצויה",
+			"updateOrder": "עדכן הזמנה",
+			"offers": {
+				"availableQuantity": "כרגע זמין"
+			},
+			"voucherCode": "הזן קוד שובר",
+			"validVoucherCode": "קוד השובר תקף",
+			"yourRoom": "החדר שלך",
+			"yourLocation": "המיקום שלך",
+			"serveOption": {
+				"location": "אני רוצה לקבל אותו במיקום שלי",
+				"room": "אני בחדר שלי"
+			},
+			"social": {
+				"connect": "התחבר לחשבון חברתי"
+			},
+			"remainingValidVoucher": "יתרה שנותרה בשובר:",
+			"paymentsense": {
+				"declined": "התשלום המקוון באמצעות Paymentsense נדחה"
+			},
+			"saveCustomerDetailsForFuture": "שמור את נתוני הפרופיל שלך להזמנות עתידיות",
+			"customerDetailsUpdateSuccess": "נתוני הפרופיל שלך עודכנו",
+			"logout": "להתנתק",
+			"expiry": "תאריך תפוגה (MMYY)",
+			"enterPin": "הזן את מספר ה-PIN"
+		},
+		"payment": {
+			"payOnlineNow": "בחרו על מנת לשלם און ליין",
+			"chooseYourPaymentMethod": "בחרו את שיטת התשלום",
+			"creditCard": "כרטיס אשראי",
+			"paypal": "PayPal",
+			"submitOrder": "אשר הזמנה",
+			"proceedToPayment": "המשך לתשלום",
+			"errorCouldNotConnect": "לא ניתן היה להתחבר לספק התשלום הנבחר. אנא חזרו למסך התשלום ובחרו שיטת תשלום אחרת, או נסו שוב במועד מאוחר יותר.",
+			"enterCreditCardInfo": "אנא הכניסו את פרטי כרטיס האשראי או הדיירקט שלכם",
+			"yourOrderIsReady": "ההזמנה שלכם מוכנה",
+			"yourOrderIsExpected": "ההזמנה שלכם צפויה",
+			"errors": {
+				"valueNotValid": "הערך שהוקש אינו תקין",
+				"zipNotAvailable": "אינך יכול לבצע הזמנת משלוח מקוונת למיקוד זה. אנא צרו קשר עם החנות למידע נוסף",
+				"addressNotAvailable": "לא ניתן למצוא את הכתובת. אנא בחר כתובת רחוב מההצעות."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "שלם עכשיו באינטרנט",
+			"digitalWallets": "ארנקים דיגיטליים",
+			"creditCardSecure": "תשלום מאובטח בכרטיס אשראי",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "מספר ההזמנה שלכם",
+			"orderStatus": "מצב הזמנה",
+			"notSubmitted": "עדיין לא אושר",
+			"sent": "נשלח",
+			"ready": "מוכן",
+			"rejected": "סירוב",
+			"startNewOrder": "התחל הזמנה חדשה",
+			"errors": {
+				"emailProperFormat": "אנא הכניסו דואר אלקטרוני תקין"
+			},
+			"fiilEmailAddress": "הכניסו את כתובת האימייל שלכם על מנת לקבל העתק של ההזמנה",
+			"failedEmail": "לא ניתן היה לשלוח את האימייל",
+			"emailSent": "אימייל נשלח",
+			"received": "התקבל",
+			"accepted": "אושר",
+			"mobileAppPromotion": "הזמנה בפעם הבאה דרך אפליקציית GonnaOrder לנייד"
+		},
+		"dialog": {
+			"ok": "OK",
+			"cancel": "ביטול"
+		},
+		"store": {
+			"currently": {
+				"closed": "החנות סגורה כרגע"
+			},
+			"time": {
+				"closed": "החנות סגורה בשעה שנבחרה"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "צִמחוֹנִי",
+						"vegan": "טִבעוֹנִי",
+						"celery": "סלרי",
+						"wheat": "חיטה",
+						"crustaceans": "סרטנים",
+						"eggs": "ביצים",
+						"fish": "דג",
+						"lupin": "תוּרמוֹס",
+						"milk": "חלב",
+						"molluscs": "רכיכות",
+						"mustard": "חרדל",
+						"nuts": "אֱגוֹזִים",
+						"peanuts": "בוטנים",
+						"sesame": "שׂוּמשׂוּם",
+						"soya": "סוֹיָה",
+						"sulphurDioxide": "גופרית דו-חמצנית",
+						"halal": "חלאל",
+						"barley": "בקושי",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "אתר זה משתמש בקובצי Cookie כדי לשפר את חווייתך, אך תוכל לבטל את הסכמתך אם תרצה בכך.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "להגיש מועמדות"
+		},
+		"cookie": {
+			"accept": "לְקַבֵּל",
+			"reject": "לִדחוֹת",
+			"readMore": "קרא עוד"
+		},
+		"connect": {
+			"social": {
+				"google": "התחבר לגוגל",
+				"facebook": "התחברו לפייסבוק"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "הסל שלך ריק",
+				"proceed": "להמשיך"
+			}
+		},
+		"main": {
+			"typeUrl": "הקלד כתובת אתר או שם חנות",
+			"invalidUrl": "כתובת האתר אינה חוקית",
+			"scanQRCode": "סרוק קוד QR",
+			"storeNotFound": "החנות לא נמצאה",
+			"storeSaved": "מידע החנות נשמר בהצלחה!",
+			"navigateStoreConfirm": "נווט לחנות?"
+		},
+		"recents": {
+			"nothingFound": "שום דבר לא נמצא כאן"
+		}
+	}
+}

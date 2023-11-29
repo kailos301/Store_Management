@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "Powered by",
+			"thankYou": "Grazie",
+			"discount": "Sconto",
+			"viewOrder": "Visualizzare l'ordine",
+			"errorH2": "Qualcosa è andato storto",
+			"errorUnexpected": "È successo qualcosa di inaspettato",
+			"errorExpected": "È successo qualcosa di inaspettato",
+			"errorMustSelectOne": "Deve selezionare un valore",
+			"errorTrialExceeded": "Questa funzionalità non è disponibile. Le restrizioni di prova sono state superate",
+			"emptyCart": "Non ci sono articoli nel suo ordine",
+			"optional": "(opzionale)",
+			"cookies": "Questo sito utilizza i cookie. Continuando a utilizzare questo sito web accetti il loro utilizzo",
+			"more": "di più",
+			"less": "di meno",
+			"chooseFrom": "Scegli da",
+			"standard": "Standard",
+			"days": {
+				"mon": "Lunedi",
+				"tue": "Martedì",
+				"wed": "Mercoledì",
+				"thu": "Giovedi",
+				"fri": "Venerdì",
+				"sat": "Sabato",
+				"sun": "Domenica"
+			},
+			"opentimelist": "Orari di apertura",
+			"newVersionAvailable": "Stai eseguendo una versione precedente dell'applicazione. Ricarica l'applicazione per ricevere l'ultimo aggiornamento",
+			"reloadApplication": "Ricarica l'applicazione",
+			"poweredByGonnaOrder": "Alimentato da Gonnaorder",
+			"recents": "Recenti",
+			"information": "Informazione",
+			"yes": "sì",
+			"no": "No",
+			"error": "Errore",
+			"errorQRScanner": "Si è verificato un errore con QR Scanner!",
+			"confirm": "Confermare"
+		},
+		"select": {
+			"selectAtLeast": "Devi selezionare almeno {{x}}",
+			"selectAtmost": "Puoi selezionare al massimo {{x}}",
+			"selectAtleastAtMost": "Deve selezionare almeno {{x}} e al massimo{{y}}",
+			"selectBetween": "Devi scegliere tra i valori {{childCategory.min}} e {{childCategory.max}}."
+		},
+		"load": {
+			"loadingMessage": "Un attimo per favore ..."
+		},
+		"itemDetails": {
+			"removeFromOrder": "Rimuovi questo dal suo ordine",
+			"addToOrder": "Aggiunge al suo ordine",
+			"updateOrder": "Aggiorna il suo ordine"
+		},
+		"checkout": {
+			"yourOrder": "Il suo ordine",
+			"total": "Totale",
+			"specialNote": "Aggiungere una nota speciale al suo ordine",
+			"howToReceiveYourOrder": "Come desidera ricevere l'ordine?",
+			"option": {
+				"pickup": "Lo raccoglierò da solo",
+				"addressDelivery": "Voglio riceverlo al mio indirizzo",
+				"serve": {
+					"location": "Sono seduto a un tavolo"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "Non siamo riusciti a salvare i dati dell'ordine",
+				"fieldRequired": "Questo campo è obbligatorio",
+				"selectFutureTime": "Seleziona l'orario in futuro",
+				"orderSubmissionFailed": "L'ordine non può essere inviato",
+				"ORDER_LOCATION_NOT_PRESENT": "Manca il numero di tabella o il nome della posizione",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "Mancano alcune informazioni richieste sul cliente",
+				"ORDER_WISH_TIME_INVALID": "Il tempo del desiderio desiderato è nel passato",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "Manca il metodo di consegna dell'ordine",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "La consegna all'indirizzo non è supportata",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "La pubblicazione dell'ordine non è supportata",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "Il ritiro dell'ordine non è supportato",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "La consegna al codice postale specificato non è supportata",
+				"OPENING_TIME_SCHEDULE_ERROR": "Il negozio è chiuso al momento dell'ordine selezionato",
+				"PROMOTION_NOT_ELIGIBLE": "È stata selezionata una promozione ma non è idonea",
+				"offersUnavailableExplanation": "Gli elementi seguenti non sono disponibili alla data e all'ora specificate. Fare clic su Aggiorna l'ordine per rimuoverli dall'ordine",
+				"offersOutOfStockExplanation": "Non ci sono abbastanza articoli disponibili",
+				"invalidVoucherCode": "Il codice del voucher non è valido",
+				"INVALID_INPUT": "Errore durante l'elaborazione dei dettagli forniti.",
+				"slotUnavailableExplanation": "La fascia oraria richiesta non è disponibile. Seleziona una fascia oraria diversa o seleziona un altro metodo di consegna.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "Non è possibile richiedere un ordine per lo stesso giorno per questo negozio.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "Non è possibile richiedere un ordine per lo stesso giorno per la tua zona.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "Non è possibile richiedere un ordine per lo stesso giorno per i seguenti articoli:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "Non è possibile effettuare consegne al codice postale per l'ora e il giorno richiesti.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "Non è possibile consegnare ordini all'ora e alla data specificate. Seleziona un'alternativa.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "Non è possibile ritirare gli ordini all'ora e alla data specifiche. Seleziona un'alternativa.",
+				"INTERNAL_ERROR": "Si è verificato un errore imprevisto. Ricarica l'applicazione per riprovare.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "Importo minimo dell'ordine di consegna non soddisfatto. Aggiungi un altro valore di {{AMOUNT_MISSING}} al tuo ordine per procedere.",
+				"paymentFailed": "Non sei riuscito a pagare online utilizzando questo metodo di pagamento. Per favore riprova.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "Promozioni obbligatorie non applicate",
+				"INVALID_CUSTOMER_VOUCHER": "Buono non valido",
+				"slotUnavailable": "L'orario selezionato non è disponibile",
+				"slotUnavailableExplanationWithSuggestion": "L'ora selezionata è nel passato o non è più disponibile. Prossimo orario disponibile:",
+				"socialLoginFailed": "Non siamo riusciti a connetterci al tuo account",
+				"customerDetailsUpdateFailed": "Impossibile aggiornare i dati del profilo",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "Il negozio non consegna in questa località",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "Non riusciamo a trovare l'indirizzo che ci hai fornito. Aggiorna l'indirizzo e riprova o contatta il negozio.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "Non è possibile inviare ordini all'ora e alla data specifica. Seleziona un'alternativa.",
+				"MISSING_LOCATION_TAP_ID": "L'ID del tocco è obbligatorio",
+				"invalidPin": "Codice PIN cliente non valido"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "Il tuo ordine ti sarà servito"
+					},
+					"unknown": {
+						"location": "Il tuo ordine ti sarà servito"
+					}
+				},
+				"pickup": "Ritirare l'ordine",
+				"addressDelivery": "Le sue informazioni per favore"
+			},
+			"yourInformationPlease": "Le sue informazioni per favore",
+			"locationCode": "Tavolo",
+			"yourName": "Il mio nome",
+			"email": "Email",
+			"phoneNumber": "Numero di telefono",
+			"fullName": "Nome completo",
+			"streetAddress": "Indirizzo",
+			"zip": "Cap / Codice postale",
+			"town": "Città",
+			"minimumAmount": "Per la consegna è richiesto un importo minimo d'ordine di {{amount}}",
+			"deliveryFee": "Tassa di consegna",
+			"deliveryFeeApplicable": "Applicabile per ordini inferiori a {{amount}}",
+			"field": {
+				"generalValidation": "Il formato del campo non è valido"
+			},
+			"acceptTerm": "Procedendo accetti i {{Termini di utilizzo}} e le {{Norme sulla privacy}}",
+			"termsAndPolicy": "Procedendo accetti i",
+			"acceptTerms": {
+				"and": "e le",
+				"after": ""
+			},
+			"termsOfUse": "Termini di utilizzo",
+			"privacyPolicy": "Norme sulla privacy",
+			"yourTable": "Il suo tavolo",
+			"allowedCharacters": "Caratteri consentiti",
+			"wishTimeHeading": "Quando vorresti ricevere il tuo ordine?",
+			"asSoonAsPossible": "Voglio riceverlo al più presto",
+			"specifyWishTime": "Voglio specificare quando riceverlo",
+			"specialNoteExample": "Nota",
+			"cardDisabledNote": "Per favore condivide il suo ordine quando é pronto",
+			"cardHolderName": "Nome del titolare",
+			"cardNumber": "Il tuo numero di carta",
+			"cvv": "CVV",
+			"itemsOutOfStock": "Alcuni articoli sono esauriti",
+			"floor": "Pavimento",
+			"storeClosedAtOrderWishDate": "Il negozio viene chiuso alla data o all'ora desiderata",
+			"offersNotAvailableAtOrderWishDate": "Alcune offerte non sono disponibili alla data o all'ora desiderate",
+			"updateOrder": "Aggiorna l'ordine",
+			"offers": {
+				"availableQuantity": "Attualmente disponibile"
+			},
+			"voucherCode": "Inserisci un codice voucher",
+			"validVoucherCode": "Il codice del buono è valido",
+			"yourRoom": "La vostra stanza",
+			"yourLocation": "La tua posizione",
+			"serveOption": {
+				"location": "Voglio riceverlo nella mia posizione",
+				"room": "sono nella mia camera"
+			},
+			"social": {
+				"connect": "Connettiti con l'account social"
+			},
+			"remainingValidVoucher": "Saldo residuo sul buono:",
+			"paymentsense": {
+				"declined": "Il pagamento online tramite Paymentsense è stato rifiutato"
+			},
+			"saveCustomerDetailsForFuture": "Salva i dati del tuo profilo per ordini futuri",
+			"customerDetailsUpdateSuccess": "I dati del tuo profilo sono stati aggiornati",
+			"logout": "Disconnettersi",
+			"expiry": "Data di scadenza (MMAA)",
+			"enterPin": "Immettere il numero PIN"
+		},
+		"payment": {
+			"payOnlineNow": "Selezioni per pagare online ora",
+			"chooseYourPaymentMethod": "Sceglie il suo metodo di pagamento",
+			"creditCard": "Carta di credito",
+			"paypal": "Paypal",
+			"submitOrder": "Invia lórdine",
+			"proceedToPayment": "Procedere al pagamento",
+			"errorCouldNotConnect": "Non siamo stati in grado di connettersi al processore di pagamento selezionato. Si prega di tornare alla schermata di checkout e selezionare un altro metodo di pagamento o riprovare più tardi.",
+			"enterCreditCardInfo": "Si prega di inserire i dati della carta di credito o di debito",
+			"yourOrderIsReady": "Il suo ordine è pronto",
+			"yourOrderIsExpected": "Il suo ordine è previsto",
+			"errors": {
+				"valueNotValid": "Il valore fornito non è valido",
+				"zipNotAvailable": "Non è possibile effettuare un ordine di consegna in linea a questo codice postale. Si prega di contattare il negozio per ulteriori informazioni",
+				"addressNotAvailable": "Impossibile trovare l'indirizzo. Seleziona un indirizzo dai suggerimenti."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "Paga online ora",
+			"digitalWallets": "Portafogli digitali",
+			"creditCardSecure": "Pagamenti sicuri con carta di credito",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "Il suo numero d'ordine",
+			"orderStatus": "Stato dell'ordine",
+			"notSubmitted": "Non ancora presentato",
+			"sent": "Inviato",
+			"ready": "Listo",
+			"rejected": "Respinto",
+			"startNewOrder": "Inizia un nuovo ordine",
+			"errors": {
+				"emailProperFormat": "Per favore inserisce un indirizzo  di posta elettronica (email) valido"
+			},
+			"fiilEmailAddress": "Inserisce il suo indirizzo email per ricevere una copia del suo ordine",
+			"failedEmail": "Fallito a inviare email",
+			"emailSent": "Email inviata",
+			"received": "Ricevuto",
+			"accepted": "Accettato",
+			"mobileAppPromotion": "La prossima volta ordina tramite l'app mobile GonnaOrder"
+		},
+		"dialog": {
+			"ok": "OK",
+			"cancel": "Cancellar"
+		},
+		"store": {
+			"currently": {
+				"closed": "Il negozio è attualmente chiuso"
+			},
+			"time": {
+				"closed": "Il negozio è chiuso all'ora selezionata"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "Vegetariano",
+						"vegan": "Vegano",
+						"celery": "Sedano",
+						"wheat": "Grano",
+						"crustaceans": "Crostacei",
+						"eggs": "Uova",
+						"fish": "Pesce",
+						"lupin": "Lupino",
+						"milk": "latte",
+						"molluscs": "Molluschi",
+						"mustard": "Mostarda",
+						"nuts": "Noccioline",
+						"peanuts": "Arachidi",
+						"sesame": "Sesamo",
+						"soya": "Soia",
+						"sulphurDioxide": "Diossido di zolfo",
+						"halal": "Halal",
+						"barley": "Orzo",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "Questo sito Web utilizza i cookie per migliorare la tua esperienza, ma puoi disattivarli se lo desideri.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "Applicare"
+		},
+		"cookie": {
+			"accept": "Accettare",
+			"reject": "Rifiutare",
+			"readMore": "Per saperne di più"
+		},
+		"connect": {
+			"social": {
+				"google": "Connettiti con Google",
+				"facebook": "Connettiti con facebook"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "Il tuo cestino è vuoto",
+				"proceed": "Procedere"
+			}
+		},
+		"main": {
+			"typeUrl": "Digita un URL o il nome del negozio",
+			"invalidUrl": "L'URL non è valido",
+			"scanQRCode": "Scansiona un codice QR",
+			"storeNotFound": "Il negozio non è stato trovato",
+			"storeSaved": "Memorizza le informazioni salvate con successo!",
+			"navigateStoreConfirm": "Vai al negozio?"
+		},
+		"recents": {
+			"nothingFound": "Niente trovato qui"
+		}
+	}
+}

@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "Realisé par",
+			"thankYou": "Merci",
+			"discount": "Promotion",
+			"viewOrder": "Voir ma commande",
+			"errorH2": "Une erreur est survenue",
+			"errorUnexpected": "Une erreur imprévue est survenue",
+			"errorExpected": "Une erreur imprévue est survenue",
+			"errorMustSelectOne": "Veuillez sélectionner une valeur",
+			"errorTrialExceeded": "Cette fonctionnalité est actuellement indisponible. Les conditions d'essai ont été dépassées",
+			"emptyCart": "Vous n'avez aucun article dans votre commande",
+			"optional": "(facultatif)",
+			"cookies": "Ce site utilise des cookies. En continuant à utiliser ce site, vous acceptez leur utilisation",
+			"more": "plus",
+			"less": "moins",
+			"chooseFrom": "Choisissez parmi",
+			"standard": "Standard",
+			"days": {
+				"mon": "Lundi",
+				"tue": "Mardi",
+				"wed": "Mercredi",
+				"thu": "Jeudi",
+				"fri": "Vendredi",
+				"sat": "Samedi",
+				"sun": "Dimanche"
+			},
+			"opentimelist": "Horaires d'ouverture",
+			"newVersionAvailable": "Vous exécutez une ancienne version de l'application. Rechargez l'application pour recevoir la dernière mise à jour",
+			"reloadApplication": "Recharger l'application",
+			"poweredByGonnaOrder": "Propulsé par Gonnaorder",
+			"recents": "Récents",
+			"information": "Information",
+			"yes": "Oui",
+			"no": "Non",
+			"error": "Erreur",
+			"errorQRScanner": "Une erreur s'est produite avec QR Scanner !",
+			"confirm": "Confirmer"
+		},
+		"select": {
+			"selectAtLeast": "Vous devez sélectionner au moins {{x}}",
+			"selectAtmost": "Vous pouvez sélectionner au plus {{x}}",
+			"selectAtleastAtMost": "Vous devez sélectionner au moins {{x}} et au maximum {{y}}",
+			"selectBetween": "Vous devez sélectionner entre les valeurs {{childCategory.min}} et {{childCategory.max}}."
+		},
+		"load": {
+			"loadingMessage": "Un instant, s'il vous plait"
+		},
+		"itemDetails": {
+			"removeFromOrder": "Retirer cet article de votre commande",
+			"addToOrder": "Ajouter à votre commande",
+			"updateOrder": "Actualiser votre commande"
+		},
+		"checkout": {
+			"yourOrder": "Votre commande",
+			"total": "Total",
+			"specialNote": "Ajoutez un commentaire à votre commande",
+			"howToReceiveYourOrder": "Comment souhaitez-vous recevoir votre commande?",
+			"option": {
+				"pickup": "Je viendrai la chercher",
+				"addressDelivery": "Je veux le recevoir à mon adresse",
+				"serve": {
+					"location": "Je suis assis à une table"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "Veuillez nous excuser. Nous n'avons malheureusement pas pu sauvegarder le contenu de votre commande.",
+				"fieldRequired": "Ce champ est obligatoire",
+				"selectFutureTime": "Veuillez sélectionner un horaire dans le futur",
+				"orderSubmissionFailed": "La commande ne peut pas être soumise",
+				"ORDER_LOCATION_NOT_PRESENT": "Le numéro de table ou le nom de l'emplacement est manquant",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "Certaines informations client requises sont manquantes",
+				"ORDER_WISH_TIME_INVALID": "L'heure de souhait souhaitée est dans le passé",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "Le mode de livraison de la commande est manquant",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "La livraison à l'adresse n'est pas prise en charge",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "Le service de la commande n'est pas pris en charge",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "L'enlèvement de la commande n'est pas pris en charge",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "La livraison au code postal spécifié n'est pas prise en charge",
+				"OPENING_TIME_SCHEDULE_ERROR": "Le magasin est fermé à l'heure souhaitée pour la commande",
+				"PROMOTION_NOT_ELIGIBLE": "Une promotion est sélectionnée mais n'est pas éligible",
+				"offersUnavailableExplanation": "Les éléments ci-dessous ne sont pas disponibles à la date et à l'heure que vous avez spécifiées. Veuillez cliquer sur mettre à jour la commande pour les supprimer de votre commande",
+				"offersOutOfStockExplanation": "Il n'y a pas assez d'articles disponibles",
+				"invalidVoucherCode": "Le code du bon n'est pas valide",
+				"INVALID_INPUT": "Erreur lors du traitement des détails fournis.",
+				"slotUnavailableExplanation": "Le créneau horaire demandé n'est pas disponible. Veuillez sélectionner un créneau horaire différent ou sélectionnez un autre mode de livraison.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "Il n'est pas possible de demander une commande pour le même jour pour ce magasin.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "Il n'est pas possible de demander une commande pour le jour même pour votre région.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "Il n'est pas possible de demander une commande le jour même pour les articles suivants:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "Il n'est pas possible de livrer à votre code postal pour l'heure et le jour demandés.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "Il n'est pas possible de livrer les commandes à l'heure et à la date spécifiques. Veuillez sélectionner une alternative.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "Il n'est pas possible de récupérer les commandes à l'heure et à la date spécifiques. Veuillez sélectionner une alternative.",
+				"INTERNAL_ERROR": "Erreur inattendue rencontrée. Veuillez recharger l'application pour réessayer.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "Montant minimum de la commande de livraison non respecté. Ajoutez une autre valeur de {{AMOUNT_MISSING}} à votre commande pour continuer.",
+				"paymentFailed": "Vous n'avez pas effectué de paiement en ligne avec ce mode de paiement. Veuillez réessayer.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "Promotions obligatoires non appliquées",
+				"INVALID_CUSTOMER_VOUCHER": "Bon invalide",
+				"slotUnavailable": "L'heure sélectionnée n'est pas disponible",
+				"slotUnavailableExplanationWithSuggestion": "L'heure sélectionnée est dans le passé ou n'est plus disponible. Prochaine heure disponible :",
+				"socialLoginFailed": "Nous n'avons pas pu nous connecter à votre compte",
+				"customerDetailsUpdateFailed": "Échec de la mise à jour des données de profil",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "Le magasin ne livre pas à cet endroit",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "Nous ne pouvons pas trouver l'adresse que vous avez fournie. Veuillez mettre à jour l'adresse et réessayer ou contacter le magasin.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "Il n'est pas possible de passer des commandes à l'heure et à la date spécifiées. Veuillez sélectionner une alternative.",
+				"MISSING_LOCATION_TAP_ID": "L'identifiant du robinet est obligatoire",
+				"invalidPin": "Code PIN client invalide"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "Votre commande vous sera servie"
+					},
+					"unknown": {
+						"location": "Votre commande vous sera servie"
+					}
+				},
+				"pickup": "Importer la commande",
+				"addressDelivery": "Veuillez introduire vos coordonnées"
+			},
+			"yourInformationPlease": "Veuillez introduire vos coordonnées",
+			"locationCode": "Table",
+			"yourName": "Votre nom",
+			"email": "Email",
+			"phoneNumber": "Numéro de téléphone",
+			"fullName": "Nom complet",
+			"streetAddress": "Adresse",
+			"zip": "Code postal",
+			"town": "Ville",
+			"minimumAmount": "Un montant minimum de commande de {{amount}} est requis pour la livraison",
+			"deliveryFee": "Frais de livraison",
+			"deliveryFeeApplicable": "Applicable aux commandes inférieures à {{amount}}",
+			"field": {
+				"generalValidation": "Le format du champ n'est pas valide"
+			},
+			"acceptTerm": "En continuant, vous acceptez les {{Conditions d'utilisation}} et la {{Politique de confidentialité}}",
+			"termsAndPolicy": "En continuant, vous acceptez les",
+			"acceptTerms": {
+				"and": "et la",
+				"after": ""
+			},
+			"termsOfUse": "Conditions d'utilisation",
+			"privacyPolicy": "Politique de confidentialité",
+			"yourTable": "Votre table",
+			"allowedCharacters": "Caractères autorisés",
+			"wishTimeHeading": "Quand souhaitez-vous recevoir votre commande?",
+			"asSoonAsPossible": "Je souhaite la recevoir dans les plus brefs délais",
+			"specifyWishTime": "Je veux préciser à quel moment je voudrais la recevoir",
+			"specialNoteExample": "Commentaire",
+			"cardDisabledNote": "Veuillez envoyer votre commande quand vous êtes prêt.",
+			"cardHolderName": "Nom du titulaire",
+			"cardNumber": "Votre numéro de carte",
+			"cvv": "CVV",
+			"itemsOutOfStock": "Certains produits ne sont plus disponibles",
+			"floor": "Étage",
+			"storeClosedAtOrderWishDate": "Le magasin est fermé à la date ou à l'heure souhaitée",
+			"offersNotAvailableAtOrderWishDate": "Certaines offres ne sont pas disponibles à la date ou à l'heure souhaitée",
+			"updateOrder": "Mise à jour de la commande",
+			"offers": {
+				"availableQuantity": "Actuellement disponible"
+			},
+			"voucherCode": "Entrez un code de bon",
+			"validVoucherCode": "Le code du bon est valide",
+			"yourRoom": "Ta chambre",
+			"yourLocation": "Votre emplacement",
+			"serveOption": {
+				"location": "Je souhaite le recevoir chez moi",
+				"room": "je suis dans ma chambre"
+			},
+			"social": {
+				"connect": "Connectez-vous avec un compte social"
+			},
+			"remainingValidVoucher": "Solde restant sur le bon:",
+			"paymentsense": {
+				"declined": "Le paiement en ligne via Paymentsense a été refusé"
+			},
+			"saveCustomerDetailsForFuture": "Enregistrez vos données de profil pour de futures commandes",
+			"customerDetailsUpdateSuccess": "Vos données de profil ont été mises à jour",
+			"logout": "Se déconnecter",
+			"expiry": "Date d'expiration (MMAA)",
+			"enterPin": "Saisissez le NIP"
+		},
+		"payment": {
+			"payOnlineNow": "Sélectionnez ce bouton pour payer en ligne",
+			"chooseYourPaymentMethod": "Choisissez votre méthode de paiement",
+			"creditCard": "Carte bancaire",
+			"paypal": "Paypal",
+			"submitOrder": "Valider ma commande",
+			"proceedToPayment": "Procéder au paiement",
+			"errorCouldNotConnect": "La connection au mode de paiement sélectionné a échoué. Veuillez retourner à la page de vérification et sélectionner une autre option ou réessayez plus tard.",
+			"enterCreditCardInfo": "Veuillez saisir les informations relatives à votre carte de crédit ou de débit",
+			"yourOrderIsReady": "Votre commande est prête",
+			"yourOrderIsExpected": "Votre commande est attendue",
+			"errors": {
+				"valueNotValid": "La valeur fournie n'est pas valable",
+				"zipNotAvailable": "Vous ne pouvez pas passer une commande de livraison en ligne à ce code postal. Veuillez contacter le magasin pour plus d'informations",
+				"addressNotAvailable": "L'adresse est introuvable. Veuillez sélectionner une adresse parmi les suggestions."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "Payez en ligne maintenant",
+			"digitalWallets": "Portefeuilles numériques",
+			"creditCardSecure": "Paiements sécurisés par carte de crédit",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "Votre numéro de commande",
+			"orderStatus": "Statut de votre commande",
+			"notSubmitted": "Non-validée",
+			"sent": "Envoyée",
+			"ready": "Prête",
+			"rejected": "Rejetée",
+			"startNewOrder": "Passer une nouvelle commande",
+			"errors": {
+				"emailProperFormat": "Veuillez introduire une adresse email valide"
+			},
+			"fiilEmailAddress": "Insérer votre adresse email pour recevoir une copie de votre commande",
+			"failedEmail": "Echec d'envoi de l'email",
+			"emailSent": "Email envoyé",
+			"received": "Reçue",
+			"accepted": "Acceptée",
+			"mobileAppPromotion": "Prochaine commande via l'application mobile GonnaOrder"
+		},
+		"dialog": {
+			"ok": "OK",
+			"cancel": "Annuler"
+		},
+		"store": {
+			"currently": {
+				"closed": "Le boutique est fermé en ce moment"
+			},
+			"time": {
+				"closed": "Le magasin est fermé à l'heure sélectionnée"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "Végétarien",
+						"vegan": "Vegan",
+						"celery": "Céleri",
+						"wheat": "Blé",
+						"crustaceans": "Crustacés",
+						"eggs": "Des œufs",
+						"fish": "Poisson",
+						"lupin": "Lupin",
+						"milk": "Lait",
+						"molluscs": "Les mollusques",
+						"mustard": "Moutarde",
+						"nuts": "Des noisettes",
+						"peanuts": "Cacahuètes",
+						"sesame": "Sésame",
+						"soya": "Soya",
+						"sulphurDioxide": "Le dioxyde de soufre",
+						"halal": "Halal",
+						"barley": "Orge",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "Ce site Web utilise des cookies pour améliorer votre expérience, mais vous pouvez vous désinscrire si vous le souhaitez.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "Appliquer"
+		},
+		"cookie": {
+			"accept": "J'accepte",
+			"reject": "Rejeter",
+			"readMore": "Lire la suite"
+		},
+		"connect": {
+			"social": {
+				"google": "Connectez-vous avec Google",
+				"facebook": "Connecter avec Facebook"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "Votre panier est vide",
+				"proceed": "Procéder"
+			}
+		},
+		"main": {
+			"typeUrl": "Tapez une URL ou un nom de magasin",
+			"invalidUrl": "L'URL n'est pas valide",
+			"scanQRCode": "Scannez un code QR",
+			"storeNotFound": "Le magasin n'a pas été trouvé",
+			"storeSaved": "Informations sur le magasin enregistrées avec succès !",
+			"navigateStoreConfirm": "Accéder au magasin ?"
+		},
+		"recents": {
+			"nothingFound": "Rien trouvé ici"
+		}
+	}
+}

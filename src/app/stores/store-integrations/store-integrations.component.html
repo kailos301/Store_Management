@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-lg-12">
+    <app-store-last-mile-wrapper></app-store-last-mile-wrapper>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-lg-12">
+    <app-store-integrations-hubrise></app-store-integrations-hubrise>
+  </div>
+</div>
+<ng-container *ngIf="selectedStore?.address?.country?.code === 'CY'">
+  <hr>
+  <div class="row">
+    <div class="col-lg-12">
+      <app-store-integrations-powersoft></app-store-integrations-powersoft>
+    </div>
+  </div>
+</ng-container>

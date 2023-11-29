@@ -1,0 +1,227 @@
+<div class="offerSubSection">
+  <mat-accordion [togglePosition]="'before'" class="w-100">
+    <mat-expansion-panel class="offershadow" [expanded]="showContent">
+      <mat-expansion-panel-header
+        matTooltip="{{ 'admin.store.catalog.tooltip.optionGroup' | translate }}"
+      >
+        <mat-panel-title>
+          {{ "admin.store.catalog.optionGroup.optionGroups" | translate }}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <form [formGroup]="offerCategoryForm" class="subCard content">
+        <div
+          class="p-0 col-lg-12 col-md-12 col-sm-12 optionGroupSelectionPanel"
+        >
+          <mat-form-field
+            class="p-0 col-lg-6 col-md-12 col-sm-12"
+            id="childCategoryId"
+            *ngIf="
+              availableChildCategories && availableChildCategories.length > 0
+            "
+          >
+            <mat-label>{{
+              "admin.store.catalog.optionGroup.chooseExisting" | translate
+            }}</mat-label>
+            <mat-select
+              formControlName="childCategoryId"
+              multiple
+              (selectionChange)="associateCategory()"
+            >
+              <mat-select-trigger>
+                {{
+                  "admin.store.catalog.optionGroup.chooseExisting" | translate
+                }}
+              </mat-select-trigger>
+              <mat-option
+                *ngFor="let cat of availableChildCategories"
+                [value]="cat.categoryId"
+                >{{ cat.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <a
+            class="p-0 col-lg-6 col-md-12 col-sm-12 actionLink"
+            (click)="loadChildCategoryPage('CREATE_CATEGORY')"
+            >{{ "admin.store.catalog.optionGroup.addOptionGroup" | translate }}
+            <i class="fas fa-plus"></i>
+          </a>
+        </div>
+        <div class="p-0 col-lg-12 col-md-12 col-sm-12">
+          <div
+            class="w-100"
+            *ngIf="
+              childCategories &&
+              childCategories.length > 0 &&
+              (!childCategoryChanged || (offerForChildCategory$ | async))
+            "
+          >
+            <div
+              class="childCategoryList option-wrapper"
+              *ngFor="let childCategory of childCategories; let i = index"
+            >
+              <div
+                class="optionGoupHeader px-3 mt-3 mb-0 col-lg-12 col-md-12 col-sm-12"
+              >
+                <div
+                  class="p-0 col-lg-6 col-md-12 col-sm-12"
+                  (click)="loadChildCategoryPage(childCategory.categoryId)"
+                  matTooltip="{{
+                    'admin.store.catalog.tooltip.goToOptionGroup' | translate
+                  }}"
+                >
+                  {{ childCategory.name }}
+                  <i class="fa fa-pen editIcon"> </i>
+                </div>
+                <div class="p-0 col-lg-6 col-md-12 col-sm-12 row">
+                  <div class="p-0 col-lg-6 col-md-6 col-sm-6 text-right">
+                    <a
+                      class="actionLink"
+                      (click)="
+                        loadChildOfferPage(
+                          'CREATE_OFFER',
+                          childCategory.categoryId
+                        )
+                      "
+                      matTooltip="{{
+                        'admin.store.common.tooltip.option.addOption'
+                          | translate
+                      }}"
+                      >{{ "admin.store.catalog.option.addOption" | translate }}
+                      <i class="fas fa-plus"></i>
+                    </a>
+                  </div>
+                  <div class="p-0 col-lg-6 col-md-6 col-sm-6 text-right">
+                    <a
+                      [ngClass]="{
+                        invisible: i === childCategories.length - 1
+                      }"
+                      class="actionLink"
+                      matTooltip="{{
+                        'admin.store.common.tooltip.movedown.Option' | translate
+                      }}"
+                      (click)="savePosition('DOWN', i)"
+                    >
+                      <i class="fas fa-arrow-down"></i>
+                    </a>
+                    <a
+                      [ngClass]="{ invisible: i === 0 }"
+                      class="actionLink"
+                      matTooltip="{{
+                        'admin.store.common.tooltip.moveup.Option' | translate
+                      }}"
+                      (click)="savePosition('UP', i)"
+                    >
+                      <i class="fas fa-arrow-up"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <ng-container
+                *ngIf="
+                  childCategory.min === 1 && childCategory.max === 1;
+                  else templateRadioAsCheckbox
+                "
+              >
+                <div
+                  *ngFor="let childOff of childCategory.offers"
+                  class="radio variant-wrapper justify-content-between align-items-center"
+                  (click)="loadChildOfferPage(childOff.offerId, null)"
+                  matTooltip="{{
+                    'admin.store.catalog.tooltip.goToOption' | translate
+                  }}"
+                >
+                  <div class="d-flex container">
+                    <label class="w-100" for="id{{ childOff.offerId }}">
+                      <span
+                        >{{ childOff.name }}
+                        <i class="fa fa-pen editIcon"> </i>
+                      </span>
+                      <input
+                        type="radio"
+                        id="id{{ childOff.offerId }}"
+                        name="var{{ childCategory.categoryId }}"
+                        value="{{ childOff.offerId }}"
+                        disabled
+                      />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+              </ng-container>
+              <ng-template #templateRadioAsCheckbox>
+                <ng-container
+                  *ngIf="
+                    childCategory.min >= 0 &&
+                    (childCategory.max > 0 ||
+                      childCategory.max == -1 ||
+                      childCategory.max == -2)
+                  "
+                >
+                  <div
+                    *ngFor="let childOff of childCategory.offers; let j = index"
+                    class="checkbox variant-wrapper justify-content-between align-items-center"
+                    (click)="loadChildOfferPage(childOff.offerId, null)"
+                    title="{{
+                      'admin.store.catalog.tooltip.goToOption' | translate
+                    }}"
+                  >
+                    <div class="d-flex container">
+                      <label class="w-100" for="id{{ childOff.offerId }}">
+                        <span
+                          >{{ childOff.name }}
+                          <i class="fa fa-pen editIcon"> </i>
+                        </span>
+
+                        <input
+                          type="checkbox"
+                          id="id{{ childOff.offerId }}"
+                          name="var{{ childCategory.categoryId }}"
+                          value="{{ childOff.offerId }}"
+                          disabled
+                        />
+                        <span class="checkmark"></span>
+                        <span class="sorting">
+                          <a
+                            [ngClass]="{
+                              invisible: j === childCategory.offers.length - 1
+                            }"
+                            class="actionLink"
+                            matTooltip="{{
+                              'admin.store.common.tooltip.movedown.Option'
+                                | translate
+                            }}"
+                            (click)="
+                              savePositionOptions('DOWN', j, i);
+                              $event.stopPropagation()
+                            "
+                          >
+                            <i class="fas fa-arrow-down"></i>
+                          </a>
+                          <a
+                            [ngClass]="{ invisible: j === 0 }"
+                            class="actionLink"
+                            matTooltip="{{
+                              'admin.store.common.tooltip.moveup.Option'
+                                | translate
+                            }}"
+                            (click)="
+                              savePositionOptions('UP', j, i);
+                              $event.stopPropagation()
+                            "
+                          >
+                            <i class="fas fa-arrow-up"></i>
+                          </a>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </ng-container>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </form>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

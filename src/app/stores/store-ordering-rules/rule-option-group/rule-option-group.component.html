@@ -1,0 +1,199 @@
+<div class="row animated fadeIn" id="saveRuleOptionGroup">
+    <div class="col-sm-12">
+        <div class="card list">
+            <div class="col-lg-12 mb-4 d-flex align-items-center justify-content-between p-0">
+                <a title="{{'admin.store.setting.rules.backtorule'|translate}}" class="btn back-button btn-primary"
+                    [routerLink]="['/manager/stores/'+storeId+'/settings/ordering-rules/'+ruleId]">
+                    <i class="fas fa-arrow-left mr-2"></i> <span
+                        class="d-none d-md-inline-block d-lg-inline-block d-xl-inline-block ml-1">{{'admin.store.setting.rules.backtorule'| translate}}</span>
+                </a>
+            </div>
+            <div class="card-header">
+                <span *ngIf="ruleOptionGroupId==0">{{'admin.store.setting.rules.createruleptgroup'|translate}}</span>
+                <span
+                    *ngIf="ruleOptionGroupId!=0 && (ruleGroup$ | async)">{{'admin.store.setting.rules.ruleoptgroup'|translate}}
+                    {{(ruleGroup$ | async).name}}
+                </span>
+                <app-help-icon [helpPageName]="childCategoryHelpPage"></app-help-icon>
+            </div>
+            <div class="card-body">
+                <app-catalog-language></app-catalog-language>
+                <form [formGroup]="ruleOptionGroupForm">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="form-group">
+                                <label for="offerName"
+                                    class="col-xl-2 col-lg-3 col-md-12 col-sm-12 required">{{'admin.global.name'|translate}}</label>
+                                <div class="input-group col-xl-10 col-lg-9 col-md-12 col-sm-12">
+                                    <input type="text" class="form-control"
+                                        [class.is-invalid]="getControl('name').invalid && (getControl('name').dirty || getControl('name').touched)"
+                                        placeholder="{{'admin.global.name'|translate}}" autocomplete="off"
+                                        formControlName="name" id="offerName" maxlength="50" />
+                                    <div class="invalid-feedback" *ngIf="getControl('name').errors">
+                                        <span
+                                            *ngIf="getControl('name').errors.required || getControl('name').errors.whitespace">{{'admin.global.field.required'|translate}}</span>
+                                        <span
+                                            *ngIf="getControl('name').errors.minlength">{{'admin.global.field.minLength'|translate: {minLength: "2"} }}</span>
+                                        <span
+                                            *ngIf="getControl('name').errors.maxlength">{{'admin.global.field.maxLength'|translate: {maxLength: "50"} }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label
+                                    class="col-xl-2 col-lg-3 col-md-12 col-sm-12 pr-1 required">{{'admin.store.catalog.optionGroup.optionGroupType'|translate}}</label>
+                                <div class="input-group col-xl-10 col-lg-9 col-md-12 col-sm-12">
+                                    <div class="groupTypeContainer w-100">
+                                        <label class="radio-container" for="MIN_1_MAX_1">
+                                            {{'admin.global.exactOneOption'|translate}}
+                                            <input type="radio" value="MIN_1_MAX_1" formControlName="groupType"
+                                                id="MIN_1_MAX_1" />
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <div class="groupTypeExample col-lg-12 col-md-12 col-sm-12 pl-5">
+                                            <label class="radio-container col-lg-4 col-md-4 col-sm-12"
+                                                for="T1_OPTION_A">
+                                                {{'admin.store.catalog.optionGroup.optionA'|translate}}
+                                                <input type="radio" value="T1_OPTION_A" name="T1_OPTION"
+                                                    id="T1_OPTION_A" />
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="radio-container col-lg-4 col-md-4 col-sm-12"
+                                                for="T1_OPTION_B">
+                                                {{'admin.store.catalog.optionGroup.optionB'|translate}}
+                                                <input type="radio" value="T1_OPTION_B" name="T1_OPTION"
+                                                    id="T1_OPTION_B" />
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="radio-container col-lg-4 col-md-4 col-sm-12"
+                                                for="T1_OPTION_C">
+                                                {{'admin.store.catalog.optionGroup.optionC'|translate}}
+                                                <input type="radio" value="T1_OPTION_C" name="T1_OPTION"
+                                                    id="T1_OPTION_C" />
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="groupTypeContainer w-100">
+                                        <label class="radio-container" for="MIN_0_MAX_1">
+                                            {{'admin.store.optionGroup.atMostOneOption'|translate}}
+                                            <input type="radio" value="MIN_0_MAX_1" formControlName="groupType"
+                                                id="MIN_0_MAX_1" />
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <div class="groupTypeExample col-lg-12 col-md-12 col-sm-12 pl-5">
+                                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                                <mat-checkbox [checked]="selected === 0" (change)="selected = 0">
+                                                    {{'admin.store.catalog.optionGroup.optionA'|translate}}
+                                                </mat-checkbox>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                                <mat-checkbox [checked]="selected === 1" (change)="selected = 1">
+                                                    {{'admin.store.catalog.optionGroup.optionB'|translate}}
+                                                </mat-checkbox>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                                <mat-checkbox [checked]="selected === 2" (change)="selected = 2">
+                                                    {{'admin.store.catalog.optionGroup.optionC'|translate}}
+                                                </mat-checkbox>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="ruleOptionGroupId!=0">
+                        <div class="mb-3 content">
+                            <mat-accordion [togglePosition]="'before'" class="w-100">
+                                <mat-expansion-panel [expanded]="hasOffers">
+                                    <mat-expansion-panel-header class="col-lg-12"
+                                        matTooltip="{{'admin.store.catalog.tooltip.options'|translate}}">
+                                        <mat-panel-title>
+                                            <div class="col-lg-12 col-md-12 col-sm-12 p-0 d-flex">
+                                                <span
+                                                    class="p-0 col-lg-6 col-md-6 col-sm-6">{{'admin.store.catalog.option.options'|translate}}</span>
+                                                <span class="p-0 col-lg-6 col-md-6 col-sm-6">
+                                                    <a class="actionLink" (click)="loadRulesOption(0)">
+                                                        {{'admin.store.catalog.option.addOption'|translate}}
+                                                        <i class="fas fa-plus ml-2"></i>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </mat-panel-title>
+                                    </mat-expansion-panel-header>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 option-wrapper childOfferView"
+                                        *ngIf="(ruleGroup$ | async) as childCategory">
+                                        <ng-container
+                                            *ngIf="childCategory.min === 1 && childCategory.max === 1; else templateRadioAsCheckbox">
+                                            <div *ngFor="let childOff of childCategory.offers"
+                                                class="radio variant-wrapper justify-content-between align-items-center"
+                                                (click)="loadRulesOption(childOff.offerId)"
+                                                matTooltip="{{'admin.store.catalog.tooltip.goToOption'|translate}}">
+                                                <div class="d-flex container">
+                                                    <label class="w-100" for="id{{childOff.offerId}}">
+                                                        <span>{{childOff.name}}
+                                                            <i class="fa fa-pen editIcon">
+                                                            </i>
+                                                        </span>
+                                                        <input type="radio" id="id{{childOff.offerId}}"
+                                                            name="var{{childCategory.categoryId}}"
+                                                            value="{{childOff.offerId}}" disabled />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </ng-container>
+                                        <ng-template #templateRadioAsCheckbox>
+                                            <ng-container
+                                                *ngIf="childCategory.min >= 0 && (childCategory.max > 0 || childCategory.max == -1)">
+                                                <div *ngFor="let childOff of childCategory.offers"
+                                                    class="checkbox variant-wrapper justify-content-between align-items-center"
+                                                    (click)="loadRulesOption(childOff.offerId)"
+                                                    matTooltip="{{'admin.store.catalog.tooltip.goToOption'|translate}}">
+                                                    <div class="d-flex container">
+                                                        <label class="w-100" for="id{{childOff.offerId}}">
+                                                            <span>{{childOff.name}}
+                                                                <i class="fa fa-pen editIcon">
+                                                                </i>
+                                                            </span>
+
+                                                            <input type="checkbox" id="id{{childOff.offerId}}"
+                                                                name="var{{childCategory.categoryId}}"
+                                                                value="{{childOff.offerId}}" disabled />
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                </div>
+                                                </div>
+                                            </ng-container>
+                                        </ng-template>
+                                    </div>
+                                </mat-expansion-panel>
+                            </mat-accordion>
+                        </div>
+                        <app-content-translation [content]="content" [mode]="'CHILD_CATEGORY'" (submitEvent)="updateContentItem($event)">
+                        </app-content-translation>
+                    </div>
+                    <div class="row">
+                        <div class="buttonGroup w-100">
+                            <div class="col-8 floatLeft">
+                                <button type="button" class="btn btn-primary mr-0" (click)="onSaveRuleGroup()"
+                                    [disabled]="ruleOptionGroupForm.invalid"><i class="fas fa-save mr-2 pr-1"></i>{{'admin.global.save'|translate}}</button>
+                                <a title="{{'admin.store.setting.rules.backtorules'|translate}}" (click)="goBack()"
+                                    class="actionLink">{{'admin.global.cancel'|translate}}</a>
+                            </div>
+                            <div class="col-4 mt-1 float-right" *ngIf="ruleOptionGroupId!=0">
+                                <button title="{{'admin.global.delete'|translate}}" (click)="deleteCategory()"
+                                    class="btn btn-danger float-right"><i class="fas fa-trash mr-2 pr-1 text-white"></i>{{'admin.global.delete'|translate}}</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

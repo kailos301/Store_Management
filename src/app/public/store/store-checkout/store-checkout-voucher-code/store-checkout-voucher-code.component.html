@@ -1,0 +1,36 @@
+<div class="my-2">
+    <form class="mx-4 my-4" [formGroup]="voucherCodeFg">
+        <div class="row">
+            
+                <div class="form-group mb-0 col-md-9">
+                    <div class="input-group">
+                        <input type="text" class="form-control"
+                            [class.populated]="getControl('voucherCode').value.length > 0"
+                            [class.is-invalid]="(getControl('voucherCode', 'voucherCodeFg').invalid && (getControl('voucherCode', 'voucherCodeFg').dirty || getControl('voucherCode', 'voucherCodeFg').touched)) || voucherCodeInvalid"
+                            [class.is-valid]="voucherCodeValid"
+                            autocomplete="off" formControlName="voucherCode" maxlength="20" id="voucherCode"
+                            trim="blur" />
+                        <label for="#voucherCode" class="no-cursor placeholder font-size-primary" (click)="checkoutService.focusField($event)">
+                            {{'public.checkout.voucherCode' | translate}} {{'public.global.optional' | translate}}
+                        </label>
+                        <div class="invalid-feedback font-size-secondary">
+                            <div *ngIf="getControl('voucherCode').errors?.maxlength">{{'public.payment.errors.valueNotValid' | translate}}</div>
+                            <div *ngIf="voucherCodeInvalid">{{'public.checkout.errors.invalidVoucherCode' | translate}}</div>
+                        </div>
+                        <div class="valid-feedback font-size-secondary">
+                            <div *ngIf="voucherCodeValid">{{'public.checkout.validVoucherCode' | translate}}
+                                <span *ngIf="voucherDiscountType==='MONETARY' && voucherUseType==='ONE_TIME_USE'"> {{'public.checkout.remainingValidVoucher' | translate}} {{(remainingVoucherAmount >= checkoutService.getCartTotalWithoutVoucher(true) ? remainingVoucherAmount - checkoutService.getCartTotalWithoutVoucher(true): 0) | formatPrice: checkoutService.selectedStoreLocale:checkoutService.selectedStoreCurrency:checkoutService.selectedStoreCurrencySymbol}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="font-size-primary text-unselectable col-md-3 px-0 my-auto">
+                    <a href="#" class="button dark d-block text-center py-2 w-100 mt-3 mt-md-0" (throttledClick)="applyVoucher($event)" [style.pointer-events]="getControl('voucherCode').invalid ?'none':'auto'" 
+                    appPreventDoubleClick [throttleTime]="3000">
+                      {{'public.action.apply' | translate}}
+                    </a>
+                </div>            
+        </div>
+    </form>
+</div>
+<div class="section-separator"></div>

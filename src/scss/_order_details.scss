@@ -1,0 +1,140 @@
+.order-details {
+  .content {
+    border: 1px solid #ddd;
+    @include media-breakpoint-down(md) {
+      border: 0;
+    }
+  }
+
+  .item-wrapper {
+    border-bottom: 1px solid #DDDDDD;
+
+    .qty {
+      min-width: 45px;
+      font-size: 1.000em;
+      font-weight: 700;
+      line-height: 20px;
+    }
+
+    .item {
+      .item-name {
+        font-size: 1.000em !important;
+        font-weight: 700 !important;
+        color: #000;
+        line-height: 20px;
+
+        span {
+          font-size: 1.07em;
+          font-weight: 400;
+          color: #000;
+        }
+      }
+
+      .item-specs {
+        font-size: 1.07em;
+        font-weight: 400;
+        line-height: 20px;
+        color: #000;
+      }
+
+      .discount {
+        line-height: 20px;
+        color: #000;
+
+        &::after {
+          content: '';
+          position: absolute;
+          background-image: url(/assets/img/tag.svg);
+          width: 13px;
+          height: 13px;
+          margin-left: 10px;
+          margin-top: 3px;
+        }
+      }
+    }
+
+    .description {
+      font-size: 0.875em;
+      line-height: 18px;
+      color: #000;
+      width: 50%;
+    }
+
+    .price {
+      min-width: 115px;
+      font-size: 1.07em;
+      line-height: 18px;
+      color: #000;
+
+      .striked {
+        text-decoration: line-through;
+      }
+
+      .discount {
+        color: #FF7200;
+      }
+    }
+
+  }
+
+  .cart-total-wrapper {
+    .total, .price {
+      font-size: 1.07em;
+      font-weight: 700;
+      color: #000;
+      line-height: 22px;
+    }
+    .price-normal {
+      font-size: 1.000em;
+      color: #000;
+      line-height: 22px;
+    }
+    .discount {
+      &::after {
+        content: '';
+        position: absolute;
+        background-image: url(/assets/img/tag.svg);
+        width: 13px;
+        height: 13px;
+        margin-left: 10px;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .discount-percentage {
+    color: #FF7200 !important;
+    margin-left: 35px;
+    font-weight: 400 !important;
+  }
+
+  .option-wrapper {
+    .store-note {
+      background-color: #F2F0EE;
+      font-size: 0.875em;
+      color: #000;
+      font-weight: 400;
+      padding-top: 12px;
+      padding-bottom: 14px;
+    }
+
+    .variant-wrapper {
+      &.radio,
+      &.checkbox,
+      textarea {
+        border: 0px;
+        box-sizing: border-box;
+        padding-left: 8px;
+        padding-right: 8px;
+        height: 48px;
+        border-bottom: 1px solid #ddd;
+        font-size: 0.875em;
+        color: #000;
+      }
+
+      textarea {
+        padding-top: 15px;
+      }
+    }
+  }
+}

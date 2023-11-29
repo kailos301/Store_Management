@@ -1,0 +1,50 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+form label.required:after {
+    color: red;
+    content: " *";
+}
+.not-subscribed-text {
+    font-size: 80%;
+}
+.error-feedback {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 80%;
+    color: #f86c6b;
+}
+.aliasLabel {
+    white-space: nowrap;
+}
+
+.main {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#map {
+    height: 300px; /* like this */
+}
+
+@media (min-width: 1025px) and (max-width: 1260px) {
+    .main {
+        width: 260px !important;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1024px) {
+    .main {
+        width: 200px !important;
+    }
+}
+
+@media (min-width: 300) and (max-width: 700px) {
+    .main {
+        width: 772 !important;
+    }
+}

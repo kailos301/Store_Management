@@ -1,0 +1,214 @@
+<div class="col-lg-12">
+    <div class="loading-screen d-flex justify-content-center align-items-center w-100 v-70" *ngIf="voucherId > 0 && !voucherLoaded">
+        <div class="d-flex flex-column text-center">
+            <div class="lds-ripple mx-auto">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <div class="card list" *ngIf="voucherLoaded || voucherId <= 0">
+        <div class="col-lg-12 d-flex align-items-center justify-content-between p-0">
+            <a title="{{'admin.store.voucher.backtodiscountVouchers'|translate}}" class="btn back-button btn-primary mt-4 mb-4" [routerLink]="['/manager/stores/'+storeId+'/settings/discount-voucher']">
+                <i class="fas fa-arrow-left mr-2"></i>
+                <span class="d-none d-md-inline-block d-lg-inline-block d-xl-inline-block ml-1 text-white">
+                    {{'admin.store.voucher.backtodiscountVouchers'|translate}}
+                </span>
+            </a>
+        </div>
+        <div class="card-header col-lg-11">
+            <span *ngIf="voucherId==0">{{'admin.store.voucher.creatediscountVoucher'|translate}}</span>
+            <span *ngIf="voucherId>0">{{'admin.store.voucher.editdiscountVoucher'|translate}}</span>
+        </div>
+        <div class="card-body" id="saveVoucher">
+            <form [formGroup]="voucherForm">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <label for="code" class="col-xl-3 col-lg-3 col-md-12 col-sm-12 required">
+                                        {{'admin.global.voucher.label'|translate}}
+                                    </label>
+                                    <div class="input-group col-xl-8 col-lg-9 col-md-12 col-sm-12">
+                                        <input type="text" class="form-control" [class.is-invalid]="getControl('code').invalid && (getControl('code').dirty || getControl('code').touched)" placeholder="{{'admin.global.voucher.label'|translate}}" autocomplete="code" formControlName="code" id="offerName"
+                                            minlength="2" />
+                                        <div class="invalid-feedback" *ngIf="getControl('code').errors">
+                                            <span *ngIf="getControl('code').errors.required || getControl('code').errors.whitespace">
+                                                {{'admin.global.field.required'|translate}}
+                                            </span>
+                                            <span *ngIf="getControl('code').errors.maxlength">
+                                                {{'admin.global.field.maxLength'|translate:{maxLength: "20"} }}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                <label for="type" class="col-xl-3 col-lg-3 col-md-12 col-sm-12 required">
+                                    {{'admin.global.type'|translate}}
+                                </label>
+                                <div class="input-group col-xl-8 col-lg-9 col-md-12 col-sm-12">
+                                    <select class="form-control" data-chosen="" onchange="this.dataset.chosen = this.value" formControlName="type" id="type" [class.is-invalid]="getControl('type').invalid && (getControl('type').dirty || getControl('type').touched)">
+                                        <option value="">{{'admin.global.pleaseSelect'|translate}}</option>
+                                        <option value="ONE_TIME_USE">
+                                            {{'admin.store.voucher.typeSingleuse'|translate}}
+                                        </option>
+                                        <option value="MULTI_USE">
+                                            {{'admin.store.voucher.typeMultipleuse'|translate}}
+                                        </option>
+                                    </select>
+                                    <div class="invalid-feedback" *ngIf="getControl('type').errors">
+                                        <span *ngIf="getControl('type').errors.required">
+                                            {{'admin.global.field.required'|translate}}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <label for="discount" class="col-xl-3 col-lg-3 col-md-12 col-sm-12 required">
+                                        {{'admin.global.discount'|translate}}
+                                    </label>
+                                    <div class="input-group col-xl-8 col-lg-9 col-md-12 col-sm-12 discount ml-3">
+                                        <div class="row">
+                                            <label class="radio-container" for="monetary">
+                                                {{'admin.store.catalog.discount.monetary'|translate}}
+                                                <input type="radio" (click)="setMonetry()" formControlName="discountType" value="MONETARY"
+                                                id="monetary">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="radio-container" for="percentile">
+                                                {{'admin.store.catalog.discount.percentile'|translate}}
+                                                <input type="radio" (click)="setPercentage()" formControlName="discountType" value="PERCENTILE"
+                                                id="percentile">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" *ngIf="isSelected('MONETARY') || isSelected('PERCENTILE')">
+                            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                <label class="col-xl-3 col-lg-3 required">{{'admin.global.value'|translate}}</label>
+                                <div class="col-xl-8 col-lg-9 col-md-12 col-sm-12 priceContainer" *ngIf="isSelected('MONETARY')">
+                                    <app-price-input [priceFormControl]="getControl('initialValue')" [readonly]="voucherId>0">
+                                    </app-price-input>
+                                    <div class="invalid-feedback d-block" *ngIf="getControl('initialValue')?.value === 0">
+                                        <span>{{'admin.global.field.required'|translate}}</span>
+                                    </div>
+                                </div>
+                                <div class="col-xl-8 col-lg-9 col-md-12 col-sm-12" *ngIf="isSelected('PERCENTILE')">
+                                    <select class="form-control" onchange="this.dataset.chosen = this.value" (change)="selectDiscountHandler($event)" [attr.placeholder]="'admin.store.discount.discount'|translate" formControlName="discount" [class.is-invalid]="getControl('discount').invalid && (getControl('discount').dirty || getControl('discount').touched)"
+                                        [ngClass]="{'default-option' : discount == 0 || discount == null}">
+                                        <option value="">{{'admin.global.pleaseSelect'|translate}}</option>
+                                        <option value="5">5%</option>
+                                        <option value="10">10%</option>
+                                        <option value="15">15%</option>
+                                        <option value="20">20%</option>
+                                        <option value="25">25%</option>
+                                        <option value="30">30%</option>
+                                        <option value="35">35%</option>
+                                        <option value="40">40%</option>
+                                        <option value="50">50%</option>
+                                        <option value="60">60%</option>
+                                        <option value="70">70%</option>
+                                        <option value="100">100%</option>
+                                    </select>
+                                    <div class="invalid-feedback" *ngIf="getControl('discount').errors">
+                                        <span *ngIf="getControl('discount').errors.required">{{'admin.global.field.required'|translate}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" *ngIf="voucherId>0 && (isSelected('MONETARY') || isSelected('PERCENTILE'))">
+                            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                <label class="col-xl-3 col-lg-3">{{'admin.global.initialValue'|translate}}</label>
+                                <div class="col-xl-8 col-lg-9 col-md-12 col-sm-12 priceContainer" *ngIf="isSelected('MONETARY')">
+                                    <app-price-input [priceFormControl]="getControl('initialValue')" [readonly]="voucherId>0">
+                                    </app-price-input>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                <label for="isActive" class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+                                    {{'admin.global.active'|translate}}
+                                </label>
+                                <div class="input-group col-xl-8 col-lg-9 col-md-12 col-sm-12">
+                                    {{'admin.global.no'|translate}} &nbsp;
+                                    <mat-slide-toggle formControlName="isActive">
+                                        {{'admin.global.yes'|translate}}</mat-slide-toggle>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                <label for="availabilityRestrictions" class="col-xl-3 col-lg-3 col-md-12 col-sm-12 required">
+                                    {{'admin.global.availabilityRestrictions'|translate}}
+                                </label>
+                                <div class="col-sm-4">
+                                    <label for="startDate" class="col-sm-12 p-0 mb-0">
+                                        {{ 'admin.global.from' | translate }}
+                                    </label>
+                                    <mat-form-field class="w-100">
+                                        <input matInput readonly="readonly" [matDatepicker]="startDate" formControlName="startDate">
+                                        <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
+                                        <mat-datepicker #startDate> </mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="endDate" class="col-sm-12 p-0 mb-0">
+                                        {{ 'admin.global.to' | translate }}
+                                    </label>
+                                    <mat-form-field class="w-100">
+                                        <input matInput readonly="readonly" [matDatepicker]="endDate" formControlName="endDate">
+                                        <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
+                                        <mat-datepicker #endDate> </mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" *ngIf="flyerImgPath && flyerImgPath.length>0">
+                            <div class="defaultFlyerRow col-lg-12 col-md-12 col-sm-12">
+                                <label class="col-xl-3 col-lg-3 col-md-12 col-sm-12 print-qr-label" for="printQRCode"></label>
+                                <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
+                                    <div class="flyerwidth">
+                                        <a (click)="downloadFlyer()" class="actionLink">
+                                            <img [src]=getSantizeUrl(flyerImgPath) class="flyer-image" class="pr-5 w-100" />
+                                        </a>
+                                        <p class="mt-3">
+                                            <a class="mx-auto actionLink" (click)="downloadFlyer()">
+                                                <i class="fa fa-file-alt mr-1"></i>{{'admin.global.field.downloadFlyer'|translate}}
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="pt-1">
+                <button type="button" class="btn btn-primary ml-3 mr-3" (click)="saveDiscountVoucher()">
+                    <i class="fas fa-save mr-2 pr-1"></i>
+                    {{'admin.global.save'|translate}}
+                </button>
+                <button *ngIf="voucherId > 0" type="button" class="btn btn-danger ml-3 mr-3 float-right" (click)="deleteDiscountVoucher()">
+                    <i class="fas fa-trash mr-2 pr-1 text-white"></i>
+                    {{'admin.global.delete'|translate}}
+                </button>
+                <a type="link" class="text-blue cursorPointer" [routerLink]="['/manager/stores/'+storeId+'/settings/discount-voucher']">
+                    {{'admin.global.cancel'|translate}}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

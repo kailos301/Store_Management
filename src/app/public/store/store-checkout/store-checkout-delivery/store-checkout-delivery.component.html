@@ -1,0 +1,65 @@
+<div #ShowMultipleChoice class="option-wrapper" *ngIf="!isAdminOrderUpdate && checkoutService.showChoices()">
+  <div class="variant-wrapper mt-2">
+    <div class="section-title p-3 mb-0 pl-4 font-size-primary font-weight-bold">{{'public.checkout.howToReceiveYourOrder' | translate}}</div>
+    <form [formGroup]="checkoutOptionsForm">
+      <ng-template *ngIf="checkoutService.ifEnabledInStorePickup(); then ShowSelectLocation"></ng-template>
+      <ng-template #ShowSelectLocation>
+        <div class="variant-wrapper radio d-flex justify-content-between align-items-center mx-3 my-2">
+          <label for="var-pickup-table" class="d-flex w-100 container pl-0 font-size-primary">
+            <span *ngIf="selectedStore && selectedStore.settings.DEFUALT_LOCATION_TYPE === 'ROOM'">
+              {{'public.checkout.serveOption.room' | translate}}
+            </span>
+            <span *ngIf="selectedStore && selectedStore.settings.DEFUALT_LOCATION_TYPE === 'LOCATION'">
+              {{'public.checkout.serveOption.location' | translate}}
+            </span>
+            <span *ngIf="!selectedStore || !selectedStore.settings || !selectedStore.settings.DEFUALT_LOCATION_TYPE || selectedStore.settings.DEFUALT_LOCATION_TYPE === 'TABLE'">
+              {{'public.checkout.option.serve.location' | translate}}
+            </span>
+            <input type="radio" name="receiveOrderType" value="0" formControlName="receiveOrderType" id="var-pickup-table" (click)="setPickupMethod(PICKUP_METHOD.AT_LOCATION, true, true)"/>
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="variant-wrapper mx-3 my-2 my-md-0">
+        </div>
+      </ng-template>
+      <div class="variant-wrapper radio d-flex justify-content-between align-items-center mx-3 my-2" [ngClass]="{'no-border': !checkoutService.ifEnabledDeliveryAtAddress()}" *ngIf="checkoutService.ifEnabledSelfPickup()">
+        <label for="var-pickup-self" class="d-flex w-100 container flex-column font-size-primary pl-0">{{'public.checkout.option.pickup' | translate}}
+          <ng-container *ngIf="selectedStore && selectedStore.settings && selectedStore.settings.DELIVERY_NO_LOCATION_SHOW_ADDRESS">
+            <div class="font-size-secondary">
+              {{selectedStore.address.addressLine1}}
+            </div>
+            <div class="font-size-secondary" *ngIf="selectedStore && selectedStore.address && selectedStore.address.addressLine2">
+              {{selectedStore.address.addressLine2}}
+            </div>
+            <div class="font-size-secondary">
+              <ng-container *ngIf="selectedStore && selectedStore.address && selectedStore.address.postCode">{{selectedStore.address.postCode}} </ng-container>
+              <ng-container *ngIf="selectedStore && selectedStore.address && selectedStore.address.city">{{selectedStore.address.city}} </ng-container>
+              <ng-container *ngIf="selectedStore && selectedStore.address && selectedStore.address.region">{{selectedStore.address.region}} </ng-container>
+            </div>
+          </ng-container>
+          <input type="radio" name="receiveOrderType" value="1" formControlName="receiveOrderType" id="var-pickup-self" (click)="setPickupMethod(PICKUP_METHOD.MY_SELF, true, true)"/>
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div
+        class="variant-wrapper radio no-border d-flex justify-content-between align-items-center mx-3 my-2"
+        [ngClass]="{'disabled': !checkoutService.ifMinimumOrderAmountMet('deliveryAsOption'), 'my-3':(checkoutService.getOrderFeeDelivery() && checkoutService.getPickupMethodAsInt() === PICKUP_METHOD.AT_ADDRESS) && (!checkoutService.ifMinimumOrderAmountMet('deliveryAsOption'))}"
+        *ngIf="checkoutService.ifEnabledDeliveryAtAddress()"
+      >
+        <label for="var-deliver-at-address" class="d-flex w-100 mb-0 container flex-column font-size-primary pl-0">{{'public.checkout.option.addressDelivery' | translate}}
+          <div
+            class="text-danger font-size-secondary"
+            *ngIf="(checkoutService.getOrderFeeDelivery() && checkoutService.getPickupMethodAsInt() === PICKUP_METHOD.AT_ADDRESS)"
+          >
+            {{ 'public.checkout.deliveryFee' | translate }}: {{ checkoutService.getOrderFeeDelivery() | formatPrice: checkoutService.selectedStoreLocale:checkoutService.selectedStoreCurrency:checkoutService.selectedStoreCurrencySymbol  }}
+          </div>
+          <div class="text-danger font-size-secondary" *ngIf="!checkoutService.ifMinimumOrderAmountMet('deliveryAsOption')">
+            {{'public.checkout.minimumAmount' | translate:{'amount': checkoutService.getFormattedMinAmount() } }}
+          </div>
+          <input type="radio" name="receiveOrderType" value="2" formControlName="receiveOrderType" id="var-deliver-at-address" (click)="setPickupMethod(PICKUP_METHOD.AT_ADDRESS, true, true)" [attr.disabled]="(!checkoutService.ifMinimumOrderAmountMet('deliveryAsOption')) ? true : null"/>
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </form>
+  </div>
+</div>

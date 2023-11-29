@@ -1,0 +1,91 @@
+.statistics {
+  .fs24 {
+    font-size: 24px;
+  }
+
+  .chart-wrapper {
+    height: 400px;
+    @include media-breakpoint-down(md) {
+      height: 300px;
+    }
+    @include media-breakpoint-down(sm) {
+      height: 220px;
+    }
+  }
+
+  mat-button-toggle-group {
+    width: 100%;
+
+    mat-button-toggle {
+      border: 1px solid #263573;
+      width: 33%;
+
+      span {
+        display: block;
+        line-height: 15px;
+        font-size: 16px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        @media all and (min-width: 321px) and (max-width: 400px) {
+          font-size: 12px;
+          margin-top: 8px;
+        }
+        @media all and (min-width: 301px) and (max-width: 320px) {
+          font-size: 11px;
+          margin-top: 8px;
+        }
+        @media all and (max-width: 300px) {
+          font-size: 9px;
+          margin-top: 5px;
+        }
+      }
+    }
+
+    .mat-button-toggle-checked {
+      background-color: #263576;
+      color: white;
+
+      .mat-button-toggle-focus-overlay {
+        border-bottom: inherit !important;
+      }
+    }
+  }
+
+  ::ng-deep .example-month-picker .mat-calendar-period-button {
+    pointer-events: none;
+  }
+
+  ::ng-deep .mat-form-field-infix {
+    border-top: 0;
+  }
+
+  ::ng-deep .example-month-picker .mat-calendar-arrow {
+    display: none;
+  }
+
+  .mat-form-field {
+    width: 100%;
+  }
+
+  ::ng-deep .mat-calendar-body-disabled {
+    display: none;
+  }
+
+  ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-prefix .mat-datepicker-toggle-default-icon,
+  ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-suffix .mat-datepicker-toggle-default-icon {
+    display: none;
+  }
+
+  ::ng-deep .mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+    padding: 0;
+  }
+
+  ::ng-deep .mat-datepicker-toggle {
+    background: url(../assets/img/icon-calendar.svg) no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .mat-button-toggle-group-appearance-standard, .mat-button-toggle-standalone.mat-button-toggle-appearance-standard {
+    border: 0;
+  }
+}

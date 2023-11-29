@@ -1,0 +1,26 @@
+<div class="error-dialog d-flex flex-wrap justify-content-center align-items-center hide" #errorDialog>
+  <div class="selection-container p-4 position-absolute">
+      <div class="header-container d-flex flex-wrap">
+          <div class="w-100">
+              <div class="text-center justify-content-center font-size-header font-weight-bold">
+                  {{'public.checkout.errors.orderSubmissionFailed' | translate}}
+                  <span class="float-right position-absolute" style="cursor: pointer;top: 5px;right:15px;"
+                      (click)="dismissErrorDialog()"><i class="fas fa-times" style="color:black"></i></span>
+              </div>
+          </div>
+      </div>
+      <div class="error-container py-2">
+          <div class="item-list mb-3" *ngFor="let error of errors">
+              <div class="font-size-primary">
+                {{'public.checkout.errors.' + error.code | translate}}
+              </div>
+          </div>
+          <div class="w-100 font-size-primary text-unselectable">
+              <a href="#" class="button dark d-block text-center py-3" (throttledClick)="dismissErrorDialog()"
+                  appPreventDoubleClick [throttleTime]="5000">
+                  {{'public.dialog.ok' | translate}}
+              </a>
+          </div>
+      </div>
+  </div>
+</div>

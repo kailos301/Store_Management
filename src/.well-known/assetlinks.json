@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission\/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.gonnaorder.trattoriasicily",
+      "sha256_cert_fingerprints": [
+        "AC:BE:ED:45:CA:3E:5E:96:D5:41:12:E0:C8:D3:86:94:3E:98:07:A7:DC:19:FD:B1:67:DF:6E:38:4C:98:0F:48"
+      ]
+    }
+  }
+]

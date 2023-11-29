@@ -1,0 +1,32 @@
+<div class="unavailable-slot-dialog d-flex flex-wrap justify-content-center align-items-center hide" #unavailableSlotDialog>
+    <div class="selection-container p-4 position-absolute">
+        <div class="header-container d-flex flex-wrap">
+            <div class="w-100">
+                <div class="text-center justify-content-center font-size-header font-weight-bold">
+                    {{ (suggestedSlot && suggestedSlot.startTime ? 'public.checkout.errors.slotUnavailable' : 'public.checkout.errors.orderSubmissionFailed') | translate}}
+                    <span class="float-right position-absolute" style="cursor: pointer;top: 5px;right:15px;"
+                        (click)="dismissUnavailableSlotDialog()"><i class="fas fa-times" style="color:black"></i></span>
+                </div>
+                <div class="font-size-primary">
+                    {{(suggestedSlot && suggestedSlot.startTime ? 'public.checkout.errors.slotUnavailableExplanationWithSuggestion' : 'public.checkout.errors.slotUnavailableExplanation') | translate}}
+                </div>
+                <ng-container *ngIf="suggestedSlot && suggestedSlot.startTime">
+                    <div class="text-center my-2">
+                        {{formattedSuggestedTime()}}
+                    </div>
+                    <div class="text-center">
+                        {{formattedSuggestedDate()}}
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+        <div class="body-container py-2">
+            <div class="w-100 font-size-primary text-unselectable">
+                <a href="#" class="button dark d-block text-center py-3" (throttledClick)="updateOrder($event)"
+                    appPreventDoubleClick [throttleTime]="5000">
+                    {{ (suggestedSlot && suggestedSlot.startTime ? 'public.checkout.updateOrder' : 'public.dialog.ok') | translate}}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

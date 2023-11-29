@@ -1,0 +1,197 @@
+<div class="mx-auto position-relative" [style.height]="isPos ? innerHeight + 'px' : '100%'">
+  <div class="overflow-auto" [style.height]="isPos ? innerHeight + 'px' : '100%'">
+    <div class="content-wrapper mx-auto">
+      <div class="store-info position-relative mx-auto pt-3 pt-md-4">
+        <a
+          href="#"
+          class="position-absolute ml-2 header-background round-background"
+          (click)="onGoToDashboard($event)">
+          <img src="assets/img/icon-back-arrow.svg"/>
+        </a>
+        <h1 class="text-center font-size-header">{{'public.global.thankYou' | translate}}</h1>
+        <div class="store-title d-block m-1 text-center pb-2 font-size-primary">
+          {{(selectedStore)?.name}} <span *ngIf="(selectedStore)?.description">|</span> {{(selectedStore)?.description}}
+        </div>
+      </div>
+      <div class="container mx-auto mt-3 px-0">
+        <div class="content mx-auto">
+          <div class="pt-5 px-3 description text-center font-size-heading text-unselectable">
+            {{ 'public.thankyou.yourOrderNumber' | translate }}
+          </div>
+          <div class="px-3 order-number text-center font-size-heading text-unselectable">
+            {{ (orderStatus)?.data?.orderToken }}
+          </div>
+          <div class="mt-3 px-3 description text-center font-size-heading text-unselectable">
+            {{ 'public.thankyou.orderStatus' | translate }}
+          </div>
+          <div class="order-status d-flex mx-auto px-1 mt-3">
+            <div class="wrapper d-flex flex-wrap justify-content-center mx-auto" [ngClass]='(orderStatus)?.data?.status'>
+              <div class="sent">
+                <div class="checkpoint px-5 mx-autor"><div class="dot"></div></div>
+                <div class="status text-center pt-2 font-size-primary text-unselectable">
+                  {{ 'public.thankyou.sent' | translate }}
+                </div>
+              </div>
+              <div class="received">
+                <div class="checkpoint px-5 mx-auto"><div class="dot"></div></div>
+                <div class="status text-center pt-2 font-size-primary text-unselectable">
+                  {{ 'public.thankyou.received' | translate }}
+                </div>
+              </div>
+              <div class="ready">
+                <div class="checkpoint px-5 mx-auto"><div class="dot"></div></div>
+                <div class="status text-center pt-2 font-size-primary text-unselectable">
+                  {{ 'public.thankyou.accepted' | translate }}
+                </div>
+              </div>
+              <div class="rejected mx-auto">
+                <div class="checkpoint px-5 mx-auto"><div class="dot"></div></div>
+                <div class="status text-center pt-2 font-size-primary text-unselectable">
+                  {{ 'public.thankyou.rejected' | translate }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex option-wrapper pt-4" *ngIf="cartState?.isReady && orderStatus.data.status !== 'CANCELLED'">
+            <div class="variant-wrapper w-100 text-center">
+              <i class="fas fa-check position-relative text-unselectable"></i>
+              {{'public.payment.yourOrderIsReady' | translate}}
+            </div>
+          </div>
+          <div class="d-flex option-wrapper pt-4" *ngIf="cartState?.estimatedTime && orderStatus.data.status !== 'CANCELLED'">
+            <div class="variant-wrapper w-100 text-center font-size-primary text-unselectable">
+              {{'public.payment.yourOrderIsExpected' | translate}}
+              <div class="pt-3">
+                <i class="far fa-clock position-relative text-unselectable"></i>
+                {{ cartState.estimatedTime | localizedDate:'HH:mm':selectedLang:browserTimeZone | async }}
+              </div>
+            </div>
+          </div>
+          <div class="d-flex option-wrapper pt-4" *ngIf="cartState?.rejectReason">
+            <div class="variant-wrapper w-100 text-center font-size-primary text-unselectable">
+              <i class="fas fa-exclamation position-relative"></i>
+              {{ cartState.rejectReason }}
+            </div>
+          </div>
+          <div class="d-flex option-wrapper pt-4 email-confirmation-wrapper flex-column" *ngIf="cartState && !cartState.customerEmail">
+            <div class="variant-wrapper mx-auto no-border">
+              <div class="p-3 mt-3 mb-0 font-size-primary font-weight-bold text-unselectable">{{'public.thankyou.fiilEmailAddress' | translate}}</div>
+              <form class="mx-3 email-confirmation-form mx-auto" [formGroup]="emailConfirmationFG" (ngSubmit)="onSubmitOrderOnEmail()">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="input-group mb-4" [class.is-invalid]="getControl('email').invalid && (getControl('email').dirty)">
+                        <input
+                          type="text"
+                          class="form-control"
+                          [ngClass]="{'is-invalid': (getControl('email').invalid && (getControl('email').dirty)), 'populated': getControl('email').value.length > 0}"
+                          autocomplete="email"
+                          formControlName="email"
+                          maxlength="200"
+                          id="email"/>
+                        <label for="#email" class="placeholder font-size-primary">{{'public.checkout.email' | translate}}</label>
+                        <span class="btn btn-submit">
+                          <i class="fa fa-paper-plane"></i> <input type="submit" class="px-0 py-3"/>
+                        </span>
+                        <div class="invalid-feedback font-size-secondary" *ngIf="getControl('email').errors">
+                          <span *ngIf="getControl('email').errors.required">{{'public.thankyou.errors.emailProperFormat' | translate}}.</span>
+                          <span *ngIf="getControl('email').errors.email || getControl('email').errors.maxlength">{{'public.thankyou.errors.emailProperFormat' | translate}}.</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="d-flex option-wrapper" *ngIf="emailStatus === 0">
+              <div class="variant-wrapper w-100">
+                <h3 class="px-3 mt-3 mb-0 text-center font-size-heading text-unselectable"><img src="/assets/img/remove_circle_outline-24px.svg" />{{'public.thankyou.failedEmail' | translate}}</h3>
+              </div>
+            </div>
+            <div class="d-flex option-wrapper" *ngIf="emailStatus === 1">
+              <div class="variant-wrapper w-100">
+                <h3 class="px-3 mt-3 mb-0 text-center font-size-heading text-unselectable"><img src="/assets/img/done-24px.svg" />{{'public.thankyou.emailSent' | translate}}</h3>
+              </div>
+            </div>
+          </div>
+          <!-- PAYMENT OPTIONS AFTER THE FACT -->
+          <div *ngIf="orderStatus?.data?.paymentStatus === 'NO_PAYMENT' && numPaymentMethodsAfterTheFact > 0">
+            <div class="option-wrapper">
+              <div
+                  class="variant-wrapper checkbox label-as-h3 d-flex justify-content-between align-items-center mt-4 p-3 mb-4"
+              >
+                  <label
+                    for="payOnline"
+                    class="d-flex flex-column w-100 container mb-0 font-size-heading text-unselectable">
+                      <div class="d-flex">{{'public.payment.payNow' | translate}}</div>
+                  </label>
+            </div>
+            </div>
+            <div>
+              <div class="d-flex" *ngFor="let paymentMethod of paymentMethodsAfterTheFact">
+                <div
+                  class="variant-wrapper radio d-flex justify-content-between align-items-center mx-3 mt-0 mb-2 w-100"
+                  ngClass="'hide-input pl-0': numPaymentMethodsAfterTheFact < 2"
+                  *ngIf="paymentMethod.ENABLED"
+                >
+                <div [ngSwitch]="paymentMethod.method" class="w-100">
+                  <a href="{{paymentMethod.URL}}/{{cartState ? cartState.totalDiscountedPrice : 0}}{{selectedStore.currency.isoCode}}" target="_blank" class="d-flex flex-column w-100 container pl-0" *ngSwitchCase="'PAYPALME'">
+                    <div class="d-flex flex-row align-items-center">
+                      <img src="/assets/paypal.svg" style="max-height: 36px;" alt="{{paymentMethod.method}}"/>
+                    </div>
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                  </a>
+                  <a href="{{paymentMethod.URL}}" target="_blank" class="d-flex flex-column w-100 container pl-0" *ngSwitchCase="'GENERAL'">
+                    <div class="d-flex flex-row align-items-center text-unselectable">
+                    {{paymentMethod.DESCRIPTION}}
+                    </div>
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                  </a>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END OF PAYMENT OPTIONS AFTER THE FACT -->
+          <!-- fetchhing links -->
+
+          <div class="row justify-content-center mt-4">
+              <div class="mr-3" *ngIf="selectedStore.settings.FACEBOOK_URL">
+                <a href="{{selectedStore.settings.FACEBOOK_URL}}" target="_blank"><img src="assets/img/marketing/facebook.svg" alt="" height="35px"></a>
+              </div>
+              <div class="mr-3" *ngIf="selectedStore.settings.INSTAGRAM_URL">
+                <a href="{{selectedStore.settings.INSTAGRAM_URL}}" target="_blank"><img  src="assets/img/marketing/instagram.png" alt="" height="35px"></a>
+              </div>
+              <div *ngIf="selectedStore.settings.CARDITIO_URL">
+                <a href="{{selectedStore.settings.CARDITIO_URL}}" target="_blank"><img  src="assets/img/marketing/Cardit.png" alt="" height="35px"></a>
+              </div>
+          </div>
+
+          <!-- links ends here -->
+          <div class="d-flex option-wrapper pt-4 mb-5 flex-column" *ngIf="shouldDisplayAppLinks()">
+            <div class="variant-wrapper mx-auto no-border">
+              <div class="p-3 mt-3 mb-0 font-size-primary font-weight-bold text-unselectable">{{'public.thankyou.mobileAppPromotion' | translate}}</div>
+              <button *ngIf="shouldDisplayPlayStore()" class="btn-app-link my-3 mx-auto d-flex align-items-center justify-content-center" (click)="onClickGooglePlay()">
+                <img class="mobile-app-badge" src="/assets/img/google-play-badge.png" />
+              </button>
+              <button *ngIf="shouldDisplayAppStore()" class="btn-app-link my-3 mx-auto d-flex align-items-center justify-content-center" (click)="onClickAppStore()">
+                <img class="mobile-app-badge" src="/assets/img/app-store-badge.png" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- NEW ORDER BUTTON -->
+  <div class="bottom-wrapper d-flex w-100 position-absolute bg-transparent" style="padding-right: 6px;">
+    <div class="button-wrapper w-100 p-1 mx-auto">
+      <a href="#" (click)="onGoToDashboard($event)"
+        class="button d-block text-center py-3 mx-2 mt-2 font-size-primary  text-unselectable"
+      >
+        {{ 'public.thankyou.startNewOrder' | translate }}
+      </a>
+    </div>
+  </div>
+  <!-- NEW ORDER BUTTON END -->
+</div>

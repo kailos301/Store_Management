@@ -1,0 +1,151 @@
+<div class="col-lg-12">
+  <div class="card list">
+    <div class="card-header">
+      {{'admin.store.locations.text'|translate}}
+      <app-help-icon [helpPageName]="qrCodeHelpPage"></app-help-icon>
+    </div>
+  </div>
+</div>
+<div class="col-lg-12">
+  <div class="card list mb-0">
+    <div class="card-body">
+      <ng-container *ngIf="(locations$ | async) && (locations$ | async).data?.length; then locationList">
+      </ng-container>
+      <ng-template #locationList>
+        <div class="d-flex flex-wrap mx-auto mb-4">
+          <a class="d-block w-18 mx-2 pl-2 my-2 py-2 border border-primary rounded"
+            *ngFor="let location of (locations$ | async).data">
+            <span class="pr-3" [routerLink]="['/manager/stores', (store$ | async)?.id, 'locations', location.id, 'manage']">{{
+              location.label | uppercase }}</span>
+              <label class="switch-location" *ngIf="location.openTap || storeOpenTap">
+                <input type="checkbox" [attr.disabled] = "isStoreOperator ? 'disabled' : null" [checked]="location.status == 'OPEN'" id="status" #statusAction (change)="onSubmit($event, location.id)"
+                  />
+                &nbsp;<span class="slider round" [ngClass]="{'disabledSlider':isStoreOperator}"></span>
+              </label>
+            <label class="pl-2" *ngIf="(location.openTap || storeOpenTap) && location.status == 'OPEN'">{{getOpenTime(location?.openedAt)}}</label>
+            <i [routerLink]="['/manager/stores', (store$ | async)?.id, 'orders']" *ngIf="location.status != 'OPEN'"
+              [queryParams]="{locationId: location.id}" class="fas fa-shopping-cart float-right mr-2"
+              title="{{'admin.store.statistics.orders'|translate}}"></i>
+            <i [routerLink]="['/manager/stores', (store$ | async)?.id, 'orders']" *ngIf="location.status == 'OPEN'"
+              [queryParams]="{locationId: location.id,openTap: location.status == 'OPEN'}" class="fas fa-shopping-cart float-right mr-2"
+              title="{{'admin.store.statistics.orders'|translate}}"></i>
+            <i [routerLink]="['/manager/stores', (store$ | async)?.id, 'capture', storeAlias]"
+              [fragment]="'l/'+location.label" class="far fa-clipboard float-right mr-3"
+              title="{{'admin.store.statistics.orderCapture'|translate}}"></i>
+          </a>
+        </div>
+        <app-pager [totalPagesCount]="(locations$ | async).totalPages" [page]="(locations$ | async).paging?.page"
+          [size]="(locations$ | async).paging?.size" (paginate)="paginate($event)">
+        </app-pager>
+        <div class="row">
+          <div *ngIf="(locations$ | async).data && (locations$ | async).data.length"
+            class="card-body d-flex flex-column qrcode-container"></div>
+          <div class="col-md-8 w-100">
+            <button *ngIf="!(formVisible$ | async) && !isStoreOperator" class="btn btn-primary"
+              (click)="openCreateLocationDialog()"><i class="fas fa-plus mr-2"></i>
+              {{'admin.store.location.create'|translate}}</button>
+          </div>
+          <div class="col-md-4 w-100">
+            <div>
+              <button class="btn btn-primary download-btn float-right text-left w-100" (click)="downloadFullPdf()"><i
+                  class="fa fa-folder mr-1"></i>{{'admin.store.qr.downloadPrintQRAllLocation'|translate}}</button>
+            </div>
+            <div>
+              <button class="btn btn-primary download-btn float-right mt-1 text-left w-100"
+                (click)="downloadImages()"><i
+                  class="fa fa-images mr-1"></i>{{'admin.store.qr.downloadImageQRAllLocation'|translate}}</button>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template #createLocation>
+        <h1 class="text-blue col-lg-12 p-0 font-size-popup-title text-decoration-none" mat-dialog-title>
+          {{'admin.store.location.create'|translate}}</h1>
+        <div mat-dialog-content>
+          <app-store-location-form [location]="newLocation" [mode]="'CREATE'" (save)="create($event)"
+            (cancel)="toggleLocationForm(false)">
+          </app-store-location-form>
+        </div>
+      </ng-template>
+      <ng-template #createBulkLocation>
+        <h1 class="text-blue col-lg-12 p-0 font-size-popup-title text-decoration-none" mat-dialog-title>
+          {{'admin.store.location.createBulk'|translate}}</h1>
+        <div mat-dialog-content>
+          <form [formGroup]="bulkCreationForm" class="w-100">
+            <div class="form-group row">
+              <label for="number"
+                class="col-xl-3 col-lg-4 col-md-12 col-form-label">{{'admin.store.location.noOfStoreLocations'|translate}}</label>
+              <div class="col-xl-9 col-lg-8 col-md-12">
+                <div class="input-group mb-4">
+                  <input type="text" class="form-control"
+                    [class.is-invalid]="getBulkControl('numberOfStores').invalid && (getBulkControl('numberOfStores').dirty || getBulkControl('numberOfStores').touched)"
+                    placeholder="{{'admin.store.location.noOfStoreLocations'|translate}}" autocomplete="label"
+                    formControlName="numberOfStores" (keydown)="doNotAllowExponential($event)" id="numberOfStores" />
+                  <div class="invalid-feedback" *ngIf="getBulkControl('numberOfStores').errors">
+                    <span
+                      *ngIf="getBulkControl('numberOfStores').errors.required">{{'admin.global.field.required'|translate}}</span>
+                    <span
+                      *ngIf="getBulkControl('numberOfStores').errors.min">{{'admin.global.field.minLength'|translate:
+                      {minLength: getBulkControl("numberOfStores").errors.min.min} }}</span>
+                    <span
+                      *ngIf="getBulkControl('numberOfStores').errors.max">{{'admin.global.field.maxLength'|translate:
+                      {maxLength: getBulkControl("numberOfStores").errors.max.max} }}</span>
+                    <span
+                      *ngIf="getBulkControl('numberOfStores').errors.pattern">{{'admin.store.location.error.digit'|translate}}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="comment"
+                class="col-xl-3 col-lg-4 col-md-12 col-form-label">{{'admin.global.comment'|translate}}</label>
+              <div class="col-xl-9 col-lg-8 col-md-12">
+                <div class="input-group mb-4">
+                  <textarea class="form-control"
+                    [class.is-invalid]="getBulkControl('comment').invalid && (getBulkControl('comment').dirty || getBulkControl('comment').touched)"
+                    placeholder="{{'admin.global.comment'|translate}}" autocomplete="comment" formControlName="comment"
+                    id="comment"></textarea>
+                  <div class="invalid-feedback" *ngIf="getBulkControl('comment').errors">
+                    <span
+                      *ngIf="getBulkControl('comment').errors.max">{{'admin.global.field.maxLength'|translate}}{{getBulkControl("comment").errors.max.max}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-md-12 text-right">
+                <button type="button" class="btn btn-link"
+                  (click)="onCancel()">{{'admin.global.cancel'|translate}}</button>
+                <button type="button" class="btn btn-primary ml-2" (click)="onBulkCreate()"
+                  [disabled]="bulkCreationForm.invalid"><i
+                    class="fas fa-save mr-2 pr-1"></i>{{'admin.global.save'|translate}}</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </ng-template>
+
+      <ng-template #openLocationPIN>
+        <h1 class="text-blue col-lg-12 p-0 font-size-popup-title text-decoration-none" mat-dialog-title>
+          {{'admin.store.location.status.table.pin'|translate}}</h1>
+        <div mat-dialog-content>
+          <label class="px-4"><i class="far fa fa-unlock-alt mr-4 copyUrlIcon" title="Pin" > </i>PIN {{location?.customerPinCode}} </label>
+        </div>
+        <mat-dialog-actions align="end">
+          <button type="button" mat-dialog-close class="btn btn-primary px-4 ml-4 order-2">{{'admin.global.ok' | translate}}</button>
+        </mat-dialog-actions>
+      </ng-template>
+
+      <div class="mt-n4" *ngIf="totalLocations==0 && isStoreOperator && !(locations$ | async).data?.length">
+        {{'admin.store.location.notablesFound'|translate}}
+      </div>
+      <div>
+        <div class="mx-auto" *ngIf="!(formVisible$ | async) && !isStoreOperator && !(locations$ | async).data?.length">
+          <button (click)="openBulkCreateLocationDialog()"
+            class="btn btn-primary">{{'admin.store.location.createBulk'|translate}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

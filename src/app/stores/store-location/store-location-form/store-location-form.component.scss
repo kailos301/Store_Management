@@ -1,0 +1,39 @@
+:host {
+  width: 100%;
+}
+
+.copyUrlIcon {
+  cursor: pointer;
+  font-size: 20px;
+  color: #273773;
+}
+
+.disabledSlider {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.actionLink {
+  cursor: pointer;
+  text-decoration: underline !important;
+  margin-left: 10px;
+}
+
+::ng-deep .sidebar-lg-show {
+  .cdk-overlay-pane {
+    @media (min-width: 320px) and (max-width: 425px) {
+      width: 80% !important;
+      .label{
+        max-width: 230px;
+      }
+      .lbl-Location{
+        word-break: break-all;
+      }
+    }
+  }
+}
+
+.textareaheight{
+  min-height: 40px;
+}

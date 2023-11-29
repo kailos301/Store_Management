@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "Powered by",
+			"thankYou": "Tesekkur ederiz",
+			"discount": "indirim",
+			"viewOrder": "Siparis Goruntule",
+			"errorH2": "Bir hata olustu",
+			"errorUnexpected": "Beklenmedik bir hata olustu",
+			"errorExpected": "Beklenmedik bir hata olustu",
+			"errorMustSelectOne": "Bir secim yapmalisiniz",
+			"errorTrialExceeded": "Bu secenek mevcut degil. Maksimum deneme sayisi asildi",
+			"emptyCart": "Siparisinizde urun bulunmamaktadir",
+			"optional": "Terchinen",
+			"cookies": "Bu site çerez kullanıyor. Bu web sitesini kullanmaya devam ederek, kullanımlarını kabul etmiş olursunuz",
+			"more": "daha",
+			"less": "az",
+			"chooseFrom": "İçinden seçmek",
+			"standard": "Standart",
+			"days": {
+				"mon": "Pazartesi",
+				"tue": "Salı",
+				"wed": "Çarşamba",
+				"thu": "Perşembe",
+				"fri": "Cuma",
+				"sat": "Cumartesi",
+				"sun": "Pazar"
+			},
+			"opentimelist": "Açılış Saatleri",
+			"newVersionAvailable": "Uygulamanın eski bir sürümünü çalıştırıyorsunuz. En son güncellemeyi almak için uygulamayı yeniden yükleyin",
+			"reloadApplication": "Uygulamayı yeniden yükle",
+			"poweredByGonnaOrder": "Gonnaorder tarafından desteklenmektedir",
+			"recents": "son bilgiler",
+			"information": "Bilgi",
+			"yes": "Evet",
+			"no": "Numara",
+			"error": "Hata",
+			"errorQRScanner": "QR Tarayıcı ile hata oluştu!",
+			"confirm": "Teyit etmek"
+		},
+		"select": {
+			"selectAtLeast": "En az {{x}} seçmelisiniz",
+			"selectAtmost": "En fazla {{x}} seçim yapabilirsiniz",
+			"selectAtleastAtMost": "En az {{x}}, en fazla {{y}} secebilirsiniz",
+			"selectBetween": "{{ChildCategory.min}} ve {{childCategory.max}} değerleri arasında seçim yapmalısınız."
+		},
+		"load": {
+			"loadingMessage": "Lutfen bekleyiniz"
+		},
+		"itemDetails": {
+			"removeFromOrder": "Siparisten cikar",
+			"addToOrder": "Siparise ekle",
+			"updateOrder": "Siparisi guncelle"
+		},
+		"checkout": {
+			"yourOrder": "Siparisiniz",
+			"total": "Toplam",
+			"specialNote": "Siparisinize not ekleyin",
+			"howToReceiveYourOrder": "Siparisinizi nasil teslim almak istersiniz",
+			"option": {
+				"pickup": "Kendim teslim alacagim",
+				"addressDelivery": "Adresime almak istiyorum",
+				"serve": {
+					"location": "Bir masada oturuyorum"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "Siparisinizi kayit edemedik",
+				"fieldRequired": "Bu alan gereklidir",
+				"selectFutureTime": "Lütfen gelecekte zaman seçin",
+				"orderSubmissionFailed": "Sipariş gönderilemez",
+				"ORDER_LOCATION_NOT_PRESENT": "Tablo numarası veya yer adı eksik",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "Bazı gerekli müşteri bilgileri eksik",
+				"ORDER_WISH_TIME_INVALID": "Arzu edilen dilek zamanı geçmişte kaldı",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "Sipariş teslimat yöntemi eksik",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "Adrese teslimat desteklenmiyor",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "Siparişin sunulması desteklenmiyor",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "Siparişin teslim alınması desteklenmiyor",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "Belirtilen posta kodunda teslimat desteklenmiyor",
+				"OPENING_TIME_SCHEDULE_ERROR": "Mağaza, seçilen sipariş istek saatinde kapatılır",
+				"PROMOTION_NOT_ELIGIBLE": "Bir promosyon seçildi ancak uygun değil",
+				"offersUnavailableExplanation": "Aşağıdaki öğeler belirttiğiniz tarih ve saatte mevcut değildir. Bunları siparişinizden çıkarmak için lütfen siparişi güncelle üzerine tıklayın",
+				"offersOutOfStockExplanation": "Yeterli öğe yok",
+				"invalidVoucherCode": "Kupon kodu geçersiz",
+				"INVALID_INPUT": "Sağlanan ayrıntılar işlenirken hata oluştu.",
+				"slotUnavailableExplanation": "İstenen zaman aralığı mevcut değil. Lütfen farklı bir zaman aralığı seçin veya başka bir teslimat yöntemi seçin.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "Bu mağaza için aynı gün sipariş talebinde bulunmak mümkün değildir.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "Bölgeniz için aynı gün sipariş talebinde bulunmanız mümkün değildir.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "Aşağıdaki ürünler için aynı gün sipariş talebinde bulunmak mümkün değildir:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "Posta kodunuza istenilen gün ve saatte teslimat yapmanız mümkün değildir.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "Siparişlerin belirli saat ve tarihte teslim edilmesi mümkün değildir. Lütfen bir alternatif seçin.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "Belirli saat ve tarihte sipariş almak mümkün değildir. Lütfen bir alternatif seçin.",
+				"INTERNAL_ERROR": "Beklenmeyen bir hatayla karşılaşıldı. Tekrar denemek için lütfen uygulamayı yeniden yükleyin.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "Minimum teslimat siparişi miktarı karşılanmadı. Devam etmek için siparişinize başka bir {{AMOUNT_MISSING}} değeri ekleyin.",
+				"paymentFailed": "Bu ödeme yöntemini kullanarak çevrimiçi ödeme yapamadınız. Lütfen tekrar deneyin.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "Gerekli promosyonlar uygulanmadı",
+				"INVALID_CUSTOMER_VOUCHER": "Geçersiz Müşteri Kuponu",
+				"slotUnavailable": "Seçilen zaman mevcut değil",
+				"slotUnavailableExplanationWithSuggestion": "Seçilen zaman geçmişte veya artık mevcut değil. Bir sonraki müsait zaman:",
+				"socialLoginFailed": "Hesabınıza bağlanamadık",
+				"customerDetailsUpdateFailed": "Profil verileri güncellenemedi",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "Mağaza bu konuma teslimat yapmıyor",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "Verdiğiniz adresi bulamıyoruz. Lütfen adresi güncelleyin ve tekrar deneyin veya mağazayla iletişime geçin.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "Belirli saat ve tarihte sipariş vermek mümkün değildir. Lütfen bir alternatif seçin.",
+				"MISSING_LOCATION_TAP_ID": "Dokunma kimliği zorunludur",
+				"invalidPin": "Geçersiz müşteri pin kodu"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "Siparişiniz size sunulacak"
+					},
+					"unknown": {
+						"location": "Siparişiniz size sunulacak"
+					}
+				},
+				"pickup": "Siparişi al",
+				"addressDelivery": "Bilgileriniz lütfen"
+			},
+			"yourInformationPlease": "Bilgileriniz lütfen",
+			"locationCode": "Tablo",
+			"yourName": "Adınız",
+			"email": "E-posta",
+			"phoneNumber": "Telefon Numarası",
+			"fullName": "Tam Ad",
+			"streetAddress": "Sokak Adresi",
+			"zip": "Posta Kodu",
+			"town": "İlçe/İl",
+			"minimumAmount": "Teslimat için minimum {{amount}} sipariş miktarı gerekiyor",
+			"deliveryFee": "Teslimat ücreti",
+			"deliveryFeeApplicable": "{{amount}} altındaki siparişler için geçerlidir",
+			"field": {
+				"generalValidation": "Format geçerli değil"
+			},
+			"acceptTerm": "Devam ederek {{Kullanım Şartları}} ve {{Gizlilik politikası}} 'nı kabul etmiş olursunuz",
+			"termsAndPolicy": "Devam ederek",
+			"acceptTerms": {
+				"and": "ve",
+				"after": " 'nı kabul etmiş olursunuz"
+			},
+			"termsOfUse": "Kullanım Şartları",
+			"privacyPolicy": "Gizlilik politikası",
+			"yourTable": "Masanız",
+			"allowedCharacters": "İzin verilen karakterler",
+			"wishTimeHeading": "Siparişinizi ne zaman almak istersiniz?",
+			"asSoonAsPossible": "En kısa zamanda almak istiyorum",
+			"specifyWishTime": "Ne zaman alacağımı belirtmek istiyorum",
+			"specialNoteExample": "Siparisinize not ekleyin",
+			"cardDisabledNote": "Lutfen hazir oldugunuzda spiarisinizi gonderin",
+			"cardHolderName": "Kart Sahibinin Adı",
+			"cardNumber": "Kart Numaranız",
+			"cvv": "CVV",
+			"itemsOutOfStock": "Bazı ürünler stokta yok",
+			"floor": "Zemin",
+			"storeClosedAtOrderWishDate": "Mağaza istenen tarih veya saatte kapatılır",
+			"offersNotAvailableAtOrderWishDate": "Bazı teklifler istenen tarih veya saatte mevcut değil",
+			"updateOrder": "Siparişi güncelle",
+			"offers": {
+				"availableQuantity": "Şu anda mevcut"
+			},
+			"voucherCode": "Bir kupon kodu girin",
+			"validVoucherCode": "Kupon kodu geçerlidir",
+			"yourRoom": "Senin odan",
+			"yourLocation": "Konumunuz",
+			"serveOption": {
+				"location": "Onu benim yerimde almak istiyorum",
+				"room": "odamdayım"
+			},
+			"social": {
+				"connect": "Sosyal hesapla bağlantı kurun"
+			},
+			"remainingValidVoucher": "Kupon üzerinde kalan bakiye:",
+			"paymentsense": {
+				"declined": "Paymentsense üzerinden çevrimiçi ödeme reddedildi"
+			},
+			"saveCustomerDetailsForFuture": "Gelecekteki siparişler için profil verilerinizi kaydedin",
+			"customerDetailsUpdateSuccess": "Profil verileriniz güncellendi",
+			"logout": "Çıkış Yap",
+			"expiry": "Son Kullanma Tarihi(AAYY)",
+			"enterPin": "PIN Numarasını girin"
+		},
+		"payment": {
+			"payOnlineNow": "Online Odeme Yap",
+			"chooseYourPaymentMethod": "Odeme Tercihini Seciniz",
+			"creditCard": "Kredi Karti",
+			"paypal": "Paypal",
+			"submitOrder": "Siparisi Tamamla",
+			"proceedToPayment": "Odeme Adimina Ilerle",
+			"errorCouldNotConnect": "Tercih edilen odeme yontemi ile baglanti problemi olustu. Lutfen odeme secenekleri sayfasina geri donerek farkli bir odeme methodu seciniz ya da daha sonra tekrar deneyiniz",
+			"enterCreditCardInfo": "Lütfen kredi veya banka kartı bilgilerinizi girin",
+			"yourOrderIsReady": "Siparişiniz hazır",
+			"yourOrderIsExpected": "Siparişiniz bekleniyor",
+			"errors": {
+				"valueNotValid": "Sağlanan değer geçerli değil",
+				"zipNotAvailable": "Bu posta koduna çevrimiçi teslimat siparişi veremezsiniz. Daha fazla bilgi için lütfen mağazayla iletişime geçin",
+				"addressNotAvailable": "Adres bulunamadı. Lütfen önerilerden bir sokak adresi seçin."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "Şimdi online ödeme yapın",
+			"digitalWallets": "Dijital Cüzdanlar",
+			"creditCardSecure": "Güvenli Kredi Kartı Ödemeleri",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "Siparis Numaraniz",
+			"orderStatus": "Siparis Durumu",
+			"notSubmitted": "Henuz Tamamlanmadi",
+			"sent": "Gonderildi",
+			"ready": "Hazir",
+			"rejected": "Reddedildi",
+			"startNewOrder": "Yeni Siparis Ver",
+			"errors": {
+				"emailProperFormat": "Lutfen gecerli bir e-posta adresi giriniz"
+			},
+			"fiilEmailAddress": "Siparis detaylarini alacaginiz E-posta adresini giriniz",
+			"failedEmail": "E=posta gonderilemedi",
+			"emailSent": "E-posta gonderildi",
+			"received": "Alındı",
+			"accepted": "Kabul edildi",
+			"mobileAppPromotion": "Bir dahaki sefere GonnaOrder mobil uygulaması aracılığıyla sipariş verin"
+		},
+		"dialog": {
+			"ok": "Tamam",
+			"cancel": "Iptal etmek"
+		},
+		"store": {
+			"currently": {
+				"closed": "Mağaza şu anda kapalıdır"
+			},
+			"time": {
+				"closed": "Mağaza seçilen saatte kapatılır"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "Vejetaryen",
+						"vegan": "Vegan",
+						"celery": "Kereviz",
+						"wheat": "Buğday",
+						"crustaceans": "Kabuklular",
+						"eggs": "Yumurtalar",
+						"fish": "Balık",
+						"lupin": "Acı bakla",
+						"milk": "Süt",
+						"molluscs": "Yumuşakçalar",
+						"mustard": "Hardal",
+						"nuts": "Fındık",
+						"peanuts": "Yer fıstığı",
+						"sesame": "Susam",
+						"soya": "Soya",
+						"sulphurDioxide": "Kükürt Dioksit",
+						"halal": "Helal",
+						"barley": "Arpa",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "Bu web sitesi, deneyiminizi iyileştirmek için çerezler kullanır, ancak isterseniz vazgeçebilirsiniz.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "Uygulamak"
+		},
+		"cookie": {
+			"accept": "Kabul Etmek",
+			"reject": "Reddet",
+			"readMore": "Daha fazla oku"
+		},
+		"connect": {
+			"social": {
+				"google": "Google ile bağlantı kurun",
+				"facebook": "Facebook ile Bağlan"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "senin sepetin boş",
+				"proceed": "İlerlemek"
+			}
+		},
+		"main": {
+			"typeUrl": "Bir URL veya mağaza adı yazın",
+			"invalidUrl": "URL geçersiz",
+			"scanQRCode": "QR Kodu tarayın",
+			"storeNotFound": "mağaza bulunamadı",
+			"storeSaved": "Bilgileri depola başarıyla kaydedildi!",
+			"navigateStoreConfirm": "Mağazaya git?"
+		},
+		"recents": {
+			"nothingFound": "Burada hiçbir şey bulunamadı"
+		}
+	}
+}

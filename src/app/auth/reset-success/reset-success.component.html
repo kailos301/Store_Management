@@ -1,0 +1,19 @@
+<app-header [isSuccessPage]='true' (locale)="onLocaleChange($event)"></app-header>
+<div class="app-body">
+    <main class="main d-flex align-items-center">
+        <div class="container px-md-5 py-md-0">
+            <div class="alert-wrapper w-100 justify-content-center">
+                <div class="container px-md-5 text-center">
+                    <div class="d-flex flex-row alert-flex-row w-100 px-2 px-sm-5">
+                        <div class="d-flex w-100">
+                            <div role="alert" class="alert alert-success w-100 mb-0">
+                                <h4 class="alert-heading">{{'admin.forgot.successHeader' | translate}}</h4>
+                                <p>{{'admin.forgot.successMsg' | translate}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

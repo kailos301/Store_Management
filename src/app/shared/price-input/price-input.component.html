@@ -1,0 +1,34 @@
+<div class="input-group priceContainer" *ngIf="(selectedStore$ | async) && priceFormControl">
+    <input type="text" class="form-control d-none" [formControl]="priceFormControl" />
+    <form [formGroup]="priceInputForm">
+        <div class="d-flex w-100">
+            <span class="m-2" *ngIf="currencyPosition == 0 && showCurrencySymbol">{{selectedStoreCurrencySymbol}}</span>
+            <input type="text" class="form-control col-lg-2 col-md-2 col-sm-12"
+                [class.is-invalid]="getControl('priceVal').invalid && (getControl('priceVal').dirty || getControl('priceVal').touched)"
+                placeholder="00" autocomplete="off" formControlName="priceVal" id="priceVal" maxlength="7"
+                (input)="emitDataOnUpdateValue($event)" [readOnly]="readonly" />
+            <strong class="m-2">{{priceSeparator}}</strong>
+            <input type="text" class="form-control col-lg-2 col-md-2 col-sm-12"
+                [class.is-invalid]="getControl('priceDecimalVal').invalid && (getControl('priceDecimalVal').dirty || getControl('priceDecimalVal').touched)"
+                placeholder="00" autocomplete="priceDecimalVal" formControlName="priceDecimalVal" id="priceDecimalVal"
+                maxlength="2" (input)="emitDataOnUpdateValue($event)" [readOnly]="readonly" />
+            <span class="m-2" *ngIf="currencyPosition != 0">{{selectedStoreCurrencySymbol}}</span>
+        </div>
+        <div class="invalid-feedback" *ngIf="getControl('priceVal').errors">
+            <span
+                *ngIf="getControl('priceVal').errors.required &&  (getControl('priceVal').dirty || getControl('priceVal').touched)">{{'admin.global.field.required'|translate}}</span>
+            <span
+                *ngIf="getControl('priceVal').errors.pattern">{{'admin.global.validate.amountNumbers'|translate}}</span>
+            <span
+                *ngIf="getControl('priceVal').errors.maxlength">{{'admin.global.field.maxLength'|translate: {maxLength: "128"} }}</span>
+        </div>
+        <div class="invalid-feedback" *ngIf="getControl('priceDecimalVal').errors">
+            <span
+                *ngIf="getControl('priceDecimalVal').errors.required &&  (getControl('priceDecimalVal').dirty || getControl('priceDecimalVal').touched)">{{'admin.global.field.required'|translate}}</span>
+            <span
+                *ngIf="getControl('priceDecimalVal').errors.pattern">{{'admin.global.validate.amountNumbers'|translate}}</span>
+            <span
+                *ngIf="getControl('priceDecimalVal').errors.maxlength">{{'admin.global.field.maxLength'|translate: {maxLength: "4"} }}</span>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,36 @@
+<div class="content-wrapper">
+  <div class="store-info position-relative mx-auto pt-3 pt-md-4">
+    <a
+      href="#"
+      class="position-absolute ml-2"
+      (click)="OnGoToDashboard($event)">
+      <img src="assets/img/icon-back-arrow.svg"/>
+    </a>
+    
+    <h1 class="text-center font-size-header" *ngIf="errorPageTitle">{{errorPageTitle | translate}}</h1>
+    <h1 class="text-center font-size-header" *ngIf="!errorPageTitle">{{'public.global.errorH2' | translate}}</h1>
+
+    <div class="store-title d-block m-1 text-center pb-2 font-size-primary">
+      {{(selectedStore)?.name}} <span *ngIf="(selectedStore)?.description">|</span> {{(selectedStore)?.description}}
+    </div>
+
+  </div>
+
+  <div class="content mx-auto pt-2 pb-2">
+    
+    <div class="px-3 description font-size-primary">
+      <span *ngIf="errorCode">({{ errorCode }})</span> {{errorMessage | translate:errorMessageParams}}
+      <div *ngFor="let message of additionalInfo">{{message}}</div>
+    </div>
+    <div class="px-3 description font-size-primary" *ngFor="let error of uiErrors">
+      {{error.message | translate}}
+      <div *ngFor="let message of error.additionalInfo">{{message}}</div>
+    </div>
+
+    <div class="px-3">
+      <div *ngIf="isNewVersionAvailable$ | async" class="font-size-primary pb-3">{{'public.global.newVersionAvailable' | translate}}</div>
+      <app-state-reloader [buttonText]="'public.global.reloadApplication' | translate"></app-state-reloader>
+    </div>
+
+  </div>
+</div>

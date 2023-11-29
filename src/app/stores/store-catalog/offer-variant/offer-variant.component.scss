@@ -1,0 +1,19 @@
+@import "../store-catalog.common.scss";
+
+#variantOffer{
+    .discount input[type="radio"]{
+        height:15px;
+        width:15px;
+        flex:0 0 auto;
+        margin-right: 10px;
+    }
+    .discount label
+    {
+        margin-right: 15px;
+    }
+    .priceContainer{
+        .invalid-feedback{
+            display:block !important;
+        }
+    }
+}

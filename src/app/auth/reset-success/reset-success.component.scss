@@ -1,0 +1,24 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "../../../scss/globals";
+@import "../login/login.component";
+
+.app-body {
+  .card-body {
+    .forgot-wrapper {
+      padding-top: 2.500rem;
+      @media (max-width: 1280px) {
+        padding-top: 1.500rem;
+      }
+      button {
+        margin: 0;
+        padding: 0;
+        margin-left: 5px;
+      }
+    }
+  }
+}
+.comma-field::after {
+  content: ", ";
+}

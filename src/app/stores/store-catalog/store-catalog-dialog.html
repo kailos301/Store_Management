@@ -1,0 +1,55 @@
+<div style="position: relative;" mat-dialog-content>
+    <div style="position: absolute; right: 1rem;">
+        <span style="cursor: pointer;">
+            <i class="fas fa-times" (click)="onNoClick()"></i>
+        </span>
+    </div>
+    <h1 class="text-blue col-lg-12 font-size-popup-title" mat-dialog-title>{{data.offerItem.name}}</h1>
+    <div class="row">
+        <div class="col-md-12 d-lg-flex d-md-block">
+            <div class="col-lg-10 col-md-12 col-sm-12 d-flex flex-column">
+                <div class="form-group">
+                    <label class="radio-container" for="OFFER_AVAILABLE">
+                        {{'admin.global.available' | translate}}
+                        <input type="radio" value="OFFER_AVAILABLE" [(ngModel)]="data.status" name="offerstatus"
+                            id="OFFER_AVAILABLE" />
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="radio-container" for="OFFER_OOS">
+                        {{'admin.store.catalog.offer.oos' | translate}}
+                        <input type="radio" value="OFFER_OOS" [(ngModel)]="data.status" name="offerstatus"
+                            id="OFFER_OOS" />
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="radio-container" for="OFFER_HIDDEN">
+                        {{'admin.store.catalog.offer.hidden' | translate}}
+                        <input type="radio" value="OFFER_HIDDEN" [(ngModel)]="data.status" name="offerstatus"
+                            id="OFFER_HIDDEN" />
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="radio-container" for="OFFER_UNORDERABLE">
+                        {{'admin.store.catalog.offer.unorderable' | translate}}
+                        <input type="radio" value="OFFER_UNORDERABLE" [(ngModel)]="data.status" name="offerstatus"
+                            id="OFFER_UNORDERABLE" />
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div mat-dialog-actions class="float-right pr-3 pb-4">
+    <a type="link" class="text-blue cursorPointer text-underline order-1" (click)="onNoClick()">{{'admin.global.cancel'
+        | translate}}</a>
+    <button type="button" class="btn btn-primary px-4 ml-4 order-2" (click)="save()">{{'admin.global.save' |
+        translate}}</button>
+</div>

@@ -1,0 +1,50 @@
+@import "../store-catalog.common.scss";
+
+.offer-box {
+    border-bottom: solid 1px #ccc;
+    color: rgba(0, 0, 0, 0.87);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    cursor: move;
+    background: white;
+    font-size: 14px;
+}
+
+.price {
+    color:  #666;
+    font-size: 1.125em;
+}
+
+.mat-expansion-panel {
+    border-radius: 0;
+}
+
+.offer-box:last-child {
+    border: none;
+}
+
+.offer-list {
+    border: solid 1px #ccc;
+    min-height: 40px;
+    display: block;
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.existingEntity {
+    background-color: #f8f8f8!important;
+}
+
+.buttonGroup {
+    margin: 20px 0;
+}
+.item{
+    font-size: 1em;
+    font-weight: bold;
+}
+a {
+    cursor: pointer !important;
+  }

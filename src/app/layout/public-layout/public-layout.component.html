@@ -1,0 +1,7 @@
+<div>In public layout...</div>
+<div *ngIf="subdomain; else directVisitor">You are visiting this app from <span style="color: red">{{subdomain}}</span> subdomain</div>
+<ng-template #directVisitor>
+  <div>You are visiting the base url (no subdomain)</div>
+</ng-template>
+<!-- <app-loading></app-loading> -->
+<router-outlet></router-outlet>

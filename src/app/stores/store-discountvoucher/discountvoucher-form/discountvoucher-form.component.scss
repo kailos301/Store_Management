@@ -1,0 +1,71 @@
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+#saveVoucher {
+    .form-group{
+        display: flex;
+        width: 100%;    
+        @include media-breakpoint-down(md) {
+            display: inline-block;
+        }
+    }
+    .discount input[type="radio"] {
+        height: 15px;
+        width: 15px;
+        flex: 0 0 auto;
+        margin-right: 10px;
+    }
+
+    .discount label {
+        margin-right: 15px;
+    }
+}
+
+form label.required:after{
+    color: red;
+    content: " *";
+}
+
+::ng-deep .mat-slide-toggle {
+    .mat-slide-toggle-bar {
+        width: 60px;
+        height: 34px;
+        border-radius: 34px;
+    }
+    .mat-slide-toggle-thumb-container {
+        top: 4px;
+        left: 4px;
+    }
+    .mat-slide-toggle-thumb {
+        width: 26px;
+        height: 26px;
+        background-color: #fff !important;
+    }
+    &.mat-checked {
+        .mat-slide-toggle-bar {
+        background-color: #48b9b7 !important;
+        }
+        .mat-slide-toggle-thumb-container {
+        top: 4px;
+        right: 26px;
+        left: initial;
+        }
+    }
+}
+.flyer-image{
+    width: 360px;
+  }
+  .flyerwidth{
+    width: 212px !important;
+  }.defaultFlyerRow{
+    display: flex;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.actionLink{
+    cursor: pointer;
+    text-decoration: underline !important;
+    margin-left: 10px;
+}

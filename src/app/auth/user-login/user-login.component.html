@@ -1,0 +1,18 @@
+<div class="social-login-wrapper row justify-content-between">
+  <!-- Google login button -->
+  <div class="google-btn col-sm-4 col-xl-2" (click)="socialLoginAction('google')">
+    <div class="google-icon-wrapper">
+      <img class="google-icon" src="/assets/img/social/google.svg"/>
+    </div>
+    <p class="btn-text text-center">{{'admin.login.social.google' | translate}}</p>
+  </div>
+
+  <!-- Facebook login button -->
+  <div class="facebook-btn col-sm-4 col-xl-2 mt-3 mt-sm-0" (click)="socialLoginAction('facebook')">
+    <div class="facebook-icon-wrapper">
+      <div class="facebook-icon"></div>
+    </div>
+    <p class="btn-text font-weight-bold text-center">{{'admin.login.social.facebook' | translate}}</p>
+  </div>
+
+</div>

@@ -1,0 +1,1183 @@
+{
+	"admin": {
+		"global": {
+			"delete": "Verwijderen",
+			"cancel": "Annuleren",
+			"ok": "OK",
+			"reject": "Weigeren",
+			"create": "Creëren",
+			"yes": "Ja",
+			"print": "Afdrukken",
+			"save": "Opslaan",
+			"no": "Nee",
+			"close": "Bevestigen",
+			"name": "Naam",
+			"firstName": "Voornaam",
+			"language": "Taal",
+			"comment": "Commentaar",
+			"email": "E-mail",
+			"login": "Inloggen",
+			"noData": "Geen data gevonden",
+			"field": {
+				"required": "Dit veld is verplicht",
+				"minLength": "Dit veld moet minimaal {{minLength}} letters bevatten",
+				"maxLength": "Dit veld mag niet meer dan {{maxLength}} letters bevatten",
+				"maxNumber": "Dit veld kan niet meer zijn dan {{maxNumber}}",
+				"requiredValue": "Kortingswaarden moeten groter zijn dan 0.",
+				"downloadFlyer": "Flyer downloaden"
+			},
+			"description": "Omschrijving",
+			"discount": "Korting",
+			"country": "Land",
+			"timezone": "Tijdzone",
+			"pleaseSelect": "Selecteer alstublieft ...",
+			"address": "Adres",
+			"addressLine1": "Adres regel 1",
+			"addressLine2": "Adres lijn 2",
+			"price": "Prijs",
+			"postCode": "Postcode",
+			"postCodePattern": "Ongeldig - Gebruik alleen alfanumeriek",
+			"change": "Aaanpassen",
+			"update": "Bijwerken",
+			"password": "Wachtwoord",
+			"sentenceText": "En de",
+			"anyOption": "Er kan een onbeperkt aantal opties worden geselecteerd",
+			"exactOneOption": "Er moet precies één optie worden geselecteerd",
+			"partnerProgram": {
+				"label": "Partnerprogramma",
+				"vouchers": "Kortingsbonnen",
+				"commissions": "Commissies"
+			},
+			"voucher": {
+				"label": "Voucher code",
+				"voucherQuestion": "Voucher vraag"
+			},
+			"subscription": {
+				"label": "Abonnementen",
+				"status": "Abonnementsstatus",
+				"endDate": "Einddatum van het abonnement",
+				"purchase": "Abonnement kopen",
+				"checkout": {
+					"stripe": "Betaal met credit card",
+					"paypal": "Betaal met PayPal"
+				},
+				"price": {
+					"label": "Abonnements prijs"
+				},
+				"vat": {
+					"label": "BTW",
+					"invalid": "BTW-nummer is niet geldig",
+					"valid": "BTW-nummer is geldig"
+				},
+				"vatNumber": {
+					"label": "Btw-nummer"
+				},
+				"totalPrice": {
+					"label": "Totale prijs"
+				},
+				"billingDetails": {
+					"label": "Factureringsgegevens"
+				},
+				"continue": "Doorgaan",
+				"discountVoucher": {
+					"patternInvalid": "Kortingsbon moet overeenkomen met patroon 'XXXX-XXXX'",
+					"invalid": "Kortingsbon is niet geldig",
+					"alreadyReserved": "De kortingsbon is al gereserveerd en kan niet worden gebruikt",
+					"valid": "Kortingsbon is geldig"
+				},
+				"vatamount": {
+					"label": "BTW-bedrag "
+				},
+				"pricewithvat": {
+					"label": "Prijs met BTW"
+				},
+				"vatnotcharged": {
+					"label": "Exclusief BTW"
+				},
+				"invoiceLabel": "Facturen",
+				"extendPurchase": "Abonnement verlengen",
+				"createInvoice": "Maak een factuur",
+				"updateInvoice": "Update factuur",
+				"deleteInvoice": "Factuur verwijderen",
+				"discountPercentage": "Kortingspercentage",
+				"currency": "Valuta",
+				"paymentId": "Betalings-ID van betalingsprovider",
+				"partnerEmail": "E-mailadres van partner"
+			},
+			"validate": {
+				"amountNumbers": "Bedrag mag alleen cijfers bevatten"
+			},
+			"paymentDetails": "Betalingsdetails",
+			"termsPoliciesMsg": "Ik accepteer de",
+			"termsOfUse": "Gebruiksvoorwaarden",
+			"privacyPolicy": "Privacybeleid",
+			"phoneNumber": "Telefoonnummer",
+			"currentLanguage": "en",
+			"storeLabel": "Winkel",
+			"contactus": {
+				"thankYou": "Bedankt dat je contact hebt opgenomen met GonnaOrder. We zullen u zo snel mogelijk per e-mail antwoorden.",
+				"instructions": "Vind instructies over hoe de applicatie werkt en antwoorden op je veelgestelde vragen",
+				"gettintouch": "Kunt je niet vinden wat je zoekt? Kom in contact! Schrijf ons over de vraag of het probleem waarmee je wordt geconfronteerd en we nemen contact met je op. Zorg ervoor dat je voldoende details opgeeft zodat we sneller kunnen reageren",
+				"faq": "FAQ",
+				"helpCenter": "Helpcentrum",
+				"submit": "Verzenden",
+				"support": "Ondersteuning",
+				"featuresGuide": "Functiegids"
+			},
+			"uploadNow": "Upload nu",
+			"role": "Rol",
+			"administrator": "Beheerder",
+			"standardUser": "Standaard gebruiker",
+			"saveAndNew": "Opslaan en nieuwe toevoegen",
+			"saveAndContinue": "Opslaan en doorgaan",
+			"next": "De volgende",
+			"type": "Type",
+			"value": "Waarde",
+			"active": "Actief",
+			"consumed": "Verbruikt",
+			"availabilityRestrictions": "Beschikbaarheidsbeperkingen",
+			"from": "Van",
+			"To": "Tot",
+			"available": "Beschikbaar",
+			"partner": "Partner",
+			"emailStatus": "E-mailstatus",
+			"superAdmin": "Superbeheerder",
+			"remove": "Verwijderen",
+			"availableTimes": "Beschikbare tijden",
+			"to": "Tot",
+			"any": "Ieder",
+			"reloadApplication": "Herlaad de applicatie",
+			"newVersionAvailable": "U gebruikt een oudere versie van de applicatie. Laad de applicatie opnieuw om de laatste update te ontvangen",
+			"vatPercentage": "BTW%",
+			"phone": "Telefoon",
+			"registeredAt": "Geregistreerd bij",
+			"initialValue": "Beginwaarde"
+		},
+		"alerts": {
+			"headerError": "Fout!",
+			"errorOccured": "Er is een fout opgetreden",
+			"headerSuccess": "Succes!",
+			"invalidCredentials": "Ongeldige inloggegevens opgegeven.",
+			"accountActivated": "Je account is nu geactiveerd. Log hieronder in om door te gaan.",
+			"passwordChanged": "Je wachtwoord is veranderd. Log hieronder in om door te gaan.",
+			"emailChanged": "Je e-mailadres is gewijzigd. Log hieronder in om door te gaan.",
+			"oopsLostMsg": "Oeps! Je bent verdwaald.",
+			"pageNotFound": "De pagina die je zoekt, is niet gevonden.",
+			"problemMsg": "Er is iets fout gegaan",
+			"pageUnavailable": "Er is iets onverwachts gebeurd",
+			"userInvitationSuccessfull": "Uw registratie is geslaagd. Log in om toegang te krijgen tot {{storeName}}",
+			"socialAccountLoginFailed": "Zorg ervoor dat u uw sociale account koppelt voordat u deze probeert te gebruiken",
+			"accessDenied": "Toegang is geweigerd"
+		},
+		"login": {
+			"forgetPassword": "Wachtwoord vergeten?",
+			"noAccount": "Heb je geen account?",
+			"signUp": "Aanmelden",
+			"social": {
+				"header": "of maak verbinding via uw sociale account:",
+				"google": "Log in met Google",
+				"facebook": "Meld je aan met facebook",
+				"apple": "Inloggen met Apple"
+			}
+		},
+		"account": {
+			"receiveEmailMsg": "Je ontvangt binnenkort een e-mail om je account te verifiëren.",
+			"profile": "Mijn profiel",
+			"provideEmailMsg": "Email ",
+			"changePassword": "Wachtwoord wijzigen",
+			"logout": "Uitloggen",
+			"affiliate": {
+				"lastName": "Achternaam",
+				"create": "Word partner",
+				"pleaseVisit": "Bezoek alstublieft",
+				"profile": "je profielpagina",
+				"updateInfoMsg": "als om jouw profiel informatie bij te werken"
+			},
+			"currentPassword": "Huidig ​​wachtwoord",
+			"newPassword": "Nieuw wachtwoord",
+			"social": {
+				"nav": "Sociale accounts",
+				"header": "Koppel sociale accounts",
+				"google": {
+					"header": "Google account",
+					"linkAccount": "Koppel Google-account"
+				},
+				"link": {
+					"success": "Sociaal account is succesvol gekoppeld"
+				},
+				"facebook": {
+					"header": "Facebook account",
+					"linkAccount": "Koppel Facebook-account"
+				},
+				"apple": {
+					"header": "Apple-account",
+					"linkAccount": "Apple-account koppelen"
+				}
+			},
+			"createPassword": "Maak een wachtwoord"
+		},
+		"forgot": {
+			"header": "Wachtwoord vergeten",
+			"submit": "Verzenden",
+			"alreadyKnow": "Ken je je wachtwoord al en wilt je het niet wijzigen?",
+			"emailInvalid": "Email is ongeldig.",
+			"successHeader": "Goed gedaan!",
+			"successMsg": "Je ontvangt binnenkort een e-mail om je wachtwoord opnieuw in te stellen.",
+			"emailNotRegister": "Deze e-mail is niet geregistreerd"
+		},
+		"updatePassword": {
+			"header": "Wachtwoord aanpassen",
+			"subHeader": "Geef uw nieuwe wachtwoord op",
+			"confirmPassword": "Wachtwoord bevestigen"
+		},
+		"store": {
+			"minutes": "minuten",
+			"closeOrder": "Bestelling bevestigen",
+			"acceptOrder": "Bestelling accepteren",
+			"acceptOrderMarkReady": "Bestelling accepteren en als gereed markeren",
+			"acceptOrderEstimatedTime": "Bestelling accepteren en een ​​geschatte tijd invoeren",
+			"minutesValidationMsg": "De minuten moeten een geldig positief getal zijn",
+			"list": {
+				"storesList": "Winkelslijst",
+				"searchByAlias": "Voer een GonnaOrder Domain in (min. 6 tekens)"
+			},
+			"storeimages": "Afbeeldingen opslaan",
+			"storeCreation": "Registreer nieuwe winkel",
+			"settings": "Instellingen",
+			"paymentMethod": "Betalingswijze",
+			"paymentOptions": "Betalingsmogelijkheden",
+			"paymentOptionsDisabled": "Betalingsopties zijn uitgeschakeld omdat er geen betalingsmethode voor de winkel is ingeschakeld",
+			"deliveryAtAddressOptions": "Levering bij adresopties",
+			"minDeliveryAmount": "Minimaal bestelbedrag",
+			"deliveryFee": "Bezorgkosten",
+			"order": {
+				"label": "Bestellen",
+				"orderSent": "Bestelling verzonden",
+				"orderWish": "Bestelling gewenst",
+				"notifications": {
+					"receipt": "Ontvang meldingen voor bestellingen"
+				},
+				"floor": "Verplich etage veld",
+				"customerName": "Naam van de klant",
+				"newestOrderSent": "Nieuwste bestelling verzonden",
+				"oldestOrderSent": "Oudste bestelling verzonden",
+				"newestOrderWish": "Nieuwste bestelling wens",
+				"oldestOrderWish": "Oudste orderwens",
+				"newestOrderExpected": "Nieuwste bestelling verwacht",
+				"oldestOrderExpected": "Oudste bestelling verwacht",
+				"autoprint": {
+					"receipt": "Automatisch binnenkomende bestellingen afdrukken"
+				},
+				"orderExpected": "Bestelling verwacht",
+				"newestOrderEffective": "Nieuwste bestelling effectief",
+				"oldestOrderEffective": "Oudste order effectief",
+				"dateTimeRange": "Datum Tijdbereik",
+				"orderEffective": "Bestelling Effectieve tijd",
+				"noFilter": "Geen filter",
+				"yesterday": "Gisteren",
+				"lastHour": "Laatste uur",
+				"now": "Nu",
+				"nextHour": "Volgend uur",
+				"tomorrow": "Morgen",
+				"custom": "Op maat...",
+				"today": "Vandaag",
+				"orderIdentifier": "ID",
+				"changeOrder": "Verander bestelling"
+			},
+			"orderIsReady": "Bestelling is klaar!",
+			"orderExpected": "Bestelling verwacht",
+			"orderDownload": "Downloaden",
+			"note": "Notitie",
+			"open": "Open",
+			"cancelled": "Geannuleerd",
+			"rejected": "Geannuleerd",
+			"rejectWithoutReason": "Bestelling annuleren zonder opgaaf van reden",
+			"rejectWithReason": "Bestelling annuleren en reden melden",
+			"closed": "Bevestigd",
+			"identifier": "Id",
+			"deliveryMethod": "Levering",
+			"deliveryOption": "Levering",
+			"orderingDisabledMessage": "Om bestellen mogelijk te maken, moet een bezorgmodus worden geselecteerd",
+			"deliveryAtInLocation": "Serveer aan tafel",
+			"deliveryLocationsEnabled": "Optie is uitgeschakeld omdat er geen tafels zijn gedefinieerd",
+			"orderDeliveryMethod": {
+				"deliver": "Thuisbezorgen",
+				"pickup": "Ophalen",
+				"serve": "Serveren",
+				"deliverAtAddress": "Thuisbezorgen",
+				"openTap": ""
+			},
+			"status": "Status",
+			"amountPaid": "Betaald bedrag",
+			"paymentStatus": "Betalingsstatus",
+			"payment": {
+				"paid": "Betaald",
+				"notPaid": "Niet betaald",
+				"stripeTermsAndConditions": "Door uw account te registreren, gaat u akkoord met de",
+				"servicesAgreement": "Overeenkomst voor Stripe Services",
+				"stripeConnectedAccountAgreement": "Stripe Connected Account-overeenkomst",
+				"stripeUserMsg": "Door een Stripe-account aan te maken, kunt je bestellingen ontvangen via creditcard, iDEAL, Bancontact",
+				"paypalDisableMsg": "Paypal wordt tijdelijk niet ondersteund",
+				"creditCard": "Kredietkaart",
+				"bancontact": "bancontact",
+				"iDeal": "ideaal",
+				"squareUserMsg": "Door een Square-account aan te maken, kun je bestellingen via creditcard ontvangen",
+				"vivaUserMsg": "Door een Viva Wallet-account aan te maken, kun je bestellingen via creditcard ontvangen",
+				"digitalWallets": "Digital Wallets",
+				"paymentSense": {
+					"userMsg": "Door een Paymentsense-account aan te maken, kunt u bestellingen via creditcard ontvangen",
+					"jwtToken": "JWT-token"
+				},
+				"rmsUserMsg": "Door een RMS-account aan te maken, kunnen bestellingen via creditcard worden ontvangen",
+				"merchantId": "Verkoper-ID",
+				"sharedSecret": "Gedeeld geheim",
+				"rmsConnect": "Maak verbinding met RMS",
+				"paymentSenseConnect": "Maak verbinding met PaymentSense",
+				"jccUserMsg": "Door een JCC-account aan te maken, kunnen bestellingen via creditcard worden ontvangen",
+				"acquirerId": "",
+				"apiSignaturePassword": "",
+				"jccConnect": "Maak contact met JCC",
+				"valueNotValid": "De opgegeven waarde is niet geldig",
+				"trustpaymentsUserMsg": "Door een TrustPayments-account aan te maken, kunnen bestellingen via creditcard worden ontvangen",
+				"siteReference": "",
+				"webserviceUser": "",
+				"webservicePassword": ""
+			},
+			"date": "Datum",
+			"time": "Tijd",
+			"backToOrders": "Terug naar bestellingen",
+			"share": {
+				"language": {
+					"userInterfaceLanguage": "Taal gebruikersinterface",
+					"defaultCatalogLanguage": "Menu taal",
+					"basedOn": "Gebaseerd op browserinstellingen",
+					"storeDefault": "Standard menutaal"
+				},
+				"sharePreviewLink": "Delen en previewen link",
+				"sharePreview": "Delen en voorvertonen",
+				"embedCode": "Insluiten op uw website",
+				"printQRCodes": "QR-codes afdrukken",
+				"ordering": {
+					"allowDefaultOrdering": "Bestellen toestaan",
+					"DefaultOrdering": "Standaard",
+					"disableDefaultOrdering": "Uitgeschakelt",
+					"defaultDate": "Standaarddatum"
+				}
+			},
+			"voucher": {
+				"list": "Voucher lijst",
+				"createVoucher": "Maak aangepaste vouchers",
+				"partnerStatus": "Partnerstatus",
+				"endDate": "Einddatum",
+				"commission": "Commissie",
+				"text": "Voucher",
+				"numberOfVouchers": "Aantal vouchers",
+				"defaultVoucherValue": "Voucher waarde",
+				"numberOfVoucher": "Beschikbare vouchers die kunnen worden gecreëerd",
+				"numberOfVoucherPattern": "Het aantal vouchers moet een cijfer zijn",
+				"minNumberOfVoucherPattern": "Aantal voucher moet groter zijn dan of gelijk zijn aan 1",
+				"commissionStatus": "Status van de Commissie",
+				"waiting_for_store_purchase": "Wachten op winkelaankoop",
+				"eligible_for_payment": "Geschikt voor betaling",
+				"waiting_for_finalization": "14 dagen wachten op afronding",
+				"useDate": "Datum gebruik voucher",
+				"printVoucherSetup": "Voucher afdrukken",
+				"addnewdiscountVoucher": "Voeg een nieuwe kortingsbon toe",
+				"backtodiscountVouchers": "Terug naar kortingsbonnen",
+				"creatediscountVoucher": "Maak een kortingsbon aan",
+				"typeSingleuse": "Eenmalig gebruik",
+				"typeMultipleuse": "Meervoudig gebruik",
+				"updatediscountVoucher": "Update kortingsbon",
+				"editdiscountVoucher": "Bewerk kortingsbon",
+				"discountVouchers": "Kortingsbonnen"
+			},
+			"statistics": {
+				"title": "Statistieken",
+				"from": "Van",
+				"to": "Naar",
+				"orders": "Bestellingen",
+				"menuViewing": "Menu bezichtigingen",
+				"orderValue": "Bestellingswaarde",
+				"month": "Maand",
+				"year": "Jaar",
+				"submitted": "Ingediend",
+				"received": "Ontvangen",
+				"total": "Totaal",
+				"totalViewing": "Totaal bekijken",
+				"totalPaid": "Totaal betaald",
+				"totalNonPaid": "Totaal niet betaald",
+				"totalAll": "Totaal",
+				"orderItems": "Bestel artikelen",
+				"orderItemSummary": "Order Item samenvatting",
+				"orderItemSummaryDescription": "Begrijp de totale opbrengst van elk verkocht product en kijk welke producten het populairst zijn",
+				"orderItemDetails": "Bestelitemdetails",
+				"orderItemDetailsDescription": "Krijg een gedetailleerd overzicht van alle bestellingen, inclusief de hoeveelheid en opbrengst van de producten die in deze bestellingen worden verkocht en de datums van de bestellingen",
+				"orderCapture": "Bestel Capture",
+				"monthly": "Maandelijks",
+				"daily": "Dagelijks",
+				"day": "Dag",
+				"period": "Periode",
+				"quantitySold": "Hoeveelheid verkocht",
+				"revenueLabel": "Omzet"
+			},
+			"catalog": {
+				"backToOffer": "Terug naar product",
+				"backToCatalog": "Terug naar menu",
+				"backToCategory": "Terug naar categorie",
+				"importTranslation": "Wijzig en vertaal menu teksten",
+				"import": "Menu importeren via Excel",
+				"upload": "Menu uploaden",
+				"importInfo": "Je kunt gegevens in je menu importeren met behulp van een Excel-sjabloon. De Excel-import ondersteunt aanbiedingsnamen of categorienamen of biedt korte beschrijvingen en productprijzen.",
+				"downloadTemplate": "Download de sjabloon hier",
+				"acceptImport": "Menu accepteren en importeren",
+				"importImage": "Menu importeren vanuit foto",
+				"beta": "beta",
+				"importImageInfo": "Je kunt de producten van je menu importeren door middel van een foto van je menu. De import werkt voor delen van de menu die één categorie hebben. Zorg ervoor dat je foto duidelijk is met een hoge resolutie. Deze functie bevindt zich in de bètamodus.",
+				"offer": {
+					"offer": "Product",
+					"createOffer": "Product toevoegen",
+					"addOffer": "Product toevoegen",
+					"confirmDeleteOffer": "Weet u zeker dat u dit product wilt verwijderen? <br/> Deze actie kan niet ongedaan worden gemaakt.",
+					"offerImage": "Product foto",
+					"uploadImage": "Foto uploaden",
+					"characteristics": {
+						"name": "Kenmerken",
+						"vegetarian": "Vegetarisch",
+						"vegan": "Veganistisch",
+						"celery": "Selderij",
+						"wheat": "Tarwe",
+						"crustaceans": "Schaaldieren",
+						"eggs": "Eieren",
+						"fish": "Vis",
+						"lupin": "Lupine",
+						"milk": "Melk",
+						"molluscs": "Weekdieren",
+						"mustard": "Mosterd",
+						"nuts": "Noten",
+						"peanuts": "Pinda's",
+						"sesame": "Sesam",
+						"soya": "Soja",
+						"sulphurDioxide": "Zwaveldioxide",
+						"halal": "Halal",
+						"barley": "Gerst",
+						"spicy": "Pittig"
+					},
+					"countAgainstslotcount": "Tel mee met het aantal slots",
+					"countAgainstslot": "Tel tegen slot",
+					"incrementBy": "Verhogen met",
+					"externalProductId": "Externe product-id",
+					"vatExternalId": "Extern btw-nummer",
+					"available": "Beschikbaar",
+					"oos": "Uitverkocht",
+					"hidden": "Verborgen",
+					"unorderable": "Niet bestelbaar"
+				},
+				"variant": {
+					"priceVariants": "Prijsvarianten",
+					"priceVariant": "Prijsvariant",
+					"assignedOfferVariations": "Klik hier om toegewezen varianten te zien",
+					"createPriceVariant": "Prijsvariant toevoegen",
+					"confirmDeleteVariant": "Weet u zeker dat u deze prijsvariant wilt verwijderen? <br/> Deze actie kan niet ongedaan worden gemaakt."
+				},
+				"option": {
+					"option": "Optie",
+					"options": "Opties",
+					"addOption": "Optie toevoegen",
+					"createOption": "Optie toevoegen",
+					"confirmDeleteOption": "Weet u zeker dat u deze optie wilt verwijderen? <br/> Deze actie kan niet ongedaan worden gemaakt."
+				},
+				"category": {
+					"createCategory": "Categorie toevoegen",
+					"category": "Categorie",
+					"addCategory": "Categorie toevoegen",
+					"infoDeleteCategory": "De categorie kan niet worden verwijderd omdat deze aanbiedingen bevat. <br/> De onderliggende aanbiedingen moeten worden verwijderd of naar andere categorieën worden verplaatst.",
+					"confirmDeleteCategory": "Weet u zeker dat u deze categorie wilt verwijderen? <br/> Deze actie kan niet ongedaan worden gemaakt."
+				},
+				"optionGroup": {
+					"optionGroups": "Optiegroepen",
+					"createOptionGroup": "Optiegroep maken",
+					"optionGroup": "Optiegroep",
+					"addOptionGroup": "Optiegroep toevoegen",
+					"optionGroupType": "Optiegroep Type",
+					"optionA": "OPTIE A",
+					"optionB": "OPTIE B",
+					"optionC": "OPTIE C",
+					"chooseExisting": "Kies Bestaande optiegroep",
+					"infoDeleteOptionGroup": "De optiegroep kan niet worden verwijderd omdat deze opties bevat. <br/> De onderliggende opties moeten worden verwijderd.",
+					"confirmDeleteOptionGroup": "Weet u zeker dat u deze optiegroep wilt verwijderen? <br/> Deze actie kan niet ongedaan worden gemaakt."
+				},
+				"description": {
+					"priceDescription": "Prijs Beschrijving",
+					"shortDescription": "Korte beschrijving",
+					"longDescription": "Lange beschrijving"
+				},
+				"discount": {
+					"noDiscount": "Geen korting",
+					"percentile": "Percentage",
+					"monetary": "Monetair",
+					"invalidDiscount": "Het kortingsbedrag moet lager zijn dan het prijsbedrag"
+				},
+				"sellable": {
+					"isVisible": "Zichtbaar"
+				},
+				"availability": {
+					"startTime": "Starttijd",
+					"endTime": "Eindtijd",
+					"allTimeAvailability": "Altijd beschikbaar Kies beperking."
+				},
+				"translation": {
+					"translation": "Vertaling",
+					"languageTranslation": "Vertaling is al aanwezig voor de taal! Kies de bestaande vertaling om te bewerken.",
+					"translations": "Vertalingen",
+					"addNewTranslation": "Nieuwe vertaling toevoegen"
+				},
+				"language": {
+					"defaultCatalogLanguage": "Standard menutaal",
+					"changeLanguage": "Verander taal",
+					"sourceLanguage": "Brontaal",
+					"targetLanguage": "Doeltaal",
+					"withGoogleTranslate": "Converteer met Google Translate"
+				},
+				"tooltip": {
+					"goToCategory": "Klik hier om categoriedetails te bekijken",
+					"goToOffer": "Klik hier om de details van de producten te bekijken",
+					"translation": "Klik hier om toegewezen vertalingen te zien",
+					"goToOptionGroup": "Klik hier om de details van de optiegroep te bekijken",
+					"goToOption": "Klik hier om de details van de opties te bekijken",
+					"options": "Klik hier om toegewezen opties te zien",
+					"goToVariant": "Klik hier om variantdetails te zien",
+					"optionGroup": "Klik hier om de optiegroep en opties te zien",
+					"changestatus": "Verander status"
+				},
+				"addRestriction": "Nieuwe tijdbeperking toevoegen",
+				"importTranslation1": "Je kunt de teksten van de menuitems wijzigen via Excel en deze vertalen naar meerdere talen.",
+				"importTranslation12": "Download hier het Excel-bestand dat alle teksten van je menu bevat.",
+				"importTranslation2": "Het Excel-bestand bevat talen waarvoor u ten minste één product in deze taal heeft.",
+				"importTranslation3": "Werk alle teksten in het bestand bij voor uw winkeltaal en voor de verschillende talen. U mag de structuur van het Excel-bestand niet wijzigen, maar alleen nieuwe teksten toevoegen",
+				"importTranslation4": "Wanneer u klaar bent met wijzigingen, upload dan het bestand zodat uw wijzigingen van kracht worden",
+				"contentTranslate": "Verander en vertaal tekst",
+				"contentDownload": "Er is een fout opgetreden en het bestand kan niet worden gedownload",
+				"contentFailedError": "Er is een fout opgetreden en het bestand kan niet worden geüpload. Zorg ervoor dat de structuur van het bestand niet is gewijzigd",
+				"orderable": {
+					"isOrderable": "Bestelbaar"
+				},
+				"error": {
+					"overlappingSchedules": "De schema's kunnen niet worden opgeslagen omdat de perioden elkaar overlappen",
+					"timeScopeWrong": "Tijdsbereik is verkeerd",
+					"noDaySelect": "Er is geen geselecteerde dag",
+					"loadSchedules": "Er is een fout opgetreden bij het ophalen van het schema",
+					"createSchedule": "Er is een fout opgetreden bij het opslaan van het schema",
+					"updateSchedule": "Er is een fout opgetreden bij het bijwerken van het schema",
+					"deleteSchedule": "Er is een fout opgetreden bij het verwijderen van het schema"
+				},
+				"update": "Update Catalogus via Excel",
+				"acceptUpdate": "Accepteer en update catalogus",
+				"importTranslationnew": "U kunt uw catalogus importeren met een Excel-sjabloon. U kunt aanbiedingsnamen, categorienamen, beschrijvingen, aanbiedingsprijzen, kortingen en voorraadgegevens importeren.",
+				"importTranslationnew1": "Download de Excel-sjabloon en vul uw catalogusgegevens in",
+				"updateTranslation": "U kunt nieuwe items aan uw catalogus toevoegen of uw bestaande catalogusitems wijzigen met behulp van een Excel-sjabloon. U kunt aanbiedingsnamen, categorienamen, beschrijvingen, aanbiedingsprijzen, kortingen en voorraadgegevens importeren.",
+				"updateTranslation1": "Download hier het Excel-bestand met uw catalogusgegevens.",
+				"updateTranslation2": "Werk de velden bij van de aanbiedingen die u wilt wijzigen. Houd hiervoor de aanbiedingsnamen hetzelfde",
+				"updateTranslation3": "Voeg nieuwe rijen toe aan het Excel-bestand voor nieuwe aanbiedingen die u graag zou willen maken",
+				"updateTranslation4": "Werk de velden in de Excel die u wilt wijzigen bij. De aanbiedingsvelden moeten hetzelfde blijven als u specifiek wilt wijzigen",
+				"priceVariants": "Prijsvarianten",
+				"catalogOptionGroup": "Optiegroep",
+				"allowMultiple": "Sta meerdere selecties van hetzelfde item toe",
+				"nocatalog": "Er is geen catalogus",
+				"notable": "Er zijn geen tafels",
+				"importLink": "Catalogus importeren via link",
+				"importCatalogexternalsite": "Externe site",
+				"importCataloglink": "Koppeling",
+				"importCataloglinkimport": "Importeren",
+				"catalogOfstoreimported": "De cataloguscreatie van de winkel is begonnen. Het kan 10-15 minuten duren om te voltooien.",
+				"catalogFetching": "De catalogus wordt opgehaald. Probeer na een uur opnieuw te importeren",
+				"catalogUnabletoimport": "De catalogus kan niet worden geïmporteerd",
+				"catalogPleaseentervalidlink": "Voer een geldige link in"
+			},
+			"location": {
+				"text": "Tafel",
+				"backtoTables": "Terug naar tafels",
+				"create": "Terug naar tafels",
+				"createBulk": "Tafels bulksgewijs toevoegen",
+				"noOfStoreLocations": "Aantal tafels",
+				"error": {
+					"noStoreFound2": "nieuwe winkellocaties om door te gaan",
+					"pattern": "Ongeldig label - Gebruik van alleen / combinatie cijfers 0-9 en hoofdletter A-Z en hypens (-) en onderstrepingsteken (_) is toegestaan.",
+					"digit": "Ongeldig label - Gebruik van alleen cijfers 0-9 is toegestaan"
+				},
+				"label": "Tafel Nummer of Naam",
+				"createTableMsg": "Tabellen bulksgewijs toevoegen",
+				"locationType": "Locatie Type",
+				"table": "Tafel",
+				"location": "Plaats",
+				"room": "Kamer",
+				"notablesFound": "Geen tafels gevonden",
+				"nocatalogfound": "Geen catalogus gevonden",
+				"tableStatus": "Tabelstatus",
+				"openTap": {
+					"closed": "Gesloten",
+					"open": "Open"
+				},
+				"status": {
+					"success": "De status is bijgewerkt",
+					"table": {
+						"pin": "Tafel PIN"
+					},
+					"error": "Fout bij het bijwerken van de status"
+				},
+				"print": {
+					"qrCodes": "QR-codes afdrukken"
+				}
+			},
+			"locations": {
+				"text": "Tafels"
+			},
+			"qr": {
+				"download": {
+					"pdf": "Download QR-code als Pdf",
+					"image": "Download QR-code als foto"
+				},
+				"downloadPrintQRStore": "Download QR-code print als pdf",
+				"downloadPrintQRAllLocation": "Download alle QR-codeafdrukken van de tabel als pdf",
+				"downloadImageQRStore": "Download QR-code afbeelding",
+				"downloadImageQRAllLocation": "Download alle QR-codeafbeeldingen als zip"
+			},
+			"help": {
+				"helpText": "Hulp met"
+			},
+			"users": {
+				"header": "Gebruikers",
+				"removeUser": "Weet je zeker dat je de toegang tot deze winkel voor deze gebruiker wilt verwijderen? <br/> Deze actie kan niet ongedaan worden gemaakt.",
+				"inviteUser": {
+					"inviteTitle": "Gebruiker uitnodigen",
+					"invitationText": "Er wordt een e-mail gestuurd naar het onderstaande e-mailadres. Zodra de gebruiker de uitnodiging accepteert, kan hij deze winkel volledig beheren",
+					"invitePrimaryButton": "Uitnodigen"
+				}
+			},
+			"region": {
+				"label": "Regio"
+			},
+			"city": {
+				"label": "Stad"
+			},
+			"alias": "Domein GonnaOrder",
+			"notSubscribedMsg": "Deze winkel heeft geen GonnaOrder-abonnement gekocht. Het GonnaOrder-domein kan in de proefmodus worden opgeëist door andere winkels met een geldig abonnement.",
+			"noActiveSubscriptionsMsg": "U kunt dit domein alleen verkrijgen als u een GonnaOrder-abonnement aanschaft. Je kunt nu een ander domein gebruiken en dit wijzigen naar het gewenste domein nadat je een abonnement hebt gekocht.",
+			"domainTakenMsg": "Dit gonnaorder-domein is al bezet",
+			"aliasValidationMsg": "Het domein moet minimaal 6 tekens bevatten, waarvan er één een letter 'a' tot 'z' moet zijn. Cijfers van cijfers '0' tot '9' en de symbolen '-' en '_' zijn toegestaan. Speciale tekens en hoofdletters zijn niet toegestaan",
+			"phoneNumber": {
+				"pattern": "Gebruik van alleen cijfers 0-9 is toegestaan."
+			},
+			"enablePaypalPaymentGonnaOrderLabel": "gonnaorder.com",
+			"preferredLanguage": {
+				"label": "Voorkeurstaal"
+			},
+			"catalogOverview": "Menu",
+			"ordering": "Bestellen",
+			"details": "Details",
+			"paymentProvoders": "Betalingsproviders",
+			"disabled": "Uitgeschakelt",
+			"paymentDisabled": "Betaling uitgeschakeld",
+			"paymentOptional": "Betaling optioneel",
+			"paymentMandatory": "Betaling verplicht",
+			"enabled": "Ingeschakeld",
+			"disconnect": "Uitzetten",
+			"accountID": "Account ID",
+			"connectWithPaypal": "Verbind Paypal",
+			"connectWithStripe": "Verbind Stripe",
+			"paymentMethodDetailsMessage": "Selecteer de betalingsproviders die je wilt koppelen",
+			"optionGroup": {
+				"atMostOneOption": "Er kan maximaal één optie worden geselecteerd",
+				"customSelection": "Aangepaste selectie",
+				"minimumRequired": "Minimumaantal opties dat moet worden geselecteerd",
+				"maximumAllowed": "Maximaal aantal opties dat kan worden geselecteerd",
+				"maximumHeigherThanMimimum": "Het maximum aantal moet hoger zijn dan of gelijk zijn aan het minimum aantal"
+			},
+			"message": {
+				"errorTryAgain": "Er is een fout opgetreden. Probeer het opnieuw",
+				"storeUpdate": "Winkel bijgewerkt!",
+				"actionFail": "Actie mislukt!",
+				"loadFail": "Laden mislukt!",
+				"acessRemoveFail": "Toegang tot winkel verwijderen mislukt",
+				"acessRemoveSuccess": "Toegang verwijderd uit de winkel!",
+				"inviteUserFail": "Kan gebruiker niet uitnodigen!",
+				"inviteUserSuccess": "De gebruiker is uitgenodigd om de winkel te beheren!",
+				"uploadFail": "Upload mislukt!x`",
+				"logoUploadSuccess": "Logo succesvol geüpload!",
+				"imageUploadSuccess": "Foto succesvol geüpload!",
+				"downloadFail": "Download mislukt!",
+				"settingsUpdate": "Instellingen bijgewerkt!",
+				"receiveEmailMsg": "Je ontvangt binnenkort een e-mail. Volg de link om je e-mailadres te wijzigen.",
+				"profileUpdate": "Profiel geüpdatet!",
+				"translationsUpdateSuccess": "Vertalingen succesvol bijgewerkt!",
+				"saveOfferSuccess": "Product succesvol opgeslagen",
+				"saveCategorySuccess": "Bewaar categorie succes",
+				"childCategoryOffer": "Optie groeppen geassocieerd met product!",
+				"childOfferCategory": "Opties geassocieerd met optie group!",
+				"offerVaryAToffer": "Productvarianten geassocieerd met product!",
+				"catalogVerifySuccess": "Menugegevens succesvol geverifieerd!",
+				"catalogDataUploadSuccess": "Menugegevens succesvol geüpload!",
+				"categoryDeleteSuccess": "Categorie succesvol verwijderd!",
+				"offerDeleteSuccess": "Product succesvol verwijderd!",
+				"createAvailabilitySuccess": "Beschikbaarheid successvol gecreëerd",
+				"createAvailabilityFail": "Beschikbaarheid aanmaken is mislukt",
+				"locationDeleteSuccess": "Tafel {{label}} is succesvol verwijderd",
+				"noInStoreDelivery": "Houd er rekening mee dat levering in de winkellocatie niet meer wordt ondersteund",
+				"stripeDisconnect": "Stripe-account verbroken",
+				"paypalDisconnect": "PayPal-account verbroken",
+				"upgradeAffiliateSuccess": "Upgrade affiliate details succesvol!",
+				"loadProfileFail": "We kunnen uw profiel niet laden. Probeer het later opnieuw",
+				"verifyCatalogImageFailed": "De menu kan niet uit de afbeelding worden gehaald. Probeer een afbeelding te importeren met een hogere resolutie of een afbeelding met een kleiner deel van de menu met slechts één categorie",
+				"verifyCatalogImageSuccess": "Menuafbeelding succesvol geverifieerd!",
+				"imageRemoveSuccess": "De afbeelding is verwijderd",
+				"logoRemoveSuccess": "Het logo is verwijderd",
+				"zoneRemoveFail": "Zone verwijderen uit winkel mislukt",
+				"zoneRemoveSuccess": "Zone succesvol verwijderd uit winkel",
+				"zoneAdded": "Zone succesvol aangemaakt",
+				"zoneUpdated": "Zone succesvol bijgewerkt",
+				"CreateScheduleSuccess": "Succesvol gemaakt",
+				"updateScheduleSuccess": "Succesvol geüpdatet",
+				"deleteScheduleSuccess": "Succesvol verwijderd",
+				"saveRuleSuccess": "Sla succes op",
+				"deleteRuleSuccess": "Het verwijderen van de regel is gelukt",
+				"saveDiscountVoucherSuccess": "Bespaar kortingsbon succes",
+				"saveDiscountVoucherFailed": "Kortingsbon opslaan mislukt",
+				"deleteDiscountVoucherSuccess": "Succesvolle verwijdering van kortingsbon",
+				"locationCreateSuccess": "De tabel {{label}} is met succes aangemaakt",
+				"locationUpdateSuccess": "Tabel {{label}} is succesvol bijgewerkt"
+			},
+			"rejectOrder": "Order afwijzen",
+			"paypalNotsupported": "Paypal wordt niet ondersteund",
+			"enableWithmelink": "Schakel betalingen in met uw Paypal.me-link",
+			"payPalmelink": "Paypal.me-link",
+			"enableWithanylink": "Schakel betalingen in met elke betalingslink",
+			"paymentProvider": "Betalingsprovider",
+			"paymentLink": "Betalingslink",
+			"other": "Andere",
+			"shoppingBasket": "Winkelmandje",
+			"settingsMandatory": "Verplicht",
+			"settingsOptional": "Optioneel",
+			"settingspickupEmailRequired": "Email is verplicht",
+			"settingspickupPhoneRequired": "Telefoonnumer is vereist",
+			"addressDelivery": "Thuisbezorgen",
+			"orderAmount": "Bestelbedrag waarboven thuisbezorgen gratis is",
+			"deliveryAddressauto": "Afleveradres Automatisch invullen",
+			"postCodesrestrictions": "Beperken binnen postcodezones",
+			"restricted": "Beperkt",
+			"nonRestricted": "Niet beperkt",
+			"addressZones": "Zones",
+			"addressaddnewZones": "Nieuwe zone toevoegen",
+			"createDifferentaddress": "Maak verschillende thusbezorgingszones met verschillende instellingen",
+			"backtoZones": "Terug naar zones",
+			"minRadius": "Min straal",
+			"maxRadius": "Max straal",
+			"unit": "Eenheid",
+			"postCodes": "Postcodes",
+			"postCodemsg": "Voer de lijst met postcodes in, gescheiden door een komma of een nieuwe regel",
+			"settingspickupNameRequired": "Naam vereist",
+			"zoneLabel": "Zone",
+			"invalidRadiusRange": "Het straalbereik is ongeldig",
+			"account": {
+				"deleteUserSuccess": "Toegang tot de winkel is voor de gebruiker met succes verwijderd",
+				"confirmDeleteUser": "Weet u zeker dat u de toegang tot deze winkel voor deze gebruiker wilt verwijderen? Deze actie kan niet ongedaan gemaakt worden."
+			},
+			"subscription": {
+				"storeEligibility": "Zonder abonnement kunt je GonnaOrder gebruiken voor maximaal 50 menubezoeken of 50 bestellingen per maand.\nWanneer deze limieten zijn bereikt, kunnen je klanten je menu niet zien.\nSchaff een GonnaOrder-abonnement aan om deze beperkingen op te heffen.",
+				"vatprompt": {
+					"sodexobelgium": "Bent u een handelaar van het Sodexo-netwerk? Vul je btw-nummer in om 50% korting te krijgen",
+					"eu": "Voer je BTW-nummer in om te voorkomen dat je de BTW-kosten voor de online aankoop moet betalen"
+				},
+				"sodexo": {
+					"affiliate": {
+						"prompt": "Nog geen lid van het Sodexo-netwerk?"
+					}
+				},
+				"active": "Actief",
+				"fourteenfreetrial": "14 dagen gratis proefperiode - Onbeperkt aantal bestellingen",
+				"limitedFreemium": "Limited Freemium - Abonneer u om onbeperkte bestellingen te krijgen en uw GonnaOrder-domein niet te verliezen",
+				"limitedFreemiumnumberof": "Limited Freemium - De limiet van 5 bestellingen voor deze maand is bereikt. Abonneer u om onbeperkte bestellingen te hebben en uw GonnaOrder-domein niet te verliezen",
+				"discountVouchers": "Kortingsbonnen",
+				"billing": {
+					"businessName": "Bedrijfsnaam"
+				}
+			},
+			"applicationId": "Application ID",
+			"accessToken": "",
+			"locationId": "",
+			"clientId": "",
+			"clientSecret": "",
+			"settingsDefaultcatalogview": "Standaard menuweergave",
+			"settingsCollapsed": "Ingestort",
+			"settingsExpanded": "Uitgebreid",
+			"orderingNotification": "Bestellingsmelding via email",
+			"orderingNotificationmessage": "E-mail sturen naar het onderstaande e-mailadres met elk nieuwe bestelling",
+			"settingsManagestock": "Beheer Voorraad",
+			"settingStocklevel": "Voorraadniveau",
+			"settingsStockcheck": "Voorraadcontrole",
+			"name": "Winkel naam",
+			"thanksForstore": "Bedankt voor het registreren van je winkel",
+			"uploadyourmenu": "Upload je menu snel en gemakkelijk",
+			"configureyourstore": "Configureer je winkel volgens je behoeften",
+			"seeyourstore": "Zie je winkel zoals je klanten het zien",
+			"findinstructions": "Vind instructies over hoe de applicatie werkt",
+			"orderingMinutesorderready": "Minuten totdat de bestelling klaar is",
+			"orderingDefaultestimated": "Standaard geschatte tijd in minuten voor bezorg- en afhaalenbestellingen totdat ze klaar zijn",
+			"orderingMinimum": "Minimum",
+			"orderingMaximum": "Maximaal",
+			"setting": {
+				"rules": {
+					"orderingrules": "Regels voor bestellen",
+					"addnewrule": "Nieuw regel toevoegen",
+					"rules": "Regels",
+					"orderamount": "Bestelbedrag",
+					"backtorules": "Terug naar regels",
+					"status": "Regel status",
+					"conditions": "Voorwaarden",
+					"orderamountbetween": "Bestelbedrag tussen specifieke waarden",
+					"minorderamount": "Minimaal bestelbedrag",
+					"maxaorderamount": "Maximaal orderbedrag",
+					"actions": "Acties",
+					"displayoptgroup": "Optiegroep weergeven",
+					"optgroups": "Optiegroepen",
+					"addoptgroup": "Optiegroep toevoegen",
+					"backtorule": "Terug naar regel",
+					"createruleptgroup": "Optiegroep maken",
+					"ruleoptgroup": "Optiegroep",
+					"infoDeleteORule": "De regel kan niet worden verwijderd omdat deze een categorie bevat. <br/> De onderliggende categorie moet worden verwijderd",
+					"confirmDeleteRule": "Weet u zeker dat u deze regel wilt verwijderen? <br/> Deze actie kan niet ongedaan worden gemaakt.",
+					"updateRule": "Regel bijwerken"
+				},
+				"marketing": {
+					"fb": {
+						"labelError": "Ongeldige Facebook-pixel tracking-ID",
+						"label": "Facebook Pixel",
+						"meta": "Metatag voor Facebook-website validatie",
+						"metaError": "Ongeldige inhoud van metatag voor Facebook-website-validatie",
+						"UrlError": "Ongeldige Facebook-URL"
+					},
+					"google": {
+						"labelError": "Ongeldige Google Analytics trackingcode"
+					},
+					"label": "Marketing",
+					"GA": {
+						"label": "Google Analytics"
+					},
+					"enableFBMsg": "Schakel winkeltracering in met Facebook Pixel",
+					"enableGAMsg": "Schakel winkeltracering in met Google Analytics",
+					"Websitelink": "Website link",
+					"Facebooklink": "Facebook-koppeling",
+					"Instagramlink": "Instagram-link",
+					"Carditlink": "Cardit.io Link",
+					"SocialMedia": "Website, sociale media en gekoppelde accounts",
+					"SocialMediaPromote": "Promoot verschillende manieren waarop uw klanten met uw bedrijf kunnen communiceren",
+					"SocialMediaText": "Geavanceerde instelling",
+					"website": {
+						"UrlError": "Ongeldige URL van winkelwebsite"
+					},
+					"instagram": {
+						"UrlError": "Ongeldige Instagram-URL"
+					},
+					"cardit": {
+						"UrlError": "Ongeldige CardIto-URL"
+					}
+				},
+				"samedayordering": "Bestellen op dezelfde dag",
+				"requestorderdateupfront": "Vraag de besteldatum vooraf aan",
+				"billing": "Facturering",
+				"lastMile": {
+					"lastMileDeliverySoftware": "Software voor de bezorging van de laatste mijl",
+					"connectWithMynext": "Maak verbinding met mynext",
+					"enterMynextCredentials": "Voer uw mynext-gegevens in"
+				},
+				"integrations": {
+					"username": "Gebruikersnaam",
+					"password": "Wachtwoord",
+					"connect": "Aansluiten",
+					"theCredentialsAreNotValid": "De inloggegevens zijn niet geldig",
+					"navName": "Integraties",
+					"shareDataWithOtherApplications": "Gegevens delen met andere toepassingen",
+					"connectToHubrise": "Maak verbinding met HubRise",
+					"enterHubriseCredentials": "Voer uw HubRise-inloggegevens in",
+					"connectedToHubrise": "Verbonden met HubRise",
+					"hubriseCustomerList": "Klantenlijst",
+					"goToHubrise": "Ga naar HubRise",
+					"powersoft": {
+						"connectWithPowersoft": "",
+						"connectPowersoft": "",
+						"accessTokenmsg": "",
+						"agentCode": "",
+						"agentCodemsg": "",
+						"customerCode": "",
+						"customerCodemsg": "",
+						"emailmsg": "",
+						"connect": ""
+					}
+				},
+				"domains": "Domeinen",
+				"apps": {
+					"name": "Apps",
+					"promoteGOApp": "Promoot bestellen via de GonnaOrder-app",
+					"promoteGOAppInfo": "Gebruikers slaan uw winkellink op in de app en bestellen gemakkelijker vanaf hun mobiele telefoon",
+					"promoteCustomOApp": "Promoot bestellen via de app voor uw winkel op maat",
+					"promoteCustomAppInfo": "Neem contact met ons op voor uw aangepaste mobiele app die u bij uw klanten kunt promoten",
+					"iosAppLink": "iOS-app-link",
+					"invalidIOSAppLink": "Ongeldige App Store-URL",
+					"androidAppLink": "Android App-link",
+					"invalidAndroidAppLink": "Ongeldige Play Store-URL"
+				},
+				"allowOrderUpdateByStore": "Update van bestelling per winkel toestaan",
+				"allowOrderDeletionByStore": "Verwijdering van bestellingen per winkel toestaan",
+				"opentabordering": ""
+			},
+			"orderingEmailcustomer": "E-mail de klant bij wijziging van de bestelstatus",
+			"orderNotificationSound": "Continu ordermelding geluid",
+			"schedule": {
+				"backToSchedule": "Terug naar schema's",
+				"add": "Toevoegen",
+				"save": "Opslaan",
+				"name": "Naam",
+				"createScheduleItem": "Voeg een nieuw schema toe",
+				"editScheduleItem": "Bewerk schema",
+				"cancel": "Annuleren",
+				"startTime": "Starttijd",
+				"endTime": "Eindtijd",
+				"delete": "Verwijderen",
+				"mon": "Ma",
+				"tue": "Di",
+				"wed": "Wo",
+				"thu": "Do",
+				"fri": "Vr",
+				"sat": "Za",
+				"sun": "Zo",
+				"choose": "Selecteer schema",
+				"CreateSpecialScheduleSuccess": "Openingstijden succesvol bijgewerkt",
+				"error": {
+					"CreateSpecialSchedule": "Er is een fout opgetreden bij het bijwerken van openingstijden",
+					"LoadSpecialSchedules": "Er is een fout opgetreden bij het ophalen van openingstijden",
+					"DeleteSpecialSchedule": "Er is een fout opgetreden bij het verwijderen van openingstijden"
+				},
+				"DeleteSpecialScheduleSuccess": "Openingstijden succesvol verwijderd",
+				"requestWishTime": "Verzoek wenstijd",
+				"assoonasPossible": "Zo spoedig mogelijk",
+				"futureTime": "Toekomstige tijd",
+				"generalopening": "Algemene openingstijden",
+				"orderingTimes": "Besteltijden",
+				"addDaysOfWeek": "Voeg dagen van de week toe",
+				"addDates": "Voeg datums toe",
+				"Include": "Inclusief",
+				"Exclude": "Exclusief",
+				"displayStartOrding": "Gewenste tijd weergeven bij het begin van de bestelling",
+				"wishTimeMinutes": "Wenstijd Intervallen - minuten",
+				"displayWishTimeFormat": "Geef het gewenste tijdformaat weer",
+				"times": "Tijden",
+				"timeSlots": "Tijdvakken",
+				"slotDuration": "Slotduur - minuten",
+				"limitOrder": "Beperk het aantal bestellingen per slot",
+				"noLimit": "Zonder limiet",
+				"limit": "Met Limiet",
+				"ordersPerSlot": "Bestellingen per slot",
+				"wishTimeInFutureMinutes": "Wens tijd in de toekomst - minuten",
+				"defaultOrderingMode": "Standaard bestelmodus",
+				"displaydesireddateandTime": "Geef de gewenste datum en tijd weer",
+				"dateandTime": "Datum Tijd",
+				"dateOnly": "Alleen datum"
+			},
+			"addNewSchedule": "Voeg een nieuw schema toe",
+			"scheduleList": "Schema's",
+			"filter": "Filter",
+			"ready": "Klaar",
+			"global": {
+				"openTime": "Openingstijden"
+			},
+			"defaultPaymentSelection": "Standaard betalingsselectie",
+			"notSelected": "Niet geselecteerd",
+			"preselected": "Voorgeselecteerd",
+			"common": {
+				"tooltip": {
+					"option": {
+						"addOption": "Klik hier om een ​​optie te maken"
+					},
+					"movedown": {
+						"Option": "Klik hier om naar beneden te gaan"
+					},
+					"moveup": {
+						"Option": "Klik hier om de optie omhoog te gaan"
+					}
+				}
+			},
+			"settingsDefaultVATPercentage": "Standaard btw%",
+			"tableOrdering": "Tafel bestellen",
+			"settingsHidden": "Verborgen",
+			"schedulesSlot": "Maximaal aantal items per slot",
+			"schedulesSlotnote": "Items die meetellen voor het totale aantal slots, moeten worden opgegeven",
+			"timeShouldFuture": "De tijd zou in de toekomst moeten zijn.",
+			"discountVoucher": "Kortingsbon",
+			"inputMinutes": "Voer minuten in",
+			"selectMinutes": "Selecteer minuten",
+			"estimatedTime": "Geschatte tijd",
+			"hideorderComment": "Verberg bestelopmerkingen",
+			"hideorderitemComment": "Verberg opmerkingen over bestelitems",
+			"catalogOffer": "Aanbiedingen",
+			"catalogCategory": "Categorie",
+			"settingDetails": "Store Details",
+			"settingOrdering": "Winkel bestellen",
+			"settingPayment": "Betalingsinstelling",
+			"settingPickup": "Oppakken",
+			"settingDelivery": "Levering",
+			"settingLocations": "Tafel",
+			"settingCatalog": "Winkelcatalogus",
+			"settingOrderingRule": "Bestelregel",
+			"settingSchedules": "Schema's",
+			"settingMarketing": "Marketing",
+			"settingDiscountVouchers": "Kortingsbon",
+			"domain": "Domeinen en Apps",
+			"customDomain": {
+				"additionalCustomDomain": "Extra aangepast domein",
+				"labelError": "De domeinwaarde is niet geldig"
+			},
+			"domaincustomInfo": "U kunt uw eigen aangepaste domein gebruiken, bijv. https://example.com of subdomein, bijv. https://mijnwinkel.voorbeeld.com naast uw GonnaOrder-domein. U moet wat aanvullende configuratie bij uw domeinprovider uitvoeren om dit te laten werken",
+			"catalogManageByExcel": "Beheer via Excel",
+			"settingspickupdisplaypickupAddress": "Afhaaladres weergeven",
+			"settingspickupHide": "Zich verstoppen",
+			"settingspickupShow": "Tonen",
+			"deleteStore": "Weet u zeker dat u deze winkel wilt verwijderen? Deze actie kan niet ongedaan gemaakt worden",
+			"deleteStoreSuccess": "Winkel is succesvol verwijderd",
+			"oneClickAddToBasket": "Met één klik in winkelmandje",
+			"errorMinimumWishTime": "Ongeldige toekomstige minimale wenstijd. Het moet een niet-nul positief getal zijn dat kleiner is dan of gelijk is aan 1440",
+			"deleteStoreMsgError": "Winkel {{storeId}} bevat bestellingen of catalogusitems en kan niet worden verwijderd",
+			"postCodesErrorMsg": "Een postcode mag maximaal 10 tekens lang zijn en moet bij meerdere postcodes worden gescheiden door komma's.",
+			"customers": {
+				"customers": "Klanten",
+				"customerName": "klantnaam",
+				"customerPhone": "Klant telefoon",
+				"customerEmail": "Klanten email",
+				"orders": "Bestellingen",
+				"firstOrder": "Eerste bestelling",
+				"lastOrder": "Last Order"
+			},
+			"setupZones": "Zones instellen",
+			"radiusPostCode": "Gebruik straal",
+			"zonePostCodes": "Postcodes gebruiken",
+			"radiusPostCodesDetails": "Definieer postcodes voor elke zone",
+			"radiusPostCodesDetails1": "Definieer een straalbereik voor elke zone. Dit is gebaseerd op gps-coördinaten van de klant.",
+			"radiusPostCodesDetails2": "Om deze functie in te schakelen, moet het automatisch aanvullen van adressen zijn ingeschakeld en moet u de GPS-locatie van uw winkel definiëren in het scherm met winkeldetails.",
+			"zoneName": "Zone naam",
+			"zonesRestrictions": "Beperkingen bezorgzone",
+			"enableCustomerAuthentication": "Klantauthenticatie inschakelen",
+			"settingsDeliverypolygondescription": "Definieer elke zone op een kaart. Dit is gebaseerd op GPS-coördinaten van de klant",
+			"settingsDeliverydraw_map": "Teken op kaart",
+			"settingsMaperrormsg": "Teken een polygoon voor deze zone op de kaart",
+			"storeNotfound": "De winkel is niet gevonden",
+			"externalOnlinePaymentId": "Externe online betalings-ID",
+			"externalNonOnlinePaymentId": "Externe niet-online betalings-ID",
+			"externalId": "Externe id",
+			"deliveryFeeExternalId": "Bezorgkosten externe id",
+			"combineorders": "Combineer bestellingen"
+		},
+		"load": {
+			"loadingMessage": "Wacht alsjeblieft"
+		},
+		"users": {
+			"removeAccessMsg": "Toegang tot de winkel verwijderen",
+			"userManage": {
+				"label": "Alle gebruikers"
+			},
+			"list": {
+				"inputEmail": "Voer een geldig e-mailadres in"
+			},
+			"details": {
+				"title": "gebruikersdetails",
+				"id": "ID kaart",
+				"username": "Gebruikersnaam",
+				"googleAccount": "Google account",
+				"facebookAccount": "Facebook account",
+				"backToAllUsers": "Terug naar alle gebruikers",
+				"deleteUserSuccess": "Gebruiker is succesvol verwijderd",
+				"updateUserSuccess": "Gebruiker is succesvol geüpdatet",
+				"confirmDeleteUser": "Weet u zeker dat u deze gebruiker wilt verwijderen?"
+			}
+		},
+		"register": {
+			"registerTitle": "Registreren",
+			"registerationSuccess": "Bedankt voor je inschrijving. U ontvangt binnenkort een e-mail om je account te verifiëren.",
+			"haveAccount": "Heb je al een account?",
+			"emailInfo": "U moet bevestigen dat deze e-mail van jou is",
+			"accept": "Door op de knop Registreren te klikken, accepteer je het volgende",
+			"phoneNumberoptional": "Telefoonnummer (optioneel)",
+			"acceptRegister": "Accepteer en registreer",
+			"registerHeaderMessage1": "Schrijf je zaak in op GonnaOrder.com",
+			"registerHeaderMessage2": "en begin je gratis proefperiode",
+			"registerFormStep1": "Vul het formulier in en verifieer uw e-mail",
+			"registerFormStep2": "Log in en creëer je winkel",
+			"registerFormStep3": "Upload je menu en configureer de instellingen",
+			"registerFinalMessage": "Je winkel is klaar voor gebruik voor je klanten!",
+			"continue": "Doorgaan",
+			"social": {
+				"google": "Registreer bij Google",
+				"facebook": "Registreer met Facebook",
+				"apple": "Registreer bij Apple"
+			}
+		},
+		"user": {
+			"profile": {
+				"updateTitle": "Profiel bijwerken"
+			},
+			"details": {
+				"emailErrorMsgInvaild": "E-mail is ongeldig",
+				"lastName": "Achternaam",
+				"confirmPassword": "Bevestig wachtwoord",
+				"confirmPasswordErrorMsgMisMatch": "Wachtwoorden komen niet overeen"
+			}
+		},
+		"passwordAuth": {
+			"passAuthButton": "Opnieuw authenticeren",
+			"passAuthPromt": "Bevestig het wachtwoord om door te gaan"
+		},
+		"storeError": {
+			"unExpected": "Er is een onverwachte fout opgetreden"
+		},
+		"menu": {
+			"preview": "Voorbeeld"
+		},
+		"continue": {
+			"accept": "Door op de knop Doorgaan te klikken, accepteer je het volgende"
+		},
+		"sodexo": {
+			"prompt": {
+				"purchase": "Exclusief 50% korting op het eerste jaarabonnement voor handelaars uit het Sodexo netwerk"
+			}
+		},
+		"printer": {
+			"printersList": "Printers",
+			"noPrinter": "Geen printer geregistreerd",
+			"registerPrinter": "Registreren",
+			"registerTitle": "Printer registreren",
+			"setPrinterName": "Printernaam instellen",
+			"printerName": "Printernaam",
+			"unregisterPrinter": "Verwijder printer uit lijst",
+			"confirmUnregister": "Weet u zeker dat u deze printer uit de lijst gaat verwijderen?",
+			"selectPrinter": "Selecteer printer",
+			"selectPrinterTitle": "Selecteer een printer",
+			"notEmpty": "Printernaam mag niet leeg zijn.",
+			"chooseAPrinter": "Kies een printer",
+			"star": {
+				"noPrinter": "Geen Star-printer gedetecteerd!"
+			},
+			"chooseAPrinterType": "Kies een printertype",
+			"connectionMethod": "Verbindingsmethode:",
+			"connectionMethodBluetooth": "",
+			"connectionMethodWiFi": "",
+			"connectionParameters": "Verbindingsparameters:",
+			"connectionIpOrHostName": "IP of hostnaam",
+			"connectionPort": "",
+			"connectionBluetoothMacAddr": "Mac adres",
+			"testPrint": "Test print",
+			"starPrinter": {
+				"support": "Alleen Star-printers worden ondersteund",
+				"indev": "Ondersteuning voor Star-printers in ontwikkeling"
+			},
+			"airPrinter": {
+				"support": "Alleen AirPrint-printers worden ondersteund"
+			}
+		}
+	}
+}

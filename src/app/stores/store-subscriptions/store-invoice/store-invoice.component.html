@@ -1,0 +1,252 @@
+<div class="animated fadeIn">
+    <div class="card list">
+        <div class="card-header">
+            {{'admin.store.setting.billing' | translate}}
+            <app-help-icon [helpPageName]="subscriptionPurchaseHelpPage"></app-help-icon>
+        </div>
+    </div>
+    <div class="card-body px-0">
+        <div class="col-lg-12">
+            <form [formGroup]="invoiceForm">
+                <div class="row" *ngIf="currencyList">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <label
+                                class="col-xl-2 col-lg-2 col-md-12 col-sm-12 mx-2 px-1 required">{{'admin.global.subscription.currency'
+                                | translate}}</label>
+                            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+                                <select 
+                                    class="form-control" 
+                                    onchange="this.dataset.chosen = this.value"
+                                    [class.is-invalid]="(getControl('currencyIsoCode').invalid) && (getControl('currencyIsoCode').dirty || getControl('currencyIsoCode').touched)"
+                                    formControlName="currencyIsoCode"
+                                    [ngClass]="{'default-option' : currencyIsoCode == null}"
+                                    (change)="selectCurrencyHandler($event)"
+                                >
+                                    <option value="">{{'admin.global.pleaseSelect'|translate}}</option>
+                                    <option value="{{currency}}" *ngFor="let currency of currencyList">{{currency}}
+                                    </option>
+                                </select>
+                                <div class="invalid-feedback" *ngIf="getControl('currencyIsoCode').errors">
+                                    <span
+                                        *ngIf="getControl('currencyIsoCode').errors.required || getControl('currencyIsoCode').errors.whitespace">{{'admin.global.field.required'|translate}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <label
+                                class="col-xl-2 col-lg-2 col-md-12 col-sm-12 mx-2 px-1 required">{{'admin.global.subscription.price.label'
+                                | translate}}</label>
+                            <div class="input-group col-xl-5 col-lg-5 col-md-12 col-sm-12 pl-3">
+                                <app-price-input [priceFormControl]="getControl('price')" [showCurrencySymbol]="false">
+                                </app-price-input>
+                                <div class="invalid-feedback" *ngIf="getControl('price').errors">
+                                    <span
+                                        *ngIf="getControl('price').errors.required || getControl('price').errors.whitespace">{{'admin.global.field.required'|translate}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <label class="col-xl-2 col-lg-2 col-md-12 col-sm-12">{{'admin.global.discount' |
+                                translate}}</label>
+                            <div class="input-group col-xl-5 col-lg-5 col-md-12 col-sm-12 ml-2 pl-4">
+                                <app-price-input [priceFormControl]="getControl('discount')"
+                                    [showCurrencySymbol]="false"></app-price-input>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <label
+                                class="col-xl-2 col-lg-2 col-md-12 col-sm-12">{{'admin.global.subscription.discountPercentage'
+                                | translate}}</label>
+                            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 ml-2 ml-2 pl-4">
+                                <select 
+                                    class="form-control" 
+                                    onchange="this.dataset.chosen = this.value" 
+                                    formControlName="discountPercentage"
+                                    [ngClass]="{'default-option' : discountPercentage == 0}"
+                                    (change)="selectDiscountPercentageHandler($event)"
+                                >
+                                    <option value="0">{{'admin.global.pleaseSelect'|translate}}</option>
+                                    <option value="5">5%</option>
+                                    <option value="10">10%</option>
+                                    <option value="15">15%</option>
+                                    <option value="20">20%</option>
+                                    <option value="25">25%</option>
+                                    <option value="30">30%</option>
+                                    <option value="35">35%</option>
+                                    <option value="40">40%</option>
+                                    <option value="45">45%</option>
+                                    <option value="50">50%</option>
+                                    <option value="55">55%</option>
+                                    <option value="60">60%</option>
+                                    <option value="65">65%</option>
+                                    <option value="70">70%</option>
+                                    <option value="75">75%</option>
+                                    <option value="80">80%</option>
+                                    <option value="85">85%</option>
+                                    <option value="90">95%</option>
+                                    <option value="95">95%</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <label
+                                class="col-xl-2 col-lg-2 col-md-12 col-sm-12">{{'admin.global.subscription.vatNumber.label'
+                                | translate}}</label>
+                            <div class="input-group col-xl-5 col-lg-5 col-md-12 col-sm-12 ml-2 pl-4">
+                                <input type="text" class="form-control"
+                                    [class.is-invalid]="(getControl('vatNumber').invalid || inValidVat) && (getControl('vatNumber').dirty || getControl('vatNumber').touched)"
+                                    [attr.placeholder]="'admin.global.subscription.vat.label' | translate"
+                                    autocomplete="vatNumber" formControlName="vatNumber" id="vat" maxlength="20"
+                                    aria-describedby="vatNumberHelpBlock" />
+                                <div class="invalid-feedback" *ngIf="getControl('vatNumber').errors">
+                                    <span *ngIf="getControl('vatNumber').errors.minlength">{{
+                                        'admin.global.field.minLength' | translate:{minLength:
+                                        getControl('vatNumber').errors.minlength.requiredLength} }}</span>
+                                    <span *ngIf="getControl('vatNumber').errors.maxlength">{{
+                                        'admin.global.field.maxLength' | translate:{maxLength:
+                                        getControl('vatNumber').errors.maxlength.requiredLength} }}</span>
+                                </div>
+                                <div class="invalid-feedback" *ngIf="!getControl('vatNumber').errors && inValidVat">
+                                    <span
+                                        *ngIf="inValidVat">{{'admin.global.subscription.vat.invalid'|translate}}</span>
+                                </div>
+                                <div class="valid-feedback d-block text-black"
+                                    *ngIf="inValidVat != null && !inValidVat && !getControl('vatNumber').errors && (getControl('vatNumber').dirty || getControl('vatNumber').touched) && ((selectedStore$ | async).address.country.code !== 'NL')">
+                                    {{'admin.global.subscription.vat.valid'|translate}}
+                                </div>
+                                <small id="vatNumberHelpBlock" class="form-text w-100"
+                                    *ngIf="(selectedStore$ | async).address?.country.code === 'BE'">
+                                    {{ 'admin.store.subscription.vatprompt.sodexobelgium' | translate}}
+                                </small>
+                                <img src="/assets/img/sodexo_logo.png" id="sodexo_logo"
+                                    *ngIf="(selectedStore$ | async).address?.country.code === 'BE'" />
+                                <small id="vatNumberHelpBlock" class="form-text w-100"
+                                    *ngIf="(selectedStore$ | async).address?.country.europeanCountry && (selectedStore$ | async).address?.country.code !== 'BE' && (selectedStore$ | async).address?.country.code !== 'NL'">
+                                    {{ 'admin.store.subscription.vatprompt.eu' | translate}}
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <label class="col-xl-2 col-lg-2 col-md-12 col-sm-12">{{'admin.store.paymentProvider'|translate}}</label>
+                            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 ml-2 ml-2 pl-4">
+                                <select 
+                                    class="form-control"
+                                    onchange="this.dataset.chosen = this.value" 
+                                    formControlName="paymentProvider"
+                                    [ngClass]="{'default-option' : paymentProvider == null}"
+                                    (change)="selectPaymentProviderHandler($event)"
+                                 >
+                                    <option value="">{{'admin.global.pleaseSelect'|translate}}</option>
+                                    <option value="STRIPE">Stripe</option>
+                                    <option value="PAYPAL">PayPal</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <label class="col-xl-2 col-lg-2 col-md-12 col-sm-12">{{'admin.global.subscription.paymentId'
+                                | translate}}</label>
+                            <div class="input-group col-xl-5 col-lg-5 col-md-12 col-sm-12 ml-2 ml-2 pl-4">
+                                <input type="text" class="form-control" formControlName="paymentId" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <label
+                                class="col-xl-2 col-lg-2 col-md-12 col-sm-12">{{'admin.global.subscription.partnerEmail'
+                                | translate}}</label>
+                            <div class="input-group col-xl-5 col-lg-5 col-md-12 col-sm-12 ml-2 pl-4">
+                                <input type="text" class="form-control"
+                                    [class.is-invalid]="(getControl('partnerEmail').invalid) && (getControl('partnerEmail').dirty || getControl('partnerEmail').touched)"
+                                    formControlName="partnerEmail" />
+                                <div class="invalid-feedback" *ngIf="getControl('partnerEmail').errors">
+                                    <span
+                                        *ngIf="getControl('partnerEmail').errors.email">{{'admin.user.details.emailErrorMsgInvaild'
+                                        | translate}}.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <label class="col-xl-2 col-lg-2 col-md-12 col-sm-12">{{'admin.global.voucher.label' |
+                                translate}}</label>
+                            <div class="input-group col-xl-5 col-lg-5 col-md-12 col-sm-12 ml-2 pl-4">
+                                <input type="text" class="form-control"
+                                    [class.is-invalid]="(getControl('voucherCode').invalid || inValidVoucher || reservedVoucher) && (getControl('voucherCode').dirty || getControl('voucherCode').touched)"
+                                    [attr.placeholder]="'admin.global.voucher.label' | translate"
+                                    autocomplete="voucherCode" formControlName="voucherCode" maxlength="16" />
+                                <div class="invalid-feedback" *ngIf="getControl('voucherCode').errors">
+                                    <span *ngIf="getControl('voucherCode').errors.minlength">{{
+                                        'admin.global.field.minLength' | translate:{minLength:
+                                        getControl('voucherCode').errors.maxlength.requiredLength} }}</span>
+                                    <span *ngIf="getControl('voucherCode').errors.maxlength">{{
+                                        'admin.global.field.maxLength' | translate:{maxLength:
+                                        getControl('voucherCode').errors.maxlength.requiredLength} }}</span>
+                                    <span *ngIf="getControl('voucherCode').errors.pattern">{{
+                                        'admin.global.subscription.discountVoucher.patternInvalid' | translate }}</span>
+                                </div>
+                                <div class="invalid-feedback"
+                                    *ngIf="!getControl('voucherCode').errors && inValidVoucher">
+                                    <span
+                                        *ngIf="inValidVoucher">{{'admin.global.subscription.discountVoucher.invalid'|translate}}</span>
+                                </div>
+                                <div class="invalid-feedback"
+                                    *ngIf="!getControl('voucherCode').errors && reservedVoucher">
+                                    <span
+                                        *ngIf="reservedVoucher">{{'admin.global.subscription.discountVoucher.alreadyReserved'|translate}}</span>
+                                </div>
+                                <div class="valid-feedback d-block text-black"
+                                    *ngIf="inValidVoucher != null && !inValidVoucher && !getControl('voucherCode').errors && (getControl('voucherCode').dirty || getControl('voucherCode').touched)">
+                                    {{'admin.global.subscription.discountVoucher.valid'|translate}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="row mt-3">
+                <div class="buttonGroup w-100">
+                    <div class="col-8 floatLeft">
+                        <button type="button" class="btn btn-primary mr-0" (click)="onSaveInvoice()"
+                            [disabled]="invoiceForm.invalid"><i class="fas fa-save mr-2 pr-1"></i>{{'admin.global.save'|translate}}</button>
+                        <a title="{{'admin.store.catalog.backToOffer'|translate}}" class="actionLink"
+                            (click)="goBack()">{{'admin.global.cancel'|translate}}</a>
+                    </div>
+                    <div class="col-4 mt-1 float-right" *ngIf="invoiceId!=0">
+                        <button title="{{'admin.global.delete'|translate}}" (click)="onDeleteInvoice()"
+                            class="btn btn-danger float-right"><i class="fas fa-trash mr-2 pr-1 text-white"></i>{{'admin.global.delete'|translate}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

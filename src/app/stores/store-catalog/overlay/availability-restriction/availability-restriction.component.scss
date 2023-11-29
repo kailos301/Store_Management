@@ -1,0 +1,20 @@
+@import "../../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../../node_modules/bootstrap/scss/mixins";
+
+#availabilityRestriction{
+    display: flex;
+        @include media-breakpoint-down(md) {
+            display: inline-block;
+        }
+}
+.mat-dialog-actions{
+    float: right;
+    button{
+        margin-left: 15px;
+    }
+}
+.cursorPointer{
+    cursor: pointer;
+    text-decoration: underline !important;
+}

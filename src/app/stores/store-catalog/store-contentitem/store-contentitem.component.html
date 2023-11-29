@@ -1,0 +1,183 @@
+<div class="card list">
+  <div class="card-header">
+    <strong>{{'admin.store.catalog.contentItem.contentItem'|translate}}</strong>
+    <app-help-icon [helpPageName]="storeContentitemHelpPage"></app-help-icon>
+  </div>
+  <div class="card-body" *ngIf="(store$ | async) && mode != 'VARIANT_OFFER'">
+    <div *ngIf="translationPresent" role="alert" class="alert alert-danger">
+      <strong>{{'admin.store.catalog.contentItem.languagTtranslationMsg'|translate}}</strong>
+    </div>
+    <form [formGroup]="contentItemForm">
+      <div class="row">
+        <div class="form-group col-sm-12">
+          <label for="languageId">{{'admin.store.catalog.contentItem.Language'|translate}}</label>
+          <div class="input-group mb-4">
+            <select class="form-control" data-chosen="" onchange="this.dataset.chosen = this.value"
+              [class.is-invalid]="getControl('languageId').invalid && (getControl('languageId').dirty || getControl('languageId').touched)"
+              placeholder="Language" formControlName="languageId" id="languageId">
+              <option value="">{{'admin.global.pleaseSelect'|translate}}</option>
+              <option *ngFor="let lang of languagesList" value="{{ lang.id }}">{{ lang.name }}</option>
+            </select>
+            <div class="invalid-feedback"
+              *ngIf="getControl('languageId').errors && getControl('languageId').errors.required">
+              {{'admin.global.field.required'|translate}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="name">{{'admin.global.name'|translate}}</label>
+            <div class="input-group mb-4">
+              <input type="text" class="form-control"
+                [class.is-invalid]="getControl('name').invalid && (getControl('name').dirty || getControl('name').touched)"
+                placeholder="Name" autocomplete="name" formControlName="name" id="name" maxlength="50"/>
+              <div class="invalid-feedback" *ngIf="getControl('name').errors">
+                <span *ngIf="getControl('name').errors.required">{{'admin.global.field.required'|translate}}</span>
+                <span *ngIf="getControl('name').errors.minlength">{{'admin.global.field.minLength'|translate: {minLength: getControl('name').errors.minlength.requiredLength} }}</span>
+                <span *ngIf="getControl('name').errors.maxlength">{{'admin.global.field.maxLength'|translate: {maxLength: getControl('name').errors.maxlength.requiredLength} }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" *ngIf="mode != 'CHILD_CATEGORY'">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="shortDescription">{{'admin.store.catalog.translation.shortDescription'|translate}}</label>
+            <div class="input-group mb-4">
+              <input type="text" class="form-control"
+              [class.is-invalid]="getControl('shortDescription').invalid && (getControl('shortDescription').dirty || getControl('shortDescription').touched)"
+                placeholder="shortDescription" autocomplete="shortDescription" formControlName="shortDescription"
+                id="shortDescription" maxlength="50"/>
+              <div class="invalid-feedback" *ngIf="getControl('shortDescription').errors">
+                  <span *ngIf="getControl('shortDescription').errors.maxlength">Short description cannot exceed {{getControl('shortDescription').errors.maxlength.requiredLength}} characters</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" *ngIf="mode != 'CHILD_OFFER' && mode != 'CHILD_CATEGORY'">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="longDescription">{{'admin.store.catelog.longDescription'|translate}}</label>
+            <div class="input-group mb-4">
+              <input type="text" class="form-control" placeholder="longDescription" autocomplete="LongDescription"
+              [class.is-invalid]="getControl('longDescription').invalid && (getControl('longDescription').dirty || getControl('longDescription').touched)"
+              formControlName="longDescription" id="longDescription" maxlength="1000"/>
+              <div class="invalid-feedback" *ngIf="getControl('longDescription').errors">
+                <span *ngIf="getControl('longDescription').errors.maxlength">Long description cannot exceed {{getControl('longDescription').errors.maxlength.requiredLength}} characters</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+          <button type="button" class="btn btn-primary px-4" (click)="publishContentItem()"
+            [disabled]="contentItemForm.invalid">{{'admin.store.catalog.contentItem.addContentItem'|translate}}</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div *ngIf="content && content.length > 0 && mode != 'VARIANT_OFFER'">
+    <div class="card-header">
+      <strong>{{'admin.store.catalog.contentItem.assignedTranslations'|translate}}</strong>
+      <app-help-icon [helpPageName]="storeContentitemHelpPage"></app-help-icon>
+    </div>
+    <div class="card-body">
+      <table class="table table-responsive-sm table-striped">
+        <thead>
+          <th>{{'admin.store.catalog.contentItem.Language'|translate}}</th>
+          <th>{{'admin.store.catalog.offerName'|translate}}</th>
+          <th *ngIf="mode != 'CHILD_CATEGORY'">{{'admin.store.catalog.translation.shortDescription'|translate}}</th>
+          <th></th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let translations of content">
+            <td>{{getLanguageName(translations.languageId)}}</td>
+            <td>{{translations.name}}</td>
+            <td *ngIf="mode != 'CHILD_CATEGORY'">{{translations.shortDescription}}</td>
+            <td><a (click)="deleteTranslation(translations)">{{'admin.store.catalog.offerDelete'|translate}}</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="card-body" *ngIf="(store$ | async) && mode == 'VARIANT_OFFER'">
+    <div *ngIf="translationPresent" role="alert" class="alert alert-danger">
+      <strong>{{'admin.store.catalog.contentItem.languagTtranslationMsg'|translate}}</strong>
+    </div>
+    <form [formGroup]="contentItemVariantForm">
+      <div class="row">
+        <div class="form-group col-sm-12">
+          <label for="languageId">{{'admin.store.catalog.contentItem.Language'|translate}}</label>
+          <div class="input-group mb-4">
+            <select class="form-control" data-chosen="" onchange="this.dataset.chosen = this.value"
+              [class.is-invalid]="getVariantControl('languageId').invalid && (getVariantControl('languageId').dirty || getVariantControl('languageId').touched)"
+              placeholder="Language" formControlName="languageId" id="languageId">
+              <option value="">{{'admin.global.pleaseSelect'|translate}}</option>
+              <option *ngFor="let lang of languagesList" value="{{ lang.id }}">{{ lang.name }}</option>
+            </select>
+            <div class="invalid-feedback"
+              *ngIf="getVariantControl('languageId').errors && getVariantControl('languageId').errors.required">
+              {{'admin.global.field.required'|translate}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="priceDescription">{{'admin.store.catelog.priceDescription'|translate}}</label>
+            <div class="input-group mb-4">
+              <input type="text" class="form-control"
+                [class.is-invalid]="getVariantControl('priceDescription').invalid && (getVariantControl('priceDescription').dirty || getVariantControl('priceDescription').touched)"
+                placeholder="Price Description" autocomplete="priceDescription" formControlName="priceDescription"
+                id="priceDescription" maxlength="50"/>
+              <div class="invalid-feedback" *ngIf="getVariantControl('priceDescription').errors">
+                <span *ngIf="getVariantControl('priceDescription').errors.required">Price description is required.</span>
+                <span *ngIf="getVariantControl('priceDescription').errors.minlength">Price description should have minimum {{getVariantControl("priceDescription").errors.minlength.requiredLength}} characters</span>
+                <span *ngIf="getVariantControl('priceDescription').errors.maxlength">Price description cannot exceed {{getVariantControl("priceDescription").errors.maxlength.requiredLength}} characters</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <button type="button" class="btn btn-primary px-4" (click)="publishVariantContentItem()"
+            [disabled]="contentItemVariantForm.invalid">{{'admin.store.catalog.contentItem.addContentItem'|translate}}</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div *ngIf="content && content.length > 0 && mode == 'VARIANT_OFFER'">
+    <div class="card-header">
+      <strong>{{'admin.store.catalog.contentItem.assignedTranslations'|translate}}</strong>
+      <app-help-icon [helpPageName]="storeContentitemHelpPage"></app-help-icon>
+    </div>
+    <div class="card-body">
+      <table class="table table-responsive-sm table-striped">
+        <thead>
+          <th>{{'admin.store.catalog.contentItem.Language'|translate}}</th>
+          <th>{{'admin.store.catelog.priceDescription'|translate}}</th>
+          <th></th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let translations of content">
+            <td>{{getLanguageName(translations.languageId)}}</td>
+            <td>{{translations.priceDescription}}</td>
+            <td><a (click)="deleteTranslation(translations)">{{'admin.store.catalog.offerDelete'|translate}}</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

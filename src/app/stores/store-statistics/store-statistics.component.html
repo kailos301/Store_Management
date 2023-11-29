@@ -1,0 +1,205 @@
+<div class="col-lg-12">
+  <div class="card list">
+    <div class="card-header">
+      {{ 'admin.store.statistics.title' | translate }}
+      <app-help-icon [helpPageName]="storeStatisticsHelpPage"></app-help-icon>
+    </div>
+    <div class="card-body statistics">
+      <div class="row">
+        <div class="col-sm-2">
+          <label for="from" class="col-sm-12 p-0 mb-0">{{'admin.store.statistics.period'|translate}}</label>
+          <mat-form-field>
+            <mat-select [(ngModel)]="periodicTerm" #periodicTermRef name="period" (selectionChange)="onPeriodChange()">
+              <mat-option [value]="'MONTHLY'">
+                {{'admin.store.statistics.monthly'|translate}}
+              </mat-option>
+              <mat-option [value]="'DAILY'">
+                {{'admin.store.statistics.daily'|translate}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-5">
+          <label for="from" class="col-sm-12 p-0 mb-0">{{ 'admin.store.statistics.from' | translate }}</label>
+          <app-day-date-picker [dayDate]="fromDate" #fromDateDaily (dayChange)="chosenFromDayHandler($event)"
+            [type]="'fromDate'" *ngIf="periodicTerm==='DAILY'"></app-day-date-picker>
+          <app-month-date-picker [monthDate]="fromDate" #fromDateMonthly (monthChange)="chosenFromMonthHandler($event)"
+            [type]="'fromDate'" *ngIf="periodicTerm==='MONTHLY'"></app-month-date-picker>
+        </div>
+        <div class="col-sm-5">
+          <label for="to" class="col-sm-12 p-0 mb-0">{{ 'admin.store.statistics.to' | translate }}</label>
+          <app-day-date-picker [dayDate]="toDate" #toDateDaily (dayChange)="chosenToDayHandler($event)"
+            [type]="'toDate'" *ngIf="periodicTerm==='DAILY'"></app-day-date-picker>
+          <app-month-date-picker [monthDate]="toDate" #toDateMonthly (monthChange)="chosenToMonthHandler($event)"
+            [type]="'toDate'" *ngIf="periodicTerm==='MONTHLY'"></app-month-date-picker>
+        </div>
+      </div>
+      <div class="row my-3">
+        <div class="col-md-12">
+          <div class="row pl-3">
+            <button [ngClass]="activeBtn === 0 ? 'btnChange' : ''" class="btn btn-outline-primary rounded-0"
+              type="button" [value]="statisticsTypes[0]" (click)="onTypeChange(statisticsTypes[0])">
+              <span class="d-block">{{ 'admin.store.statistics.orders' | translate }} - {{ totalSubmitted }}</span>
+            </button>
+            <button [ngClass]="activeBtn === 1 ? 'btnChange' : ''" class="btn btn-outline-primary rounded-0"
+              type="button" [value]="statisticsTypes[1]" (click)="onTypeChange(statisticsTypes[1])">
+              <span class="d-block">{{ 'admin.store.statistics.menuViewing' | translate }} - {{ totalViewed }}</span>
+            </button>
+            <button [ngClass]="activeBtn === 2 ? 'btnChange' : ''" class="btn btn-outline-primary rounded-0"
+              type="button" [value]="statisticsTypes[2]" (click)="onTypeChange(statisticsTypes[2])">
+              <span class="d-block">{{ 'admin.store.statistics.orderValue' | translate }} - {{ (total |
+                localizedCurrency : (store$ | async).currency.isoCode:(locale$ | async)) | async }}</span>
+            </button>
+            <button [ngClass]="showOrderItem ? 'btnChange' : ''" class="btn btn-outline-primary rounded-0" type="button"
+              [value]="statisticsTypes[3]" (click)="onOrderItemClick()">
+              <span class="d-block">{{ 'admin.store.statistics.orderItems' | translate }}</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="chart-wrapper row" *ngIf="fromDate?.value && toDate?.value && !showOrderItem">
+        <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+          [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType"
+          [plugins]="lineChartPlugins">
+        </canvas>
+      </div>
+      <div *ngIf="showOrderItem">
+        <div class="row">
+          <div class="col-sm-12">
+            <table class="table table-responsive-sm">
+              <thead>
+                <tr>
+                  <th><span></span></th>
+                  <th>{{ 'admin.global.name' | translate }}</th>
+                  <th class="align-items-center">{{ 'admin.store.statistics.quantitySold' | translate }}<i
+                      (click)="onSortClick($event,'totalQuantity')"
+                      [ngClass]='(orderStatus==="totalQuantity") ? isSortingForAll : "sort-icon fas fa-sort"'></i>
+                  </th>
+                  <th *ngIf="orderStatus==='totalQuantity' || orderStatus ==='offer' " class="align-items-right">{{
+                    'admin.store.statistics.revenueLabel' | translate }}<i class="sort-icon fas fa-sort"
+                      (click)="onSortClick($event,'totalDiscountedPrice')"></i>
+                  </th>
+                  <th *ngIf="(orderStatus !=='totalQuantity' && orderStatus !=='offer')" class="align-items-right">
+                    {{'admin.store.statistics.revenueLabel' | translate }}<i
+                      (click)="onSortClick($event,'totalDiscountedPrice')"
+                      [ngClass]='orderStatus==="totalDiscountedPrice"? isSortingForAll : "sort-icon fas fa-sort-down"'></i>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngIf="!(orderItemsStatisticsList$ | async)?.data?.length">
+                  <td colspan="7">{{ 'admin.global.noData' | translate }}</td>
+                </tr>
+                <tr *ngFor="let list of (orderItemsStatisticsList$ | async)?.data" (click)="goToStoreOfferPage(list)"
+                  [ngClass]="list.hierarchyLevel==='PARENT' ? 'cursor-pointer' : ''">
+                  <td class="py-1"><img *ngIf="list?.imageUrl" [src]="list?.imageUrl" /></td>
+                  <td>{{ list.offer }}</td>
+                  <td class="align-items-center">{{ list.totalQuantity}}</td>
+                  <td class="align-items-right">{{(list.totalDiscountedPrice|
+                    localizedCurrency : (store$ | async).currency.isoCode:(locale$ | async))|async}}</td>
+                </tr>
+              </tbody>
+            </table>
+            <app-pager [totalPagesCount]="(orderItemsStatisticsList$ | async).totalPages"
+              [page]="(orderItemsStatisticsList$ | async).paging.page"
+              [size]="(orderItemsStatisticsList$ | async).paging.size" (paginate)="paginate($event)">
+            </app-pager>
+          </div>
+        </div>
+        <div class="row mb-2 mt-4">
+          <div class="col-md-8">
+            <p><span class="font-weight-bold">{{ 'admin.store.statistics.orderItemSummary' | translate }}:</span> {{
+              'admin.store.statistics.orderItemSummaryDescription' | translate }}</p>
+          </div>
+          <div class="col-md-4">
+            <button (click)="downloadXls('SUMMARY_LIST')" class="btn btn-primary px-4 text-white"><img
+                src="assets/img/excel-icon.png" width="30px" class="mr-2" />{{ 'admin.store.orderDownload' | translate
+              }}</button>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-8">
+            <p><span class="font-weight-bold">{{ 'admin.store.statistics.orderItemDetails' | translate }}:</span> {{
+              'admin.store.statistics.orderItemDetailsDescription' | translate }}</p>
+          </div>
+          <div class="col-md-4">
+            <button (click)="downloadXls('ITEMIZED_LIST')" class="btn btn-primary px-4 text-white"><img
+                src="assets/img/excel-icon.png" width="30px" class="mr-2" />{{ 'admin.store.orderDownload' | translate
+              }}</button>
+          </div>
+        </div>
+      </div>
+      <div class="row" *ngIf="fromDate?.value && toDate?.value && !showOrderItem">
+        <div class="col-sm-12">
+          <table class="table table-responsive-sm">
+            <thead>
+              <tr>
+                <th *ngIf="periodicTerm==='DAILY'"><span>{{ 'admin.store.statistics.day' | translate }}</span></th>
+                <th><span>{{ 'admin.store.statistics.month' | translate }}</span></th>
+                <th><span>{{ 'admin.store.statistics.year' | translate }}</span></th>
+                <th *ngIf="type.value == statisticsTypes[0]"><span>{{ 'admin.store.statistics.submitted' | translate
+                    }}</span></th>
+                <th *ngIf="type.value == statisticsTypes[0]"><span>{{ 'admin.store.statistics.received' | translate
+                    }}</span></th>
+                <th *ngIf="type.value == statisticsTypes[0]"><span>{{ 'admin.store.closed' | translate }}</span></th>
+                <th *ngIf="type.value == statisticsTypes[0]"><span>{{ 'admin.store.cancelled' | translate }}</span></th>
+                <th *ngIf="type.value == statisticsTypes[0]"><span>{{ 'admin.store.statistics.total' | translate
+                    }}</span></th>
+                <th *ngIf="type.value == statisticsTypes[1]"><span>{{ 'admin.store.statistics.totalViewing' | translate
+                    }}</span></th>
+                <th *ngIf="type.value == statisticsTypes[2]"><span class="float-right">{{(store$ |
+                    async).currency.symbol}} {{ 'admin.store.statistics.totalPaid' | translate }}</span></th>
+                <th *ngIf="type.value == statisticsTypes[2]"><span class="float-right">{{(store$ |
+                    async).currency.symbol}} {{ 'admin.store.statistics.totalNonPaid' | translate }}</span></th>
+                <th *ngIf="type.value == statisticsTypes[2]"><span class="float-right">{{(store$ |
+                    async).currency.symbol}} {{ 'admin.store.statistics.totalAll' | translate }}</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngIf="!(statistics).length">
+                <td *ngIf="type.value == statisticsTypes[0]" colspan="7">{{ 'admin.global.noData' | translate }}</td>
+                <td *ngIf="type.value == statisticsTypes[1]" colspan="3">{{ 'admin.global.noData' | translate }}</td>
+                <td *ngIf="type.value == statisticsTypes[2]" colspan="5">{{ 'admin.global.noData' | translate }}</td>
+              </tr>
+              <tr *ngFor="let statistics of (statistics)">
+                <td *ngIf="periodicTerm==='DAILY'">{{ statistics.day }}</td>
+                <td>{{ statistics.month }}</td>
+                <td>{{ statistics.year }}</td>
+                <td *ngIf="type.value == statisticsTypes[0]">{{ statistics.submitCount }}</td>
+                <td *ngIf="type.value == statisticsTypes[0]">{{ statistics.receivedCount }}</td>
+                <td *ngIf="type.value == statisticsTypes[0]">{{ statistics.closedCount }}</td>
+                <td *ngIf="type.value == statisticsTypes[0]">{{ statistics.cancelCount }}</td>
+                <td *ngIf="type.value == statisticsTypes[0]">{{ statistics.totalSubmitted }}</td>
+                <td *ngIf="type.value == statisticsTypes[1]">{{ statistics.totalViewings }}</td>
+                <td *ngIf="type.value == statisticsTypes[2]"><span class="float-right">{{ (statistics.totalPaid |
+                    localizedCurrency : (store$ | async).currency.isoCode:(locale$ | async)) | async }}</span></td>
+                <td *ngIf="type.value == statisticsTypes[2]"><span class="float-right">{{ (statistics.totalNonPaid |
+                    localizedCurrency : (store$ | async).currency.isoCode:(locale$ | async)) | async }}</span></td>
+                <td *ngIf="type.value == statisticsTypes[2]"><span class="float-right">{{ (statistics.total |
+                    localizedCurrency : (store$ | async).currency.isoCode:(locale$ | async)) | async }}</span></td>
+              </tr>
+              <tr *ngIf="statistics.length">
+                <td>{{ 'admin.store.statistics.total' | translate }}</td>
+                <td *ngIf="periodicTerm==='DAILY'"></td>
+                <td></td>
+                <td *ngIf="type.value == statisticsTypes[0]">{{ statisticsTotal.submitCount }}</td>
+                <td *ngIf="type.value == statisticsTypes[0]">{{ statisticsTotal.receivedCount }}</td>
+                <td *ngIf="type.value == statisticsTypes[0]">{{ statisticsTotal.closedCount }}</td>
+                <td *ngIf="type.value == statisticsTypes[0]">{{ statisticsTotal.cancelCount }}</td>
+                <td *ngIf="type.value == statisticsTypes[0]">{{ totalSubmitted }}</td>
+                <td *ngIf="type.value == statisticsTypes[1]">{{ totalViewed }}</td>
+                <td *ngIf="type.value == statisticsTypes[2]"><span class="float-right">{{ (statisticsTotal.totalPaid |
+                    localizedCurrency : (store$ | async).currency.isoCode:(locale$ | async)) | async }}</span></td>
+                <td *ngIf="type.value == statisticsTypes[2]"><span class="float-right">{{ (statisticsTotal.totalNonPaid
+                    | localizedCurrency : (store$ | async).currency.isoCode:(locale$ | async)) | async }}</span></td>
+                <td *ngIf="type.value == statisticsTypes[2]"><span class="float-right">{{ (total | localizedCurrency :
+                    (store$ | async).currency.isoCode:(locale$ | async)) | async }}</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

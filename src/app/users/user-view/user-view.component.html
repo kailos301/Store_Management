@@ -1,0 +1,189 @@
+<div class="col-lg-12">
+  <a class="btn back-button btn-primary mb-4" [routerLink]="['/manager/users/list']">
+    <i class="fas fa-arrow-left mr-2"></i>
+    <span class="d-none d-md-inline-block d-lg-inline-block d-xl-inline-block ml-1">{{'admin.users.details.backToAllUsers'| translate}}</span>
+  </a>
+  <div class="card list">
+    <div class="card-header">
+      {{'admin.users.details.title'|translate}}
+      <!-- <app-help-icon [helpPageName]="settingsHelpPage"></app-help-icon> -->
+    </div>
+    <div class="card-body" *ngIf="(user$ | async)?.id !== -1">
+      <div class="row form-group p-1 ml-2">
+        <div class="col-3">
+          {{'admin.users.details.id'|translate}}
+        </div>
+        <div class="col-9">
+          {{(user$ | async)?.id}}
+        </div>
+      </div>
+      <div class="row form-group p-1 ml-2">
+        <div class="col-3">
+          {{'admin.global.firstName'|translate}}
+        </div>
+        <div class="col-9">
+          {{(user$ | async)?.firstName}}
+        </div>
+      </div>
+      <div class="row form-group p-1 ml-2">
+        <div class="col-3">
+          {{'admin.user.details.lastName'|translate}}
+        </div>
+        <div class="col-9">
+          {{(user$ | async)?.lastName}}
+        </div>
+      </div>
+      <div class="row form-group p-1 ml-2">
+        <div class="col-3">
+          {{'admin.users.details.username'|translate}}
+        </div>
+        <div class="col-9">
+          {{(user$ | async)?.username}}
+        </div>
+      </div>
+      <div class="row form-group p-1 ml-2">
+        <div class="col-3">
+          {{'admin.global.email'|translate}}
+        </div>
+        <div class="col-9">
+          {{(user$ | async)?.email}}
+        </div>
+      </div>
+      <div class="row form-group p-1 ml-2">
+        <div class="col-3">
+          {{'admin.global.country'|translate}}
+        </div>
+        <div class="col-9">
+          {{(user$ | async)?.country?.name}}
+        </div>
+      </div>
+      <div class="row form-group p-1 ml-2">
+        <div class="col-3">
+          {{'admin.global.phoneNumber'|translate}}
+        </div>
+        <div class="col-9">
+          + {{(user$ | async)?.country?.phoneCode}} {{(user$ | async)?.phoneNumber}}
+        </div>
+      </div>
+      <div class="row form-group p-1 ml-2">
+        <div class="col-3">
+          {{'admin.store.preferredLanguage.label'|translate}}
+        </div>
+        <div class="col-9">
+          {{(user$ | async)?.preferredLanguage?.name}}
+        </div>
+      </div>
+      <div class="row form-group p-1 ml-2">
+        <div class="col-3">
+          {{'admin.global.role'|translate}}
+        </div>
+        <div class="col-9">
+          <ng-container *ngFor="let role of (user$ | async)?.roles; index as index">
+            <ng-container *ngIf="index !== 0"> / </ng-container>
+            <ng-container *ngIf="role === 'SUPER_ADMIN'">{{'admin.global.superAdmin' | translate}}</ng-container>
+            <ng-container *ngIf="role === 'PARTNER'">{{'admin.global.partner' | translate}}</ng-container>
+            <ng-container *ngIf="role === 'STORE_ADMIN'">{{'admin.global.administrator' | translate}}</ng-container>
+            <ng-container *ngIf="role === 'STORE_STANDARD'">{{'admin.global.standardUser' | translate}}</ng-container>
+          </ng-container>
+        </div>
+      </div>
+      <div class="row form-group p-1 ml-2" *ngIf="(user$ | async)?.googleAccount !== null">
+        <div class="col-3">
+          {{'admin.users.details.googleAccount'|translate}}
+        </div>
+        <div class="col-9">
+          <div class="row m-0">
+            <div class="pr-3">
+              <img src="{{(user$ | async)?.googleAccount?.picture}}" />
+            </div>
+            <div>
+              <table>
+                <tr>
+                  <td class="pr-3">{{'admin.global.firstName'|translate}}</td>
+                  <td>{{(user$ | async)?.googleAccount?.firstName}}</td>
+                </tr>
+                <tr>
+                  <td class="pr-3">{{'admin.user.details.lastName'|translate}}</td>
+                  <td>{{(user$ | async)?.googleAccount?.lastName}}</td>
+                </tr>
+                <tr>
+                  <td class="pr-3">{{'admin.global.email'|translate}}</td>
+                  <td>{{(user$ | async)?.googleAccount?.email}}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row form-group p-1 ml-2" *ngIf="(user$ | async)?.facebookAccount !== null">
+        <div class="col-3">
+          {{'admin.users.details.facebookAccount'|translate}}
+        </div>
+        <div class="col-9">
+          <div class="row m-0">
+            <div class="pr-3">
+              <img src="{{(user$ | async)?.facebookAccount?.picture}}" />
+            </div>
+            <div>
+              <table>
+                <tr>
+                  <td class="pr-3">{{'admin.global.firstName'|translate}}</td>
+                  <td>{{(user$ | async)?.facebookAccount?.firstName}}</td>
+                </tr>
+                <tr>
+                  <td class="pr-3">{{'admin.user.details.lastName'|translate}}</td>
+                  <td>{{(user$ | async)?.facebookAccount?.lastName}}</td>
+                </tr>
+                <tr>
+                  <td class="pr-3">{{'admin.global.email'|translate}}</td>
+                  <td>{{(user$ | async)?.facebookAccount?.email}}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row form-group p-1 ml-2">
+        <div class="col-3">
+          {{'admin.global.emailStatus'|translate}}
+        </div>
+        <div class="col-9">
+          <div class="row m-0">
+            <select class="form-control w-50 mr-3" id="language" [(ngModel)]="emailStatus">
+              <option value="BOUNCED">BOUNCED</option>
+              <option value="UNVERIFIED">UNVERIFIED</option>
+              <option value="VERIFIED">VERIFIED</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row form-group p-1 ml-2"  *ngIf="(storeLocaleTimeZone$ | async) as storeLocaleTimeZone">
+        <div class="col-3">
+          {{'admin.global.registeredAt'|translate}}
+        </div> 
+        <div class="col-9">
+          <ng-container *ngIf="dayCheck((user$ | async)?.registeredAt) as registeredAtDay">
+            <ng-container > {{(user$ | async)?.registeredAt | localizedDate:'HH:mm':storeLocaleTimeZone.locale:storeLocaleTimeZone.timezone | async }} </ng-container>
+            <ng-container *ngIf="registeredAtDay === DayType.YESTERDAY" class="space-nowrap">- {{ 'admin.store.order.yesterday' | translate }}</ng-container>
+            <ng-container *ngIf="registeredAtDay === DayType.TODAY" class="space-nowrap">- {{ 'admin.store.order.today' | translate }}</ng-container>
+            <ng-container *ngIf="registeredAtDay === DayType.TOMORROW" class="space-nowrap"> - {{ 'admin.store.order.tomorrow' | translate }}</ng-container>
+            <ng-container *ngIf="registeredAtDay === DayType.DEFAULT" class="space-nowrap">- {{(user$ | async)?.registeredAt | localizedDate:'ddd DD MMM' :storeLocaleTimeZone.locale:storeLocaleTimeZone.timezone | async }}</ng-container>
+          </ng-container>
+        </div>
+      </div>
+      <div class="row form-group mt-5" *ngIf="user?.roles?.includes('SUPER_ADMIN') === false">
+        <div class="col-lg-12">
+          <button class="btn btn-primary ml-4" [disabled]="user.emailVerified === emailStatus ? 'disabled' : null" (click)="updateEmailStatus()">
+            <i class="fas fa-save text-white mr-2"></i>
+            {{'admin.global.save'|translate}}
+          </button>
+          <a type="link" class="text-blue cursorPointer text-underline order-1 ml-2" [routerLink]="['/manager/users/list']">{{'admin.global.cancel' | translate}}</a>
+          <button class="btn btn-danger float-right" (click)="deleteUser()">
+            <i class="fas fa-trash mr-2 text-white"></i>
+            {{'admin.global.delete'|translate}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

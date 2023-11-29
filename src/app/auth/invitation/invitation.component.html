@@ -1,0 +1,22 @@
+<app-header (locale)="onLocaleChange($event)"></app-header>
+<div class="app-body" [ngClass]="{'pt-0 app-body-form':(status$ | async) !== 'FAILED','mt-2 pt-5':(status$ | async) === 'FAILED'}">
+  <main class="main d-flex align-items-center" [ngClass]="{'mt-n5':(status$ | async) === 'FAILED'}">
+    <div class="container pt-1">
+      <div class="alert-wrapper justify-content-center">
+        <div class="container text-center">
+          <div role="alert" class="alert w-100 alert-danger" *ngIf="(status$ | async) === 'FAILED'">
+            <strong>{{'admin.alerts.headerError' | translate}}</strong> {{ error$ | async }}
+          </div>
+        </div>
+      </div>
+      <div class="card-group" [ngClass]="{'mt-0':(status$ | async) === 'FAILED'}">
+        <div class="card">
+          <div class="card-body">
+            <app-registration-login-details-form [mode]="mode" [languageId]="languageId" [newLoginDetails]="newLoginDetails" (submitEvent)="registerByInvitationAction($event)">
+            </app-registration-login-details-form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

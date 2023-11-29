@@ -1,0 +1,18 @@
+<div>
+    <div mat-dialog-content>
+        <div class="w-100 d-flex">
+            <div class="icon">
+                <i class="fa fa-exclamation-triangle text-blue">
+                </i>
+            </div>
+            <div>{{'admin.store.deleteStore'|translate}}
+            </div>
+        </div>
+    </div>
+    <div mat-dialog-actions class="mt-2">
+        <a type="link" class="text-blue actionLink float-right mt-1"
+        (click)="onNoClick()">{{'admin.global.cancel'|translate}}</a>
+        <button type="button" class="btn btn-primary px-4 float-right"
+            (click)="deleteStore()">{{'admin.global.ok'|translate}}</button>
+    </div>
+</div>

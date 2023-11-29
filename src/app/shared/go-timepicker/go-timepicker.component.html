@@ -1,0 +1,63 @@
+<form [formGroup]="timepickerForm" class="d-flex flex-wrap align-items-center">
+  <table>
+    <tbody>
+      <tr class="text-center">
+        <!-- increment hours button-->
+        <td>
+          <a class="btn btn-link mr-2" (click)="increaseHours()" [class.disabled]="disabled">
+            <i class="fas fa-chevron-up"></i>
+          </a>
+        </td>
+        <!-- divider -->
+        <td>&nbsp;&nbsp;&nbsp;</td>
+        <!-- increment minutes button -->
+        <td>
+          <a class="btn btn-link ml-2" (click)="increaseMinutes()" [class.disabled]="disabled">
+            <i class="fas fa-chevron-up"></i>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <!-- hours -->
+        <td class="form-group">
+          <input 
+            type="text" 
+            class="form-control time-input-field mr-2" 
+            placeholder="HH"
+            maxlength="2" 
+            formControlName="hoursInput"
+            [value]="hoursFormatted"
+            [class.is-invalid]="invalidHours" >
+        </td> 
+        <!-- divider -->
+        <td>&nbsp;:&nbsp;</td> 
+        <!-- minutes -->
+        <td class="form-group">
+          <input 
+            type="text" 
+            class="form-control time-input-field ml-2"
+            placeholder="MM" 
+            maxlength="2" 
+            formControlName="minutesInput"
+            [value]="minutesFormatted"
+            [class.is-invalid]="invalidMinutes" >
+        </td> 
+      </tr>
+      <tr class="text-center">
+        <!-- decrement hours button-->
+        <td> 
+          <a class="btn btn-link mr-2"(click)="reduceHours()" [class.disabled]="disabled || reduceHoursDisabled()">
+            <i class="fas fa-chevron-down"></i> 
+          </a> 
+        </td>
+        <!-- divider -->
+        <td>&nbsp;&nbsp;&nbsp;</td> <!-- decrement minutes button-->
+        <td>
+          <a class="btn btn-link ml-2" (click)="reduceMinutes()" [class.disabled]="disabled || reduceMinutesDisabled()">
+            <i class="fas fa-chevron-down"></i>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>

@@ -1,0 +1,7 @@
+<button class="btn btn-primary px-4" type="button" (click)="onClick($event)" *ngIf="isAdmin"> {{ buttonText }} </button>
+
+<div class="font-size-primary text-unselectable col-md-3 px-0 mt-2" *ngIf="!isAdmin">
+    <a href="#" class="button dark d-block text-center py-3 w-100" (click)="onClick($event)">
+      {{ buttonText }}
+    </a>
+</div>

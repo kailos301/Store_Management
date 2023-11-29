@@ -1,0 +1,124 @@
+<div class="animated fadeIn">
+        <div class="col-sm-12">
+            <div class="card list">
+                <div class="col-lg-12 mb-4 d-flex align-items-center justify-content-between p-0">
+                    <a title="{{'admin.store.catalog.backToCatalog'|translate}}"
+                        class="btn back-button btn-primary"
+                        [routerLink]="['/manager/stores/'+storeId+'/catalog']">
+                        <i class="fas fa-arrow-left mr-2"></i> <span
+                            class="d-none d-md-inline-block d-lg-inline-block d-xl-inline-block ml-1">{{'admin.store.catalog.backToCatalog'| translate}}</span>
+                    </a>
+                </div>
+                <div class="card-header">
+                    <strong *ngIf="importMode === 'UPDATE_EXCEL' || importMode === 'EXCEL'" class="font-weight-normal">{{'admin.store.catalog.upload'|translate}}</strong>
+                    <strong *ngIf="importMode === 'TRANSLATE'" class="font-weight-normal">{{'admin.store.catalog.importTranslation'|translate}}</strong>
+                    <strong *ngIf="importMode === 'IMAGE'" class="font-weight-normal">{{'admin.store.catalog.importImage'|translate}}</strong>
+                    <app-help-icon [helpPageName]="catalogUploadHelpPage"></app-help-icon>
+                </div>
+                <div class="card-body">
+                    <div [ngSwitch]="importMode">
+                        <div *ngSwitchCase="'EXCEL'">
+                            <p>{{'admin.store.catalog.importTranslationnew'|translate}}</p>
+                            <ol>
+                                <li>{{'admin.store.catalog.importTranslationnew1'|translate}}<a href="assets/templates/excelUpload/Catalog_Import.xlsx"
+                                        title="{{'admin.store.catalog.downloadTemplate'|translate}}"><img
+                                            src="assets/img/download-excel-template.png" class="ml-2" width="30px" /></a></li>
+                                <li>{{'admin.store.catalog.importTranslation4'|translate}}</li>
+                            </ol>
+                            <div class="form-group">
+                                <div class="input-group mb-4">
+                                    <input id="verifyCatalog" type="file" name="catalog" #inputFile (change)="verifyCatalog($event)" />
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngSwitchCase="'UPDATE_EXCEL'">
+                            <p>{{'admin.store.catalog.updateTranslation'|translate}} </p>
+                            <ol>
+                                <li>{{'admin.store.catalog.updateTranslation1'|translate}} <a (click)="downloadToUpdateXls()"
+                                    title="{{'admin.store.catalog.downloadTemplate'|translate}}"><img src="assets/img/download-excel-template.png" class="ml-2" width="30px" /></a>
+                                </li>
+                                <li>{{'admin.store.catalog.updateTranslation2'|translate}} <br>
+                                    {{'admin.store.catalog.updateTranslation3'|translate}} <br>
+                                        {{'admin.store.catalog.updateTranslation4'|translate}} 
+                                </li>
+                                <li>{{'admin.store.catalog.importTranslation4'|translate}}</li>
+                            </ol>
+                            <div class="form-group">
+                                <div class="input-group mb-4">
+                                    <input id="verifyCatalog" type="file" name="catalog" #inputFile (change)="verifyCatalog($event)" />
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngSwitchCase="'TRANSLATE'">
+                            <p>{{'admin.store.catalog.importTranslation1'|translate}}</p>
+                            <ol>
+                                <li>{{'admin.store.catalog.importTranslation12'|translate}}<a (click)="downloadXls()"><img
+                                    src="assets/img/download-excel-template.png" class="ml-2" width="30px" />
+                                </a><br>
+                                {{'admin.store.catalog.importTranslation2'|translate}}
+                            </li>
+                                <li>{{'admin.store.catalog.importTranslation3'|translate}}</li>
+                                <li>{{'admin.store.catalog.importTranslation4'|translate}}</li>
+                            </ol>
+                            <div class="form-group">
+                                <div class="input-group mb-4"> 
+                                    <input id="verifyCatalog" type="file" name="catalog" #inputFile (change)="verifyCatalog($event)" />
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngSwitchDefault>
+                            <p>{{'admin.store.catalog.importImageInfo'|translate}}</p>
+                            <input class="mb-4" id="verifyImage" type="file" name="image" (change)="verifyCatalogImage($event)" />
+                        </div>
+                    </div>
+                    <div *ngIf="(catalog$ | async) && !isCategoryEmpty && importMode !== 'TRANSLATE'" >
+                        <div *ngIf="(catalog$ | async).categories">
+                            <mat-accordion class="example-headers-align"></mat-accordion>
+                            <mat-expansion-panel [expanded]="true"
+                                *ngFor="let category of (catalog$ | async).categories">
+                                <mat-expansion-panel-header [class.existingEntity]="category.categoryId != null">
+                                    <mat-panel-title><span class="item">{{category.name}}</span>
+                                    </mat-panel-title>
+                                </mat-expansion-panel-header>
+                                <div class="offer-list">
+                                    <div class="offer-box" *ngFor="let offer of category.offers"
+                                        [class.existingEntity]="offer.offerId != null">
+                                        <div class="d-flex py-2 mx-3 w-100">
+                                            <div class="d-flex flex-fill flex-column">
+                                                <div class="item d-flex">
+                                                    {{offer.name}}
+                                                </div>
+                                                <div class="d-flex">
+                                                    {{offer.shortDescription}}
+                                                </div>
+                                                <div class="d-flex price">
+                                                    {{offer.formattedPrice}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </mat-expansion-panel>
+                        </div>
+
+                        <div class="row" *ngIf="this.importMode !== 'TRANSLATE'">
+                            <div class="col-12 buttonGroup">
+                                <button type="button" class="btn btn-primary px-4" (click)="acceptAndUpload($event)" [disabled]="isCategoryEmpty">{{importMode === 'UPDATE_EXCEL' ? ('admin.store.catalog.acceptUpdate'|translate) : 'admin.store.catalog.acceptImport'|translate}}</button>
+                                <a class="actionLink" title="{{'admin.store.catalog.backToCatalog'|translate}}"
+                                    [routerLink]="['/manager/stores/'+storeId+'/catalog']">{{'admin.global.cancel'|translate}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" *ngIf="importMode === 'TRANSLATE' && file">
+                        <div class="col-12 buttonGroup">
+                            <button type="button" class="btn btn-primary px-4" (click)="uploadTranslation()" [disabled]="isUploadTranslate">
+                                {{'admin.global.uploadNow'|translate}}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</div>

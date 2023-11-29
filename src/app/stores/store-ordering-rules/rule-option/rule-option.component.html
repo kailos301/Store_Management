@@ -1,0 +1,164 @@
+<div class="animated fadeIn" id="saveRuleOption">
+  <div class="col-sm-12">
+    <div class="card list">
+      <div class="col-lg-12 mb-4 d-flex align-items-center justify-content-between p-0">
+        <a title="{{'admin.store.catalog.backToOffer'|translate}}"
+          [routerLink]="['/manager/stores/'+storeId+'/settings/ordering-rules/'+ruleId]"
+          class="btn back-button btn-primary">
+          <i class="fas fa-arrow-left mr-2"></i>
+          <span>{{'admin.store.setting.rules.backtorule'|translate}}</span>
+        </a>
+      </div>
+
+      <div class="card-header">
+        <span *ngIf="optionId==0">{{'admin.store.catalog.option.createOption'|translate}}</span>
+        <span *ngIf="optionId>0 && (ruleOption$|async)">{{'admin.store.catalog.option.option'|translate}}
+          {{(ruleOption$|async).name}}</span>
+        <app-help-icon [helpPageName]="childOfferHelpPage"></app-help-icon>
+      </div>
+      <div class="card-body">
+        <app-catalog-language></app-catalog-language>
+        <form [formGroup]="ruleOptionForm">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="form-group">
+                <label for="offerName"
+                  class="col-xl-2 col-lg-3 col-md-12 col-sm-12 required">{{'admin.global.name'|translate}}</label>
+                <div class="input-group col-xl-10 col-lg-9 col-md-12 col-sm-12">
+                  <input type="text" class="form-control"
+                    [class.is-invalid]="getControl('name').invalid && (getControl('name').dirty || getControl('name').touched)"
+                    placeholder="{{'admin.global.name'|translate}}" autocomplete="off" formControlName="name"
+                    id="offerName" maxlength="50" />
+                  <div class="invalid-feedback" *ngIf="getControl('name').errors">
+                    <span
+                      *ngIf="getControl('name').errors.required || getControl('name').errors.whitespace">{{'admin.global.field.required'|translate}}</span>
+                    <span
+                      *ngIf="getControl('name').errors.minlength">{{'admin.global.field.minLength'|translate: {minLength: "2"} }}</span>
+                    <span
+                      *ngIf="getControl('name').errors.maxlength">{{'admin.global.field.maxLength'|translate: {maxLength: "50"} }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="form-group">
+                <label for="shortDesc"
+                  class="col-xl-2 col-lg-3 col-md-12 col-sm-12">{{'admin.store.catalog.description.shortDescription'|translate}}</label>
+                <div class="input-group col-xl-10 col-lg-9 col-md-12 col-sm-12">
+                  <input type="text" class="form-control"
+                    [class.is-invalid]="getControl('shortDescription').invalid && (getControl('shortDescription').dirty || getControl('shortDescription').touched)"
+                    placeholder="{{'admin.store.catalog.description.shortDescription'|translate}}"
+                    autocomplete="shortDescription" formControlName="shortDescription" id="shortDesc" maxlength="150" />
+                  <div class="invalid-feedback" *ngIf="getControl('shortDescription').errors">
+                    <span
+                      *ngIf="getControl('shortDescription').errors.maxlength">{{'admin.global.field.maxLength'|translate: {maxLength: "150"} }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="form-group">
+                <label for="price"
+                  class="col-xl-2 col-lg-3 col-md-12 col-sm-12">{{'admin.global.price'|translate}}</label>
+                <div class="input-group col-xl-10 col-lg-9 col-md-12 col-sm-12 priceContainer">
+                  <app-price-input [allowNegValue]="true" [priceFormControl]="getControl('price')"></app-price-input>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-lg-12 col-md-12 col-sm-12">
+              <label for="sellable"
+                class="col-xl-2 col-lg-3 col-md-12 col-sm-12 required">{{'admin.store.catalog.sellable.isVisible'|translate}}</label>
+              <div class="input-group col-xl-10 col-lg-9 col-md-12 col-sm-12">
+                {{'admin.global.no'|translate}} &nbsp;<mat-slide-toggle formControlName="sellable">
+                  {{'admin.global.yes'|translate}}</mat-slide-toggle>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-lg-12">
+              <label for="sellable" class="col-xl-2 col-lg-3 col-md-12 col-sm-12 hideInSmallScreen"></label>
+              <div class="input-group col-xl-4 col-lg-6 col-md-12 col-sm-12"
+                *ngIf="getControl('sellable').value == 'true' || getControl('sellable').value == true">
+                <select 
+                  class="form-control" 
+                  onchange="this.dataset.chosen = this.value" 
+                  formControlName="scheduleId" 
+                  id="availability"
+                  [ngClass]="{'default-option' : scheduleId == 0}"
+                  (change)="selectScheduleIdHandler($event)"
+                >
+                  <option value="0">{{'admin.store.catalog.availability.allTimeAvailability'|translate}}</option>
+                  <option *ngFor="let item of scheduleList" value="{{ item.id }}">
+                    {{ item.name }}
+                  </option>
+                </select>
+              </div>
+              <button type="button" class="btn btn-primary" *ngIf="getControl('sellable').value == 'true' || getControl('sellable').value == true"
+                  (click)="gotoAddSchedule()">{{'admin.store.addNewSchedule'|translate}}</button>
+            </div>
+          </div>
+
+          <div class="row" *ngIf="optionId>0 && stockManagementEnabled">
+            <div class="form-group col-lg-12">
+              <label for="stockCheck"
+                class="col-xl-2 col-lg-3 col-md-12 col-sm-12">{{'admin.store.settingsStockcheck'|translate}}</label>
+              <div class="input-group col-xl-4 col-lg-6 col-md-12 col-sm-12">
+                <div class="form-group">
+                  <label class="mt-1">{{'admin.store.disabled'|translate}}</label> &nbsp;
+                  <label class="switch">
+                    <input type="checkbox" formControlName="isStockCheckEnabled" id="isStockCheckEnabled" />
+                    &nbsp;<span class="slider round"></span>
+                  </label>&nbsp;
+                  <label class="mt-1">{{'admin.store.enabled'|translate}}</label> &nbsp;
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="stockLevel"
+                  class="col-xl-3 col-lg-3 col-md-12 col-sm-12">{{'admin.store.settingStocklevel'|translate}}</label>
+                <div class="input-group col-xl-9 col-lg-9 col-md-12 col-sm-12 mt-n1">
+                  <input type="number" class="form-control"
+                    [class.is-invalid]="getControl('stockLevel').invalid && (getControl('stockLevel').dirty || getControl('stockLevel').touched)"
+                    placeholder="{{'admin.store.settingStocklevel'|translate}}" autocomplete="stockLevel"
+                    formControlName="stockLevel" id="stockLevel" minlength="0" min="0" max="100000"
+                    maxlength="100000" />
+                  <div class="invalid-feedback" *ngIf="getControl('stockLevel').errors">
+                    <span
+                      *ngIf="getControl('stockLevel').errors.required || getControl('stockLevel').errors.whitespace">{{'admin.global.field.required'|translate}}</span>
+                    <span
+                      *ngIf="getControl('stockLevel').errors.min">{{'admin.global.field.minLength'|translate: {minLength: "0"} }}</span>
+                    <span
+                      *ngIf="getControl('stockLevel').errors.max">{{'admin.global.field.maxLength'|translate: {maxLength: "100000"} }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="optionId > 0">
+            <app-content-translation [content]="(ruleOption$|async)?.languageTranslation" [mode]="'CHILD_OFFER'" (submitEvent)="updateContentItem($event)">
+            </app-content-translation>
+          </div>
+          <div class="row">
+            <div class="buttonGroup w-100">
+              <div class="col-8 floatLeft">
+                <button type="button" class="btn btn-primary" [disabled]="ruleOptionForm.invalid"
+                  (click)="saveOffer()"><i class="fas fa-save mr-2 pr-1"></i>{{'admin.global.save'|translate}}</button>
+                <a title="{{'admin.store.catalog.backToOffer'|translate}}" (click)="goBack()"
+                  class="actionLink">{{'admin.global.cancel'|translate}}</a>
+              </div>
+              <div class="col-4 mt-1 float-right" *ngIf="optionId>0">
+                <button title="{{'admin.global.delete'|translate}}" (click)="deleteOffer()"
+                  class="btn btn-danger float-right"><i class="fas fa-trash mr-2 pr-1 text-white"></i>{{'admin.global.delete'|translate}}</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+form div.form-group {
+    display: flex;
+
+    @include media-breakpoint-down(md) {
+        display: block;
+    }
+}
+
+::ng-deep #subsEndDate .mat-form-field-appearance-fill .mat-form-field-flex{
+    padding: 0 !important;
+}

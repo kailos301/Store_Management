@@ -1,0 +1,461 @@
+<div class="position-relative" [style.height]="isPos ? innerHeight + 'px' : '100%'">
+  <div class="overflow-auto overflow-x" id="scrollableContaner" [style.height]="isPos ? innerHeight + 'px' : '100%'" (scroll)="onResize($event)" #scrollableContaner>
+    <div *ngIf="(selectedStore$ | async)?.settings?.IMAGE; else templateNoHero" class="position-relative">
+      <div class="hero" [style.padding-left]="backgroundMargin + 'px'" #heroHeader>
+        <img [src]="(selectedStore$ | async)?.settings?.IMAGE">
+      </div>
+      <div class="d-none d-sm-flex row m-0 logo-gradient-container">
+        <div [style.width]="backgroundMargin + 'px'" class="h-100" [style.background-color]="logoBackgrondColor"></div>
+        <div
+          class="h-100"
+          style="width: 100px;"
+          [ngStyle]="{background: 'linear-gradient(to right, ' + logoBackgrondColor + ' 0%, transparent 2500%)'}"></div>
+        <div
+          class="h-100"
+          style="width: 40vw; max-width: 700px;"
+          [ngStyle]="{background: 'linear-gradient(to right, ' + logoBackgrondColor + ' -4%, transparent 96%)'}"></div>
+      </div>
+      <span class="row m-0 align-items-center logo-container">
+        <img
+          class="logo mt-sm-0"
+          *ngIf="selectedStore?.settings?.LOGO && selectedStore?.settings?.IMAGE"
+          [src]="(selectedStore$ | async)?.settings?.LOGO"
+          [style.margin-top]="'-' + logoMargin + 'px'"
+          (load)="onCalcLogoColor($event)"
+          width="120"
+          crossorigin="anonymous"
+        >
+        <span [ngClass]="{'font-white': isDark}" class="store-information mt-2 mt-sm-0">
+          <div *ngIf="selectedStore && selectedStore.name" class="pb-1 font-size-header font-weight-bold">
+            {{selectedStore.name}}
+          </div>
+          <div class="py-1 font-size-primary">{{selectedStore?.description}}</div>
+          <div *ngIf="openTimeSchedule" class="pt-1 mb-2 d-flex align-items-center open-time space-nowrap font-size-primary font-weight-bold" (click)="OnOpenTimeModal($event)" style="cursor: pointer;">
+            <i class="far fa-clock pr-2" [ngClass]="{'font-white': isDark}"></i>
+            <span>{{'public.global.opentimelist' | translate}}</span>
+          </div>
+        </span>
+      </span>
+      <app-store-catalog-language-selector [haveBackground]="true"></app-store-catalog-language-selector>
+    </div>
+
+    <ng-template  #templateNoHero>
+      <div class="store-info position-relative mx-auto py-4" #noHeroHeader>
+        <div class="store-title d-flex flex-column m-1">
+          <div class="font-size-header font-weight-bold pb-1">{{(selectedStore$ | async)?.name}}</div>
+          <div class="font-size-primary py-1">{{(selectedStore$ | async)?.description}}</div>
+          <div *ngIf="openTimeSchedule" class="pt-1 d-flex align-items-center open-time space-nowrap font-size-primary font-weight-bold" (click)="OnOpenTimeModal($event)" style="cursor: pointer;">
+            <i class="far fa-clock pr-2 text-dark"></i>
+            <span>{{'public.global.opentimelist' | translate}}</span>
+          </div>
+        </div>
+        <app-store-catalog-language-selector></app-store-catalog-language-selector>
+      </div>
+    </ng-template>
+    <div class="p-0 content-wrapper mx-auto" [ngClass]="{'view-order': cartItems && cartItems.length > 0}">
+      <div class="row justify-content-center m-0 mx-auto main-container">
+        <div
+          class="menu-category-container container pb-0 px-0 mx-0 mx-lg-2 mx-xl-4"
+          [ngClass]="{'mt-1': !openTimeSchedule && !(selectedStore && shouldDisplayDateSelection() && availableSlots) && !shouldDisplaySiblingSelection() && (selectedStore$ | async)?.settings?.IMAGE && (selectedStore$ | async)?.settings?.LOGO, 'basket-disabled': !basketEnabled}"
+          #menuCategoryContainer
+        >
+          <div class="d-flex flex-wrap pl-2 justify-content-center align-items-center content-header mx-auto" [ngClass]="{'my-2': openTimeSchedule, 'basket-disabled': !basketEnabled}">
+            <div class="w-100 d-flex flex-wrap align-items-center mt-2" *ngIf="selectedStore && shouldDisplaySiblingSelection()">
+              <app-store-sibling-selector></app-store-sibling-selector>
+            </div>
+            <div #menuCategorySearchContainer class="w-100 d-flex flex-wrap align-items-center pt-2 pb-2 max-calc-width" [ngClass]="{'top-panel sticky': showStickySearchCategories}">
+              <app-store-checkout-order-time-selector class="mb-2" *ngIf="selectedStore && shouldDisplayDateSelection() && availableSlots"
+                [userLang$]="userLang$"
+                [deliveryTime]="deliveryTime"
+                [showSlotSelection]="shouldDisplaySlotSelection()"
+                [availableSlots]="availableSlots"
+                (dateChanged)="onDateChanged($event)"
+                (selectedSlotChanged)="onSelectedSlotChanged($event)"
+                [timeShowEnabled]="!isTimeShowDisabled()"
+              >
+              </app-store-checkout-order-time-selector>
+    
+              <div style="display: flex; flex: 1;">
+                <input style="flex: 1;" [(ngModel)]="categorySearch" class="cat-search" (input)="onKeypressSearchCategory($event)" placeholder="Search...">
+                <button class="cat-search-btn btn btn--line btn--md">
+                  <i *ngIf="!categorySearch" class="fa fa-search" aria-hidden="true"></i>
+                  <i *ngIf="!!categorySearch" class="fa fa-times" (click)="clearSearchCategory()" aria-hidden="true"></i>
+              </button>
+              </div>
+            </div>
+            <div style="flex: 1; text-align: center;">
+              <div class="text-danger font-size-primary px-3 ml-1" *ngIf="showClosedStoreMessage">
+                {{ 'public.store.time.closed' | translate }}
+              </div>
+            </div>
+            <!-- <div style="flex: 1;"></div> -->
+          </div>
+          <div class="loader-wrapper d-flex w-100 h-100" *ngIf="!menuCategories || (selectedStoreStatus$ | async) !== 'LOADED' || selectedCatalog === -1">
+            <div class="d-flex flex-column w-100 text-center align-self-center">
+              <div class="lds-ripple mx-auto">
+                <div></div>
+                <div></div>
+              </div>
+              <div class="loading-message">{{'public.load.loadingMessage' | translate}}</div>
+            </div>
+          </div>
+          <div class="wrapper" *ngIf="menuCategories && (selectedStoreStatus$ | async) === 'LOADED'">
+            <!-- TABS START  -->
+            <div class="nav-tabs-wrapper"
+              [ngClass]="{'heroheader': (selectedStore$ | async)?.settings?.IMAGE}"
+              [style.background-image]="getBackgroundImage( (selectedStore$ | async)?.settings?.IMAGE_BACKGROUND )"
+            >
+            <div class="nav-tabs-container w-100 position-relative pb-3" [ngClass]="{'sticky': showStickyCategories, 'basket-disabled': !basketEnabled, 'sticky-top-with-time': showStickyCategories && selectedStore && shouldDisplayDateSelection() && availableSlots && availableSlots.length > 0, 
+                                                                                      'sticky-top-no-time': showStickyCategories && !(selectedStore && shouldDisplayDateSelection() && availableSlots && availableSlots.length > 0)}">
+                <!-- <img src="/assets/img/chevron_left-24px.svg"
+                    class="chevron-left position-absolute pb-3"
+                    [ngClass]="{'d-flex': navTabWrapper.scrollLeft > 0}"
+                    (click)="scrollCategoriesWrapper('scrollRight')"
+                /> -->
+                <div class="nav-tabs-container w-100 pt-2" #navTabWrapper>
+                  <ul class="nav nav-tabs d-inline-flex ml-2" id="myTabs" role="tablist" #navTabContainer>
+                    <li *ngFor="let catItem of menuCategories; let first = first;" [ngClass]="{firstItem: first}" role="presentation" class="catalog_category_li mx-3 position-relative  text-unselectable" [class.active]="selectedCat === catItem.categoryId" id="tab{{catItem.categoryId}}">
+                      <a (click)="onSelectCategory(catItem.categoryId)" aria-controls="one" role="tab" data-toggle="tab" [ngClass]="{ 'font-size-primary': true, 'font-weight-bold': (selectedCat === catItem.categoryId) }">{{catItem.name}}</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- <img src="/assets/img/chevron_right-24px.svg"
+                    class="chevron-right position-absolute pb-3"
+                    [ngClass]="{'d-flex': (navTabContainer.offsetWidth > navTabWrapper.offsetWidth) && (navTabWrapper.scrollLeft < (navTabContainer.offsetWidth - navTabWrapper.offsetWidth))}"
+                    (click)="scrollCategoriesWrapper('scrollLeft')"
+                /> -->
+              </div>
+
+              <div class="tab-content pb-5" [ngClass]="{'screen-blur': currentCartStatus !== 'LOADED'}" #myTabContent>
+                <ng-container *ngFor="let catItem of menuCategories;" >
+                  <div class="tab-pane-wrapper" *ngIf="catItem.offers && catItem.offers.length > 0 && (!categorySearch || checkCategorySearchFilter(catItem.offers))">
+                    <div
+                      class="tab-pane fade in show active pt-0 px-0"
+                      [ngClass]="{'active-cat': selectedCat === catItem.categoryId, 'collapsable': (selectedStore$ | async)?.settings?.CATALOG_CATEGORIES_COLLAPSE === true}"
+                      role="tabpanel"
+                      id="category{{catItem.categoryId}}"
+                      aria-labelledby="home-tab"
+                    >
+                      <div class="cat-name w-100 p-3 font-weight-bold" [style.background]="(getBackgroundImage( (selectedStore$ | async)?.settings?.IMAGE_BACKGROUND )) ? '' : '#F2F0EE'" [style.font-size.rem]="'1'" (click)="currentCartStatus === 'LOADED' && onSelectCategory(catItem.categoryId, 'toggle')"> {{catItem.name}}
+                      </div>
+                      <div class="tab-pane-content-wrapper" [ngClass]="getCatAnimation(catItem)">
+                        <div class="mx-3 my-2 font-size-primary">{{catItem.shortDescription}}<hr class="mt-2 mb-xs-0 mb-2" *ngIf="catItem.shortDescription"/></div>
+                        <div class="row px-4">
+                          <ng-container *ngFor="let menuItem of catItem.offers;">
+                            <div
+                              (click)="currentCartStatus === 'LOADED' && viewProductDetails(menuItem.offerId, catItem.categoryId, menuItem.inStock, menuItem.isExpandable, menuItem.isOrderable, basketEnabled)"
+                              class="menu-item d-flex justify-content-between position-relative col-md-6 float-left p-0 my-md-1 my-0"
+                              [ngClass]="{'discount': menuItem.discount, 'pointer': menuItem.inStock && (menuItem.isExpandable || (basketEnabled && menuItem.isOrderable)), 'col-lg-12': isPos, 'col-xl-6': isPos}"
+                              *ngIf="!categorySearch || (menuItem && menuItem.name && menuItem.name.toLocaleLowerCase().includes(categorySearch.toLocaleLowerCase()))"
+                              title="click to add to cart"
+                            >
+                              <div
+                                class="d-flex mx-2 my-0 my-md-1 w-100"
+                                [ngClass]="{'overlay': !menuItem.inStock}"
+                                *ngIf="checkOfferInCart(menuItem); let orderItem"
+                              >
+                                <div class="in-cart" *ngIf="!!orderItem.item"></div>
+                                <div class="d-flex flex-fill flex-column text-unselectable m-2">
+                                  <div  class="item d-flex font-size-primary mr-3 font-weight-bold">
+                                    <span *ngIf="orderItem.item && orderItem.item.totalOfferQuantity > 1" class="pr-2">{{orderItem.item.totalOfferQuantity}} x</span>
+                                    <span [innerHtml]="menuItem.name | highlightSearch: categorySearch"></span>
+                                  </div>
+                                  <div class="description d-flex mr-1 text-break font-size-secondary" *ngIf="menuItem.shortDescription">{{ menuItem.shortDescription }}</div>
+                                  <div class="d-flex flex-wrap">
+                                    <div class="price d-inline-block font-size-primary font-weight-bold" *ngIf="!menuItem.discount || !menuItem.discountType; else discountedView">
+                                      <span *ngIf="menuItem.price > 0">
+                                        <span *ngIf="menuItem.priceDescription" class="mr-1 font-size-primary">{{ menuItem.priceDescription }}</span>
+                                        {{ menuItem.price | formatPrice: selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol }}
+                                      </span>
+                                      <span class="mr-1 font-size-primary" *ngIf="menuItem.price == 0 && menuItem.variants && menuItem.variants.length > 0">{{'public.global.standard' | translate}}</span>
+                                    </div>
+                                    <ng-template #discountedView>
+                                      <div class="price font-size-primary" *ngIf="menuItem.discount && menuItem.discountType=='MONETARY'; else discountedPercentileView">
+                                        <span *ngIf="menuItem.priceDescription" class="mr-1 font-size-primary font-weight-bold">{{ menuItem.priceDescription }}</span>
+                                        <div class="d-inline-block">
+                                        <span class="strikethrough mr-1 font-size-primary">{{ menuItem.price | formatPrice: selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol  }}</span>
+                                        <span class="discounted-price ml-1 font-size-primary font-weight-bold">{{ menuItem.price - menuItem.discount | formatPrice: selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol  }}</span>
+                                        <img src="assets/img/tag.svg" class="ml-2 mr-2" width="13px"/>
+                                      </div>
+                                    </div>
+                                  </ng-template>
+                                  <ng-template #discountedPercentileView>
+                                    <div class="price font-size-primary">
+                                      <span *ngIf="menuItem.priceDescription" class="mr-1 font-size-primary font-weight-bold">{{ menuItem.priceDescription }}</span>
+                                      <div class="d-inline-block">
+                                        <span class="strikethrough mr-1 font-size-primary">{{ menuItem.price | formatPrice: selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol  }}</span>
+                                        <span class="ml-1 font-size-primary font-weight-bold">{{ (menuItem.price * (100 - menuItem.discount) / 100) | formatPrice: selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol  }}</span>
+                                        <img src="assets/img/tag.svg" class="ml-2 mr-2" width="13px"/> <span class="discounted-price font-size-primary font-weight-bold">- {{ menuItem.discount | number}}%</span>
+                                      </div>
+                                    </div>
+                                  </ng-template>
+                                  <ng-container>
+                                  <span class="variant font-size-primary" *ngFor="let variant of menuItem.variants">
+                                    <span class="font-weight-bold" *ngIf="!variant.discount || !variant.discountType; else variantDiscountedView">
+                                      <span *ngIf="variant.priceDescription" class="mr-1 font-size-primary font-weight-bold">{{ variant.priceDescription }}</span>
+                                      {{ variant.price | formatPrice: selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol  }}
+                                    </span>
+                                    <ng-template #variantDiscountedView>
+                                      <span class="font-size-primary" *ngIf="variant.discount && variant.discountType=='MONETARY'; else variantPercentileView">
+                                        <span *ngIf="variant.priceDescription" class="mr-1 font-size-primary font-weight-bold">{{ variant.priceDescription }}</span>
+                                        <span>
+                                        <span class="strikethrough mr-1 font-size-primary">{{ variant.price | formatPrice: selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol  }}</span>
+                                        <span class="discounted-price ml-1 font-size-primary font-weight-bold">{{ variant.price - variant.discount | formatPrice: selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol  }}</span>
+                                        <img src="assets/img/tag.svg" class="ml-2" width="13px"/>
+                                      </span>
+                                      </span>
+                                    </ng-template>
+                                    <ng-template #variantPercentileView>
+                                      <span class="font-size-primary">
+                                        <span *ngIf="variant.priceDescription" class="mr-1 font-size-primary font-weight-bold">{{ variant.priceDescription }}</span>
+                                        <span>
+                                        <span class="strikethrough mr-1 font-size-primary">{{ variant.price | formatPrice: selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol  }}</span>
+                                        <span class="ml-1 font-size-primary font-weight-bold">{{ (variant.price * (100 - variant.discount) / 100) | formatPrice: selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol  }}</span>
+                                        <img src="assets/img/tag.svg" class="ml-2" width="13px"/> <span class="discounted-price ml-2 font-weight-bold">- {{ variant.discount | number}}%</span>
+                                      </span>
+                                      </span>
+                                    </ng-template>
+                                  </span>
+                                </ng-container>
+                                </div>
+                                <div class="allergen d-flex flex-wrap mt-1" *ngIf="menuItem.attributeDtos && menuItem.attributeDtos.length>0">
+                                  <div *ngIf="isAllergenSeleted(menuItem.attributeDtos,'VEGETARIAN')" class="icon icon-vegetarian green m-1" title="{{'public.store.catalog.offer.characteristics.vegetarian' | translate}}"></div>
+                                  <div *ngIf="isAllergenSeleted(menuItem.attributeDtos,'VEGAN')" class="icon icon-vegan green m-1" title="{{'public.store.catalog.offer.characteristics.vegan' | translate}}"></div>
+                                  <div *ngIf="isAllergenSeleted(menuItem.attributeDtos,'HALAL')" class="icon icon-halal m-1" title="{{'public.store.catalog.offer.characteristics.halal' | translate}}"></div>
+                                  <div *ngIf="isAllergenSeleted(menuItem.attributeDtos,'SPICY1')" class="icon icon-spicy_1 m-1" title="{{'public.store.catalog.offer.characteristics.spicy' | translate}}"></div>
+                                  <div *ngIf="isAllergenSeleted(menuItem.attributeDtos,'SPICY2')" class="icon icon-spicy_2 m-1" title="{{'public.store.catalog.offer.characteristics.spicy' | translate}}"></div>
+                                  <div *ngIf="isAllergenSeleted(menuItem.attributeDtos,'SPICY3')" class="icon icon-spicy_3 m-1" title="{{'public.store.catalog.offer.characteristics.spicy' | translate}}"></div>
+                                  <div *ngIf="isAllergenSeleted(menuItem.attributeDtos,'CELERY')" class="icon icon-celery m-1"  title="{{'public.store.catalog.offer.characteristics.celery' | translate}}"></div>
+                                  <div *ngIf="isAllergenSeleted(menuItem.attributeDtos,'CRUSTACEANS')" class="icon icon-crustaceans m-1" title="{{'public.store.catalog.offer.characteristics.crustaceans' | translate}}"></div>
+                                  <div *ngIf="isAllergenSeleted(menuItem.attributeDtos,'EGG')" class="icon icon-eggs m-1" title="{{'public.store.catalog.offer.characteristics.eggs' | translate}}"></div>
+                                  <div *ngIf="isAllergenSeleted(menuItem.attributeDtos,'FISH')" class="icon icon-fish m-1" title="{{'public.store.catalog.offer.characteristics.fish' | translate}}"></div>
+                                  <div *ngIf="isAllergenSeleted(menuItem.attributeDtos,'LUPIN')" class="icon icon-lupin m-1" title="{{'public.store.catalog.offer.characteristics.lupin' | translate}}"></div>
+                                  <div *ngIf="isAllergenSeleted(menuItem.attributeDtos,'MILK')" class="icon icon-milk m-1" title="{{'public.store.catalog.offer.characteristics.milk' | translate}}"></div>
+                                  <div *ngIf="isAllergenSeleted(menuItem.attributeDtos,'MOLLUSCS')" class="icon icon-molluscs m-1" title="{{'public.store.catalog.offer.characteristics.molluscs' | translate}}"></div>
+                                  <div *ngIf="isAllergenSeleted(menuItem.attributeDtos,'MUSTARD')" class="icon icon-mustard m-1" title="{{'public.store.catalog.offer.characteristics.mustard' | translate}}"></div>
+                                  <div *ngIf="isAllergenSeleted(menuItem.attributeDtos,'NUTS')" class="icon icon-nuts m-1" title="{{'public.store.catalog.offer.characteristics.nuts' | translate}}"></div>
+                                  <div *ngIf="isAllergenSeleted(menuItem.attributeDtos,'PEANUT')" class="icon icon-peanuts m-1" title="{{'public.store.catalog.offer.characteristics.peanuts' | translate}}"></div>
+                                  <div *ngIf="isAllergenSeleted(menuItem.attributeDtos,'SESAME')" class="icon icon-sesame m-1" title="{{'public.store.catalog.offer.characteristics.sesame' | translate}}"></div>
+                                  <div *ngIf="isAllergenSeleted(menuItem.attributeDtos,'SOYA')" class="icon icon-soya m-1" title="{{'public.store.catalog.offer.characteristics.soya' | translate}}"></div>
+                                  <div *ngIf="isAllergenSeleted(menuItem.attributeDtos,'SULPHUR_DIOXIDE')" class="icon icon-sulphur-dioxide m-1" title="{{'public.store.catalog.offer.characteristics.sulphurDioxide' | translate}}"></div>
+                                  <div *ngIf="isAllergenSeleted(menuItem.attributeDtos,'CEREALS_WITH_WHEAT')" class="icon icon-wheat m-1" title="{{'public.store.catalog.offer.characteristics.wheat' | translate}}"></div>
+                                  <div *ngIf="isAllergenSeleted(menuItem.attributeDtos,'BARLEY')" class="icon icon-barley m-1" title="{{'public.store.catalog.offer.characteristics.barley' | translate}}"></div>
+                                </div>
+                                </div>
+                                <div class="d-flex" *ngIf="menuItem?.standardImage">
+                                  <div
+                                    class="offer-image"
+                                    [style.background-image]="getBackgroundImage(menuItem.standardImage)"
+                                    (click)="currentCartStatus === 'LOADED' && onOneClickAddToCart($event, menuItem.offerId, menuItem.categoryId, menuItem.inStock, menuItem.isDirectlyOrderable, menuItem.isExpandable, menuItem.isOrderable, basketEnabled)"
+                                  ></div>
+                                </div>
+                              </div>
+                              <div class="plus-button"
+                                *ngIf="menuItem.isExpandable || (menuItem.isOrderable && basketEnabled && selectedStore.settings.ENABLE_ORDERING)"
+                                (click)="currentCartStatus === 'LOADED' && onOneClickAddToCart($event, menuItem.offerId, menuItem.categoryId, menuItem.inStock, menuItem.isDirectlyOrderable, menuItem.isExpandable, menuItem.isOrderable, basketEnabled)">
+                              </div>
+                            </div>
+                          </ng-container>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
+              </div>
+              <!-- VIEW ORDER BUTTON -->
+              <div
+                class="button-wrapper position-absolute text-unselectable bg-transparent"
+                [ngClass]="{'screen-blur': currentCartStatus !== 'LOADED', 'd-none': !basketEnabled, 'pr-2': scrollExist()}"
+                *ngIf="selectedCatalog !== -1"
+              >
+                <div>
+                  <div class="w-100 text-center">
+                    <div *ngIf="showStickyScroll" (click)="scrollPage()">
+                      <!-- <i class="fas fa-chevron-down bg-white rounded-circle p-1 pb-0"></i> -->
+                    </div>
+                  </div>
+                  <div class="sticky-cookie text-center pt-2 px-1 font-size-secondary bg-white" *ngIf="showCookieMessage && !fbCode">
+                    {{'public.global.cookies' | translate}}
+                  </div>
+                  <a href="#" (click)="currentCartStatus === 'LOADED' && OnViewOrder($event)"
+                    class="button d-block text-center py-3 mx-2 mt-2 font-size-primary text-unselectable"
+                    [attr.data-cart-items]="cartItems.length"
+                    [attr.data-cart-total]="cartItemsTotalValue() | formatPrice: selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol "
+                    [attr.data-cart-currency]=""
+                    *ngIf="cartItems && cartItems.length > 0 && cartItemsTotalValue() > 0">
+                    {{'public.global.viewOrder' | translate}}
+                  </a>
+                  <a href="#" (click)="currentCartStatus === 'LOADED' && OnViewOrder($event)"
+                    class="button d-block text-center py-3 mx-2 mt-2 font-size-primary text-unselectable"
+                    [attr.data-cart-items]="cartItems.length"
+                    [attr.data-cart-currency]=""
+                    *ngIf="cartItems && cartItems.length > 0 && cartItemsTotalValue() == 0">
+                    {{'public.global.viewOrder' | translate}}
+                  </a>
+                  <p *ngIf="!acceptTermVisible" [ngClass]="{'d-none': cartItems}" class="font-size-secondary text-center mb-0 py-1 bg-white">{{'public.global.poweredByGonnaOrder' | translate}}</p>
+                </div>
+              </div>
+              <!-- VIEW ORDER BUTTON END -->
+            </div>
+            <!-- TABS END  -->
+            <!-- <div class="text-center">{{termsString}}</div> -->
+          </div> <!-- <div class="wrapper"> -->
+        </div>
+        <div class="basket-container d-none d-lg-flex" #basketContainer *ngIf="basketEnabled && !!menuCategories && (selectedStoreStatus$ | async) === 'LOADED' && selectedCatalog !== -1">
+          <div
+            class="basket pr-2 pr-lg-4" style="margin-top: 4.7rem;"
+            [ngClass]="{'basket-sticky': showStickyBasket, 'screen-blur': currentCartStatus !== 'LOADED'}"
+            #basketContent
+          >
+            <div
+              class="basket-content"
+            >
+              <div class="empty-cart" *ngIf="!cartItems || !cartItems.length">
+                <img src="assets/img/icon-empty-cart.svg" class="mx-auto my-5"/>
+                <div class="px-3 description text-center font-size-primary mb-4">
+                  {{'public.dashboard.basket.emptyCart' | translate}}
+                </div>
+              </div>
+              <div class="cart-items" *ngIf="cartItems && cartItems.length">
+                <div class="basket-header font-size-header p-3 text-center font-weight-bold">
+                  {{'public.checkout.yourOrder' | translate}}
+                </div>
+                <div
+                  class="basket-body p-2 mt-2 overflow-auto"
+                  [ngStyle]="{'max-height': basketHeight + 'px'}"
+                >
+                  <ng-container *ngFor="let cartItem of cartItems; index as i;">
+                    <div
+                      class="p-1 d-flex flex-row align-items-start cartItem"
+                      *ngIf="cartItem.quantity > 0"
+                      (click)="viewOrderItemDetails(cartItem)"
+                    >
+                      <div class="d-flex align-items-start" *ngIf="cartItem.hierarchyLevel === 'PARENT'">
+                        <div class="decrement" (click)="onDecreaseItemQty($event, cartItem)">
+                          <img src="assets/img/icon-minus.svg" class="mx-auto" />
+                        </div>
+                        <div class="value mx-2 font-size-primary">{{cartItem.quantity}}</div>
+                        <div class="increment" (click)="onIncreaseItemQty($event, cartItem)">
+                          <img src="assets/img/icon-plus.svg" class="mx-auto" />
+                        </div>
+                      </div>
+                      <div class="d-block ml-2">
+                        <!-- Item Name -->
+                        <div class="font-size-primary font-weight-bold">
+                          {{cartItem.itemName}}
+                          <span [ngClass]="{'d-none': (!this.checkoutService.isShowParentItemPrice(cartItem) || cartItem.offerPrice === 0)}">
+                            ( {{ cartItem.offerPrice | formatPrice: selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol  }} )
+                          </span>
+                          <span class="ml-3 edit-icon">
+                            <i class="fa fas fa-pen"></i>
+                          </span>
+                        </div>
+                        <!-- Item Description -->
+                        <div
+                          class="child-order-item p-0 mb-0 font-size-secondary text-unselectable"
+                          *ngIf="cartItem.priceDescription"
+                        >
+                          {{ cartItem.priceDescription }}
+                        </div>
+                        <!-- Item Discount -->
+                        <ng-container *ngIf="cartItem.discountType">
+                          <ng-template
+                            *ngIf="cartItem.discountType === 'MONETARY'; then showMonetaryDiscount; else showPercentileDiscount">
+                          </ng-template>
+                          <ng-template #showMonetaryDiscount>
+                            <div class="discount p-0 mb-0 font-size-primary text-unselectable" *ngIf="cartItem.discountValue > 0">
+                              {{'public.global.discount' | translate}} 
+                              <ng-container *ngIf="cartItem.discountValue > 0">
+                                (- {{ cartItem.discountValue | formatPrice: selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol }})
+                              </ng-container>
+                            </div>
+                          </ng-template>
+                          <ng-template #showPercentileDiscount>
+                            <div class="discount p-0 mb-0 font-size-primary text-unselectable" *ngIf="cartItem.discountValue > 0">
+                              {{'public.global.discount' | translate}} {{ cartItem.discountValue }}% 
+                              <ng-container *ngIf="(cartItem.offerPrice * cartItem.discountValue / 100) > 0">
+                                (- {{ cartItem.offerPrice * cartItem.discountValue / 100 | formatPrice: selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol  }} )
+                              </ng-container>
+                            </div>
+                          </ng-template>
+                        </ng-container>
+                        <div
+                          class="child-order-item p-0 mb-0 font-size-primary text-unselectable"
+                          *ngFor="let childOrderItem of cartItem.childOrderItems">
+                          {{ childOrderItem.quantity > 1 ? childOrderItem.quantity + ' x' : '' }} {{ childOrderItem.itemName }}
+                          <span *ngIf="childOrderItem.offerPrice && childOrderItem.offerPrice !== 0">
+                            ( {{ childOrderItem.offerPrice | formatPrice: selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol  }} )
+                          </span>
+                        </div>
+                      </div>
+                      <div class="ml-auto text-right" *ngIf="(cartItem.hierarchyLevel === 'PARENT' || cartItem.hierarchyLevel === 'RULE') && cartItem.totalNonDiscountedPrice != 0">
+                        <div class="font-size-primary text-unselectable" [ngClass]="{'striked': cartItem.discountType}">
+                          {{ cartItem.totalNonDiscountedPrice | formatPrice: selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol  }}
+                        </div>
+                        <div class="discount-value font-size-primary text-unselectable" *ngIf="cartItem.discountType">
+                          {{ cartItem.totalDiscountedPrice | formatPrice: selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol  }}
+                        </div>
+                      </div>
+                    </div>
+                    <hr *ngIf="i !== cartItems.length - 1" />
+                  </ng-container>
+                </div>
+                <div class="basket-footer">
+                  <div class="d-flex flex-row mx-2 mb-2 p-1" *ngIf="checkoutService.shouldDisplayTotal()">
+                    <div class="total flex-fill font-size-primary text-unselectable font-weight-bold">
+                      {{'public.checkout.total' | translate}}
+                    </div>
+                    <div class="price text-right font-size-primary text-unselectable font-weight-bold">
+                      {{cartItemsTotalValue() | formatPrice: selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol }}
+                    </div>
+                  </div>
+                  <span
+                    class="button d-flex justify-content-center align-items-center text-center font-size-primary text-unselectable w-100"
+                    (click)="currentCartStatus === 'LOADED' && OnViewOrder($event)"
+                  >
+                    {{'public.dashboard.basket.proceed' | translate}}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="opentime-selector-container d-flex flex-wrap justify-content-center align-items-center hide"
+    #refEl
+    #openTimeSelectorModal
+    (click)="OnCheckOutsideClose()"
+  >
+    <div class="selection-container p-4 position-absolute">
+      <div class="header-container d-flex flex-wrap">
+        <div class="w-100">
+          <div class="text-center justify-content-center font-size-title font-weight-bold">
+            <div *ngIf="(this.checkoutService.ifStoreClosed() && !this.checkoutService.isFutureOrderingEnabled())">
+              <span>{{'public.store.currently.closed' | translate}}</span><br>
+              <span>{{'public.store.dashboard.placeOrderInOpeningTimes' | translate}}</span>
+            </div>
+            <i class="far fa-clock p-2" style="color:black"></i>{{'public.global.opentimelist' | translate}}
+            <span class="float-right position-absolute" style="cursor: pointer;top: 5px;right:15px;">
+              <i class="fas fa-times" style="color:black"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="opentime-container container py-2">
+          <div *ngFor="let day of openTimeSchedule">
+            <div *ngIf="day.items.length > 0" class="row font-size-primary py-2">
+              <div class="col-day font-size-primary">{{day.title | translate}}</div>
+              <div class="col-time row">
+                <div class="col-sm-6 text-center time-item font-size-primary" *ngFor="let item of day.items">
+                  {{item.startTime}} - {{item.endTime}}
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

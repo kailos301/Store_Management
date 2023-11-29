@@ -1,0 +1,405 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "../../../scss/globals";
+
+.app-body {
+  padding-top: 8.789rem;
+
+  @include media-breakpoint-down(xs) {
+    padding-top: 6.589rem;
+  }
+
+  @media (max-height: 820px) {
+    font-size: 14px;
+  }
+
+  .alert-wrapper {
+    top: 15px;
+    z-index: 9;
+
+    .container {
+      @media (max-width: 1280px) and (min-width: 992px) {
+        max-width: 940px;
+      }
+    }
+
+    .alert {
+      font-size: 1rem;
+    }
+  }
+
+  .main>.container {
+    padding-top: 3.750rem;
+
+    @media (max-width: 1280px) and (min-width: 992px) {
+      max-width: 940px;
+      padding-top: 0.875rem;
+    }
+  }
+
+  .bg-round {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-color: $blue;
+      width: 150vw;
+      height: 120vw;
+      left: 30vw;
+      border-radius: 100%;
+
+      @include media-breakpoint-down(sm) {
+        width: 150vh;
+        height: 180vh;
+      }
+
+      @include media-breakpoint-down(xs) {
+        width: 270vh;
+        height: 180vh;
+        left: -20vw;
+        top: 20vh;
+      }
+    }
+  }
+
+  .card-group {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      -webkit-box-shadow: 0px 4px 7px 3px rgba(237, 237, 237, 1);
+      -moz-box-shadow: 0px 4px 7px 3px rgba(237, 237, 237, 1);
+      box-shadow: 0px 4px 7px 3px rgba(237, 237, 237, 1);
+      mix-blend-mode: multiply;
+      background-repeat: no-repeat;
+      z-index: 1;
+    }
+  }
+
+  .card-group-cust {
+    margin-top: -15%;
+  }
+  .mt-cust-error{
+    margin-top: -15% !important;
+  }
+  .card {
+    position: relative;
+    border: 0;
+    border-radius: 0px;
+    z-index: 2;
+
+  }
+
+  .card-body {
+    padding: 0px 6.875rem;
+
+    @include media-breakpoint-down(lg) {
+      padding: 0px;
+      max-width: 80%;
+    }
+
+    @include media-breakpoint-down(xs) {
+      max-width: 92%;
+    }
+
+    h1 {
+      font-size: 2.25em;
+      font-weight: 500;
+      padding-top: 2.500rem;
+
+      @media (max-width: 1280px) {
+        font-size: 3.250em;
+        padding-top: 1.500rem;
+      }
+
+      @include media-breakpoint-down(lg) {
+        padding-top: 0.650rem;
+        padding-bottom: 0.800rem;
+        font-size: 2.000em;
+      }
+    }
+
+    label {
+      font-size: 1.125em;
+      font-weight: 500;
+    }
+
+    .mat-error,
+    .mat-hint {
+      font-size: 14px !important;
+    }
+
+    .mat-form-field-custom {
+      width: 100% !important;
+    }
+
+    .form-control {
+      border: 2px solid $dark-blue !important;
+      border-radius: 0.250rem !important;
+      font-size: 1.100em;
+      padding: 0.438rem 0.656rem;
+      // @media (max-width: 1280px) {
+      //   padding: 1.250rem 0.656rem;
+      // }
+    }
+
+    .btn-link {
+      font-size: 1.125em;
+      font-weight: bold;
+      color: $link-blue;
+    }
+
+    .btn-pre-text {
+      font-size: 1.125em;
+      font-weight: bold;
+      color: $dark-blue;
+      padding: 0.375rem 0.25rem 0.375rem 0;
+    }
+
+    .btn-primary {
+      background-color: $mint-green;
+      font-size: 1.000em;
+      border: 0;
+      // border-radius: 0.65rem !important;
+      border-radius: 0.250rem !important;
+      padding: 0.625rem 2.750rem;
+
+      @media (max-width: 1280px) {
+        padding: 0.600rem 2.500rem;
+      }
+    }
+
+    .signup-wrapper {
+      padding-top: 2.500rem;
+
+      @media (max-width: 1280px) {
+        padding-top: 1.500rem;
+      }
+    }
+  }
+}
+
+::ng-deep .mat-form-field {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: rgba(0, 0, 0, .12) !important;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: rgba(0, 0, 0, .6) !important;
+}
+
+.or-separator {
+  color: $dark-blue;
+  font-size: 1.300em;
+
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #aaa;
+  line-height: 0.1em;
+  margin: 20px 0 40px;
+  padding: 0 20px;
+
+  span {
+    background: #fff;
+    padding: 0 10px;
+  }
+}
+
+.social-login-wrapper {
+  padding-top: 1.500rem;
+  padding-bottom: 1.500rem;
+  margin: 15px 0px 0px 0px;
+
+  $google-blue: #4285f4;
+
+  .google-btn {
+    cursor: pointer;
+    display: inline-block;
+    background-color: $white;
+    border: 1px solid #95989A;
+    border-radius: 5px;
+
+    .google-icon-wrapper {
+      display: inline-block;
+      margin: 3px;
+      border-radius: 2px;
+      background-color: $white;
+    }
+
+    .google-icon {
+      margin: auto;
+      display: block;
+      position: relative;
+      margin-top: 4px !important;
+      width: 20%;
+    }
+
+    .btn-text {
+      margin: 10px 0px 0px 25px;
+      position: absolute;
+      display: inline-block;
+      font-size: 14px;
+      letter-spacing: 0.2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &:hover {
+      box-shadow: 0 0 6px $google-blue;
+    }
+  }
+
+  $facebook-blue: #3A5A97;
+
+  .facebook-btn {
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid #95989A;
+    border-radius: 5px;
+
+    .facebook-icon-wrapper {
+      display: inline-block;
+      margin: 3px;
+      border-radius: 2px;
+    }
+
+    .facebook-icon {
+      margin: auto;
+      display: block;
+      position: relative;
+      margin-top: 4px !important;
+      width: 20%;
+      color: $white;
+      content: "f";
+    }
+
+    .btn-text {
+      margin: 10px 0px 0px 25px;
+      position: absolute;
+      display: inline-block;
+      font-size: 14px;
+      color: $white;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &:hover {
+      box-shadow: 0 0 6px $google-blue;
+    }
+  }
+
+  .apple-btn {
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid #95989A;
+    border-radius: 5px;
+
+    .apple-icon-wrapper {
+      display: inline-block;
+      margin: 3px;
+      border-radius: 2px;
+    }
+
+    .apple-icon {
+      margin: auto;
+      display: block;
+      position: relative;
+      width: 20%;
+      margin-top: 4px !important;
+    }
+
+    .btn-text {
+      margin: 10px 0px 0px 25px;
+      position: absolute;
+      display: inline-block;
+      font-size: 14px;
+      letter-spacing: 0.2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: $white;
+    }
+
+    &:hover {
+      box-shadow: 0 0 6px $google-blue;
+    }
+  }
+}
+
+// Media Query
+
+@media (max-width: 425px) {
+  .app-body {
+    .card-group-cust {
+      margin-top: -50%;
+    }
+  }
+
+  .social-login-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (max-width: 768px) {
+  .app-body .card-group {
+    &::before {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+
+  .social-login-wrapper{
+    .google-btn {
+      width: 33%;
+      .google-icon{
+        width: 40%;
+      }
+    }
+    .facebook-btn {
+      width: 33%;
+      .facebook-icon{
+        width: 40%;
+      }
+    }
+    .apple-btn {
+      width: 33%;
+      .apple-icon{
+        width: 40%;
+      }
+    }
+  }
+
+  .btn-text {
+    margin-left: 40px !important;
+  }
+
+  .google-icon .facebook-icon .apple-icon {
+    padding-left: 15px !important;
+  }
+}
+
+@media only screen and (device-width: 768px) {
+  .app-body {
+    .card-group-cust {
+      margin-top: -35%;
+    }
+  }
+}

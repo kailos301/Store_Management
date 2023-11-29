@@ -1,0 +1,14 @@
+body, .item-wrapper {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar, .item-wrapper::-webkit-scrollbar {
+  width: 7px;
+  background: #fff;
+}
+
+body::-webkit-scrollbar-thumb, .item-wrapper::-webkit-scrollbar-thumb {
+  background-color: #c3c3c3;
+  outline: 1px solid #888888;
+  border-radius: 20px;
+}

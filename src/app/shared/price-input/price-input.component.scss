@@ -1,0 +1,16 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+.form-group{
+    display: flex;
+    width: 100%;
+    @include media-breakpoint-down(md) {
+        display: inline-block;
+    }
+}
+.priceContainer{
+    .invalid-feedback{
+      display:block !important;
+    }
+}

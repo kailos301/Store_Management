@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "طراحی شده توسط",
+			"thankYou": "از شما متشکریم",
+			"discount": "تخفیف",
+			"viewOrder": "مشاهده سفارش",
+			"errorH2": "مشکلی رخ داد",
+			"errorUnexpected": "اتفاقی غیر منتظره ای رخ داد",
+			"errorExpected": "اتفاقی غیر منتظره ای رخ داد",
+			"errorMustSelectOne": "مقداری را انتخاب نمایید",
+			"errorTrialExceeded": "این قابلیت در دسترس نیست. از محدودیت های آزمایشی فراتر رفته است",
+			"emptyCart": "هیچ آیتمی در سفارش شما وجود ندارد",
+			"optional": "(اختیاری)",
+			"cookies": "این سایت از کوکی استفاده میکند. با ورود به این سایت این مورد را میپذیرید",
+			"more": "بیشتر",
+			"less": "کمتر",
+			"chooseFrom": "از بین",
+			"standard": "استاندارد",
+			"days": {
+				"mon": "دوشنبه",
+				"tue": "سهشنبه",
+				"wed": "چهار شنبه",
+				"thu": "پنج شنبه",
+				"fri": "جمعه",
+				"sat": "شنبه",
+				"sun": "یکشنبه"
+			},
+			"opentimelist": "ساعات شروع",
+			"newVersionAvailable": "شما نسخه قدیمی برنامه را اجرا می کنید. برنامه را بارگیری کنید تا آخرین به روزرسانی را دریافت کنید",
+			"reloadApplication": "بارگیری مجدد برنامه",
+			"poweredByGonnaOrder": "طراحی شده توسط Gonnaorder",
+			"recents": "اخیر",
+			"information": "اطلاعات",
+			"yes": "آره",
+			"no": "خیر",
+			"error": "خطا",
+			"errorQRScanner": "خطا با اسکنر QR رخ داد!",
+			"confirm": "تایید"
+		},
+		"select": {
+			"selectAtLeast": "شما باید حداقل {{x}} select را انتخاب کنید",
+			"selectAtmost": "حداکثر می توانید {{x}} را انتخاب کنید",
+			"selectAtleastAtMost": "حداقل {{x}} و حداکثر {{y}} را انتخاب نمایید",
+			"selectBetween": "شما باید بین مقادیر {{childCategory.min}} و {{childCategory.max}} را انتخاب کنید."
+		},
+		"load": {
+			"loadingMessage": "چند لحظه لطفا ..."
+		},
+		"itemDetails": {
+			"removeFromOrder": "حذف از سفارش",
+			"addToOrder": "افزودن به سفارش",
+			"updateOrder": "بروزرسانی سفارش"
+		},
+		"checkout": {
+			"yourOrder": "سفارش شما",
+			"total": "جمع کل",
+			"specialNote": "افزودن یادداشت ویژه به سفارش",
+			"howToReceiveYourOrder": "چطور مایل هستید تا سفارش خود را دریافت نمایید؟",
+			"option": {
+				"pickup": "دریافت سفارش از محل فروشگاه",
+				"addressDelivery": "میخواهم در محل خودم دریافت کنم",
+				"serve": {
+					"location": "من پشت یک میز نشستم"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "عدم ذخیره جزئیات سفارش شما",
+				"fieldRequired": "این فیلد اجباری می باشد",
+				"selectFutureTime": "لطفا زمان را در آینده انتخاب کنید",
+				"orderSubmissionFailed": "سفارش قابل ارسال نیست",
+				"ORDER_LOCATION_NOT_PRESENT": "شماره جدول یا نام مکان موجود نیست",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "برخی از اطلاعات مورد نیاز مشتری وجود ندارد",
+				"ORDER_WISH_TIME_INVALID": "زمان آرزوی مورد نظر در گذشته است",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "روش تحویل سفارش موجود نیست",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "تحویل در آدرس پشتیبانی نمی شود",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "ارائه سفارش پشتیبانی نمی شود",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "وانت سفارش پشتیبانی نمی شود",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "تحویل در کد پستی مشخص شده پشتیبانی نمی شود",
+				"OPENING_TIME_SCHEDULE_ERROR": "فروشگاه در زمان دلخواه سفارش انتخاب شده بسته است",
+				"PROMOTION_NOT_ELIGIBLE": "تبلیغاتی انتخاب شده اما واجد شرایط نیست",
+				"offersUnavailableExplanation": "موارد زیر در تاریخ و ساعت مشخص شده شما در دسترس نیستند. لطفاً بر روی به روزرسانی سفارش کلیک کنید تا آنها از سفارش خود حذف شوند",
+				"offersOutOfStockExplanation": "موارد کافی در دسترس نیست",
+				"invalidVoucherCode": "کد کوپن معتبر نیست",
+				"INVALID_INPUT": "خطا در پردازش جزئیات ارائه شده",
+				"slotUnavailableExplanation": "اسلات زمان درخواستی در دسترس نیست. لطفاً جایگاه دیگری را انتخاب کنید یا روش تحویل دیگری را انتخاب کنید.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "درخواست سفارش برای همان روز برای این فروشگاه امکان پذیر نیست.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "درخواست سفارش برای همان روز برای منطقه شما امکان پذیر نیست.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "برای موارد زیر امکان سفارش در همان روز وجود ندارد:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "برای ساعت و روز درخواستی تحویل کد پستی شما امکان پذیر نیست.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "تحویل سفارشات در زمان و تاریخ مشخص امکان پذیر نیست. لطفاً گزینه دیگری را انتخاب کنید.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "سفارشات وانت در ساعت و تاریخ مشخص امکان پذیر نیست. لطفاً گزینه دیگری را انتخاب کنید.",
+				"INTERNAL_ERROR": "خطای غیرمنتظره ای روی داد. لطفاً برنامه را بارگیری کنید تا دوباره امتحان کنید.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "حداقل مقدار سفارش تحویل برآورده نشده است. برای ادامه مبلغ {{AMOUNT_MISSING}} مقدار دیگر به سفارش خود اضافه کنید.",
+				"paymentFailed": "شما با استفاده از این روش پرداخت آنلاین پرداخت نکردید. لطفا دوباره تلاش کنید.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "تبلیغات مورد نیاز اعمال نشده است",
+				"INVALID_CUSTOMER_VOUCHER": "کوپن مشتری نامعتبر است",
+				"slotUnavailable": "زمان انتخاب شده در دسترس نیست",
+				"slotUnavailableExplanationWithSuggestion": "زمان انتخاب شده در گذشته است یا دیگر در دسترس نیست. زمان موجود بعدی:",
+				"socialLoginFailed": "ما نمی توانیم به حساب شما متصل شویم",
+				"customerDetailsUpdateFailed": "داده های نمایه به روز نشد",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "فروشگاه به این مکان تحویل نمی دهد",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "ما نمی توانیم آدرس شما را ارائه دهیم. لطفاً آدرس را به روز کنید و دوباره امتحان کنید یا با فروشگاه تماس بگیرید.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "امکان ارسال سفارش در زمان و تاریخ خاص وجود ندارد. لطفاً جایگزین را انتخاب کنید.",
+				"MISSING_LOCATION_TAP_ID": "تپ ID اجباری است",
+				"invalidPin": "پین کد مشتری نامعتبر است"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "سفارشتان بدستتان خواهد رسید"
+					},
+					"unknown": {
+						"location": "سفارشتان بدستتان خواهد رسید"
+					}
+				},
+				"pickup": "انتخاب سفارش",
+				"addressDelivery": "اطلاعات شما"
+			},
+			"yourInformationPlease": "اطلاعات شما",
+			"locationCode": "میز",
+			"yourName": "نام شما",
+			"email": "آدرس ایمیل",
+			"phoneNumber": "شماره تلفن",
+			"fullName": "نام کامل",
+			"streetAddress": "آدرس خیابان",
+			"zip": "کد پستی",
+			"town": "شهر",
+			"minimumAmount": "حدقل مبلغ {{amount}} برای تحویل سفارش الزامی می باشد",
+			"deliveryFee": "کارمزد تحویل",
+			"deliveryFeeApplicable": "قابل سفارش برای سفارش های کمتر از {amount}",
+			"field": {
+				"generalValidation": "فرمت فیلد صحیح نمی باشد"
+			},
+			"acceptTerm": "با ادامه پذیرش {{شرایط استفاده}} و {policy خط مشی رازداری}",
+			"termsAndPolicy": "با ادامه پذیرش ",
+			"acceptTerms": {
+				"and": "و",
+				"after": ""
+			},
+			"termsOfUse": "شرایط استفاده",
+			"privacyPolicy": "policy خط مشی رازداری",
+			"yourTable": "میز شما",
+			"allowedCharacters": "کاراکتر های مجاز",
+			"wishTimeHeading": "چه زمانی می خواهید سفارش خود را دریافت کنید؟",
+			"asSoonAsPossible": "می خواهم هرچه سریعتر آن را دریافت کنم",
+			"specifyWishTime": "من می خواهم مشخص کنم که چه زمانی آن را دریافت کنم",
+			"specialNoteExample": "افزودن یادداشت ویژه به سفارش",
+			"cardDisabledNote": "لطفاً هنگام آماده بودن ، سفارش خود را با فروشگاه به اشتراک بگذارید",
+			"cardHolderName": "نام دارنده کارت",
+			"cardNumber": "شماره کارت شما",
+			"cvv": "CVV",
+			"itemsOutOfStock": "برخی از اقلام موجودی ندارند",
+			"floor": "کف",
+			"storeClosedAtOrderWishDate": "فروشگاه در تاریخ یا ساعت مورد نظر تعطیل است",
+			"offersNotAvailableAtOrderWishDate": "برخی از پیشنهادات در تاریخ یا ساعت مورد نظر در دسترس نیستند",
+			"updateOrder": "سفارش به روز کنید",
+			"offers": {
+				"availableQuantity": "در حال حاضر در دسترس است"
+			},
+			"voucherCode": "کد کوپن را وارد کنید",
+			"validVoucherCode": "کد کوپن معتبر است",
+			"yourRoom": "اتاق شما",
+			"yourLocation": "موقعیت تو",
+			"serveOption": {
+				"location": "من می خواهم آن را در محل خود دریافت کنم",
+				"room": "من در اتاقم هستم"
+			},
+			"social": {
+				"connect": "با حساب اجتماعی ارتباط برقرار کنید"
+			},
+			"remainingValidVoucher": "مانده موجودی در کوپن:",
+			"paymentsense": {
+				"declined": "پرداخت آنلاین از طریق Paymentsense رد شده است"
+			},
+			"saveCustomerDetailsForFuture": "داده های نمایه خود را برای سفارشات بعدی ذخیره کنید",
+			"customerDetailsUpdateSuccess": "اطلاعات نمایه شما به روز شده است",
+			"logout": "خروج",
+			"expiry": "تاریخ انقضا (MMYY)",
+			"enterPin": "شماره پین ​​را وارد کنید"
+		},
+		"payment": {
+			"payOnlineNow": "موقعیت مکانی ارائه شده معتبر نیست",
+			"chooseYourPaymentMethod": "اکنون پرداخت آنلاین را انتخاب نمایید",
+			"creditCard": "روش پرداخت خود را انتخاب نمایید",
+			"paypal": "کارت اعتباری",
+			"submitOrder": "پی پال",
+			"proceedToPayment": "ارسال سفارش",
+			"errorCouldNotConnect": "انتقال به صفحه پرداخت",
+			"enterCreditCardInfo": "لطفا اطلاعات کارت خود را وارد کنید",
+			"yourOrderIsReady": "سفارش شما آماده است",
+			"yourOrderIsExpected": "سفارش شما در انتظار آماده سازی می باشد",
+			"errors": {
+				"valueNotValid": "مقدار وارد شده قابل قبول نمی باشد",
+				"zipNotAvailable": "به این کد پستی نمی توانید سفارش تحویل آنلاین دهید. لطفا برای کسب اطلاعات بیشتر با فروشگاه تماس بگیرید",
+				"addressNotAvailable": "آدرس را نمی توان پیدا کرد. لطفاً آدرس خیابان را از میان پیشنهادها انتخاب کنید."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "اکنون بصورت آنلاین پرداخت کنید",
+			"digitalWallets": "کیف پول دیجیتال",
+			"creditCardSecure": "پرداخت کارت اعتباری امن",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "عدم اتصال به درگاه پرداخت انتخاب شده: لطفاً به صفحه پرداخت برگردید و روش پرداخت دیگری را انتخاب نمایید یا بعداً دوباره امتحان کنید.",
+			"orderStatus": "شماره سفارش شما",
+			"notSubmitted": "وضعیت سفارش",
+			"sent": "هنوز ارسال نشده",
+			"ready": "در حال انجام",
+			"rejected": "آماده",
+			"startNewOrder": "پذیرفته نشد",
+			"errors": {
+				"emailProperFormat": "شروع سفارش جدید"
+			},
+			"fiilEmailAddress": "لطفا یک ایمیل معتبر وارد نمایید",
+			"failedEmail": "برای دریافت یک نسخه از سفارش، ایمیل خود را وارد نمایید",
+			"emailSent": "ایمیل ارسال نشد",
+			"received": "دریافت شد",
+			"accepted": "تایید شد",
+			"mobileAppPromotion": "دفعه بعدی از طریق برنامه تلفن همراه GonnaOrder سفارش دهید"
+		},
+		"dialog": {
+			"ok": "باشه",
+			"cancel": "لغو کردن"
+		},
+		"store": {
+			"currently": {
+				"closed": "فروشگاه در حال حاضر بسته است"
+			},
+			"time": {
+				"closed": "فروشگاه در زمان انتخاب شده بسته است"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "گیاه خواری",
+						"vegan": "وگان",
+						"celery": "کرفس",
+						"wheat": "گندم",
+						"crustaceans": "سخت پوستان",
+						"eggs": "تخم مرغ",
+						"fish": "ماهی",
+						"lupin": "لوپین",
+						"milk": "شیر",
+						"molluscs": "نرم تنان",
+						"mustard": "خردل",
+						"nuts": "آجیل",
+						"peanuts": "بادام زمینی",
+						"sesame": "کنجد",
+						"soya": "سویا",
+						"sulphurDioxide": "دی اکسید گوگرد",
+						"halal": "حلال",
+						"barley": "جو",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "این وب سایت از کوکی برای بهبود تجربه شما استفاده می کند ، اما در صورت تمایل می توانید انصراف دهید.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "درخواست دادن"
+		},
+		"cookie": {
+			"accept": "تایید کنید",
+			"reject": "رد کردن",
+			"readMore": "ادامه مطلب"
+		},
+		"connect": {
+			"social": {
+				"google": "با Google ارتباط برقرار کنید",
+				"facebook": "با فیس بوک ارتباط برقرار کنید"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "سبد شما خالی است",
+				"proceed": "ادامه دهید"
+			}
+		},
+		"main": {
+			"typeUrl": "URL یا نام فروشگاه را تایپ کنید",
+			"invalidUrl": "URL نامعتبر است",
+			"scanQRCode": "یک کد QR را اسکن کنید",
+			"storeNotFound": "فروشگاه پیدا نشد",
+			"storeSaved": "اطلاعات فروشگاه با موفقیت ذخیره شد!",
+			"navigateStoreConfirm": "به فروشگاه بروید؟"
+		},
+		"recents": {
+			"nothingFound": "اینجا چیزی پیدا نشد"
+		}
+	}
+}

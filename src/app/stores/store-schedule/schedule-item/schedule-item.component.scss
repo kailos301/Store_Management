@@ -1,0 +1,22 @@
+.day-btn{
+    background-color:grey;
+    min-width: 10%;
+    margin: 0.5em auto !important;
+    clear: both;
+}
+.day-btn.active, .day-btn:hover{
+    // background-color:turquoise;
+    background-color: #48b9b7 !important;
+}
+.cursorPointer{
+    cursor: pointer;
+}
+.text-white{
+    color:white;
+}
+
+@media(max-width:600px){
+    .mobile-left{
+        float: left !important;
+    }
+}

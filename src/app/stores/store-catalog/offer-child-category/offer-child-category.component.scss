@@ -1,0 +1,86 @@
+@import "../store-catalog.common.scss";
+
+.childCategoryList {
+  label,
+  .checkbox label .checkmark {
+    margin-top: 10px;
+  }
+  .variant-wrapper,
+  .variant-wrapper label {
+    cursor: pointer !important;
+  }
+  .optionGoupHeader,
+  span {
+    font-size: 14px;
+  }
+  i.editIcon {
+    font-size: 1.25em;
+  }
+}
+i.fa-plus {
+  margin-left: 10px;
+}
+.offerSubSection {
+  margin-bottom: 1rem;
+}
+.sorting {
+  position: absolute;
+  right: -71px;
+  border-radius: 2px;
+}
+.content .option-wrapper .optionGoupHeader {
+  background-color: #f2f0ee;
+  color: #000;
+  font-weight: 400;
+  padding-top: 12px;
+  padding-bottom: 14px;
+  cursor: pointer;
+  &.collapsible {
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url(/assets/img/icon-arrow-down.svg);
+      background-position: center center;
+      transform: rotate(180deg);
+      transform-origin: center center;
+      width: 20px;
+      height: 27px;
+      right: 24px;
+      top: 8px;
+    }
+  }
+  &.disabled {
+    color: #c1c1c1;
+    &::after {
+      opacity: 0.18;
+    }
+    &.collapsible {
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  &.expanded {
+    &::after {
+      transform: rotate(0deg);
+    }
+  }
+}
+.optionGroupSelectionPanel a.actionLink {
+  @include media-breakpoint-down(md) {
+    margin: 0;
+  }
+}
+.optionGoupHeader {
+  display: flex;
+  @include media-breakpoint-down(md) {
+    display: inline-block;
+    .actionLink {
+      margin: 10px 0 0;
+      display: inline-block;
+    }
+  }
+}
+.actionLink.invisible {
+  visibility: hidden;
+}

@@ -1,0 +1,144 @@
+<div class="row pt-3">
+    <div class="col-xl-12 col-lg-12 col-md-12">
+        <form [formGroup]="domainForm">
+            <h3 class="text-blue font-size-popup-title">{{'admin.store.setting.domains'|translate}}</h3>
+            <div class="form-group row mb-3">
+                <label class="col-xl-3 col-lg-3 col-md-12 col-sm-12 required"
+                    for="aliasName">{{'admin.store.alias'|translate}}</label>
+                <div class="col-xl-8 col-lg-8 col-sm-12">
+                    <input type="text" class="form-control domain-field url-field" (focusout)="validateAliasAvailability()" autocomplete="off"
+                        [class.is-invalid]="getControl('aliasName').invalid && (getControl('aliasName').dirty || getControl('aliasName').touched)"
+                        formControlName="aliasName" value="https://" (keyup)="checkPredefaultLink($event)" maxlength="36">
+                </div>
+            </div>
+            <div class="form-group row" [ngClass]="{'d-none': nameInvalid }">
+                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12"></div>
+                <div class="col-xl-8 col-lg-8 col-sm-12">
+                    <div *ngIf="aliasAvailabilityStatus === 'SUBSCRIBE_TO_CLAIM' && !getControl('aliasName').invalid"
+                        class="error-feedback">{{'admin.store.noActiveSubscriptionsMsg'|translate}}</div>
+                    <div *ngIf="aliasAvailabilityStatus === 'TAKEN' && !getControl('aliasName').errors"
+                        class="error-feedback">
+                        {{'admin.store.domainTakenMsg'|translate}}</div>
+                    <div *ngIf="showNotSubscribedMsg" class="not-subscribed-text">
+                        {{'admin.store.notSubscribedMsg'|translate}}
+                    </div>
+                    <div class="error-feedback" *ngIf="getControl('aliasName').errors">
+                        <span
+                            *ngIf="getControl('aliasName').errors.required || getControl('aliasName').errors.maxlength || getControl('aliasName').errors.minlength|| getControl('aliasName').errors.pattern">{{'admin.store.aliasValidationMsg'|translate}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-xl-3 col-lg-3 col-md-12 col-sm-12 aliasLabel"
+                    for="EXTERNAL_DOMAIN">{{'admin.store.customDomain.additionalCustomDomain'|translate}}</label>
+                <div class="col-xl-8 col-lg-8 col-sm-12">
+                    <input type="text" autocomplete="off" formControlName="EXTERNAL_DOMAIN" id="EXTERNAL_DOMAIN"
+                        (focusout)="updateDomain()" maxlength="36"
+                        value="" class="form-control url-field" [class.is-invalid]="isInvalidExternalDomain">
+                    <div class="invalid-feedback" *ngIf="getControl('EXTERNAL_DOMAIN').errors ">
+                        <span
+                            *ngIf="getControl('EXTERNAL_DOMAIN').errors.required || getControl('EXTERNAL_DOMAIN').errors.maxlength || getControl('EXTERNAL_DOMAIN').errors.minlength || getControl('EXTERNAL_DOMAIN').errors.pattern">{{'admin.store.aliasValidationMsg'|translate
+                            }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12"></div>
+                <div class="col-xl-8 col-lg-8 col-sm-12">
+                    <div class="not-subscribed-text">{{'admin.store.domaincustomInfo'|translate}}</div>
+                </div>
+                <div class="invalid-feedback" *ngIf="isInvalidExternalDomain">
+                    <span>{{'admin.store.customDomain.labelError'|translate}}</span>
+                </div>
+            </div>
+        </form>
+        <hr>
+        <form [formGroup]="appsForm">
+          <h3 class="text-blue font-size-popup-title">{{'admin.store.setting.apps.name'|translate}}</h3>
+          <div class="form-horizontal mt-3" >
+            <div class="row">
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="form-check-label">{{'admin.store.setting.apps.promoteGOApp'|translate}}</label>&nbsp;
+                </div>
+              </div>
+              <div class="col-md-9">
+                <div class="form-group mb-0">
+                  <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                  <label class="switch pt-1 mb-0">
+                    <input type="checkbox" id="enableGonnaOrderApp"
+                    formControlName="PROMOTE_GONNAORDER_APP"
+                    (change)="appPromoteChange('PROMOTE_GONNAORDER_APP')"
+                    />
+                    &nbsp;<span class="slider round"></span>
+                  </label>&nbsp;
+                  <label>{{'admin.store.enabled'|translate}}</label>
+                </div>
+                <div class="form-group mb-0">
+                  <div class="not-subscribed-text">{{'admin.store.setting.apps.promoteGOAppInfo'|translate}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-horizontal mt-3" >
+            <div class="row">
+              <div class="col-md-3">
+                <div class="form-group mb-0">
+                  <label class="form-check-label">{{'admin.store.setting.apps.promoteCustomOApp'|translate}}</label>&nbsp;
+                </div>
+              </div>
+              <div class="col-md-9">
+                <div class="form-group mb-0">
+                  <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                  <label class="switch pt-1 mb-0">
+                    <input type="checkbox" id="enableGonnaOrderApp"
+                      formControlName="PROMOTE_STORE_APP"
+                      (change)="appPromoteChange('PROMOTE_STORE_APP')" />
+                    &nbsp;<span class="slider round"></span>
+                  </label>&nbsp;
+                  <label>{{'admin.store.enabled'|translate}}</label>
+                </div>
+                <div class="form-group mb-0">
+                  <div class="not-subscribed-text">{{'admin.store.setting.apps.promoteCustomAppInfo'|translate}}</div>
+                </div>
+              </div>
+            </div>
+            <br/>
+            <div class="form-group row mb-3">
+                <label class="col-xl-3 col-lg-3 col-md-12 col-sm-12 required" for="">
+                  <img class="apple-icon" src="/assets/img/icon-apple.svg"/>
+                  &nbsp; {{'admin.store.setting.apps.iosAppLink'|translate}}</label>
+                  <div class="col-xl-8 col-lg-8 col-sm-12">
+                    <input type="text" 
+                      class="form-control url-field" 
+                      (change)="appPromoteChange('STORE_APP_IOS_URL')"
+                      formControlName="STORE_APP_IOS_URL"
+                    >
+                    <div class="error-feedback" *ngIf="isInvalidIOSLink && getControl('STORE_APP_IOS_URL', 'appsForm').touched">
+                      <span>{{'admin.store.setting.apps.invalidIOSAppLink'|translate}}</span>
+                    </div>
+                    <div class="error-feedback" *ngIf="getControl('STORE_APP_IOS_URL', 'appsForm').touched && getControl('STORE_APP_IOS_URL', 'appsForm').errors?.maxlength">
+                      <span>{{'admin.global.field.maxLength'|translate:{maxLength:getControl('STORE_APP_IOS_URL', 'appsForm').errors.maxlength.requiredLength} }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-xl-3 col-lg-3 col-md-12 col-sm-12 required" for="">
+                  <img class="android-icon" src="/assets/img/icon-android.svg"/>
+                  &nbsp; {{'admin.store.setting.apps.androidAppLink'|translate}}</label>
+                  <div class="col-xl-8 col-lg-8 col-sm-12">
+                    <input type="text" 
+                      class="form-control url-field" (change)="appPromoteChange('STORE_APP_ANDROID_URL')" formControlName="STORE_APP_ANDROID_URL" >
+                    <div class="error-feedback" *ngIf="isInvalidAndroidLink && getControl('STORE_APP_ANDROID_URL', 'appsForm').touched">
+                      <span>{{'admin.store.setting.apps.invalidAndroidAppLink'|translate}}</span>
+                    </div>
+                    <div class="error-feedback" *ngIf="getControl('STORE_APP_ANDROID_URL', 'appsForm').touched && getControl('STORE_APP_ANDROID_URL', 'appsForm').errors?.maxlength">
+                      <span>{{'admin.global.field.maxLength'|translate:{maxLength:getControl('STORE_APP_ANDROID_URL', 'appsForm').errors.maxlength.requiredLength} }}</span>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </form>
+    </div>
+</div>

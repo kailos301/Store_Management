@@ -1,0 +1,16 @@
+<div class="col-lg-12">
+    <div class="card list">
+        <div class="card-header">
+            <div>{{'admin.user.profile.updateTitle' | translate}}</div>
+        </div>
+        <div class="card-body">
+            <ng-container *ngIf="(status$ | async) === 'FAILED'">
+                <div role="alert" class="alert alert-danger" *ngFor="let error of (errors$ | async)">
+                    <strong>{{'admin.alerts.headerError' | translate}}</strong> {{ error }}
+                </div>
+            </ng-container>
+            <app-user-details-form [user]="(profile$ | async)" [mode]="'UPDATE'" (submitEvent)="updateAction($event)">
+            </app-user-details-form>
+        </div>
+    </div>
+</div>

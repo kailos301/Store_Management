@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "Powered by",
+			"thankYou": "감사합니다",
+			"discount": "할인",
+			"viewOrder": "주문 보기",
+			"errorH2": "오류가 발생하였습니다",
+			"errorUnexpected": "예기치 않은 에러",
+			"errorExpected": "예기치 않은 에러",
+			"errorMustSelectOne": "값을 선택하십시오",
+			"errorTrialExceeded": "이 기능은 사용불가합니다. 시험기간이 초과되었습니다. (トライアル期間がすぎて使えないことですよね？)",
+			"emptyCart": "주문하신 내역이 없습니다",
+			"optional": "(부가 옵션)",
+			"cookies": "해당 사이트는 쿠키를 사용합니다. 해당 웹사이트를 계속 사용하시려면 그들의 사용에 동의해주세요.",
+			"more": "더",
+			"less": "적게",
+			"chooseFrom": "에서 선택",
+			"standard": "표준",
+			"days": {
+				"mon": "월요일",
+				"tue": "화요일",
+				"wed": "수요일",
+				"thu": "목요일",
+				"fri": "금요일",
+				"sat": "토요일",
+				"sun": "일요일"
+			},
+			"opentimelist": "영업 시간",
+			"newVersionAvailable": "이전 버전의 애플리케이션을 실행하고 있습니다. 최신 업데이트를 받으려면 응용 프로그램을 다시로드하십시오.",
+			"reloadApplication": "애플리케이션 새로 고침",
+			"poweredByGonnaOrder": "Gonnaorder에 의해 구동",
+			"recents": "최근",
+			"information": "정보",
+			"yes": "네",
+			"no": "아니",
+			"error": "오류",
+			"errorQRScanner": "QR 스캐너에서 오류가 발생했습니다!",
+			"confirm": "확인하다"
+		},
+		"select": {
+			"selectAtLeast": "{{x}} 이상을 선택해야합니다",
+			"selectAtmost": "최대 {{x}}까지 선택할 수 있습니다.",
+			"selectAtleastAtMost": "최저값{{x}}과 최고값{{y}}을 선택하십시오",
+			"selectBetween": "{{childCategory.min}} 및 {{childCategory.max}} 값 중에서 선택해야합니다."
+		},
+		"load": {
+			"loadingMessage": "잠시만 기다려 주세요"
+		},
+		"itemDetails": {
+			"removeFromOrder": "주문 내역에서 제거하기",
+			"addToOrder": "주문 내역에 추가하기",
+			"updateOrder": "주문 내역 새로고침"
+		},
+		"checkout": {
+			"yourOrder": "주문 내역",
+			"total": "합계",
+			"specialNote": "주문 내역에 메모하기",
+			"howToReceiveYourOrder": "배송방법 선택하기",
+			"option": {
+				"pickup": "방문 수령",
+				"addressDelivery": "이것을 제 주소로 받고 싶습니다.",
+				"serve": {
+					"location": "저는 테이블에 앉아 있습니다."
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "주문내역 저장에 실패하였습니다",
+				"fieldRequired": "이 부분은 필수입니다.",
+				"selectFutureTime": "나중에 시간을 선택하십시오",
+				"orderSubmissionFailed": "주문을 제출할 수 없습니다.",
+				"ORDER_LOCATION_NOT_PRESENT": "테이블 번호 또는 위치 이름이 없습니다.",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "일부 필수 고객 정보가 누락되었습니다.",
+				"ORDER_WISH_TIME_INVALID": "원하는 소원 시간이 과거입니다.",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "주문 배송 방법이 누락되었습니다",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "주소로 배송이 지원되지 않습니다.",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "주문 제공은 지원되지 않습니다.",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "주문 수령이 지원되지 않습니다.",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "지정된 우편 번호로의 배송은 지원되지 않습니다.",
+				"OPENING_TIME_SCHEDULE_ERROR": "선택한 주문 희망 시간에 매장이 닫힙니다.",
+				"PROMOTION_NOT_ELIGIBLE": "프로모션이 선택되었지만 사용할 수 없습니다.",
+				"offersUnavailableExplanation": "아래 항목은 지정한 날짜 및 시간에 사용할 수 없습니다. 주문에서 제거하려면 주문 업데이트를 클릭하십시오.",
+				"offersOutOfStockExplanation": "사용 가능한 항목이 충분하지 않습니다.",
+				"invalidVoucherCode": "바우처 코드가 잘못되었습니다.",
+				"INVALID_INPUT": "제공된 세부 정보를 처리하는 중에 오류가 발생했습니다.",
+				"slotUnavailableExplanation": "요청한 시간 슬롯을 사용할 수 없습니다. 다른 시간대를 선택하거나 다른 배송 방법을 선택하세요.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "이 상점은 당일 주문을 요청할 수 없습니다.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "귀하의 지역에서 당일 주문을 요청할 수 없습니다.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "다음 항목은 당일 주문이 불가합니다.",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "요청한 시간과 요일에는 우편 번호로 배송 할 수 없습니다.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "특정 시간 및 날짜에 주문을 배송 할 수 없습니다. 대안을 선택하십시오.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "특정 시간 및 날짜에는 주문을 픽업 할 수 없습니다. 대안을 선택하십시오.",
+				"INTERNAL_ERROR": "예기치 않은 오류가 발생했습니다. 다시 시도하려면 애플리케이션을 새로 고침하세요.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "최소 배송 주문 금액이 충족되지 않았습니다. 계속하려면 주문에 다른 {{AMOUNT_MISSING}} 값을 추가하세요.",
+				"paymentFailed": "이 결제 수단을 사용하여 온라인 결제에 실패했습니다. 다시 시도하십시오.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "필수 프로모션이 적용되지 않았습니다.",
+				"INVALID_CUSTOMER_VOUCHER": "유효하지 않은 고객 바우처",
+				"slotUnavailable": "선택한 시간을 사용할 수 없습니다",
+				"slotUnavailableExplanationWithSuggestion": "선택한 시간이 과거이거나 더 이상 사용할 수 없습니다. 다음 가능 시간 :",
+				"socialLoginFailed": "귀하의 계정에 연결할 수 없습니다",
+				"customerDetailsUpdateFailed": "프로필 데이터를 업데이트하지 못했습니다.",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "매장에서이 위치로 배송하지 않습니다.",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "제공하신 주소를 찾을 수 없습니다. 주소를 업데이트하고 다시 시도하거나 매장에 문의하세요.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "특정 시간 및 날짜에 주문을 제출할 수 없습니다. 대안을 선택하세요.",
+				"MISSING_LOCATION_TAP_ID": "탭 ID는 필수 항목입니다.",
+				"invalidPin": "잘못된 고객 핀 코드"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "당신의 제품은 곧 도착할 것 입니다."
+					},
+					"unknown": {
+						"location": "당신의 제품은 곧 도착할 것 입니다."
+					}
+				},
+				"pickup": "제품 받아가세요.",
+				"addressDelivery": "당신의 정보를 알려주세요."
+			},
+			"yourInformationPlease": "당신의 정보를 알려주세요.",
+			"locationCode": "테이블",
+			"yourName": "당신의 이름",
+			"email": "이메일",
+			"phoneNumber": "핸드폰 번호",
+			"fullName": "성명(성, 이름)",
+			"streetAddress": "주소",
+			"zip": "우편번호",
+			"town": "도시",
+			"minimumAmount": "배송을 위해 최소 주문 금액 {{amount}}이 필요합니다.",
+			"deliveryFee": "배송 요금",
+			"deliveryFeeApplicable": "{{amount}} 미만 주문에 적용 가능",
+			"field": {
+				"generalValidation": "이 부분 형식이 제한되었습니다."
+			},
+			"acceptTerm": "계속하면 {{이용 약관}} 및 {{개인 정보 취급 방침}}에 동의하게됩니다.",
+			"termsAndPolicy": "계속하면 ",
+			"acceptTerms": {
+				"and": "및 ",
+				"after": "에 동의하게됩니다."
+			},
+			"termsOfUse": "이용 약관",
+			"privacyPolicy": "개인 정보 취급 방침",
+			"yourTable": "당신의 테이블",
+			"allowedCharacters": "문자 허용",
+			"wishTimeHeading": "언제 주문을 받으시겠습니까?",
+			"asSoonAsPossible": "가능한 한 빨리 받고 싶습니다",
+			"specifyWishTime": "수신시기를 지정하고 싶습니다",
+			"specialNoteExample": "주문 내역에 메모하기",
+			"cardDisabledNote": "준비가되면 주문을 매장과 공유하십시오",
+			"cardHolderName": "카드 소지자 이름",
+			"cardNumber": "카드 번호",
+			"cvv": "CVV",
+			"itemsOutOfStock": "일부 상품은 재고가 없습니다.",
+			"floor": "바닥",
+			"storeClosedAtOrderWishDate": "원하는 날짜 또는 시간에 매장이 닫힙니다.",
+			"offersNotAvailableAtOrderWishDate": "원하는 날짜 또는 시간에 일부 혜택을 사용할 수 없습니다.",
+			"updateOrder": "주문 업데이트",
+			"offers": {
+				"availableQuantity": "지금 사용 가능"
+			},
+			"voucherCode": "바우처 코드를 입력하세요.",
+			"validVoucherCode": "바우처 코드가 유효합니다",
+			"yourRoom": "너의 방",
+			"yourLocation": "귀하의 위치",
+			"serveOption": {
+				"location": "내 위치에서 받고 싶습니다.",
+				"room": "나는 내 방에있다"
+			},
+			"social": {
+				"connect": "소셜 계정과 연결"
+			},
+			"remainingValidVoucher": "바우처 잔고 :",
+			"paymentsense": {
+				"declined": "Paymentsense를 통한 온라인 결제가 거부되었습니다."
+			},
+			"saveCustomerDetailsForFuture": "향후 주문을 위해 프로필 데이터 저장",
+			"customerDetailsUpdateSuccess": "프로필 데이터가 업데이트되었습니다",
+			"logout": "로그 아웃",
+			"expiry": "만료일(MMYY)",
+			"enterPin": "PIN 번호 입력"
+		},
+		"payment": {
+			"payOnlineNow": "결제하기",
+			"chooseYourPaymentMethod": "결제방법을 선택해주세요",
+			"creditCard": "신용카드",
+			"paypal": "Paypal",
+			"submitOrder": "주문서 제출",
+			"proceedToPayment": "결제창 이동",
+			"errorCouldNotConnect": "죄송합니다. 선택하신 결제시스템과 연결할 수 없습니다. 다른 결제방법을 선택해주세요",
+			"enterCreditCardInfo": "당신의 신용카드나 직불카드 정보를 입력해주세요.",
+			"yourOrderIsReady": "배송 준비되었습니다.",
+			"yourOrderIsExpected": "곧 발송될 것입니다.",
+			"errors": {
+				"valueNotValid": "제공된 값은 지원되지 않습니다.",
+				"zipNotAvailable": "이 우편 번호로 온라인 배송 주문을 할 수 없습니다. 자세한 내용은 매장에 문의하세요.",
+				"addressNotAvailable": "주소를 찾을 수 없습니다. 제안에서 주소를 선택하십시오."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "지금 온라인 지불",
+			"digitalWallets": "디지털 지갑",
+			"creditCardSecure": "안전한 신용 카드 결제",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "주문번호",
+			"orderStatus": "진행상황",
+			"notSubmitted": "미 접수",
+			"sent": "주문 접수",
+			"ready": "발송 준비",
+			"rejected": "취소",
+			"startNewOrder": "새로 주문하기",
+			"errors": {
+				"emailProperFormat": "유효한 이메일 주소를 입력해주세요"
+			},
+			"fiilEmailAddress": "주문내역 발송을 위한 이메일 주소를 입력해주세요",
+			"failedEmail": "이메일 발송에 실패하였습니다",
+			"emailSent": "이메일 발송 완료",
+			"received": "수령되었습니다.",
+			"accepted": "받았습니다.",
+			"mobileAppPromotion": "GonnaOrder 모바일 앱을 통해 다음 번 주문"
+		},
+		"dialog": {
+			"ok": "알겠습니다.",
+			"cancel": "취소"
+		},
+		"store": {
+			"currently": {
+				"closed": "상점은 현재 문을 닫았습니다."
+			},
+			"time": {
+				"closed": "선택한 시간에 매장이 닫힙니다."
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "채식주의 자",
+						"vegan": "비건",
+						"celery": "셀러리",
+						"wheat": "밀",
+						"crustaceans": "갑각류",
+						"eggs": "달걀",
+						"fish": "물고기",
+						"lupin": "이리 같은",
+						"milk": "우유",
+						"molluscs": "연체 동물",
+						"mustard": "머스타드",
+						"nuts": "견과류",
+						"peanuts": "땅콩",
+						"sesame": "참깨",
+						"soya": "콩",
+						"sulphurDioxide": "이산화황",
+						"halal": "할랄",
+						"barley": "보리",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "이 웹 사이트는 귀하의 경험을 개선하기 위해 쿠키를 사용하지만 원하는 경우 옵트 아웃 할 수 있습니다.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "대다"
+		},
+		"cookie": {
+			"accept": "동의하기",
+			"reject": "받지 않다",
+			"readMore": "더 읽어보기"
+		},
+		"connect": {
+			"social": {
+				"google": "Google과 연결",
+				"facebook": "페이스 북과 연동하세요"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "장바구니가 비어 있습니다",
+				"proceed": "발하다"
+			}
+		},
+		"main": {
+			"typeUrl": "URL 또는 상점 이름을 입력하세요.",
+			"invalidUrl": "URL이 잘못되었습니다.",
+			"scanQRCode": "QR 코드 스캔",
+			"storeNotFound": "상점을 찾을 수 없습니다",
+			"storeSaved": "스토어 정보가 성공적으로 저장되었습니다!",
+			"navigateStoreConfirm": "매장으로 이동하시겠습니까?"
+		},
+		"recents": {
+			"nothingFound": "검색된 항목이 없습니다."
+		}
+	}
+}

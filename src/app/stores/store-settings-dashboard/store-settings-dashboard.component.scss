@@ -1,0 +1,9 @@
+@media(max-width:600px) {
+    .btn-group {
+        display: grid;
+    }
+
+    #settingsTabs>.btn-group .btn {
+        border-radius: 0;
+    }
+}

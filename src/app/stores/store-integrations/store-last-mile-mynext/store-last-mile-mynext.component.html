@@ -1,0 +1,37 @@
+<div class="col-lg-12">
+    <form [formGroup]="myNextSettingsForm">
+        <div class="row d-flex align-items-center">
+            <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
+                <span class="mr-4">
+                    {{ 'admin.store.accountID' | translate }}:
+                </span>
+                <span>
+                    {{ myNextSettingsForm.get('DELIVERY_PROVIDER_MYNEXT_ACCOUNT_ID').value }}
+                </span>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+                <div class="d-flex align-items-center justify-content-between p-0">
+                    <button type="button" class="btn btn-danger active" (click)="disconnectMynext()">
+                        {{ 'admin.store.disconnect' | translate }}
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4 d-flex align-items-center">
+            <div class="col-lg-2">
+                {{ 'admin.store.enabled' | translate }}
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex align-items-center">
+                    <label>{{ 'admin.global.no' | translate }}</label>&nbsp;&nbsp;&nbsp;
+                    <label class="switch">
+                        <input type="checkbox" formControlName="DELIVERY_PROVIDER_MYNEXT_ENABLE"
+                            id="ORDER_NOTIFICATION_SOUND" (change)="updateEnabled()" />
+                        &nbsp;<span class="slider round"></span>
+                    </label>&nbsp;&nbsp;&nbsp;
+                    <label>{{ 'admin.global.yes' | translate }}</label>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "Funguje na",
+			"thankYou": "Děkuji",
+			"discount": "Sleva",
+			"viewOrder": "Zobrazit objednávku",
+			"errorH2": "Něco se pokazilo",
+			"errorUnexpected": "Stalo se něco neočekávaného",
+			"errorExpected": "Stalo se něco neočekávaného",
+			"errorMustSelectOne": "Musíte vybrat jednu hodnotu",
+			"errorTrialExceeded": "Tato funkce není k dispozici. Omezení zkušební verze byla překročena",
+			"emptyCart": "Ve vaší objednávce nejsou žádné položky",
+			"optional": "(volitelný)",
+			"cookies": "Tento web používá cookies. Pokračováním v používání této webové stránky souhlasíte s jejich používáním",
+			"more": "více",
+			"less": "méně",
+			"chooseFrom": "Vybrat z",
+			"standard": "Standard",
+			"days": {
+				"mon": "pondělí",
+				"tue": "úterý",
+				"wed": "středa",
+				"thu": "Čtvrtek",
+				"fri": "pátek",
+				"sat": "sobota",
+				"sun": "Neděle"
+			},
+			"opentimelist": "Otevírací doba",
+			"newVersionAvailable": "Používáte starší verzi aplikace. Znovu načtěte aplikaci a získejte nejnovější aktualizaci",
+			"reloadApplication": "Znovu načtěte aplikaci",
+			"poweredByGonnaOrder": "Běží na Gonnaorder",
+			"recents": "Nedávné",
+			"information": "Informace",
+			"yes": "Ano",
+			"no": "Ne",
+			"error": "Chyba",
+			"errorQRScanner": "U skeneru QR došlo k chybě!",
+			"confirm": "Potvrdit"
+		},
+		"select": {
+			"selectAtLeast": "Musíte vybrat alespoň {{x}}",
+			"selectAtmost": "Můžete vybrat maximálně {{x}}",
+			"selectAtleastAtMost": "Musíte vybrat nejméně {{x}} a nejvýše {{y}}",
+			"selectBetween": "Musíte vybrat mezi hodnotami {{childCategory.min}} a {{childCategory.max}}."
+		},
+		"load": {
+			"loadingMessage": "Okamžik prosím ..."
+		},
+		"itemDetails": {
+			"removeFromOrder": "Toto odstraňte z vaší objednávky",
+			"addToOrder": "Přidejte k vaší objednávce",
+			"updateOrder": "Aktualizujte svou objednávku"
+		},
+		"checkout": {
+			"yourOrder": "Vaše objednávka",
+			"total": "Celkem",
+			"specialNote": "Přidejte k objednávce zvláštní poznámku",
+			"howToReceiveYourOrder": "Jak byste chtěli obdržet vaši objednávku?",
+			"option": {
+				"pickup": "Vyzvednu si ji sám (sama)",
+				"addressDelivery": "Chci to odeslat na mou adresu.",
+				"serve": {
+					"location": "Sedím u stolu"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "Údaje o vaší objednávce se nám nepodařilo uložit",
+				"fieldRequired": "Toto pole je povinné",
+				"selectFutureTime": "Vyberte čas v budoucnu",
+				"orderSubmissionFailed": "Objednávku nelze odeslat",
+				"ORDER_LOCATION_NOT_PRESENT": "Chybí číslo tabulky nebo název umístění",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "Chybí některé požadované údaje o zákazníkovi",
+				"ORDER_WISH_TIME_INVALID": "Požadovaný čas přání je v minulosti",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "Chybí způsob doručení objednávky",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "Doručení na adresu není podporováno",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "Doručování objednávky není podporováno",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "Vyzvednutí objednávky není podporováno",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "Dodání na zadané PSČ není podporováno",
+				"OPENING_TIME_SCHEDULE_ERROR": "Obchod je uzavřen ve vybraném čase přání",
+				"PROMOTION_NOT_ELIGIBLE": "Je vybrána propagace, ale není způsobilá",
+				"offersUnavailableExplanation": "Níže uvedené položky nejsou k dispozici v den a čas, který jste zadali. Kliknutím na aktualizaci objednávky je odeberete z objednávky",
+				"offersOutOfStockExplanation": "Není k dispozici dostatek položek",
+				"invalidVoucherCode": "Kód poukazu je neplatný",
+				"INVALID_INPUT": "Při zpracování poskytnutých podrobností došlo k chybě.",
+				"slotUnavailableExplanation": "Požadovaný časový úsek není k dispozici. Vyberte jiný časový úsek nebo vyberte jiný způsob doručení.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "U tohoto obchodu není možné požadovat objednávku na stejný den.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "Ve vaší oblasti není možné požádat o objednávku na stejný den.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "Není možné požádat o objednávku na stejný den u následujících položek:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "Na požadovaný čas a den není možné doručit na vaše poštovní směrovací číslo.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "Není možné doručit objednávky v konkrétní čas a datum. Vyberte prosím alternativu.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "Není možné vyzvednout objednávky v konkrétní čas a datum. Vyberte prosím alternativu.",
+				"INTERNAL_ERROR": "Došlo k neočekávané chybě. Znovu načtěte aplikaci a zkuste to znovu.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "Není splněna minimální částka objednávky dodávky. Chcete-li pokračovat, přidejte k objednávce další hodnotu {{AMOUNT_MISSING}}.",
+				"paymentFailed": "Neplatili jste online pomocí této platební metody. Prosím zkuste to znovu.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "Požadované propagační akce nebyly použity",
+				"INVALID_CUSTOMER_VOUCHER": "Neplatný poukaz zákazníka",
+				"slotUnavailable": "Vybraný čas není k dispozici",
+				"slotUnavailableExplanationWithSuggestion": "Vybraný čas je v minulosti nebo již není k dispozici. Další dostupný čas:",
+				"socialLoginFailed": "Nemohli jsme se připojit k vašemu účtu",
+				"customerDetailsUpdateFailed": "Aktualizace údajů profilu se nezdařila",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "Obchod na toto místo nedoručuje",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "Nemůžeme najít adresu, kterou jste zadali. Aktualizujte adresu a zkuste to znovu, nebo kontaktujte obchod.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "V konkrétní čas a datum není možné odeslat objednávku. Vyberte prosím alternativu.",
+				"MISSING_LOCATION_TAP_ID": "ID klepnutí je povinné",
+				"invalidPin": "Neplatný PIN kód zákazníka"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "Vaše objednávka vám bude doručena"
+					},
+					"unknown": {
+						"location": "Vaše objednávka vám bude doručena"
+					}
+				},
+				"pickup": "Vyzvednout objednávku",
+				"addressDelivery": "Vaše informace prosím"
+			},
+			"yourInformationPlease": "Vaše informace prosím",
+			"locationCode": "Stůl",
+			"yourName": "Vaše jméno",
+			"email": "E-mail",
+			"phoneNumber": "Telefonní číslo",
+			"fullName": "Celé jméno",
+			"streetAddress": "Adresa ulice",
+			"zip": "PSČ",
+			"town": "Město",
+			"minimumAmount": "K doručení je vyžadováno minimálně {{amount}} kusů v objednávce",
+			"deliveryFee": "Poštovné",
+			"deliveryFeeApplicable": "Platí pro objednávky níže {{amount}}",
+			"field": {
+				"generalValidation": "Formát pole není platný"
+			},
+			"acceptTerm": "Pokračováním přijímáte {{Podmínky použití}} a {{Zásady ochrany osobních údajů}}",
+			"termsAndPolicy": "Pokračováním přijímáte",
+			"acceptTerms": {
+				"and": "a",
+				"after": ""
+			},
+			"termsOfUse": "Podmínky použití",
+			"privacyPolicy": "Zásady ochrany osobních údajů",
+			"yourTable": "Váš stůl",
+			"allowedCharacters": "Povolené znaky",
+			"wishTimeHeading": "Kdy byste chtěli obdržet vaši objednávku?",
+			"asSoonAsPossible": "Chci to obdržet co nejdříve",
+			"specifyWishTime": "Chci specifikovat, kdy ho mám obdržet",
+			"specialNoteExample": "Přidejte k objednávce zvláštní poznámku",
+			"cardDisabledNote": "Až budete připraveni, sdílejte prosím svou objednávku ",
+			"cardHolderName": "Jméno držitele karty",
+			"cardNumber": "Číslo vaší karty",
+			"cvv": "CVV",
+			"itemsOutOfStock": "Některé položky nejsou na skladě",
+			"floor": "Podlaha",
+			"storeClosedAtOrderWishDate": "Obchod je uzavřen v požadované datum nebo čas přání",
+			"offersNotAvailableAtOrderWishDate": "Některé nabídky nejsou k dispozici v požadovaném datu nebo čase přání",
+			"updateOrder": "Aktualizovat objednávku",
+			"offers": {
+				"availableQuantity": "Momentálně dostupný"
+			},
+			"voucherCode": "Zadejte kód voucheru",
+			"validVoucherCode": "Kód poukazu je platný",
+			"yourRoom": "Tvůj pokoj",
+			"yourLocation": "Vaše pozice",
+			"serveOption": {
+				"location": "Chci ji obdržet na svém místě",
+				"room": "jsem ve svém pokoji"
+			},
+			"social": {
+				"connect": "Spojte se se sociálním účtem"
+			},
+			"remainingValidVoucher": "Zbývající částka na poukazu:",
+			"paymentsense": {
+				"declined": "Online platba prostřednictvím služby Paymentsense byla odmítnuta"
+			},
+			"saveCustomerDetailsForFuture": "Uložte si svá profilová data pro budoucí objednávky",
+			"customerDetailsUpdateSuccess": "Data vašeho profilu byla aktualizována",
+			"logout": "Odhlásit se",
+			"expiry": "Datum vypršení platnosti (MMRR)",
+			"enterPin": "Zadejte číslo PIN"
+		},
+		"payment": {
+			"payOnlineNow": "Vyberte, chcete-li platit hned online",
+			"chooseYourPaymentMethod": "Zvolte platební metodu",
+			"creditCard": "Kreditní karta",
+			"paypal": "Paypal",
+			"submitOrder": "Odešlete svou objednávku",
+			"proceedToPayment": "Pokračujte k platbě",
+			"errorCouldNotConnect": "Nebyli jsme schopni se připojit k vybranému zpracovateli plateb. Vraťte se na obrazovku pokladny a vyberte jiný způsob platby, nebo to zkuste znovu později.",
+			"enterCreditCardInfo": "Zadejte informace o své kreditní nebo debetní kartě",
+			"yourOrderIsReady": "Vaše objednávka je připravena",
+			"yourOrderIsExpected": "Vaše objednávka je očekávána",
+			"errors": {
+				"valueNotValid": "Zadaná hodnota není platná",
+				"zipNotAvailable": "Na toto PSČ nemůžete zadat objednávku online doručení. Další informace získáte v obchodě",
+				"addressNotAvailable": "Adresu nelze najít. Z návrhů vyberte adresu."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "Zaplaťte nyní online",
+			"digitalWallets": "Digitální peněženky",
+			"creditCardSecure": "Bezpečné platby kreditní kartou",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "Vaše číslo objednávky",
+			"orderStatus": "Stav objednávky",
+			"notSubmitted": "Dosud neodesláno",
+			"sent": "Odesláno",
+			"ready": "Připraveno",
+			"rejected": "Odmítnuto",
+			"startNewOrder": "Zahajte novou objednávku",
+			"errors": {
+				"emailProperFormat": "Zadejte platný email prosím"
+			},
+			"fiilEmailAddress": "Vyplňte svou e-mailovou adresu a obdržíte kopii objednávky",
+			"failedEmail": "Nepodařilo se odeslat e-mail",
+			"emailSent": "Email odeslán",
+			"received": "Obdrženo",
+			"accepted": "Schváleno",
+			"mobileAppPromotion": "Příště si objednejte prostřednictvím mobilní aplikace GonnaOrder"
+		},
+		"dialog": {
+			"ok": "OK",
+			"cancel": "Zrušit"
+		},
+		"store": {
+			"currently": {
+				"closed": "Obchod je aktuálně uzavřen"
+			},
+			"time": {
+				"closed": "Obchod je ve vybraný čas uzavřen"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "Vegetariánský",
+						"vegan": "Vegan",
+						"celery": "Celer",
+						"wheat": "Pšenice",
+						"crustaceans": "Korýši",
+						"eggs": "Vejce",
+						"fish": "Ryba",
+						"lupin": "Lupina",
+						"milk": "Mléko",
+						"molluscs": "Měkkýši",
+						"mustard": "Hořčice",
+						"nuts": "Ořechy",
+						"peanuts": "Arašídy",
+						"sesame": "Sezam",
+						"soya": "Sója",
+						"sulphurDioxide": "Kysličník siřičitý",
+						"halal": "Halal",
+						"barley": "Ječmen",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "Tato webová stránka používá soubory cookie ke zlepšení vašeho zážitku, ale pokud chcete, můžete se odhlásit.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "Aplikovat"
+		},
+		"cookie": {
+			"accept": "Přijmout",
+			"reject": "Odmítnout",
+			"readMore": "Přečtěte si více"
+		},
+		"connect": {
+			"social": {
+				"google": "Navázat spojení s Google",
+				"facebook": "Připojit pomocí Facebooku"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "Váš košík je prázdný",
+				"proceed": "Pokračovat"
+			}
+		},
+		"main": {
+			"typeUrl": "Zadejte adresu URL nebo název obchodu",
+			"invalidUrl": "Adresa URL je neplatná",
+			"scanQRCode": "Naskenujte QR kód",
+			"storeNotFound": "Prodejna nebyla nalezena",
+			"storeSaved": "Uložit informace úspěšně uloženy!",
+			"navigateStoreConfirm": "Navigovat do obchodu?"
+		},
+		"recents": {
+			"nothingFound": "Nic se zde nenašlo"
+		}
+	}
+}

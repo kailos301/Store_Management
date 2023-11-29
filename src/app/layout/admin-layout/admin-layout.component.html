@@ -1,0 +1,94 @@
+<div class="admin app">
+  <app-header [navbarBrandRouterLink]="'https://www.gonnaorder.com'"
+    [navbarBrandFull]="{src: 'assets/img/branding/logo-basic.svg', style: 'width: 85px'}" [fixed]="true"
+    [navbarBrandText]="{ icon: '🅲', text: 'Gonna Order' }"
+    [navbarBrandMinimized]="{src: 'assets/img/branding/logo-small.svg', style: 'width: 35px'}" [sidebarToggler]="'lg'"
+    [asideMenuToggler]="false" [mobileAsideMenuToggler]="false">
+    <div class="current-store d-none d-lg-flex mx-auto ml-lg-4">
+      <div class="d-flex text-blue">
+        {{ (store$ | async)?.name }}
+      </div>
+      <a *ngIf="(changeBtnVisible$ | async)" class="ml-2 mb-0" title="{{ 'admin.global.change' | translate }}"
+        [routerLink]="['/manager/stores/list']">
+        <i class="nav-icon fas fa-random" aria-hidden="true"></i>
+      </a>
+    </div>
+    <!-- <ul class="nav navbar-nav d-md-down-none">
+      <li class="nav-item px-3">
+        <a [routerLink]="['/manager/stores/list']">Dashboard</a>
+      </li>
+      <li class="nav-item px-3">
+          <a [routerLink]="['/manager/stores/init']">Create store</a>
+      </li>
+    </ul> -->
+    <!-- <a [routerLink]="['/manager/stores/init']">Create store</a> -->
+
+    <ul class="nav navbar-nav ml-auto">
+      <li class="nav-item px-3">
+        <a [routerLink]="['/manager/profile/contactus']" class="text-info cursor-pointer" title="{{ 'admin.global.contactus.support' | translate }}"> <i class="fa fa-comment-alt mr-1 text-info"></i> <span
+            class="d-none text-primary d-md-inline-block d-lg-inline-block d-xl-inline-block ml-1">{{'admin.global.contactus.support'|translate}}</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown" dropdown placement="right" style="padding-right: 1em;">
+        <a class="nav-link text-blue" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+          aria-expanded="false" dropdownToggle (click)="closeMobileMenu($event)">
+          <i class="fas fa-user mt-1 mr-2"></i> <span
+            class="d-none d-sm-inline-block mr-1">{{ username$ | async }}</span> <i class="fas fa-angle-down"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" *dropdownMenu aria-labelledby="simple-dropdown">
+          <div class="dropdown-header text-center">
+            <strong>Account</strong>
+          </div>
+          <a class="dropdown-item dropdown-links" [routerLink]="['/manager/profile']"><i
+              class="fas fa-user adminIcons"></i>{{'admin.account.profile' | translate}}</a>
+          <a class="dropdown-item dropdown-links" [routerLink]="['/manager/profile/social-accounts/update']"><i
+            class="fas fa-user-friends adminIcons"></i>{{'admin.account.social.nav' | translate}}</a>
+          <a *ngIf="(hasPassword$ | async)" class="dropdown-item dropdown-links" [routerLink]="['/manager/profile/password/update']"><i
+              class="fas fa-lock adminIcons"></i> {{'admin.account.changePassword' | translate}}</a>
+          <a *ngIf="!(hasPassword$ | async)" class="dropdown-item dropdown-links" [routerLink]="['/manager/profile/password/create']"><i
+            class="fas fa-lock adminIcons"></i>{{'admin.account.createPassword' | translate}}</a>
+          <div class="divider"></div>
+          <a class="dropdown-item dropdown-links" style="vertical-align: middle;display: inline-flex;"
+            (click)="logout()"><i class="adminIcons material-icons">
+              exit_to_app
+            </i><span>{{'admin.account.logout' | translate}}</span> </a>
+        </div>
+      </li>
+    </ul>
+  </app-header>
+  <div class="current-store w-100 d-flex d-lg-none mx-auto ml-lg-4 justify-content-center position-fixed">
+    <div class="d-flex text-blue">
+      {{ (store$ | async)?.name }}
+    </div>
+
+    <a *ngIf="(changeBtnVisible$ | async)" class="ml-2 mb-0" title="{{ 'admin.global.change' | translate }}"
+      [routerLink]="['/manager/stores/list']">
+      <i class="nav-icon fas fa-random" aria-hidden="true"></i>
+    </a>
+  </div>
+  <div class="app-body admin">
+    <app-menu></app-menu>
+    <main class="main">
+      <ol class="breadcrumb mb-md-0">
+        <!-- Breadcrumb Menu-->
+        <li class="breadcrumb-menu d-md-down-none">
+          <!-- <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+            <a class="btn" href="#"><i class="icon-speech"></i></a>
+            <a class="btn" [routerLink]="['/dashboard']"><i class="icon-graph"></i> &nbsp;Dashboard</a>
+            <a class="btn" href="#"><i class="icon-settings"></i> &nbsp;Settings</a>
+          </div> -->
+        </li>
+      </ol>
+      <div class="container-fluid">
+        <div class="animated fadeIn">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </main>
+  </div>
+  <app-footer *ngIf="!isPos">
+    <div class="d-flex flex-row-reverse col-12" *ngIf="isNewVersionAvailable$ | async">
+      <app-state-reloader [buttonText]="'admin.global.reloadApplication' | translate" [isAdmin]="true"></app-state-reloader>
+    </div>
+  </app-footer>
+</div>

@@ -1,0 +1,426 @@
+<div class="mx-auto position-relative" [style.height]="isPos ? innerHeight + 'px' : '100%'">
+  <div class="overflow-auto" [style.height]="isPos ? innerHeight + 'px' : '100%'" #scrollableContainer>
+    <div class="item-wrapper mx-auto" #itemWrapper [ngClass]="{'added-to-cart': addedToCart}">
+      <div class="hero mx-auto position-relative" [ngClass]="{'offer-image': (offerItem$ | async)?.standardImage}"
+        *ngIf="(offerItem$ | async)?.standardImage || (selectedStore$ | async)?.settings?.IMAGE; else templateNoHero">
+        <div class="mx-auto position-absolute"
+          [ngClass]="{'blurred': (offerItem$ | async)?.standardImage, 'clear': !(offerItem$ | async)?.standardImage}"
+          [style.background-image]="getBackgroundImage((offerItem$ | async)?.standardImage, (selectedStore$ | async)?.settings?.IMAGE)">
+        </div>
+        <div class="reveal position-absolute">
+          <div class="img mx-auto"
+            [style.background-image]="getBackgroundImage((offerItem$ | async)?.standardImage, (selectedStore$ | async)?.settings?.IMAGE)"
+            *ngIf="(offerItem$ | async)?.standardImage"></div>
+        </div>
+        <a href="#" (click)="OnCloseItemDetails($event)" class="close-details d-flex m-1 position-absolute">
+          <img src="assets/img/icon-back-arrow.svg" class="mx-auto" width="20px;" />
+        </a>
+      </div>
+      <ng-template #templateNoHero>
+        <div class="store-info position-relative mx-auto pt-3 pt-md-4 pb-0">
+          <a href="#" (click)="OnCloseItemDetails($event)"
+            class="d-flex m-1 position-absolute header-background round-background">
+            <img src="assets/img/icon-back-arrow.svg" class="mx-auto" />
+          </a>
+        </div>
+      </ng-template>
+      <div class="content pb-6 mx-auto">
+        <div class="basic-info px-3 pt-3 pb-1 text-unselectable">
+          <div class="item font-size-header font-weight-bold">{{(offerItem$ | async)?.name}}</div>
+          <div class="description font-size-primary">{{(offerItem$ | async)?.shortDescription}}</div>
+          <span href="#" class="long-description font-size-primary"
+            [ngClass]='{"full": (offerItem$ | async)?.longDescription.length < 500}'
+            [attr.data-translate-more]="'public.global.more' | translate"
+            [attr.data-translate-less]="'public.global.less' | translate" (click)="OnExpandLongDescription($event)"
+            *ngIf="(offerItem$ | async)?.longDescription"
+            [innerHTML]="getLongDescription((offerItem$ | async)?.longDescription, 500)">
+          </span>
+          <div class="allergen pt-1"
+            *ngIf="(offerItem$ | async)?.attributeDtos && (offerItem$ | async)?.attributeDtos.length>0">
+            <label [for]="'public.store.catalog.offer.characteristics.vegetarian'|translate" class="icon-container"
+              *ngIf="isAllergenSeleted((offerItem$ | async)?.attributeDtos,'VEGETARIAN')">
+              {{'public.store.catalog.offer.characteristics.vegetarian'|translate}}
+              <div class="icon icon-vegetarian green"></div>
+            </label>
+            <label [for]="'public.store.catalog.offer.characteristics.vegan'|translate" class="icon-container"
+              *ngIf="isAllergenSeleted((offerItem$ | async)?.attributeDtos,'VEGAN')">
+              {{'public.store.catalog.offer.characteristics.vegan'|translate}}
+              <div class="icon icon-vegan green"></div>
+            </label>
+            <label [for]="'public.store.catalog.offer.characteristics.halal'|translate" class="icon-container"
+              *ngIf="isAllergenSeleted((offerItem$ | async)?.attributeDtos,'HALAL')">
+              {{'public.store.catalog.offer.characteristics.halal'|translate}}
+              <div class="icon icon-halal"></div>
+            </label>
+            <label [for]="'public.store.catalog.offer.characteristics.spicy'|translate" class="icon-container"
+              *ngIf="isAllergenSeleted((offerItem$ | async)?.attributeDtos,'SPICY1')">
+              {{'public.store.catalog.offer.characteristics.spicy'|translate}}
+              <div class="icon icon-spicy_1"></div>
+            </label>
+            <label [for]="'public.store.catalog.offer.characteristics.spicy'|translate" class="icon-container"
+              *ngIf="isAllergenSeleted((offerItem$ | async)?.attributeDtos,'SPICY2')">
+              {{'public.store.catalog.offer.characteristics.spicy'|translate}}
+              <div class="icon icon-spicy_2"></div>
+            </label>
+            <label [for]="'public.store.catalog.offer.characteristics.spicy'|translate" class="icon-container"
+              *ngIf="isAllergenSeleted((offerItem$ | async)?.attributeDtos,'SPICY3')">
+              {{'public.store.catalog.offer.characteristics.spicy'|translate}}
+              <div class="icon icon-spicy_3"></div>
+            </label>
+            <label [for]="'public.store.catalog.offer.characteristics.celery'|translate"
+              *ngIf="isAllergenSeleted((offerItem$ | async)?.attributeDtos,'CELERY')"
+              class="icon-container">{{'public.store.catalog.offer.characteristics.celery'|translate}}
+              <div class="icon icon-celery"></div>
+            </label>
+            <label [for]="'public.store.catalog.offer.characteristics.crustaceans'|translate" class="icon-container"
+              *ngIf="isAllergenSeleted((offerItem$ | async)?.attributeDtos,'CRUSTACEANS')">
+              {{'public.store.catalog.offer.characteristics.crustaceans'|translate}}
+              <div class="icon icon-crustaceans"></div>
+            </label>
+            <label [for]="'public.store.catalog.offer.characteristics.eggs'|translate" class="icon-container"
+              *ngIf="isAllergenSeleted((offerItem$ | async)?.attributeDtos,'EGG')">
+              {{'public.store.catalog.offer.characteristics.eggs'|translate}}
+              <div class="icon icon-eggs"></div>
+            </label>
+            <label [for]="'public.store.catalog.offer.characteristics.fish'|translate" class="icon-container"
+              *ngIf="isAllergenSeleted((offerItem$ | async)?.attributeDtos,'FISH')">
+              {{'public.store.catalog.offer.characteristics.fish'|translate}}
+              <div class="icon icon-fish"></div>
+            </label>
+            <label [for]="'public.store.catalog.offer.characteristics.lupin'|translate" class="icon-container"
+              *ngIf="isAllergenSeleted((offerItem$ | async)?.attributeDtos,'LUPIN')">
+              {{'public.store.catalog.offer.characteristics.lupin'|translate}}
+              <div class="icon icon-lupin"></div>
+            </label>
+            <label [for]="'public.store.catalog.offer.characteristics.milk'|translate" class="icon-container"
+              *ngIf="isAllergenSeleted((offerItem$ | async)?.attributeDtos,'MILK')">
+              {{'public.store.catalog.offer.characteristics.milk'|translate}}
+              <div class="icon icon-milk"></div>
+            </label>
+            <label [for]="'public.store.catalog.offer.characteristics.molluscs'|translate" class="icon-container"
+              *ngIf="isAllergenSeleted((offerItem$ | async)?.attributeDtos,'MOLLUSCS')">
+              {{'public.store.catalog.offer.characteristics.molluscs'|translate}}
+              <div class="icon icon-molluscs"></div>
+            </label>
+            <label [for]="'public.store.catalog.offer.characteristics.mustard'|translate" class="icon-container"
+              *ngIf="isAllergenSeleted((offerItem$ | async)?.attributeDtos,'MUSTARD')">
+              {{'public.store.catalog.offer.characteristics.mustard'|translate}}
+              <div class="icon icon-mustard"></div>
+            </label>
+            <label [for]="'public.store.catalog.offer.characteristics.nuts'|translate" class="icon-container"
+              *ngIf="isAllergenSeleted((offerItem$ | async)?.attributeDtos,'NUTS')">
+              {{'public.store.catalog.offer.characteristics.nuts'|translate}}
+              <div class="icon icon-nuts"></div>
+            </label>
+            <label [for]="'public.store.catalog.offer.characteristics.peanuts'|translate" class="icon-container"
+              *ngIf="isAllergenSeleted((offerItem$ | async)?.attributeDtos,'PEANUT')">
+              {{'public.store.catalog.offer.characteristics.peanuts'|translate}}
+              <div class="icon icon-peanuts"></div>
+            </label>
+            <label [for]="'public.store.catalog.offer.characteristics.sesame'|translate" class="icon-container"
+              *ngIf="isAllergenSeleted((offerItem$ | async)?.attributeDtos,'SESAME')">
+              {{'public.store.catalog.offer.characteristics.sesame'|translate}}
+              <div class="icon icon-sesame"></div>
+            </label>
+            <label [for]="'public.store.catalog.offer.characteristics.soya'|translate" class="icon-container"
+              *ngIf="isAllergenSeleted((offerItem$ | async)?.attributeDtos,'SOYA')">
+              {{'public.store.catalog.offer.characteristics.soya'|translate}}
+              <div class="icon icon-soya"></div>
+            </label>
+            <label [for]="'public.store.catalog.offer.characteristics.sulphurDioxide'|translate" class="icon-container"
+              *ngIf="isAllergenSeleted((offerItem$ | async)?.attributeDtos,'SULPHUR_DIOXIDE')">
+              {{'public.store.catalog.offer.characteristics.sulphurDioxide'|translate}}
+              <div class="icon icon-sulphur-dioxide"></div>
+            </label>
+            <label [for]="'public.store.catalog.offer.characteristics.wheat'|translate" class="icon-container"
+              *ngIf="isAllergenSeleted((offerItem$ | async)?.attributeDtos,'CEREALS_WITH_WHEAT')">
+              {{'public.store.catalog.offer.characteristics.wheat'|translate}}
+              <div class="icon icon-wheat"></div>
+            </label>
+            <label [for]="'public.store.catalog.offer.characteristics.barley'|translate" class="icon-container"
+              *ngIf="isAllergenSeleted((offerItem$ | async)?.attributeDtos,'BARLEY')">
+              {{'public.store.catalog.offer.characteristics.barley'|translate}}
+              <div class="icon icon-barley"></div>
+            </label>
+          </div>
+        </div>
+        <div *ngIf="offerVariants.length > 0">
+          <div class="option-wrapper" [formGroup]="radioVariantsFg">
+            <div class="section-title p-3 mb-0 font-size-primary font-weight-bold">{{'public.global.chooseFrom' |
+              translate}}</div>
+            <!-- DISPLAY VARIANTS RADIO BUTTONS -->
+            <div class="d-block variant-wrapper radio d-flex justify-content-between align-items-center mx-3 my-2 h-100 pl-0"
+              *ngFor="let variant of offerVariants">
+              <label for="var{{variant.offerId}}"
+                class="d-flex flex-column w-100 container child-cat-desc font-size-primary pl-0 text-unselectable">
+                <div class="d-flex font-size-primary mr-3"
+                  *ngIf="!variant.discount || !variant.discountType; else discountedView">{{variant.priceDescription}}
+                  <span class="ml-1" *ngIf="variant.price && variant.price > 0">({{variant.price | formatPrice:
+                    selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol }})</span>
+                </div>
+                <ng-template #discountedView>
+                  <div class="d-inline-block"
+                    *ngIf="variant.discount && variant.discountType=='MONETARY'; else discountedPercentileView">
+                    <span *ngIf="variant.priceDescription" class="mr-1 font-size-primary">{{ variant.priceDescription
+                      }}</span>
+                    <div>
+                      <span class="strikethrough mr-1 font-size-primary">{{ variant.price | formatPrice:
+                        selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol }}</span>
+                      <span class="discounted-price ml-1 font-size-primary">{{ variant.price - variant.discount |
+                        formatPrice: selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol }}</span>
+                      <img src="assets/img/tag.svg" class="ml-2" width="13px" />
+                    </div>
+                  </div>
+                </ng-template>
+                <ng-template #discountedPercentileView>
+                  <div class="price d-inline-block">
+                    <span *ngIf="variant.priceDescription" class="mr-1 font-size-primary">{{ variant.priceDescription
+                      }}</span>
+                    <div>
+                      <span class="strikethrough mr-1 font-size-primary">{{ variant.price | formatPrice:
+                        selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol }}</span>
+                      <span class="ml-1 font-size-primary">{{ (variant.price * (100 - variant.discount)
+                        / 100) | formatPrice: selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol
+                        }}</span>
+                      <img src="assets/img/tag.svg" class="ml-2" width="13px" /> <span class="discounted-price ml-2">-
+                        {{ variant.discount | number}}%</span>
+                    </div>
+                  </div>
+                </ng-template>
+                <div *ngIf="basketEnabled && isOrderable && ((offerItemLoadingStatus$ | async) === 'LOADED') && (!this.checkoutService.ifStoreClosed() || this.checkoutService.isFutureOrderingEnabled())">
+                  <input type="radio" name="offerVariants" formControlName="offerVariants" id="var{{variant.offerId}}"
+                    value="{{variant.offerId}}"
+                    [class.is-invalid]="getControl('offerVariants', 'radioVariantsFg').invalid && (getControl('offerVariants', 'radioVariantsFg').dirty || getControl('offerVariants', 'radioVariantsFg').touched)"
+                    (change)="OnSelectOfferVariant()" />
+                  <span class="checkmark"></span>
+                </div>
+              </label>
+            </div>
+            <div class="invalid-feedback font-size-secondary pb-2 pl-3"
+              *ngIf="getControl('offerVariants', 'radioVariantsFg').errors && basketEnabled && isOrderable && ((offerItemLoadingStatus$ | async) === 'LOADED') && (!this.checkoutService.ifStoreClosed() || this.checkoutService.isFutureOrderingEnabled())">
+              <span
+                *ngIf="getControl('offerVariants', 'radioVariantsFg').errors?.required">{{'public.global.errorMustSelectOne'
+                | translate}}</span>
+            </div>
+          </div>
+        </div>
+        <!-- USE THIS TO DISPLAY CHILD CATEGORIES AND CHILD OFFERS -->
+        <ng-container *ngIf="radioCategoriesFg">
+          <div class="option-wrapper" [formGroup]="radioCategoriesFg"
+            *ngFor="let childCategory of selectedItem?.categories">
+            <ng-container *ngIf="childCategory.offers">
+              <div class="section-title p-3 mb-0 font-size-primary font-weight-bold">{{childCategory.name}}</div>
+              <ng-container *ngIf="childCategory.min === 1 && childCategory.max === 1; else templateRadioAsCheckbox">
+                <!-- DISPLAY RADIO BUTTONS -->
+                <div
+                  class="d-block variant-wrapper radio d-flex justify-content-between align-items-center mx-3 my-2 h-100 pl-0"
+                  *ngFor="let offer of childCategory.offers">
+                  <label for="var{{offer.offerId}}" class="d-flex flex-column w-100 container pl-0 text-unselectable"
+                    [ngClass]="{'child-cat-desc': offer.shortDescription}">
+                    <div class="d-inline-block font-size-primary">{{offer.name}} <span class="ml-1"
+                        *ngIf="offer.price && offer.price > 0">(+ {{offer.price | formatPrice:
+                        selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol }})</span></div>
+                    <div class="child-cat-description font-size-secondary" *ngIf="offer.shortDescription">
+                      {{offer.shortDescription}}</div>
+                    <div *ngIf= "basketEnabled && isOrderable && ((offerItemLoadingStatus$ | async) === 'LOADED') && (!this.checkoutService.ifStoreClosed() || this.checkoutService.isFutureOrderingEnabled())">
+                      <input type="radio" name="cat{{childCategory.categoryId}}"
+                        formControlName="cat{{childCategory.categoryId}}" id="var{{offer.offerId}}"
+                        value="{{offer.offerId}}"
+                        [class.is-invalid]="getControl('cat' + childCategory.categoryId, 'radioCategoriesFg').invalid && (getControl('cat' + childCategory.categoryId, 'radioCategoriesFg').dirty || getControl('cat' + childCategory.categoryId, 'radioCategoriesFg').touched)"
+                        (change)="OnRequireChildOfferPrice(childCategory.categoryId, offer)" />
+                      <span class="checkmark"></span>
+                    </div>
+                  </label>
+                </div>
+                <div class="invalid-feedback font-size-secondary pb-2 pl-3"
+                  *ngIf="getControl('cat' + childCategory.categoryId, 'radioCategoriesFg').errors && basketEnabled && isOrderable && ((offerItemLoadingStatus$ | async) === 'LOADED') && (!this.checkoutService.ifStoreClosed() || this.checkoutService.isFutureOrderingEnabled())">
+                  <span
+                    *ngIf="getControl('cat' + childCategory.categoryId, 'radioCategoriesFg').errors?.required">{{'public.global.errorMustSelectOne'
+                    | translate}}</span>
+                </div>
+              </ng-container>
+              <ng-template #templateRadioAsCheckbox>
+                <ng-container *ngIf="childCategory.min === 0 && childCategory.max === 1; else templateMultipleOptions">
+                  <!-- DISPLAY RADIO AS CHECKBOX BUTTONS -->
+                  <div
+                    class="d-block variant-wrapper checkbox d-flex justify-content-between align-items-center mx-3 my-2 h-100 pl-0"
+                    *ngFor="let offer of childCategory.offers">
+                    <label for="var{{offer.offerId}}"
+                      class="d-flex flex-column w-100 container pl-0 font-size-primary text-unselectable"
+                      [ngClass]="{'child-cat-desc': offer.shortDescription}">
+                      <div class="d-flex">{{offer.name}} <span class="ml-1 font-size-primary"
+                          *ngIf="offer.price && offer.price > 0">(+ {{ offer.price | formatPrice:
+                          selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol }})</span></div>
+                      <div class="child-cat-description font-size-secondary" *ngIf="offer.shortDescription">
+                        {{offer.shortDescription}}</div>
+                      <div *ngIf= "basketEnabled && isOrderable && ((offerItemLoadingStatus$ | async) === 'LOADED') && (!this.checkoutService.ifStoreClosed() || this.checkoutService.isFutureOrderingEnabled())">
+                        <input type="checkbox" class="cat{{childCategory.categoryId}}"
+                          formControlName="var{{offer.offerId}}" id="var{{offer.offerId}}" value="{{offer.offerId}}"
+                          (change)="OnToggleSingleChildOfferPrice($event, offer, childCategory.categoryId)" />
+                        <span class="checkmark"></span>
+                      </div>
+                    </label>
+                  </div>
+                </ng-container>
+              </ng-template>
+              <ng-template #templateMultipleOptions>
+                <!-- DISPLAY CHECKBOXES -->
+                <div
+                  class="d-block variant-wrapper checkbox d-flex justify-content-between align-items-center mx-3 my-2 h-100 pl-0"
+                  *ngFor="let offer of childCategory.offers">
+                  <label for="var{{offer.offerId}}"
+                    class="d-flex flex-column w-100 container font-size-primary text-unselectable pl-0"
+                    [ngClass]="{'child-cat-desc': offer.shortDescription}">
+                    <div class="d-flex">{{offer.name}} <span class="ml-1" *ngIf="offer.price && offer.price > 0">(+ {{
+                        offer.price | formatPrice: selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol
+                        }})</span></div>
+                    <div class="child-cat-description font-size-secondary" *ngIf="offer.shortDescription">
+                      {{offer.shortDescription}}</div>
+                    <ng-container *ngIf="!childCategory.orderMultipleSameItem && basketEnabled && isOrderable && ((offerItemLoadingStatus$ | async) === 'LOADED') && (!this.checkoutService.ifStoreClosed() || this.checkoutService.isFutureOrderingEnabled())">
+                      <input type="checkbox" formControlName="var{{offer.offerId}}" id="var{{offer.offerId}}"
+                        value="{{offer.offerId}}" (change)="OnToggleChildOfferPrice($event, offer)" />
+                      <span class="checkmark"></span>
+                    </ng-container>
+                  </label>
+                  <ng-container *ngIf="childCategory.orderMultipleSameItem && basketEnabled && isOrderable && ((offerItemLoadingStatus$ | async) === 'LOADED') && (!this.checkoutService.ifStoreClosed() || this.checkoutService.isFutureOrderingEnabled())">
+                    <div class="qty d-flex mx-auto align-items-center mb-1 mt-n-1">
+                      <div class="decrement d-flex"
+                        (click)="decreaseItemQuantity(offer)"
+                        [ngClass]="{disabled: getControl('var'+offer.offerId, 'radioCategoriesFg').value <= 0}">
+                        <img src="assets/img/icon-minus.svg" class="mx-auto" />
+                      </div>
+                      <input
+                        type="text"
+                        class="mx-md-2 mx-sm-1 mx-0 border-0"
+                        style="width: 30px; text-align: center;"
+                        formControlName="var{{offer.offerId}}"
+                        id="var{{offer.offerId}}"
+                        readonly />
+                      <div class="increment d-flex" (click)="increaseItemQuantity(offer)">
+                        <img src="assets/img/icon-plus.svg" class="mx-auto" />
+                      </div>
+                    </div>
+                  </ng-container>
+                </div>
+                <div class="invalid-feedback font-size-secondary pb-2 pl-3" *ngIf="checkMultipleOptionsValid(childCategory) && basketEnabled && isOrderable && ((offerItemLoadingStatus$ | async) === 'LOADED') && (!this.checkoutService.ifStoreClosed() || this.checkoutService.isFutureOrderingEnabled())">
+                  <span *ngIf="childCategory.max > -1 && childCategory.min">
+                    {{ 'public.select.selectAtleastAtMost' | translate : {x: childCategory.min, y: childCategory.max} }}
+                  </span>
+                  <span *ngIf="childCategory.max > -1 && !childCategory.min">
+                    {{ 'public.select.selectAtmost' | translate : {x: childCategory.max} }}
+                  </span>
+                  <span *ngIf="childCategory.max <= -1">
+                    {{ 'public.select.selectAtLeast' | translate : {x: childCategory.min} }}
+                  </span>
+                </div>
+              </ng-template>
+            </ng-container>
+            <!-- THE #templateDescriptiveOption WILL MOST PROBABLY NEVER BE USED -->
+            <ng-template #templateDescriptiveOption>
+              <!-- DISPLAY TEXTAREA -->
+              <div class="variant-wrapper  mx-3 my-2">
+                <textarea class="d-flex w-100" placeholder="{{childCategory.name}}"></textarea>
+              </div>
+            </ng-template>
+          </div>
+        </ng-container>
+        <div class="option-wrapper">
+          <!-- <div class="variant-wrapper my-2">
+            <div class="section-title p-3 mt-3 mb-0 font-size-primary font-weight-bold">{{'public.checkout.specialNote' | translate}}</div>
+            <div class="mx-3">
+              <form class="my-4" [formGroup]="specialNoteFg">
+              <textarea
+                class="form-control fancy simple d-flex w-100"
+                placeholder="{{'public.checkout.specialNoteExample' | translate}}"
+                [class.is-invalid]="getControl('specialNote').invalid && (getControl('specialNote').dirty || getControl('specialNote').touched)"
+                formControlName="specialNote"
+                maxlength="256"
+                ></textarea>
+              </form>
+            </div>
+          </div> -->
+          <div class="variant-wrapper mb-2"
+            *ngIf="basketEnabled&&isOrderable && selectedStore.settings['HIDE_ORDER_ITEM_COMMENTS'] === false">
+            <form class="mx-3 mb-4" [formGroup]="specialNoteFg">
+              <div class="row ta-wrapper"
+                [ngClass]="{'is-invalid': (getControl('specialNote').invalid && (getControl('specialNote').dirty)), 'populated': getControl('specialNote').value.length > 0}">
+                <div class="col-md-12 mb-0">
+                  <div class="form-group mb-0">
+                    <div #igTextarea class="input-group" (click)="helper.focusTextArea(igTextarea)">
+                      <textarea type="text" class="form-control pb-4"
+                        [class.is-invalid]="getControl('specialNote', 'specialNoteFg').invalid && (getControl('specialNote', 'specialNoteFg').dirty || getControl('specialNote', 'specialNoteFg').touched)"
+                        autocomplete="street-address" formControlName="specialNote" maxlength="256" rows="2"
+                        id="specialNote"></textarea>
+                      <label for="#specialNote" class="placeholder font-size-primary">{{'public.checkout.specialNote' |
+                        translate}} {{'public.global.optional' | translate}}</label>
+                    </div>
+                  </div>
+                  <div class="invalid-feedback font-size-secondary pb-2 pl-3" *ngIf="getControl('specialNote').errors">
+                    <span *ngIf="getControl('specialNote').errors.maxlength">{{'public.payment.errors.valueNotValid' |
+                      translate}}</span>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="add-to-cart-wrapper d-flex flex-column w-100 mx-auto position-absolute bg-transparent"
+    [ngClass]="{'disabled': IsAddToCartDisabled(), 'pr-2': scrollExist()}"
+    *ngIf="basketEnabled && isOrderable && ((offerItemLoadingStatus$ | async) === 'LOADED') && (!this.checkoutService.ifStoreClosed() || this.checkoutService.isFutureOrderingEnabled())">
+    <div
+      class="bottom-wrapper d-flex mx-auto w-100 flex-columnd-flex bottom-wrapper mx-auto w-100 flex-column bg-white">
+      <div class="sticky-scroll text-center position-absolute" *ngIf="showStickyScroll" (click)="scrollPage()">
+        <!-- <i class="fas fa-chevron-down"></i> -->
+      </div>
+      <div class="qty d-flex mx-auto py-3">
+        <div class="decrement d-flex" (click)="OnDecreaseQty()" [ngClass]="{'disabled': qty <= 1}">
+          <img src="assets/img/icon-minus.svg" class="mx-auto" width="20px;" />
+        </div>
+        <div class="value mx-3 font-size-primary">{{qty}}</div>
+        <div class="increment d-flex" (click)="OnIncreaseQty()" [ngClass]="{'disabled': qty >= maxItemQty}">
+          <img src="assets/img/icon-plus.svg" class="mx-auto" width="20px;" />
+        </div>
+      </div>
+      <a href="#" class="remove d-block text-center pb-1 mx-2 font-size-primary text-unselectable" *ngIf="addedToCart"
+        (click)="OnRemoveFromCart($event)">
+        {{'public.itemDetails.removeFromOrder' | translate}}
+      </a>
+      <div class="w-100 p-1 mx-auto">
+        <div *ngIf="!addedToCart" class="button d-block text-center py-3 mx-2 text-unselectable"
+          (click)="OnAddToCart()">
+          <div class="d-inline-block align-self-center font-size-primary"
+            *ngIf="!showPriceDisabled && getCurrentItemFullPrice() !== 0">
+            {{'public.itemDetails.addToOrder' | translate}} (
+            <span class="pr-1 font-size-primary" *ngIf="getCurrentItemDiscount()">
+              {{ qty * getCurrentItemFullPrice() | formatPrice:
+              selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol }}
+            </span>
+            {{ qty * getCurrentItemPrice() | formatPrice:
+            selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol }} )
+          </div>
+          <div class="d-inline-flex align-self-center font-size-primary"
+            *ngIf="showPriceDisabled || getCurrentItemFullPrice() == 0">
+            {{'public.itemDetails.addToOrder' | translate}}
+          </div>
+        </div>
+        <div *ngIf="addedToCart" class="button d-block text-center py-3 mx-2 text-unselectable"
+          (click)="OnUpdateCart()">
+          <div class="d-inline-flex  align-self-center font-size-primary">
+            {{'public.itemDetails.updateOrder' | translate}}
+            <div class="d-inline-block" *ngIf="getCurrentItemFullPrice() > 0">
+              ( <span class="pr-1 font-size-primary" *ngIf="getCurrentItemDiscount()">
+                {{ qty * getCurrentItemFullPrice() | formatPrice:
+                selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol }}
+              </span>
+              {{ qty * getCurrentItemPrice() | formatPrice:
+              selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol }} )
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,128 @@
+<div class="card list mb-0">
+  <div class="card-body py-0">
+    <div class="row">
+      <div class="col-xl-2 col-lg-4">
+        <img src="assets/stripe.svg" width="100%" style="max-width: 110px">
+      </div>
+      <div class="col-xl-10 col-lg-8">
+        <label class="col-form-label d-block mb-0">{{'admin.store.payment.stripeUserMsg' | translate}}</label>
+        <button class="btn btn-primary px-5" *ngIf="!(stripeId$ | async)"
+          (click)="connect()">{{'admin.store.connectWithStripe'|translate}}</button>
+        <div *ngIf="!(stripeId$ | async)" class="mt-2">
+          <p>{{'admin.store.payment.stripeTermsAndConditions'|translate}} <a class="text-decoration-underline"
+              target="_blank" href="https://stripe.com/legal">{{'admin.store.payment.servicesAgreement'|translate}}</a>
+            {{'admin.global.sentenceText'|translate}} <a target="_blank" href="https://stripe.com/connect-account/legal"
+              class="text-decoration-underline">{{'admin.store.payment.stripeConnectedAccountAgreement'|translate}}</a>.
+          </p>
+        </div>
+        <div class="form-horizontal">
+
+          <div class="form-group" [ngClass]="{'d-none':!(stripeId$ | async)}">
+            <label class="col-form-label" for="stripeAccount">{{'admin.store.accountID'|translate}}</label>
+            <div class="controls col-xl-4 col-lg-8 col-md-12 p-0">
+              <div class="input-group">
+                <input id="stripeAccount" class="form-control" type="text" readonly [value]="stripeId$ | async">
+                <span class="input-group-append">
+                  <button class="btn btn-danger" (click)="disconnect()">{{'admin.store.disconnect'|translate}}</button>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div [ngClass]="{'preview-backdrop':!(stripeId$ | async)}"></div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="form-check-label">{{'admin.store.payment.creditCard'|translate}} <img
+                    class="ml-3 cc-payment-image" src="assets/img/payment-credit-card.png">
+                </label>&nbsp;
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                <label class="switch pt-1 mb-0">
+                  <input type="checkbox" id="enableStripePaymentcreditCard" [checked]="creditcardPaymentFlag$ | async"
+                    (change)="toggleStripePayments('PAYMENT_STRIPE_CREDIT_CARD_ENABLED', $event)"
+                    [disabled]="!(stripeId$ | async)" />
+                  &nbsp;<span class="slider round"></span>
+                </label>&nbsp;
+                <label>{{'admin.store.enabled'|translate}}</label>
+              </div>
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group mb-3 mb-md-2">
+                <label class="form-check-label">{{'admin.store.payment.iDeal'|translate}} <img
+                    class="ml-3 ideal-payment-image" src="assets/img/payment_logos/ideal.svg">
+                </label>&nbsp;
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                <label class="switch pt-1 mb-0">
+                  <input type="checkbox" id="enableStripePaymentIdeal" [checked]="idealPaymentFlag$ | async"
+                    (change)="toggleStripePayments('PAYMENT_STRIPE_IDEAL_ENABLED', $event)"
+                    [disabled]="!(stripeId$ | async)" />
+                  &nbsp;<span class="slider round"></span>
+                </label>&nbsp;
+                <label>{{'admin.store.enabled'|translate}}</label>
+              </div>
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group mb-3 mb-md-2">
+                <label class="form-check-label d-inline">{{'admin.store.payment.bancontact'|translate}} <img
+                    class="ml-3 bancontact-payment-image" src="assets/img/payment_logos/bancontact.svg">
+                </label>&nbsp;
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                <label class="switch pt-1 mb-0">
+                  <input type="checkbox" id="enableStripePaymentBancontact" [checked]="bancontactPaymentFlag$ | async"
+                    (change)="toggleStripePayments('PAYMENT_STRIPE_BANCONTACT_ENABLED', $event)"
+                    [disabled]="!(stripeId$ | async)" />
+                  &nbsp;<span class="slider round"></span>
+                </label>&nbsp;
+                <label>{{'admin.store.enabled'|translate}}</label>
+              </div>
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group mb-3 mb-md-0">
+                <label class="form-check-label d-inline">
+                  <span>{{'admin.store.payment.digitalWallets'|translate}}</span>
+                </label>
+                <div class="digital-wallets-payment-image">
+                  <img class="ml-3" src="assets/img/payment_logos/apple_pay.svg" title="Apple Pay">
+                  <img class="ml-3" src="assets/img/payment_logos/google_pay.svg" title="Google Pay">
+                  <img class="ml-3" src="assets/img/payment_logos/microsoft_pay.png" title="Microsoft Pay">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group mb-0">
+                <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                <label class="switch pt-1 mb-0">
+                  <input type="checkbox" [checked]="digitalWalletsFlag$ | async"
+                    (change)="toggleStripePayments('PAYMENT_STRIPE_DIGITAL_WALLETS_ENABLED', $event)"
+                    [disabled]="!(stripeId$ | async)" />
+                  &nbsp;<span class="slider round"></span>
+                </label>&nbsp;
+                <label>{{'admin.store.enabled'|translate}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

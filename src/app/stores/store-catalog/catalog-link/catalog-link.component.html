@@ -1,0 +1,82 @@
+<div class="col-lg-12" id="importCatalog">
+    <div class="card list">
+        <div class="header pt-3">
+            <div class="col-lg-12 mb-2 mb-md-4 d-flex align-items-center justify-content-between p-0">
+                <a title="{{'admin.store.catalog.backToCatalog'|translate}}" class="btn back-button btn-primary"
+                    [routerLink]="['/manager/stores/'+storeId+'/catalog']">
+                    <i class="fas fa-arrow-left mr-2"></i> <span
+                        class="d-none d-md-inline-block d-lg-inline-block d-xl-inline-block ml-1">{{'admin.store.catalog.backToCatalog'|
+                        translate}}</span>
+                </a>
+            </div>
+            <div class="card-header">
+                <span>{{'admin.store.catalog.importLink'|translate}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <form [formGroup]="catalogImportForm" class="ml-n4">
+            <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="form-group">
+                        <label for="type" class="col-xl-3 col-lg-3 col-md-12 col-sm-12 required">
+                            {{'admin.store.catalog.importCatalogexternalsite'|translate}}
+                        </label>
+                        <div class="input-group col-xl-8 col-lg-9 col-md-12 col-sm-12">
+                            <select class="form-control" data-chosen="" onchange="this.dataset.chosen = this.value"
+                                formControlName="externalDomain" id="externalDomain"
+                                [class.is-invalid]="getControl('externalDomain').invalid && (getControl('externalDomain').dirty || getControl('externalDomain').touched)">
+                                <option value="">{{'admin.global.pleaseSelect'|translate}}</option>
+                                <option value="FOOD.CY">
+                                    foody.cy
+                                </option>
+                                <option value="WOLT.COM">
+                                    wolt.com
+                                </option>
+                            </select>
+                            <div class="invalid-feedback" *ngIf="getControl('externalDomain').errors">
+                                <span *ngIf="getControl('externalDomain').errors.required">
+                                    {{'admin.global.field.required'|translate}}
+                                </span>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="form-group">
+                        <label for="code" class="col-xl-3 col-lg-3 col-md-12 col-sm-12 required">
+                            {{'admin.store.catalog.importCataloglink'|translate}}
+                        </label>
+                        <div class="input-group col-xl-8 col-lg-9 col-md-12 col-sm-12">
+                            <input type="text" class="form-control"
+                                [class.is-invalid]="getControl('externalReference').invalid && (getControl('externalReference').dirty || getControl('externalReference').touched)"
+                                placeholder="{{'admin.store.catalog.importCataloglink'|translate}}"
+                                autocomplete="externalReference" formControlName="externalReference"
+                                id="externalReference" />
+                            <div class="invalid-feedback" *ngIf="getControl('externalReference').errors">
+                                <span
+                                    *ngIf="getControl('externalReference').errors.required || getControl('externalReference').errors.whitespace">
+                                    {{'admin.global.field.required'|translate}}
+                                </span>
+                                <span
+                                    *ngIf="getControl('externalReference').errors.minlength">{{'admin.store.catalog.catalogPleaseentervalidlink'|translate}}</span>
+                                <span *ngIf="getControl('externalReference').errors.maxlength">
+                                    {{'admin.global.field.maxLength'|translate: {maxLength: "100"} }}.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div>
+        <button type="button" class="btn btn-primary my-1 my-md-0" (click)="importCatalog()"><i
+                class="fas fa-link mr-2 pr-1"></i>{{'admin.store.catalog.importCataloglinkimport'|translate}}</button>
+        <a class="actionLink ml-2" title="{{'admin.store.catalog.backToCatalog'|translate}}"
+            [routerLink]="['/manager/stores/'+storeId+'/catalog']">{{'admin.global.cancel'|translate}}</a>
+    </div>
+</div>

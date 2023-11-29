@@ -1,0 +1,483 @@
+<div #paymentWrapper>
+  <!-- PAYMENT OPTIONS -->
+  <div class="option-wrapper">
+    <div class="variant-wrapper checkbox label-as-h3 d-flex justify-content-between align-items-center p-3 pl-4"
+      [ngClass]="{'mb-3': selectedPaymentOption === PAYMENT_OPTION.PAY_NOW}">
+      <label for="payOnline" class="d-flex flex-column w-100 container mb-0 font-size-heading">
+        <div class="d-flex section-title" *ngIf="!checkoutService.ifEnabledPaymentMandatory()">
+          {{'public.payment.payOnlineNow' | translate}}</div>
+        <div class="d-flex section-title" *ngIf="checkoutService.ifEnabledPaymentMandatory()">{{'public.payment.payNow' | translate}}
+        </div>
+        <input type="checkbox" id="payOnline" value="true" [checked]="selectedPaymentOption === PAYMENT_OPTION.PAY_NOW" (change)="togglePaymentOnlineOption()" />
+        <span class="checkmark mr-2" *ngIf="!checkoutService.ifEnabledPaymentMandatory()"></span>
+      </label>
+    </div>
+  </div>
+  <!-- EOF: PAYMENT OPTIONS -->
+  <!-- PAYMENT METHOD -->
+  <div class="option-wrapper payment-method-wrapper"
+    [ngClass]="{'pt-0': checkoutService.ifEnabledPaymentMandatory() && (checkoutService.countEnabledPaymentMethods() > 1)}"
+    *ngIf="selectedPaymentOption === PAYMENT_OPTION.PAY_NOW || checkoutService.ifEnabledPaymentMandatory()">
+    <div class="variant-wrapper my-0">
+      <h3 class="px-4 mt-3 mt-md-0 mb-0 font-size-heading"
+        *ngIf="(ifEnabledPaymentStripe() && ifEnabledPaymentPaypal())">
+        {{'public.payment.chooseYourPaymentMethod' | translate}}
+      </h3>
+      <!-- PAY WITH IDEAL -->
+      <div class="variant-wrapper radio d-flex justify-content-between align-items-center mx-3 mt-0 mb-2"
+        [ngClass]="{'hide-input pl-0': (ifEnabledPaymentMethod(PAYMENT_METHOD.IDEAL) && !ifEnabledMultiplePaymentMethods())}"
+        *ngIf="(ifEnabledPaymentMethod(PAYMENT_METHOD.IDEAL))">
+        <label for="var-ideal" class="d-flex flex-column w-100 container pl-0 no-cursor">
+          <div class="d-flex flex-row align-items-center">
+            <span>{{'public.payment.ideal' | translate}}</span>
+            <img src="/assets/img/payment_logos/ideal.svg" style="max-height: 36px;" />
+          </div>
+          <input type="radio" name="payment-method" id="var-ideal" *ngIf="(ifEnabledMultiplePaymentMethods())"
+            (click)="setPaymentMethod(PAYMENT_METHOD.IDEAL)" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <form [formGroup]="stripeCardForm" #stripeForm="ngForm" (ngSubmit)="onSubmit()" class="checkout mx-2"
+        [ngClass]="{'d-none': selectedPaymentMethod !== PAYMENT_METHOD.IDEAL}"
+        *ngIf="ifEnabledPaymentMethod(PAYMENT_METHOD.IDEAL)">
+        <div class="variant-wrapper d-flex flex-column justify-content-start align-items-start mx-3 my-2">
+          <label for="card-element">
+            <!-- iDeal {{ 'public.payment.enterCreditCardInfo' | translate }}: -->
+          </label>
+          <!-- <div class="form-row">
+            <label for="accountholder-name">
+              Name
+            </label>
+            <input id="accountholder-name"  name="accountholder-name">
+          </div> -->
+
+          <div class="form-row">
+            <!--
+              Using a label with a for attribute that matches the ID of the
+              Element container enables the Element to automatically gain focus
+              when the customer clicks on the label.
+            -->
+            <!-- <label for="ideal-bank-element">
+              iDEAL Bank
+            </label> -->
+            <div style="min-width: 350px; max-width: 400px;">
+              <div id="ideal-bank-element" class="ml-1" #cardInfoIdeal>
+                <!-- A Stripe Element will be inserted here. -->
+              </div>
+            </div>
+          </div>
+          <div id="card-errors" role="alert" class="invalid-feedback" *ngIf="checkoutService.getStripeError()">
+            <span>{{ checkoutService.getStripeError() | translate }}</span></div>
+        </div>
+      </form>
+      <!-- PAY WITH BANCONTACT -->
+      <div class="variant-wrapper radio d-flex justify-content-between align-items-center mx-3 mt-0 mb-2"
+        [ngClass]="{'hide-input pl-0': (ifEnabledPaymentMethod(PAYMENT_METHOD.BANCONTACT) && !ifEnabledMultiplePaymentMethods())}"
+        *ngIf="(ifEnabledPaymentMethod(PAYMENT_METHOD.BANCONTACT))">
+
+        <label for="var-bancontact" class="d-flex flex-column w-100 container pl-0 no-cursor">
+          <div class="d-flex flex-row align-items-center">
+            <span>{{'public.payment.bancontact' | translate}}</span>
+            <img src="/assets/img/payment_logos/bancontact.svg" style="max-height: 36px;" />
+          </div>
+          <input type="radio" name="payment-method" id="var-bancontact" *ngIf="ifEnabledMultiplePaymentMethods()"
+            (click)="setPaymentMethod(PAYMENT_METHOD.BANCONTACT)" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <form [formGroup]="bancontactForm" #stripeForm="ngForm" class="checkout"
+        [ngClass]="{'d-none': selectedPaymentMethod !== PAYMENT_METHOD.BANCONTACT}"
+        *ngIf="(ifEnabledPaymentMethod(PAYMENT_METHOD.BANCONTACT))">
+        <div class="form-row">
+          <div class="option-wrapper" class="w-100 mx-3  d-none">
+            <div class="variant-wrapper my-2 my-md-0 mx-1">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <div class="input-group mb-4">
+                      <input type="text" class="form-control"
+                        [ngClass]="{'is-invalid': (getControl('accountholdername').invalid && (getControl('accountholdername').dirty)), 'populated': getControl('accountholdername').value.length > 0}"
+                        autocomplete="name" formControlName="accountholdername" maxlength="200" id="accountholdername"
+                        (focusout)="addOrderMeta('accountHolderName', 'accountholdername', 'bancontactForm')" />
+                      <label for="#accountholdername" class="placeholder font-size-primary"
+                        (click)="checkoutService.focusField($event)">{{'public.checkout.yourName' | translate}}</label>
+                      <div class="invalid-feedback font-size-secondary" *ngIf="getControl('accountholdername').errors">
+                        <span
+                          *ngIf="getControl('accountholdername').errors.required">{{'public.checkout.errors.fieldRequired' | translate}}.</span>
+                        <span
+                          *ngIf="getControl('accountholdername').errors.whitespace">{{'public.payment.errors.valueNotValid' | translate}}.</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <!-- PAY WITH JCC -->
+      <div class="variant-wrapper radio d-flex justify-content-between align-items-center mx-3 mt-0 mb-2"
+        [ngClass]="{'hide-input': (ifEnabledPaymentMethod(PAYMENT_METHOD.JCC) && !ifEnabledMultiplePaymentMethods())}"
+        *ngIf="ifEnabledPaymentMethod(PAYMENT_METHOD.JCC)">
+        <label for="var-rms" class="d-flex flex-column w-100 container pl-0 no-cursor font-size-primary">
+          <div class="d-flex flex-row align-itmes-center">
+            <span>{{'public.payment.creditCard' | translate}}</span>
+            <img src="/assets/img/payment_logos/american_express.svg" class="pl-2" style="max-height: 22px;" />
+            <img src="/assets/img/payment_logos/mastercard.svg" class="pl-2" style="max-height: 22px;" />
+            <img src="/assets/img/payment_logos/uatp.svg" class="pl-2" style="max-height: 36px;" />
+            <img src="/assets/img/payment_logos/visa.svg" style="max-height: 36px;" />
+          </div>
+          <input type="radio" name="payment-method" id="var-jcc" *ngIf="ifEnabledMultiplePaymentMethods()"
+            (click)="setPaymentMethod(PAYMENT_METHOD.JCC)" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <form [formGroup]="jccCardForm" #jccForm class="checkout mx-2"
+        action="{{jccServerLink}}"
+        [ngClass]="{'d-none': selectedPaymentMethod != PAYMENT_METHOD.JCC}"
+        *ngIf="ifEnabledPaymentMethod(PAYMENT_METHOD.JCC)" method="POST">
+        <div class="variant-wrapper d-flex flex-column justify-content-start align-items-start mx-3 my-2" style="max-width: 100%;">
+          <input type="hidden" name="Version" value="{{jccRequestJSON?.version}}">
+          <input type="hidden" name="MerID" value="{{jccRequestJSON?.merchantId}}">
+          <input type="hidden" name="AcqID" value="{{jccRequestJSON?.acquirerId}}">
+          <input type="hidden" name="MerRespURL" value="{{jccResponseURL}}">
+          <input type="hidden" name="MerCallbackURL" value="{{jccCallbackURL}}">
+          <input type="hidden" name="PurchaseAmt" value="{{jccRequestJSON?.formattedPurchaseAmount}}">
+          <input type="hidden" name="PurchaseCurrency" value="{{jccRequestJSON?.currency}}">
+          <input type="hidden" name="PurchaseCurrencyExponent" value="{{jccRequestJSON?.currencyExponent}}">
+          <input type="hidden" name="OrderID" value="{{jccRequestJSON?.orderId}}">
+          <input type="hidden" name="CaptureFlag" value="{{jccRequestJSON?.captureFlag}}">
+          <input type="hidden" name="Signature" value="{{jccRequestJSON?.signature}}">
+          <input type="hidden" name="SignatureMethod" value="{{jccRequestJSON?.signatureMethod}}">
+
+          <div class="d-flex mt-3">
+            <i class="fas fa-lock text-dark pr-2"></i>
+            <span>
+              <p class="font-size-secondary">
+                {{'public.payment.creditCardSecure' | translate}} - 
+                <a href="https://www.jcc.com.cy/" target="_blank">JCC</a>
+              </p>
+            </span>
+          </div>
+        </div>
+      </form>
+      <!-- PAY WITH STRIPE -->
+      <div class="variant-wrapper radio d-flex justify-content-between align-items-center mx-3 mt-0 mb-2"
+        [ngClass]="{'hide-input': (ifEnabledPaymentMethod(PAYMENT_METHOD.STRIPE) && !ifEnabledMultiplePaymentMethods())}"
+        *ngIf="(ifEnabledPaymentMethod(PAYMENT_METHOD.STRIPE)) && !ifEnabledPaymentMethod(PAYMENT_METHOD.JCC)">
+        <label for="var-credit-card" class="d-flex flex-column w-100 container pl-0 no-cursor font-size-primary">
+          <div class="d-flex flex-row align-items-center">
+            <span>{{'public.payment.creditCard' | translate}}</span>
+            <img src="/assets/img/payment_logos/american_express.svg" class="pl-2" style="max-height: 22px;" />
+            <img src="/assets/img/payment_logos/mastercard.svg" class="pl-2" style="max-height: 22px;" />
+            <img src="/assets/img/payment_logos/uatp.svg" class="pl-2" style="max-height: 36px;" />
+            <img src="/assets/img/payment_logos/visa.svg" style="max-height: 36px;" />
+          </div>
+          <!-- <img src="/assets/img/payment-credit-card.png" class="creditcard-img pt-1"/> -->
+          <input type="radio" name="payment-method" id="var-credit-card" *ngIf="ifEnabledMultiplePaymentMethods()"
+            (click)="setPaymentMethod(PAYMENT_METHOD.STRIPE)" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <form [formGroup]="stripeCardForm" #stripeForm="ngForm" (ngSubmit)="onStripeFormSubmit()" class="checkout mx-2"
+        [ngClass]="{'d-none': selectedPaymentMethod !== PAYMENT_METHOD.STRIPE}"
+        *ngIf="ifEnabledPaymentMethod(PAYMENT_METHOD.STRIPE)">
+        <div class="variant-wrapper d-flex flex-column justify-content-start align-items-start mx-3 my-2" style="max-width: 400px;">
+          <label for="card-element font-size-primary">
+            {{ 'public.payment.enterCreditCardInfo' | translate }}:
+          </label>
+          <div id="card-element" #cardInfo>
+          </div>
+          <div id="card-errors" role="alert" class="invalid-feedback font-size-secondary"
+            *ngIf="checkoutService.getStripeError()"><span>{{ checkoutService.getStripeError() | translate }}</span>
+          </div>
+          <div class="d-flex mt-3"><i class="fas fa-lock text-dark pr-2"></i><span><p class="font-size-secondary">{{'public.payment.creditCardSecure' | translate}} - <a href="https://stripe.com/docs/security/stripe" target="_blank">Stripe</a></p></span></div>
+        </div>
+      </form>
+      <!-- PAY WITH RMS -->
+      <div class="variant-wrapper radio d-flex justify-content-between align-items-center mx-3 mt-0 mb-2"
+        [ngClass]="{'hide-input': (ifEnabledPaymentMethod(PAYMENT_METHOD.RMS) && !ifEnabledMultiplePaymentMethods())}"
+        *ngIf="ifEnabledPaymentMethod(PAYMENT_METHOD.RMS) && !ifEnabledPaymentMethod(PAYMENT_METHOD.JCC) && !ifEnabledPaymentMethod(PAYMENT_METHOD.STRIPE)">
+        <label for="var-rms" class="d-flex flex-column w-100 container pl-0 no-cursor font-size-primary">
+          <div class="d-flex flex-row align-items-center">
+            <span>{{'public.payment.creditCard' | translate}}</span>
+            <img src="/assets/img/payment_logos/american_express.svg" class="pl-2" style="max-height: 22px;" />
+            <img src="/assets/img/payment_logos/mastercard.svg" class="pl-2" style="max-height: 22px;" />
+            <img src="/assets/img/payment_logos/uatp.svg" class="pl-2" style="max-height: 36px;" />
+            <img src="/assets/img/payment_logos/visa.svg" style="max-height: 36px;" />
+          </div>
+          <input type="radio" name="payment-method" id="var-rms" *ngIf="ifEnabledMultiplePaymentMethods()"
+            (click)="setPaymentMethod(PAYMENT_METHOD.RMS)" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <form [formGroup]="rmsCardForm" #rmsForm="ngForm" (ngSubmit)="onStripeFormSubmit()" class="checkout mx-2"
+        [ngClass]="{'d-none': selectedPaymentMethod !== PAYMENT_METHOD.RMS}"
+        *ngIf="ifEnabledPaymentMethod(PAYMENT_METHOD.RMS)">
+        <div class="variant-wrapper d-flex flex-column justify-content-start align-items-start mx-3 my-2" style="max-width: 400px;">
+          <label for="card-element font-size-primary">
+            {{ 'public.payment.enterCreditCardInfo' | translate }}:
+          </label>
+          <button class="d-none" id="RMS_PayButton">Pay Now</button>
+          <div class="d-flex mt-3">
+            <i class="fas fa-lock text-dark pr-2"></i>
+            <span>
+              <p class="font-size-secondary">
+                {{'public.payment.creditCardSecure' | translate}} - 
+                <a href="https://www.retailmerchantservices.co.uk/online-payments/" target="_blank">RMS</a>
+              </p>
+            </span>
+          </div>
+        </div>
+      </form>
+      <!-- PAY WITH PAYMENTSENSE -->
+      <div class="variant-wrapper radio d-flex justify-content-between align-items-center mx-3 mt-0 mb-2"
+        [ngClass]="{'hide-input': (ifEnabledPaymentMethod(PAYMENT_METHOD.PAYMENTSENSE) && !ifEnabledMultiplePaymentMethods())}"
+        *ngIf="ifEnabledPaymentMethod(PAYMENT_METHOD.PAYMENTSENSE) && !ifEnabledPaymentMethod(PAYMENT_METHOD.JCC) && !ifEnabledPaymentMethod(PAYMENT_METHOD.STRIPE) && !ifEnabledPaymentMethod(PAYMENT_METHOD.RMS)">
+        <label for="var-paymentsense" class="d-flex flex-column w-100 container pl-0 no-cursor font-size-primary">
+          <div class="d-flex flex-row align-items-center">
+            <span>{{'public.payment.creditCard' | translate}}</span>
+            <img src="/assets/img/payment_logos/american_express.svg" class="pl-2" style="max-height: 22px;" />
+            <img src="/assets/img/payment_logos/mastercard.svg" class="pl-2" style="max-height: 22px;" />
+            <img src="/assets/img/payment_logos/uatp.svg" class="pl-2" style="max-height: 36px;" />
+            <img src="/assets/img/payment_logos/visa.svg" style="max-height: 36px;" />
+          </div>
+          <input type="radio" name="payment-method" id="var-paymentsense" *ngIf="ifEnabledMultiplePaymentMethods()"
+            (click)="setPaymentMethod(PAYMENT_METHOD.PAYMENTSENSE)" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <form [formGroup]="paymentsenseForm" #paymentSenseForm="ngForm" (ngSubmit)="onStripeFormSubmit()" class="checkout mx-2"
+        [ngClass]="{'d-none': selectedPaymentMethod !== PAYMENT_METHOD.PAYMENTSENSE}"
+        *ngIf="ifEnabledPaymentMethod(PAYMENT_METHOD.PAYMENTSENSE)">
+        <div class="variant-wrapper d-flex flex-column justify-content-start align-items-start mx-3 my-2" style="max-width: 400px;">
+          <label for="card-element font-size-primary">
+            {{ 'public.payment.enterCreditCardInfo' | translate }}:
+          </label>
+          <div id="paymentsense-payment"  #paymentsense>
+          </div>
+          <div id="card-errors" role="alert" class="invalid-feedback font-size-secondary"
+            *ngIf="checkoutService.getStripeError()"><span>{{ checkoutService.getStripeError() | translate }}</span>
+          </div>
+          <div class="d-flex mt-3"><i class="fas fa-lock text-dark pr-2"></i><span><p class="font-size-secondary">{{'public.payment.creditCardSecure' | translate}} - <a href="https://www.paymentsense.com/" target="_blank">Paymentsense</a></p></span></div>
+        </div>
+      </form>
+      <!-- PAY WITH SQUARE -->
+      <div class="variant-wrapper radio d-flex justify-content-between align-items-center mx-3 mt-0 mb-2"
+        [ngClass]="{'hide-input pl-0': (ifEnabledPaymentMethod(PAYMENT_METHOD.SQUARE) && !ifEnabledMultiplePaymentMethods())}"
+        *ngIf="ifEnabledPaymentMethod(PAYMENT_METHOD.SQUARE) && !ifEnabledPaymentMethod(PAYMENT_METHOD.JCC) && !ifEnabledPaymentMethod(PAYMENT_METHOD.STRIPE) && !ifEnabledPaymentMethod(PAYMENT_METHOD.PAYMENTSENSE)">
+        <label for="var-credit-card" class="d-flex flex-column w-100 container pl-0 no-cursor font-size-primary">
+          <div class="d-flex flex-row align-items-center mx-2">
+            <span>{{'public.payment.creditCard' | translate}}</span>
+            <img src="/assets/img/payment_logos/american_express.svg" class="pl-2" style="max-height: 22px;" />
+            <img src="/assets/img/payment_logos/mastercard.svg" class="pl-2" style="max-height: 22px;" />
+            <img src="/assets/img/payment_logos/uatp.svg" class="pl-2" style="max-height: 36px;" />
+            <img src="/assets/img/payment_logos/visa.svg" style="max-height: 36px;" />
+          </div>
+          <input type="radio" name="payment-method" id="var-credit-card" *ngIf="ifEnabledMultiplePaymentMethods()"
+            (click)="setPaymentMethod(PAYMENT_METHOD.SQUARE)" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div id="form-container"
+        *ngIf="ifEnabledPaymentMethod(PAYMENT_METHOD.SQUARE) && !ifEnabledPaymentMethod(PAYMENT_METHOD.STRIPE)"
+        [ngClass]="{'d-none': selectedPaymentMethod !== PAYMENT_METHOD.SQUARE}">
+        <div id="sq-card"></div>
+        <div class="d-flex mt-3 px-3 mx-2"><i class="fas fa-lock text-dark pr-2"></i><span><p class="font-size-secondary">{{'public.payment.creditCardSecure' | translate}} - <a href="https://squareup.com/payments" target="_blank">Square</a></p></span></div>
+      </div>
+
+      <!-- PAY WITH VIVA -->
+      <div class="variant-wrapper radio d-flex justify-content-between align-items-center mx-3 mt-0 mb-2"
+        [ngClass]="{'hide-input pl-0': (ifEnabledPaymentMethod(PAYMENT_METHOD.VIVA) && !ifEnabledMultiplePaymentMethods())}"
+        *ngIf="ifEnabledPaymentMethod(PAYMENT_METHOD.VIVA) && !ifEnabledPaymentMethod(PAYMENT_METHOD.JCC) && !ifEnabledPaymentMethod(PAYMENT_METHOD.STRIPE) && !ifEnabledPaymentMethod(PAYMENT_METHOD.SQUARE) && !ifEnabledPaymentMethod(PAYMENT_METHOD.PAYMENTSENSE)">
+        <label for="var-credit-card" class="d-flex flex-column w-100 container pl-0 no-cursor font-size-primary">
+          <div class="d-flex flex-row align-items-center mx-2">
+            <span>{{'public.payment.creditCard' | translate}}</span>
+            <img src="/assets/img/payment_logos/american_express.svg" class="pl-2" style="max-height: 22px;" />
+            <img src="/assets/img/payment_logos/mastercard.svg" class="pl-2" style="max-height: 22px;" />
+            <img src="/assets/img/payment_logos/uatp.svg" class="pl-2" style="max-height: 36px;" />
+            <img src="/assets/img/payment_logos/visa.svg" style="max-height: 36px;" />
+          </div>
+          <input type="radio" name="payment-method" id="var-credit-card" *ngIf="ifEnabledMultiplePaymentMethods()"
+            (click)="setPaymentMethod(PAYMENT_METHOD.VIVA)" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <form [formGroup]="vivaCardForm" (ngSubmit)="onVivaFormSubmit()" class="checkout mx-2"
+        *ngIf="ifEnabledPaymentMethod(PAYMENT_METHOD.VIVA) && !ifEnabledPaymentMethod(PAYMENT_METHOD.STRIPE) && !ifEnabledPaymentMethod(PAYMENT_METHOD.SQUARE)"
+        [ngClass]="{'d-none': selectedPaymentMethod !== PAYMENT_METHOD.VIVA}">
+        <div class="row col-md-12">
+          <div class="col-md-6">
+            <div class="form-group">
+              <div class="input-group mb-4">
+                <input class="form-control" type="text" data-vp="cardholder" size="20" name="txtCardHolder"
+                  autocomplete="off" formControlName="cardholder"
+                  [ngClass]="{'is-invalid': (getControl('cardholder', 'vivaCardForm').invalid && (getControl('cardholder', 'vivaCardForm').dirty)), 'populated': getControl('cardholder', 'vivaCardForm').value.length > 0}" />
+                <label class="placeholder font-size-primary" (click)="checkoutService.focusField($event)">{{'public.checkout.cardHolderName' | translate}}</label>
+                <div class="invalid-feedback font-size-secondary" *ngIf="getControl('cardholder', 'vivaCardForm').errors">
+                  <span *ngIf="getControl('cardholder', 'vivaCardForm').errors.required">{{'public.checkout.errors.fieldRequired' | translate}}.</span>
+                  <span *ngIf="getControl('cardholder', 'vivaCardForm').errors.whitespace || getControl('cardholder', 'vivaCardForm').errors.maxlength || getControl('cardholder', 'vivaCardForm').errors.pattern">{{'public.payment.errors.valueNotValid' | translate}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <div class="input-group mb-4">
+                <input class="form-control ng-trim-ignore" type="text" data-vp="cardnumber" size="20" name="txtCardNumber"
+                  autocomplete="off" formControlName="cardnumber"
+                  [textMask]="{mask: cardMaskFunction, guide: false, showMask: true}"
+                  [ngClass]="{'is-invalid': (getControl('cardnumber', 'vivaCardForm').invalid && (getControl('cardnumber', 'vivaCardForm').dirty)), 'populated': getControl('cardnumber', 'vivaCardForm').value.length > 0}"/>
+                <label class="placeholder font-size-primary" (click)="checkoutService.focusField($event)">{{'public.checkout.cardNumber' | translate}}</label>
+                <div class="invalid-feedback font-size-secondary" *ngIf="getControl('cardnumber', 'vivaCardForm').errors">
+                  <span *ngIf="getControl('cardnumber', 'vivaCardForm').errors.required">{{'public.checkout.errors.fieldRequired' | translate}}.</span>
+                  <span *ngIf="getControl('cardnumber', 'vivaCardForm').errors.whitespace || getControl('cardnumber', 'vivaCardForm').errors.maxlength || getControl('cardnumber', 'vivaCardForm').errors.minlength || getControl('cardnumber', 'vivaCardForm').errors.pattern || getControl('cardnumber', 'vivaCardForm').errors.luhnCheck">{{'public.payment.errors.valueNotValid' | translate}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row col-md-12">
+          <div class="col-md-6">
+            <div class="form-group">
+              <div class="input-group mb-4">
+                <input class="form-control" type="text" data-vp="cvv" name="txtCVV" size="4" autocomplete="off"
+                  formControlName="cvv"
+                  [ngClass]="{'is-invalid': (getControl('cvv', 'vivaCardForm').invalid && (getControl('cvv', 'vivaCardForm').dirty)), 'populated': getControl('cvv', 'vivaCardForm').value.length > 0}" />
+                <label class="placeholder font-size-primary" (click)="checkoutService.focusField($event)">{{'public.checkout.cvv' | translate}}</label>
+                <div class="invalid-feedback font-size-secondary" *ngIf="getControl('cvv', 'vivaCardForm').errors">
+                  <span *ngIf="getControl('cvv', 'vivaCardForm').errors.required">{{'public.checkout.errors.fieldRequired' | translate}}.</span>
+                  <span *ngIf="getControl('cvv', 'vivaCardForm').errors.whitespace || getControl('cvv', 'vivaCardForm').errors.maxlength || getControl('cvv', 'vivaCardForm').errors.pattern">{{'public.payment.errors.valueNotValid' | translate}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 row pr-0">
+            <div class="form-group col-md-6 pr-0">
+              <div class="input-group">
+                <input class="form-control" type="text" data-vp="month" size="2" name="txtMonth" autocomplete="off"
+                  formControlName="month"
+                  [ngClass]="{'is-invalid': (getControl('month', 'vivaCardForm').invalid && (getControl('month', 'vivaCardForm').dirty)), 'populated': getControl('month', 'vivaCardForm').value.length > 0}" />
+                <label class="placeholder font-size-primary" (click)="checkoutService.focusField($event)">MM</label>
+                <div class="invalid-feedback font-size-secondary" *ngIf="getControl('month', 'vivaCardForm').errors">
+                  <span *ngIf="getControl('month', 'vivaCardForm').errors.required">{{'public.checkout.errors.fieldRequired' | translate}}.</span>
+                  <span *ngIf="getControl('month', 'vivaCardForm').errors.whitespace || getControl('month', 'vivaCardForm').errors.maxlength || getControl('month', 'vivaCardForm').errors.pattern || getControl('month', 'vivaCardForm').errors.min || getControl('month', 'vivaCardForm').errors.max">{{'public.payment.errors.valueNotValid' | translate}}</span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-md-6 p-md-0 pr-0">
+              <div class="input-group">
+                <input class="form-control" type="text" data-vp="year" size="4" name="txtYear" autocomplete="off"
+                  formControlName="year"
+                  [ngClass]="{'is-invalid': (getControl('year', 'vivaCardForm').invalid && (getControl('year', 'vivaCardForm').dirty)), 'populated': getControl('year', 'vivaCardForm').value.length > 0}" />
+                <label class="placeholder font-size-primary" (click)="checkoutService.focusField($event)">YYYY</label>
+                <div class="invalid-feedback font-size-secondary" *ngIf="getControl('year', 'vivaCardForm').errors">
+                  <span *ngIf="getControl('year', 'vivaCardForm').errors.required">{{'public.checkout.errors.fieldRequired' | translate}}.</span>
+                  <span *ngIf="getControl('year', 'vivaCardForm').errors.whitespace || getControl('year', 'vivaCardForm').errors.maxlength || getControl('year', 'vivaCardForm').errors.pattern">{{'public.payment.errors.valueNotValid' | translate}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex mt-3 px-3"><i class="fas fa-lock text-dark pr-2"></i><span><p class="font-size-secondary">{{'public.payment.creditCardSecure' | translate}} - <a href="https://www.vivawallet.com/security-and-technology" target="_blank">Viva Wallet</a></p></span></div>
+        </div>
+      </form>
+      <div id="card-verification-modal" class="hide" #vivaCardVerificationModal>
+        <div id="confirmation-container"></div>
+      </div>
+
+      <!-- PAY WITH DIGITAL WALLETS -->
+      <div class="variant-wrapper radio d-flex justify-content-between align-items-center mx-3 mt-0 mb-2 digital-wallets-selector"
+        [ngClass]="{'hide-input pl-0': (ifEnabledPaymentMethod(PAYMENT_METHOD.DIGITAL_WALLETS) && !ifEnabledMultiplePaymentMethods())}"
+        *ngIf="ifEnabledPaymentMethod(PAYMENT_METHOD.DIGITAL_WALLETS)">
+        <label for="var-digital-wallets" class="d-flex flex-column w-100 container pl-0 no-cursor font-size-primary">
+          <div class="d-flex flex-row align-items-center">
+            <span>{{'public.payment.digitalWallets' | translate}}</span>
+            <img class="pl-2" src="assets/img/payment_logos/apple_pay.svg" title="Apple Pay">
+            <img class="pl-2" src="assets/img/payment_logos/google_pay.svg" title="Google Pay">
+            <img class="pl-2" src="assets/img/payment_logos/microsoft_pay.png" title="Microsoft Pay">
+
+          </div>
+          <input type="radio" name="payment-method" id="var-digital-wallets" *ngIf="ifEnabledMultiplePaymentMethods()"
+            (click)="setPaymentMethod(PAYMENT_METHOD.DIGITAL_WALLETS)" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div id="digital-wallets-container"
+        *ngIf="ifEnabledPaymentMethod(PAYMENT_METHOD.DIGITAL_WALLETS)"
+        [ngClass]="{'d-none': selectedPaymentMethod !== PAYMENT_METHOD.DIGITAL_WALLETS}">
+        <div #digitalWalletsPayButton></div>
+        <div #digitalWalletsPayError style="display: none;" class="mx-3 mt-0 mb-2">
+          <p>
+            Your browser does not support Digital Wallet payment, or you have not setup a payment method in your browser yet.
+            See here for instructions <a href="https://support.google.com/chrome/answer/142893?co=GENIE.Platform%3DDesktop&hl=en" target="_blank">Chrome support</a>,
+            <a href="https://support.apple.com/en-gb/guide/safari/ibrw8e207504/mac" target="_blank">Apple Safari</a>,
+            <a href="https://support.microsoft.com/en-us/microsoft-edge/automatically-fill-info-in-microsoft-edge-81da697c-9910-d9b8-d50a-1712d96f3db8" target="_blank">Microsoft Edge support</a>.
+          </p>
+        </div>
+      </div>
+
+      <!-- PAY WITH PAYPAL -->
+      <div class="variant-wrapper radio d-flex justify-content-between align-items-center mx-3 my-2 mt-3"
+        [ngClass]="{'hide-input pl-0': (ifEnabledPaymentMethod(PAYMENT_METHOD.PAYPAL) && !ifEnabledMultiplePaymentMethods())}"
+        *ngIf="ifEnabledPaymentMethod(PAYMENT_METHOD.PAYPAL)">
+        <label for="var-paypal" class="d-flex flex-column w-100 container pl-0 font-size-primary"
+          (click)="setPaymentMethod(PAYMENT_METHOD.PAYPAL)">{{'public.payment.paypal' | translate}}
+          <img src="/assets/img/payment-paypal.png" class="paypal-img pt-1" />
+          <input type="radio" name="payment-method" id="var-paypal" *ngIf="ifEnabledMultiplePaymentMethods()" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      
+      <!-- PAY WITH TRUSTPAYMENTS -->
+      <div class="variant-wrapper radio d-flex justify-content-between align-items-center mx-3 mt-0 mb-2"
+        [ngClass]="{'hide-input': (ifEnabledPaymentMethod(PAYMENT_METHOD.TRUSTPAYMENTS) && !ifEnabledMultiplePaymentMethods())}"
+        *ngIf="ifEnabledPaymentMethod(PAYMENT_METHOD.TRUSTPAYMENTS)">
+        <label for="var-trustpayments" class="d-flex flex-column w-100 container pl-0 no-cursor font-size-primary">
+          <div class="d-flex flex-row align-items-center">
+            <span>{{'public.payment.creditCard' | translate}}</span>
+            <img src="/assets/img/payment_logos/american_express.svg" class="pl-2" style="max-height: 22px;" />
+            <img src="/assets/img/payment_logos/mastercard.svg" class="pl-2" style="max-height: 22px;" />
+            <img src="/assets/img/payment_logos/uatp.svg" class="pl-2" style="max-height: 36px;" />
+            <img src="/assets/img/payment_logos/visa.svg" style="max-height: 36px;" />
+          </div>
+          <input type="radio" name="payment-method" id="var-trustpayments" *ngIf="ifEnabledMultiplePaymentMethods()"
+            (click)="setPaymentMethod(PAYMENT_METHOD.TRUSTPAYMENTS)" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <form method="POST" action="https://payments.securetrading.net/process/payments/choice"
+        id="trustpaymentsForm" #trustpaymentsForm="ngForm" class="checkout mx-2"
+        [ngClass]="{'d-none': selectedPaymentMethod !== PAYMENT_METHOD.TRUSTPAYMENTS}"
+        *ngIf="ifEnabledPaymentMethod(PAYMENT_METHOD.TRUSTPAYMENTS)">
+        <input type="hidden" name="sitereference" [(ngModel)]="trustPaymentsRequestJSON.sitereference">
+        <input type="hidden" name="stprofile" [(ngModel)]="trustPaymentsRequestJSON.stprofile">
+        <input type="hidden" name="stdefaultprofile" value="st_paymentcardonly">
+        <input type="hidden" name="currencyiso3a" [(ngModel)]="trustPaymentsRequestJSON.currencyiso3a">
+        <input type="hidden" name="mainamount" [(ngModel)]="trustPaymentsRequestJSON.mainamount">
+        <input type="hidden" name="version" [(ngModel)]="trustPaymentsRequestJSON.version">
+        <input type="hidden" name="orderreference" [(ngModel)]="trustPaymentsRequestJSON.orderId">
+        <input type="hidden" name="ruleidentifier" value="STR-6">
+        <input type="hidden" name="successfulurlredirect" [(ngModel)]="trustPaymentsRequestJSON.successfulurlredirect">
+        <input type="hidden" name="stextraurlredirectfields" value="billingfirstname">
+        <input type="hidden" name="stextraurlredirectfields" value="billinglastname">
+        <input type="hidden" name="stextraurlredirectfields" value="billingemail">
+        <input type="hidden" name="ruleidentifier" value="STR-7">
+        <input type="hidden" name="declinedurlredirect" [(ngModel)]="trustPaymentsRequestJSON.declinedurlredirect">
+        <input type="hidden" name="ruleidentifier" value="STR-13">
+        <input type="hidden" name="errorurlredirect" [(ngModel)]="trustPaymentsRequestJSON.errorurlredirect">
+
+        <div class="variant-wrapper d-flex flex-column justify-content-start align-items-start mx-3 my-2" style="max-width: 400px;">
+          <p class="font-size-secondary">
+            {{'public.payment.creditCardSecure' | translate}} - 
+            <a href="https://www.trustpayments.com/" target="_blank">{{ 'public.payment.trustPayments' | translate }}</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- <div class="section-separator pb-3"></div> -->
+  <div *ngIf="selectedPaymentOption === PAYMENT_OPTION.PAY_NOW || checkoutService.ifEnabledPaymentMandatory()">
+  </div>
+  <!-- EOF: PAYMENT METHOD -->
+</div>

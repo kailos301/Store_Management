@@ -1,0 +1,28 @@
+<div [class]="'store-images cover'" *ngIf="type == 'cover'" (click)="file.click()"
+  [style.border]="!image && !previewUrl ? '1px solid #273773' : ''">
+  <div *ngIf="previewUrl" class="store-images-img" [ngStyle]="{'background-image':'url(' + previewUrl + ')'}"></div>
+  <div class="opacity-layer"></div>
+  <div *ngIf="image && !previewUrl" class="store-images-img" [ngStyle]="{'background-image':'url(' + image + ')'}">
+  </div>
+  <i class="fas fa-cloud-upload-alt store-images-upload-icon" [style.display]="!image && !previewUrl ? 'block' : ''"
+    [style.color]="!image && !previewUrl ? '#273773' : '#ffffff'"></i>
+  <span class="store-images-upload-icon" [style.display]="!image && !previewUrl ? 'block' : ''"
+    [style.color]="!image && !previewUrl ? '#273773' : '#ffffff'">Change store image</span>
+  <i class="fas fa-times-circle removeIcon" (click)="removeImage($event)" *ngIf="!!previewUrl || !!image"></i>
+
+</div>
+<div [class]="'store-images logo'" *ngIf="type == 'logo'" (click)="file.click()">
+
+  <div class="logo-container">
+    <div class="opacity-layer"></div>
+    <img *ngIf="previewUrl" [src]="previewUrl" />
+    <img *ngIf="image && !previewUrl" [src]="image" />
+    <div class="template" *ngIf="!image && !previewUrl"></div>
+    <i class="fas fa-cloud-upload-alt store-images-upload-icon" [style.display]="!image && !previewUrl ? 'block' : ''"
+      [style.color]="!image && !previewUrl ? '#273773' : '#ffffff'"></i>
+    <span class="store-images-upload-icon" [style.display]="!image && !previewUrl ? 'block' : ''"
+      [style.color]="!image && !previewUrl ? '#273773' : '#ffffff'">Change store logo</span>
+    <i class="fas fa-times-circle removeIcon" (click)="removeLogo($event)" *ngIf="!!previewUrl || !!image"></i>
+  </div>
+</div>
+<input #file class="d-none" type="file" name="image" (change)="onFileSelect($event); onSubmit()" />

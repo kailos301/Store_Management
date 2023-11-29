@@ -1,0 +1,16 @@
+.actionLink{
+    cursor: pointer;
+    text-decoration: underline !important;
+    margin-left: 10px;
+}
+.icon{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.mat-dialog-actions{
+    float: right;
+    button{
+        margin-left: 15px;
+    }
+}

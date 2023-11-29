@@ -1,0 +1,58 @@
+<div class="row mt-4">
+  <div class="col-lg-8">
+    <h5>{{'admin.store.paymentMethodDetailsMessage'|translate}}</h5>
+  </div>
+</div>
+<ng-container *ngIf="selectedStore?.address?.country?.code === 'CY'">
+  <div class="row">
+    <div class="col-lg-12">
+      <app-store-payment-jcc></app-store-payment-jcc>
+    </div>
+  </div>
+  <hr>
+</ng-container>
+<div class="row">
+  <div class="col-lg-12">
+    <app-store-payment-stripe></app-store-payment-stripe>
+  </div>
+</div>
+<hr>
+<ng-container *ngIf="selectedStore?.address?.country?.code === 'GB'">
+  <div class="row">
+    <div class="col-lg-12">
+      <app-store-payment-rms></app-store-payment-rms>
+    </div>
+  </div>
+<hr>
+<div class="row">
+  <div class="col-lg-12">
+    <app-store-payment-trustpayments></app-store-payment-trustpayments>
+  </div>
+</div>
+<hr>
+</ng-container>
+<ng-container *ngIf="selectedStore?.address?.country?.code === 'GB'">
+  <div class="row">
+    <div class="col-lg-12">
+      <app-store-payment-sense></app-store-payment-sense>
+    </div>
+  </div>
+  <hr>
+</ng-container>
+<div class="row">
+  <div class="col-lg-12">
+    <app-store-payment-viva></app-store-payment-viva>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-lg-12">
+    <app-store-payment-square></app-store-payment-square>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-lg-12">
+    <app-store-payment-paypal></app-store-payment-paypal>
+  </div>
+</div>

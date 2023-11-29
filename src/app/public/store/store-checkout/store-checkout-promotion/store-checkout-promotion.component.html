@@ -1,0 +1,94 @@
+<div *ngFor="let rule of checkoutService.getApplicableStoreRules(); let ruleIndex = index">
+  <div class="content mx-auto" *ngFor="let action of rule.actions; let actionIndex = index">
+    <div *ngIf="action.type === 'ADD_FREE_CATEGORY'">
+      <!-- USE THIS TO DISPLAY  OFFERS -->
+      <div *ngIf="radioCategoriesFg">
+
+        <div class="rule-offer-items option-wrapper" [formGroup]="radioCategoriesFg">
+              <div class="p-3 section-title mb-0 font-size-heading pl-4">{{action.data.name}}</div>
+              <!-- MIN=1; MAX=1 -->
+              <ng-container *ngIf="action.data.min === 1 && action.data.max === 1; else templateRadioAsCheckbox">
+                <!-- DISPLAY RADIO BUTTONS -->
+                <div
+                  class="d-block variant-wrapper radio d-flex justify-content-between align-items-center mx-3 my-2 h-100"
+                  *ngFor="let offer of action.data.offers; let offerIndex = index">
+                    <label for="var{{offer.offerId}}"
+                      class="d-flex flex-column w-100 container py-2 pl-0"
+                      [ngClass]="{'child-cat-desc': offer.shortDescription}">
+                        <div class="d-flex font-size-primary">{{offer.name}} <span class="ml-1" *ngIf="offer.price && offer.price > 0">(+ {{offer.price | formatPrice: selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol }})</span></div>
+                        <div class="child-cat-description font-size-secondary" *ngIf="offer.shortDescription">{{offer.shortDescription}}</div>
+                        <input
+                          type="radio"
+                          name="cat{{action.data.categoryId}}"
+                          formControlName="cat{{action.data.categoryId}}"
+                          id="var{{offer.offerId}}"
+                          value="{{offer.offerId}}"
+                          [class.is-invalid]="getControl('cat' + action.data.categoryId, 'radioCategoriesFg').invalid && (getControl('cat' + action.data.categoryId, 'radioCategoriesFg').dirty || getControl('cat' + action.data.categoryId, 'radioCategoriesFg').touched)"
+                          (change)="OnRequireChildOfferPrice(action.data.categoryId, offer, ruleIndex)"/>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="invalid-feedback font-size-secondary pb-2 pl-4" *ngIf="getControl('cat' + action.data.categoryId, 'radioCategoriesFg').errors">
+                  <span *ngIf="getControl('cat' + action.data.categoryId, 'radioCategoriesFg').errors?.required">{{'public.global.errorMustSelectOne' | translate}}</span>
+                </div>
+              </ng-container>
+              <!-- EOF: MIN=1; MAX=1 -->
+
+              <!-- MIN=0; MAX=1 -->
+              <ng-template #templateRadioAsCheckbox>
+                <ng-container *ngIf="action.data.min === 0 && action.data.max === 1; else templateMultipleOptions">
+                <!-- DISPLAY RADIO AS CHECKBOX BUTTONS -->
+                <div
+                    class="d-block variant-wrapper checkbox d-flex justify-content-between align-items-center mx-3 my-2 h-100"
+                    *ngFor="let offer of action.data.offers">
+                    <label
+                      for="var{{offer.offerId}}"
+                      class="d-flex flex-column w-100 container font-size-primary"
+                      [ngClass]="{'child-cat-desc': offer.shortDescription}">
+                        <div class="d-flex">{{offer.name}} <span class="ml-1" *ngIf="offer.price && offer.price !== 0">({{ offer.price | formatPrice: selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol  }})</span></div>
+                        <div class="child-cat-description font-size-secondary" *ngIf="offer.shortDescription">{{offer.shortDescription}}</div>
+                        <input
+                          type="checkbox"
+                          class="cat{{action.data.categoryId}}"
+                          formControlName="var{{offer.offerId}}"
+                          id="var{{offer.offerId}}"
+                          value="{{offer.offerId}}"
+                          (change)="OnToggleSingleChildOfferPrice($event, offer, action.data.categoryId, ruleIndex)"/>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                </ng-container>
+              </ng-template>
+              <!-- EOF: MIN=0; MAX=1 -->
+
+              <!-- OTHER -->
+              <ng-template #templateMultipleOptions>
+                <!-- DISPLAY CHECKBOXES -->
+                <div
+                    class="d-block variant-wrapper checkbox d-flex justify-content-between align-items-center mx-3 my-2 h-100"
+                    *ngFor="let offer of action.data.offers">
+                    <label
+                      for="var{{offer.offerId}}"
+                      class="d-flex flex-column w-100 container font-size-primary"
+                      [ngClass]="{'child-cat-desc': offer.shortDescription}">
+                        <div class="d-flex">{{offer.name}} <span class="ml-1" *ngIf="offer.price && offer.price > 0">(+ {{ offer.price | formatPrice: selectedStoreLocale:selectedStoreCurrency:selectedStoreCurrencySymbol  }})</span></div>
+                        <div class="child-cat-description font-size-secondary" *ngIf="offer.shortDescription">{{offer.shortDescription}}</div>
+                        <input
+                          type="checkbox"
+                          formControlName="var{{offer.offerId}}"
+                          id="var{{offer.offerId}}"
+                          value="{{offer.offerId}}"
+                          (change)="OnToggleChildOfferPrice($event, offer, ruleIndex)"/>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+              </ng-template>
+              <!-- EOF: OTHER -->
+
+        </div>
+        <!-- </div> -->
+
+      </div>
+    </div>
+  </div>
+</div>

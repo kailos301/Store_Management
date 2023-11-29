@@ -1,0 +1,81 @@
+<div class="row d-block">
+  <div class="col-lg-12">
+    <div class="card list">
+      <div class="card-body">
+        <div class="pull-right mb-2 mt-n5 pro-width" *ngIf="affiliate.status === 'PRO'">
+          {{'admin.store.voucher.partnerStatus' | translate}} : {{ affiliate.status }}
+        </div>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>{{'admin.global.voucher.label' | translate}}</th>
+                <th>{{'admin.global.discount' | translate}}</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngIf="!(vouchers$ | async)?.data?.length">
+                <td colspan="3">{{'admin.global.noData' | translate}}</td>
+              </tr>
+              <tr *ngFor="let voucher of (vouchers$ | async)?.data;let index=index">
+                <td>{{ voucher.code}} <i class="far fa-copy copyUrlIcon ml-1 cursor-pointer" title="Copy"
+                    (click)="copyVoucherCode(voucher.code);$event.stopPropagation()"></i></td>
+                <td>{{ voucher.discount }} % </td>
+                <td>
+                  <button type="button" (click)="openPrintSetupPopup(voucher.code)" class="btn btn-primary">
+                    <i  class="fa fa-print mr-1 f-size"></i>
+                    <span class="d-none d-md-inline-block d-lg-inline-block d-xl-inline-block ml-1">{{'admin.global.print'|translate}}</span>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <app-pager [totalPagesCount]="(vouchers$ | async)?.totalPages" [page]="(vouchers$ | async)?.paging?.page"
+          [size]="(vouchers$ | async)?.paging?.size" (paginate)="paginate($event)">
+        </app-pager>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #printVoucherSetup>
+  <h1 mat-dialog-title class="text-blue col-lg-12 mat-dialog-title">
+    {{'admin.store.voucher.printVoucherSetup'|translate}}</h1>
+  <div mat-dialog-content>
+    <form [formGroup]="printSetupForm">
+      <div class="row m-0">
+        <label class="col-xl-2 col-lg-3 col-md-12 col-sm-12" for="country">{{'admin.global.country'|translate}}</label>
+        <div class="col-xl-10 col-lg-9 col-md-12 col-sm-12 mb-3">
+          <select class="form-control" data-chosen="" onchange="this.dataset.chosen = this.value" placeholder="Country" formControlName="countryCode" id="country"
+            (change)="onCountryChanged()">
+            <option value="">{{'admin.global.pleaseSelect'|translate}}</option>
+            <option *ngFor="let country of countriesList" value="{{ country.code }}">{{ country.name }}
+          </select>
+        </div>
+      </div>
+      <div class="row m-0">
+        <label class="col-xl-2 col-lg-3 col-md-12 col-sm-12" for="language">{{'admin.global.language'|translate}}</label>
+        <div class="col-xl-10 col-lg-9 col-md-12 col-sm-12">
+          <select class="form-control" data-chosen="" onchange="this.dataset.chosen = this.value" [attr.placeholder]="'admin.global.language' | translate"
+            formControlName="languageLocale" id="language" (click)="onLanguageChanged()">
+            <option value="">{{'admin.global.pleaseSelect'|translate}}</option>
+            <option *ngFor="let lang of languagesList" value="{{ lang.locale }}">{{ lang.name }}</option>
+          </select>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div mat-dialog-actions>
+    <div class="col-lg-12 col-md-12 col-sm-12 mb-2 mt-2">
+      <div class="float-right">
+        <a (click)="onNoClick()" type="button" class="text-decoration-underline">{{'admin.global.cancel' | translate}}</a>
+        <button (click)="downloadVoucherPDF()" class="btn btn-primary submit-btn ml-3">
+          <i class="fa fa-print mr-1 f-size"></i>
+          {{'admin.global.print' | translate}}
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,108 @@
+<h1 [class.text-center]="!isNewRegisterUser" class="text-blue mb-3 mt-md-5 mt-0">{{'admin.register.registerTitle' | translate}}</h1>
+<form [formGroup]="registerForm" (submit)="registerFormAction()">
+  <div class="row mb-3 mb-xs-cust">
+    <div class="col-12 ">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>{{'admin.global.email' | translate}}
+        </mat-label>
+        <input type="email" matInput value="{{newUser.email}}" disabled>
+        <mat-hint *ngIf="!social">{{'admin.register.emailInfo'|translate}}</mat-hint>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row mb-0-cust">
+    <div class="col-6" [ngClass]="{'mb-3':firstName.touched && firstName.errors}">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>{{'admin.global.firstName' | translate}}</mat-label>
+        <input matInput formControlName="firstName" autocomplete="given-name">
+        <mat-error *ngIf="firstName.touched && firstName.errors && firstName.errors.required">
+          {{'admin.global.field.required' | translate}}.
+        </mat-error>
+        <mat-error *ngIf="firstName.touched && firstName.errors && firstName.errors.minlength">
+          {{'admin.global.field.minLength' | translate:{minLength : firstName.errors.minlength.requiredLength} }}.
+        </mat-error>
+        <mat-error *ngIf="firstName.touched && firstName.errors && firstName.errors.maxlength">
+          {{'admin.global.field.maxLength' | translate:{maxLength : firstName.errors.maxlength.requiredLength} }}.
+        </mat-error>
+        <mat-error *ngIf="firstName.touched && firstName.errors && firstName.errors.containsUrl">
+          {{'admin.global.field.containsUrl' | translate}}.
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-6" [ngClass]="{'mb-3':lastName.touched && lastName.errors}">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>{{'admin.user.details.lastName' | translate}}</mat-label>
+        <input matInput formControlName="lastName" autocomplete="family-name">
+        <mat-error *ngIf="lastName.touched && lastName.errors && lastName.errors.required">
+          {{'admin.global.field.required' | translate}}.
+        </mat-error>
+        <mat-error *ngIf="lastName.touched && lastName.errors && lastName.errors.minlength">
+          {{'admin.global.field.minLength' | translate:{minLength : lastName.errors.minlength.requiredLength} }}.
+        </mat-error>
+        <mat-error *ngIf="lastName.touched && lastName.errors && lastName.errors.maxlength">
+          {{'admin.global.field.maxLength' | translate:{maxLength : lastName.errors.maxlength.requiredLength} }}.
+        </mat-error>
+        <mat-error *ngIf="lastName.touched && lastName.errors && lastName.errors.containsUrl">
+          {{'admin.global.field.containsUrl' | translate}}.
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row" [ngClass]="{'mb-3':countryId.touched && countryId.errors,'country-mb':phoneNumber.touched && phoneNumber.errors && countryId.touched && countryId.errors}">
+    <div class="col-12 ">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>{{'admin.global.country' | translate}}</mat-label>
+        <mat-select formControlName="countryId" (selectionChange)="onCountryChanged($event)">
+          <mat-option [value]=" ">{{'admin.global.pleaseSelect' | translate}}</mat-option>
+          <mat-option *ngFor="let country of countriesList" [value]="country.id">
+            {{ country.name }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="countryId.touched && countryId.errors && countryId.errors.required">
+          {{'admin.global.field.required' | translate}}.
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row mb-0-cust">
+    <div class="col-2 pr-0 mr-0 mw-30" [ngClass]="{'phone-error':phoneNumber.touched && phoneNumber.errors}">
+      <mat-form-field appearance="outline" class="full-width ph-code align-center">
+        <input matInput formControlName="phoneCountryCode" readonly>
+      </mat-form-field>
+    </div>
+    <div class="col-10 pl-0 ml-0 mw-70" [ngClass]="{'phone-error':phoneNumber.touched && phoneNumber.errors}">
+      <mat-form-field appearance="outline" class="full-width ph-number">
+        <mat-label>{{'admin.global.phoneNumber'|translate}}</mat-label>
+        <input matInput formControlName="phoneNumber" name="phone" autocomplete="tel" (change)="onPhoneNumChange()" (focus)="onPhoneNumFocus()" (focusout)="onPhoneNumFocusout()">
+      </mat-form-field>
+    </div>
+    <div class="col-12 phone-error-dmsg" *ngIf="phoneNumber.touched && phoneNumber.errors">
+      <mat-error *ngIf="phoneNumber.errors.required">
+        {{'admin.global.field.required' | translate}}.
+      </mat-error>
+      <mat-error *ngIf="phoneNumber.errors.maxlength">
+        {{'admin.global.field.maxLength' | translate:{maxLength : phoneNumber.errors.maxlength.requiredLength} }}.
+      </mat-error>
+      <mat-error *ngIf="phoneNumber.errors.pattern">
+        {{'admin.store.phoneNumber.pattern' | translate}}.
+      </mat-error>
+    </div>
+  </div>
+  <div class="row mb-0-cust">
+    <div class="col-12 ">
+      <mat-label>{{'admin.register.accept' | translate}}: <a href="https://www.gonnaorder.com/terms-of-use/" class="text-decoration-underline">{{'admin.global.termsOfUse'|translate}}</a> , <a href="https://gonnaorder.com/privacy/" class="text-decoration-underline">{{'admin.global.privacyPolicy'|translate}}.</a>
+      </mat-label>
+    </div>
+  </div>
+  <div class="row my-5">
+    <div [class.align-center]="!isNewRegisterUser" class="col-12">
+      <input type="submit" class="btn btn-primary px-4" [disabled]="!languageId || languageId <=0" value="{{'admin.register.acceptRegister' | translate}}">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <mat-label>{{'admin.register.haveAccount' | translate}}&nbsp;<button type="button" class="btn btn-link px-0 link-btn" (click)="goToLogin()">{{'admin.global.login' | translate}}</button>
+      </mat-label>
+    </div>
+  </div>
+</form>

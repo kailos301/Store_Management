@@ -1,0 +1,21 @@
+<div class="cart-wrapper">
+  <div class="store-info position-relative mx-auto pt-3 pt-md-4">
+    <a
+      href="#"
+      class="position-absolute"
+      (click)="OnGoToDashboard($event)">
+      <img src="assets/img/icon-back-arrow.svg"/>
+    </a>
+    <h1 class="text-center font-size-header">{{'public.checkout.yourOrder' | translate}}</h1>
+    <div class="store-title d-block m-1 text-center pb-2 font-size-primary">
+      {{(selectedStore$ | async)?.name}} <span *ngIf="(selectedStore$ | async)?.description">|</span> {{(selectedStore$ | async)?.description}}
+    </div>
+  </div>
+  <div class="content pb-6 mx-auto pt-md-4 mt-4">
+  <div class="content d-flex flex-column mx-auto pb-2">
+    <img src="assets/img/icon-empty-cart.svg" class="mx-auto my-5"/>
+    <div class="px-3 description text-center font-size-primary">
+      {{'public.global.emptyCart' | translate}}
+    </div>
+  </div>
+</div>

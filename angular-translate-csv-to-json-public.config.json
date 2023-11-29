@@ -1,0 +1,7 @@
+{
+  "csvFileIn": "src/app/public/translations/i18n/input-translation.csv",
+  "jsonDirOut": "src/app/public/translations/i18n",
+  "jsonFileName": "translation",
+  "jsonExt": "json",
+  "csvFieldSeparator": ","
+}

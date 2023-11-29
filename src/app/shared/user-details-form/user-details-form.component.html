@@ -1,0 +1,232 @@
+<form [formGroup]="profileForm" class="text-blue">
+    <h1 *ngIf="mode !== 'UPDATE'" class="text-center text-blue">{{action  | translate}}</h1>
+    <div class="row">
+        <div class="col-md-12 mb-lg-2 mt-3">
+            <div class="form-group">
+                <label class="col-lg-3 col-md-12 col-sm-12 required-field"
+                    for="email">{{'admin.global.email'  | translate}}</label>
+                <div class="input-group col-lg-9 col-md-12 col-sm-12">
+                    <input type="text" class="form-control"
+                        [class.is-invalid]="email.invalid && (email.dirty || email.touched)"
+                        [readonly]="mode === 'INVITE'" placeholder="{{'admin.global.email'|translate}}"
+                        autocomplete="email" formControlName="email" id="email" maxlength="254" />
+                    <div class="invalid-feedback" *ngIf="email.errors && email.errors.required">
+                        {{'admin.global.field.required' | translate}}.
+                    </div>
+                    <div class="invalid-feedback" *ngIf="email.errors && email.errors.email">
+                        {{'admin.user.details.emailErrorMsgInvaild' | translate}}.
+                    </div>
+                    <div class="invalid-feedback" *ngIf="email.errors && email.errors.maxlength">
+                        {{'admin.global.field.maxLength' | translate:{maxLength: email.errors.maxlength.requiredLength} }}.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 mb-lg-2">
+            <div class="form-group">
+                <label class="col-lg-3 col-md-12 col-sm-12 required-field"
+                    for="firstName">{{'admin.global.firstName' | translate}}</label>
+                <div class="input-group col-lg-9 col-md-12 col-sm-12">
+                    <input type="text" class="form-control"
+                        [class.is-invalid]="firstName.invalid && (firstName.dirty || firstName.touched)"
+                        placeholder="{{'admin.global.firstName'|translate}}" autocomplete="on"
+                        formControlName="firstName" id="firstName" maxlength="32" />
+                    <div class="invalid-feedback" *ngIf="firstName.errors && firstName.errors.required">
+                        {{'admin.global.field.required' | translate}}.
+                    </div>
+                    <div class="invalid-feedback" *ngIf="firstName.errors && firstName.errors.minlength">
+                        {{'admin.global.field.minLength' | translate:{minLength : firstName.errors.minlength.requiredLength} }}.
+                    </div>
+                    <div class="invalid-feedback" *ngIf="firstName.errors && firstName.errors.maxlength">
+                        {{'admin.global.field.maxLength' | translate:{maxLength : firstName.errors.maxlength.requiredLength} }}.
+                    </div>
+                    <div class="invalid-feedback" *ngIf="firstName.errors && firstName.errors.containsUrl">
+                        {{'admin.global.field.containsUrl' | translate }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 mb-lg-2">
+            <div class="form-group">
+                <label class="col-lg-3 col-md-12 col-sm-12 required-field"
+                    for="lastName">{{'admin.user.details.lastName' | translate}}</label>
+                <div class="input-group col-lg-9 col-md-12 col-sm-12">
+                    <input type="text" class="form-control"
+                        [class.is-invalid]="lastName.invalid && (lastName.dirty || lastName.touched)"
+                        placeholder="{{'admin.account.affiliate.lastName'|translate}}" autocomplete="on"
+                        formControlName="lastName" id="lastName" maxlength="32" />
+                    <div class="invalid-feedback" *ngIf="lastName.errors && lastName.errors.required">
+                        {{'admin.global.field.required' | translate}}.
+                    </div>
+                    <div class="invalid-feedback" *ngIf="lastName.errors && lastName.errors.minlength">
+                        {{'admin.global.field.minLength' | translate:{minLength : lastName.errors.minlength.requiredLength} }}.
+                    </div>
+                    <div class="invalid-feedback" *ngIf="lastName.errors && lastName.errors.maxlength">
+                        {{'admin.global.field.maxLength' | translate:{maxLength : lastName.errors.maxlength.requiredLength} }}.
+                    </div>
+                    <div class="invalid-feedback" *ngIf="lastName.errors && lastName.errors.containsUrl">
+                        {{'admin.global.field.containsUrl' | translate }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label class="col-lg-3 col-md-12 col-sm-12 required-field"
+                    for="country">{{'admin.global.country' | translate}}</label>
+                <div class="input-group col-lg-9 col-md-12 col-sm-12">
+                    <select class="form-control" data-chosen="" onchange="this.dataset.chosen = this.value"
+                        [class.is-invalid]="countryId.invalid && (countryId.dirty || countryId.touched)"
+                         formControlName="countryId" id="country"
+                        (change)="onCountryChanged($event)">
+                        <option value="">{{'admin.global.pleaseSelect' | translate}}</option>
+                        <option *ngFor="let country of countriesList" value="{{ country.id }}">{{ country.name }}
+                        </option>
+                    </select>
+                    <div class="invalid-feedback" *ngIf="countryId.errors && countryId.errors.required">
+                        {{'admin.global.field.required' | translate}}.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="phoneNumber"
+                    class="col-lg-3 col-md-12 col-sm-12 required-field">{{'admin.global.phoneNumber' | translate}}</label>
+                <div class="input-group col-lg-9 col-md-12 col-sm-12">
+                    <div class="col-lg-2 col-md-2 col-sm-2 px-0 country-code">
+                        <input type="text" class="form-control"
+                            [class.is-invalid]="phoneCountryCode.invalid && (phoneCountryCode.dirty || phoneCountryCode.touched)"
+                            autocomplete="phoneCountryCode" formControlName="phoneCountryCode" id="phoneCountryCode" />
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 pr-0 phone-number">
+                        <input type="text" class="form-control"
+                            [class.is-invalid]="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)"
+                            placeholder="{{'admin.global.phoneNumber'|translate}}" autocomplete="tel-national"
+                            formControlName="phoneNumber" id="phoneNumber" (change)="onPhoneNumberChange($event)"
+                            pattern="^[0-9]+$" maxlength="13" />
+                            <div class="invalid-feedback" *ngIf="phoneNumber.errors && phoneNumber.errors.required">
+                                {{'admin.global.field.required' | translate}}.
+                            </div>
+                    </div>
+                    <div id="phoneNumberError" class="invalid-feedback"
+                        *ngIf="(phoneNumber.errors && (phoneNumber.errors.maxlength || phoneNumber.errors.pattern)) || (phoneCountryCode.errors && phoneCountryCode.errors.required)">
+                        <span
+                            *ngIf="phoneCountryCode.errors?.required">{{'admin.global.field.required' | translate}}.</span>
+                        <span
+                            *ngIf="phoneNumber.errors?.maxlength">{{'admin.global.field.maxLength' | translate : {maxLength: phoneNumber.errors.maxlength.requiredLength } }}.
+                        </span>
+                        <span
+                            *ngIf="phoneNumber.errors?.pattern">{{'admin.store.phoneNumber.pattern' | translate}}.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label class="col-lg-3 col-md-12 col-sm-12 required-field" for="language">{{'admin.store.preferredLanguage.label'|translate}}</label>
+                <div class="input-group col-lg-9 col-md-12 col-sm-12">
+                    <select class="form-control"
+                        [class.is-invalid]="languageId.invalid && (languageId.dirty || languageId.touched)"
+                        formControlName="languageId" id="language">
+                        <option *ngFor="let language of languagesList" value="{{ language.id }}">{{ language.name }}
+                        </option>
+                    </select>
+                    <div class="invalid-feedback" *ngIf="languageId.errors && languageId.errors.required">
+                        {{'admin.global.field.required' | translate}}.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-container *ngIf="mode !== 'UPDATE'">
+        <div class="row">
+            <div class="col-md-12 mb-lg-2">
+                <div class="form-group">
+                    <label class="col-lg-3 col-md-12 col-sm-12 required-field"
+                        for="password">{{'admin.global.password' | translate}}</label>
+                    <div class="input-group col-lg-9 col-md-12 col-sm-12">
+                        <input type="password" class="form-control"
+                            [class.is-invalid]="password.invalid && (password.dirty || password.touched)"
+                            placeholder="{{'admin.global.password'|translate}}" autocomplete="password"
+                            formControlName="password" id="password" maxlength="100" />
+                        <div class="invalid-feedback" *ngIf="password.errors && password.errors.required">
+                            {{'admin.global.field.required' | translate}}.
+                        </div>
+                        <div class="invalid-feedback" *ngIf="password.errors && password.errors.minlength">
+                            {{'admin.global.field.minLength' | translate:{minLength : password.errors.minlength.requiredLength} }}.
+                        </div>
+                        <div class="invalid-feedback" *ngIf="password.errors && password.errors.maxlength">
+                            {{'admin.global.field.maxLength' | translate:{maxLength : password.errors.maxlength.requiredLength} }}.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mb-lg-2">
+                <div class="form-group">
+                    <label class="col-lg-3 col-md-12 col-sm-12 required-field"
+                        for="confirmPassword">{{'admin.user.details.confirmPassword' | translate}}</label>
+                    <div class="input-group col-lg-9 col-md-12 col-sm-12">
+                        <input type="password" class="form-control"
+                            [class.is-invalid]="confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)"
+                            placeholder="{{'admin.updatePassword.confirmPassword'|translate}}"
+                            autocomplete="confirmPassword" formControlName="confirmPassword" id="confirmPassword"
+                            maxlength="100" />
+                        <div class="invalid-feedback" *ngIf="confirmPassword.errors">
+                            <span
+                                *ngIf="confirmPassword.errors.required">{{'admin.global.field.required' | translate}}.</span>
+                            <span
+                                *ngIf="confirmPassword.errors.matchFields">{{'admin.user.details.confirmPasswordErrorMsgMisMatch' | translate}}.</span>
+                            <span
+                                *ngIf="confirmPassword.errors.maxlength">{{'admin.global.field.maxLength' | translate : {maxLength: confirmPassword.errors.maxlength.requiredLength} }}.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row chck-terms">
+            <label class="chk-container" for="ACCEPT_TERMS_POLICIES">
+                {{'admin.global.termsPoliciesMsg'|translate}} <a class="text-decoration-underline" target="_blank"
+                    href="https://www.gonnaorder.com/terms-of-use/">{{'admin.global.termsOfUse'|translate}}</a> and <a
+                    target="_blank" class="text-decoration-underline"
+                    href="https://www.gonnaorder.com/privacy/">{{'admin.global.privacyPolicy'|translate}}</a>
+                <input type="checkbox" id="ACCEPT_TERMS_POLICIES"
+                    (change)="acceptedTermsandPolicies = !acceptedTermsandPolicies" />
+                <span class="checkmark"></span>
+            </label>
+        </div>
+    </ng-container>
+    <div class="row" [ngClass]="{'d-flex flex-row justify-content-center' : mode !== 'UPDATE'}">
+        <div [ngClass]="{'col-6' : mode == 'UPDATE' }">
+            <button type="button" class="btn btn-primary px-4" (click)="submitAction()"
+                [disabled]="!acceptedTermsandPolicies || profileForm.invalid">
+                {{action | translate}}
+            </button>
+        </div>
+    </div>
+    <ng-container *ngIf="mode == 'CREATE'">
+        <div class="row">
+            <div class="col-md-12 mb-lg-2">
+                <div class="signup-wrapper d-flex flex-row justify-content-center justify-content-md-start">
+                    <div class="d-flex btn-pre-text text-dark-blue gtm-register-btn">{{'admin.register.haveAccount' | translate}}</div>
+                    <button type="button" class="d-flex btn btn-link px-0"
+                        (click)="goToLogin()">{{'admin.global.login' | translate}}</button>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+</form>

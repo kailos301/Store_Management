@@ -1,0 +1,169 @@
+<div class="card-header mb-3">
+  {{'admin.store.location.text'|translate}} {{location.label}}<app-help-icon
+    [helpPageName]="qrCodesLocationHelpPage"></app-help-icon>
+</div>
+<form [formGroup]="locationForm">
+  <div class="form-group row" *ngIf="mode === 'UPDATE' && (location?.openTap || storeOpenTap)">
+    <label Class="col-xl-4 col-lg-4 col-md-12 col-form-label">{{'admin.store.location.tableStatus'|translate}}</label>
+    <div class="col-xl-8 col-lg-8 col-md-8">
+      <div class="form-group mb-0">
+        <label>{{'admin.store.location.openTap.closed'|translate}}</label>&nbsp;
+        <label class="switch pt-1 mb-0">
+          <input type="checkbox" disabled formControlName="status" id="status"
+            />
+          &nbsp;<span class="slider round disabledSlider"></span>
+        </label>&nbsp;
+        <label>{{'admin.store.location.openTap.open'|translate}}</label>&nbsp;
+        <label *ngIf="location.status == 'OPEN'" class="px-4">{{getOpenTime(location?.openedAt)}}</label>
+        <label *ngIf="location.status == 'OPEN'" class="px-4"><i class="far fa fa-unlock-alt mr-1" title="Pin" > </i>PIN {{location?.customerPinCode}} </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row" *ngIf="!isStoreOperator">
+    <label for="label"
+      Class="col-xl-4 col-lg-4 col-md-12 col-form-label">{{'admin.store.location.label'|translate}}</label>
+    <div class="col-xl-8 col-lg-8 col-md-8">
+      <div class="input-group cstm-lbl" >
+        <input type="text" class="form-control label" [class.is-invalid]="getControl('label').invalid && getControl('label').touched"
+          placeholder="{{'admin.store.location.label'|translate}}" autocomplete="label" formControlName="label"
+          id="label" maxlength="10"
+          (keyup)="locationForm.patchValue({label: $event.target.value.toUpperCase()});setLocationURL($event.target.value)"
+          pattern="^(?=.*[A-Z0-9])[A-Z0-9-_ ]+$" />
+        <div class="col-xl-10 col-lg-9 col-md-12" *ngIf="isStoreOperator">
+          {{location.label}}
+        </div>
+        <div class="invalid-feedback label-error" *ngIf="getControl('label').errors && getControl('label').touched">
+          <span *ngIf="getControl('label').errors.required">{{'admin.global.field.required'|translate}}</span>
+          <span *ngIf="getControl('label').errors.maxlength">{{'admin.global.field.maxLength'|translate: {maxLength:
+            "10"} }}</span>
+          <span *ngIf="getControl('label').errors.minlength">{{'admin.global.field.minLength'|translate: {minLength:
+            "1"} }}</span>
+          <span *ngIf="getControl('label').errors.pattern">{{'admin.store.location.error.pattern'|translate}} </span>
+        </div>
+        <div class="input-group pt-2" *ngIf="mode === 'UPDATE'">
+          <div class="input-group mt-1 mr-3 ml-0-responsive location-url">
+            <label class="lbl-Location w-100"><i class="far fa-copy copyUrlIcon mr-1" title="Copy"
+                (click)="copyLocationURL()"></i> {{locationUrl}} </label>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <div class="form-group row" *ngIf="isStoreOperator">
+    <label for="label"
+      Class="col-xl-4 col-lg-4 col-md-12 ">{{'admin.store.location.label'|translate}}</label>
+    <div class="col-xl-8 col-lg-8 col-md-8">
+      <div class="input-group row" >
+        <div class="col-xl-10 col-lg-9 col-md-12">
+          {{location.label}}
+        </div>
+
+        <div class="col-xl-10 col-lg-9 col-md-12">
+          <div class="input-group mt-1 mr-3 ml-0-responsive location-url">
+            <label class="lbl-Location w-100"><i class="far fa-copy copyUrlIcon mr-1" title="Copy"
+                (click)="copyLocationURL()"></i> {{locationUrl}} </label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="description" class="col-xl-4 col-lg-4 col-md-12 ">{{'admin.global.description'|translate}}</label>
+    <div class="col-xl-8 col-lg-8 col-md-8" *ngIf="!isStoreOperator">
+      <div class="input-group cstm-lbl">
+        <textarea class="form-control textareaheight" rows="2" [class.is-invalid]="getControl('description').invalid"
+          placeholder="{{'admin.global.description'|translate}}" autocomplete="description"
+          formControlName="description" id="description" maxlength="1000"
+          (keyup)="locationForm.patchValue({description: $event.target.value})" [readonly]="isStoreOperator"></textarea>
+        <div class="invalid-feedback" *ngIf="getControl('description').errors">
+          <span *ngIf="getControl('description').errors.maxlength">{{'admin.global.field.maxLength'|translate:
+            {maxLength: "1000"} }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-8 col-lg-8 col-md-8" *ngIf="isStoreOperator">
+      {{location.description}}
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="comment" class="col-xl-4 col-lg-4 col-md-12 ">{{'admin.global.comment'|translate}}</label>
+    <div class="ccol-xl-8 col-lg-8 col-md-8" *ngIf="!isStoreOperator">
+      <div class="input-group cstm-lbl">
+        <textarea class="form-control textareaheight" [class.is-invalid]="getControl('comment').invalid"
+          placeholder="{{'admin.global.comment'|translate}}" autocomplete="comment" formControlName="comment"
+          id="comment" maxlength="100" (keyup)="locationForm.patchValue({comment: $event.target.value})"
+          [readonly]="isStoreOperator"></textarea>
+        <div class="invalid-feedback" *ngIf="getControl('comment').errors">
+          <span *ngIf="getControl('comment').errors.maxlength">{{'admin.global.field.maxLength'|translate: {maxLength:
+            "100"} }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-8 col-lg-8 col-md-8" *ngIf="isStoreOperator">
+      {{location.comment}}
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="locationType"
+      class="col-xl-4 col-lg-4 col-md-12  ">{{'admin.store.location.locationType'|translate}}</label>
+    <div class="col-xl-8 col-lg-8 col-md-8" *ngIf="!isStoreOperator">
+      <div class="input-group cstm-lbl">
+        <select class="form-control" formControlName="locationType" id="locationType"
+          (change)="onLocationTypeChanged($event)">
+          <option value="TABLE">{{'admin.store.location.table' | translate}}</option>
+          <option value="LOCATION">{{'admin.store.location.location' | translate}}</option>
+          <option value="ROOM">{{'admin.store.location.room' | translate}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-xl-8 col-lg-8 col-md-8" *ngIf="isStoreOperator">
+      {{location.locationType}}
+    </div>
+  </div>
+
+  <div class="form-group row" *ngIf="mode === 'UPDATE'">
+    <label for="openTap" Class="col-xl-4 col-lg-4 col-md-12 col-form-label">{{'admin.store.setting.opentabordering'|translate}}</label>
+    <div class="col-xl-8 col-lg-8 col-md-8">
+      <div class="form-group mb-0">
+        <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+        <label class="switch pt-1 mb-0">
+          <input type="checkbox" [attr.disabled] = "isStoreOperator ? 'disabled' : null" formControlName="openTap" id="openTap"
+            />
+          &nbsp;<span class="slider round" [ngClass]="{'disabledSlider':isStoreOperator}"></span>
+        </label>&nbsp;
+        <label>{{'admin.store.enabled'|translate}}</label>&nbsp;
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row" *ngIf="mode === 'UPDATE'">
+    <label for="qrCodes" Class="col-xl-4 col-lg-4 col-md-12 col-form-label">{{'admin.store.location.print.qrCodes'|translate}}</label>
+    <div class="col-xl-8 col-lg-8 col-md-8">
+      <div class="form-group mb-0">
+        <app-qr-codes-location [clientStoreId]="storeId" [location]="locationId" [locationLabel]="locationLabel">
+        </app-qr-codes-location>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="form-group row mt-3 mb-0" *ngIf="!isStoreOperator">
+    <div class="col-md-12">
+      <div *ngIf="mode === 'UPDATE'">
+        <button class="btn btn-primary" type="button" (click)="onSubmit()"><i
+            class="fas fa-save mr-2 pr-1"></i>{{'admin.global.save'|translate}}</button>
+        <a class="actionLink ml-2" (click)="onCancel()">{{'admin.global.cancel'|translate}}</a>
+        <button class="btn btn-danger float-right mt-1" (click)="onDelete()"><i
+            class="fas fa-trash mr-2 pr-1 text-white"></i>{{'admin.global.delete'|translate}}</button>
+      </div>
+      <div *ngIf="mode !== 'UPDATE'">
+        <button class="btn btn-primary ml-2" (click)="onSubmit()"><i
+          class="fas fa-save mr-2 pr-1"></i>{{'admin.global.save'|translate}}</button>
+        <a class="actionLink" (click)="onCancel()">{{'admin.global.cancel'|translate}}</a>
+      </div>
+    </div>
+  </div>
+</form>

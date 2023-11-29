@@ -1,0 +1,42 @@
+@import "../../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../../node_modules/bootstrap/scss/mixins";
+@import "../../../../../scss/globals";
+
+.wish-time {
+  // margin-left: 24px;
+  max-height: 0px;
+  overflow: hidden;
+  @include animation-transition('all 0.6s ease-in-out');
+  &.expanded {
+    max-height: 200px;
+    @include animation-transition('all 0.6s ease-in-out');
+  }
+}
+.arrow {
+  cursor: pointer;
+  i {
+    font-size: 0.875em;
+    line-height: 1.6;
+  }
+  &.disabled {
+    i {
+      color: #73818f;
+    }
+  }
+}
+div.is-invalid {
+  .invalid-feedback {
+    display: block !important;
+  }
+}
+
+.radio.disabled {
+  label {
+    pointer-events: none;
+  }
+}
+
+#date_description {
+  min-width: 100px;
+}

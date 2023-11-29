@@ -1,0 +1,38 @@
+<div class="col-lg-12">
+  <div class="card-list">
+    <div class="card-header">
+      <div>{{'admin.account.affiliate.create'|translate}}
+        <app-help-icon [helpPageName]="partnerProgramHelpPage"></app-help-icon>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="col-sm-12">
+        <label>{{'admin.global.firstName' | translate}} : {{(profile$ | async).firstName}}</label>
+      </div>
+      <div class="col-sm-12">
+        <label>{{'admin.account.affiliate.lastName' | translate}} : {{(profile$ | async).lastName}}</label>
+      </div>
+      <div class="col-sm-12">
+        <label>{{'admin.global.email' | translate}} : {{(profile$ | async).email}}</label>
+      </div>
+      <div class="col-sm-12">
+        <label>{{'admin.account.affiliate.pleaseVisit'|translate}} <a href="javascript:void(0);"
+            [routerLink]="['/manager/profile/update']">{{'admin.account.affiliate.profile'|translate}}</a>
+          {{'admin.account.affiliate.updateInfoMsg'|translate}}</label>
+      </div>
+      <div class="col-sm-12">
+        <label class="chk-container" for="ACCEPT_TERMS_POLICIES">
+          {{'admin.global.termsPoliciesMsg'|translate}} <a target="_blank" class="text-decoration-underline"
+            href="https://www.gonnaorder.com/terms-of-use/">{{'admin.global.termsOfUse'|translate}}</a> and <a
+            target="_blank" class="text-decoration-underline" href="https://www.gonnaorder.com/privacy/">{{'admin.global.privacyPolicy'|translate}}</a>
+          <input type="checkbox" id="ACCEPT_TERMS_POLICIES"
+            [checked]="isChecked" (change)="isChecked = !isChecked" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="row col-sm-12  floatLeft pl-0 mt-3 affliate-l-20">
+        <button type="button" class="btn btn-primary px-4" [disabled]="!isChecked" (click)="createAffiliate()">{{'admin.account.affiliate.create'|translate}}</button>
+      </div>
+    </div>
+  </div>
+</div>

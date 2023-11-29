@@ -1,0 +1,51 @@
+<form [formGroup]="emailForm">
+    <h1>{{'admin.global.email'|translate}}</h1>
+    <p class="text-muted">{{'admin.account.provideEmailMsg'|translate}}</p>
+    <div class="input-group mb-3">
+        <input
+        type="text"
+        class="form-control"
+        [class.is-invalid]="email.invalid && (email.dirty || email.touched)"
+        placeholder="Email"
+        autocomplete="email"
+        required
+        formControlName="email" maxlength="254"
+        />
+        <div class="input-group-append">
+        <span class="input-group-text"
+            ><i class="cui-user"></i
+        ></span>
+        </div>
+
+        <div
+        class="invalid-feedback"
+        *ngIf="email.errors && email.errors.required"
+        >
+        {{'admin.global.field.required'|translate}}
+        </div>
+        <div
+        class="invalid-feedback"
+        *ngIf="email.errors && email.errors.email"
+        >
+        {{'admin.forgot.emailInvalid'|translate}}
+        </div>
+        <div
+        class="invalid-feedback"
+        *ngIf="email.errors && email.errors.maxlength"
+        >
+        {{'admin.global.field.maxLength' | translate:{maxLength: email.errors.maxlength.requiredLength} }}.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+        <button
+            type="button"
+            class="btn btn-primary px-4"
+            (click)="onSubmit()"
+            [disabled]="emailForm.invalid"
+        >
+            {{'admin.forgot.submit'|translate}}
+        </button>
+        </div>
+    </div>
+</form>

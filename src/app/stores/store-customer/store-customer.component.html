@@ -1,0 +1,122 @@
+<div class="col-lg-12">
+    <div class="card list">
+        <div class="card-header">
+            {{ 'admin.store.customers.customers' | translate }}
+            <app-help-icon [helpPageName]="storeCustomersHelpPage"></app-help-icon>
+        </div>
+    </div>
+    <div class="card-body statistics">
+        <div>
+            <div class="form-group row">
+                <div class="d-flex align-items-center col-xl-5 col-lg-12 col-md-12 col-sm-12 mb-2">
+                    <i class="material-icons mt-1">person</i>
+                    <label class="form-check-label space-nowrap col-xl-5 col-lg-3 col-md-3 col-sm-3"
+                        for="customerName">{{'admin.store.customers.customerName' | translate}}</label>
+                    <input type="text" [(ngModel)]="customerName"
+                        class="form-control search-field col-xl-6 col-lg-9 col-md-9 col-sm-9"
+                        (keyup)="searchCustomerName($event)" />
+                </div>
+                <div class="d-flex align-items-center col-xl-5 col-lg-12 col-md-12 col-sm-12">
+                    <i class="mr-2 text-primary far fa-envelope"></i>
+                    <label class="form-check-label space-nowrap col-xl-5 col-lg-3 col-md-3 col-sm-3"
+                        for="customerEmail">{{'admin.store.customers.customerEmail' | translate}}</label>
+                    <input type="text" [(ngModel)]="customerEmail"
+                        class="form-control search-field col-xl-6 col-lg-9 col-md-9 col-sm-9"
+                        (keyup)="searchCustomerEmail($event)" />
+                </div>
+                <div class="d-flex align-items-center col-xl-5 col-lg-12 col-md-12 col-sm-12">
+                    <i class="fas fa-phone mr-1"></i>
+                    <label class="form-check-label space-nowrap col-xl-5 col-lg-3 col-md-3 col-sm-3"
+                        for="customerPhone">{{'admin.store.customers.customerPhone' | translate}}</label>
+                    <input type="text" [(ngModel)]="customerPhoneNumber"
+                        class="form-control search-field col-xl-6 col-lg-9 col-md-9 col-sm-9"
+                        (keyup)="searchcustomerPhone($event)" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <table class="table table-responsive-sm">
+                        <thead>
+                            <tr>
+                                <th >{{ 'admin.store.customers.customerName' |
+                                    translate }}<i style="cursor: pointer;"
+                                        [ngClass]='(customerStatus==="name") && isSortingForAll ? isSortingForAll :"sort-icon fas fa-sort"'
+                                        (click)="onSortClick($event,'name')"></i></th>
+                                <th>{{ 'admin.store.customers.customerPhone' |
+                                    translate }}<i style="cursor: pointer;"
+                                        [ngClass]='(customerStatus==="phoneNumber") && isSortingForAll ? isSortingForAll :"sort-icon fas fa-sort"'
+                                        (click)="onSortClick($event,'phoneNumber')"></i></th>
+                                <th>{{ 'admin.store.customers.customerEmail' |
+                                    translate }}<i style="cursor: pointer;"
+                                        [ngClass]='(customerStatus==="email") && isSortingForAll ? isSortingForAll :"sort-icon fas fa-sort"'
+                                        (click)="onSortClick($event,'email')"></i></th>
+                                <th *ngIf="!customercountColumn">{{ 'admin.store.customers.orders' | translate }}
+                                    <i [ngClass]='(customerStatus==="orderCount") && isSortingForAll  ? isSortingForAll :"sort-icon fas fa-sort"'
+                                        (click)="onSortClick($event,'orderCount')"></i>
+                                </th>
+                                <th *ngIf="customercountColumn">{{ 'admin.store.customers.orders' | translate }}
+                                    <i style="cursor: pointer;" [ngClass]='(customerStatus==="orderCount" && isSortingForAll)  ? isSortingForAll :"sort-icon fas fa-sort"'
+                                        (click)="onSortClick($event,'orderCount')"></i>
+                                </th>
+                                <th>{{ 'admin.store.customers.firstOrder' | translate
+                                    }}<i style="cursor: pointer;" [ngClass]='(customerStatus==="firstOrderUpdatedAt") ? isSortingForAll :"sort-icon fas fa-sort"'
+                                        (click)="onSortClick($event,'firstOrderUpdatedAt')"></i></th>
+                                <th>{{ 'admin.store.customers.lastOrder' | translate
+                                    }}<i style="cursor: pointer;" [ngClass]='(customerStatus==="lastOrderUpdatedAt") ? isSortingForAll :"sort-icon fas fa-sort"'
+                                        (click)="onSortClick($event,'lastOrderUpdatedAt')"></i></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngIf="!(customers$ | async)?.data?.length">
+                                <td colspan="6">{{ 'admin.global.noData'|translate }}</td>
+                            </tr>
+                            <tr *ngFor="let customer of (customers$ | async)?.data">
+                                <td>{{ customer?.name }}</td>
+                                <td>{{ customer?.phoneNumber }}</td>
+                                <td><a href="mailto:{{customer?.email}}">{{ customer?.email }}</a></td>
+                                <td>{{ customer?.orderCount }}</td>
+                                <td *ngIf="dayCheck(customer?.firstOrderUpdatedAt) as firstOrderUodatedDay">
+                                    <span class="space-nowrap">{{customer?.firstOrderUpdatedAt |
+                                        localizedDate:'HH:mm':locale:timezone | async }}</span>
+                                    <span *ngIf="firstOrderUodatedDay === DayType.YESTERDAY" class="space-nowrap"> - {{
+                                        'admin.store.order.yesterday' | translate }}</span>
+                                    <span *ngIf="firstOrderUodatedDay === DayType.TODAY" class="space-nowrap"> - {{
+                                        'admin.store.order.today' | translate }}</span>
+                                    <span *ngIf="firstOrderUodatedDay === DayType.TOMORROW" class="space-nowrap"> - {{
+                                        'admin.store.order.tomorrow' | translate }}</span>
+                                    <span *ngIf="firstOrderUodatedDay === DayType.DEFAULT" class="space-nowrap"> - {{
+                                        customer?.firstOrderUpdatedAt | localizedDate:'ddd DD MMM' :locale:timezone |
+                                        async }}</span>
+                                </td>
+                                <td *ngIf="dayCheck(customer?.lastOrderUpdatedAt) as lastOrderUodatedDay">
+                                    <span class="space-nowrap">{{customer?.lastOrderUpdatedAt |
+                                        localizedDate:'HH:mm':locale:timezone | async }}</span>
+                                    <span *ngIf="lastOrderUodatedDay === DayType.YESTERDAY" class="space-nowrap"> - {{
+                                        'admin.store.order.yesterday' | translate }}</span>
+                                    <span *ngIf="lastOrderUodatedDay === DayType.TODAY" class="space-nowrap"> - {{
+                                        'admin.store.order.today' | translate }}</span>
+                                    <span *ngIf="lastOrderUodatedDay === DayType.TOMORROW" class="space-nowrap"> - {{
+                                        'admin.store.order.tomorrow' | translate }}</span>
+                                    <span *ngIf="lastOrderUodatedDay === DayType.DEFAULT" class="space-nowrap"> - {{
+                                        customer?.lastOrderUpdatedAt | localizedDate:'ddd DD MMM' :locale:timezone |
+                                        async }}</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <app-pager [totalPagesCount]="(customers$ | async)?.totalPages"
+                        [page]="(customers$ | async)?.paging.page" [size]="(customers$ | async)?.paging.size"
+                        (paginate)="paginate($event)"></app-pager>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="col-md-4 mb-5">
+            <button class="btn btn-primary px-4 text-white" (click)="downloadCustomersList()"><img
+                    src="assets/img/excel-icon.png" width="30px" class="mr-2" />{{ 'admin.store.orderDownload' |
+                translate
+                }}</button>
+        </div>
+    </div>
+</div>

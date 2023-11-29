@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "由 () 支持",
+			"thankYou": "谢谢",
+			"discount": "折扣",
+			"viewOrder": "查看订单",
+			"errorH2": "出错了",
+			"errorUnexpected": "出错了",
+			"errorExpected": "出错了",
+			"errorMustSelectOne": "您需要选择一项",
+			"errorTrialExceeded": "此功能不可用， 已超出试用限制",
+			"emptyCart": "您的订单里没有菜品",
+			"optional": "自选",
+			"cookies": "此网站使用cookies，继续使用本网站即表示您同意使用cookies",
+			"more": "更多",
+			"less": "减",
+			"chooseFrom": "从中选择",
+			"standard": "标准",
+			"days": {
+				"mon": "星期一",
+				"tue": "星期二",
+				"wed": "星期三",
+				"thu": "星期四",
+				"fri": "星期五",
+				"sat": "星期六",
+				"sun": "星期日"
+			},
+			"opentimelist": "开放时间",
+			"newVersionAvailable": "您正在运行该应用程序的旧版本。重新加载应用程序以接收最新更新",
+			"reloadApplication": "重新加载应用",
+			"poweredByGonnaOrder": "由Gonnaorder提供支持",
+			"recents": "最近的",
+			"information": "信息",
+			"yes": "是的",
+			"no": "不",
+			"error": "错误",
+			"errorQRScanner": "QR 扫描仪出现错误！",
+			"confirm": "确认"
+		},
+		"select": {
+			"selectAtLeast": "您必须至少选择{{x}}",
+			"selectAtmost": "您最多可以选择{{x}}",
+			"selectAtleastAtMost": "您必须至少选择{{x}}，最多选择{{y}}",
+			"selectBetween": "您必须在{{childCategory.min}}和{{childCategory.max}}值之间选择。"
+		},
+		"load": {
+			"loadingMessage": "稍等一下"
+		},
+		"itemDetails": {
+			"removeFromOrder": "在订单中取消",
+			"addToOrder": "加入订单",
+			"updateOrder": "更新订单"
+		},
+		"checkout": {
+			"yourOrder": "您的订单",
+			"total": "总计",
+			"specialNote": "在订单中加备注",
+			"howToReceiveYourOrder": "您想如何接收订单",
+			"option": {
+				"pickup": "自取",
+				"addressDelivery": "我想在我的地址收取它",
+				"serve": {
+					"location": "我坐在一张桌子旁"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "我们无法录入您的订单详情",
+				"fieldRequired": "此处需要填写",
+				"selectFutureTime": "请选择将来的时间",
+				"orderSubmissionFailed": "订单无法提交",
+				"ORDER_LOCATION_NOT_PRESENT": "表号或位置名称丢失",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "一些必需的客户信息丢失",
+				"ORDER_WISH_TIME_INVALID": "理想的愿望时间过去了",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "订单交付方式缺失",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "不支持地址寄送",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "不支持下订单",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "不支持提货",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "不支持按指定的邮政编码邮递",
+				"OPENING_TIME_SCHEDULE_ERROR": "商店在选定的订单希望时间关闭",
+				"PROMOTION_NOT_ELIGIBLE": "选择了促销，但没有资格",
+				"offersUnavailableExplanation": "以下项目在您指定的日期和时间不可用。请点击更新订单以将其从您的订单中删除",
+				"offersOutOfStockExplanation": "没有足够的物品",
+				"invalidVoucherCode": "优惠券代码无效",
+				"INVALID_INPUT": "处理提供的详细信息时出错。",
+				"slotUnavailableExplanation": "请求的时隙不可用。请选择其他时间段或选择其他发送方式。",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "无法请求该商店当天的订单。",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "您所在地区当天无法请求订单。",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "以下商品无法在同一天请求订单：",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "无法在您要求的时间和日期发送邮政编码。",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "无法在特定时间和日期下达订单。请选择一个替代品。",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "无法在特定时间和日期取货。请选择一个替代品。",
+				"INTERNAL_ERROR": "遇到意外错误。请重新加载该应用程序，然后重试。",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "未达到最低交货单数量。向您的订单中添加另一个{{AMOUNT_MISSING}}值以继续。",
+				"paymentFailed": "您无法使用此付款方式在线付款。请再试一遍。",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "未应用所需的促销",
+				"INVALID_CUSTOMER_VOUCHER": "无效的客户凭证",
+				"slotUnavailable": "所选时间不可用",
+				"slotUnavailableExplanationWithSuggestion": "所选时间已过去或不再可用。下一个可用时间：",
+				"socialLoginFailed": "我们无法连接到您的帐户",
+				"customerDetailsUpdateFailed": "未能更新个人资料数据",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "本店不送货到此地点",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "我们找不到您提供的地址。请更新地址并重试或联系商店。",
+				"SERVING_HOURS_SCHEDULE_ERROR": "无法在特定时间和日期提交订单。请选择一个替代方案。",
+				"MISSING_LOCATION_TAP_ID": "Tap ID 为必填项",
+				"invalidPin": "无效的客户密码"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "您的订单将送达给您"
+					},
+					"unknown": {
+						"location": "您的订单将送达给您"
+					}
+				},
+				"pickup": "接单",
+				"addressDelivery": "请输入您的信息"
+			},
+			"yourInformationPlease": "请输入您的信息",
+			"locationCode": "表格",
+			"yourName": "您的姓名",
+			"email": "邮箱",
+			"phoneNumber": "电话号码",
+			"fullName": "全名",
+			"streetAddress": "街道地址",
+			"zip": "邮政编码",
+			"town": "镇/市",
+			"minimumAmount": "要求最低订购金额为{{amount}}",
+			"deliveryFee": "免费送货",
+			"deliveryFeeApplicable": "适用于{{amount}以下的订单",
+			"field": {
+				"generalValidation": "字段格式无效"
+			},
+			"acceptTerm": "继续进行，即表示您接受{{使用条款}}和{{隐私政策}}",
+			"termsAndPolicy": "继续进行，即表示您接受",
+			"acceptTerms": {
+				"and": "和",
+				"after": ""
+			},
+			"termsOfUse": "使用条款",
+			"privacyPolicy": "隐私政策",
+			"yourTable": "您的桌子",
+			"allowedCharacters": "允许的字符",
+			"wishTimeHeading": "您想何时收到订单？",
+			"asSoonAsPossible": "我想尽快收到",
+			"specifyWishTime": "我想指定何时收到",
+			"specialNoteExample": "在订单中加备注",
+			"cardDisabledNote": "准备好后，请与商店分享您的订单",
+			"cardHolderName": "持卡人姓名",
+			"cardNumber": "您的卡号",
+			"cvv": "CVV",
+			"itemsOutOfStock": "有些物品缺货",
+			"floor": "地板",
+			"storeClosedAtOrderWishDate": "商店在希望的日期或时间关闭",
+			"offersNotAvailableAtOrderWishDate": "某些优惠在期望的日期或时间不可用",
+			"updateOrder": "更新订单",
+			"offers": {
+				"availableQuantity": "目前可用"
+			},
+			"voucherCode": "输入优惠券代码",
+			"validVoucherCode": "优惠券代码有效",
+			"yourRoom": "你的房间",
+			"yourLocation": "你的地点",
+			"serveOption": {
+				"location": "我想在我的位置收到它",
+				"room": "我在我的房间里"
+			},
+			"social": {
+				"connect": "与社交帐户建立联系"
+			},
+			"remainingValidVoucher": "凭证上的余额：",
+			"paymentsense": {
+				"declined": "通过 Paymentsense 进行的在线支付已被拒绝"
+			},
+			"saveCustomerDetailsForFuture": "保存您的个人资料数据以备将来订购",
+			"customerDetailsUpdateSuccess": "您的个人资料数据已更新",
+			"logout": "登出",
+			"expiry": "到期日(MMYY)",
+			"enterPin": "输入密码"
+		},
+		"payment": {
+			"payOnlineNow": "选择及时线上支付",
+			"chooseYourPaymentMethod": "选择支付方式",
+			"creditCard": "信用卡",
+			"paypal": "贝宝",
+			"submitOrder": "提交订单",
+			"proceedToPayment": "支付",
+			"errorCouldNotConnect": "我们无法连接到nin所选的支付处理器。 请返回到付款屏幕，选择其他付款方式或稍后重试",
+			"enterCreditCardInfo": "请输入您的信用卡或借记卡信息",
+			"yourOrderIsReady": "您的订单已就绪",
+			"yourOrderIsExpected": "需要您的订单",
+			"errors": {
+				"valueNotValid": "提供的值无效",
+				"zipNotAvailable": "您不能对此邮递区号下订单。请联系商店以获取更多信息",
+				"addressNotAvailable": "找不到地址。请从建议中选择街道地址。"
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "立即在线付款",
+			"digitalWallets": "数码钱包",
+			"creditCardSecure": "安全信用卡付款",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "您的订单号",
+			"orderStatus": "订单状态",
+			"notSubmitted": "尚未提交",
+			"sent": "已发送",
+			"ready": "确认",
+			"rejected": "拒绝",
+			"startNewOrder": "下新的订单",
+			"errors": {
+				"emailProperFormat": "请输入有效邮箱"
+			},
+			"fiilEmailAddress": "填写您的电子邮件地址以接收订单的副本",
+			"failedEmail": "无法发送邮件",
+			"emailSent": "邮件已发送",
+			"received": "已收到",
+			"accepted": "已接受",
+			"mobileAppPromotion": "下次通过 GonnaOrder 移动应用订购"
+		},
+		"dialog": {
+			"ok": "好的",
+			"cancel": "取消"
+		},
+		"store": {
+			"currently": {
+				"closed": "商店目前关闭"
+			},
+			"time": {
+				"closed": "商店在选定时间关闭"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "素食主义者",
+						"vegan": "素食主义者",
+						"celery": "芹菜",
+						"wheat": "小麦",
+						"crustaceans": "甲壳类",
+						"eggs": "蛋",
+						"fish": "鱼",
+						"lupin": "羽扇豆",
+						"milk": "牛奶",
+						"molluscs": "软体动物",
+						"mustard": "芥末",
+						"nuts": "坚果类",
+						"peanuts": "花生",
+						"sesame": "芝麻",
+						"soya": "大豆",
+						"sulphurDioxide": "二氧化硫",
+						"halal": "清真",
+						"barley": "大麦",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "该网站使用cookie来改善您的体验，但是您可以选择退出。",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "应用"
+		},
+		"cookie": {
+			"accept": "接受",
+			"reject": "拒绝",
+			"readMore": "阅读更多"
+		},
+		"connect": {
+			"social": {
+				"google": "与Google联系",
+				"facebook": "与Facebook连接"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "你的篮子是空的",
+				"proceed": "继续"
+			}
+		},
+		"main": {
+			"typeUrl": "输入 URL 或商店名称",
+			"invalidUrl": "网址无效",
+			"scanQRCode": "扫描二维码",
+			"storeNotFound": "找不到店铺",
+			"storeSaved": "店铺信息保存成功！",
+			"navigateStoreConfirm": "导航到商店？"
+		},
+		"recents": {
+			"nothingFound": "在这里找不到任何东西"
+		}
+	}
+}

@@ -1,0 +1,102 @@
+  <div #ShowReadOnlyLocation *ngIf="checkoutService.showReadOnlyLocation()">
+    <div class="option-wrapper" >
+      <div class="section-title p-3 pl-4 mb-0 font-size-primary">{{'public.checkout.title.serve.known.location' | translate}}</div>
+      <div class="variant-wrapper my-3">
+        <div class="px-3 pl-4 mt-3 mb-2 font-size-heading align-items-center">
+          <span *ngIf="storeLocationType === LocationType.ROOM || !storeLocationType && selectedStore && selectedStore.settings && selectedStore.settings.DEFUALT_LOCATION_TYPE === LocationType.ROOM">
+            {{'public.checkout.yourRoom' | translate}}
+          </span>
+          <span *ngIf="storeLocationType === LocationType.LOCATION || !storeLocationType && selectedStore && selectedStore.settings && selectedStore.settings.DEFUALT_LOCATION_TYPE === LocationType.LOCATION">
+            {{'public.checkout.yourLocation' | translate}}
+          </span>
+          <span *ngIf="storeLocationType === LocationType.TABLE || !storeLocationType && (!selectedStore || !selectedStore.settings || !selectedStore.settings.DEFUALT_LOCATION_TYPE || selectedStore.settings.DEFUALT_LOCATION_TYPE === LocationType.TABLE)">
+            {{'public.checkout.yourTable' | translate}}
+          </span>
+          <i class="fas fa-map-marker-alt mr-1"></i> <span>{{storeLocation}}</span>
+          <a href="javascript:void(0);" class="font-size-23" *ngIf="location.isOrderCapture()" (click)="clearLocation()">
+            <i class="fas fa-times-circle ml-5 font-size-23"></i>
+          </a>
+        </div>
+        <div *ngIf="locationDescription" class="px-4">
+          {{locationDescription}}
+        </div>
+      </div>
+      <!-- <div class="section-separator"></div> -->
+    </div>
+  </div>
+  <div #ShowEditableLocation *ngIf="checkoutService.showEditableLocation()">
+    <div class="option-wrapper" >
+      <div class="variant-wrapper my-2 my-md-0">
+        <div class="section-title p-3 mb-3 font-size-primary pl-4" *ngIf="!checkoutService.showChoices()">
+          {{'public.checkout.title.serve.unknown.location' | translate}} <i class="fas fa-map-marker-alt mr-1"></i>
+        </div>
+        <div class="mx-3">
+          <form [formGroup]="checkoutOptionsForm">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group mx-2 mb-4">
+                  <div class="input-group">
+                    <input type="text"
+                      class="form-control"
+                      [ngClass]="{'is-invalid': (getControl('table').invalid && (getControl('table').dirty || getControl('table').touched)), 'populated': getControl('table').value.length > 0}"
+                      autocomplete="table"
+                      formControlName="table"
+                      id="table"
+                      maxlength="10"
+                      (keyup)="checkValidateLocation(); validateLocation('table')"
+                      (focusout)="validateLocation('table')"
+                    />
+                    <label for="#table" class="placeholder font-size-primary" (click)="checkoutService.focusField($event)">
+                      <span *ngIf="selectedStore && selectedStore.settings && selectedStore.settings.DEFUALT_LOCATION_TYPE === 'ROOM'">
+                        {{'public.checkout.yourRoom' | translate}} *
+                      </span>
+                      <span *ngIf="selectedStore && selectedStore.settings && selectedStore.settings.DEFUALT_LOCATION_TYPE === 'LOCATION'">
+                        {{'public.checkout.yourLocation' | translate}} *
+                      </span>
+                      <span *ngIf="!selectedStore || !selectedStore.settings || !selectedStore.settings.DEFUALT_LOCATION_TYPE || selectedStore.settings.DEFUALT_LOCATION_TYPE === 'TABLE'">
+                        {{'public.checkout.yourTable' | translate}} *
+                      </span>
+                    </label>
+                    <div class="invalid-feedback font-size-secondary" *ngIf="getControl('table').errors">
+                      <span *ngIf="getControl('table').errors.required">{{'public.checkout.errors.fieldRequired' | translate}}.</span>
+                      <span *ngIf="getControl('table').errors.invalidLocation || getControl('table').errors.whitespace">{{'public.payment.errors.valueNotValid' | translate}} </span>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- <div class="section-separator"></div> -->
+    </div>
+  </div>
+
+  <div class="mx-3 option-wrapper"
+    *ngIf="(checkoutService.showReadOnlyLocation() || checkoutService.showEditableLocation()) && isStoreOpen && !(getControl('table').errors && getControl('table').errors.invalidLocation) && getControl('table').value.length > 0 && isTapIdExpired && isStoreVisitor">
+    <form [formGroup]="checkoutOptionsForm">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group mx-2 mb-4">
+            <div class="input-group">
+              <input type="text" maxlength="4" class="form-control"
+                [ngClass]="{'is-invalid': (getControl('pinnumber').invalid), 'populated': getControl('pinnumber').value.length > 0}"
+                autocomplete="pinnumber" formControlName="pinnumber" id="pinnumber" (keyup)="validatePin()" />
+              <label for="#pinnumber" class="placeholder font-size-primary" (click)="checkoutService.focusField($event)">
+                <span
+                  *ngIf="!selectedStore || !selectedStore.settings || !selectedStore.settings.DEFUALT_LOCATION_TYPE || selectedStore.settings.DEFUALT_LOCATION_TYPE === 'TABLE'">
+                  {{'public.checkout.enterPin' | translate}} *
+                </span>
+              </label>
+              <div class="invalid-feedback font-size-secondary" *ngIf="!isPinValid || getControl('pinnumber').errors">
+                <span *ngIf="(!isPinValid && getControl('pinnumber').errors && getControl('pinnumber').errors.required) || getControl('pinnumber').value.length === 0">{{'public.checkout.errors.fieldRequired' |
+                  translate}}.</span>
+                <span *ngIf="getControl('pinnumber').errors && getControl('pinnumber').errors.invalidPin && getControl('pinnumber').value.length > 0">{{'public.checkout.errors.invalidPin' |translate}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+

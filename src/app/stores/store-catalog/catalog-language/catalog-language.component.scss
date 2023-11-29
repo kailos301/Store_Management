@@ -1,0 +1,15 @@
+@import "../store-catalog.common.scss";
+
+.defaultLanguage .flagImg{
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+}
+.defaultLanguageRow{
+    display: flex;
+    width: 100%;
+    @include media-breakpoint-down(md) {
+        display: inline-block;
+    }
+    margin-bottom: 1rem;
+}

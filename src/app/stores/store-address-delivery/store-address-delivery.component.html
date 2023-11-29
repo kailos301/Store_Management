@@ -1,0 +1,170 @@
+<div class="row">
+    <form [formGroup]="addressDeliveryForm" class="form-horizontal my-3">
+        <div class="col-lg-12">
+            <div class="card list">
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <label class="form-header">{{'admin.store.minDeliveryAmount'|translate}}</label>
+                    </div>
+                    <div class="col-md-6">
+                        <app-price-input (change)="onPartialSubmit()"
+                            [priceFormControl]="getControl('orderMinAmountDelivery')"></app-price-input>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <label class="form-header"> {{'admin.store.deliveryFee'|translate}}</label>
+                    </div>
+                    <div class="col-md-6">
+                        <app-price-input (change)="onPartialSubmit()"
+                            [priceFormControl]="getControl('orderFeeDelivery')">
+                        </app-price-input>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <label class="form-header">{{'admin.store.orderAmount'|translate}}</label>
+                    </div>
+                    <div class="col-md-6">
+                        <app-price-input (change)="onPartialSubmit()"
+                            [priceFormControl]="getControl('orderAmountFreeDelivery')">
+                        </app-price-input>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-6 form-header">{{'admin.store.deliveryFeeExternalId'|translate}}</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control"
+                        placeholder="{{'admin.store.deliveryFeeExternalId'|translate}}" autocomplete="off"
+                        (input)="onSubmit()"
+                        formControlName="DELIVERY_FEE_EXTERNAL_ID" maxlength="100" />
+                    </div>
+                    <div class="invalid-feedback" *ngIf="getControl('DELIVERY_FEE_EXTERNAL_ID').errors">
+                        <span
+                        *ngIf="getControl('DELIVERY_FEE_EXTERNAL_ID').errors.maxlength">{{'admin.global.field.maxLength'|translate:
+                        {maxLength: "100"} }}</span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <label class="form-header">{{'admin.store.deliveryAddressauto'|translate}}</label>
+                    </div>
+                    <div class="col-md-6">
+                        <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                        <label class="switch pt-1 mb-0">
+                            <input type="checkbox" formControlName="DELIVERY_ADDRESS_AUTOCOMPLETE"
+                                id="DELIVERY_ADDRESS_AUTOCOMPLETE" (change)="onSubmit()" />
+                            &nbsp;<span class="slider round"></span>
+                        </label>&nbsp;
+                        <label>{{'admin.store.enabled'|translate}}</label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <label class="form-header">{{'admin.store.order.floor'|translate}}</label>
+                    </div>
+                    <div class="col-md-6">
+                        <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                        <label class="switch pt-1 mb-0">
+                            <input type="checkbox" formControlName="FLOOR_NUMBER_VISIBILITY"
+                                id="FLOOR_NUMBER_VISIBILITY" (change)="onSubmit()" />
+                            &nbsp;<span class="slider round"></span>
+                        </label>&nbsp;
+                        <label>{{'admin.store.settingsMandatory'|translate}}</label>
+                    </div>
+                </div>
+                <div class="form-group row mb-0" *ngIf="enableRestriction">
+                    <div class="col-md-6">
+                        <label class="form-header">{{'admin.store.zonesRestrictions'|translate}}</label>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb-0">
+                            <label>{{'admin.store.nonRestricted'|translate}}</label>&nbsp;
+
+                            <label class="switch pt-1 mb-0">
+                                <input type="checkbox" (change)="onSubmit()"
+                                    formControlName="DELIVERY_ZONE_RESTRICTION" id="postCodeRetrictions" />
+                                &nbsp;<span class="slider round"></span>
+                            </label>&nbsp;
+                            <label>{{'admin.store.restricted'|translate}}</label>&nbsp;
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <span class="createOfferLink p-0 col-lg-6 col-md-6 col-sm-6">
+                            {{'admin.store.addressZones'|translate}}&nbsp;&nbsp;
+                            <a class="actionLink" *ngIf="(zones$ | async)?.zones?.length > 0"
+                                [routerLink]="['/manager/stores/'+storeId+'/settings/zone/0']"
+                                [queryParams]="{type: (zones$ | async)?.zones[0].type}">{{'admin.store.addressaddnewZones'|translate}}
+                                <i class="fas fa-plus ml-2"></i>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="form-header">{{'admin.store.createDifferentaddress'|translate}}</label>
+                    </div>
+                    <div class="col-md-12">
+                        <button *ngIf="!((zones$ | async)?.zones?.length > 0)" class="btn btn-primary"
+                            (click)="openCreateZoneDialog()">{{'admin.store.setupZones'|translate}}
+                        </button>
+                    </div>
+                    <div *ngIf="!(zones$ | async)?.data?.length">
+                        <div class="col-md-12" *ngFor="let zone of (zones$ | async).zones">
+                            <a class="zoneName">{{zone.name}}</a>&nbsp;
+                            <i class="fa fa-pen editIcon text-blue" (click)="gotoZone(zone.id,zone.type)">
+                            </i><br /><br />
+                        </div>
+                    </div>
+                </div>
+                <ng-template #createzone>
+                    <h1 class="text-blue col-lg-12 p-0 font-size-popup-title text-decoration-none" mat-dialog-title>
+                        {{'admin.store.setupZones'|translate}}</h1>
+                    <div class="form-group row" mat-dialog-content>
+                        <div class="form-group row">
+                            <div class="col-md-1">
+                                <label class="radio-container" for="POSTCODE">
+                                    <input type="radio" name="setup_zone" formControlName="setup_zone" value="POSTCODE"
+                                    id="POSTCODE" >
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="col-md-10">
+                                <h5>{{'admin.store.zonePostCodes'|translate}}</h5>
+                                <label>{{'admin.store.radiusPostCodesDetails'|translate}}</label>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-1">
+                                <label class="radio-container" for="RADIUS">
+                                    <input type="radio" name="setup_zone" formControlName="setup_zone" value="RADIUS" id="RADIUS">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="col-md-10">
+                                <h5>{{'admin.store.radiusPostCode'|translate}}</h5>
+                                <label>{{'admin.store.radiusPostCodesDetails1'|translate}}</label>
+                                <label>{{'admin.store.radiusPostCodesDetails2'|translate}}</label>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-1">
+                                <label class="radio-container" for="POLYGON">
+                                    <input type="radio" name="setup_zone" formControlName="setup_zone" value="POLYGON" id="POLYGON">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="col-md-10">
+                                <h5>{{'admin.store.settingsDeliverydraw_map'|translate}}</h5>
+                                <label>{{'admin.store.settingsDeliverypolygondescription'|translate}}</label>
+                                <label>{{'admin.store.radiusPostCodesDetails2'|translate}}</label>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary px-4 float-right" [disabled]="!getControl('setup_zone').value"
+                            (click)="gotoSetupZone()">{{'admin.global.next'|translate}}</button>
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+    </form>
+</div>

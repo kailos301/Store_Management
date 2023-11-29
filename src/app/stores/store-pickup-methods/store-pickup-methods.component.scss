@@ -1,0 +1,12 @@
+.switch input:checked + .slider {
+    background-color:gray;
+}
+.switch .slider{
+    background-color:#48b9b7;
+} 
+.locationAddress input:checked + .showlocationAddress {
+    background-color:#48b9b7;
+}
+.locationAddress .showlocationAddress{
+    background-color:gray;
+} 

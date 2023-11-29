@@ -1,0 +1,21 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+.actionLink {
+  cursor: pointer;
+  text-decoration: underline !important;
+  margin-left: 10px;
+  padding-right: 17%;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .actionLink {
+    padding-right: 0%;
+  }
+}
+
+form label.required:after {
+  color: red;
+  content: " *";
+}

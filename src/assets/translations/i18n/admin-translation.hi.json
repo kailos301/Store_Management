@@ -1,0 +1,1183 @@
+{
+	"admin": {
+		"global": {
+			"delete": "हटाएं",
+			"cancel": "रद्द करना",
+			"ok": "ठीक है",
+			"reject": "अस्वीकार",
+			"create": "सृजन करना",
+			"yes": "हाँ",
+			"print": "छाप",
+			"save": "सहेजें",
+			"no": "नहीं",
+			"close": "बंद करे",
+			"name": "नाम",
+			"firstName": "पहला नाम",
+			"language": "भाषा: हिन्दी",
+			"comment": "टिप्पणी",
+			"email": "ईमेल",
+			"login": "लॉग इन करें",
+			"noData": "कोई डेटा नहीं मिला",
+			"field": {
+				"required": "यह फ़ील्ड आवश्यक है",
+				"minLength": "यह फ़ील्ड कम से कम {{minLength}} वर्णों की होनी चाहिए",
+				"maxLength": "यह फ़ील्ड {{maxLength}} वर्णों से अधिक नहीं हो सकती",
+				"maxNumber": "यह फ़ील्ड इससे अधिक नहीं हो सकती {{maxLength}}",
+				"requiredValue": "छूट मान 0 से अधिक होना चाहिए।",
+				"downloadFlyer": "विज्ञापन पत्र डाउनलोड करें"
+			},
+			"description": "विवरण",
+			"discount": "छूट",
+			"country": "देश",
+			"timezone": "समय क्षेत्र",
+			"pleaseSelect": "कृपया चुने ...",
+			"address": "पता",
+			"addressLine1": "पता पंक्ति 1",
+			"addressLine2": "पता पंक्ति नं। 2",
+			"price": "कीमत",
+			"postCode": "पोस्ट कोड",
+			"postCodePattern": "Invaild - केवल अल्फ़ान्यूमेरिक का उपयोग करें",
+			"change": "परिवर्तन",
+			"update": "अपडेट करें",
+			"password": "कुंजिका",
+			"sentenceText": "और यह",
+			"anyOption": "किसी भी विकल्प का चयन किया जा सकता है",
+			"exactOneOption": "बिल्कुल एक विकल्प चुनना होगा",
+			"partnerProgram": {
+				"label": "साथी कार्यक्रम",
+				"vouchers": "वाउचर",
+				"commissions": "आयोगों"
+			},
+			"voucher": {
+				"label": "वाउचर कोड",
+				"voucherQuestion": "वाउचर का सवाल"
+			},
+			"subscription": {
+				"label": "सदस्यता",
+				"status": "सदस्यता स्थिति",
+				"endDate": "सदस्यता समाप्ति तिथि",
+				"purchase": "खरीद सदस्यता",
+				"checkout": {
+					"stripe": "क्रेडिट कार्ड से भुगतान करें",
+					"paypal": "पेपैल के साथ भुगतान करें"
+				},
+				"price": {
+					"label": "सदस्यता कीमत"
+				},
+				"vat": {
+					"label": "वैट",
+					"invalid": "वैट नंबर मान्य नहीं है",
+					"valid": "वैट नंबर मान्य है"
+				},
+				"vatNumber": {
+					"label": "वैट क्रमांक"
+				},
+				"totalPrice": {
+					"label": "कुल कीमत"
+				},
+				"billingDetails": {
+					"label": "बिलिंग विवरण"
+				},
+				"continue": "जारी रखें",
+				"discountVoucher": {
+					"patternInvalid": "डिस्काउंट वाउचर को 'XXXX-XXXX' पैटर्न से मेल खाना चाहिए",
+					"invalid": "वाउचर मान्य नहीं है",
+					"alreadyReserved": "वाउचर पहले से ही आरक्षित है और इसका उपयोग नहीं किया जा सकता है",
+					"valid": "वाउचर मान्य है"
+				},
+				"vatamount": {
+					"label": "वैट की राशि वसूल की गई"
+				},
+				"pricewithvat": {
+					"label": "वैट के साथ मूल्य"
+				},
+				"vatnotcharged": {
+					"label": "वैट चार्ज को बाहर रखा गया है"
+				},
+				"invoiceLabel": "खरीद चालान",
+				"extendPurchase": "सदस्यता बढ़ाएँ",
+				"createInvoice": "इनवॉयस बनाएँ",
+				"updateInvoice": "चालान का अद्यतन करें",
+				"deleteInvoice": "चालान हटाएं",
+				"discountPercentage": "छूट का प्रतिशत",
+				"currency": "मुद्रा",
+				"paymentId": "भुगतान प्रदाता भुगतान आईडी",
+				"partnerEmail": "साथी ईमेल"
+			},
+			"validate": {
+				"amountNumbers": "राशि में केवल संख्या अंक होने चाहिए"
+			},
+			"paymentDetails": "भुगतान विवरण",
+			"termsPoliciesMsg": "मैं स्वीकारता हूँ",
+			"termsOfUse": "उपयोग की शर्तें",
+			"privacyPolicy": "गोपनीयता नीति",
+			"phoneNumber": "फ़ोन नंबर",
+			"currentLanguage": "en",
+			"storeLabel": "दुकान",
+			"contactus": {
+				"thankYou": "GonnaOrder से संपर्क करने के लिए धन्यवाद। हम आपको जल्द से जल्द ईमेल द्वारा जवाब देंगे।",
+				"instructions": "आवेदन कैसे काम करता है और आपके अक्सर पूछे जाने वाले प्रश्नों के उत्तर के बारे में निर्देश प्राप्त करें",
+				"gettintouch": "पता लगाने में सक्षम है जिसकी आपको तलाश है? संपर्क में रहो! आप जिस प्रश्न या समस्या का सामना कर रहे हैं, उसके बारे में हमें लिखें और हम आपसे वापस मिलेंगे। सुनिश्चित करें कि आपके पास पर्याप्त विवरण शामिल हैं ताकि हम तेजी से प्रतिक्रिया कर सकें",
+				"faq": "सामान्य प्रश्न",
+				"helpCenter": "सहायता केंद्र",
+				"submit": "प्रस्तुत",
+				"support": "सहयोग",
+				"featuresGuide": "फीचर गाइड"
+			},
+			"uploadNow": "अभी अपलोड करें",
+			"role": "भूमिका",
+			"administrator": "प्रशासक",
+			"standardUser": "मानक प्रयोगकर्ता",
+			"saveAndNew": "सहेजें और नया जोड़ें",
+			"saveAndContinue": "",
+			"next": "आगे",
+			"type": "प्रकार",
+			"value": "मूल्य",
+			"active": "सक्रिय",
+			"consumed": "ग्रहण किया हुआ",
+			"availabilityRestrictions": "उपलब्धता प्रतिबंध",
+			"from": "से",
+			"To": "सेवा",
+			"available": "उपलब्ध",
+			"partner": "साथी",
+			"emailStatus": "ईमेल की स्थिति",
+			"superAdmin": "सुपर एडमिन",
+			"remove": "हटाना",
+			"availableTimes": "उपलब्ध समय",
+			"to": "सेवा",
+			"any": "कोई",
+			"reloadApplication": "आवेदन पुनः लोड करें",
+			"newVersionAvailable": "आप एप्लिकेशन का एक पुराना संस्करण चला रहे हैं। नवीनतम अद्यतन प्राप्त करने के लिए आवेदन पुनः लोड करें",
+			"vatPercentage": "VAT%",
+			"phone": "फ़ोन",
+			"registeredAt": "पर पंजीकृत है",
+			"initialValue": "आरंभिक मूल्य"
+		},
+		"alerts": {
+			"headerError": "त्रुटि!",
+			"errorOccured": "एक त्रुटि हुई",
+			"headerSuccess": "सफलता!",
+			"invalidCredentials": "अमान्य क्रेडेंशियल्स की आपूर्ति की गई।",
+			"accountActivated": "अब आपका खाता सक्रिय हो गया है। जारी रखने के लिए नीचे लॉग इन करें।",
+			"passwordChanged": "आपका पासवर्ड बदल गया है। जारी रखने के लिए नीचे लॉग इन करें।",
+			"emailChanged": "आपका ईमेल बदल गया है। जारी रखने के लिए नीचे लॉग इन करें।",
+			"oopsLostMsg": "ऊप्स! आप खो चुके हैं।",
+			"pageNotFound": "वह पृष्ठ जिसे आप खोज रहे हैं वह नहीं मिला।",
+			"problemMsg": "कुछ गलत हो गया",
+			"pageUnavailable": "कुछ अप्रत्याशित हुआ",
+			"userInvitationSuccessfull": "आपका पंजीकरण सफल रहा। {{StoreName}} तक पहुंच प्राप्त करने के लिए लॉगिन करें",
+			"socialAccountLoginFailed": "इसका उपयोग करने का प्रयास करने से पहले सुनिश्चित करें कि आप अपने सामाजिक खाते को लिंक करें",
+			"accessDenied": "प्रवेश निषेध है"
+		},
+		"login": {
+			"forgetPassword": "पासवर्ड भूल गए?",
+			"noAccount": "खाता नहीं है?",
+			"signUp": "साइन अप करें",
+			"social": {
+				"header": "या अपने सामाजिक खाते के माध्यम से कनेक्ट करें:",
+				"google": "Google के साथ साइन इन करें",
+				"facebook": "फ़ेसबुक से साइन इन करें",
+				"apple": "ऐप्पल के साथ साइन इन करें"
+			}
+		},
+		"account": {
+			"receiveEmailMsg": "आपको शीघ्र ही अपने खाते को सत्यापित करने के लिए एक ईमेल प्राप्त होगा।",
+			"profile": "प्रोफाइल बदलें",
+			"provideEmailMsg": "कृपया अपना ईमेल प्रदान करें",
+			"changePassword": "पासवर्ड बदलें",
+			"logout": "लॉग आउट",
+			"affiliate": {
+				"lastName": "उपनाम",
+				"create": "भागीदार बनें",
+				"pleaseVisit": "कृपया अवश्य पधारिए",
+				"profile": "आपका प्रोफ़ाइल पृष्ठ",
+				"updateInfoMsg": "यदि आप अपनी जानकारी अपडेट करना चाहते हैं"
+			},
+			"currentPassword": "वर्तमान पासवर्ड",
+			"newPassword": "नया पासवर्ड",
+			"social": {
+				"nav": "सामाजिक लेखा",
+				"header": "सामाजिक खातों को लिंक करें",
+				"google": {
+					"header": "गूगल अकॉउंट",
+					"linkAccount": "Google खाता लिंक करें"
+				},
+				"link": {
+					"success": "सामाजिक खाता सफलतापूर्वक लिंक किया गया था"
+				},
+				"facebook": {
+					"header": "फेसबुक अकाउंट",
+					"linkAccount": "फेसबुक अकाउंट लिंक करें"
+				},
+				"apple": {
+					"header": "Apple खाता",
+					"linkAccount": "Apple खाता लिंक करें"
+				}
+			},
+			"createPassword": "पासवर्ड बनाएं"
+		},
+		"forgot": {
+			"header": "पासवर्ड भूल गए",
+			"submit": "प्रस्तुत",
+			"alreadyKnow": "पहले से ही अपना पासवर्ड पता है और इसे बदलना नहीं चाहते हैं?",
+			"emailInvalid": "ईमेल अमान्य है।",
+			"successHeader": "बहुत बढ़िया!",
+			"successMsg": "आपको शीघ्र ही अपना पासवर्ड रीसेट करने के लिए एक ईमेल प्राप्त होगा।",
+			"emailNotRegister": "यह ईमेल पंजीकृत नहीं है"
+		},
+		"updatePassword": {
+			"header": "पासवर्ड अपडेट करें",
+			"subHeader": "कृपया अपना नया पासवर्ड प्रदान करें",
+			"confirmPassword": "पासवर्ड की पुष्टि कीजिये"
+		},
+		"store": {
+			"minutes": "मिनट",
+			"closeOrder": "आदेश बंद करें",
+			"acceptOrder": "आदेश स्वीकार करें",
+			"acceptOrderMarkReady": "आदेश स्वीकार करें और तैयार के रूप में चिह्नित करें",
+			"acceptOrderEstimatedTime": "आदेश स्वीकार करें और अनुमानित समय शामिल करें",
+			"minutesValidationMsg": "मिनट एक वैध सकारात्मक संख्या होनी चाहिए",
+			"list": {
+				"storesList": "भंडार सूची",
+				"searchByAlias": "इनपुट गोनेरऑडर डोमेन (न्यूनतम 6 वर्ण)"
+			},
+			"storeimages": "चित्र स्टोर करें",
+			"storeCreation": "नया स्टोर रजिस्टर करें",
+			"settings": "समायोजन",
+			"paymentMethod": "भुगतान का तरीका",
+			"paymentOptions": "भुगतान विकल्प",
+			"paymentOptionsDisabled": "भुगतान विकल्प अक्षम हैं क्योंकि स्टोर के लिए कोई भुगतान विधि सक्षम नहीं की गई है।",
+			"deliveryAtAddressOptions": "पते के विकल्प पर डिलीवरी",
+			"minDeliveryAmount": "न्यूनतम वितरण आदेश राशि",
+			"deliveryFee": "अर्पण शुल्क",
+			"order": {
+				"label": "गण",
+				"orderSent": "आदेश भेजा गया",
+				"orderWish": "आदेश काश",
+				"notifications": {
+					"receipt": "आदेशों के लिए सूचनाएं प्राप्त करें"
+				},
+				"floor": "मंज़िल",
+				"customerName": "ग्राहक का नाम",
+				"newestOrderSent": "नवीनतम आदेश भेजा",
+				"oldestOrderSent": "सबसे पुराना आदेश भेजा",
+				"newestOrderWish": "नवीनतम आदेश विश",
+				"oldestOrderWish": "सबसे पुराना ऑर्डर विश",
+				"newestOrderExpected": "नवीनतम आदेश की उम्मीद",
+				"oldestOrderExpected": "सबसे पुराना आदेश अपेक्षित",
+				"autoprint": {
+					"receipt": "स्वचालित रूप से आने वाले आदेशों को प्रिंट करें"
+				},
+				"orderExpected": "आदेश की उम्मीद",
+				"newestOrderEffective": "नवीनतम आदेश प्रभावी",
+				"oldestOrderEffective": "सबसे पुराना आदेश प्रभावी",
+				"dateTimeRange": "दिनांक समय सीमा",
+				"orderEffective": "आदेश प्रभावी",
+				"noFilter": "कोई फिल्टर नहीं",
+				"yesterday": "बिता कल",
+				"lastHour": "अंतिम घंटा",
+				"now": "अभी",
+				"nextHour": "अगला घंटा",
+				"tomorrow": "आने वाला कल",
+				"custom": "कस्टम ...",
+				"today": "आज",
+				"orderIdentifier": "पहचानकर्ता",
+				"changeOrder": "बदलने के आदेश"
+			},
+			"orderIsReady": "आदेश तैयार है!",
+			"orderExpected": "आदेश की उम्मीद",
+			"orderDownload": "डाउनलोड",
+			"note": "ध्यान दें",
+			"open": "खुला हुआ",
+			"cancelled": "रद्द",
+			"rejected": "अस्वीकृत",
+			"rejectWithoutReason": "कारण निर्दिष्ट किए बिना आदेश अस्वीकार करें",
+			"rejectWithReason": "कारण सहित अस्वीकार आदेश",
+			"closed": "बन्द है",
+			"identifier": "पहचानकर्ता",
+			"deliveryMethod": "वितरण का माध्यम",
+			"deliveryOption": "वितरण मोड",
+			"orderingDisabledMessage": "ऑर्डर देने के लिए डिलीवरी मोड को चुनना होगा",
+			"deliveryAtInLocation": "एक मेज पर परोसें",
+			"deliveryLocationsEnabled": "विकल्प अक्षम है क्योंकि कोई तालिका निर्धारित नहीं हैं",
+			"orderDeliveryMethod": {
+				"deliver": "उद्धार",
+				"pickup": "उठाना",
+				"serve": "सेवा कर",
+				"deliverAtAddress": "पते पर डिलीवरी",
+				"openTap": ""
+			},
+			"status": "स्थिति",
+			"amountPaid": "भुगतान की गई राशि",
+			"paymentStatus": "भुगतान की स्थिति",
+			"payment": {
+				"paid": "भुगतान किया है",
+				"notPaid": "नहीं चुकाया",
+				"stripeTermsAndConditions": "अपना खाता पंजीकृत करके, आप इस बात से सहमत हैं",
+				"servicesAgreement": "धारी सेवा समझौता",
+				"stripeConnectedAccountAgreement": "स्ट्राइप कनेक्टेड अकाउंट एग्रीमेंट",
+				"stripeUserMsg": "स्ट्राइप अकाउंट बनाना क्रेडिट कार्ड, iDEAL, Bancontact के माध्यम से ऑर्डर प्राप्त करने में सक्षम बनाता है",
+				"paypalDisableMsg": "पेपैल अस्थायी रूप से समर्थित नहीं है",
+				"creditCard": "क्रेडिट कार्ड",
+				"bancontact": "बैंककॉन्टैक्ट",
+				"iDeal": "आदर्श",
+				"squareUserMsg": "एक स्क्वायर अकाउंट बनाना क्रेडिट कार्ड के माध्यम से ऑर्डर प्राप्त करने में सक्षम बनाता है",
+				"vivaUserMsg": "विवा वॉलेट खाता बनाना क्रेडिट कार्ड के माध्यम से ऑर्डर प्राप्त करने में सक्षम बनाता है",
+				"digitalWallets": "डिजिटल वॉलेट",
+				"paymentSense": {
+					"userMsg": "पेमेंट्सेंस खाता बनाना क्रेडिट कार्ड के माध्यम से ऑर्डर प्राप्त करने में सक्षम बनाता है",
+					"jwtToken": ""
+				},
+				"rmsUserMsg": "RMS खाता बनाना क्रेडिट कार्ड के माध्यम से ऑर्डर प्राप्त करने में सक्षम बनाता है",
+				"merchantId": "",
+				"sharedSecret": "साझा रहस्य",
+				"rmsConnect": "आरएमएस से जुड़ें",
+				"paymentSenseConnect": "PaymentSense से जुड़ें",
+				"jccUserMsg": "JCC खाता बनाने से क्रेडिट कार्ड के माध्यम से ऑर्डर प्राप्त करना संभव हो जाता है",
+				"acquirerId": "",
+				"apiSignaturePassword": "",
+				"jccConnect": "जेसीसी से जुड़ें",
+				"valueNotValid": "प्रदान किया गया मान मान्य नहीं है",
+				"trustpaymentsUserMsg": "TrustPayments खाता बनाना क्रेडिट कार्ड के माध्यम से ऑर्डर प्राप्त करने में सक्षम बनाता है",
+				"siteReference": "",
+				"webserviceUser": "",
+				"webservicePassword": ""
+			},
+			"date": "तारीख",
+			"time": "समय",
+			"backToOrders": "आदेश पर वापस जाओ",
+			"share": {
+				"language": {
+					"userInterfaceLanguage": "उपयोगकर्ता इंटरफ़ेस भाषा",
+					"defaultCatalogLanguage": "कैटलॉग भाषा",
+					"basedOn": "ब्राउज़र सेटिंग्स के आधार पर",
+					"storeDefault": "डिफ़ॉल्ट कैटलॉग भाषा को संग्रहीत करें"
+				},
+				"sharePreviewLink": "शेयर और पूर्वावलोकन लिंक",
+				"sharePreview": "साझा करें और पूर्वावलोकन करें",
+				"embedCode": "अपनी वेबसाइट पर एम्बेड करें",
+				"printQRCodes": "QR कोड प्रिंट करें",
+				"ordering": {
+					"allowDefaultOrdering": "आज्ञा देना",
+					"DefaultOrdering": "चूक",
+					"disableDefaultOrdering": "विकलांग",
+					"defaultDate": "डिफ़ॉल्ट दिनांक"
+				}
+			},
+			"voucher": {
+				"list": "वाउचर सूची",
+				"createVoucher": "कस्टम वाउचर बनाएं",
+				"partnerStatus": "साथी की स्थिति",
+				"endDate": "अंतिम तिथि",
+				"commission": "आयोग",
+				"text": "वाउचर",
+				"numberOfVouchers": "वाउचर की संख्या",
+				"defaultVoucherValue": "वाउचर का मूल्य",
+				"numberOfVoucher": "उपलब्ध वाउचर जो बनाए जा सकते हैं",
+				"numberOfVoucherPattern": "वाउचर की संख्या डिजिट होनी चाहिए",
+				"minNumberOfVoucherPattern": "वाउचर की संख्या 1 से अधिक या उसके बराबर होनी चाहिए",
+				"commissionStatus": "कमीशन की स्थिति",
+				"waiting_for_store_purchase": "स्टोर खरीद की प्रतीक्षा की जा रही है",
+				"eligible_for_payment": "भुगतान के योग्य",
+				"waiting_for_finalization": "अंतिम रूप देने के लिए 14 दिन की प्रतीक्षा की जा रही है",
+				"useDate": "वाउचर उपयोग की तारीख",
+				"printVoucherSetup": "प्रिंट वाउचर",
+				"addnewdiscountVoucher": "नया डिस्काउंट वाउचर जोड़ें",
+				"backtodiscountVouchers": "वापस करने के लिए डिस्काउंट वाउचर",
+				"creatediscountVoucher": "डिस्काउंट वाउचर बनाएं",
+				"typeSingleuse": "एकल उपयोग",
+				"typeMultipleuse": "एकाधिक उपयोग",
+				"updatediscountVoucher": "डिस्काउंट वाउचर अपडेट करें",
+				"editdiscountVoucher": "डिस्काउंट वाउचर संपादित करें",
+				"discountVouchers": "डिस्काउंट वाउचर"
+			},
+			"statistics": {
+				"title": "आंकड़े",
+				"from": "से",
+				"to": "सेवा",
+				"orders": "आदेश",
+				"menuViewing": "मेनू दृश्य",
+				"orderValue": "ऑर्डर का मूल्य",
+				"month": "महीना",
+				"year": "साल",
+				"submitted": "प्रस्तुत",
+				"received": "प्राप्त किया",
+				"total": "संपूर्ण",
+				"totalViewing": "कुल देखने",
+				"totalPaid": "कुल भुगतान हो गया",
+				"totalNonPaid": "टोटल नॉन पेड",
+				"totalAll": "कुल मिलाकर",
+				"orderItems": "चिजें मँगाओ",
+				"orderItemSummary": "आदेश आइटम सारांश",
+				"orderItemSummaryDescription": "बेचे गए प्रत्येक उत्पाद के लिए कुल राजस्व को समझें और देखें कि कौन से उत्पाद सबसे लोकप्रिय हैं",
+				"orderItemDetails": "आदेश आइटम विवरण",
+				"orderItemDetailsDescription": "सभी आदेशों का एक आइटम देखें, जिसमें इन आदेशों और आदेशों की तारीखों में बेचे गए उत्पादों की मात्रा और राजस्व शामिल हो",
+				"orderCapture": "आदेश पर कब्जा",
+				"monthly": "महीने के",
+				"daily": "रोज",
+				"day": "दिन",
+				"period": "अवधि",
+				"quantitySold": "बेचा गया सामान",
+				"revenueLabel": "राजस्व"
+			},
+			"catalog": {
+				"backToOffer": "बैक टू ऑफर",
+				"backToCatalog": "वापस करने के लिए सूची",
+				"backToCategory": "वापस श्रेणी के लिए",
+				"importTranslation": "लेबल बदलें और अनुवाद करें",
+				"import": "एक्सेल के माध्यम से कैटलॉग आयात करें",
+				"upload": "सूची अपलोड करें",
+				"importInfo": "आप Excel टेम्पलेट का उपयोग करके अपने कैटलॉग डेटा में डेटा आयात कर सकते हैं। एक्सेल आयात प्रस्ताव के नाम या श्रेणी के नाम का समर्थन करता है या छोटे विवरण प्रस्तुत करता है और कीमतों की पेशकश करता है।",
+				"downloadTemplate": "यहाँ टेम्पलेट डाउनलोड करें",
+				"acceptImport": "कैटलॉग को स्वीकार करें और आयात करें",
+				"importImage": "फोटो से आयात सूची",
+				"beta": "बीटा",
+				"importImageInfo": "आप अपने कैटलॉग की एक तस्वीर जोड़कर डेटा को अपने कैटलॉग डेटा में आयात कर सकते हैं। आयात कैटलॉग के उन हिस्सों के लिए काम करता है जिनकी एकल श्रेणी है। सुनिश्चित करें कि उच्च संकल्प के साथ आपकी तस्वीर स्पष्ट है। यह फीचर बीटा मोड में है।",
+				"offer": {
+					"offer": "प्रस्ताव",
+					"createOffer": "ऑफ़र बनाएँ",
+					"addOffer": "प्रस्ताव जोड़ें",
+					"confirmDeleteOffer": "क्या आप वाकई इस ऑफ़र को हटाना चाहते हैं? <br/> यह क्रिया पूर्ववत नहीं की जा सकती है।",
+					"offerImage": "छवि प्रदान करें",
+					"uploadImage": "तस्वीर डालिये",
+					"characteristics": {
+						"name": "विशेषताएँ",
+						"vegetarian": "शाकाहारी",
+						"vegan": "शाकाहारी",
+						"celery": "अजवायन",
+						"wheat": "गेहूँ",
+						"crustaceans": "क्रसटेशियन",
+						"eggs": "अंडे",
+						"fish": "मछली",
+						"lupin": "वृक",
+						"milk": "दूध",
+						"molluscs": "मोलस्क",
+						"mustard": "सरसों",
+						"nuts": "पागल",
+						"peanuts": "मूंगफली",
+						"sesame": "तिल",
+						"soya": "सोया",
+						"sulphurDioxide": "सल्फर डाइऑक्साइड",
+						"halal": "हलाल",
+						"barley": "जौ",
+						"spicy": "मसालेदार"
+					},
+					"countAgainstslotcount": "स्लॉट की गिनती के खिलाफ गिनती",
+					"countAgainstslot": "स्लॉट के खिलाफ गिनती",
+					"incrementBy": "द्वारा वृद्धि",
+					"externalProductId": "बाहरी उत्पाद आईडी",
+					"vatExternalId": "बाहरी वैट आईडी",
+					"available": "उपलब्ध",
+					"oos": "स्टॉक ख़त्म",
+					"hidden": "छुपे हुए",
+					"unorderable": "गैर आदेश योग्य"
+				},
+				"variant": {
+					"priceVariants": "मूल्य वेरिएंट",
+					"priceVariant": "मूल्य भिन्नता",
+					"assignedOfferVariations": "असाइन किए गए विविधताओं को देखने के लिए यहां क्लिक करें",
+					"createPriceVariant": "मूल्य भिन्नता बनाएँ",
+					"confirmDeleteVariant": "क्या आप वाकई इस मूल्य संस्करण को हटाना चाहते हैं? <br/> यह क्रिया पूर्ववत नहीं की जा सकती।"
+				},
+				"option": {
+					"option": "विकल्प",
+					"options": "विकल्प",
+					"addOption": "विकल्प जोड़ें",
+					"createOption": "विकल्प बनाएँ",
+					"confirmDeleteOption": "क्या आप वाकई इस विकल्प को हटाना चाहते हैं? <br/> यह क्रिया पूर्ववत नहीं की जा सकती।"
+				},
+				"category": {
+					"createCategory": "श्रेणी बनाएँ",
+					"category": "वर्ग",
+					"addCategory": "कैटेगरी जोड़े",
+					"infoDeleteCategory": "श्रेणी को हटाया नहीं जा सकता क्योंकि इसमें ऑफ़र शामिल हैं। <br/> अंतर्निहित ऑफ़र को हटाए जाने या अन्य श्रेणियों में ले जाने की आवश्यकता है।",
+					"confirmDeleteCategory": "क्या आप वाकई इस श्रेणी को हटाना चाहते हैं? <br/> यह क्रिया पूर्ववत नहीं की जा सकती।"
+				},
+				"optionGroup": {
+					"optionGroups": "विकल्प समूह",
+					"createOptionGroup": "विकल्प समूह बनाएँ",
+					"optionGroup": "विकल्प समूह",
+					"addOptionGroup": "विकल्प समूह जोड़ें",
+					"optionGroupType": "विकल्प समूह प्रकार",
+					"optionA": "विकल्प ए",
+					"optionB": "विकल्प बी",
+					"optionC": "विकल्प सी",
+					"chooseExisting": "मौजूदा विकल्प समूह चुनें",
+					"infoDeleteOptionGroup": "विकल्प समूह को हटाया नहीं जा सकता क्योंकि इसमें विकल्प हैं। <br/> अंतर्निहित विकल्पों को हटाने की आवश्यकता है।",
+					"confirmDeleteOptionGroup": "क्या आप वाकई इस विकल्प समूह को हटाना चाहते हैं? <br/> यह क्रिया पूर्ववत नहीं की जा सकती।"
+				},
+				"description": {
+					"priceDescription": "मूल्य विवरण",
+					"shortDescription": "संक्षिप्त वर्णन",
+					"longDescription": "लंबा वर्णन"
+				},
+				"discount": {
+					"noDiscount": "कोई छूट नहीं",
+					"percentile": "प्रतिशतता",
+					"monetary": "मुद्रा",
+					"invalidDiscount": "छूट राशि मूल्य राशि से कम होनी चाहिए"
+				},
+				"sellable": {
+					"isVisible": "दर्शनीय"
+				},
+				"availability": {
+					"startTime": "समय शुरू",
+					"endTime": "अंतिम समय",
+					"allTimeAvailability": "हर समय उपलब्ध है। चुनाव प्रतिबंध।"
+				},
+				"translation": {
+					"translation": "अनुवाद",
+					"languageTranslation": "भाषा अनुवाद पहले से मौजूद है! कृपया संपादन चुनें।",
+					"translations": "अनुवाद",
+					"addNewTranslation": "नया अनुवाद जोड़ें"
+				},
+				"language": {
+					"defaultCatalogLanguage": "डिफ़ॉल्ट कैटलॉग भाषा",
+					"changeLanguage": "भाषा बदलो",
+					"sourceLanguage": "स्रोत भाषा",
+					"targetLanguage": "लक्ष्य भाषा",
+					"withGoogleTranslate": "Google अनुवाद के साथ परिवर्तित करें"
+				},
+				"tooltip": {
+					"goToCategory": "श्रेणी विवरण देखने के लिए यहां क्लिक करें",
+					"goToOffer": "ऑफ़र विवरण देखने के लिए यहां क्लिक करें",
+					"translation": "असाइन किए गए अनुवाद देखने के लिए यहां क्लिक करें",
+					"goToOptionGroup": "विकल्प समूह विवरण देखने के लिए यहां क्लिक करें",
+					"goToOption": "विकल्प विवरण देखने के लिए यहां क्लिक करें",
+					"options": "असाइन किए गए विकल्प देखने के लिए यहां क्लिक करें",
+					"goToVariant": "संस्करण विवरण देखने के लिए यहां क्लिक करें",
+					"optionGroup": "विकल्प समूह और विकल्प देखने के लिए यहां क्लिक करें",
+					"changestatus": "अवस्था बदलो"
+				},
+				"addRestriction": "नया समय प्रतिबंध जोड़ें",
+				"importTranslation1": "आप एक्सेल के माध्यम से कैटलॉग आइटम के ग्रंथों को बदल सकते हैं और उन्हें कई भाषाओं में अनुवाद कर सकते हैं।",
+				"importTranslation12": "यहां Excel फ़ाइल डाउनलोड करें जिसमें आपकी कैटलॉग के सभी पाठ हैं।",
+				"importTranslation2": "एक्सेल फ़ाइल में वे भाषाएँ शामिल हैं जिनके लिए आपके पास इस भाषा में कम से कम एक प्रस्ताव है।",
+				"importTranslation3": "अपनी स्टोर भाषा और विभिन्न भाषाओं के लिए फ़ाइल में शामिल सभी ग्रंथों को अपडेट करें। आपको एक्सेल फ़ाइल की संरचना में बदलाव नहीं करना चाहिए बल्कि केवल नए पाठ जोड़ना चाहिए",
+				"importTranslation4": "जब आप परिवर्तनों के साथ तैयार हों, तो अपने परिवर्तनों को प्रभावी करने के लिए फ़ाइल अपलोड करें",
+				"contentTranslate": "टेक्स्ट बदलें और अनुवाद करें",
+				"contentDownload": "एक त्रुटि हुई है और फ़ाइल डाउनलोड नहीं की जा सकती है",
+				"contentFailedError": "एक त्रुटि हुई है और फ़ाइल अपलोड नहीं की जा सकती है। कृपया सुनिश्चित करें कि फ़ाइल की संरचना नहीं बदली गई है",
+				"orderable": {
+					"isOrderable": "आदेश देने में सक्षम"
+				},
+				"error": {
+					"overlappingSchedules": "शेड्यूल को ओवरलैप होने के कारण शेड्यूल को बचाया नहीं जा सकता",
+					"timeScopeWrong": "समय की गुंजाइश गलत है",
+					"noDaySelect": "कोई चयनित दिन नहीं है",
+					"loadSchedules": "शेड्यूल प्राप्त करते समय त्रुटि आई",
+					"createSchedule": "शेड्यूल को सहेजते समय एक त्रुटि हुई",
+					"updateSchedule": "शेड्यूल अपडेट करते समय एक त्रुटि हुई",
+					"deleteSchedule": "शेड्यूल हटाते समय एक त्रुटि हुई"
+				},
+				"update": "Excel के माध्यम से कैटलॉग अद्यतन करें",
+				"acceptUpdate": "कैटलॉग को स्वीकार करें और अपडेट करें",
+				"importTranslationnew": "आप एक्सेल टेम्पलेट का उपयोग करके अपनी कैटलॉग को आयात कर सकते हैं। आप ऑफ़र नाम, श्रेणी के नाम, विवरण, ऑफ़र मूल्य, छूट और स्टॉक डेटा आयात कर सकते हैं।",
+				"importTranslationnew1": "एक्सेल टेम्पलेट डाउनलोड करें और अपनी कैटलॉग डेटा भरें",
+				"updateTranslation": "आप अपने कैटलॉग में नए आइटम जोड़ सकते हैं या Excel टेम्पलेट का उपयोग करके अपनी मौजूदा कैटलॉग आइटम बदल सकते हैं। आप ऑफ़र नाम, श्रेणी के नाम, विवरण, ऑफ़र मूल्य, छूट और स्टॉक डेटा आयात कर सकते हैं।",
+				"updateTranslation1": "यहां Excel फ़ाइल डाउनलोड करें जिसमें आपका कैटलॉग डेटा है।",
+				"updateTranslation2": "उन ऑफ़र के फ़ील्ड को अपडेट करें जिन्हें आप बदलना चाहते हैं। इन के लिए, प्रस्ताव नाम समान रखें",
+				"updateTranslation3": "नए प्रस्तावों के लिए एक्सेल फ़ाइल में नई पंक्तियाँ जोड़ें जिन्हें आप बनाना चाहते हैं",
+				"updateTranslation4": "Excel में उन फ़ील्ड्स को अपडेट करें जिन्हें आप बदलना चाहते हैं। यदि आप विशिष्ट परिवर्तन करना चाहते हैं तो ऑफ़र फ़ील्ड समान रहना चाहिए",
+				"priceVariants": "मूल्य वेरिएंट",
+				"catalogOptionGroup": "विकल्प समूह",
+				"allowMultiple": "एक ही आइटम के कई चयनों की अनुमति दें",
+				"nocatalog": "कोई कैटलॉग नहीं है",
+				"notable": "कोई टेबल नहीं हैं",
+				"importLink": "लिंक से कैटलॉग आयात करें",
+				"importCatalogexternalsite": "बाहरी साइट",
+				"importCataloglink": "संपर्क",
+				"importCataloglinkimport": "आयात",
+				"catalogOfstoreimported": "स्टोर का कैटलॉग निर्माण शुरू हो गया है। इसे पूरा होने में 10-15 मिनट का समय लग सकता है।",
+				"catalogFetching": "कैटलॉग लाया जा रहा है। कृपया एक घंटे के बाद आयात करने के लिए पुन: प्रयास करें",
+				"catalogUnabletoimport": "कैटलॉग आयात नहीं किया जा सका",
+				"catalogPleaseentervalidlink": "कृपया मान्य लिंक दर्ज करें।"
+			},
+			"location": {
+				"text": "तालिका",
+				"backtoTables": "टेबल्स पर वापस",
+				"create": "तालिका जोड़ें",
+				"createBulk": "बल्क में टेबल बनाएं",
+				"noOfStoreLocations": "तालिकाओं की संख्या",
+				"error": {
+					"noStoreFound2": "नए स्टोर स्थान जारी रखने के लिए",
+					"pattern": "अमान्य लेबल - केवल / संयोजन अंकों का उपयोग 0-9 और अपरकेस अक्षर A-Z और हाइपेंस (-) और अंडरस्कोर (_) की अनुमति है।",
+					"digit": "अमान्य लेबल - केवल अंकीय 0-9 के उपयोग की अनुमति है"
+				},
+				"label": "तालिका",
+				"createTableMsg": "बल्क में टेबल जोड़ें",
+				"locationType": "स्थान का प्रकार",
+				"table": "टेबल",
+				"location": "स्थान",
+				"room": "कक्ष",
+				"notablesFound": "कोई टेबल नहीं मिला",
+				"nocatalogfound": "कोई कैटलॉग नहीं मिला",
+				"tableStatus": "तालिका स्थिति",
+				"openTap": {
+					"closed": "बंद किया हुआ",
+					"open": "खुला हुआ"
+				},
+				"status": {
+					"success": "स्थिति अपडेट कर दी गई है",
+					"table": {
+						"pin": "टेबल पिन"
+					},
+					"error": "स्थिति अपडेट करने में त्रुटि"
+				},
+				"print": {
+					"qrCodes": "क्यूआर कोड प्रिंट करें"
+				}
+			},
+			"locations": {
+				"text": "टेबल्स"
+			},
+			"qr": {
+				"download": {
+					"pdf": "Pdf QR कोड प्रिंट डाउनलोड करें",
+					"image": "इमेज क्यूआर कोड डाउनलोड करें"
+				},
+				"downloadPrintQRStore": "QR कोड प्रिंट पीडीएफ के रूप में डाउनलोड करें",
+				"downloadPrintQRAllLocation": "सभी टेबल क्यूआर कोड प्रिंट को पीडीएफ के रूप में डाउनलोड करें",
+				"downloadImageQRStore": "क्यूआर कोड छवि डाउनलोड करें",
+				"downloadImageQRAllLocation": "ज़िप के रूप में सभी QR कोड चित्र डाउनलोड करें"
+			},
+			"help": {
+				"helpText": "मदद जारी रखो"
+			},
+			"users": {
+				"header": "उपयोगकर्ता",
+				"removeUser": "क्या आप वाकई इस उपयोगकर्ता के लिए इस स्टोर की पहुंच हटाना चाहते हैं? <br/> यह क्रिया पूर्ववत नहीं की जा सकती।",
+				"inviteUser": {
+					"inviteTitle": "उपयोगकर्ता को आमंत्रित करें",
+					"invitationText": "एक ईमेल नीचे दिए गए ईमेल पते पर भेजा जाएगा। एक बार जब उपयोगकर्ता निमंत्रण स्वीकार कर लेता है तो वह पूरी तरह से प्रबंधित करने में सक्षम होगा",
+					"invitePrimaryButton": "आमंत्रण"
+				}
+			},
+			"region": {
+				"label": "क्षेत्र"
+			},
+			"city": {
+				"label": "Faridabad"
+			},
+			"alias": "गोनेरऑडर डोमेन",
+			"notSubscribedMsg": "इस स्टोर ने एक गौनाडर सदस्यता नहीं खरीदी है। ट्रायल मोड में मान्य सदस्यता के साथ अन्य स्टोर्स द्वारा गोऑनडर डोमेन का दावा किया जा सकता है।",
+			"noActiveSubscriptionsMsg": "आप इस डोमेन को केवल तभी प्राप्त कर सकते हैं जब आप एक गौनेडर सदस्यता खरीदेंगे। सदस्यता लेने के बाद आप अब किसी अन्य डोमेन का उपयोग कर सकते हैं और इसे वांछित में बदल सकते हैं।",
+			"domainTakenMsg": "यह पूर्वसमूह डोमेन पहले से ही लिया गया है",
+			"aliasValidationMsg": "डोमेन में कम से कम 6 अक्षर होने चाहिए जिनमें से एक अक्षर 'a' से 'z' होना चाहिए। संख्या अंक '0' से '9' और प्रतीकों '-' और '_' की अनुमति है। विशेष वर्ण और बड़े अक्षर की अनुमति नहीं है",
+			"phoneNumber": {
+				"pattern": "केवल 0-9 अंकों के उपयोग की अनुमति है।"
+			},
+			"enablePaypalPaymentGonnaOrderLabel": "gonnaorder.com",
+			"preferredLanguage": {
+				"label": "पसंदीदा भाषा"
+			},
+			"catalogOverview": "सूची",
+			"ordering": "आदेश",
+			"details": "विवरण",
+			"paymentProvoders": "भुगतान प्रदाता",
+			"disabled": "विकलांग",
+			"paymentDisabled": "भुगतान अक्षम",
+			"paymentOptional": "भुगतान वैकल्पिक",
+			"paymentMandatory": "भुगतान अनिवार्य",
+			"enabled": "सक्रिय",
+			"disconnect": "डिस्कनेक्ट",
+			"accountID": "खाता पहचान",
+			"connectWithPaypal": "पेपैल के साथ जुड़ें",
+			"connectWithStripe": "स्ट्राइप से कनेक्ट करें",
+			"paymentMethodDetailsMessage": "उन भुगतान प्रदाताओं का चयन करें जिन्हें आप कनेक्ट करना चाहते हैं",
+			"optionGroup": {
+				"atMostOneOption": "अधिकतम एक विकल्प पर चयन किया जा सकता है",
+				"customSelection": "कस्टम चयन",
+				"minimumRequired": "चुने जाने के लिए आवश्यक न्यूनतम विकल्प",
+				"maximumAllowed": "अधिकतम विकल्प चयनित करने की अनुमति दी गई है",
+				"maximumHeigherThanMimimum": "अधिकतम संख्या न्यूनतम संख्या से अधिक या उसके बराबर होनी चाहिए"
+			},
+			"message": {
+				"errorTryAgain": "एक त्रूटि हुई: कृपया फिर से कोशिश करें",
+				"storeUpdate": "स्टोर अपडेट किया गया!",
+				"actionFail": "क्रिया: विफल रही है!",
+				"loadFail": "लोड विफल हो गया!",
+				"acessRemoveFail": "स्टोर से पहुंच हटाना विफल रहा",
+				"acessRemoveSuccess": "सफलतापूर्वक सक्सेस स्टोर से हटा दिया गया!",
+				"inviteUserFail": "उपयोगकर्ता को आमंत्रित करने में विफल!",
+				"inviteUserSuccess": "उपयोगकर्ता को स्टोर का प्रबंधन करने के लिए आमंत्रित किया गया है!",
+				"uploadFail": "अपलोड विफल!",
+				"logoUploadSuccess": "लोगो सफलतापूर्वक अपलोड किया गया!",
+				"imageUploadSuccess": "छवि सफलतापूर्वक अपलोड की गई!",
+				"downloadFail": "डाउनलोड विफल!",
+				"settingsUpdate": "सेटिंग को अद्यतन किया गया है!",
+				"receiveEmailMsg": "आपको शीघ्र ही एक ईमेल प्राप्त होगा। अपना ईमेल बदलने के लिए लिंक का अनुसरण करें।",
+				"profileUpdate": "प्रोफ़ाइल अपडेट!",
+				"translationsUpdateSuccess": "अनुवाद सफलतापूर्वक अपडेट किए गए!",
+				"saveOfferSuccess": "प्रस्ताव सफलता बचाओ",
+				"saveCategorySuccess": "श्रेणी की सफलता सहेजें",
+				"childCategoryOffer": "ऑफर से जुड़ी बाल श्रेणियां!",
+				"childOfferCategory": "बाल श्रेणी से जुड़ा प्रस्ताव!",
+				"offerVaryAToffer": "ऑफ़र से संबंधित वेरिएंट प्रदान करें!",
+				"catalogVerifySuccess": "सूची डेटा सफलतापूर्वक सत्यापित!",
+				"catalogDataUploadSuccess": "कैटलॉग डेटा अपलोड सफलतापूर्वक!",
+				"categoryDeleteSuccess": "श्रेणी को सफलतापूर्वक समाप्त कर दिया गया!",
+				"offerDeleteSuccess": "विलोपित किया गया प्रस्ताव!",
+				"createAvailabilitySuccess": "उपलब्धता सफलता बनाएँ",
+				"createAvailabilityFail": "उपलब्धता बनाएँ विफल",
+				"locationDeleteSuccess": "स्थान {{लेबल}} को सफलतापूर्वक हटा दिया गया",
+				"noInStoreDelivery": "ध्यान दें कि डिलीवरी इन-स्टोर स्थान अब समर्थित नहीं है",
+				"stripeDisconnect": "धारी खाता काट दिया गया",
+				"paypalDisconnect": "पेपैल खाता काट दिया गया",
+				"upgradeAffiliateSuccess": "सहबद्ध विवरण सफलतापूर्वक अपग्रेड करें!",
+				"loadProfileFail": "हम आपकी प्रोफ़ाइल लोड नहीं कर सके। बाद में पुन: प्रयास करें",
+				"verifyCatalogImageFailed": "कैटलॉग को छवि से नहीं निकाला जा सकता है। एक उच्च रिज़ॉल्यूशन वाली छवि या एक ऐसी छवि आयात करने का प्रयास करें जिसमें केवल एक श्रेणी के साथ कैटलॉग का एक छोटा हिस्सा हो",
+				"verifyCatalogImageSuccess": "कैटलॉग छवि सफलतापूर्वक सत्यापित की गई!",
+				"imageRemoveSuccess": "छवि हटा दी गई है",
+				"logoRemoveSuccess": "लोगो हटा दिया गया है",
+				"zoneRemoveFail": "स्टोर से ज़ोन हटाना विफल",
+				"zoneRemoveSuccess": "स्टोर से सफलतापूर्वक निकाला गया ज़ोन",
+				"zoneAdded": "ज़ोन सफलतापूर्वक बनाया गया",
+				"zoneUpdated": "ज़ोन सफलतापूर्वक अपडेट किया गया",
+				"CreateScheduleSuccess": "सफलतापूर्वक बनाया गया",
+				"updateScheduleSuccess": "सफलतापूर्वक उत्परिवर्तित",
+				"deleteScheduleSuccess": "सफलतापूर्वक हटा दिया गया",
+				"saveRuleSuccess": "नियम सफलता बचाओ",
+				"deleteRuleSuccess": "नियम विलोपन सफलता",
+				"saveDiscountVoucherSuccess": "सहेजें डिस्काउंट वाउचर सफलता",
+				"saveDiscountVoucherFailed": "सहेजें डिस्काउंट वाउचर विफल",
+				"deleteDiscountVoucherSuccess": "डिस्काउंट वाउचर डिलीट सफलता",
+				"locationCreateSuccess": "तालिका {{लेबल}} सफलतापूर्वक बनाई गई थी",
+				"locationUpdateSuccess": "तालिका {{लेबल}} को सफलतापूर्वक अपडेट किया गया"
+			},
+			"rejectOrder": "आदेश अस्वीकार करें",
+			"paypalNotsupported": "पेपैल समर्थित नहीं है",
+			"enableWithmelink": "अपने Paypal.me लिंक से भुगतान सक्षम करें",
+			"payPalmelink": "Paypal.me लिंक",
+			"enableWithanylink": "किसी भी भुगतान लिंक के साथ भुगतान सक्षम करें",
+			"paymentProvider": "भुगतान प्रदाता",
+			"paymentLink": "भुगतान लिंक",
+			"other": "अन्य",
+			"shoppingBasket": "खरीदारी की टोकरी",
+			"settingsMandatory": "अनिवार्य",
+			"settingsOptional": "ऐच्छिक",
+			"settingspickupEmailRequired": "ईमेल (अनिवार्य",
+			"settingspickupPhoneRequired": "फोन आवश्यक है",
+			"addressDelivery": "पता वितरण",
+			"orderAmount": "आदेश राशि जिसके ऊपर डिलीवरी मुफ्त है",
+			"deliveryAddressauto": "वितरण पता ऑटो-पूर्ण",
+			"postCodesrestrictions": "पोस्ट कोड ज़ोन प्रतिबंध",
+			"restricted": "वर्जित",
+			"nonRestricted": "गैर प्रतिबंधित",
+			"addressZones": "क्षेत्र",
+			"addressaddnewZones": "नया क्षेत्र जोड़ें",
+			"createDifferentaddress": "अलग-अलग एड्रेस डिलीवरी जोन बनाएं जिसमें अलग-अलग सेटिंग्स हों",
+			"backtoZones": "ज़ोन वापस करने के लिए",
+			"minRadius": "मिन रेडियस",
+			"maxRadius": "मैक्स रेडियस",
+			"unit": "इकाई",
+			"postCodes": "डाक कोड",
+			"postCodemsg": "अल्पविराम या नई लाइन द्वारा अलग किए गए पोस्ट कोड की सूची दर्ज करें",
+			"settingspickupNameRequired": "नाम जरूरी",
+			"zoneLabel": "क्षेत्र",
+			"invalidRadiusRange": "त्रिज्या सीमा अमान्य है",
+			"account": {
+				"deleteUserSuccess": "स्टोर में उपयोगकर्ता की पहुंच सफलतापूर्वक हटा दी गई है",
+				"confirmDeleteUser": "क्या आप वाकई इस उपयोगकर्ता के लिए इस स्टोर की पहुंच हटाना चाहते हैं? इस क्रिया को पूर्ववत नहीं किया जा सकता है।"
+			},
+			"subscription": {
+				"storeEligibility": "आपका स्टोर प्रति माह 50 मेन्यू व्यूइंग या 50 ऑर्डर के लिए गोनेओडर का उपयोग करने के लिए योग्य है।\nजब परीक्षण प्रतिबंध पहुँच जाते हैं, तो आपके ग्राहक आपके मेनू को नहीं देख पाएंगे।\nआप इन प्रतिबंधों को हटाने के लिए एक GoneOrder सदस्यता खरीद सकते हैं।",
+				"vatprompt": {
+					"sodexobelgium": "क्या आप सोडेक्सो नेटवर्क के मर्चेंट हैं? 50% छूट प्राप्त करने के लिए अपना वैट नंबर दर्ज करें",
+					"eu": "ऑनलाइन खरीद के लिए VAT शुल्क का भुगतान करने से बचने के लिए अपना VAT नंबर दर्ज करें"
+				},
+				"sodexo": {
+					"affiliate": {
+						"prompt": "अभी तक सोडेक्सो नेटवर्क का सदस्य नहीं है?"
+					}
+				},
+				"active": "सक्रिय",
+				"fourteenfreetrial": "14 दिन का निःशुल्क परीक्षण - असीमित संख्या में ऑर्डर",
+				"limitedFreemium": "सीमित फ्रीमियम - असीमित ऑर्डर प्राप्त करने के लिए सदस्यता लें और अपना GonnaOrder डोमेन न खोएं",
+				"limitedFreemiumnumberof": "लिमिटेड फ्रीमियम - इस महीने के लिए 5 ऑर्डर की सीमा तक पहुंच गया है। असीमित ऑर्डर प्राप्त करने के लिए सदस्यता लें और अपना GonnaOrder डोमेन न खोएं",
+				"discountVouchers": "डिस्काउंट वाउचर",
+				"billing": {
+					"businessName": "व्यवास्यक नाम"
+				}
+			},
+			"applicationId": "Application ID",
+			"accessToken": "",
+			"locationId": "",
+			"clientId": "",
+			"clientSecret": "",
+			"settingsDefaultcatalogview": "डिफ़ॉल्ट कैटलॉग दृश्य",
+			"settingsCollapsed": "संक्षिप्त किए गए",
+			"settingsExpanded": "विस्तारित",
+			"orderingNotification": "आदेश अधिसूचना ईमेल",
+			"orderingNotificationmessage": "प्रत्येक आदेश के लिए नीचे ईमेल पते पर ईमेल भेजें",
+			"settingsManagestock": "स्टॉक प्रबंधित करें",
+			"settingStocklevel": "शेयर के स्तर",
+			"settingsStockcheck": "स्टॉक की जांच",
+			"name": "स्टोर नाम",
+			"thanksForstore": "अपना स्टोर पंजीकृत करने के लिए धन्यवाद",
+			"uploadyourmenu": "अपना मेनू जल्दी और आसानी से अपलोड करें",
+			"configureyourstore": "अपनी आवश्यकताओं के अनुसार अपने स्टोर को कॉन्फ़िगर करें",
+			"seeyourstore": "अपना स्टोर देखें क्योंकि आपके ग्राहक इसे देखते हैं",
+			"findinstructions": "एप्लिकेशन कैसे काम करता है, इसके बारे में निर्देश प्राप्त करें",
+			"orderingMinutesorderready": "ऑर्डर तैयार होने तक मिनट",
+			"orderingDefaultestimated": "प्रसव के लिए मिनटों में डिफ़ॉल्ट अनुमानित समय और पिकअप ऑर्डर तैयार नहीं होते हैं",
+			"orderingMinimum": "न्यूनतम",
+			"orderingMaximum": "ज्यादा से ज्यादा",
+			"setting": {
+				"rules": {
+					"orderingrules": "आदेश देने के नियम",
+					"addnewrule": "नया नियम जोड़ें",
+					"rules": "नियम",
+					"orderamount": "ऑर्डर करने की राशि",
+					"backtorules": "वापस करने के लिए नियम",
+					"status": "नियम की स्थिति",
+					"conditions": "शर्तेँ ",
+					"orderamountbetween": "विशिष्ट मानों के बीच आदेश राशि",
+					"minorderamount": "न्यूनतम आदेश राशि",
+					"maxaorderamount": "अधिकतम आदेश राशि",
+					"actions": "क्रिया",
+					"displayoptgroup": "प्रदर्शन विकल्प समूह",
+					"optgroups": "विकल्प समूह",
+					"addoptgroup": "विकल्प समूह जोड़ें",
+					"backtorule": "नियम पर वापस जाएं",
+					"createruleptgroup": "विकल्प समूह बनाएँ",
+					"ruleoptgroup": "विकल्प समूह",
+					"infoDeleteORule": "नियम को हटाया नहीं जा सकता क्योंकि इसमें श्रेणी शामिल है। <br/> अंतर्निहित श्रेणी को हटाने की आवश्यकता है",
+					"confirmDeleteRule": "क्या आप वाकई इस नियम को हटाना चाहते हैं? <br/> यह क्रिया पूर्ववत नहीं की जा सकती।",
+					"updateRule": "नियम को अद्यतन करें"
+				},
+				"marketing": {
+					"fb": {
+						"labelError": "अमान्य फेसबुक पिक्सेल ट्रैकिंग आईडी",
+						"label": "फेसबुक पिक्सेल",
+						"meta": "फेसबुक वेबसाइट सत्यापन मेटा टैग",
+						"metaError": "अमान्य फ़ेसबुक वेबसाइट सत्यापन मेटा टैग सामग्री",
+						"UrlError": "अमान्य फेसबुक यूआरएल"
+					},
+					"google": {
+						"labelError": "अमान्य Google विश्लेषिकी ट्रैकिंग कोड।"
+					},
+					"label": "विपणन",
+					"GA": {
+						"label": "गूगल विश्लेषिकी"
+					},
+					"enableFBMsg": "Facebook Pixel के साथ स्टोर ट्रैकिंग सक्षम करें",
+					"enableGAMsg": "Google Analytics के साथ स्टोर ट्रैकिंग सक्षम करें",
+					"Websitelink": "वेबसाइट की लिंक",
+					"Facebooklink": "फेसबुक लिंक",
+					"Instagramlink": "इंस्टाग्राम लिंक",
+					"Carditlink": "Cardit.io लिंक",
+					"SocialMedia": "वेबसाइट, सोशल मीडिया और लिंक किए गए खाते",
+					"SocialMediaPromote": "विभिन्न तरीकों का प्रचार करें जिससे आपके ग्राहक आपके व्यवसाय के साथ इंटरैक्ट कर सकें",
+					"SocialMediaText": "अग्रिम सेटिंग",
+					"website": {
+						"UrlError": "अमान्य स्टोर वेबसाइट URL"
+					},
+					"instagram": {
+						"UrlError": "अमान्य Instagram URL"
+					},
+					"cardit": {
+						"UrlError": "अमान्य CardIto URL"
+					}
+				},
+				"samedayordering": "उसी दिन आदेश",
+				"requestorderdateupfront": "अनुरोध की तारीख अग्रिम",
+				"billing": "बिलिंग",
+				"lastMile": {
+					"lastMileDeliverySoftware": "अंतिम मील वितरण सॉफ्टवेयर",
+					"connectWithMynext": "Mynext के साथ कनेक्ट करें",
+					"enterMynextCredentials": "अपने mynext क्रेडेंशियल दर्ज करें"
+				},
+				"integrations": {
+					"username": "उपयोगकर्ता नाम",
+					"password": "कुंजिका",
+					"connect": "जुडिये",
+					"theCredentialsAreNotValid": "प्रमाण मान्य नहीं हैं",
+					"navName": "एकीकरण",
+					"shareDataWithOtherApplications": "अन्य अनुप्रयोगों के साथ डेटा साझा करें",
+					"connectToHubrise": "हब्रीज़ से कनेक्ट करें",
+					"enterHubriseCredentials": "अपना हबराइज क्रेडेंशियल दर्ज करें",
+					"connectedToHubrise": "हब्रीज़ से जुड़ा",
+					"hubriseCustomerList": "ग्राहकों का विवरण",
+					"goToHubrise": "हब्राइज पर जाएं",
+					"powersoft": {
+						"connectWithPowersoft": "",
+						"connectPowersoft": "",
+						"accessTokenmsg": "",
+						"agentCode": "",
+						"agentCodemsg": "",
+						"customerCode": "",
+						"customerCodemsg": "",
+						"emailmsg": "",
+						"connect": ""
+					}
+				},
+				"domains": "डोमेन",
+				"apps": {
+					"name": "ऐप्स",
+					"promoteGOApp": "GonnaOrder ऐप के जरिए ऑर्डरिंग को बढ़ावा दें",
+					"promoteGOAppInfo": "उपयोगकर्ता आपके स्टोर लिंक को ऐप में सहेजेंगे और अपने मोबाइल फोन से अधिक आसानी से ऑर्डर करेंगे",
+					"promoteCustomOApp": "अपने स्टोर कस्टम ऐप के माध्यम से ऑर्डरिंग को बढ़ावा दें",
+					"promoteCustomAppInfo": "अपना कस्टम मोबाइल ऐप प्राप्त करने के लिए हमसे संपर्क करें जिसे आप अपने ग्राहकों को बढ़ावा दे सकते हैं",
+					"iosAppLink": "आईओएस ऐप लिंक",
+					"invalidIOSAppLink": "अमान्य ऐप स्टोर URL",
+					"androidAppLink": "एंड्रॉइड ऐप लिंक",
+					"invalidAndroidAppLink": "अमान्य Play Store URL"
+				},
+				"allowOrderUpdateByStore": "स्टोर द्वारा ऑर्डर अपडेट की अनुमति दें",
+				"allowOrderDeletionByStore": "स्टोर द्वारा ऑर्डर हटाने की अनुमति दें",
+				"opentabordering": ""
+			},
+			"orderingEmailcustomer": "ऑर्डर की स्थिति बदलने पर ईमेल ग्राहक",
+			"orderNotificationSound": "सतत क्रम अधिसूचना ध्वनि",
+			"schedule": {
+				"backToSchedule": "वापस अनुसूची पर",
+				"add": "जोड़ना",
+				"save": "सहेजें",
+				"name": "नाम",
+				"createScheduleItem": "नया शेड्यूल जोड़ें",
+				"editScheduleItem": "अनुसूची संपादित करें",
+				"cancel": "रद्द करना",
+				"startTime": "समय शुरू",
+				"endTime": "अंतिम समय",
+				"delete": "हटाएं",
+				"mon": "",
+				"tue": "",
+				"wed": "",
+				"thu": "",
+				"fri": "",
+				"sat": "",
+				"sun": "",
+				"choose": "अनुसूची का चयन करें",
+				"CreateSpecialScheduleSuccess": "खुलने का समय सफलतापूर्वक अपडेट किया गया",
+				"error": {
+					"CreateSpecialSchedule": "ओपनिंग टाइम अपडेट करते समय त्रुटि आई",
+					"LoadSpecialSchedules": "उद्घाटन के समय लाने में त्रुटि हुई",
+					"DeleteSpecialSchedule": "ओपनिंग टाइम डिलीट करते समय त्रुटि आई"
+				},
+				"DeleteSpecialScheduleSuccess": "खुलने का समय सफलतापूर्वक हटा दिया गया",
+				"requestWishTime": "विनती का समय",
+				"assoonasPossible": "जितनी जल्दी हो सके",
+				"futureTime": "भविष्य काल",
+				"generalopening": "सामान्य शुरुआती समय",
+				"orderingTimes": "आदेश देने का समय",
+				"addDaysOfWeek": "सप्ताह के दिनों को जोड़ें",
+				"addDates": "तिथियां जोड़ें",
+				"Include": "शामिल",
+				"Exclude": "निकालना",
+				"displayStartOrding": "आदेश देने के प्रारंभ में इच्छा समय प्रदर्शित करें",
+				"wishTimeMinutes": "इच्छा समय अंतराल - मिनट",
+				"displayWishTimeFormat": "इच्छा समय प्रारूप प्रदर्शित करें",
+				"times": "टाइम्स",
+				"timeSlots": "समय प्रकोष्ठ",
+				"slotDuration": "स्लॉट अवधि - मिनट",
+				"limitOrder": "प्रति स्लॉट सीमा आदेश",
+				"noLimit": "कोई सीमा नहीं",
+				"limit": "सीमा",
+				"ordersPerSlot": "प्रति स्लॉट आदेश",
+				"wishTimeInFutureMinutes": "भविष्य में कामना का समय - मिनट",
+				"defaultOrderingMode": "डिफ़ॉल्ट आदेश मोड",
+				"displaydesireddateandTime": "वांछित दिनांक और समय प्रदर्शित करें",
+				"dateandTime": "दिनांक समय",
+				"dateOnly": "केवल दिनांक"
+			},
+			"addNewSchedule": "नया शेड्यूल जोड़ें",
+			"scheduleList": "अनुसूचियों",
+			"filter": "फ़िल्टर",
+			"ready": "तैयार",
+			"global": {
+				"openTime": "खुलने का समय"
+			},
+			"defaultPaymentSelection": "डिफ़ॉल्ट भुगतान चयन",
+			"notSelected": "चयनित नहीं",
+			"preselected": "पूर्व-चयनित",
+			"common": {
+				"tooltip": {
+					"option": {
+						"addOption": "विकल्प बनाने के लिए यहां क्लिक करें"
+					},
+					"movedown": {
+						"Option": "नीचे ले जाएँ विकल्प पर क्लिक करें"
+					},
+					"moveup": {
+						"Option": "ऊपर जाने के लिए यहाँ क्लिक करें विकल्प"
+					}
+				}
+			},
+			"settingsDefaultVATPercentage": "डिफ़ॉल्ट VAT%",
+			"tableOrdering": "टेबल ऑर्डरिंग",
+			"settingsHidden": "छिपा हुआ",
+			"schedulesSlot": "प्रति स्लॉट अधिकतम आइटम",
+			"schedulesSlotnote": "स्लॉट कुल गणना के खिलाफ गिनती करने वाली वस्तुओं को निर्दिष्ट करने की आवश्यकता है",
+			"timeShouldFuture": "समय भविष्य में होना चाहिए।",
+			"discountVoucher": "छूट का प्रमाण पत्र",
+			"inputMinutes": "इनपुट मिनट",
+			"selectMinutes": "मिनट का चयन करें",
+			"estimatedTime": "अनुमानित समय",
+			"hideorderComment": "आदेश टिप्पणियाँ छिपाएँ",
+			"hideorderitemComment": "ऑर्डर आइटम टिप्पणियां छिपाएं",
+			"catalogOffer": "ऑफर",
+			"catalogCategory": "वर्ग",
+			"settingDetails": "स्टोर का विवरण",
+			"settingOrdering": "स्टोर ऑर्डर करना",
+			"settingPayment": "भुगतान सेटिंग",
+			"settingPickup": "उठाना",
+			"settingDelivery": "वितरण",
+			"settingLocations": "टेबल",
+			"settingCatalog": "स्टोर कैटलॉग",
+			"settingOrderingRule": "आदेश देना",
+			"settingSchedules": "अनुसूचियों",
+			"settingMarketing": "विपणन",
+			"settingDiscountVouchers": "छूट का प्रमाण पत्र",
+			"domain": "डोमेन और ऐप्स",
+			"customDomain": {
+				"additionalCustomDomain": "अतिरिक्त कस्टम डोमेन",
+				"labelError": "डोमेन मान मान्य नहीं है"
+			},
+			"domaincustomInfo": "आप अपने स्वयं के कस्टम डोमेन का उपयोग कर सकते हैं जैसे https://example.com या उपडोमेन उदा। https://mystore.example.com अतिरिक्त रूप से अपने गोनाओडर डोमेन पर। इसे काम करने के लिए आपको अपने डोमेन प्रदाता पर कुछ अतिरिक्त कॉन्फ़िगरेशन करने की आवश्यकता है",
+			"catalogManageByExcel": "Via Excel प्रबंधित करें",
+			"settingspickupdisplaypickupAddress": "पिकअप पता प्रदर्शित करें",
+			"settingspickupHide": "छिपाना",
+			"settingspickupShow": "प्रदर्शन",
+			"deleteStore": "क्या आप वाकई इस स्टोर को हटाना चाहते हैं? यह कार्य दोबारा से नहीं हो सकता",
+			"deleteStoreSuccess": "स्टोर सफलतापूर्वक हटा दिया गया है",
+			"oneClickAddToBasket": "एक क्लिक टोकरी में जोड़ें",
+			"errorMinimumWishTime": "अमान्य भविष्य न्यूनतम इच्छा समय। यह गैर-शून्य सकारात्मक संख्या होगी जो 1440 से कम या इसके बराबर है",
+			"deleteStoreMsgError": "स्टोर {{storeId}} में ऑर्डर या कैटलॉग आइटम शामिल हैं और इन्हें हटाया नहीं जा सकता",
+			"postCodesErrorMsg": "एक पोस्ट कोड में अधिकतम 10 वर्ण होने चाहिए और कई डाक कोड के लिए अल्पविराम से अलग होना चाहिए।",
+			"customers": {
+				"customers": "ग्राहकों",
+				"customerName": "ग्राहक का नाम",
+				"customerPhone": "ग्राहक फोन",
+				"customerEmail": "ग्राहक ईमेल",
+				"orders": "आदेश",
+				"firstOrder": "पहले के आदेश",
+				"lastOrder": "अंतिम आदेश"
+			},
+			"setupZones": "सेटअप क्षेत्र",
+			"radiusPostCode": "त्रिज्या का प्रयोग करें",
+			"zonePostCodes": "पोस्ट कोड का प्रयोग करें",
+			"radiusPostCodesDetails": "प्रत्येक क्षेत्र के लिए पोस्ट कोड परिभाषित करें",
+			"radiusPostCodesDetails1": "प्रत्येक क्षेत्र के लिए एक त्रिज्या सीमा निर्धारित करें। यह ग्राहक के जीपीएस निर्देशांक पर आधारित है।",
+			"radiusPostCodesDetails2": "इस सुविधा को सक्षम करने के लिए आपको पता स्वतः पूर्ण सक्षम होना चाहिए और साथ ही स्टोर विवरण स्क्रीन में अपने स्टोर के जीपीएस स्थान को परिभाषित करना होगा।",
+			"zoneName": "क्षेत्र का नाम",
+			"zonesRestrictions": "वितरण क्षेत्र प्रतिबंध",
+			"enableCustomerAuthentication": "ग्राहक प्रमाणीकरण सक्षम करें",
+			"settingsDeliverypolygondescription": "मानचित्र में प्रत्येक क्षेत्र को परिभाषित करें। यह ग्राहक के जीपीएस निर्देशांक पर आधारित है",
+			"settingsDeliverydraw_map": "मानचित्र पर ड्रा करें",
+			"settingsMaperrormsg": "कृपया मानचित्र पर इस क्षेत्र के लिए एक बहुभुज बनाएं",
+			"storeNotfound": "दुकान नहीं मिली।",
+			"externalOnlinePaymentId": "बाहरी ऑनलाइन भुगतान आईडी",
+			"externalNonOnlinePaymentId": "बाहरी गैर ऑनलाइन भुगतान आईडी",
+			"externalId": "बाहरी आईडी",
+			"deliveryFeeExternalId": "वितरण शुल्क बाहरी आईडी",
+			"combineorders": "आदेशों को मिलाएं"
+		},
+		"load": {
+			"loadingMessage": "कृपया प्रतीक्षा कीजिये"
+		},
+		"users": {
+			"removeAccessMsg": "स्टोर से पहुंच निकालें",
+			"userManage": {
+				"label": "सभी उपयोगकर्ताओं"
+			},
+			"list": {
+				"inputEmail": "एक मान्य ईमेल इनपुट करें"
+			},
+			"details": {
+				"title": "उपयोगकर्ता की जानकारी",
+				"id": "ईद",
+				"username": "उपयोगकर्ता नाम",
+				"googleAccount": "गूगल अकॉउंट",
+				"facebookAccount": "फेसबुक अकाउंट",
+				"backToAllUsers": "सभी उपयोगकर्ताओं के लिए वापस",
+				"deleteUserSuccess": "उपयोगकर्ता को सफलतापूर्वक हटा दिया गया है",
+				"updateUserSuccess": "उपयोगकर्ता को सफलतापूर्वक अपडेट किया गया है",
+				"confirmDeleteUser": "क्या आप वाकई इस उपयोगकर्ता को हटाना चाहते हैं?"
+			}
+		},
+		"register": {
+			"registerTitle": "रजिस्टर करें",
+			"registerationSuccess": "आपके पंजीकरण के लिए आपका धन्यवाद। आपको शीघ्र ही अपने खाते को सत्यापित करने के लिए एक ईमेल प्राप्त होगा।",
+			"haveAccount": "क्या आपके पास पहले से एक खाता मौजूद है?",
+			"emailInfo": "आपको यह पुष्टि करने की आवश्यकता होगी कि यह ईमेल आपका है",
+			"accept": "रजिस्टर बटन पर क्लिक करके आप निम्नलिखित को स्वीकार करते हैं",
+			"phoneNumberoptional": "फ़ोन नंबर (वैकल्पिक)",
+			"acceptRegister": "स्वीकार करें और पंजीकरण करें",
+			"registerHeaderMessage1": "GonnaOrder.com पर अपना व्यवसाय पंजीकृत करें",
+			"registerHeaderMessage2": "और आज ही अपना निःशुल्क परीक्षण शुरू करें",
+			"registerFormStep1": "फॉर्म भरें और अपना ईमेल सत्यापित करें",
+			"registerFormStep2": "लॉगिन करें और अपना स्टोर बनाएं",
+			"registerFormStep3": "अपना मेनू अपलोड करें और सेटिंग्स कॉन्फ़िगर करें",
+			"registerFinalMessage": "आपका स्टोर आपके ग्राहकों के साथ उपयोग करने के लिए तैयार है!",
+			"continue": "जारी रखें",
+			"social": {
+				"google": "Google के साथ रजिस्टर करें",
+				"facebook": "फेसबुक के साथ रजिस्टर करें",
+				"apple": "ऐप्पल के साथ रजिस्टर करें"
+			}
+		},
+		"user": {
+			"profile": {
+				"updateTitle": "प्रोफ़ाइल अपडेट करें"
+			},
+			"details": {
+				"emailErrorMsgInvaild": "ईमेल आक्रमण है",
+				"lastName": "उपनाम",
+				"confirmPassword": "पासवर्ड की पुष्टि कीजिये",
+				"confirmPasswordErrorMsgMisMatch": "पासवर्ड मेल नहीं खाते"
+			}
+		},
+		"passwordAuth": {
+			"passAuthButton": "पुन: प्रमाणीकृत",
+			"passAuthPromt": "जारी रखने के लिए कृपया पासवर्ड की पुष्टि करें"
+		},
+		"storeError": {
+			"unExpected": "एक अनपेक्षित त्रुटि हो गई है"
+		},
+		"menu": {
+			"preview": "पूर्वावलोकन"
+		},
+		"continue": {
+			"accept": "रजिस्टर बटन पर क्लिक करके आप निम्नलिखित को स्वीकार करते हैं"
+		},
+		"sodexo": {
+			"prompt": {
+				"purchase": "यदि आप एक सोडेक्सो सहयोगी हैं, तो एक GonnaOrder  सदस्यता खरीदने पर एक वर्ष के लिए 50% छूट प्राप्त करें"
+			}
+		},
+		"printer": {
+			"printersList": "प्रिंटर",
+			"noPrinter": "कोई प्रिंटर पंजीकृत नहीं है",
+			"registerPrinter": "रजिस्टर करें",
+			"registerTitle": "प्रिंटर रजिस्टर करें",
+			"setPrinterName": "कृपया प्रिंटर नाम सेट करें",
+			"printerName": "प्रिंटर का नाम",
+			"unregisterPrinter": "प्रिंटर को सूची से निकालें",
+			"confirmUnregister": "क्या आप वाकई इस प्रिंटर को सूची से हटाने जा रहे हैं?",
+			"selectPrinter": "प्रिंटर का चयन करें",
+			"selectPrinterTitle": "कृपया एक प्रिंटर चुनें",
+			"notEmpty": "प्रिंटर का नाम खाली नहीं होना चाहिए।",
+			"chooseAPrinter": "एक प्रिंटर चुनें",
+			"star": {
+				"noPrinter": "कोई स्टार प्रिंटर नहीं मिला!"
+			},
+			"chooseAPrinterType": "एक प्रिंटर प्रकार चुनें",
+			"connectionMethod": "कनेक्शन विधि",
+			"connectionMethodBluetooth": "",
+			"connectionMethodWiFi": "",
+			"connectionParameters": "कनेक्शन पैरामीटर",
+			"connectionIpOrHostName": "आईपी या होस्ट नाम",
+			"connectionPort": "",
+			"connectionBluetoothMacAddr": "मैक पते",
+			"testPrint": "मुद्रण का परीक्षण करें",
+			"starPrinter": {
+				"support": "केवल स्टार प्रिंटर समर्थित हैं",
+				"indev": "विकास में स्टार प्रिंटर के लिए समर्थन"
+			},
+			"airPrinter": {
+				"support": "केवल AirPrint प्रिंटर समर्थित हैं"
+			}
+		}
+	}
+}

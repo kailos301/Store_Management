@@ -1,0 +1,225 @@
+<div class="col-md-12">
+  <div class="card list">
+    <div class="card-header">
+      {{'admin.store.share.sharePreview'|translate}} <app-help-icon [helpPageName]="sharePreviewHelpPage">
+      </app-help-icon>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="row">
+            <div class="defaultLanguageRow col-lg-12 col-md-12 col-sm-12">
+              <label class="col-xl-3 col-lg-3 col-md-12 col-sm-12"
+                for="share-preview-link">{{'admin.store.share.sharePreviewLink'|translate}}</label>
+              <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
+                <i title="Click to copy" class="far fa-copy copyIcon mr-2" (click)="copySharePreviewURL()"></i><a
+                  target="_blank" href="{{sharePreviewURL}}" class="actionLink">{{sharePreviewURL}}</a>
+              </div>
+            </div>
+          </div>
+          <div class="row defaultLanguage">
+            <div class="defaultLanguageRow col-lg-12 col-md-12 col-sm-12">
+              <label for="sellable"
+                class="col-xl-3 col-lg-3 col-md-12 col-sm-12 required">{{'admin.store.share.language.userInterfaceLanguage'|translate}}</label>
+              <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
+                <i class="fas fa-globe pr-1"></i>
+                <span *ngIf="!selectedUserInterfaceLang">{{browserDefaultLang}}</span>
+                <span *ngIf="selectedUserInterfaceLang">{{selectedUserInterfaceLang}}</span>
+                <span *ngIf="showBrowserMsg">
+                  ({{'admin.store.share.language.basedOn'|translate}})
+                </span>
+                <a class="actionLink ml-10" title="Change Language"
+                  (click)="openUserInterfaceLanPopup()">{{'admin.global.change'|translate}}</a>
+              </div>
+            </div>
+          </div>
+          <div class="row defaultLanguage">
+            <div class="defaultLanguageRow col-lg-12 col-md-12 col-sm-12">
+              <label for="sellable" class="col-xl-3 col-lg-3 col-md-12 col-sm-12 required">
+                {{'admin.store.share.language.defaultCatalogLanguage'|translate}}
+              </label>
+              <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
+                <i class="fas fa-globe pr-1"></i>
+                <span *ngIf="!selectedCatalogLang">
+                  {{(store$ | async).language.name}}
+                </span>
+                <span *ngIf="selectedCatalogLang">
+                  {{selectedCatalogLang}}
+                </span>
+                <span *ngIf="showStoreDefaultMsg">
+                  ({{'admin.store.share.language.storeDefault'|translate}})
+                </span>
+                <a class="actionLink ml-10" title="Change Language" (click)="openCatalogLanPopup()">
+                  {{'admin.global.change'|translate}}
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="row defaultLanguage">
+            <div class="defaultLanguageRow col-lg-12 col-md-12 col-sm-12">
+              <label for="sellable"
+                class="col-xl-3 col-lg-3 col-md-12 col-sm-12 required">{{'admin.store.share.ordering.allowDefaultOrdering'|translate}}</label>
+              <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
+                {{allowOrdering ? 'Default' : 'Disabled'}}
+                <a class="actionLink ml-10" title="Change" (click)="openAllowOrderPopup()">
+                  {{'admin.global.change'|translate}}
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="row defaultLanguage">
+            <div class="defaultLanguageRow col-lg-12 col-md-12 col-sm-12">
+              <label for="startDate" class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+                {{'admin.store.share.ordering.defaultDate'|translate}}
+              </label>
+              <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 mt-n3 mb-n2">
+                {{wishDate ? (wishDate | date : 'dd MMM yyyy') : 'Default'}}
+                <mat-form-field style="width: 0">
+                  <input matInput readonly="readonly" (ngModelChange)="onWishDateChange($event)"
+                    [matDatepicker]="startDate" [(ngModel)]="wishDate">
+                  <mat-datepicker-toggle matSuffix [for]="startDate">
+                    <mat-icon style="font-size: 130%;" matDatepickerToggleIcon>date_range</mat-icon>
+                  </mat-datepicker-toggle>
+                  <mat-datepicker #startDate></mat-datepicker>
+                </mat-form-field>
+                <a *ngIf="wishDate" class="actionLink ml-30" title="Remove"
+                  (click)="removeWishDate()">{{'admin.global.remove'|translate}}</a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="defaultLanguageRow col-lg-12 col-md-12 col-sm-12">
+              <label class="col-xl-3 col-lg-3 col-md-12 col-sm-12"
+                for="embed-code">{{'admin.store.share.embedCode'|translate}}</label>
+              <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
+                <i title="Click to copy" class="far fa-copy copyIcon mr-2 embedCodeCopy"
+                  (click)="copyEmbedCode()"></i><textarea class="embedCodeText" readonly>{{embedCode}}</textarea>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="defaultLanguageRow col-lg-12 col-md-12 col-sm-12">
+              <label class="col-xl-3 col-lg-3 col-md-12 col-sm-12 print-qr-label"
+                for="printQRCode">{{'admin.store.share.printQRCodes'|translate}}</label>
+              <div class="col-xl-4 col-lg-9 col-md-12 col-sm-12">
+                <div class="qrwidth">
+                  <a (click)="downloadImage()">
+                    <img #qrImage class="qr-image" class="pr-5 w-100" />
+                  </a>
+                  <p>
+                    <a (click)="downloadImage()" class="mx-auto">
+                      <i class="fa fa-image mr-1"></i>{{'admin.store.qr.downloadImageQRStore'|translate}}
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-9 col-md-12 col-sm-12" *ngIf="flyerImgPath && flyerImgPath.length>0">
+                <div class="qrwidth">
+                  <a (click)="downloadFlyer()">
+                    <img [src]=getSantizeUrl(flyerImgPath) class="qr-image" class="pr-5 w-100" />
+                  </a>
+                  <p class="mt-3">
+                    <a class="mx-auto " (click)="downloadFlyer()">
+                      <i class="fa fa-file-alt mr-1"></i>{{'admin.global.field.downloadFlyer'|translate}}
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-none d-lg-block">
+          <iframe frameborder="0" border="none" width="350" height="600" [src]="sharePreviewIframeURL"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #userInterfaceLangPopup>
+  <h1 class="text-blue col-lg-12 p-0 text-decoration-none" mat-dialog-title>
+    {{'admin.store.share.language.userInterfaceLanguage'|translate}}</h1>
+  <div mat-dialog-content>
+    <div class="row defaultLanguage">
+      <div class="col-md-12" *ngFor="let lang of userInterfaceLanguages;let index=index">
+        <label for="user-interface-lang-{{index}}" class="radio-container">
+          {{lang.name}}
+          <input type="radio" name="userInterfaceLanguage" value={{index}} id="user-interface-lang-{{index}}"
+            [checked]="lang.name==userInterfaceLang" (click)="setUserInterfaceLocale(lang.name, lang.locale)" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div mat-dialog-actions>
+    <div class="col-lg-12 col-md-12 col-sm-12 mt-10">
+      <div class="float-right">
+        <a (click)="onNoClick()" type="button" class="text-decoration-underline">{{'admin.global.cancel' |
+          translate}}</a>
+        <button (click)="changeUserInterfaceLang()" class="btn btn-primary submit-btn ml-15">{{'admin.global.ok' |
+          translate}}</button>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<!-- Allow ordering popup starts here  -->
+<ng-template #allowOrderingPoppup>
+  <div mat-dialog-content>
+    <div class="row defaultLanguage">
+      <div class="col-md-12">
+        <label for="allow-ordering-default" class="radio-container">
+          {{'admin.store.share.ordering.DefaultOrdering'|translate}}
+          <input type="radio" name="allowOrderingRadio" [(ngModel)]="allowOrdering" [value]="true"
+            id="allow-ordering-default" />
+          <span class="checkmark"></span>
+        </label>
+        <label for="allow-ordering-default1" class="radio-container">
+          {{'admin.store.share.ordering.disableDefaultOrdering'|translate}}
+          <input type="radio" name="allowOrderingRadio" [(ngModel)]="allowOrdering" [value]="false"
+            id="allow-ordering-default1" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div mat-dialog-actions>
+    <div class="col-lg-12 col-md-12 col-sm-12 mt-10">
+      <div class="float-right">
+        <a (click)="onNoClick()" type="button" class="text-decoration-underline">{{'admin.global.cancel' |
+          translate}}</a>
+        <button (click)="setAllowOrdering()" class="btn btn-primary submit-btn ml-15">{{'admin.global.ok' |
+          translate}}</button>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!-- Allow ordering popup ends here  -->
+
+<ng-template #catalogLanguagesPopup>
+  <h1 class="text-blue col-lg-12 p-0 text-decoration-none" mat-dialog-title>
+    {{'admin.store.share.language.defaultCatalogLanguage'|translate}}</h1>
+  <div mat-dialog-content>
+    <div class="row defaultLanguage">
+      <div class="col-md-12" *ngFor="let lang of catalogLanguages;let index=index">
+        <label for="catalog-languages-{{index}}" class="radio-container">
+          {{lang.name}}
+          <input type="radio" name="catalogLanguages" value="{{index}}"
+            (click)="setCatalogLangLocale(lang.name, lang.locale)" id="catalog-languages-{{index}}"
+            [checked]="lang.name== (!selectedCatalogLang ? (store$ | async).language.name : catalogLang)" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div mat-dialog-actions>
+    <div class="col-lg-12 col-md-12 col-sm-12 mt-10">
+      <div class="float-right">
+        <a (click)="onNoClick()" type="button" class="text-decoration-underline">{{'admin.global.cancel' |
+          translate}}</a>
+        <button (click)="changeCatalogLanguage(false)" class="btn btn-primary submit-btn ml-15">{{'admin.global.ok' |
+          translate}}</button>
+      </div>
+    </div>
+  </div>
+</ng-template>

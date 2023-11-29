@@ -1,0 +1,30 @@
+.handIcon{
+    cursor: pointer;
+}
+
+#sodexo_logo {
+    display: block;
+    max-width: 150px;
+    max-height: 50px;
+    width: auto;
+    height: auto;
+}
+.btnChange {
+    color: white;
+    background-color: #273773;
+    .fa,
+    .far,
+    .fas {
+      vertical-align: middle;
+      color: #fff;
+      font-size: 20px;
+    }
+}
+.superadmin.btn.btn-primary{
+    background-color: #2ba6ca !important;
+    border-color: #2ba6ca !important;
+}
+#settingsTabs>.btn-group .btn {
+    border-radius: 0;
+    
+}

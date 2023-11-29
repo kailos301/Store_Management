@@ -1,0 +1,36 @@
+<div class="row d-block" #scrollMe>
+  <div class="col-lg-12">
+    <div class="card list">
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>{{'admin.global.storeLabel' | translate}}</th>
+                <th>{{'admin.global.voucher.label' | translate}}</th>
+                <th>{{'admin.global.discount' | translate}}</th>
+                <th>{{'admin.store.voucher.useDate' | translate}}</th>
+                <th>{{'admin.store.voucher.commissionStatus' | translate}}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngIf="!(commissions$ | async)?.data?.length">
+                <td colspan="7" *ngIf="innerWidth > 600">{{'admin.global.noData' | translate}}</td>
+                <td colspan="5" *ngIf="innerWidth <= 600">{{'admin.global.noData' | translate}}</td>
+              </tr>
+              <tr *ngFor="let commission of (commissions$ | async)?.data">
+                <td>{{ commission.storeAlias }}</td>
+                <td>{{ commission.code }}</td>
+                <td>{{ 50-commission.commission }} %</td>
+                <td>{{ commission.formattedEndDate }}</td>
+                <td [innerHTML]="getCommissionStatus(commission.commissionStatus)"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <app-pager [totalPagesCount]="(commissions$ | async)?.totalPages" [page]="(commissions$ | async)?.paging?.page" [size]="(commissions$ | async)?.paging?.size" (paginate)="paginate($event)">
+        </app-pager>
+      </div>
+    </div>
+  </div>
+</div>

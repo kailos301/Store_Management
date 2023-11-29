@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "Palvelun tarjoaa",
+			"thankYou": "Kiitos",
+			"discount": "Alennus",
+			"viewOrder": "Tarkastele tilausta",
+			"errorH2": "Jokin meni pieleen",
+			"errorUnexpected": "Jotain odottamatonta tapahtui",
+			"errorExpected": "Jotain odottamatonta tapahtui",
+			"errorMustSelectOne": "Sinun on valittava yksi luku",
+			"errorTrialExceeded": "Tämä ominaisuus ei ole käytettävissä. Koeajan rajoitukset on ylitetty.",
+			"emptyCart": "Tilauksessasi ei ole tuotteita.",
+			"optional": "(valinnainen)",
+			"cookies": "Tämä sivusto käyttää evästeitä. Jatkamalla tämän nettisivuston käyttöä hyväksyt niiden käytön.",
+			"more": "lisää",
+			"less": "vähemmän",
+			"chooseFrom": "Valitse",
+			"standard": "standardi",
+			"days": {
+				"mon": "Maanantai",
+				"tue": "Tiistai",
+				"wed": "Keskiviikko",
+				"thu": "Torstai",
+				"fri": "Perjantai",
+				"sat": "Lauantai",
+				"sun": "Sunnuntai"
+			},
+			"opentimelist": "Aukioloajat",
+			"newVersionAvailable": "Käytössäsi on sovelluksen vanhempi versio. Lataa viimeisin päivitys lataamalla sovellus uudelleen",
+			"reloadApplication": "Lataa sovellus uudelleen",
+			"poweredByGonnaOrder": "Voimanlähteenä Gonnaorder",
+			"recents": "Viimeaikaiset",
+			"information": "Tiedot",
+			"yes": "Joo",
+			"no": "Ei",
+			"error": "Virhe",
+			"errorQRScanner": "QR-skannerissa tapahtui virhe!",
+			"confirm": "Vahvistaa"
+		},
+		"select": {
+			"selectAtLeast": "Sinun on valittava vähintään {{x}}",
+			"selectAtmost": "Voit valita korkeintaan {{x}}",
+			"selectAtleastAtMost": "Sinun on valittava vähintään {{x}} ja korkeintaan {{y}}",
+			"selectBetween": "Sinun on valittava {{childCategory.min}} - ja {{childCategory.max}} -arvojen välillä."
+		},
+		"load": {
+			"loadingMessage": "Hetkinen..."
+		},
+		"itemDetails": {
+			"removeFromOrder": "Poista tämä tilauksestasi",
+			"addToOrder": "Lisää tilaukseesi",
+			"updateOrder": "Päivitä tilauksesi"
+		},
+		"checkout": {
+			"yourOrder": "Tilauksesi",
+			"total": "Yhteensä",
+			"specialNote": "Lisää tilaukseesi erityismaininta",
+			"howToReceiveYourOrder": "Miten haluat vastaanottaa tilauksesi?",
+			"option": {
+				"pickup": "Noudan sen itse",
+				"addressDelivery": "Haluan vastaanottaa sen osoitteeseeni",
+				"serve": {
+					"location": "Istun pöydässä"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "Emme pystyneet tallentamaan tilauksesi tietoja",
+				"fieldRequired": "Tämä kenttä on täytettävä",
+				"selectFutureTime": "Ole hyvä ja valitse aika tulevaisuudessa",
+				"orderSubmissionFailed": "Tilausta ei voi lähettää",
+				"ORDER_LOCATION_NOT_PRESENT": "Taulukon numero tai sijainnin nimi puuttuu",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "Joitakin vaadittuja asiakastietoja puuttuu",
+				"ORDER_WISH_TIME_INVALID": "Haluttu toiveiden aika on menneisyydessä",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "Tilauksen toimitusmenetelmä puuttuu",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "Toimitusta osoitteessa ei tueta",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "Tilauksen toimittamista ei tueta",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "Tilauksen noutoa ei tueta",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "Toimitusta määritetyllä postinumerolla ei tueta",
+				"OPENING_TIME_SCHEDULE_ERROR": "Kauppa on suljettu valittuna tilauksen toiveenaikana",
+				"PROMOTION_NOT_ELIGIBLE": "Tarjous on valittu, mutta se ei ole kelvollinen",
+				"offersUnavailableExplanation": "Alla olevat kohteet eivät ole käytettävissä määrittämäsi päivämääränä ja kellonaikana. Napsauta päivittää tilaus poistaaksesi ne tilaustasi",
+				"offersOutOfStockExplanation": "Kohteita ei ole tarpeeksi",
+				"invalidVoucherCode": "Kuponkikoodi on virheellinen",
+				"INVALID_INPUT": "Virhe toimitettujen tietojen käsittelyssä.",
+				"slotUnavailableExplanation": "Pyydetty aikaväli ei ole käytettävissä. Valitse toinen aikaväli tai valitse toinen toimitustapa.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "Tälle myymälälle ei ole mahdollista pyytää tilausta samana päivänä.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "Ei ole mahdollista pyytää tilausta samalle päivälle alueellasi.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "Samalle päivälle ei voi pyytää tilausta seuraavista tuotteista:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "Postinumeroon ei ole mahdollista toimittaa pyydettyä aikaa ja päivää.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "Tilauksia ei voida toimittaa tiettynä ajankohtana. Valitse vaihtoehto.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "Tilauksia ei voi noutaa tiettynä ajankohtana. Valitse vaihtoehto.",
+				"INTERNAL_ERROR": "Tapahtui odottamaton virhe. Lataa sovellus uudelleen ja yritä uudelleen.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "Toimitustilauksen vähimmäismäärää ei saavutettu. Jatka lisäämällä tilaukseesi toinen arvo {{AMOUNT_MISSING}}.",
+				"paymentFailed": "Nabigo kang magbayad online gamit ang pamamaraang ito. Pakiulit muli.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "Vaadittuja tarjouksia ei ole käytetty",
+				"INVALID_CUSTOMER_VOUCHER": "Virheellinen asiakasseteli",
+				"slotUnavailable": "Valittu aika ei ole käytettävissä",
+				"slotUnavailableExplanationWithSuggestion": "Valittu aika on mennyt tai ei ole enää käytettävissä. Seuraava käytettävissä oleva aika:",
+				"socialLoginFailed": "Emme voineet muodostaa yhteyttä tiliisi",
+				"customerDetailsUpdateFailed": "Profiilidatan päivittäminen epäonnistui",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "Kauppa ei toimita tähän paikkaan",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "Emme löydä antamaasi osoitetta. Päivitä osoite ja yritä uudelleen tai ota yhteyttä kauppaan.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "Tilauksia ei voi lähettää tiettyyn aikaan ja päivämäärään. Valitse vaihtoehto.",
+				"MISSING_LOCATION_TAP_ID": "Napautustunnus on pakollinen",
+				"invalidPin": "Virheellinen asiakkaan pin-koodi"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "Tilauksesi toimitetaan"
+					},
+					"unknown": {
+						"location": "Tilauksesi toimitetaan"
+					}
+				},
+				"pickup": "Nouda tilaus",
+				"addressDelivery": "Anna tietosi, ole hyvä"
+			},
+			"yourInformationPlease": "Anna tietosi, ole hyvä",
+			"locationCode": "Taulukko",
+			"yourName": "Nimesi",
+			"email": "Sähköposti",
+			"phoneNumber": "Puhelinnumero",
+			"fullName": "Koko nimi",
+			"streetAddress": "Katuosoite",
+			"zip": "Postinumero",
+			"town": "Postitoimipaikka",
+			"minimumAmount": "Tilauksen määrän on oltava vähintään {{amount}} jotta se voidaan toimittaa",
+			"deliveryFee": "Toimituskulut",
+			"deliveryFeeApplicable": "Sovellettavissa allaoleviin tilauksiin {{amount}}",
+			"field": {
+				"generalValidation": "Kentän formaatti ei ole kelvollinen"
+			},
+			"acceptTerm": "Jatkamalla hyväksyt {{Käyttöehdot}} ja {{Tietosuojakäytäntö}}",
+			"termsAndPolicy": "Jatkamalla hyväksyt",
+			"acceptTerms": {
+				"and": "ja",
+				"after": "Egyetért"
+			},
+			"termsOfUse": "Käyttöehdot",
+			"privacyPolicy": "Tietosuojakäytäntö",
+			"yourTable": "Sinun pöytäsi",
+			"allowedCharacters": "Sallitut merkit",
+			"wishTimeHeading": "Milloin haluat vastaanottaa tilauksesi?",
+			"asSoonAsPossible": "Haluan vastaanottaa sen mahdollisimman pian",
+			"specifyWishTime": "Haluan määritellä milloin se tulee",
+			"specialNoteExample": "Lisää tilaukseesi erityismaininta",
+			"cardDisabledNote": "Ole hyvä ja jaa tilauksesi myymälän kanssa, kun olet valmis",
+			"cardHolderName": "kortinhaltijan nimi",
+			"cardNumber": "Korttisi numero",
+			"cvv": "CVV",
+			"itemsOutOfStock": "Jotkut tuotteet ovat loppu varastosta",
+			"floor": "Lattia",
+			"storeClosedAtOrderWishDate": "Kauppa on suljettu haluamallasi päivällä tai kellonaikana",
+			"offersNotAvailableAtOrderWishDate": "Jotkut tarjoukset eivät ole käytettävissä haluamallasi päivämäärällä tai kellonaikalla",
+			"updateOrder": "Päivitä tilaus",
+			"offers": {
+				"availableQuantity": "Tällä hetkellä saatavilla"
+			},
+			"voucherCode": "Anna kuponkikoodi",
+			"validVoucherCode": "Kuponkikoodi on kelvollinen",
+			"yourRoom": "Kwarto mo",
+			"yourLocation": "Iyong lokasyon",
+			"serveOption": {
+				"location": "Gusto kong matanggap ito sa aking lokasyon",
+				"room": "Nasa kwarto ako"
+			},
+			"social": {
+				"connect": "Yhdistä sosiaaliseen tiliin"
+			},
+			"remainingValidVoucher": "Kupongin jäljellä oleva saldo:",
+			"paymentsense": {
+				"declined": "Paymentsensen kautta suoritettu verkkomaksu on hylätty"
+			},
+			"saveCustomerDetailsForFuture": "Tallenna profiilisi tiedot tulevia tilauksia varten",
+			"customerDetailsUpdateSuccess": "Profiilitietosi on päivitetty",
+			"logout": "Kirjautua ulos",
+			"expiry": "Viimeinen voimassaolopäivä (KKVY)",
+			"enterPin": "Anna PIN-koodi"
+		},
+		"payment": {
+			"payOnlineNow": "Valitse maksaaksesi netissä nyt",
+			"chooseYourPaymentMethod": "Valitse maksutapasi",
+			"creditCard": "Luottokortti",
+			"paypal": "Paypal",
+			"submitOrder": "Lähetä tilauksesi",
+			"proceedToPayment": "Jatka maksuun",
+			"errorCouldNotConnect": "Emme pystyneet yhdistämään valittuun maksujärjestelmään. Palaa takaisin kassalle ja valitse toinen maksutapa tai yritä myöhemmin uudelleen.",
+			"enterCreditCardInfo": "Anna luottokorttisi tai debit-korttisi tiedot",
+			"yourOrderIsReady": "Tilauksesi on valmis",
+			"yourOrderIsExpected": "Tilaustasi odotetaan",
+			"errors": {
+				"valueNotValid": "Annettu arvo ei ole kelvollinen",
+				"zipNotAvailable": "Et voi tehdä online-tilausta tähän postinumeroon. Ota yhteyttä kauppaan saadaksesi lisätietoja",
+				"addressNotAvailable": "Osoitetta ei löydy. Valitse katuosoite ehdotuksista."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "Maksa verkossa nyt",
+			"digitalWallets": "Digitaaliset lompakot",
+			"creditCardSecure": "Suojatut luottokorttimaksut",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "Tilauksesi numero",
+			"orderStatus": "Tilauksesi status",
+			"notSubmitted": "Ei vielä lähetetty",
+			"sent": "Lähetetty",
+			"ready": "Valmis",
+			"rejected": "Hylätty",
+			"startNewOrder": "Aloita uusi tilaus",
+			"errors": {
+				"emailProperFormat": "Anna toimiva sähköpostiosoite"
+			},
+			"fiilEmailAddress": "Anna sähköpostiosoitteesi saadaksesi kopion tilauksestasi",
+			"failedEmail": "Sähköpostin lähetys epäonnistui",
+			"emailSent": "Sähköposti lähetetty",
+			"received": "Vastaanotettu",
+			"accepted": "Hyväksytty",
+			"mobileAppPromotion": "Seuraava kerta tilaus GonnaOrder-mobiilisovelluksen kautta"
+		},
+		"dialog": {
+			"ok": "OK",
+			"cancel": "Peruuta"
+		},
+		"store": {
+			"currently": {
+				"closed": "Kauppa on tällä hetkellä suljettu"
+			},
+			"time": {
+				"closed": "Kauppa on suljettu valittuna aikana"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "Kasvissyöjä",
+						"vegan": "Vegaani",
+						"celery": "Selleri",
+						"wheat": "Vehnä",
+						"crustaceans": "Äyriäiset",
+						"eggs": "Munat",
+						"fish": "Kalastaa",
+						"lupin": "Lupiini",
+						"milk": "Maito",
+						"molluscs": "Nilviäiset",
+						"mustard": "Sinappi",
+						"nuts": "Pähkinät",
+						"peanuts": "Maapähkinät",
+						"sesame": "Seesami",
+						"soya": "Soija",
+						"sulphurDioxide": "Rikkidioksidi",
+						"halal": "Halal",
+						"barley": "Ohra",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "Tämä verkkosivusto käyttää evästeitä käyttökokemuksesi parantamiseksi, mutta voit kieltäytyä siitä, jos haluat.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "Käytä"
+		},
+		"cookie": {
+			"accept": "Hyväksyä",
+			"reject": "Hylätä",
+			"readMore": "Lue lisää"
+		},
+		"connect": {
+			"social": {
+				"google": "Muodosta yhteys Googleen",
+				"facebook": "Muodosta yhteys Facebookiin"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "Ostoskorisi on tyhjä",
+				"proceed": "Edetä"
+			}
+		},
+		"main": {
+			"typeUrl": "Kirjoita URL-osoite tai kaupan nimi",
+			"invalidUrl": "URL-osoite on virheellinen",
+			"scanQRCode": "Skannaa QR-koodi",
+			"storeNotFound": "Kauppaa ei löytynyt",
+			"storeSaved": "Tallennustiedot tallennettu onnistuneesti!",
+			"navigateStoreConfirm": "Navigoitko kauppaan?"
+		},
+		"recents": {
+			"nothingFound": "Täältä ei löytynyt mitään"
+		}
+	}
+}

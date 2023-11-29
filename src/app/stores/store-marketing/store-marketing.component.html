@@ -1,0 +1,117 @@
+<div class="col-lg-12">
+    <div class="card list">
+        <form [formGroup]="socialMediaMarketingForm">
+            <div class="card-body pb-0" id="fbPixelContainer">
+                <h3 class="text-blue font-size-popup-title">{{'admin.store.setting.marketing.SocialMedia'|translate}}</h3>
+                <p>{{'admin.store.setting.marketing.SocialMediaPromote'|translate}}</p>
+                <div class="row mt-3">
+                    <div class="col-xl-3 col-lg-4 col-md-4"><img class="mr-3" src="assets/img/marketing/globe.svg" alt="" height="35px"> {{'admin.store.setting.marketing.Websitelink'|translate}}</div>
+                    <div class="col-xl-4 col-lg-8 col-md-8 mt-2 mt-lg-0">
+                        <input type="text" class="form-control url-field" 
+                             formControlName="STORE_WEBSITE_URL" (change)="onSocialSubmit('STORE_WEBSITE_URL')"
+                             [class.is-invalid]="isInvalidWebsiteUrl">
+                        <div class="invalid-feedback" *ngIf="isInvalidWebsiteUrl">
+                            {{'admin.store.setting.marketing.website.UrlError'|translate}}
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-xl-3 col-lg-4 col-md-4"><img class="mr-3" src="assets/img/marketing/facebook.svg" alt="" height="35px"> {{'admin.store.setting.marketing.Facebooklink'|translate}}</div>
+                    <div class="col-xl-4 col-lg-8 col-md-8 mt-2 mt-lg-0">
+                        <input type="text" class="form-control url-field" 
+                             formControlName="FACEBOOK_URL" (change)="onSocialSubmit('FACEBOOK_URL')"
+                             [class.is-invalid]="isInvalidFBUrl">
+                        <div class="invalid-feedback" *ngIf="isInvalidFBUrl">
+                            {{'admin.store.setting.marketing.fb.UrlError'|translate}}
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-xl-3 col-lg-4 col-md-4"><img class="mr-3" src="assets/img/marketing/instagram.png" alt="" height="35px"> {{'admin.store.setting.marketing.Instagramlink'|translate}}</div>
+                    <div class="col-xl-4 col-lg-8 col-md-8 mt-2 mt-lg-0">
+                        <input type="text" class="form-control url-field" 
+                             formControlName="INSTAGRAM_URL" (change)="onSocialSubmit('INSTAGRAM_URL')"
+                             [class.is-invalid]="isInvalidIGUrl">
+                        <div class="invalid-feedback" *ngIf="isInvalidIGUrl">
+                            {{'admin.store.setting.marketing.instagram.UrlError'|translate}}
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-xl-3 col-lg-4 col-md-4"><img class="mr-3" src="assets/img/marketing/Cardit.png" alt="" height="35px"> {{'admin.store.setting.marketing.Carditlink'|translate}}</div>
+                    <div class="col-xl-4 col-lg-8 col-md-8 mt-2 mt-lg-0">
+                        <input type="text" class="form-control url-field" 
+                             formControlName="CARDITIO_URL" (change)="onSocialSubmit('CARDITIO_URL')"
+                             [class.is-invalid]="isInvalidCardItUrl">
+                        <div class="invalid-feedback" *ngIf="isInvalidCardItUrl">
+                            {{'admin.store.setting.marketing.cardit.UrlError'|translate}}
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </form>
+        <form [formGroup]="marketingForm">
+            <div class="card-body py-0" id="fbPixelContainer">
+                <h3 class="text-blue font-size-popup-title mb-4">{{'admin.store.setting.marketing.SocialMediaText'|translate}}</h3>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-4">
+                        <img src="assets/img/marketing/facebook-logo.png" width="100%"
+                            style="max-width: 220px">
+                    </div>
+                    <div class="col-xl-9 col-lg-8 mt-2 mt-lg-0">
+                        <div class="row">
+                            <div class="col-md-5">
+                                {{'admin.store.setting.marketing.fb.label'|translate}}
+                            </div>
+                            <div class="col-md-5">
+                                <input type="text" class="form-control" maxlength="200" placeholder="1234567890"
+                                    formControlName="FACEBOOK_PIXEL_TRACKING_ID" (change)="onFBAdvSettingSubmit()"
+                                    [class.is-invalid]="isInvalidFBPixelCode">
+                                <div class="invalid-feedback" *ngIf="isInvalidFBPixelCode">
+                                    {{'admin.store.setting.marketing.fb.labelError'|translate}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-5">
+                                {{'admin.store.setting.marketing.fb.meta'|translate}}
+                            </div>
+                            <div class="col-md-5">
+                                <input type="text" class="form-control" maxlength="200" placeholder="XXXXXXXXXXXXXXX"
+                                    formControlName="FACEBOOK_DOMAIN_VERIFICATION_CODE" (change)="onFBAdvSettingSubmit()"
+                                    [class.is-invalid]="isInvalidFBPixelCode">
+                                <div class="invalid-feedback" *ngIf="isInvalidFBMetaContent">
+                                    {{'admin.store.setting.marketing.fb.labelError'|translate}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body py-0 mt-3" id="gaContainer">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-4 mt-n2">
+                        <img src="assets/img/marketing/Google_Analytics_Logo_2015.png" width="100%"
+                            style="max-width: 220px">
+                    </div>
+                    <div class="col-xl-9 col-lg-8">
+                        <div class="row">
+                            <div class="col-md-5">
+                                {{'admin.store.setting.marketing.GA.label'|translate}}
+                            </div>
+                            <div class="col-md-5">
+                                <input type="text" class="form-control" maxlength="200" placeholder="UA-XXXXX-Y"
+                                    formControlName="GOOGLE_ANALYTICS_TRACKING_CODE" (change)="onSocialSubmit('GOOGLE_ANALYTICS_TRACKING_CODE')"
+                                    [class.is-invalid]="isInvalidGACode">
+                                <div class="invalid-feedback" *ngIf="isInvalidGACode">
+                                    {{'admin.store.setting.marketing.google.labelError'|translate}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

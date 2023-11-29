@@ -1,0 +1,56 @@
+<div class="row mt-4">
+    <div class="col-md-3 col-md-push-9">
+        <img class="mx-auto d-block" src="assets/img/Character_4.png" height="320px">
+    </div>
+    <div class="col-md-9 col-md-pull-3">
+        <div class="storeTitle">{{'admin.store.thanksForstore' | translate}} <strong>{{storeName}}</strong></div> <br />
+        <div class="formHeader mt-1">
+            <div>
+                <span><i class="nav-icon fas fa-atlas"></i></span>
+                <strong class="p-3 cursor-pointer ml-2 h5"
+                    [routerLink]="['/manager/stores/'+storeId+'/catalog']"><u>{{'admin.store.catalogOverview' | translate}}</u></strong>
+            </div>
+            <div class="ml-5">
+                <blockquote class="blockquote">
+                    <p >{{'admin.store.uploadyourmenu' | translate}}</p>
+                </blockquote>
+            </div>
+         
+        </div> 
+        <div class="formHeader mt-4">
+            <div>
+                <span><i class="nav-icon fas fa-cogs"></i></span>
+                <strong class="p-3 ml-n1 cursor-pointer h5"
+                    [routerLink]="['/manager/stores/'+storeId+'/settings']"><u>{{'admin.store.settings' | translate}}</u></strong>
+            </div>
+            <div class="ml-5">
+                <blockquote class="blockquote">
+                    <p >{{'admin.store.configureyourstore' | translate}}</p>
+                </blockquote>
+            </div>
+        </div>
+        <div class="formHeader mt-4">
+            <div>
+                <span><i class="nav-icon fas fa-share-alt"></i></span>
+                <strong class="p-3 cursor-pointer ml-2 h5"
+                    [routerLink]="['/manager/stores/'+storeId+'/share']"><u>{{'admin.store.share.sharePreview' | translate}}</u></strong>
+            </div>
+            <div class="ml-5">
+                <blockquote class="blockquote">
+                    <p >{{'admin.store.seeyourstore' | translate}}</p>
+                </blockquote>
+            </div>
+        </div>
+        <div class="formHeader mt-4">
+            <div>
+                <span><i class="far fa-question-circle"></i></span>
+                <strong class="p-3 cursor-pointer ml-1 h5" (click)="openNewTab('https://www.gonnaorder.com/help/')"><u>{{'admin.global.contactus.helpCenter' | translate}}</u></strong>
+            </div>
+            <div class="ml-5">
+                <blockquote class="blockquote">
+                    <p >{{'admin.store.findinstructions' | translate}}</p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</div>

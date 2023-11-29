@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "Powered by",
+			"thankYou": "Paldies",
+			"discount": "Atlaide",
+			"viewOrder": "Skatīt pasūtījumu",
+			"errorH2": "Notikusi kļūda",
+			"errorUnexpected": "Notikusi kļūda",
+			"errorExpected": "Notikusi kļūda",
+			"errorMustSelectOne": "Lūdzu, izvēlieties vienu variantu",
+			"errorTrialExceeded": "Funkcionalitāte nav pieejama. Izmēģinājuma versijas pasūtījumu skaits ir pārsniegts.",
+			"emptyCart": "Jūsu pasūtījums ir tukšs",
+			"optional": "nav obligāti",
+			"cookies": "Šī vietne izmanto sīkdatnes. Turpinot izmantot šo vietni, Jūs piekrītat sīkdatņu izmantošanai",
+			"more": "vairāk",
+			"less": "mazāk",
+			"chooseFrom": "Izvēlēties no",
+			"standard": "Standarta",
+			"days": {
+				"mon": "Pirmdiena",
+				"tue": "Otrdiena",
+				"wed": "Trešdiena",
+				"thu": "Ceturtdiena",
+				"fri": "Piektdiena",
+				"sat": "Sestdiena",
+				"sun": "Svētdiena"
+			},
+			"opentimelist": "Darba laiks",
+			"newVersionAvailable": "Jūs izmantojat vecāku lietojumprogrammas versiju. Pārlādējiet lietojumprogrammu, lai saņemtu jaunāko atjauninājumu",
+			"reloadApplication": "Pārlādēt lietojumprogrammu",
+			"poweredByGonnaOrder": "Darbina Gonnaorder",
+			"recents": "Nesen",
+			"information": "Informācija",
+			"yes": "Jā",
+			"no": "Nē",
+			"error": "Kļūda",
+			"errorQRScanner": "Ar QR skeneri radās kļūda!",
+			"confirm": "Apstiprināt"
+		},
+		"select": {
+			"selectAtLeast": "Jums jāizvēlas vismaz {{x}}",
+			"selectAtmost": "Lūdzu, izvēlieties ne vairāk kā {{x}} variantus",
+			"selectAtleastAtMost": "Lūdzu, izvēlieties starp {{x}} un {{y}} variantiem",
+			"selectBetween": "Jums ir jāizvēlas starp vērtībām {{childCategory.min}} un {{childCategory.max}}."
+		},
+		"load": {
+			"loadingMessage": "Lūdzu, nedaudz uzgaidiet"
+		},
+		"itemDetails": {
+			"removeFromOrder": "Izņemt preci",
+			"addToOrder": "Pievienot pasūtījumam",
+			"updateOrder": "Atjaunināt pasūtījumu"
+		},
+		"checkout": {
+			"yourOrder": "Jūsu pasūtījums",
+			"total": "Kopā",
+			"specialNote": "Pievienot īpašu atzīmi pasūtījumam",
+			"howToReceiveYourOrder": "Kā vēlaties saņemt pasūtījumu?",
+			"option": {
+				"pickup": "Vēlos izņemt pasūtījumu patstāvīgi",
+				"addressDelivery": "Lūdzu piegādāt pasūtījumu uz manu adresi",
+				"serve": {
+					"location": "Sēžu pie galdiņa"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "Mums neizdevās saglabāt Jūsu pasūtījumu",
+				"fieldRequired": "Šis lauks ir jāaizpilda obligāti",
+				"selectFutureTime": "Lūdzu, atlasiet laiku nākotnē",
+				"orderSubmissionFailed": "Pasūtījumu nevar iesniegt",
+				"ORDER_LOCATION_NOT_PRESENT": "Nav norādīts tabulas numurs vai atrašanās vietas nosaukums",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "Trūkst nepieciešamās informācijas par klientu",
+				"ORDER_WISH_TIME_INVALID": "Vēlamais vēlmju laiks ir pagātnē",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "Trūkst pasūtījuma piegādes metodes",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "Piegāde adresē netiek atbalstīta",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "Pasūtījuma izsniegšana netiek atbalstīta",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "Pasūtījuma saņemšana netiek atbalstīta",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "Piegāde ar norādīto pasta indeksu netiek atbalstīta",
+				"OPENING_TIME_SCHEDULE_ERROR": "Veikals ir slēgts izvēlētajā pasūtījuma vēlmju laikā",
+				"PROMOTION_NOT_ELIGIBLE": "Akcija ir atlasīta, taču tā nav piemērota",
+				"offersUnavailableExplanation": "Tālāk norādītie vienumi jūsu norādītajā datumā un laikā nav pieejami. Lūdzu, noklikšķiniet uz atjaunināt pasūtījumu, lai tos noņemtu no pasūtījuma",
+				"offersOutOfStockExplanation": "Nav pieejams pietiekami daudz vienumu",
+				"invalidVoucherCode": "Kupona kods nav derīgs",
+				"INVALID_INPUT": "Apstrādājot sniegto informāciju, radās kļūda.",
+				"slotUnavailableExplanation": "Pieprasītā laika josla nav pieejama. Lūdzu, atlasiet citu laika periodu vai citu piegādes veidu.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "Šajā veikalā nav iespējams pieprasīt pasūtījumu tai pašai dienai.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "Pieprasīt pasūtījumu tai pašai dienai jūsu reģionā nav iespējams.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "Tajā pašā dienā nav iespējams pieprasīt pasūtījumu šādām precēm:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "Pieprasītajā laikā un dienā nav iespējams piegādāt jūsu pasta indeksu.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "Pasūtījumus noteiktā laikā un datumā piegādāt nav iespējams. Lūdzu, izvēlieties alternatīvu.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "Konkrētajā laikā un datumā nav iespējams saņemt pasūtījumus. Lūdzu, izvēlieties alternatīvu.",
+				"INTERNAL_ERROR": "Radās negaidīta kļūda. Lūdzu, atkārtoti ielādējiet lietojumprogrammu, lai mēģinātu vēlreiz.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "Minimālā piegādes pasūtījuma summa nav izpildīta. Lai turpinātu, pievienojiet pasūtījumam vēl vienu {{AMOUNT_MISSING}} vērtību.",
+				"paymentFailed": "Jums neizdevās maksāt tiešsaistē, izmantojot šo maksājuma veidu. Lūdzu mēģiniet vēlreiz.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "Nepieciešamās akcijas nav piemērotas",
+				"INVALID_CUSTOMER_VOUCHER": "Nederīgs klienta kupons",
+				"slotUnavailable": "Atlasītais laiks nav pieejams",
+				"slotUnavailableExplanationWithSuggestion": "Atlasītais laiks ir pagātnē vai vairs nav pieejams. Nākamais pieejamais laiks:",
+				"socialLoginFailed": "Mēs nevarējām izveidot savienojumu ar jūsu kontu",
+				"customerDetailsUpdateFailed": "Neizdevās atjaunināt profila datus",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "Veikals nenogādā uz šo vietu",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "Mēs nevaram atrast jūsu norādīto adresi. Lūdzu, atjauniniet adresi un mēģiniet vēlreiz vai sazinieties ar veikalu.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "Pasūtījumus noteiktā laikā un datumā nav iespējams iesniegt. Lūdzu, izvēlieties alternatīvu.",
+				"MISSING_LOCATION_TAP_ID": "Pieskaršanās ID ir obligāts",
+				"invalidPin": "Nederīgs klienta PIN kods"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "Pasūtījums tiks pasniegts"
+					},
+					"unknown": {
+						"location": "Pasūtījums tiks pasniegts"
+					}
+				},
+				"pickup": "Pasūtījuma izņemšana",
+				"addressDelivery": "Lūdzu, ievadiet Jūsu informāciju"
+			},
+			"yourInformationPlease": "Lūdzu, ievadiet Jūsu informāciju",
+			"locationCode": "Galdiņš",
+			"yourName": "Jūsu vārds",
+			"email": "E-pasts",
+			"phoneNumber": "Tālruņa numurs",
+			"fullName": "Pilns vārds un uzvārds",
+			"streetAddress": "Adrese",
+			"zip": "Pasta indekss",
+			"town": "Pilsēta",
+			"minimumAmount": "Minimālā pasūtījuma summa piegādei ir {{amount}}",
+			"deliveryFee": "Piegādes maksa",
+			"deliveryFeeApplicable": "Pasūtījumiem zem {{amount}}",
+			"field": {
+				"generalValidation": "Šajā laukā ievadītā informācija nav derīga"
+			},
+			"acceptTerm": "Turpinot jūs piekrītat {{Lietošanas noteikumi}} un {{Konfidencialitātes politika}}",
+			"termsAndPolicy": "Turpinot Jūs piekrītat",
+			"acceptTerms": {
+				"and": "un",
+				"after": ""
+			},
+			"termsOfUse": "Lietošanas noteikumi",
+			"privacyPolicy": "Konfidencialitātes politika",
+			"yourTable": "Jūsu galdiņš",
+			"allowedCharacters": "Pieļaujamie simboli",
+			"wishTimeHeading": "Kad vēlaties saņemt pasūtījumu?",
+			"asSoonAsPossible": "Es gribu to saņemt pēc iespējas ātrāk",
+			"specifyWishTime": "Es vēlos norādīt, kad to saņemt",
+			"specialNoteExample": "Pievienot īpašu atzīmi pasūtījumam",
+			"cardDisabledNote": "Lūdzu, dalieties ar savu pasūtījumu veikalā, kad esat gatavs",
+			"cardHolderName": "Kartes īpašnieka vārds",
+			"cardNumber": "Jūsu kartes numurs",
+			"cvv": "CVV",
+			"itemsOutOfStock": "Dažas preces nav noliktavā",
+			"floor": "Stāvs",
+			"storeClosedAtOrderWishDate": "Veikals ir slēgts vēlamajā vēlmju datumā vai laikā",
+			"offersNotAvailableAtOrderWishDate": "Daži piedāvājumi nav pieejami vēlamajā vēlmju datumā vai laikā",
+			"updateOrder": "Atjaunināt pasūtījumu",
+			"offers": {
+				"availableQuantity": "Pašlaik pieejams"
+			},
+			"voucherCode": "Ievadiet kupona kodu",
+			"validVoucherCode": "Vaučera kods ir derīgs",
+			"yourRoom": "Tava istaba",
+			"yourLocation": "Tava atrašanās vieta",
+			"serveOption": {
+				"location": "Es vēlos to saņemt savā atrašanās vietā",
+				"room": "Es esmu savā istabā"
+			},
+			"social": {
+				"connect": "Sazinieties ar sociālo kontu"
+			},
+			"remainingValidVoucher": "Atlikušais līdzsvars uz vaučera:",
+			"paymentsense": {
+				"declined": "Tiešsaistes maksājums, izmantojot Paymentsense, ir noraidīts"
+			},
+			"saveCustomerDetailsForFuture": "Saglabājiet sava profila datus nākotnes pasūtījumiem",
+			"customerDetailsUpdateSuccess": "Jūsu profila dati ir atjaunināti",
+			"logout": "Izlogoties",
+			"expiry": "Derīguma termiņš (MMGG)",
+			"enterPin": "Ievadiet PIN numuru"
+		},
+		"payment": {
+			"payOnlineNow": "Samaksāt internetā tūlīt",
+			"chooseYourPaymentMethod": "Lūdzu, izvēlieties maksājuma veidu",
+			"creditCard": "Kredītkarte",
+			"paypal": "PayPal",
+			"submitOrder": "Noformēt pasūtījumu",
+			"proceedToPayment": "Veikt maksājumu",
+			"errorCouldNotConnect": "Mums neizdevās savienoties ar Jūsu izvēlēto maksājumu operatoru. Lūdzu, izvēlieties citu maksājuma veidu vai mēģiniet vēlreiz vēlāk.",
+			"enterCreditCardInfo": "Lūdzu, ievadiet Jūsu kredītkartes vai debetkartes informāciju",
+			"yourOrderIsReady": "Jūsu pasūtījums ir gatavs",
+			"yourOrderIsExpected": "Pasūtījums tiek gaidīts",
+			"errors": {
+				"valueNotValid": "Ievadītā vērtība nav derīga",
+				"zipNotAvailable": "Jūs nevarat veikt tiešsaistes piegādes pasūtījumu šim pasta indeksam. Lūdzu, sazinieties ar veikalu, lai iegūtu vairāk informācijas",
+				"addressNotAvailable": "Adresi nevar atrast. Lūdzu, izvēlieties ieteikumu no adreses."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "Maksājiet tiešsaistē tūlīt",
+			"digitalWallets": "Digitālie maki",
+			"creditCardSecure": "Droši kredītkaršu maksājumi",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "Jūsu pasūtījuma numurs",
+			"orderStatus": "Pasūtījuma statuss",
+			"notSubmitted": "Pasūtījums vēl nav iesniegts",
+			"sent": "Nosūtīts",
+			"ready": "Gatavs",
+			"rejected": "Noraidīts",
+			"startNewOrder": "Noformēt jaunu pasūtījumu",
+			"errors": {
+				"emailProperFormat": "Lūdzu, ievadiet derīgu e-pasta adresi"
+			},
+			"fiilEmailAddress": "Lūdzu, ievadiet savu e-pasta adresi, lai saņemtu pasūtījuma kopiju",
+			"failedEmail": "Neizdevās nosūtīt e-pastu",
+			"emailSent": "E-pasts nosūtīts",
+			"received": "Saņemts",
+			"accepted": "Pieņemts",
+			"mobileAppPromotion": "Nākamreiz pasūtiet, izmantojot mobilo lietotni GonnaOrder"
+		},
+		"dialog": {
+			"ok": "OK",
+			"cancel": "Atcelt"
+		},
+		"store": {
+			"currently": {
+				"closed": "Veikals šobrīd ir slēgts"
+			},
+			"time": {
+				"closed": "Veikals ir slēgts izvēlētajā laikā"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "Veģetārietis",
+						"vegan": "Vegāns",
+						"celery": "Selerijas",
+						"wheat": "Kvieši",
+						"crustaceans": "Vēžveidīgie",
+						"eggs": "Olas",
+						"fish": "Zivis",
+						"lupin": "Lupīns",
+						"milk": "Piens",
+						"molluscs": "Mīkstmieši",
+						"mustard": "Sinepes",
+						"nuts": "Rieksti",
+						"peanuts": "Zemesrieksti",
+						"sesame": "Sezams",
+						"soya": "Soja",
+						"sulphurDioxide": "Sēra dioksīds",
+						"halal": "Halal",
+						"barley": "Mieži",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "Šajā vietnē tiek izmantotas sīkdatnes, lai uzlabotu jūsu pieredzi, taču, ja vēlaties, varat atteikties.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "Piesakies"
+		},
+		"cookie": {
+			"accept": "Pieņemt",
+			"reject": "Noraidīt",
+			"readMore": "Lasīt vairāk"
+		},
+		"connect": {
+			"social": {
+				"google": "Sazinieties ar Google",
+				"facebook": "Sazinieties ar Facebook"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "Jūsu grozs ir tukšs",
+				"proceed": "Turpināt"
+			}
+		},
+		"main": {
+			"typeUrl": "Ierakstiet URL vai veikala nosaukumu",
+			"invalidUrl": "URL nav derīgs",
+			"scanQRCode": "Skenējiet QR kodu",
+			"storeNotFound": "Veikals netika atrasts",
+			"storeSaved": "Saglabātā informācija ir veiksmīgi saglabāta!",
+			"navigateStoreConfirm": "Vai doties uz veikalu?"
+		},
+		"recents": {
+			"nothingFound": "Šeit nekas nav atrasts"
+		}
+	}
+}

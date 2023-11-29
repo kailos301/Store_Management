@@ -1,0 +1,221 @@
+<div class="animated fadeIn" id="zone">
+  <div class="loading-screen d-flex justify-content-center align-items-center w-100 v-70"
+    *ngIf="zoneId > 0 && zoneStatus !== 'LOADED'">
+    <div class="d-flex flex-column text-center">
+      <div class="lds-ripple mx-auto">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12" *ngIf="zoneStatus=== 'LOADED'  || zoneStatus=== 'INITIAL'">
+    <div class="card list">
+      <div class="col-lg-12 mb-4 d-flex align-items-center justify-content-between p-0">
+        <a title="{{'admin.store.backtoZones'|translate}}" class="btn back-button btn-primary"
+          [routerLink]="['/manager/stores/'+storeid+'/settings/address']">
+          <i class="fas fa-arrow-left mr-2"></i>
+          <span class="d-none d-md-inline-block d-lg-inline-block d-xl-inline-block ml-1">
+            {{'admin.store.backtoZones'|translate}}
+          </span>
+        </a>
+      </div>
+
+      <div class="card-header">
+        <span *ngIf="zoneId > 0 && getControl('minRadius') && getControl('radiusUnit') && (setupZone == 'RADIUS')">
+          {{'admin.store.zoneLabel'|translate}} {{getControl('minRadius').value}}
+          {{getControl('radiusUnit').value}} - {{getControl('maxRadius').value}}
+          {{getControl('radiusUnit').value}}
+        </span>
+        <span *ngIf="zoneId > 0 &&  setupZone == 'POSTCODE'">
+          {{'admin.store.zoneLabel'|translate}} {{getControl('name').value}}
+        </span>
+        <span *ngIf="zoneId > 0 &&  setupZone == 'POLYGON'">
+          {{'admin.store.zoneLabel'|translate}} {{getControl('name').value}}
+        </span>
+        <span *ngIf="zoneId == 0">{{'admin.store.addressaddnewZones'|translate}}</span>
+        <app-help-icon [helpPageName]="settingsHelpPage"></app-help-icon>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="zoneForm">
+          <div class="form-group row"
+            *ngIf="getControl('type').value=='POSTCODE' || getControl('type').value=='POLYGON'">
+            <label class="col-xl-3 col-lg-3 col-md-12 col-sm-12 " for="name">
+              {{'admin.store.zoneName'|translate}}
+            </label>
+            <div class="col-xl-7 col-lg-9 col-md-12 col-sm-12">
+              <input type="text" class="form-control"
+                [class.is-invalid]="getControl('name').invalid && (getControl('name').dirty || getControl('name').touched)"
+                [attr.placeholder]="'admin.store.zoneName' | translate" autocomplete="name" formControlName="name"
+                id="name" maxlength="50" />
+              <div class="invalid-feedback" *ngIf="getControl('name').errors">
+                <span *ngIf="getControl('name').errors.required">{{'admin.global.field.required'|translate}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row" *ngIf="getControl('type').value=='POLYGON'">
+            <div class="col-offset-2 col-xl-10 col-lg-9 col-md-12 col-sm-12">
+              <div #polygon id="map" style="width: 1330px; height: 300px"></div>
+            </div>
+          </div>
+          <div class="form-group row" *ngIf="getControl('type').value=='RADIUS' && getControl('name').value">
+            <label class="col-xl-3 col-lg-3 col-md-12 col-sm-12 "
+              for="name">{{'admin.store.zoneName'|translate}}</label>
+            <div class="col-xl-7 col-lg-9 col-md-12 col-sm-12">
+              <span>
+                {{getControl('minRadius').value}}
+                {{getControl('radiusUnit').value}} - {{getControl('maxRadius').value}}
+                {{getControl('radiusUnit').value}}
+              </span>
+              <div class="invalid-feedback" *ngIf="getControl('name').errors">
+                <span *ngIf="getControl('name').errors.required">{{'admin.global.field.required'|translate}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row" *ngIf="getControl('type').value=='RADIUS'">
+            <label class="col-xl-3 col-lg-3 col-md-12 col-sm-12 required"
+              for="name">{{'admin.store.minRadius'|translate}}</label>
+            <div class="col-xl-7 col-lg-9 col-md-12 col-sm-12">
+              <input type="text" maxlength="4" class="form-control"
+                [class.is-invalid]="(getControl('minRadius').invalid && (getControl('minRadius').dirty)) || this.invalidMinRadius"
+                [attr.placeholder]="'admin.store.minRadius' | translate" autocomplete="minRadius"
+                formControlName="minRadius" id="minRadius" />
+              <div class="invalid-feedback" *ngIf="getControl('minRadius').errors">
+                <span *ngIf="getControl('minRadius').errors.required">{{'admin.global.field.required'|translate}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row" *ngIf="getControl('type').value=='RADIUS'">
+            <label class="col-xl-3 col-lg-3 col-md-12 col-sm-12 required"
+              for="name">{{'admin.store.maxRadius'|translate}}</label>
+            <div class="col-xl-7 col-lg-9 col-md-12 col-sm-12">
+              <input type="text" maxlength="4" class="form-control"
+                [class.is-invalid]="(getControl('maxRadius').invalid && (getControl('maxRadius').dirty || getControl('minRadius').touched)) || this.invalidMaxRadius"
+                [attr.placeholder]="'admin.store.maxRadius' | translate" autocomplete="maxRadius"
+                formControlName="maxRadius" id="maxRadius" />
+              <div class="invalid-feedback" *ngIf="getControl('maxRadius').errors">
+                <span *ngIf="getControl('maxRadius').errors.required">{{'admin.global.field.required'|translate}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row" *ngIf="getControl('type').value=='RADIUS'">
+            <label class="col-xl-3 col-lg-3 col-md-12 col-sm-12" for="unit">{{'admin.store.unit'|translate}}</label>
+            <div class="col-md-7">
+              <select class="form-control" formControlName="radiusUnit">
+                <option *ngFor="let unit of units" [ngValue]="unit">{{unit}}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group row" *ngIf="getControl('type').value=='POSTCODE'">
+            <label class="col-xl-3 col-lg-3 col-md-12 col-sm-12"
+              for="postCodes">{{'admin.store.postCodes'|translate}}</label>
+            <div class="col-xl-7 col-lg-9 col-md-12 col-sm-12">
+              <textarea class="form-control" [attr.placeholder]="'admin.store.postCodemsg' | translate"
+                [class.is-invalid]="getControl('postcodes').invalid && (getControl('postcodes').dirty || getControl('postcodes').touched)"
+                autocomplete="postcodes" formControlName="postcodes" id="postcodes" rows="2">
+                </textarea>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-md-3">
+              <label class="form-header">{{'admin.store.minDeliveryAmount'|translate}}</label>
+            </div>
+
+            <div class="col-md-7">
+              <app-price-input [priceFormControl]="getControl('orderMinAmountDelivery')">
+              </app-price-input>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-md-3">
+              <label class="form-header"> {{'admin.store.deliveryFee'|translate}}</label>
+            </div>
+            <div class="col-md-7">
+              <app-price-input [priceFormControl]="getControl('orderFeeDelivery')"></app-price-input>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-md-3">
+              <label class="form-header"> {{'admin.store.orderAmount'|translate}}</label>
+            </div>
+            <div class="col-md-7">
+              <app-price-input [priceFormControl]="getControl('orderAmountFreeDelivery')">
+              </app-price-input>
+            </div>
+          </div>
+          <div class="form-group row" *ngIf="hubriseConnected">
+            <label class="col-md-3 form-header">{{'admin.store.deliveryFeeExternalId'|translate}}</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control"
+                placeholder="{{'admin.store.deliveryFeeExternalId'|translate}}" autocomplete="off"
+                formControlName="deliveryFeeExternalId" maxlength="100" />
+            </div>
+            <div class="invalid-feedback" *ngIf="getControl('deliveryFeeExternalId').errors">
+                <span
+                *ngIf="getControl('deliveryFeeExternalId').errors.maxlength">{{'admin.global.field.maxLength'|translate:
+                {maxLength: "100"} }}</span>
+            </div>
+          </div>
+          <div class="form-group row" *ngIf="zoneId > 0 && getControl('type').value=='POSTCODE'">
+            <label class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+              {{'admin.store.setting.samedayordering'|translate}}</label>
+            <div class="col-xl-7 col-lg-9 col-md-12 col-sm-12">
+              <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+              <label class="switch" for="DISABLE_SAME_DAY_ORDERING">
+                <input type="checkbox" id="DISABLE_SAME_DAY_ORDERING"
+                  [checked]="zone && zone.settings && !zone.settings.DISABLE_SAME_DAY_ORDERING"
+                  (change)="toggleSetting($event)" />
+                &nbsp;<span class="slider round"></span>
+              </label>&nbsp;
+              <label>{{'admin.store.enabled'|translate}}</label>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+              {{'admin.global.availableTimes'|translate}}
+            </label>
+            <div class="col-xl-7 col-lg-9 col-md-12 col-sm-12">
+              <select 
+                class="form-control" 
+                onchange="this.dataset.chosen = this.value"
+                formControlName="scheduleId" 
+                id="availability"
+                [ngClass]="{'default-option' : scheduleId == 0}"
+                (change) = "selectScheduleIdHandler($event)"
+              >
+                <option value="">{{'admin.global.availableTimes'|translate}}</option>
+                <option *ngFor="let item of schedules$|async" [value]="item.id">
+                  {{ item.name }}
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group row mt-3 mb-0">
+            <div class="col-md-12">
+              <div>
+                <button class="btn btn-primary" type="button"
+                  [disabled]="zoneForm.invalid || invalidMinRadius || invalidMaxRadius" (click)="onSubmit()">
+                  <i class="fas fa-save mr-2 pr-1"></i>
+                  {{'admin.global.save'|translate}}
+                </button>
+                <a class="actionLink ml-2 p-0" (click)="goBack($event)">
+                  {{'admin.global.cancel'|translate}}
+                </a>
+                <button class="btn btn-danger float-right mt-1" *ngIf="zoneId>0" (click)="deleteZone()">
+                  <i class="fas fa-trash mr-2 pr-1 text-white"></i>
+                  {{'admin.global.delete'|translate}}
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

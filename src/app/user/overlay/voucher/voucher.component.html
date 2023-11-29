@@ -1,0 +1,99 @@
+<h1 mat-dialog-title class="text-blue col-lg-12">{{mode == 'CREATE' ? ('admin.global.create' | translate) : ('admin.global.update' | translate)}} {{'admin.store.voucher.text' | translate}}</h1>
+<div mat-dialog-content>
+  <form [formGroup]="voucherForm">
+
+    <div class="row" *ngIf="mode == 'CREATE'">
+      <div class="col-md-12">
+        <div class="form-group col-md-12 p-0">
+          <label for="total" class="col-sm-12">{{'admin.store.voucher.numberOfVoucher' | translate}}: {{affiliate.remainingVouchers}}</label>
+          <div class="input-group mb-4 col-sm-12">
+            <input type="number" class="form-control" [class.is-invalid]="getControl('total').invalid && (getControl('total').dirty || getControl('total').touched)"
+                   placeholder="{{'admin.store.voucher.numberOfVouchers'|translate}}" autocomplete="total" formControlName="total" id="total" [max]="affiliate.remainingVouchers" (keyup)="handleTotal($event)"
+                    (keydown)="doNotAllowExponential($event)"/>
+            <div class="invalid-feedback" *ngIf="getControl('total').errors">
+              <span *ngIf="getControl('total').errors.required">{{'admin.global.field.required' | translate}}</span>
+              <span *ngIf="getControl('total').errors.pattern">{{'admin.store.voucher.numberOfVoucherPattern' | translate}}</span>
+              <span *ngIf="getControl('total').errors.min">{{'admin.store.voucher.minNumberOfVoucherPattern' | translate}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row m-0" *ngIf="mode == 'UPDATE'">
+      <div class="col-md-12">
+        <div class="form-group col-md-12 p-0">
+          <label class="col-sm-3 p-0">{{'admin.global.voucher.label' | translate}}</label>
+          <label class="col-sm-9 p-0" id="lblVouchercode" (dblclick)="selectCode()">{{voucher.code}}<i class="far fa-copy copyUrlIcon ml-2 cursor-pointer" title="Copy" (click)="copyVoucherCode()"></i></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row m-0 mt-3">
+      <div class="col-md-3 m-0 mb-1">
+        <label for="discount">{{'admin.global.discount' | translate}} : {{voucher.discount}} % <span *ngIf="discountValue">({{ (discountValue | localizedCurrency: subscriptionCurrency:userLocale) | async }})</span></label>
+      </div>
+      <div class="col-md-6 m-0 mb-1 p-0">
+        <div class="input-group pull-left col-sm-12 m-0 p-0">
+          <mat-slider thumbLabel step="1" [disabled]="isSliderDisabled" [min]="affiliate.minVoucherDiscount"
+           [max]="affiliate.maxVoucherDiscount" (change)="updateDiscount($event)" id="discount"
+           formControlName="discount" [value]="voucher.discount"></mat-slider>
+        </div>
+      </div>
+      <div class="col-md-3 m-0 mb-1">
+        <label for="discount">{{'admin.store.voucher.commission' | translate}} : {{voucher.commission}} % <span *ngIf="commissionValue">({{ (commissionValue | localizedCurrency: subscriptionCurrency:userLocale) | async }})</span></label>
+      </div>
+    </div>
+
+    <div class="row m-0">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <label for="discount" class="col-sm-3  p-0">{{'admin.store.voucher.defaultVoucherValue' | translate}}</label>
+          <label class="col-sm-9  p-0">{{affiliate.defaultVoucherValue}} % ({{ (voucherValue | localizedCurrency: subscriptionCurrency:userLocale) | async}})</label> 
+        </div>
+      </div>
+    </div>
+
+    <div class="row m-0" *ngIf="mode == 'UPDATE'">
+      <div class="col-md-12">
+        <div class="form-group col-md-12 p-0">
+          <label class="col-sm-3 p-0">{{'admin.store.status' | translate}}</label>
+          <label class="col-sm-9 p-0">{{ voucher.voucherAssignmentStatus ? voucher.voucherAssignmentStatus : 'Not Used' }}</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label for="comment" class="col-sm-12">{{'admin.global.comment' | translate}}</label>
+          <div class="input-group mb-4 col-sm-12">
+            <input type="text" class="form-control" [class.is-invalid]="getControl('comment').invalid && (getControl('comment').dirty || getControl('comment').touched)"
+                   placeholder="{{'admin.global.comment'|translate}}" autocomplete="comment" formControlName="comment" id="comment" maxlength="500"/>
+            <div class="invalid-feedback" *ngIf="getControl('comment').errors">
+              <span *ngIf="getControl('comment').errors.required">{{'admin.global.field.required' | translate}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row m-0" *ngIf="mode == 'UPDATE'">
+      <div class="col-md-12">
+        <div class="form-group col-md-12 p-0">
+          <label class="col-sm-3 p-0">{{'admin.store.voucher.endDate' | translate}}</label>
+          <label class="col-sm-9 p-0">{{ voucher.endDate | date:'dd MMM yyyy'}}</label>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <div class="col-lg-12 col-md-12 col-sm-12">
+    <div class="rightActions">
+      <a (click)="onNoClick()" type="button">{{'admin.global.cancel' | translate}}</a>
+      <button (click)="onSubmit()" class="btn btn-primary submit-btn" [mat-dialog-close]="voucherForm"
+              [disabled]="voucherForm.invalid">{{mode == 'CREATE' ? ('admin.global.save' | translate) : ('admin.global.update' | translate)}}</button>
+    </div>
+  </div>
+</div>

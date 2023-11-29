@@ -1,0 +1,1183 @@
+{
+	"admin": {
+		"global": {
+			"delete": "Sil",
+			"cancel": "İptal etmek",
+			"ok": "Tamam",
+			"reject": "Reddetmek",
+			"create": "Oluşturmak",
+			"yes": "Evet",
+			"print": "Yazdır",
+			"save": "Kayıt etmek",
+			"no": "Hayır",
+			"close": "Kapat",
+			"name": "Ad",
+			"firstName": "İsim",
+			"language": "Dil",
+			"comment": "Yorum Yap",
+			"email": "E-posta",
+			"login": "Oturum aç",
+			"noData": "Veri bulunamadı",
+			"field": {
+				"required": "Bu alan gereklidir",
+				"minLength": "Bu alan en az {{minLength}} karakter olmalıdır",
+				"maxLength": "Bu alan {{maxLength}} karakterden fazla olamaz",
+				"maxNumber": "Bu alan en fazla {{maxNumber}} olabilir",
+				"requiredValue": "İndirim değerleri 0'dan büyük olmalıdır.",
+				"downloadFlyer": "Broşürü İndir"
+			},
+			"description": "Açıklama",
+			"discount": "İndirim",
+			"country": "ülke",
+			"timezone": "Saat dilimi",
+			"pleaseSelect": "Lütfen seçin ...",
+			"address": "Adres",
+			"addressLine1": "Adres satırı 1",
+			"addressLine2": "Adres Satırı 2",
+			"price": "Fiyat",
+			"postCode": "Posta Kodu",
+			"postCodePattern": "Geçersiz - Yalnızca alfasayısal kullanın",
+			"change": "Değişiklik",
+			"update": "Güncelleme",
+			"password": "Parola",
+			"sentenceText": "Ve",
+			"anyOption": "İstenilen sayıda seçenek seçilebilir",
+			"exactOneOption": "Tam olarak bir seçenek seçilmelidir",
+			"partnerProgram": {
+				"label": "Ortak Programı",
+				"vouchers": "kuponları",
+				"commissions": "Komisyonlar"
+			},
+			"voucher": {
+				"label": "Kupon Kodu",
+				"voucherQuestion": "Kupon sorusu"
+			},
+			"subscription": {
+				"label": "Abonelikler",
+				"status": "Abonelik durumu",
+				"endDate": "Abonelik Bitiş tarihi",
+				"purchase": "Abonelik Satın Al",
+				"checkout": {
+					"stripe": "Kredi kartıyla öde",
+					"paypal": "PayPal ile öde"
+				},
+				"price": {
+					"label": "Abonelik ücreti"
+				},
+				"vat": {
+					"label": "KDV",
+					"invalid": "KDV numarası geçerli değil",
+					"valid": "KDV numarası geçerlidir"
+				},
+				"vatNumber": {
+					"label": "KDV Numarası"
+				},
+				"totalPrice": {
+					"label": "Toplam fiyat"
+				},
+				"billingDetails": {
+					"label": "Fatura Detayları"
+				},
+				"continue": "Devam et",
+				"discountVoucher": {
+					"patternInvalid": "İndirim kuponu 'XXXX-XXXX' modeliyle eşleşmelidir",
+					"invalid": "Kupon geçerli değil",
+					"alreadyReserved": "Kupon zaten ayrılmış ve kullanılamaz",
+					"valid": "Kupon geçerlidir"
+				},
+				"vatamount": {
+					"label": "Alınan KDV tutarı"
+				},
+				"pricewithvat": {
+					"label": "KDV dahil fiyat"
+				},
+				"vatnotcharged": {
+					"label": "KDV ücreti hariç"
+				},
+				"invoiceLabel": "Satın Alma Faturaları",
+				"extendPurchase": "Aboneliği Uzatın",
+				"createInvoice": "Fatura oluşturmak",
+				"updateInvoice": "Faturayı Güncelle",
+				"deleteInvoice": "Faturayı Sil",
+				"discountPercentage": "İndirim Yüzdesi",
+				"currency": "Para birimi",
+				"paymentId": "Ödeme sağlayıcı ödeme kimliği",
+				"partnerEmail": "İş Ortağı E-postası"
+			},
+			"validate": {
+				"amountNumbers": "Tutarda yalnızca rakam basamakları olmalıdır"
+			},
+			"paymentDetails": "Ödeme detayları",
+			"termsPoliciesMsg": "Kabul ediyorum",
+			"termsOfUse": "Kullanım Şartları",
+			"privacyPolicy": "Gizlilik Politikası",
+			"phoneNumber": "Telefon numarası",
+			"currentLanguage": "en",
+			"storeLabel": "mağaza",
+			"contactus": {
+				"thankYou": "GonnaOrder ile iletişime geçtiğiniz için teşekkür ederiz. Size en kısa sürede e-posta ile cevap vereceğiz.",
+				"instructions": "Uygulamanın nasıl çalıştığıyla ilgili talimatları ve sık sorulan soruların yanıtlarını bulun",
+				"gettintouch": "Aradığınızı bulamıyor musunuz? Temasta olmak! Karşılaştığınız soru veya sorun hakkında bize yazın, size geri dönelim. Daha hızlı yanıt verebilmemiz için yeterli ayrıntı eklediğinizden emin olun",
+				"faq": "SSS",
+				"helpCenter": "Yardım Merkezi",
+				"submit": "Sunmak",
+				"support": "Destek",
+				"featuresGuide": "Özellikler Kılavuzu"
+			},
+			"uploadNow": "Şimdi Yükle",
+			"role": "Rol",
+			"administrator": "Yönetici",
+			"standardUser": "Standart kullanıcı",
+			"saveAndNew": "Kaydet ve Yeni Ekle",
+			"saveAndContinue": "",
+			"next": "Sonraki",
+			"type": "Tür",
+			"value": "Değer",
+			"active": "Aktif",
+			"consumed": "Tüketilen",
+			"availabilityRestrictions": "Kullanılabilirlik Kısıtlamaları",
+			"from": "Nereden",
+			"To": "İçin",
+			"available": "Mevcut",
+			"partner": "Ortak",
+			"emailStatus": "E-posta Durumu",
+			"superAdmin": "Süper Yönetici",
+			"remove": "Kaldırmak",
+			"availableTimes": "Müsait zamanlar",
+			"to": "İçin",
+			"any": "Hiç",
+			"reloadApplication": "Uygulamayı yeniden yükle",
+			"newVersionAvailable": "Uygulamanın eski bir sürümünü çalıştırıyorsunuz. En son güncellemeyi almak için uygulamayı yeniden yükleyin",
+			"vatPercentage": "KDV %",
+			"phone": "Telefon",
+			"registeredAt": "Kayıtlı",
+			"initialValue": "Başlangıç ​​değeri"
+		},
+		"alerts": {
+			"headerError": "Hata!",
+			"errorOccured": "Bir hata oluştu",
+			"headerSuccess": "Başarı!",
+			"invalidCredentials": "Geçersiz kimlik bilgileri sağlandı.",
+			"accountActivated": "Hesabınız şimdi etkinleştirildi. Devam etmek için aşağıdan giriş yapın.",
+			"passwordChanged": "Şifreniz değişti. Devam etmek için aşağıdan giriş yapın.",
+			"emailChanged": "E-postanız değişti. Devam etmek için aşağıdan giriş yapın.",
+			"oopsLostMsg": "Hata! Kaybettin.",
+			"pageNotFound": "Aradığınız sayfa bulunamadı.",
+			"problemMsg": "Bir şeyler yanlış gitti",
+			"pageUnavailable": "Beklenmedik bir şey oldu",
+			"userInvitationSuccessfull": "Kaydınız başarılı oldu. {{StoreName}} sitesine erişmek için giriş yapın",
+			"socialAccountLoginFailed": "Kullanmaya çalışmadan önce sosyal hesabınızı bağladığınızdan emin olun.",
+			"accessDenied": "Giriş reddedildi"
+		},
+		"login": {
+			"forgetPassword": "Parolanızı mı unuttunuz?",
+			"noAccount": "Hesabınız yok mu?",
+			"signUp": "Kaydol",
+			"social": {
+				"header": "veya sosyal hesabınız üzerinden bağlanın:",
+				"google": "Google ile giriş yap",
+				"facebook": "Facebook ile giriş",
+				"apple": "Apple ile giriş yapın"
+			}
+		},
+		"account": {
+			"receiveEmailMsg": "Hesabınızı doğrulamak için kısa süre içinde bir e-posta alacaksınız.",
+			"profile": "Profil Değişimi",
+			"provideEmailMsg": "Lütfen e-postanızı girin",
+			"changePassword": "Şifre değiştir",
+			"logout": "Çıkış Yap",
+			"affiliate": {
+				"lastName": "Soyadı",
+				"create": "Ortak Olun",
+				"pleaseVisit": "Lütfen ziyaret edin",
+				"profile": "profil sayfanız",
+				"updateInfoMsg": "bilgilerinizi güncellemek istiyorsanız"
+			},
+			"currentPassword": "Şimdiki Şifre",
+			"newPassword": "Yeni Şifre",
+			"social": {
+				"nav": "Sosyal Hesaplar",
+				"header": "Sosyal Hesapları Bağla",
+				"google": {
+					"header": "Google hesabı",
+					"linkAccount": "Google hesabını bağla"
+				},
+				"link": {
+					"success": "Sosyal hesap başarıyla bağlandı"
+				},
+				"facebook": {
+					"header": "Facebook hesabı",
+					"linkAccount": "Facebook hesabını bağla"
+				},
+				"apple": {
+					"header": "elma hesabı",
+					"linkAccount": "Apple hesabını bağla"
+				}
+			},
+			"createPassword": "Şifre oluştur"
+		},
+		"forgot": {
+			"header": "Parolanızı mı unuttunuz",
+			"submit": "Sunmak",
+			"alreadyKnow": "Şifrenizi zaten biliyorsunuz ve değiştirmek istemiyor musunuz?",
+			"emailInvalid": "E-posta geçersiz.",
+			"successHeader": "Aferin!",
+			"successMsg": "Parolanızı sıfırlamak için kısa süre içinde bir e-posta alacaksınız.",
+			"emailNotRegister": "Bu e-posta kayıtlı değil,"
+		},
+		"updatePassword": {
+			"header": "Şifreyi güncelle",
+			"subHeader": "Lütfen yeni şifrenizi girin",
+			"confirmPassword": "Şifreyi Onayla"
+		},
+		"store": {
+			"minutes": "dakika",
+			"closeOrder": "Siparişi Kapat",
+			"acceptOrder": "Sipariş kabul",
+			"acceptOrderMarkReady": "Siparişi kabul et ve hazır olarak işaretle",
+			"acceptOrderEstimatedTime": "Siparişi kabul edin ve tahmini bir zaman ekleyin",
+			"minutesValidationMsg": "Tutanak geçerli bir pozitif sayı olmalıdır",
+			"list": {
+				"storesList": "Mağazalar Listesi",
+				"searchByAlias": "GonnaOrder Alan Adını Girin (en az 6 karakter)"
+			},
+			"storeimages": "Resimleri Sakla",
+			"storeCreation": "Yeni Mağaza Kaydet",
+			"settings": "Ayarlar",
+			"paymentMethod": "Ödeme şekli",
+			"paymentOptions": "Ödeme seçenekleri",
+			"paymentOptionsDisabled": "Mağaza için ödeme yöntemi etkinleştirilmediğinden ödeme seçenekleri devre dışı bırakıldı.",
+			"deliveryAtAddressOptions": "Adres Seçeneklerinde Teslim",
+			"minDeliveryAmount": "Minimum teslimat sipariş miktarı",
+			"deliveryFee": "Teslimat ücreti",
+			"order": {
+				"label": "Sipariş",
+				"orderSent": "Sipariş Gönderildi",
+				"orderWish": "Sipariş İsteği",
+				"notifications": {
+					"receipt": "Siparişler için bildirim alma"
+				},
+				"floor": "Zemin",
+				"customerName": "müşteri adı",
+				"newestOrderSent": "En Yeni Sipariş Gönderildi",
+				"oldestOrderSent": "Gönderilen En Eski Sipariş",
+				"newestOrderWish": "Yeni Sipariş Dilek",
+				"oldestOrderWish": "En Eski Sipariş Dilek",
+				"newestOrderExpected": "En Yeni Sipariş Bekleniyor",
+				"oldestOrderExpected": "Beklenen En Eski Sipariş",
+				"autoprint": {
+					"receipt": "Gelen siparişleri otomatik olarak yazdırın"
+				},
+				"orderExpected": "Sipariş bekleniyor",
+				"newestOrderEffective": "En Yeni Sipariş Etkili",
+				"oldestOrderEffective": "En Eski Düzen Etkili",
+				"dateTimeRange": "Tarih Saat Aralığı",
+				"orderEffective": "Sipariş Etkili",
+				"noFilter": "Filtresiz",
+				"yesterday": "Dün",
+				"lastHour": "Son saat",
+				"now": "Şimdi",
+				"nextHour": "Sonraki Saat",
+				"tomorrow": "Yarın",
+				"custom": "Özel ...",
+				"today": "Bugün",
+				"orderIdentifier": "Tanımlayıcı",
+				"changeOrder": "Siparişi değiştir"
+			},
+			"orderIsReady": "Sipariş hazır!",
+			"orderExpected": "Sipariş bekleniyor",
+			"orderDownload": "İndir",
+			"note": "Not",
+			"open": "Açık",
+			"cancelled": "İptal edildi",
+			"rejected": "Reddedildi",
+			"rejectWithoutReason": "Sebebi belirtmeden siparişi reddet",
+			"rejectWithReason": "Sebep içeren siparişi reddet",
+			"closed": "Kapalı",
+			"identifier": "Tanıtıcı",
+			"deliveryMethod": "Teslimat modu",
+			"deliveryOption": "Dağıtım Modları",
+			"orderingDisabledMessage": "Siparişi etkinleştirmek için bir teslimat modunun seçilmesi gerekir",
+			"deliveryAtInLocation": "Bir masada servis yapın",
+			"deliveryLocationsEnabled": "Tanımlanmış tablo olmadığı için seçenek devre dışı bırakıldı",
+			"orderDeliveryMethod": {
+				"deliver": "Teslim etmek",
+				"pickup": "Almak",
+				"serve": "Servis",
+				"deliverAtAddress": "Adrese teslimat",
+				"openTap": ""
+			},
+			"status": "Durum",
+			"amountPaid": "Ödenen miktar",
+			"paymentStatus": "Ödeme Durumu",
+			"payment": {
+				"paid": "Ücretli",
+				"notPaid": "Ödenmeyen",
+				"stripeTermsAndConditions": "Hesabınızı kaydederek,",
+				"servicesAgreement": "Stripe Services Sözleşmesi",
+				"stripeConnectedAccountAgreement": "Stripe Bağlı Hesap Sözleşmesi",
+				"stripeUserMsg": "Stripe Hesabı oluşturmak, kredi kartı, iDEAL, Bancontact aracılığıyla sipariş alınmasını sağlar",
+				"paypalDisableMsg": "Paypal geçici olarak desteklenmiyor",
+				"creditCard": "Kredi kartı",
+				"bancontact": "bancontact",
+				"iDeal": "ideal",
+				"squareUserMsg": "Bir Square Hesabı oluşturmak, siparişlerin kredi kartı ile alınmasını sağlar",
+				"vivaUserMsg": "Bir Viva Cüzdan Hesabı oluşturmak, siparişlerin kredi kartı ile alınmasını sağlar",
+				"digitalWallets": "Dijital Cüzdanlar",
+				"paymentSense": {
+					"userMsg": "Paymentsense Hesabı oluşturmak, siparişleri kredi kartıyla almayı sağlar",
+					"jwtToken": ""
+				},
+				"rmsUserMsg": "RMS hesabı oluşturmak, kredi kartı ile sipariş almayı sağlar",
+				"merchantId": "",
+				"sharedSecret": "Paylaşılan Sır",
+				"rmsConnect": "RMS ile bağlantı kurun",
+				"paymentSenseConnect": "PaymentSense ile bağlantı kurun",
+				"jccUserMsg": "JCC hesabı oluşturmak, kredi kartı ile sipariş almayı sağlar",
+				"acquirerId": "",
+				"apiSignaturePassword": "",
+				"jccConnect": "JCC ile bağlantı kurun",
+				"valueNotValid": "Sağlanan değer geçerli değil",
+				"trustpaymentsUserMsg": "TrustPayments hesabı oluşturmak, kredi kartıyla sipariş almayı sağlar",
+				"siteReference": "",
+				"webserviceUser": "",
+				"webservicePassword": ""
+			},
+			"date": "Tarih",
+			"time": "Zaman",
+			"backToOrders": "Siparişlere Geri Dön",
+			"share": {
+				"language": {
+					"userInterfaceLanguage": "Kullanıcı Arayüz Dili",
+					"defaultCatalogLanguage": "Katalog Dili",
+					"basedOn": "Tarayıcı ayarlarına göre",
+					"storeDefault": "Varsayılan katalog dilini kaydet"
+				},
+				"sharePreviewLink": "Bağlantıyı Paylaş ve Önizle",
+				"sharePreview": "Paylaş ve Önizle",
+				"embedCode": "Web sitenize gömün",
+				"printQRCodes": "QR Kodlarını Yazdır",
+				"ordering": {
+					"allowDefaultOrdering": "Sipariş Vermeye İzin Ver",
+					"DefaultOrdering": "Varsayılan",
+					"disableDefaultOrdering": "engelli",
+					"defaultDate": "Varsayılan Tarih"
+				}
+			},
+			"voucher": {
+				"list": "Kupon Listesi",
+				"createVoucher": "Özel Kuponlar Oluşturun",
+				"partnerStatus": "Ortak Durumu",
+				"endDate": "Bitiş tarihi",
+				"commission": "Komisyon",
+				"text": "Fiş",
+				"numberOfVouchers": "Kupon sayısı",
+				"defaultVoucherValue": "Kupon Değeri",
+				"numberOfVoucher": "Oluşturulabilecek mevcut kuponlar",
+				"numberOfVoucherPattern": "Kupon sayısı basamaklı olmalıdır",
+				"minNumberOfVoucherPattern": "Kupon sayısı 1'den büyük veya ona eşit olmalıdır",
+				"commissionStatus": "Komisyon Durumu",
+				"waiting_for_store_purchase": "Mağaza Satın Alma Bekleniyor",
+				"eligible_for_payment": "Ödeme için uygun",
+				"waiting_for_finalization": "Sonuçlandırılması için 14 gün bekleniyor",
+				"useDate": "Kupon Kullanım Tarihi",
+				"printVoucherSetup": "Kuponu Yazdır",
+				"addnewdiscountVoucher": "Yeni İndirim Kuponu Ekle",
+				"backtodiscountVouchers": "İndirim Kuponlarına Geri Dön",
+				"creatediscountVoucher": "İndirim Kuponu Oluştur",
+				"typeSingleuse": "Tek kullanımlık",
+				"typeMultipleuse": "Çoklu Kullanım",
+				"updatediscountVoucher": "İndirim Kuponunu Güncelle",
+				"editdiscountVoucher": "İndirim Kuponunu Düzenle",
+				"discountVouchers": "İndirim Kuponları"
+			},
+			"statistics": {
+				"title": "İstatistik",
+				"from": "Itibaren",
+				"to": "Için",
+				"orders": "Emirler",
+				"menuViewing": "Menü Görünümleri",
+				"orderValue": "Sipariş Değeri",
+				"month": "Ay",
+				"year": "Yıl",
+				"submitted": "Gönderilen",
+				"received": "Alınan",
+				"total": "Toplam",
+				"totalViewing": "Toplam Görüntüleme",
+				"totalPaid": "Toplam Ödenen",
+				"totalNonPaid": "Toplam Ödenmemiş",
+				"totalAll": "Toplam Tümü",
+				"orderItems": "Sipariş öğeleri",
+				"orderItemSummary": "Sipariş Öğesi özeti",
+				"orderItemSummaryDescription": "Satılan her ürün için toplam geliri anlayın ve hangi ürünlerin en popüler olduğunu görün",
+				"orderItemDetails": "Sipariş Öğesi Ayrıntıları",
+				"orderItemDetailsDescription": "Bu siparişlerde satılan ürünlerin miktarını ve gelirini ve siparişlerin tarihlerini içeren tüm siparişlerin ayrıntılı bir görünümünü alın",
+				"orderCapture": "Sipariş Yakalama",
+				"monthly": "Aylık",
+				"daily": "Günlük",
+				"day": "Gün",
+				"period": "Periyot",
+				"quantitySold": "Satılan Miktar",
+				"revenueLabel": "gelir"
+			},
+			"catalog": {
+				"backToOffer": "Teklife Dön",
+				"backToCatalog": "Kataloğa Geri Dön",
+				"backToCategory": "Kategoriye Geri Dön",
+				"importTranslation": "Etiketleri Değiştir ve Çevir",
+				"import": "Kataloğu Excel ile İçe Aktar",
+				"upload": "Katalog Yükleme",
+				"importInfo": "Bir Excel şablonu kullanarak katalog verilerinize veri aktarabilirsiniz. Excel içe aktarma, Teklif adlarını veya Kategori adlarını veya Teklif kısa açıklamalarını ve teklif fiyatlarını destekler.",
+				"downloadTemplate": "Şablonu buradan indirin",
+				"acceptImport": "Kabul Et ve Katalog Al",
+				"importImage": "Kataloğu Fotoğraftan İçe Aktar",
+				"beta": "beta",
+				"importImageInfo": "Kataloğunuzun bir fotoğrafını ekleyerek katalog verilerinize veri aktarabilirsiniz. İçe aktarma, katalogun tek bir kategoriye sahip bölümleri için çalışır. Yüksek çözünürlükte fotoğrafınızın net olduğundan emin olun. Bu özellik beta modunda.",
+				"offer": {
+					"offer": "Teklif",
+					"createOffer": "Teklif Oluştur",
+					"addOffer": "Teklif Ekle",
+					"confirmDeleteOffer": "Bu teklifi silmek istediğinizden emin misiniz? <br/> Bu işlem geri alınamaz.",
+					"offerImage": "Teklif Resmi",
+					"uploadImage": "Fotoğraf yükleniyor",
+					"characteristics": {
+						"name": "Özellikler",
+						"vegetarian": "Vejetaryen",
+						"vegan": "Vegan",
+						"celery": "Kereviz",
+						"wheat": "Buğday",
+						"crustaceans": "Kabuklular",
+						"eggs": "Yumurtalar",
+						"fish": "Balık",
+						"lupin": "Acı bakla",
+						"milk": "Süt",
+						"molluscs": "Yumuşakçalar",
+						"mustard": "Hardal",
+						"nuts": "Fındık",
+						"peanuts": "Yer fıstığı",
+						"sesame": "Susam",
+						"soya": "Soya",
+						"sulphurDioxide": "Kükürt Dioksit",
+						"halal": "Helal",
+						"barley": "Arpa",
+						"spicy": "Baharatlı"
+					},
+					"countAgainstslotcount": "Slot sayısına karşı sayın",
+					"countAgainstslot": "Yuvaya karşı say",
+					"incrementBy": "Artırma oranı",
+					"externalProductId": "Harici Ürün Kimliği",
+					"vatExternalId": "Harici KDV Kimliği",
+					"available": "Mevcut",
+					"oos": "Stoklar tükendi",
+					"hidden": "Gizlenmiş",
+					"unorderable": "Sipariş Verilemez"
+				},
+				"variant": {
+					"priceVariants": "Fiyat Değişkenleri",
+					"priceVariant": "Fiyat Değişkeni",
+					"assignedOfferVariations": "Atanan varyasyonları görmek için burayı tıklayın",
+					"createPriceVariant": "Fiyat Değişkeni Yarat",
+					"confirmDeleteVariant": "Bu fiyat varyantını silmek istediğinizden emin misiniz? <br/> Bu işlem geri alınamaz."
+				},
+				"option": {
+					"option": "seçenek",
+					"options": "Seçenekler",
+					"addOption": "Seçenek Ekle",
+					"createOption": "Seçenek Oluştur",
+					"confirmDeleteOption": "Bu seçeneği silmek istediğinizden emin misiniz? <br/> Bu işlem geri alınamaz."
+				},
+				"category": {
+					"createCategory": "Kategori Oluştur",
+					"category": "Kategori",
+					"addCategory": "Kategori ekle",
+					"infoDeleteCategory": "Kategori, teklifler içerdiği için silinemez. <br/> Temel tekliflerin silinmesi veya diğer kategorilere taşınması gerekir.",
+					"confirmDeleteCategory": "Bu kategoriyi silmek istediğinizden emin misiniz? <br/> Bu işlem geri alınamaz."
+				},
+				"optionGroup": {
+					"optionGroups": "Seçenek Grupları",
+					"createOptionGroup": "Seçenek Grubu Oluştur",
+					"optionGroup": "Seçenek Grubu",
+					"addOptionGroup": "Seçenek Grubu Ekle",
+					"optionGroupType": "Seçenek Grubu Türü",
+					"optionA": "SEÇENEK A",
+					"optionB": "SEÇENEK B",
+					"optionC": "SEÇENEK C",
+					"chooseExisting": "Mevcut Seçenek Grubunu Seçin",
+					"infoDeleteOptionGroup": "Seçenek grubu, seçenekler içerdiğinden silinemez. <br/> Temel seçeneklerin silinmesi gerekir.",
+					"confirmDeleteOptionGroup": "Bu seçenek grubunu silmek istediğinizden emin misiniz? <br/> Bu işlem geri alınamaz."
+				},
+				"description": {
+					"priceDescription": "Fiyat açıklaması",
+					"shortDescription": "Kısa Açıklama",
+					"longDescription": "Uzun Açıklama"
+				},
+				"discount": {
+					"noDiscount": "İndirim yok",
+					"percentile": "Yüzdelik",
+					"monetary": "parasal",
+					"invalidDiscount": "İndirim tutarı, fiyat tutarından daha az olmalıdır"
+				},
+				"sellable": {
+					"isVisible": "Gözle görülür"
+				},
+				"availability": {
+					"startTime": "Başlangıç ​​saati",
+					"endTime": "Bitiş zamanı",
+					"allTimeAvailability": "Her zaman kullanılabilir."
+				},
+				"translation": {
+					"translation": "Tercüme",
+					"languageTranslation": "Dil çevirisi zaten mevcut! Lütfen düzenlemeyi seçin.",
+					"translations": "Çeviriler",
+					"addNewTranslation": "Yeni Çeviri Ekle"
+				},
+				"language": {
+					"defaultCatalogLanguage": "Varsayılan Katalog Dili",
+					"changeLanguage": "Dili değiştir",
+					"sourceLanguage": "Kaynak dil",
+					"targetLanguage": "Hedef dil",
+					"withGoogleTranslate": "Google Çeviri ile dönüştürün"
+				},
+				"tooltip": {
+					"goToCategory": "Kategori ayrıntılarını görüntülemek için buraya tıklayın",
+					"goToOffer": "Teklif ayrıntılarını görüntülemek için buraya tıklayın",
+					"translation": "Atanan çevirileri görmek için buraya tıklayın",
+					"goToOptionGroup": "Seçenek grubu ayrıntılarını görüntülemek için buraya tıklayın",
+					"goToOption": "Seçenek ayrıntılarını görüntülemek için buraya tıklayın",
+					"options": "Atanan seçenekleri görmek için burayı tıklayın",
+					"goToVariant": "Varyant ayrıntılarını görmek için buraya tıklayın",
+					"optionGroup": "Seçenek grubunu ve seçeneklerini görmek için buraya tıklayın",
+					"changestatus": "Durum değiştirmek"
+				},
+				"addRestriction": "Yeni Zaman Kısıtlaması Ekle",
+				"importTranslation1": "Katalog öğelerinin metinlerini Excel aracılığıyla değiştirebilir ve birden çok dile çevirebilirsiniz.",
+				"importTranslation12": "Kataloğunuzun tüm metinlerini içeren Excel dosyasını buradan indirin.",
+				"importTranslation2": "Excel dosyası, bu dilde en az bir teklif sunduğunuz dilleri içerir.",
+				"importTranslation3": "Mağaza diliniz ve farklı diller için dosyaya dahil edilen tüm metinleri güncelleyin. Excel dosyasının yapısını değiştirmemeli, yalnızca yeni metin eklemelisiniz",
+				"importTranslation4": "Değişikliklere hazır olduğunuzda, değişikliklerinizin etkili olması için dosyayı yükleyin",
+				"contentTranslate": "Metni değiştirme ve çevirme",
+				"contentDownload": "Bir hata oluştu ve dosya indirilemiyor",
+				"contentFailedError": "Bir hata oluştu ve dosya yüklenemiyor. Lütfen dosyanın yapısının değiştirilmediğinden emin olun",
+				"orderable": {
+					"isOrderable": "Sipariş edilebilir"
+				},
+				"error": {
+					"overlappingSchedules": "Periyotlar çakıştığı için programlar kaydedilemez",
+					"timeScopeWrong": "Zaman kapsamı yanlış",
+					"noDaySelect": "Seçili gün yok",
+					"loadSchedules": "Plan getirilirken hata oluştu",
+					"createSchedule": "Program kaydedilirken bir hata oluştu",
+					"updateSchedule": "Program güncellenirken bir hata oluştu",
+					"deleteSchedule": "Program silinirken bir hata oluştu"
+				},
+				"update": "Kataloğu Excel aracılığıyla güncelleyin",
+				"acceptUpdate": "Kataloğu Kabul Et ve Güncelle",
+				"importTranslationnew": "Kataloğunuzu bir Excel şablonu kullanarak içe aktarabilirsiniz. Teklif adlarını, kategori adlarını, açıklamaları, teklif fiyatlarını, indirimleri ve stok verilerini içe aktarabilirsiniz.",
+				"importTranslationnew1": "Excel şablonunu indirin ve katalog verilerinizi doldurun",
+				"updateTranslation": "Kataloğunuza yeni öğeler ekleyebilir veya bir Excel şablonu kullanarak mevcut katalog öğelerinizi değiştirebilirsiniz. Teklif adlarını, kategori adlarını, açıklamaları, teklif fiyatlarını, indirimleri ve stok verilerini içe aktarabilirsiniz.",
+				"updateTranslation1": "Katalog verilerinizi içeren Excel dosyasını buradan indirin.",
+				"updateTranslation2": "Değiştirmek istediğiniz teklif alanlarını güncelleyin. Bunlar için teklif isimlerini aynı tutun",
+				"updateTranslation3": "Oluşturulmasını istediğiniz yeni teklifler için Excel dosyasına yeni satırlar ekleyin",
+				"updateTranslation4": "Excel'de değiştirmek istediğiniz alanları güncelleyin. Belirli değişiklikleri yapmak istiyorsanız teklif alanları aynı kalmalıdır.",
+				"priceVariants": "Fiyat Çeşitleri",
+				"catalogOptionGroup": "Opsiyon Grubu",
+				"allowMultiple": "Aynı öğenin birden çok seçimine izin ver",
+				"nocatalog": "Katalog yok",
+				"notable": "Tablo yok",
+				"importLink": "Kataloğu bağlantıdan içe aktar",
+				"importCatalogexternalsite": "Harici Site",
+				"importCataloglink": "Bağlantı",
+				"importCataloglinkimport": "İçe aktarmak",
+				"catalogOfstoreimported": "Mağazanın katalog oluşturma çalışmaları başlamıştır. Tamamlanması 10-15 dakika sürebilir.",
+				"catalogFetching": "Katalog getiriliyor. Lütfen bir saat sonra içe aktarmayı tekrar deneyin",
+				"catalogUnabletoimport": "Katalog içe aktarılamadı",
+				"catalogPleaseentervalidlink": "Lütfen geçerli bir bağlantı girin"
+			},
+			"location": {
+				"text": "tablo",
+				"backtoTables": "Tablolara Geri Dön",
+				"create": "Tablo ekle",
+				"createBulk": "Toplu olarak tablolar oluşturma",
+				"noOfStoreLocations": "Tablo sayısı",
+				"error": {
+					"noStoreFound2": "devam etmek için yeni mağaza konumları",
+					"pattern": "Невалиден етикет - Разрешено е използването само на цифри 0/9 и главни букви A-Z и хипени (-) и долна черта (_).",
+					"digit": "Geçersiz Etiket - Yalnızca 0-9 arasındaki rakamların kullanımına izin verilir"
+				},
+				"label": "tablo",
+				"createTableMsg": "Toplu olarak tablo ekle",
+				"locationType": "Konum Türü",
+				"table": "Tablo",
+				"location": "yer",
+				"room": "Oda",
+				"notablesFound": "Tablo bulunamadı",
+				"nocatalogfound": "Katalog bulunamadı",
+				"tableStatus": "Tablo Durumu",
+				"openTap": {
+					"closed": "Kapalı",
+					"open": "Açık"
+				},
+				"status": {
+					"success": "Durum güncellendi",
+					"table": {
+						"pin": "Tablo PIN'i"
+					},
+					"error": "Durum güncellenirken hata"
+				},
+				"print": {
+					"qrCodes": "QR kodlarını yazdır"
+				}
+			},
+			"locations": {
+				"text": "Tablolar"
+			},
+			"qr": {
+				"download": {
+					"pdf": "Pdf QR kodunu indirin Yazdır",
+					"image": "Resim QR kodunu indir"
+				},
+				"downloadPrintQRStore": "QR kodunu pdf olarak yazdır",
+				"downloadPrintQRAllLocation": "Tüm tablo QR kod baskılarını pdf olarak indir",
+				"downloadImageQRStore": "QR kodu görüntüsünü indir",
+				"downloadImageQRAllLocation": "Tüm QR kodu görüntülerini zip olarak indir"
+			},
+			"help": {
+				"helpText": "Yardım"
+			},
+			"users": {
+				"header": "Kullanıcılar",
+				"removeUser": "Bu kullanıcı için bu mağazaya erişimi kaldırmak istediğinizden emin misiniz? <br/> Bu işlem geri alınamaz.",
+				"inviteUser": {
+					"inviteTitle": "Kullanıcıyı Davet Et",
+					"invitationText": "Aşağıdaki e-posta adresine bir e-posta gönderilecektir. Kullanıcı daveti kabul ettikten sonra, tam olarak",
+					"invitePrimaryButton": "Davet et"
+				}
+			},
+			"region": {
+				"label": "bölge"
+			},
+			"city": {
+				"label": "Kent"
+			},
+			"alias": "GonnaOrder alan adı",
+			"notSubscribedMsg": "Bu mağaza bir GonnaOrder aboneliği satın almadı. GonnaOrder alanı, deneme modundayken geçerli aboneliği olan diğer mağazalar tarafından talep edilebilir.",
+			"noActiveSubscriptionsMsg": "Bu etki alanını yalnızca bir GonnaOrder aboneliği satın alırsanız alabilirsiniz. Artık bir abonelik satın aldıktan sonra başka bir alan adı kullanabilir ve bunu istediğiniz alan adıyla değiştirebilirsiniz.",
+			"domainTakenMsg": "Bu gonnaorder alanı zaten alınmış",
+			"aliasValidationMsg": "Etki alanı en az 6 karakter içermelidir ve bunlardan en az biri 'a' - 'z' harfi olmalıdır. '0' ila '9' rakam basamaklarına ve '-' ve '_' sembollerine izin verilir. Özel karakterlere ve büyük harflere izin verilmez",
+			"phoneNumber": {
+				"pattern": "Sadece 0-9 arasındaki rakamların kullanımına izin verilir."
+			},
+			"enablePaypalPaymentGonnaOrderLabel": "gonnaorder.com",
+			"preferredLanguage": {
+				"label": "Tercih edilen dil"
+			},
+			"catalogOverview": "Katalog",
+			"ordering": "Sipariş",
+			"details": "ayrıntılar",
+			"paymentProvoders": "Ödeme Sağlayıcıları",
+			"disabled": "engelli",
+			"paymentDisabled": "Ödeme Devre Dışı",
+			"paymentOptional": "Ödeme İsteğe Bağlı",
+			"paymentMandatory": "Ödeme Zorunlu",
+			"enabled": "Etkin",
+			"disconnect": "kesmek",
+			"accountID": "Hesap Kimliği",
+			"connectWithPaypal": "Paypal ile iletişime geç",
+			"connectWithStripe": "Stripe ile iletişime geç",
+			"paymentMethodDetailsMessage": "Bağlanmak istediğiniz ödeme sağlayıcılarını seçin",
+			"optionGroup": {
+				"atMostOneOption": "En fazla bir seçenek seçilebilir",
+				"customSelection": "Özel seçim",
+				"minimumRequired": "Seçilmesi gereken minimum seçenek sayısı",
+				"maximumAllowed": "Seçilmesine izin verilen maksimum seçenek sayısı",
+				"maximumHeigherThanMimimum": "Maksimum sayı, minimum sayıdan büyük veya ona eşit olmalıdır"
+			},
+			"message": {
+				"errorTryAgain": "Bir hatayla karşılaşıldı. Lütfen tekrar deneyin",
+				"storeUpdate": "Mağaza güncellendi!",
+				"actionFail": "Eylem başarısız!",
+				"loadFail": "Yükleme başarısız!",
+				"acessRemoveFail": "Mağazadan erişim kaldırılamadı",
+				"acessRemoveSuccess": "Mağazadan erişim başarıyla kaldırıldı!",
+				"inviteUserFail": "Kullanıcı davet edilemedi!",
+				"inviteUserSuccess": "Kullanıcı mağazayı yönetmeye davet edildi!",
+				"uploadFail": "Yükleme başarısız!",
+				"logoUploadSuccess": "Logo başarıyla yüklendi!",
+				"imageUploadSuccess": "Resim başarıyla yüklendi!",
+				"downloadFail": "Yükleme başarısız!",
+				"settingsUpdate": "Ayarlar güncellendi!",
+				"receiveEmailMsg": "Kısa süre içinde bir e-posta alacaksınız. E-postanızı değiştirmek için bağlantıyı izleyin.",
+				"profileUpdate": "Profil güncellendi!",
+				"translationsUpdateSuccess": "Çeviriler başarıyla güncellendi!",
+				"saveOfferSuccess": "Teklif başarısını kaydedin",
+				"saveCategorySuccess": "Kategori başarısını kaydet",
+				"childCategoryOffer": "Teklif ile ilişkili alt kategoriler!",
+				"childOfferCategory": "Kategoriye ilişkin çocuk teklifleri!",
+				"offerVaryAToffer": "Teklifle ilişkili teklif varyantları!",
+				"catalogVerifySuccess": "Katalog verileri başarıyla doğrulandı!",
+				"catalogDataUploadSuccess": "Katalog verileri başarıyla yüklendi!",
+				"categoryDeleteSuccess": "Kategori Başarıyla Silindi!",
+				"offerDeleteSuccess": "Teklif Başarıyla Silindi!",
+				"createAvailabilitySuccess": "Kullanılabilirlik başarısı oluşturun",
+				"createAvailabilityFail": "Kullanılabilirlik Oluşturulamadı",
+				"locationDeleteSuccess": "{{Label}} konumu başarıyla silindi",
+				"noInStoreDelivery": "Mağaza İçi Konum teslimi artık desteklenmiyor",
+				"stripeDisconnect": "Stripe hesabının bağlantısı kesildi",
+				"paypalDisconnect": "Paypal hesabının bağlantısı kesildi",
+				"upgradeAffiliateSuccess": "Satış ortağı ayrıntılarını başarıyla yükseltin!",
+				"loadProfileFail": "Profilinizi yükleyemedik. Lütfen daha sonra tekrar deneyiniz",
+				"verifyCatalogImageFailed": "Katalog resimden çıkarılamaz. Daha yüksek çözünürlüklü bir görüntüyü veya yalnızca bir kategoriyle kataloğun daha küçük bir parçasına sahip bir görüntüyü içe aktarmayı deneyin",
+				"verifyCatalogImageSuccess": "Katalog resmi başarıyla doğrulandı!",
+				"imageRemoveSuccess": "resim silindi",
+				"logoRemoveSuccess": "Logo silindi",
+				"zoneRemoveFail": "Mağazadan bölge kaldırılamadı",
+				"zoneRemoveSuccess": "Bölge mağazadan başarıyla kaldırıldı",
+				"zoneAdded": "Bölge başarıyla oluşturuldu",
+				"zoneUpdated": "Bölge başarıyla güncellendi",
+				"CreateScheduleSuccess": "Başarıyla oluşturuldu",
+				"updateScheduleSuccess": "Başarıyla güncellendi",
+				"deleteScheduleSuccess": "Başarıyla silindi",
+				"saveRuleSuccess": "Başarılı Kuralı Kaydet",
+				"deleteRuleSuccess": "Kural Silme Başarılı",
+				"saveDiscountVoucherSuccess": "İndirim Kuponunu Kaydet Başarılı",
+				"saveDiscountVoucherFailed": "İndirim Kuponunu Kaydetme Başarısız",
+				"deleteDiscountVoucherSuccess": "İndirim Kuponu Silme Başarılı",
+				"locationCreateSuccess": "{{Label}} tablosu başarıyla oluşturuldu",
+				"locationUpdateSuccess": "{{Label}} tablosu başarıyla güncellendi"
+			},
+			"rejectOrder": "Siparişi Reddet",
+			"paypalNotsupported": "Paypal desteklenmez",
+			"enableWithmelink": "Paypal.me bağlantınızla ödemeleri etkinleştirin",
+			"payPalmelink": "Paypal.me bağlantısı",
+			"enableWithanylink": "Herhangi bir ödeme bağlantısıyla ödemeleri etkinleştirin",
+			"paymentProvider": "Ödeme Sağlayıcı",
+			"paymentLink": "Ödeme Linki",
+			"other": "Diğer",
+			"shoppingBasket": "Alışveriş sepeti",
+			"settingsMandatory": "Zorunlu",
+			"settingsOptional": "İsteğe bağlı",
+			"settingspickupEmailRequired": "E-posta Gerekli",
+			"settingspickupPhoneRequired": "Telefon Gerekli",
+			"addressDelivery": "Adres Teslimi",
+			"orderAmount": "Üzerinde teslimatın ücretsiz olduğu sipariş miktarı",
+			"deliveryAddressauto": "Teslimat adresi Otomatik tamamlama",
+			"postCodesrestrictions": "Posta kodu bölgesi kısıtlamaları",
+			"restricted": "Kısıtlı",
+			"nonRestricted": "Kısıtlanmamış",
+			"addressZones": "bölgeler",
+			"addressaddnewZones": "Yeni Bölge ekle",
+			"createDifferentaddress": "Farklı ayarlara sahip farklı adres dağıtım bölgeleri oluşturun",
+			"backtoZones": "Bölgelere Geri Dön",
+			"minRadius": "Min Yarıçap",
+			"maxRadius": "Maks Yarıçap",
+			"unit": "birim",
+			"postCodes": "Posta Kodları",
+			"postCodemsg": "Posta kodlarının listesini virgülle veya yeni satırla ayırarak girin",
+			"settingspickupNameRequired": "İsim gerekli",
+			"zoneLabel": "bölge",
+			"invalidRadiusRange": "Özel alan aralığı geçersiz",
+			"account": {
+				"deleteUserSuccess": "Mağazaya kullanıcı erişimi başarıyla kaldırıldı",
+				"confirmDeleteUser": "Bu kullanıcının bu mağazaya erişimini kaldırmak istediğinizden emin misiniz? Bu eylem geri alınamaz."
+			},
+			"subscription": {
+				"storeEligibility": "Mağazanız, GonnaOrder'ı ayda 50'ye kadar menü görüntüleme veya 50 siparişe kadar kullanabilir.\nDeneme kısıtlamalarına ulaşıldığında, müşterileriniz menünüzü göremeyecektir.\nBu kısıtlamaları kaldırmak için GonnaOrder aboneliği satın alabilirsiniz.",
+				"vatprompt": {
+					"sodexobelgium": "Sodexo ağının bir tüccarı mısınız? %50 indirim almak için KDV numaranızı girin",
+					"eu": "Çevrimiçi satın alma işleminde KDV ücretini ödememek için KDV numaranızı girin"
+				},
+				"sodexo": {
+					"affiliate": {
+						"prompt": "Henüz Sodexo ağının bir üyesi değil misiniz?"
+					}
+				},
+				"active": "Aktif",
+				"fourteenfreetrial": "14 günlük ücretsiz deneme - Sınırsız sayıda sipariş",
+				"limitedFreemium": "Sınırlı Freemium - Sınırsız sipariş almak için abone olun ve GonnaOrder alan adınızı kaybetmeyin",
+				"limitedFreemiumnumberof": "Sınırlı Freemium - Bu ay için 5 sipariş sınırına ulaşıldı. Sınırsız sipariş almak için abone olun ve GonnaOrder alan adınızı kaybetmeyin",
+				"discountVouchers": "İndirim Kuponları",
+				"billing": {
+					"businessName": "iş adı"
+				}
+			},
+			"applicationId": "Application ID",
+			"accessToken": "",
+			"locationId": "",
+			"clientId": "",
+			"clientSecret": "",
+			"settingsDefaultcatalogview": "Varsayılan Katalog Görünümü",
+			"settingsCollapsed": "Daraltıldı",
+			"settingsExpanded": "Genişletilmiş",
+			"orderingNotification": "Sipariş Bildirimi E-postası",
+			"orderingNotificationmessage": "Her sipariş için aşağıdaki e-posta adresine e-posta gönderin",
+			"settingsManagestock": "Stokları Yönet",
+			"settingStocklevel": "Stok seviyesi",
+			"settingsStockcheck": "Stok kontrolü",
+			"name": "Dükkan adı",
+			"thanksForstore": "Mağazanızı kaydettiğiniz için teşekkür ederiz",
+			"uploadyourmenu": "Menünüzü hızlı ve kolay bir şekilde yükleyin",
+			"configureyourstore": "Mağazanızı ihtiyaçlarınıza göre yapılandırın",
+			"seeyourstore": "Mağazanızı müşterilerinizin gördüğü gibi görün",
+			"findinstructions": "Uygulamanın nasıl çalıştığıyla ilgili talimatları bulun",
+			"orderingMinutesorderready": "Siparişin hazır olmasına dakikalar kaldı",
+			"orderingDefaultestimated": "Hazır olana kadar teslimat ve teslim alma siparişleri için dakika cinsinden varsayılan tahmini süre",
+			"orderingMinimum": "Minimum",
+			"orderingMaximum": "Maksimum",
+			"setting": {
+				"rules": {
+					"orderingrules": "Sipariş Kuralları",
+					"addnewrule": "Yeni Kural ekle",
+					"rules": "Kurallar",
+					"orderamount": "Sipariş miktarı",
+					"backtorules": "Kurallara Dön",
+					"status": "Kural Durumu",
+					"conditions": "Koşullar",
+					"orderamountbetween": "Belirli değerler arasındaki Sipariş Miktarı",
+					"minorderamount": "Minimum Sipariş Miktarı",
+					"maxaorderamount": "Maksimum Sipariş Miktarı",
+					"actions": "Hareketler",
+					"displayoptgroup": "Görüntüleme Seçeneği Grubu",
+					"optgroups": "Seçenek Grupları",
+					"addoptgroup": "Seçenek Grubu Ekle",
+					"backtorule": "Kurala Geri Dön",
+					"createruleptgroup": "Seçenek Grubu Oluştur",
+					"ruleoptgroup": "Seçenek Grubu",
+					"infoDeleteORule": "Kural, kategori içerdiği için silinemez. <br/> Altta yatan kategorinin silinmesi gerekiyor.",
+					"confirmDeleteRule": "Bu Kuralı silmek istediğinizden emin misiniz? <br/> Bu eylem geri alınamaz.",
+					"updateRule": "Kuralı Güncelle"
+				},
+				"marketing": {
+					"fb": {
+						"labelError": "Geçersiz facebook pikseli izleme kimliği",
+						"label": "Facebook Piksel",
+						"meta": "Facebook Web Sitesi Doğrulama Meta Etiketi",
+						"metaError": "Geçersiz facebook web sitesi doğrulama meta etiketi içeriği",
+						"UrlError": "Geçersiz Facebook URL'si"
+					},
+					"google": {
+						"labelError": "Geçersiz google analytics izleme kodu."
+					},
+					"label": "Pazarlama",
+					"GA": {
+						"label": "Google Analytics"
+					},
+					"enableFBMsg": "Facebook Pixel ile mağaza takibini etkinleştirin",
+					"enableGAMsg": "Google Analytics ile mağaza izlemeyi etkinleştirin",
+					"Websitelink": "Web Sitesi Bağlantısı",
+					"Facebooklink": "Facebook Bağlantısı",
+					"Instagramlink": "Instagram Bağlantısı",
+					"Carditlink": "Cardit.io Bağlantısı",
+					"SocialMedia": "Web Sitesi, Sosyal Medya ve Bağlantılı Hesaplar",
+					"SocialMediaPromote": "Müşterilerinizin işletmenizle etkileşimde bulunabileceği farklı yolları tanıtın",
+					"SocialMediaText": "Gelişmiş ayar",
+					"website": {
+						"UrlError": "Geçersiz Mağaza Web Sitesi URL'si"
+					},
+					"instagram": {
+						"UrlError": "Geçersiz Instagram URL'si"
+					},
+					"cardit": {
+						"UrlError": "Geçersiz CardIto URL'si"
+					}
+				},
+				"samedayordering": "Aynı gün sipariş",
+				"requestorderdateupfront": "Sipariş tarihini önceden isteyin",
+				"billing": "Faturalama",
+				"lastMile": {
+					"lastMileDeliverySoftware": "Son Mil Teslimat Yazılımı",
+					"connectWithMynext": "Mynext ile bağlan",
+					"enterMynextCredentials": "Mynext kimlik bilgilerinizi girin"
+				},
+				"integrations": {
+					"username": "Kullanıcı adı",
+					"password": "Parola",
+					"connect": "Bağlan",
+					"theCredentialsAreNotValid": "Kimlik bilgileri geçerli değil",
+					"navName": "Entegrasyonlar",
+					"shareDataWithOtherApplications": "Verileri Diğer Uygulamalarla Paylaşın",
+					"connectToHubrise": "HubRise'a bağlanın",
+					"enterHubriseCredentials": "HubRise kimlik bilgilerinizi girin",
+					"connectedToHubrise": "HubRise'a bağlı",
+					"hubriseCustomerList": "Müşteri listesi",
+					"goToHubrise": "HubRise'a git",
+					"powersoft": {
+						"connectWithPowersoft": "",
+						"connectPowersoft": "",
+						"accessTokenmsg": "",
+						"agentCode": "",
+						"agentCodemsg": "",
+						"customerCode": "",
+						"customerCodemsg": "",
+						"emailmsg": "",
+						"connect": ""
+					}
+				},
+				"domains": "Etki Alanları",
+				"apps": {
+					"name": "uygulamalar",
+					"promoteGOApp": "GonnaOrder Uygulaması ile Siparişi Teşvik Edin",
+					"promoteGOAppInfo": "Kullanıcılar mağaza bağlantınızı uygulamaya kaydedecek ve cep telefonlarından daha kolay sipariş verecek",
+					"promoteCustomOApp": "Mağazanızın Özel Uygulaması Üzerinden Sipariş Vermeyi Tanıtın",
+					"promoteCustomAppInfo": "Müşterilerinize tanıtabileceğiniz size özel mobil uygulamanıza sahip olmak için bizimle iletişime geçin.",
+					"iosAppLink": "iOS Uygulama Bağlantısı",
+					"invalidIOSAppLink": "Geçersiz App Store URL'si",
+					"androidAppLink": "Android Uygulama Bağlantısı",
+					"invalidAndroidAppLink": "Geçersiz Play Store URL'si"
+				},
+				"allowOrderUpdateByStore": "Mağazaya göre sipariş güncellemesine izin ver",
+				"allowOrderDeletionByStore": "Mağazaya göre sipariş silmeye izin ver",
+				"opentabordering": ""
+			},
+			"orderingEmailcustomer": "Sipariş durumu değişikliğinde müşteriye e-posta gönderin",
+			"orderNotificationSound": "Sürekli Sipariş Bildirimi Sesi",
+			"schedule": {
+				"backToSchedule": "Programa dön",
+				"add": "Ekle",
+				"save": "Kayıt etmek",
+				"name": "İsim",
+				"createScheduleItem": "Yeni Program Ekle",
+				"editScheduleItem": "Programı Düzenle",
+				"cancel": "İptal etmek",
+				"startTime": "Başlangıç ​​saati",
+				"endTime": "Bitiş zamanı",
+				"delete": "Sil",
+				"mon": "",
+				"tue": "",
+				"wed": "",
+				"thu": "",
+				"fri": "",
+				"sat": "",
+				"sun": "",
+				"choose": "Program seçin",
+				"CreateSpecialScheduleSuccess": "Açılış saatleri başarıyla güncellendi",
+				"error": {
+					"CreateSpecialSchedule": "Açılış saatleri güncellenirken hata oluştu",
+					"LoadSpecialSchedules": "Açılış saatleri getirilirken hata oluştu",
+					"DeleteSpecialSchedule": "Açılış saatleri silinirken hata oluştu"
+				},
+				"DeleteSpecialScheduleSuccess": "Açılış saatleri başarıyla silindi",
+				"requestWishTime": "Dilek zamanı isteyin",
+				"assoonasPossible": "En kısa sürede",
+				"futureTime": "Gelecek zaman",
+				"generalopening": "Genel açılış saatleri",
+				"orderingTimes": "Sipariş süreleri",
+				"addDaysOfWeek": "Haftanın Günlerini Ekleyin",
+				"addDates": "Tarih Ekle",
+				"Include": "Dahil etmek",
+				"Exclude": "Hariç tut",
+				"displayStartOrding": "Sipariş başlangıcında dilek zamanını göster",
+				"wishTimeMinutes": "Dilek zamanı Aralıkları - Dakika",
+				"displayWishTimeFormat": "Dilek zaman formatını göster",
+				"times": "Zamanlar",
+				"timeSlots": "Zaman dilimleri",
+				"slotDuration": "Slot süresi - Dakika",
+				"limitOrder": "Slot başına limit emirleri",
+				"noLimit": "Limit yok",
+				"limit": "Limit",
+				"ordersPerSlot": "Slot başına sipariş",
+				"wishTimeInFutureMinutes": "Gelecekte dilek zamanı - Dakikalar",
+				"defaultOrderingMode": "Varsayılan Sıralama Modu",
+				"displaydesireddateandTime": "İstenilen Tarih ve Saati Göster",
+				"dateandTime": "Tarih ve Saat",
+				"dateOnly": "Yalnızca Tarih"
+			},
+			"addNewSchedule": "Yeni Program Ekle",
+			"scheduleList": "Programları",
+			"filter": "Filtrele",
+			"ready": "hazır",
+			"global": {
+				"openTime": "Açılış saatleri"
+			},
+			"defaultPaymentSelection": "Varsayılan Ödeme Seçimi",
+			"notSelected": "Seçili değil",
+			"preselected": "Önceden seçilmiş",
+			"common": {
+				"tooltip": {
+					"option": {
+						"addOption": "Seçenek oluşturmak için burayı tıklayın"
+					},
+					"movedown": {
+						"Option": "Aşağı gitmek için burayı tıklayın seçeneği"
+					},
+					"moveup": {
+						"Option": "Seçeneği yukarı taşımak için burayı tıklayın"
+					}
+				}
+			},
+			"settingsDefaultVATPercentage": "Varsayılan KDV yüzdesi",
+			"tableOrdering": "Masa Sıralaması",
+			"settingsHidden": "Gizli",
+			"schedulesSlot": "Yuva başına maksimum Öğe",
+			"schedulesSlotnote": "Slot toplam sayısına göre sayılan öğelerin belirtilmesi gerekir",
+			"timeShouldFuture": "Zaman gelecekte olmalı.",
+			"discountVoucher": "İndirim kuponu",
+			"inputMinutes": "Giriş dakikaları",
+			"selectMinutes": "Dakika seçin",
+			"estimatedTime": "Tahmini süresi",
+			"hideorderComment": "Sipariş Yorumlarını Gizle",
+			"hideorderitemComment": "Sipariş Öğesi Yorumlarını Gizle",
+			"catalogOffer": "Teklifler",
+			"catalogCategory": "Kategori",
+			"settingDetails": "Mağaza Detayları",
+			"settingOrdering": "Mağaza Siparişi",
+			"settingPayment": "Ödeme Ayarı",
+			"settingPickup": "Almak",
+			"settingDelivery": "Teslimat",
+			"settingLocations": "Tablo",
+			"settingCatalog": "Mağaza Kataloğu",
+			"settingOrderingRule": "Sipariş Kuralı",
+			"settingSchedules": "Programları",
+			"settingMarketing": "Pazarlama",
+			"settingDiscountVouchers": "İndirim kuponu",
+			"domain": "Alan Adları ve Uygulamalar",
+			"customDomain": {
+				"additionalCustomDomain": "Ek Özel Alan",
+				"labelError": "Etki alanı değeri geçerli değil"
+			},
+			"domaincustomInfo": "Kendi özel alanınızı kullanabilirsiniz, örn. https://example.com veya alt alan adı, ör. GonnaOrder alanınıza ek olarak https://mystore.example.com. Bunun çalışması için alan sağlayıcınızda bazı ek yapılandırma yapmanız gerekir.",
+			"catalogManageByExcel": "Excel ile Yönet",
+			"settingspickupdisplaypickupAddress": "Alış Adresini Görüntüle",
+			"settingspickupHide": "Saklamak",
+			"settingspickupShow": "Göstermek",
+			"deleteStore": "Bu mağazayı silmek istediğinizden emin misiniz? Bu eylem geri alınamaz",
+			"deleteStoreSuccess": "Mağaza başarıyla silindi",
+			"oneClickAddToBasket": "Tek tıkla sepete ekle",
+			"errorMinimumWishTime": "Geçersiz gelecek minimum dilek süresi. 1440'tan küçük veya eşit olan sıfır olmayan pozitif sayı olacaktır.",
+			"deleteStoreMsgError": "{{StoreId}} deposu siparişleri veya katalog öğelerini içerir ve silinemez",
+			"postCodesErrorMsg": "Bir posta kodu en fazla 10 karakter içermeli ve birden çok posta kodu için virgülle ayrılmalıdır.",
+			"customers": {
+				"customers": "Müşteriler",
+				"customerName": "müşteri adı",
+				"customerPhone": "Müşteri Telefonu",
+				"customerEmail": "Müşteri e-postası",
+				"orders": "Emirler",
+				"firstOrder": "Birinci derece",
+				"lastOrder": "Son sipariş"
+			},
+			"setupZones": "Kurulum Bölgeleri",
+			"radiusPostCode": "Yarıçapı kullan",
+			"zonePostCodes": "Posta kodlarını kullan",
+			"radiusPostCodesDetails": "Her bölge için posta kodlarını tanımlayın",
+			"radiusPostCodesDetails1": "Her bölge için bir yarıçap aralığı tanımlayın. Bu, müşterinin GPS koordinatlarına dayanmaktadır.",
+			"radiusPostCodesDetails2": "Bu özelliği etkinleştirmek için otomatik adres tamamlamayı etkinleştirmeniz ve ayrıca mağaza ayrıntıları ekranında mağazanızın GPS konumunu tanımlamanız gerekir.",
+			"zoneName": "Bölge Adı",
+			"zonesRestrictions": "Teslimat bölgesi kısıtlamaları",
+			"enableCustomerAuthentication": "Müşteri Kimlik Doğrulamasını Etkinleştir",
+			"settingsDeliverypolygondescription": "Her bölgeyi bir haritada tanımlayın. Bu, müşterinin GPS koordinatlarına dayanmaktadır.",
+			"settingsDeliverydraw_map": "Harita üzerinde çizin",
+			"settingsMaperrormsg": "Lütfen haritada bu bölge için bir çokgen çizin",
+			"storeNotfound": "Mağaza bulunamadı",
+			"externalOnlinePaymentId": "Harici çevrimiçi ödeme kimliği",
+			"externalNonOnlinePaymentId": "Harici çevrimiçi olmayan ödeme kimliği",
+			"externalId": "Harici kimlik",
+			"deliveryFeeExternalId": "Teslimat ücreti harici kimlik",
+			"combineorders": "Siparişleri Birleştir"
+		},
+		"load": {
+			"loadingMessage": "Lütfen bekle"
+		},
+		"users": {
+			"removeAccessMsg": "Mağazadan erişimi kaldır",
+			"userManage": {
+				"label": "Tüm kullanıcılar"
+			},
+			"list": {
+				"inputEmail": "Geçerli bir e-posta girin"
+			},
+			"details": {
+				"title": "Kullanıcı detayları",
+				"id": "İD",
+				"username": "Kullanıcı adı",
+				"googleAccount": "Google hesabı",
+				"facebookAccount": "Facebook hesabı",
+				"backToAllUsers": "Tüm Kullanıcılara Geri Dön",
+				"deleteUserSuccess": "Kullanıcı başarıyla silindi",
+				"updateUserSuccess": "Kullanıcı başarıyla güncellendi",
+				"confirmDeleteUser": "Bu kullanıcıyı silmek istediğinizden emin misiniz?"
+			}
+		},
+		"register": {
+			"registerTitle": "Kayıt ol",
+			"registerationSuccess": "kaydınız için teşekkür ederiz. Hesabınızı doğrulamak için kısa süre içinde bir e-posta alacaksınız.",
+			"haveAccount": "Zaten hesabınız var mı?",
+			"emailInfo": "Bu e-postanın size ait olduğunu onaylamanız gerekecek",
+			"accept": "Kaydol düğmesine tıklayarak aşağıdakileri kabul etmiş olursunuz",
+			"phoneNumberoptional": "telefon numarası (isteğe bağlı)",
+			"acceptRegister": "Kabul et ve kaydol",
+			"registerHeaderMessage1": "İşletmenizi GonnaOrder.com'a kaydedin",
+			"registerHeaderMessage2": "ve bugün ücretsiz denemenizi başlatın",
+			"registerFormStep1": "Formu doldurun ve e-postanızı doğrulayın",
+			"registerFormStep2": "Giriş yap ve mağazanı oluştur",
+			"registerFormStep3": "Menünüzü yükleyin ve ayarları yapılandırın",
+			"registerFinalMessage": "Mağazanız müşterilerinizle kullanıma hazır!",
+			"continue": "Devam et",
+			"social": {
+				"google": "Google'a kaydolun",
+				"facebook": "Facebook ile kayıt ol",
+				"apple": "Apple'a kaydolun"
+			}
+		},
+		"user": {
+			"profile": {
+				"updateTitle": "Profili Güncelle"
+			},
+			"details": {
+				"emailErrorMsgInvaild": "E-posta geçersiz",
+				"lastName": "Soyadı",
+				"confirmPassword": "Şifreyi Onayla",
+				"confirmPasswordErrorMsgMisMatch": "Parolalar uyuşmuyor"
+			}
+		},
+		"passwordAuth": {
+			"passAuthButton": "Yeniden Authenticate",
+			"passAuthPromt": "Devam etmek için lütfen şifreyi onaylayın"
+		},
+		"storeError": {
+			"unExpected": "Beklenmeyen bir hata oluştu"
+		},
+		"menu": {
+			"preview": "Ön izleme"
+		},
+		"continue": {
+			"accept": "Kaydol düğmesine tıklayarak aşağıdakileri kabul etmiş olursunuz"
+		},
+		"sodexo": {
+			"prompt": {
+				"purchase": "Bir Sodexo iştirakiyseniz GonnaOrder aboneliği satın alırken bir yıl boyunca% 50 indirim kazanın"
+			}
+		},
+		"printer": {
+			"printersList": "Yazıcılar",
+			"noPrinter": "Kayıtlı yazıcı yok",
+			"registerPrinter": "Kayıt ol",
+			"registerTitle": "Yazıcı Kaydet",
+			"setPrinterName": "Lütfen yazıcı adını ayarlayın",
+			"printerName": "Yazıcı Adı",
+			"unregisterPrinter": "Yazıcıyı Listeden Kaldır",
+			"confirmUnregister": "Bu yazıcıyı listeden kaldıracağınıza emin misiniz?",
+			"selectPrinter": "Yazıcı seçin",
+			"selectPrinterTitle": "Lütfen bir yazıcı seçin",
+			"notEmpty": "Yazıcı adı boş olmamalıdır.",
+			"chooseAPrinter": "Bir yazıcı seçin",
+			"star": {
+				"noPrinter": "Yıldız yazıcısı algılanmadı!"
+			},
+			"chooseAPrinterType": "Bir Yazıcı Türü Seçin",
+			"connectionMethod": "Bağlantı Yöntemi",
+			"connectionMethodBluetooth": "",
+			"connectionMethodWiFi": "",
+			"connectionParameters": "Bağlantı Parametreleri",
+			"connectionIpOrHostName": "IP veya Ana Bilgisayar Adı",
+			"connectionPort": "",
+			"connectionBluetoothMacAddr": "Mac Adresi",
+			"testPrint": "Test Baskısı",
+			"starPrinter": {
+				"support": "Yalnızca Yıldız yazıcılar desteklenir",
+				"indev": "Geliştirme aşamasındaki Star yazıcılar için destek"
+			},
+			"airPrinter": {
+				"support": "Yalnızca AirPrint yazıcılar desteklenir"
+			}
+		}
+	}
+}

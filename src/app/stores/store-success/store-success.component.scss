@@ -1,0 +1,21 @@
+.fa,
+.far,
+.fas {
+    font-weight: bolder;
+    color: #48b9b7;
+    font-size: 30px;
+}
+
+
+@media (min-width: 320px) and (max-width: 425px) {
+    .formHeader {
+        padding: 10px;
+    }
+    .suggestionText {
+        padding: 0px !important;
+    }
+    .storeTitle {
+        padding: 5px;
+        text-align: center;
+    }
+}

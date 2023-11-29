@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "کی جانب سے",
+			"thankYou": "شکریہ",
+			"discount": "رعایت/چھوٹ",
+			"viewOrder": "آرڈر دیکھیں",
+			"errorH2": "کچھ غلط ہے",
+			"errorUnexpected": "کچھ غیر متوقع طور پر ہوا",
+			"errorExpected": "",
+			"errorMustSelectOne": "آپ کسی ایک چيز کو لآزمی منتخب کریں ",
+			"errorTrialExceeded": "یہ فعالیت دستیاب نہیں ہے۔ مقدمے کی پابندیاں حد سے تجاوز کر گئیں",
+			"emptyCart": "آپ کے آرڈر میں کوئی آئٹمز نہیں ہیں",
+			"optional": "(اختیاری)",
+			"cookies": "یہ سائٹ کوکیز کا استعمال کرتی ہے۔ اس ویب سائٹ کو استعمال کرتے ہوئے آپ ان کے استعمال کے طریقہ کار سے اتفاق کرتے ہیں",
+			"more": "مزید",
+			"less": "کم",
+			"chooseFrom": "میں سے انتخاب کریں",
+			"standard": "معیاری",
+			"days": {
+				"mon": "پیر",
+				"tue": "منگل",
+				"wed": "بدھ",
+				"thu": "جمعرات",
+				"fri": "جمعہ",
+				"sat": "ہفتہ",
+				"sun": "اتوار"
+			},
+			"opentimelist": "کھلنے کے اوقات",
+			"newVersionAvailable": "آپ ایپلی کیشن کا پرانا ورژن چلا رہے ہیں۔ تازہ ترین اپ ڈیٹ حاصل کرنے کے لئے ایپلی کیشن کو دوبارہ لوڈ کریں",
+			"reloadApplication": "ایپلیکیشن دوبارہ لوڈ کریں",
+			"poweredByGonnaOrder": "از: وی بلیٹن",
+			"recents": "حالیہ",
+			"information": "معلومات",
+			"yes": "جی ہاں",
+			"no": "نہیں",
+			"error": "خرابی",
+			"errorQRScanner": "QR سکینر میں خرابی پیش آگئی!",
+			"confirm": "تصدیق کریں۔"
+		},
+		"select": {
+			"selectAtLeast": "آپ کو کم از کم {{x}} select منتخب کرنا چاہئے",
+			"selectAtmost": "آپ زیادہ سے زیادہ {{x}} select کو منتخب کرسکتے ہیں",
+			"selectAtleastAtMost": "آپ کو کم از کم {{x}} اور زیادہ سے زیادہ {{y} select منتخب کرنا چاہئے",
+			"selectBetween": "آپ کو {{childCategory.min}} اور {{childCategory.max}} اقدار کے درمیان انتخاب کرنا چاہئے۔"
+		},
+		"load": {
+			"loadingMessage": "ایک لمحے کے لئے براہ مہربانی ..."
+		},
+		"itemDetails": {
+			"removeFromOrder": "اسے اپنے آرڈر سے ہٹا دیں",
+			"addToOrder": "اپنے آرڈر میں شامل کریں",
+			"updateOrder": "اپنے آرڈر کو اپ ڈیٹ کریں"
+		},
+		"checkout": {
+			"yourOrder": "آپ کے حکم",
+			"total": "کل",
+			"specialNote": "اپنے آرڈر میں ایک خاص نوٹ شامل کریں",
+			"howToReceiveYourOrder": "آپ اپنا آرڈر کس طرح حاصل کرنا چاہیں گے؟",
+			"option": {
+				"pickup": "میں اسے خود اٹھاؤں گا",
+				"addressDelivery": "میں اسے اپنے گھر کے پتہ پر وصول کرنا چاہتا ہوں۔",
+				"serve": {
+					"location": "میں ایک میز پر بیٹھا ہوں"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "ہم آپ کے آرڈر کی تفصیلات کو بچانے کے قابل نہیں تھے",
+				"fieldRequired": "یہ معلومات پر کرنا ضروری ہے",
+				"selectFutureTime": "براہ کرم مستقبل میں وقت کا انتخاب کریں",
+				"orderSubmissionFailed": "آرڈر پیش نہیں کیا جاسکتا",
+				"ORDER_LOCATION_NOT_PRESENT": "ٹیبل نمبر یا مقام کا نام غائب ہے",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "صارفین کی کچھ مطلوبہ معلومات غائب ہے",
+				"ORDER_WISH_TIME_INVALID": "مطلوبہ خواہش کا وقت ماضی کا ہے",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "آرڈر کی فراہمی کا طریقہ غائب ہے",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "ایڈریس پر فراہمی معاون نہیں ہے",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "آرڈر کی خدمت معاون نہیں ہے",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "آرڈر لینے کا تعاون نہیں ہے",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "بیان کردہ پوسٹ کوڈ پر فراہمی معاون نہیں ہے",
+				"OPENING_TIME_SCHEDULE_ERROR": "اسٹور منتخب آرڈر کی خواہش کے وقت بند ہے",
+				"PROMOTION_NOT_ELIGIBLE": "تشہیر منتخب کی گئی ہے لیکن وہ اہل نہیں ہے",
+				"offersUnavailableExplanation": "ذیل میں اشیا آپ کی تاریخ اور وقت پر دستیاب نہیں ہیں۔ براہ کرم انہیں اپنے آرڈر آرڈر سے ہٹانے کے لئے آرڈر کو اپ ڈیٹ کرنے پر کلک کریں",
+				"offersOutOfStockExplanation": "کافی مقدار میں اشیاء دستیاب نہیں ہیں",
+				"invalidVoucherCode": "واؤچر کوڈ غلط ہے",
+				"INVALID_INPUT": "فراہم کردہ تفصیلات پر کارروائی کرنے میں خامی۔",
+				"slotUnavailableExplanation": "مطلوبہ ٹائم سلاٹ دستیاب نہیں ہے۔ براہ کرم مختلف ٹائم سلاٹ کو منتخب کریں یا ڈیلیوری کا دوسرا طریقہ منتخب کریں۔",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "اس اسٹور کے لئے اسی دن کے لئے آرڈر کی درخواست کرنا ممکن نہیں ہے۔",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "اپنے علاقے کے لئے اسی دن کے لئے آرڈر کی درخواست کرنا ممکن نہیں ہے۔",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "مندرجہ ذیل آئٹمز کے لئے اسی دن کے لئے آرڈر کی درخواست کرنا ممکن نہیں ہے۔",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "مطلوبہ وقت اور دن کیلئے اپنے پوسٹ کوڈ کی فراہمی ممکن نہیں ہے۔",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "مخصوص وقت اور تاریخ پر آرڈرز کی فراہمی ممکن نہیں ہے۔ براہ کرم کوئی متبادل منتخب کریں۔",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "مخصوص وقت اور تاریخ پر اٹھا لینے والے آرڈرز کا حصول ممکن نہیں ہے۔ براہ کرم کوئی متبادل منتخب کریں۔",
+				"INTERNAL_ERROR": "غیر متوقع خرابی کا سامنا کرنا پڑا۔ دوبارہ کوشش کرنے کے لئے براہ کرم درخواست کو دوبارہ لوڈ کریں۔",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "کم از کم ترسیل آرڈر کی رقم پوری نہیں ہوئی۔ آگے بڑھنے کے لئے اپنے آرڈر میں ایک اور {{AMOUNT_MISSING}} ویلیو شامل کریں۔",
+				"paymentFailed": "آپ اس ادائیگی کے طریقہ کار کو استعمال کرکے آن لائن ادائیگی کرنے میں ناکام رہے۔ دوبارہ کوشش کریں.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "مطلوبہ پروموشنز لاگو نہیں ہیں",
+				"INVALID_CUSTOMER_VOUCHER": "غلط کسٹمر واؤچر",
+				"slotUnavailable": "منتخب کردہ وقت دستیاب نہیں ہے",
+				"slotUnavailableExplanationWithSuggestion": "منتخب کردہ وقت ماضی کا ہے یا اب دستیاب نہیں ہے۔ اگلا دستیاب وقت:",
+				"socialLoginFailed": "ہم آپ کے اکاؤنٹ سے رابطہ قائم نہیں کرسکے",
+				"customerDetailsUpdateFailed": "پروفائل ڈیٹا کو اپ ڈیٹ کرنے میں ناکام",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "اسٹور اس مقام تک نہیں پہنچاتا ہے",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "آپ کا فراہم کردہ پتہ ہم نہیں ڈھونڈ سکتے ہیں۔ براہ کرم ایڈریس کو اپ ڈیٹ کریں اور دوبارہ کوشش کریں یا اسٹور سے رابطہ کریں۔",
+				"SERVING_HOURS_SCHEDULE_ERROR": "مخصوص وقت اور تاریخ پر احکامات جمع کرنا ممکن نہیں ہے۔ براہ کرم کوئی متبادل منتخب کریں۔",
+				"MISSING_LOCATION_TAP_ID": "ٹیپ آئی ڈی لازمی ہے۔",
+				"invalidPin": "غلط کسٹمر پن کوڈ"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "آپ کا آرڈر آپ کی خدمت میں پیش کیا جائے گا"
+					},
+					"unknown": {
+						"location": "آپ کا آرڈر آپ کی خدمت میں پیش کیا جائے گا"
+					}
+				},
+				"pickup": "اپنا آرڈر لے لیجئے",
+				"addressDelivery": "برائے مہربانی اپنی معلومات فراہم کریں"
+			},
+			"yourInformationPlease": "برائے مہربانی اپنی معلومات فراہم کریں",
+			"locationCode": "میز",
+			"yourName": "آپکا نام",
+			"email": "ای میل",
+			"phoneNumber": "فون نمبر",
+			"fullName": "مکمل نام",
+			"streetAddress": "گھر کا پتہ",
+			"zip": "زپ / پوسٹل کوڈ",
+			"town": "ٹاؤن / شہر",
+			"minimumAmount": "ترسیل کے لئے کم از کم آرڈر {{amount}} کی ضرورت ہے",
+			"deliveryFee": "ڈلیوری فیس",
+			"deliveryFeeApplicable": "ذیل میں آرڈر کے لئے قابل اطلاق {{amount}}",
+			"field": {
+				"generalValidation": "فیلڈ کا فارمیٹ درست نہیں ہے"
+			},
+			"acceptTerm": "آگے بڑھنے پر آپ {{قوائد و ضوابط}} اور{{پرائویسی پالیسی}} کو قبول کرتے ہیں",
+			"termsAndPolicy": "",
+			"acceptTerms": {
+				"and": "",
+				"after": ""
+			},
+			"termsOfUse": "استعمال کی شرائط",
+			"privacyPolicy": "رازداری کی پالیسی",
+			"yourTable": "آپ کی میز",
+			"allowedCharacters": "حروف کی اجازت",
+			"wishTimeHeading": "آپ کب اپنا آرڈر وصول کرنا چاہیں گے؟",
+			"asSoonAsPossible": "میں اسے جلد سے جلد وصول کرنا چاہتا ہوں",
+			"specifyWishTime": "میں بتانا چاہتا ہوں کہ اسے کب وصول کیا جائے",
+			"specialNoteExample": "",
+			"cardDisabledNote": "جب آپ تیار ہوں تو براہ کرم اپنا آرڈر اسٹور کے ساتھ شیئر کریں",
+			"cardHolderName": "کارڈ ہولڈر کا نام",
+			"cardNumber": "آپ کا کارڈ نمبر",
+			"cvv": "CVV",
+			"itemsOutOfStock": "کچھ آئٹمز اسٹاک سے باہر ہیں",
+			"floor": "فرش",
+			"storeClosedAtOrderWishDate": "اسٹور مطلوبہ خواہش کی تاریخ یا وقت پر بند ہے",
+			"offersNotAvailableAtOrderWishDate": "کچھ پیش کش مطلوبہ خواہش کی تاریخ یا وقت پر دستیاب نہیں ہیں",
+			"updateOrder": "تازہ کاری کا حکم",
+			"offers": {
+				"availableQuantity": "فی الحال دستیاب"
+			},
+			"voucherCode": "واؤچر کوڈ درج کریں",
+			"validVoucherCode": "واؤچر کوڈ درست ہے",
+			"yourRoom": "آپ کا کمرہ",
+			"yourLocation": "آپ کی جگہ",
+			"serveOption": {
+				"location": "میں اسے اپنے مقام پر وصول کرنا چاہتا ہوں",
+				"room": "میں اپنے کمرے میں ہوں"
+			},
+			"social": {
+				"connect": "سماجی اکاؤنٹ کے ساتھ مربوط ہوں"
+			},
+			"remainingValidVoucher": "واؤچر پر باقی توازن:",
+			"paymentsense": {
+				"declined": "آن لائن ادائیگی بذریعہ Paymentsense مسترد کردی گئی ہے"
+			},
+			"saveCustomerDetailsForFuture": "آئندہ کے احکامات کے ل your اپنے پروفائل ڈیٹا کو محفوظ کریں",
+			"customerDetailsUpdateSuccess": "آپ کے پروفائل ڈیٹا کو اپ ڈیٹ کر دیا گیا ہے",
+			"logout": "لاگ آوٹ",
+			"expiry": "میعاد ختم ہونے کی تاریخ (MMYY)",
+			"enterPin": "پن نمبر درج کریں۔"
+		},
+		"payment": {
+			"payOnlineNow": "ابھی آن لائن ادا کرنے کے لئے منتخب کریں",
+			"chooseYourPaymentMethod": "اپنی ادائیگی کا طریقہ منتخب کریں",
+			"creditCard": "کریڈٹ کارڈ",
+			"paypal": "پے پال",
+			"submitOrder": "اپنا آرڈر جمع کروائیں",
+			"proceedToPayment": "ادائیگی کے لئے آگے بڑھیں",
+			"errorCouldNotConnect": "ہم منتخب ادائیگی کے پروسیسر سے رابطہ قائم کرنے کے قابل نہیں تھے۔ براہ کرم چیک آؤٹ اسکرین پر واپس جائیں اور ادائیگی کا دوسرا طریقہ منتخب کریں یا بعد میں دوبارہ کوشش کریں۔",
+			"enterCreditCardInfo": "برائے مہربانی اپنے کریڈٹ کارڈ یا ڈیبیٹ کارڈ کی معلومات فراہم کریں",
+			"yourOrderIsReady": "آپ کا آرڈر تیار ہے",
+			"yourOrderIsExpected": "آپ کا آرڈرمتوقع ہے",
+			"errors": {
+				"valueNotValid": "فراہم کردہ قدر درست نہیں ہے",
+				"zipNotAvailable": "آپ اس پوسٹل کوڈ پر آن لائن ترسیل آرڈر نہیں دے سکتے ہیں۔ مزید معلومات کے لئے براہ کرم اسٹور سے رابطہ کریں",
+				"addressNotAvailable": "پتہ نہیں مل سکتا۔ براہ کرم تجاویز میں سے ایک گلی کا پتہ منتخب کریں۔"
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "ابھی آن لائن ادا کریں",
+			"digitalWallets": "ڈیجیٹل بٹوے",
+			"creditCardSecure": "محفوظ کریڈٹ کارڈ کی ادائیگی",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "آپ کا آرڈر نمبر",
+			"orderStatus": "آرڈر کی حیثیت",
+			"notSubmitted": "ابھی تک پیش نہیں کیا گیا",
+			"sent": "بھیجا گیا",
+			"ready": "تیار",
+			"rejected": "مسترد",
+			"startNewOrder": "نیا حکم شروع کریں",
+			"errors": {
+				"emailProperFormat": "ایک درست ای میل درج کریں"
+			},
+			"fiilEmailAddress": "اپنے آرڈر کی کاپی حاصل کرنے کے لئے اپنا ای میل ایڈریس پُر کریں",
+			"failedEmail": "ای میل بھیجنے میں ناکام",
+			"emailSent": "ای میل بھیج دی گئ",
+			"received": "موصول",
+			"accepted": "قبول کیا",
+			"mobileAppPromotion": "اگلی بار گونا آرڈر موبائل ایپ کے ذریعہ آرڈر کریں"
+		},
+		"dialog": {
+			"ok": "ٹھیک ہے",
+			"cancel": "منقطع کریں"
+		},
+		"store": {
+			"currently": {
+				"closed": "اسٹور فی الحال بند ہے"
+			},
+			"time": {
+				"closed": "اسٹور منتخب وقت پر بند ہے"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "سبزی خور",
+						"vegan": "ویگن",
+						"celery": "اجوائن",
+						"wheat": "گندم",
+						"crustaceans": "کرسٹیشینس",
+						"eggs": "انڈے",
+						"fish": "مچھلی",
+						"lupin": "لیوپین",
+						"milk": "دودھ",
+						"molluscs": "مولسکس",
+						"mustard": "سرسوں",
+						"nuts": "گری دار میوے",
+						"peanuts": "مونگ پھلی",
+						"sesame": "تل",
+						"soya": "سویا",
+						"sulphurDioxide": "سلفر ڈائی آکسائیڈ",
+						"halal": "حلال",
+						"barley": "جو",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "یہ ویب سائٹ آپ کے تجربے کو بہتر بنانے کیلئے کوکیز کا استعمال کرتی ہے ، لیکن اگر آپ چاہیں تو آپٹ آؤٹ کرسکتے ہیں۔",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "درخواست دیں"
+		},
+		"cookie": {
+			"accept": "قبول کریں",
+			"reject": "مسترد کریں",
+			"readMore": "مزید پڑھ"
+		},
+		"connect": {
+			"social": {
+				"google": "گوگل کے ساتھ جڑیں",
+				"facebook": "فیسبک سے رابطہ کریں"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "آپ کی ٹوکری خالی ہے",
+				"proceed": "آگے بڑھو"
+			}
+		},
+		"main": {
+			"typeUrl": "یو آر ایل یا اسٹور کا نام ٹائپ کریں۔",
+			"invalidUrl": "URL غلط ہے۔",
+			"scanQRCode": "QR کوڈ اسکین کریں۔",
+			"storeNotFound": "دکان نہیں ملی",
+			"storeSaved": "اسٹور کی معلومات کامیابی کے ساتھ محفوظ ہوگئی!",
+			"navigateStoreConfirm": "اسٹور پر جائیں؟"
+		},
+		"recents": {
+			"nothingFound": "یہاں کچھ نہیں ملا"
+		}
+	}
+}

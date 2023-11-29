@@ -1,0 +1,26 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+form div.form-group{
+    display: flex;
+         @include media-breakpoint-down(md) {
+             display: block;
+         }
+}
+#phoneNumberError.invalid-feedback {
+    display: block !important;
+  }
+
+  .chck-terms{
+    margin-left: 16px;
+  }
+
+@media (min-width: 320px) and (max-width: 425px) {
+  .country-code {
+    width:20%;
+  }
+  .phone-number{
+    width: 80%;
+  }
+}

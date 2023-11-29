@@ -1,0 +1,33 @@
+<div class="col-lg-12">
+    <div class="card list">
+        <div class="card-header bg-white">
+            <div>{{'admin.storeError.unExpected' | translate}}
+            </div>
+        </div>
+        <div class="card-body" *ngIf='accessDenied'>
+            <div class="row">
+                <div class="col-12">
+                    {{ 'admin.alerts.accessDenied' | translate }}
+                </div>
+            </div>
+        </div>
+        <div class="card-body" *ngIf='isStagingEnv && !accessDenied'>
+            <div class="row">
+                <div class="col-12">
+                    {{error.status | json}}
+                    {{error.error | json}}
+                    {{error.message | json}}
+                    {{error.errors | json}}
+                    {{outletError}}
+                    {{angularError}}
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="isNewVersionAvailable$ | async">
+            <div class="col-12">
+                <div>{{'admin.global.newVersionAvailable' | translate}}</div>
+                <app-state-reloader [buttonText]="'admin.global.reloadApplication' | translate" [isAdmin]="true"></app-state-reloader>
+            </div>
+        </div>
+    </div>
+</div>

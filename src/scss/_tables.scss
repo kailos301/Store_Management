@@ -1,0 +1,16 @@
+.table.lg {
+  tbody {
+    tr:nth-of-type(odd) {
+      background-color: white;
+    }
+
+    td {
+      vertical-align: middle;
+    }
+
+    td:first-child img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

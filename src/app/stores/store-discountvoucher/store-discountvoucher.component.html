@@ -1,0 +1,72 @@
+<div class="col-lg-12">
+    <div class="card list">
+        <div class="col-lg-12 d-flex align-items-center justify-content-between p-0">
+            <button type="button" class="btn btn-primary mt-4"
+                [routerLink]="['/manager/stores', storeId$|async, 'settings', 'discount-voucher', 0]">
+                <i class="fas fa-plus mr-2"></i>{{'admin.store.voucher.addnewdiscountVoucher'|translate}}
+            </button>
+        </div>
+        <div class="col-lg-12 d-flex align-items-center justify-content-between p-0 mt-3">
+            <label for="voucherQuestion"
+                class="col-xl-3 col-lg-3 col-md-12 col-sm-12">{{'admin.global.voucher.voucherQuestion'|translate}}</label>
+            <div class="input-group col-xl-8 col-lg-9 col-md-12 col-sm-12">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label>{{'admin.global.no'|translate}}</label>&nbsp;
+                        <label class="switch pt-1">
+                            <input type="checkbox" [checked]="isVoucherQuestion" id="voucherQuestion"
+                                (change)="onVoucherQuestionChange($event)" />
+                            &nbsp;<span class="slider round"></span>
+                        </label>&nbsp;
+                        <label>{{'admin.global.yes'|translate}}</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive-sm">
+                <table id="voucher-table" class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">{{'admin.global.voucher.label'|translate}}</th>
+                            <th scope="col">{{'admin.global.type'|translate}}</th>
+                            <th scope="col">{{'admin.global.value'|translate}}</th>
+                            <th scope="col">{{'admin.global.initialValue'|translate}}</th>
+                            <th scope="col">{{'admin.global.active'|translate}}</th>
+                            <th scope="col">{{'admin.global.consumed'|translate}}</th>
+                            <th scope="col">{{'admin.global.availabilityRestrictions'|translate}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngIf="!(vouchers$ | async) || (vouchers$ | async).data.length<=0">
+                            <td colspan="6">{{'admin.global.noData'|translate}}</td>
+                        </tr>
+                        <ng-container
+                            *ngIf="(vouchers$ | async) && (storeLocaleTimeZone$ |async) as storeLocaleTimeZone">
+                            <tr (click)="onVoucherClick($event,voucher)" style="cursor: pointer;"
+                                *ngFor="let voucher of (vouchers$|async).data">
+                                <td>{{voucher.code}}<i id="copyVoucherCode" class="far fa-copy ml-2 mb-1"
+                                        (click)="onVoucherClick($event,voucher)"></i></td>
+                                <td>{{toTypeText(voucher.type)}}</td>
+                                <td>{{toValue(voucher,(store$|async).currency)}}</td>
+                                <td>{{toInitialValue(voucher,(store$|async).currency)}}</td>
+                                <td>{{toActiveText(voucher.isActive)}}</td>
+                                <td>{{toConsumedText(voucher.isConsumed)}}</td>
+                                <td>{{voucher.startDate|localizedDate:'DD MMM
+                                    YYYY':storeLocaleTimeZone.locale:storeLocaleTimeZone.timezone |async}} -
+                                    {{voucher.endDate|localizedDate:'DD MMM
+                                    YYYY':storeLocaleTimeZone.locale:storeLocaleTimeZone.timezone |async}}</td>
+                            </tr>
+                        </ng-container>
+                    </tbody>
+                </table>
+                <ng-container *ngIf="(vouchers$ | async)">
+                    <app-pager [totalPagesCount]="(vouchers$ | async).totalPages"
+                        [page]="(vouchers$ | async).pageNumber" [size]="20"
+                        (paginate)="paginate($event)">
+                    </app-pager>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

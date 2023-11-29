@@ -1,0 +1,62 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+:host {
+  height: calc(var(--vh, 1vh) * 100);
+}
+.store-info {
+  background-color: #F2F0EE;
+  @include media-breakpoint-down(md) {
+    max-width: 992px;
+  }
+  h1 {
+    font-size: 1.250em;
+    color: #000;
+    @include media-breakpoint-down(md) {
+      font-size: 1.000em;
+    }
+  }
+  .store-title {
+    font-size: 1.000em;
+    color: #444;
+    @include media-breakpoint-down(md) {
+      font-size: 0.750em;
+    }
+  }
+  .disclaimer {
+    font-size: 0.675em;
+  }
+}
+.store-info {
+  max-width: 992px;
+  padding-left: 12px;
+  .disclaimer {
+    font-size: 0.850em;
+    padding-left: 4px;
+  }
+  .close-details {
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    background-color: rgba(255,255,255,0.68);
+    img {
+      transform: rotate(45deg);
+    }
+  }
+}
+.content {
+  max-width: 992px;
+  img {
+    width: 180px;
+    @include media-breakpoint-down(md) {
+      width: 78px;
+    }
+  }
+  .description {
+    font-size: 0.875em;
+    color: #444;
+  }
+}

@@ -1,0 +1,47 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+.form-group{
+  margin-bottom: 0px;
+  @include media-breakpoint-down(md) {
+    display: inline-block;
+  }
+}
+.mat-dialog-actions .rightActions{
+  float: right;
+  button{
+    margin-left: 15px;
+  }
+}
+.mat-dialog-actions .leftActions{
+  float: left;
+}
+.cursorPointer{
+  cursor: pointer;
+  text-decoration: underline !important;
+}
+form label.required:after{
+  color: red;
+  content: " *";
+}
+.cursorPointer{
+  cursor: pointer;
+}
+.mat-slider-horizontal {
+  width: 100%;
+}
+.mat-slider-horizontal {
+  height: 28px;
+  padding: 0px;
+  margin-top: -10px;
+}
+
+::ng-deep .sidebar-lg-show {
+  .cdk-overlay-pane {
+    margin-left: 0px;
+    @media (min-width: 992px) {
+      margin-left: 250px;
+    }
+  }
+}

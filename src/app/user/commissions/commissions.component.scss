@@ -1,0 +1,33 @@
+.pull-right {
+  float: right;
+}
+.submit-btn {
+  margin-right: 10px;
+}
+mat-slider {
+  width: 100%;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+
+::ng-deep .mat-accent .mat-slider-thumb {
+  background-color: #20a8d8;
+}
+::ng-deep .mat-accent .mat-slider-thumb-label {
+  background-color: #20a8d8;
+}
+::ng-deep .mat-accent .mat-slider-track-fill {
+  background-color: #20a8d8;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.copyUrlIcon {
+  cursor: pointer;
+  font-size: 20px;
+  color: #273773;
+}

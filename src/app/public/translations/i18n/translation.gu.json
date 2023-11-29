@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "દ્વારા સંચાલિત",
+			"thankYou": "આભાર",
+			"discount": "ડિસ્કાઉન્ટ",
+			"viewOrder": "ઓર્ડર જુઓ",
+			"errorH2": "કંઈક ખોટું થયું",
+			"errorUnexpected": "કંઈક અણધાર્યું થયું",
+			"errorExpected": "કંઈક અણધાર્યું થયું",
+			"errorMustSelectOne": "તમારે એક મૂલ્ય પસંદ કરવું જોઈએ",
+			"errorTrialExceeded": "આ વિધેય ઉપલબ્ધ નથી. ટ્રાયલ પ્રતિબંધ ઓળંગાઈ ગયો છે",
+			"emptyCart": "તમારા ઓર્ડરમાં કોઈ આઇટમ્સ નથી",
+			"optional": "(વૈકલ્પિક)",
+			"cookies": "આ સાઇટ કૂકીઝનો ઉપયોગ કરે છે. આ વેબસાઇટનો ઉપયોગ ચાલુ રાખીને તમે તેમના ઉપયોગ માટે સંમત થાઓ છો",
+			"more": "વધુ",
+			"less": "ઓછું",
+			"chooseFrom": "આમાંથી પસંદ કરો",
+			"standard": "ધોરણ",
+			"days": {
+				"mon": "સોમવાર",
+				"tue": "મંગળવારે",
+				"wed": "બુધવાર",
+				"thu": "ગુરુવાર",
+				"fri": "શુક્રવાર",
+				"sat": "શનિવાર",
+				"sun": "રવિવાર"
+			},
+			"opentimelist": "ખુલવાનો સમય",
+			"newVersionAvailable": "તમે એપ્લિકેશનનું જૂનું સંસ્કરણ ચલાવી રહ્યા છો. નવીનતમ અપડેટ પ્રાપ્ત કરવા માટે એપ્લિકેશનને ફરીથી લોડ કરો",
+			"reloadApplication": "એપ્લિકેશન ફરીથી લોડ કરો",
+			"poweredByGonnaOrder": "ગોનાઓર્ડર દ્વારા સંચાલિત",
+			"recents": "તાજેતરના",
+			"information": "માહિતી",
+			"yes": "હા",
+			"no": "ના",
+			"error": "ભૂલ",
+			"errorQRScanner": "QR સ્કેનરમાં ભૂલ આવી!",
+			"confirm": "પુષ્ટિ કરો"
+		},
+		"select": {
+			"selectAtLeast": "તમારે ઓછામાં ઓછું {{x}} select પસંદ કરવું જોઈએ",
+			"selectAtmost": "તમે વધુમાં વધુ {{x}} select પસંદ કરી શકો છો",
+			"selectAtleastAtMost": "તમારે ઓછામાં ઓછું {{x}} અને વધુમાં વધુ {{Y}} select પસંદ કરવું આવશ્યક છે",
+			"selectBetween": "તમારે {{childCategory.min}} અને {{childCategory.max}} મૂલ્યો વચ્ચે પસંદ કરવું આવશ્યક છે."
+		},
+		"load": {
+			"loadingMessage": "કૃપા કરી એક ક્ષણ ..."
+		},
+		"itemDetails": {
+			"removeFromOrder": "તમારા ઓર્ડરથી આને દૂર કરો",
+			"addToOrder": "તમારા ઓર્ડરમાં ઉમેરો",
+			"updateOrder": "તમારો ઓર્ડર અપડેટ કરો"
+		},
+		"checkout": {
+			"yourOrder": "તમારો ઓર્ડર ",
+			"total": "કુલ",
+			"specialNote": "તમારા ઓર્ડર પર એક ખાસ નોંધ ઉમેરો",
+			"howToReceiveYourOrder": "તમે તમારો ઓર્ડર કેવી રીતે પ્રાપ્ત કરવા માંગો છો?",
+			"option": {
+				"pickup": "હું તેને જાતે જ ઉપાડીશ",
+				"addressDelivery": "હું તેને મારા સરનામે પ્રાપ્ત કરવા માંગું છું",
+				"serve": {
+					"location": "હું એક ટેબલ પર બેઠો છું"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "અમે તમારી ઓર્ડર વિગતોને સાચવવામાં સમર્થ ન હતાં",
+				"fieldRequired": "આ ક્ષેત્ર આવશ્યક છે",
+				"selectFutureTime": "કૃપા કરીને ભવિષ્યમાં સમય પસંદ કરો",
+				"orderSubmissionFailed": "ઓર્ડર સબમિટ કરી શકાતો નથી",
+				"ORDER_LOCATION_NOT_PRESENT": "કોષ્ટક નંબર અથવા સ્થાન નામ ખૂટે છે",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "કેટલીક જરૂરી ગ્રાહકોની માહિતી ખૂટે છે",
+				"ORDER_WISH_TIME_INVALID": "ઇચ્છિત ઇચ્છા સમય ભૂતકાળનો છે",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "ઓર્ડર ડિલિવરી પદ્ધતિ ખૂટે છે",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "સરનામાં પર વિતરણ સમર્થિત નથી",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "ઓર્ડર આપવાનું સમર્થન નથી",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "ઓર્ડરનું ચૂંટેલું સમર્થન નથી",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "ઉલ્લેખિત પોસ્ટ કોડ પર ડિલિવરી સપોર્ટેડ નથી",
+				"OPENING_TIME_SCHEDULE_ERROR": "સ્ટોર પસંદ કરેલ ઓર્ડરની ઇચ્છા સમય પર બંધ છે",
+				"PROMOTION_NOT_ELIGIBLE": "પ્રમોશન પસંદ થયેલ છે પરંતુ તે પાત્ર નથી",
+				"offersUnavailableExplanation": "નીચે આપેલી આઇટમ્સ તમે ઉલ્લેખિત તારીખ અને સમય પર ઉપલબ્ધ નથી. કૃપા કરીને તમારા ઓર્ડરના હુકમથી તેમને દૂર કરવા માટે updateર્ડરને અપડેટ કરો પર ક્લિક કરો",
+				"offersOutOfStockExplanation": "ત્યાં પર્યાપ્ત વસ્તુઓ ઉપલબ્ધ નથી",
+				"invalidVoucherCode": "વાઉચર કોડ અમાન્ય છે",
+				"INVALID_INPUT": "પ્રદાન કરેલી વિગતો પર પ્રક્રિયા કરવામાં ભૂલ.",
+				"slotUnavailableExplanation": "વિનંતી કરેલ સમય સ્લોટ ઉપલબ્ધ નથી. કૃપા કરી કોઈ અલગ સમયનો સ્લોટ પસંદ કરો અથવા બીજી ડિલિવરી પદ્ધતિ પસંદ કરો.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "આ સ્ટોર માટે તે જ દિવસ માટે requestર્ડરની વિનંતી કરવી શક્ય નથી.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "તમારા ક્ષેત્ર માટે તે જ દિવસ માટે requestર્ડરની વિનંતી કરવી શક્ય નથી.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "નીચેની આઇટમ્સ માટે તે જ દિવસ માટે requestર્ડરની વિનંતી કરવી શક્ય નથી:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "વિનંતી કરેલ સમય અને દિવસ માટે તમારા પોસ્ટ કોડને પહોંચાડવાનું શક્ય નથી.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "ચોક્કસ સમય અને તારીખે ઓર્ડર પહોંચાડવાનું શક્ય નથી. કૃપા કરી કોઈ વિકલ્પ પસંદ કરો.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "Timeર્ડરને ચોક્કસ સમય અને તારીખે પસંદ કરવાનું શક્ય નથી. કૃપા કરી કોઈ વિકલ્પ પસંદ કરો.",
+				"INTERNAL_ERROR": "અનપેક્ષિત ભૂલ આવી. ફરીથી પ્રયાસ કરવા માટે કૃપા કરીને એપ્લિકેશન ફરીથી લોડ કરો.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "ન્યૂનતમ ડિલિવરી orderર્ડર રકમ પૂર્ણ થઈ નથી. આગળ વધવા માટે તમારા ઓર્ડરમાં બીજું. {{AMOUNT_MISSING}} મૂલ્ય ઉમેરો.",
+				"paymentFailed": "તમે આ ચુકવણી પદ્ધતિનો ઉપયોગ કરીને payનલાઇન ચૂકવણી કરવામાં નિષ્ફળ થયા. મહેરબાની કરીને ફરીથી પ્રયતન કરો.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "જરૂરી બionsતીઓ લાગુ નથી",
+				"INVALID_CUSTOMER_VOUCHER": "અમાન્ય ગ્રાહક વાઉચર",
+				"slotUnavailable": "પસંદ કરેલો સમય ઉપલબ્ધ નથી",
+				"slotUnavailableExplanationWithSuggestion": "પસંદ કરેલો સમય ભૂતકાળમાં છે અથવા હવે ઉપલબ્ધ નથી. આગળ ઉપલબ્ધ સમય:",
+				"socialLoginFailed": "અમે તમારા એકાઉન્ટ સાથે કનેક્ટ કરી શક્યાં નથી",
+				"customerDetailsUpdateFailed": "પ્રોફાઇલ ડેટા અપડેટ કરવામાં નિષ્ફળ",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "સ્ટોર આ સ્થાન પર પહોંચાડતું નથી",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "અમે તમને પ્રદાન કરેલ સરનામું શોધી શકતા નથી. કૃપા કરી સરનામું અપડેટ કરો અને ફરીથી પ્રયાસ કરો અથવા સ્ટોરનો સંપર્ક કરો.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "ચોક્કસ સમય અને તારીખે ઓર્ડર આપવાનું શક્ય નથી. કૃપા કરીને કોઈ વિકલ્પ પસંદ કરો.",
+				"MISSING_LOCATION_TAP_ID": "ટેપ ID ફરજિયાત છે",
+				"invalidPin": "અમાન્ય ગ્રાહક પિન કોડ"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "તમારો ઓર્ડર તમને આપવામાં આવશે"
+					},
+					"unknown": {
+						"location": "તમારો ઓર્ડર તમને આપવામાં આવશે"
+					}
+				},
+				"pickup": "ઓર્ડર પસંદ કરો",
+				"addressDelivery": "કૃપા કરીને તમારી માહિતી પ્રદાન કરો"
+			},
+			"yourInformationPlease": "કૃપા કરીને તમારી માહિતી પ્રદાન કરો",
+			"locationCode": "ટેબલ",
+			"yourName": "તમારું નામ",
+			"email": "ઇમેઇલ",
+			"phoneNumber": "ફોન નંબર",
+			"fullName": "પૂર્ણ નામ",
+			"streetAddress": "શેરીનું સરનામું",
+			"zip": "પિન / પોસ્ટલ કોડ",
+			"town": "શહેર / શહેર",
+			"minimumAmount": "ડિલિવરી માટે minimum {{amount}} of ની ઓછામાં ઓછી amountર્ડર રકમ આવશ્યક છે",
+			"deliveryFee": "ડિલિવરી ચાર્જ",
+			"deliveryFeeApplicable": "Orders {{amount}} below નીચેના ઓર્ડર માટે લાગુ",
+			"field": {
+				"generalValidation": "ફીલ્ડ ફોર્મેટ માન્ય નથી"
+			},
+			"acceptTerm": "આગળ વધીને તમે ઉપયોગની શરતો agree} અને {{ગોપનીયતા નીતિ થી સંમત થાઓ છો.",
+			"termsAndPolicy": "આગળ વધીને તમે",
+			"acceptTerms": {
+				"and": "અને",
+				"after": "آپ اتفاق"
+			},
+			"termsOfUse": "ઉપયોગની શરતો",
+			"privacyPolicy": "ગોપનીયતા નીતિ",
+			"yourTable": "તમારું ટેબલ",
+			"allowedCharacters": "માન્ય અક્ષરો",
+			"wishTimeHeading": "તમે ક્યારે તમારો ઓર્ડર મેળવવા માંગો છો?",
+			"asSoonAsPossible": "હું તેને શક્ય તેટલી વહેલી તકે પ્રાપ્ત કરવા માંગું છું",
+			"specifyWishTime": "હું તે પ્રાપ્ત કરવા માટે જ્યારે સ્પષ્ટ કરવા માંગો છો",
+			"specialNoteExample": "તમારા ઓર્ડર પર એક ખાસ નોંધ ઉમેરો",
+			"cardDisabledNote": "કૃપા કરીને જ્યારે તમે તૈયાર હોવ ત્યારે ઓર્ડર  સ્ટોર નામ  સાથે તમારો ઓર્ડર શેર કરો",
+			"cardHolderName": "કાર્ડ ધારક નું નામ",
+			"cardNumber": "તમારો કાર્ડ નંબર",
+			"cvv": "CVV",
+			"itemsOutOfStock": "કેટલીક વસ્તુઓ સ્ટોકની બહાર છે",
+			"floor": "ફ્લોર",
+			"storeClosedAtOrderWishDate": "સ્ટોર ઇચ્છિત ઇચ્છા તારીખ અથવા સમય પર બંધ છે",
+			"offersNotAvailableAtOrderWishDate": "કેટલીક offersફર્સ ઇચ્છિત ઇચ્છા તારીખ અથવા સમય પર ઉપલબ્ધ નથી",
+			"updateOrder": "Updateર્ડર અપડેટ કરો",
+			"offers": {
+				"availableQuantity": "હાલમાં ઉપલબ્ધ છે"
+			},
+			"voucherCode": "વાઉચર કોડ દાખલ કરો",
+			"validVoucherCode": "વાઉચર કોડ માન્ય છે",
+			"yourRoom": "તમારો ઓરડો",
+			"yourLocation": "તમારું સ્થાન",
+			"serveOption": {
+				"location": "હું તેને મારા સ્થાન પર પ્રાપ્ત કરવા માંગુ છું",
+				"room": "હું મારા રૂમમાં છું"
+			},
+			"social": {
+				"connect": "સામાજિક ખાતા સાથે જોડાઓ"
+			},
+			"remainingValidVoucher": "વાઉચર પર બાકીનું સંતુલન:",
+			"paymentsense": {
+				"declined": "પેમેન્ટસેન્સ દ્વારા paymentનલાઇન ચુકવણી નામંજૂર કરવામાં આવી છે"
+			},
+			"saveCustomerDetailsForFuture": "ભવિષ્યના ઓર્ડર માટે તમારો પ્રોફાઇલ ડેટા સાચવો",
+			"customerDetailsUpdateSuccess": "તમારો પ્રોફાઇલ ડેટા અપડેટ કરવામાં આવ્યો છે",
+			"logout": "લૉગ આઉટ",
+			"expiry": "સમાપ્તિ તારીખ (MMYY)",
+			"enterPin": "પિન નંબર દાખલ કરો"
+		},
+		"payment": {
+			"payOnlineNow": "હવે ઓનલાઇન ચૂકવણી કરવાનું પસંદ કરો",
+			"chooseYourPaymentMethod": "તમારી ચુકવણીની પદ્ધતિ પસંદ કરો",
+			"creditCard": "ક્રેડીટ કાર્ડ",
+			"paypal": "પેપલ",
+			"submitOrder": "તમારો ઓર્ડર સબમિટ કરો",
+			"proceedToPayment": "ચુકવણી માટે આગળ ધપાવો",
+			"errorCouldNotConnect": "અમે પસંદ કરેલા ચુકવણી પ્રોસેસરથી કનેક્ટ કરવામાં સમર્થ ન હતા. કૃપા કરીને ચેકઆઉટ સ્ક્રીન પર પાછા જાઓ અને બીજી ચુકવણી પદ્ધતિ પસંદ કરો અથવા પછીથી ફરી પ્રયાસ કરો.",
+			"enterCreditCardInfo": "કૃપા કરીને તમારી ક્રેડિટ અથવા ડેબિટ કાર્ડ માહિતી દાખલ કરો",
+			"yourOrderIsReady": "તમારો ઓર્ડર તૈયાર છે",
+			"yourOrderIsExpected": "તમારો ઓર્ડર અપેક્ષિત છે",
+			"errors": {
+				"valueNotValid": "પ્રદાન કરેલ કિંમત માન્ય નથી",
+				"zipNotAvailable": "તમે આ પોસ્ટલ કોડ પર deliveryનલાઇન ડિલિવરી orderર્ડર આપી શકતા નથી. વધુ માહિતી માટે કૃપા કરીને સ્ટોરનો સંપર્ક કરો",
+				"addressNotAvailable": "સરનામું મળી શકતું નથી. કૃપા કરીને સૂચનોમાંથી શેરીનું સરનામું પસંદ કરો."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "હવે Payનલાઇન ચૂકવણી કરો",
+			"digitalWallets": "ડિજિટલ વોલેટ્સ",
+			"creditCardSecure": "સુરક્ષિત ક્રેડિટ કાર્ડ ચુકવણીઓ",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "તમારો ઓર્ડર નંબર",
+			"orderStatus": "ઓર્ડર સ્થિતિ",
+			"notSubmitted": "હજી રજુ નથી કરાઈ",
+			"sent": "મોકલેલો",
+			"ready": "તૈયાર છે",
+			"rejected": "નામંજૂર",
+			"startNewOrder": "નવો ઓર્ડર પ્રારંભ કરો",
+			"errors": {
+				"emailProperFormat": "કૃપા કરીને માન્ય ઇમેઇલ દાખલ કરો"
+			},
+			"fiilEmailAddress": "તમારા ઓર્ડરની નકલ મેળવવા માટે તમારું ઇમેઇલ સરનામું ભરો",
+			"failedEmail": "ઇમેઇલ મોકલવામાં નિષ્ફળ",
+			"emailSent": "ઇમેઇલ મોકલાય ગયો",
+			"received": "પ્રાપ્ત થયો",
+			"accepted": "સ્વીકાર્યું",
+			"mobileAppPromotion": "ગોનાઓર્ડર મોબાઇલ એપ્લિકેશન દ્વારા આગલી વખતે હુકમ"
+		},
+		"dialog": {
+			"ok": "બરાબર",
+			"cancel": "રદ કરો"
+		},
+		"store": {
+			"currently": {
+				"closed": "સ્ટોર હાલમાં બંધ છે"
+			},
+			"time": {
+				"closed": "સ્ટોર પસંદ કરેલા સમયે બંધ છે"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "શાકાહારી",
+						"vegan": "વેગન",
+						"celery": "સેલરી",
+						"wheat": "ઘઉં",
+						"crustaceans": "ક્રસ્ટેસીઅન્સ",
+						"eggs": "ઇંડા",
+						"fish": "માછલી",
+						"lupin": "લ્યુપિન",
+						"milk": "દૂધ",
+						"molluscs": "મોલસ્ક",
+						"mustard": "સરસવ",
+						"nuts": "બદામ",
+						"peanuts": "મગફળી",
+						"sesame": "તલ",
+						"soya": "સોયા",
+						"sulphurDioxide": "સલ્ફર ડાયોક્સાઇડ",
+						"halal": "હલાલ",
+						"barley": "જવ",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "આ વેબસાઇટ તમારા અનુભવને સુધારવા માટે કૂકીઝનો ઉપયોગ કરે છે, પરંતુ જો તમે ઇચ્છો તો તમે પસંદ કરી શકો છો.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "લાગુ કરો"
+		},
+		"cookie": {
+			"accept": "સ્વીકારો",
+			"reject": "અસ્વીકાર કરો",
+			"readMore": "વધુ વાંચો"
+		},
+		"connect": {
+			"social": {
+				"google": "ગૂગલ સાથે જોડાઓ",
+				"facebook": "ફેસબુક સાથે જોડાઓ"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "તમારી ટોપલી ખાલી છે",
+				"proceed": "આગળ વધો"
+			}
+		},
+		"main": {
+			"typeUrl": "URL અથવા સ્ટોરનું નામ લખો",
+			"invalidUrl": "URL અમાન્ય છે",
+			"scanQRCode": "QR કોડ સ્કેન કરો",
+			"storeNotFound": "દુકાન મળી ન હતી",
+			"storeSaved": "સ્ટોર માહિતી સફળતાપૂર્વક સાચવી!",
+			"navigateStoreConfirm": "સ્ટોર પર નેવિગેટ કરીએ?"
+		},
+		"recents": {
+			"nothingFound": "અહીં કશું મળ્યું નથી"
+		}
+	}
+}

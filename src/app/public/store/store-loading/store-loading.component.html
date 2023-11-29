@@ -1,0 +1,68 @@
+<div class="loading-screen d-flex justify-content-center align-items-center w-100" *ngIf="!langLoaded || (storeViewState$ | async)?.state === 'LOADING'">
+    <div class="d-flex flex-column text-center">
+      <div class="lds-ripple mx-auto"><div></div><div></div></div>
+      <div class="loading-message" [ngClass]="{'invisible': !langLoaded}">{{'public.load.loadingMessage' | translate}}</div>
+    </div>
+  </div>
+<div
+  class="h-100"
+  [ngClass]="{'d-none': !langLoaded || (storeViewState$ | async)?.state === 'LOADING', 'mx--30': isPos}"
+  [ngSwitch]="(storeViewState$ | async)?.state"
+  [ngStyle]="{'padding-bottom.px': showCookieMessage ? cookieBarHeight : 0}"
+  (window:resize)="calcViewPortHeight()"
+>
+  <app-store-dashboard [acceptTermVisible]="showCookieMessage" 
+    *ngSwitchCase="'LOADED'"></app-store-dashboard>
+  <app-store-item-details
+    *ngSwitchCase="'VIEWPRODUCTDETAILS'"></app-store-item-details>
+  <app-store-item-details
+    *ngSwitchCase="'VIEWPRODUCTDETAILSFROMCARTVIEW'"></app-store-item-details>
+  <app-store-checkout
+    *ngSwitchCase="'VIEWCART'"></app-store-checkout>
+  <app-store-checkout-payment
+    *ngSwitchCase="'CHECKOUT'"></app-store-checkout-payment>
+  <app-store-thank-you
+    *ngSwitchCase="'THANKYOUPAGE'"></app-store-thank-you>
+  <app-store-error
+    *ngSwitchCase="'ERRORPAGE'"></app-store-error>
+  <app-store-empty-cart
+    *ngSwitchCase="'EMPTYCARTPAGE'"></app-store-empty-cart>
+</div>
+<div class="cookie-bar" *ngIf="showCookieMessage" #cookieBar (window:resize)="calcCookieBarHeight()" (resize)="calcCookieBarHeight()">
+  <span>
+    {{'public.store.cookie'|translate}}
+    <br>
+    <a role="button" class="cookie-button accept-button" (click)="onAcceptCookie()">
+      {{'public.cookie.accept'|translate}}
+    </a>
+    <a role="button" class="cookie-button reject-button" (click)="onRejectCookie()">
+      {{'public.cookie.reject'|translate}}
+    </a>
+    <a href="https://www.gonnaorder.com/cookies/?lang={{lang}}" target="_blank" (click)="openReadMoreModal($event, 'cookie')" class="read-more-link">
+      {{'public.cookie.readMore'|translate}}
+    </a>
+  </span>
+  <p class="font-size-secondary text-center mb-0 py-1 bg-white">{{'public.global.poweredByGonnaOrder' | translate}}</p>
+</div>
+
+<div
+class="readmore-selector-container d-flex flex-wrap justify-content-center align-items-center hide"
+#refEl
+#readMoreSelectorModal
+(click)="OnCheckOutsideClose()"
+>
+<div class="selection-container p-4 position-absolute">
+  <div class="header-container d-flex flex-wrap">
+    <div class="w-100">
+      <div class="text-center justify-content-center font-size-title font-weight-bold">
+        <span class="float-right position-absolute" style="cursor: pointer;top: 5px;right:15px;">
+          <i class="fas fa-times" style="color:black"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="readmore-container container py-2">
+    <iframe *ngIf="currentPopUpFrom === 'cookie'" frameborder="0" width="100%"  height="600" src="https://www.gonnaorder.com/cookie/?hideheaderfooter=true"></iframe>
+  </div>
+</div>
+</div>

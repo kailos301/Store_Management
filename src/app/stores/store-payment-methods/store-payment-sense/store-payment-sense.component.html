@@ -1,0 +1,96 @@
+<div class="card list mb-0">
+  <div class="card-body py-0">
+    <div class="row">
+      <div class="col-xl-2 col-lg-4">
+        <img src="assets/img/payment_logos/paymentsense.svg" width="100%" style="max-width: 220px">
+      </div>
+      <div class="col-xl-10 col-lg-8">
+        <label class="col-form-label d-block mb-2 py-0">{{'admin.store.payment.paymentSense.userMsg' | translate}}</label>
+        <button *ngIf="!showFields && !paymentSenseConnected" class="btn btn-primary px-5" (click)="onPaymentSenseClicked()">{{'admin.store.payment.paymentSenseConnect' | translate}}</button>
+        <form [formGroup]="paymentSenseForm" *ngIf="showFields && !paymentSenseConnected">
+          <div class="row">
+            <div class="col-md-2">
+              {{'admin.store.setting.integrations.username'|translate}}
+            </div>
+            <div class="col-md-5">
+              <input type="text" formControlName="PAYMENTSENSE_GATEWAY_USERNAME"
+                class="form-control" maxlength="100">
+              <div class="invalid-feedback" *ngIf="getControl('PAYMENTSENSE_GATEWAY_USERNAME').errors?.required && getControl('PAYMENTSENSE_GATEWAY_USERNAME').touched">
+                <span>
+                  {{'admin.global.field.required'|translate}}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col-md-2">
+              {{'admin.global.password'|translate}}
+            </div>
+            <div class="col-md-5">
+              <input type="password" formControlName="PAYMENTSENSE_GATEWAY_PASSWORD"
+                maxlength="100" class="form-control">
+              <div class="invalid-feedback" *ngIf="getControl('PAYMENTSENSE_GATEWAY_PASSWORD').errors?.required && getControl('PAYMENTSENSE_GATEWAY_PASSWORD').touched">
+                <span>
+                  {{'admin.global.field.required'|translate}}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col-md-2">
+              {{'admin.store.payment.paymentSense.jwtToken'|translate}}
+            </div>
+            <div class="col-md-5">
+              <input type="text" formControlName="PAYMENTSENSE_JWT_TOKEN" class="form-control">
+              <div class="invalid-feedback" *ngIf="getControl('PAYMENTSENSE_JWT_TOKEN').errors?.required && getControl('PAYMENTSENSE_JWT_TOKEN').touched">
+                <span>
+                  {{'admin.global.field.required'|translate}}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-5 d-flex flex-row-reverse">
+              <button class="btn btn-primary px-5" (click)="connect()">
+                {{'admin.store.setting.integrations.connect'|translate}}
+              </button>
+            </div>
+          </div>
+        </form>
+        <ng-container *ngIf="paymentSenseConnected">
+          <div class="row">
+            <div class="col-md-2">Username</div>
+            <div class="col-md-4">{{paymentSenseUsername}}</div>
+            <div class="col-md-2">
+              <button class="btn btn-danger px-5" (click)="disconnect()">
+                {{'admin.store.disconnect'|translate}}
+              </button>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-6">
+              <div class="form-group mb-3 mb-md-0">
+                <label class="form-check-label">
+                  {{'admin.store.payment.creditCard'|translate}}
+                  <img class="ml-3 cc-payment-image" src="assets/img/payment-credit-card.png">
+                </label>&nbsp;
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group mb-0">
+                <label>{{'admin.store.disabled'|translate}}</label>&nbsp;
+                <label class="switch pt-1 mb-0">
+                  <input type="checkbox" [(ngModel)]="paymentSenseEnabled" (ngModelChange)="togglePaymentsensePayments($event)" />
+                  &nbsp;<span class="slider round"></span>
+                </label>&nbsp;
+                <label>{{'admin.store.enabled'|translate}}</label>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

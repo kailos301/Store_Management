@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "Cu sprijinul",
+			"thankYou": "Mulțumesc",
+			"discount": "Reducere",
+			"viewOrder": "Vezi comanda",
+			"errorH2": "Ceva n-a mers bine",
+			"errorUnexpected": "Ceva neașteptat s-a întâmplat",
+			"errorExpected": "Ceva neașteptat s-a întâmplat",
+			"errorMustSelectOne": "Trebuie să selectați o valoare",
+			"errorTrialExceeded": "Această funcționalitate nu este disponibilă. Restricțiile de încercare au fost depășite",
+			"emptyCart": "Nu există articole în comanda dvs.",
+			"optional": "(Opțional)",
+			"cookies": "Acest site foloseste cookies.Continuând să navigaţi pe acest website sunteţi de acord cu utilizarea acestora",
+			"more": "Mai Mult",
+			"less": "Mai puțin",
+			"chooseFrom": "Alege din",
+			"standard": "Standard",
+			"days": {
+				"mon": "Luni",
+				"tue": "Marţi",
+				"wed": "Miercuri",
+				"thu": "Joi",
+				"fri": "Vineri",
+				"sat": "Sâmbătă",
+				"sun": "Duminică"
+			},
+			"opentimelist": "Ora Deschiderii",
+			"newVersionAvailable": "Rulați o versiune mai veche a aplicației. Reîncărcați aplicația pentru a primi cea mai recentă actualizare",
+			"reloadApplication": "Reîncărcați aplicația",
+			"poweredByGonnaOrder": "Powered by Gonnaorder",
+			"recents": "Recente",
+			"information": "informație",
+			"yes": "da",
+			"no": "Nu",
+			"error": "Eroare",
+			"errorQRScanner": "A apărut o eroare cu QR Scanner!",
+			"confirm": "A confirma"
+		},
+		"select": {
+			"selectAtLeast": "Trebuie să selectați cel puțin {{x}}",
+			"selectAtmost": "Puteți selecta cel mult {{x}}",
+			"selectAtleastAtMost": "Trebuie să selectați cel puțin {{x}} și cel mult {{y}}",
+			"selectBetween": "Trebuie să selectați între valorile {{childCategory.min}} și {{childCategory.max}}."
+		},
+		"load": {
+			"loadingMessage": "Un moment va rog ..."
+		},
+		"itemDetails": {
+			"removeFromOrder": "Eliminați acest lucru din comanda dvs.",
+			"addToOrder": "Adăugați la comanda dvs.",
+			"updateOrder": "Actualizați-vă comanda"
+		},
+		"checkout": {
+			"yourOrder": "Comanda dumneavoastră",
+			"total": "Total",
+			"specialNote": "Adaugă o notă specială la comanda ta",
+			"howToReceiveYourOrder": "Cum ați dori să primiți comanda dvs.?",
+			"option": {
+				"pickup": "O voi ridica singură",
+				"addressDelivery": "Doresc să îl primesc pe e-mailul meu",
+				"serve": {
+					"location": "Stau lângă o masă"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "Nu am putut salva detaliile comenzii dvs.",
+				"fieldRequired": "Acest câmp este obligatoriu",
+				"selectFutureTime": "Vă rugăm să selectați ora în viitor",
+				"orderSubmissionFailed": "Comanda nu poate fi trimisă",
+				"ORDER_LOCATION_NOT_PRESENT": "Numărul tabelului sau numele locației lipsește",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "Unele informații necesare despre clienți lipsesc",
+				"ORDER_WISH_TIME_INVALID": "Timpul dorit dorit este în trecut",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "Metoda de livrare a comenzii lipsește",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "Livrarea la adresă nu este acceptată",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "Serviciul comenzii nu este acceptat",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "Preluarea comenzii nu este acceptată",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "Livrarea la codul poștal specificat nu este acceptată",
+				"OPENING_TIME_SCHEDULE_ERROR": "Magazinul este închis la ora dorită a comenzii selectate",
+				"PROMOTION_NOT_ELIGIBLE": "Este selectată o promoție, dar nu este eligibilă",
+				"offersUnavailableExplanation": "Articolele de mai jos nu sunt disponibile la data și ora specificate. Vă rugăm să faceți clic pe actualizați comanda pentru a le elimina din comanda dvs.",
+				"offersOutOfStockExplanation": "Nu sunt suficiente articole disponibile",
+				"invalidVoucherCode": "Codul voucherului este nevalid",
+				"INVALID_INPUT": "Eroare la procesarea detaliilor furnizate.",
+				"slotUnavailableExplanation": "Intervalul de timp solicitat nu este disponibil. Vă rugăm să selectați un interval de timp diferit sau selectați o altă metodă de livrare.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "Nu este posibil să solicitați o comandă pentru aceeași zi pentru acest magazin.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "Nu este posibil să solicitați o comandă pentru aceeași zi pentru zona dvs.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "Nu este posibil să solicitați o comandă pentru aceeași zi pentru următoarele articole:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "Nu este posibil să livrați în codul dvs. poștal pentru ora și ziua solicitate.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "Nu este posibil să livrați comenzi la data și ora specifică. Vă rugăm să selectați o alternativă.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "Nu este posibil să ridicați comenzile la data și ora specifică. Vă rugăm să selectați o alternativă.",
+				"INTERNAL_ERROR": "A apărut o eroare neașteptată. Reîncărcați aplicația pentru a încerca din nou.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "Suma minimă a comenzii de livrare nu a fost îndeplinită. Adăugați o altă valoare de {{AMOUNT_MISSING}} la comanda dvs. pentru a continua.",
+				"paymentFailed": "Nu ați reușit să plătiți online utilizând această metodă de plată. Vă rugăm să încercați din nou.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "Promoțiile necesare nu sunt aplicate",
+				"INVALID_CUSTOMER_VOUCHER": "Voucher client nevalid",
+				"slotUnavailable": "Ora selectată nu este disponibilă",
+				"slotUnavailableExplanationWithSuggestion": "Ora selectată este în trecut sau nu mai este disponibilă. Următoarea oră disponibilă:",
+				"socialLoginFailed": "Nu ne-am putut conecta la contul dvs.",
+				"customerDetailsUpdateFailed": "Actualizarea datelor de profil nu a reușit",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "Magazinul nu livrează în această locație",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "Nu putem găsi adresa pe care ați furnizat-o. Actualizați adresa și încercați din nou sau contactați magazinul.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "Nu este posibilă trimiterea comenzilor la data și ora specifică. Vă rugăm să selectați o alternativă.",
+				"MISSING_LOCATION_TAP_ID": "ID-ul de atingere este obligatoriu",
+				"invalidPin": "Cod PIN client nevalid"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "Comanda dvs. va fi expediată"
+					},
+					"unknown": {
+						"location": "Comanda dvs. va fi expediată"
+					}
+				},
+				"pickup": "Preluarea comenzii",
+				"addressDelivery": "Datele dvs. vă rugăm"
+			},
+			"yourInformationPlease": "Datele dvs. vă rugăm",
+			"locationCode": "Masă",
+			"yourName": "Numele tău",
+			"email": "E-mailul",
+			"phoneNumber": "Număr de telefon",
+			"fullName": "Numele complet",
+			"streetAddress": "Adresa străzii",
+			"zip": "Codul poştal",
+			"town": "Localitatea/Oraşul",
+			"minimumAmount": "Pentru livrare este necesară o sumă minimă de comandă de {{amount}}",
+			"deliveryFee": "Taxă de livrare",
+			"deliveryFeeApplicable": "Aplicabil pentru comenzile sub {{amount}}",
+			"field": {
+				"generalValidation": "Formatul câmpului nu este valid"
+			},
+			"acceptTerm": "Procedând acceptați {{Termenii de utilizare}} și {{Politica de confidențialitate}}",
+			"termsAndPolicy": "Procedând acceptați",
+			"acceptTerms": {
+				"and": "şi",
+				"after": ""
+			},
+			"termsOfUse": "Termenii de utilizare",
+			"privacyPolicy": "Politica de confidențialitate",
+			"yourTable": "Masa ta",
+			"allowedCharacters": "Caractere permise",
+			"wishTimeHeading": "Când doriți să primiți comanda dvs.?",
+			"asSoonAsPossible": "Vreau să-l primesc cât mai curând",
+			"specifyWishTime": "Vreau să specific când să o primesc",
+			"specialNoteExample": "Adaugă o notă specială la comanda ta",
+			"cardDisabledNote": "Vă rugăm să împărtășiți comanda dvs. cu magazinul când sunteți gata",
+			"cardHolderName": "Nume Deținător Card",
+			"cardNumber": "Numărul cardului dvs.",
+			"cvv": "CVV",
+			"itemsOutOfStock": "Unele articole sunt epuizate",
+			"floor": "Podea",
+			"storeClosedAtOrderWishDate": "Magazinul este închis la data sau ora dorită",
+			"offersNotAvailableAtOrderWishDate": "Unele oferte nu sunt disponibile la data sau ora dorită",
+			"updateOrder": "Actualizați comanda",
+			"offers": {
+				"availableQuantity": "Disponibil acum"
+			},
+			"voucherCode": "Introduceți un cod voucher",
+			"validVoucherCode": "Codul voucherului este valid",
+			"yourRoom": "Camera ta",
+			"yourLocation": "Locația ta",
+			"serveOption": {
+				"location": "Vreau să-l primesc la locația mea",
+				"room": "eu sunt în camera mea"
+			},
+			"social": {
+				"connect": "Conectați-vă cu contul social"
+			},
+			"remainingValidVoucher": "Sold restant pe voucher:",
+			"paymentsense": {
+				"declined": "Plata online prin Paymentsense a fost refuzată"
+			},
+			"saveCustomerDetailsForFuture": "Salvați datele de profil pentru comenzi viitoare",
+			"customerDetailsUpdateSuccess": "Datele profilului dvs. au fost actualizate",
+			"logout": "Deconectați-vă",
+			"expiry": "Data de expirare (LLAA)",
+			"enterPin": "Introduceți numărul PIN"
+		},
+		"payment": {
+			"payOnlineNow": "Selectați pentru a plati online acum",
+			"chooseYourPaymentMethod": "Alegeti metoda de plata",
+			"creditCard": "Card de credit",
+			"paypal": "Paypal",
+			"submitOrder": "Trimiteți comanda",
+			"proceedToPayment": "Finalizați plata",
+			"errorCouldNotConnect": "Nu ne-am putut conecta la procesorul de plată selectat. Vă rugăm să vă întoarceți la ecranul de checkout și selectați o altă metodă de plată sau încercați din nou mai târziu.",
+			"enterCreditCardInfo": "Vă rugăm introduceţi datele unui card de credit sau debit",
+			"yourOrderIsReady": "Comanda dvs.este gata",
+			"yourOrderIsExpected": "Comanda dvs. este în aşteptare",
+			"errors": {
+				"valueNotValid": "Valoarea furnizată nu este validă",
+				"zipNotAvailable": "Nu puteți plasa o comandă de livrare online la acest cod poștal. Vă rugăm să contactați magazinul pentru mai multe informații",
+				"addressNotAvailable": "Adresa nu poate fi găsită. Vă rugăm să selectați o adresă de stradă din sugestii."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "Plătește online acum",
+			"digitalWallets": "Portofele digitale",
+			"creditCardSecure": "Plăți securizate cu cardul de credit",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "Numărul dvs. de comandă",
+			"orderStatus": "Starea comenzii",
+			"notSubmitted": "Nu a fost încă trimis",
+			"sent": "Trimis",
+			"ready": "Gata",
+			"rejected": "Respins",
+			"startNewOrder": "Începeți o nouă comandă",
+			"errors": {
+				"emailProperFormat": "Te rog introdu un email valid"
+			},
+			"fiilEmailAddress": "Completați adresa de e-mail pentru a primi o copie a comenzii dvs.",
+			"failedEmail": "Eroare la trimiterea e-mail",
+			"emailSent": "Email trimis",
+			"received": "Primit",
+			"accepted": "Acceptat",
+			"mobileAppPromotion": "Data viitoare comandați prin aplicația mobilă GonnaOrder"
+		},
+		"dialog": {
+			"ok": "Bine",
+			"cancel": "Anulat"
+		},
+		"store": {
+			"currently": {
+				"closed": "Magazinul este închis în prezent"
+			},
+			"time": {
+				"closed": "Magazinul este închis la ora selectată"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "Vegetarian",
+						"vegan": "Vegetarian",
+						"celery": "Țelină",
+						"wheat": "Grâu",
+						"crustaceans": "Crustacee",
+						"eggs": "Ouă",
+						"fish": "Peşte",
+						"lupin": "Lupin",
+						"milk": "Lapte",
+						"molluscs": "Moluște",
+						"mustard": "Muştar",
+						"nuts": "Nuci",
+						"peanuts": "Arahide",
+						"sesame": "Susan",
+						"soya": "Soia",
+						"sulphurDioxide": "Dioxid de sulf",
+						"halal": "Halal",
+						"barley": "Orz",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "Acest site web folosește cookie-uri pentru a vă îmbunătăți experiența, dar puteți dori să renunțați dacă doriți.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "aplica"
+		},
+		"cookie": {
+			"accept": "Accept",
+			"reject": "Respinge",
+			"readMore": "Citeste mai mult"
+		},
+		"connect": {
+			"social": {
+				"google": "Conectați-vă cu Google",
+				"facebook": "Conecteaza-te cu Facebook"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "Coșul dvs. este gol",
+				"proceed": "Continua"
+			}
+		},
+		"main": {
+			"typeUrl": "Introdu o adresă URL sau un nume de magazin",
+			"invalidUrl": "Adresa URL este nevalidă",
+			"scanQRCode": "Scanați un cod QR",
+			"storeNotFound": "Magazinul nu a fost găsit",
+			"storeSaved": "Informațiile stocate au fost salvate cu succes!",
+			"navigateStoreConfirm": "Navigați la magazin?"
+		},
+		"recents": {
+			"nothingFound": "Nu s-a găsit nimic aici"
+		}
+	}
+}

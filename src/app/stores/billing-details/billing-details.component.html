@@ -1,0 +1,185 @@
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12">
+        <div class="card-body">
+            <div class="col-lg-12">
+                <form [formGroup]="billingForm" autocomplete="off">
+                    <div class="form-group row">
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 ">
+                            <label class="required">{{'admin.store.subscription.billing.businessName'|translate}}</label>
+                        </div>
+                        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                            <input type="text" class="form-control"
+                                [attr.placeholder]="'admin.store.subscription.billing.businessName' | translate"
+                                autocomplete="new-companyName"
+                                [class.is-invalid]="getControl('companyName').invalid && (getControl('companyName').dirty || getControl('companyName').touched)"
+                                id="companyName" maxlength="50" formControlName="companyName" />
+                            <div class="invalid-feedback" *ngIf="getControl('companyName').errors">
+                                <span
+                                    *ngIf="getControl('companyName').errors.required">{{'admin.global.field.required'|translate}}</span>
+                                <span
+                                    *ngIf="getControl('companyName').errors.minlength">{{'admin.global.field.minLength'|translate:
+                                    {minLength: getControl('companyName').errors.minlength.requiredLength} }}</span>
+                                <span
+                                    *ngIf="getControl('companyName').errors.maxlength">{{'admin.global.field.maxLength'|translate:
+                                    {maxLength: getControl('companyName').errors.maxlength.requiredLength} }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                            <label class="required">{{'admin.global.subscription.vatNumber.label'|translate}}</label>
+                        </div>
+                        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                            <input type="text" class="form-control"
+                                [attr.placeholder]="'admin.global.subscription.vatNumber.label' | translate"
+                                autocomplete="new-vatNumber" id="vatNumber"
+                                [class.is-invalid]="getControl('vatNumber').invalid && (getControl('vatNumber').dirty || getControl('vatNumber').touched)"
+                                maxlength="50" formControlName="vatNumber" />
+                            <div class="invalid-feedback" *ngIf="getControl('vatNumber').errors">
+                                <span
+                                    *ngIf="getControl('vatNumber').errors.required">{{'admin.global.field.required'|translate}}</span>
+                                <span
+                                    *ngIf="getControl('vatNumber').errors.minlength">{{'admin.global.field.minLength'|translate:
+                                    {minLength: getControl('vatNumber').errors.minlength.requiredLength} }}</span>
+                                <span
+                                    *ngIf="getControl('vatNumber').errors.maxlength">{{'admin.global.field.maxLength'|translate:
+                                    {maxLength: getControl('vatNumber').errors.maxlength.requiredLength} }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                            <label class="required">{{'admin.global.address'|translate}}</label>
+                        </div>
+                        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                            <div class="form-group row">
+                                <div class="col-xl-2 col-md-2 col-sm-2 required">
+                                    <label  class="required">{{'admin.global.addressLine1'|translate}}</label>
+                                </div>
+                                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                    <input type="text" class="form-control" 
+                                        formControlName="companyAddressLine1"
+                                        [attr.placeholder]="'admin.global.addressLine1' | translate"
+                                        autocomplete="new-companyAddressLine1"
+                                        [class.is-invalid]="getControl('companyAddressLine1').invalid && (getControl('companyAddressLine1').dirty || getControl('companyAddressLine1').touched)"
+                                        id="companyAddressLine1" maxlength="128" />
+                                    <div class="invalid-feedback" *ngIf="getControl('companyAddressLine1').errors">
+                                        <span
+                                            *ngIf="getControl('companyAddressLine1').errors.required">{{'admin.global.field.required'|translate}}</span>
+                                        <span
+                                            *ngIf="getControl('companyAddressLine1').errors.minlength">{{'admin.global.field.minLength'|translate:
+                                            {minLength:
+                                            getControl('companyAddressLine1').errors.minlength.requiredLength} }}</span>
+                                        <span
+                                            *ngIf="getControl('companyAddressLine1').errors.maxlength">{{'admin.global.field.maxLength'|translate:
+                                            {maxLength:
+                                            getControl('companyAddressLine1').errors.maxlength.requiredLength} }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-xl-2 col-md-2 col-sm-2 required">
+                                    <label>{{'admin.global.addressLine2'|translate}}</label>
+                                </div>
+                                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                                    <input type="text" class="form-control"
+                                        [attr.placeholder]="'admin.global.addressLine2' | translate"
+                                        autocomplete="new-companyAddressLine2" id="companyAddressLine2"
+                                        [class.is-invalid]="getControl('companyAddressLine2').invalid && (getControl('companyAddressLine2').dirty || getControl('companyAddressLine2').touched)"
+                                        maxlength="128" formControlName="companyAddressLine2" />
+                                    <div class="invalid-feedback" *ngIf="getControl('companyAddressLine2').errors">
+                                        <span
+                                            *ngIf="getControl('companyAddressLine2').errors.required">{{'admin.global.field.required'|translate}}</span>
+                                        <span
+                                            *ngIf="getControl('companyAddressLine2').errors.minlength">{{'admin.global.field.minLength'|translate:
+                                            {minLength:
+                                            getControl('companyAddressLine2').errors.minlength.requiredLength} }}</span>
+                                        <span
+                                            *ngIf="getControl('companyAddressLine2').errors.maxlength">{{'admin.global.field.maxLength'|translate:
+                                            {maxLength:
+                                            getControl('companyAddressLine2').errors.maxlength.requiredLength} }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-xl-2 col-md-2 col-sm-2 required">
+                                    <label  class="required">{{'admin.global.postCode'|translate}}</label>
+                                </div>
+                                <div class="col-xl-2 col-lg-12 mb-2">
+                                    <input type="text" class="form-control"
+                                        [attr.placeholder]="'admin.global.postCode' | translate"
+                                        formControlName="companyPostCode" autocomplete="new-companyPostCode"
+                                        [class.is-invalid]="getControl('companyPostCode').invalid && (getControl('companyPostCode').dirty || getControl('companyPostCode').touched)"
+                                        maxlength="128" />
+                                    <div class="invalid-feedback" *ngIf="getControl('companyPostCode').errors">
+                                        <span
+                                            *ngIf="getControl('companyPostCode').errors.required">{{'admin.global.field.required'|translate}}</span>
+                                        <span
+                                            *ngIf="getControl('companyPostCode').errors.minlength">{{'admin.global.field.minLength'|translate:
+                                            {minLength: getControl('companyPostCode').errors.minlength.requiredLength}
+                                            }}</span>
+                                        <span
+                                            *ngIf="getControl('companyPostCode').errors.maxlength">{{'admin.global.field.maxLength'|translate:
+                                            {maxLength: getControl('companyPostCode').errors.maxlength.requiredLength}
+                                            }}</span>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2 col-md-2 col-sm-2 required">
+                                    <label>{{'admin.store.region.label'|translate}}</label>
+                                </div>
+                                <div class="col-xl-2 col-lg-12 mb-2">
+                                    <input type="text" class="form-control"
+                                        [attr.placeholder]="'admin.store.region.label' | translate"
+                                        formControlName="companyRegion" id="companyRegion"
+                                        autocomplete="new-companyRegion"
+                                        [class.is-invalid]="getControl('companyRegion').invalid && (getControl('companyRegion').dirty || getControl('companyRegion').touched)"
+                                        maxlength="128" />
+                                    <div class="invalid-feedback" *ngIf="getControl('companyRegion').errors">
+                                        <span
+                                            *ngIf="getControl('companyRegion').errors.required">{{'admin.global.field.required'|translate}}</span>
+                                        <span
+                                            *ngIf="getControl('companyRegion').errors.minlength">{{'admin.global.field.minLength'|translate:
+                                            {minLength: getControl('companyRegion').errors.minlength.requiredLength}
+                                            }}</span>
+                                        <span
+                                            *ngIf="getControl('companyRegion').errors.maxlength">{{'admin.global.field.maxLength'|translate:
+                                            {maxLength: getControl('companyRegion').errors.maxlength.requiredLength}
+                                            }}</span>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2 col-md-2 col-sm-2 required">
+                                    <label  class="required">{{'admin.store.city.label'|translate}}</label>
+                                </div>
+                                <div class="col-xl-2 col-lg-12 mb-2">
+                                    <input type="text" class="form-control"
+                                        [attr.placeholder]="'admin.store.city.label' | translate"
+                                        formControlName="companyCity" autocomplete="new-companyCity" maxlength="128"
+                                        [class.is-invalid]="getControl('companyCity').invalid && (getControl('companyCity').dirty || getControl('companyCity').touched)" />
+                                    <div class="invalid-feedback" *ngIf="getControl('companyCity').errors">
+                                        <span
+                                            *ngIf="getControl('companyCity').errors.required">{{'admin.global.field.required'|translate}}</span>
+                                        <span
+                                            *ngIf="getControl('companyCity').errors.minlength">{{'admin.global.field.minLength'|translate:
+                                            {minLength: getControl('companyCity').errors.minlength.requiredLength}
+                                            }}</span>
+                                        <span
+                                            *ngIf="getControl('companyCity').errors.maxlength">{{'admin.global.field.maxLength'|translate:
+                                            {maxLength: getControl('companyCity').errors.maxlength.requiredLength}
+                                            }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="form-group row">
+                <div class="col-offset-2 col-xl-10 col-lg-9 col-md-12 col-sm-12">
+                    <button type="button" class="btn btn-primary" (click)="onSubmit()"
+                        [disabled]="billingForm.invalid"><i
+                            class="fas fa-save mr-2 pr-1"></i>{{'admin.global.save'|translate}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

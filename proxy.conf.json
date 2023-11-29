@@ -1,0 +1,8 @@
+{
+  "/api/*": {
+    "target": "https://admin.testgodev.nl/",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

@@ -1,0 +1,38 @@
+<div class="d-flex justify-content-center align-items-center flex-wrap my-n2">
+  <div class="d-flex flex-wrap align-items-center">
+    <mat-form-field class="hide-element">
+      <input class="hide-element" matInput [matDatepicker]="picker" [value]="wish$ | async" [min]="currentTime.toDate()" (dateChange)="onDatePickerChanged($event)">
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  </div>
+  <div class="d-flex align-items-center">
+    <div class="d-flex dateSelector">
+      <div class="d-flex p-2 px-3 arrow down" (click)="reduceDay()" [ngClass]="{'disabled': reduceDayDisabled()}">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+      <div *ngIf="deliveryTime">
+        <div class="d-flex py-2 px-0 space-nowrap" *ngIf="ulang==='ja'; else elseblock">
+          {{deliveryTime.startTime | localizedDate:'YYYY MMM DD':(userLang$ | async):browserTimeZone | async}}
+        </div>
+        <ng-template #elseblock>
+          <div class="d-flex py-2 px-0 space-nowrap">
+            {{deliveryTime.startTime | localizedDate:'DD MMM YYYY':(userLang$ | async):browserTimeZone | async}}
+          </div>
+        </ng-template>
+      </div>
+      <div class="d-flex p-2 px-3 arrow up" (click)="increaseDay()"><i class="fas fa-chevron-right"></i></div>
+    </div>
+    <div class="d-flex py-2 space-nowrap justify-content-center" *ngIf="deliveryTime" id="date_description" style="min-width: 85px; margin-right: 1rem;">
+      {{deliveryTime.startTime | localizedDate:'dddd':(userLang$ | async):browserTimeZone | async}}
+    </div>
+  </div>
+  <div class="d-flex py-2 mr-4" *ngIf="((!!((wish$ | async))) || showSlotSelection) && availableSlots.length > 0 && timeShowEnabled">
+    <select [(ngModel)]="selectedSlot" [compareWith]="compareSlotsFunction" (change)="slotSelected()">
+      <option *ngFor="let slot of availableSlots" [ngValue]="slot" [disabled]="slot.disabled">
+        {{slot.startTime | localizedDate:'HH:mm':(userLang$ | async):browserTimeZone | async}}
+        <span *ngIf="slot.endTime"> - {{slot.endTime | localizedDate:'HH:mm':(userLang$ | async):browserTimeZone | async}}</span>
+      </option>
+    </select>
+  </div>
+</div>

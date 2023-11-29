@@ -1,0 +1,428 @@
+<div>
+  <div class="col-lg-12 mb-4 d-flex align-items-center justify-content-between">
+    <a class="btn back-button btn-primary" [routerLink]="['/manager/stores/'+(id)+'/orders']">
+      <i class="fas fa-arrow-left mr-2"></i>
+      <span class="d-none d-md-inline-block d-lg-inline-block d-xl-inline-block ml-1">{{'admin.store.backToOrders'| translate}}</span>
+    </a>
+    <button type="button" class="btn btn-primary btn-order-confirm col-2" (click)="openCloseOrderPopup()">
+      <i style="margin-right: 5px;font-size: 20px;" class="fa fa-check"></i>
+      <span class="d-none d-md-inline-block d-lg-inline-block d-xl-inline-block ml-1">{{'admin.global.close'|translate}}</span>
+    </button>
+    <button type="button" class="btn btn-primary btn-order-reject col-2" (click)="openRejectOrderPopup()">
+      <i class="fa fa-times-circle" style="margin-right: 5px;font-size: 20px;"></i>
+      <span class="d-none d-md-inline-block d-lg-inline-block d-xl-inline-block ml-1">{{'admin.global.reject'|translate}}</span>
+    </button>
+    <div>
+      <button type="button" class="btn btn-primary" (click)="orderDownload()">
+        <i class="fas fa-file-download" style="margin-right: 5px;font-size: 20px;"></i>
+        <span class="d-none d-md-inline-block d-lg-inline-block d-xl-inline-block ml-1">{{'admin.store.orderDownload'|translate}}</span>
+      </button>
+      <button class="btn btn-primary" tooltip="Print" style="margin-left: 12px;" (click)="onOrderPrint()">
+        <i class="fa fa-print"></i>
+        <span class="d-none d-md-inline-block d-lg-inline-block d-xl-inline-block ml-1">{{'admin.global.print'|translate}}</span>
+      </button>
+    </div>
+  </div>
+  <div class="col-lg-12">
+    <div id="printsection" class="card list">
+      <div class="print-section">
+      <div class="card-header">
+        {{'admin.store.order.label'|translate}} {{order.orderToken}}
+        <app-help-icon [helpPageName]="orderDetailsHelpPage" class="helpIcon"></app-help-icon>
+      </div>
+      <div class="card-body order-details">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="d-flex flex-row justify-content-between">
+              <div class="flex-fill">
+                <div class="row mb-2">
+                  <div class="col-md-12">
+                    <div class="row m-0">
+                      <div class="col-md-6 marginb-2">
+                        <i *ngIf="order.deliveryMethod === 'IN_STORE_LOCATION'"
+                          class="material-icons-outlined "
+                        >
+                          room_service
+                        </i>
+                        <i *ngIf="order.deliveryMethod === 'NO_LOCATION'"
+                          class="material-icons"
+                        >
+                          shopping_basket
+                        </i>
+                        <i *ngIf="order.deliveryMethod === 'ADDRESS'"
+                          class="material-icons"
+                        >
+                          directions_bike
+                        </i>
+                        <span>
+                          {{ order.deliveryMethod == 'NO_LOCATION' ? ('admin.store.orderDeliveryMethod.pickup'|translate) : order.deliveryMethod == 'IN_STORE_LOCATION' ? ('admin.store.orderDeliveryMethod.serve'|translate) : (order.deliveryMethod == 'ADDRESS') ? ('admin.store.orderDeliveryMethod.deliver'|translate):'' }}
+                          <i *ngIf="order.customerName" class="fa fa-user mx-1"></i>
+                          {{order.customerName}}
+
+                          <i *ngIf="order.storeUserFirstName" class="fa fa-edit pl-2"></i>
+                          {{order.storeUserFirstName && order?.storeUserFirstName + ' ' + order?.storeUserLastName?.substring(0,1)}}
+                          
+                        </span>
+                      </div>
+                      <div class="col-md-6 mt-1 mt-md-0">
+                        <span *ngIf="order.customerPhoneNumber"><i class="text-primary fas fa-phone mr-2"></i>
+                          <span class="mr-2">{{order.customerPhoneNumber}}</span></span>
+                        <span *ngIf="order.customerEmail" class="text-nowrap"><i
+                            class="mr-2 text-primary far fa-envelope"></i>
+                          <span><a href="mailto:{{order.customerEmail}}">{{order.customerEmail}}</a></span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row m-0">
+                  <div class="col-md-6 mb-2" *ngIf="order.location" style="display: flex;">
+                    <span><i class="material-icons">room</i>{{order.location}}</span>
+                    <span class="ml-2" *ngIf="order.locationComment" [innerHTML]="'[ ' + order.locationComment + ' ]'"></span>
+                  </div>
+                  <div class="col-md-6 mb-2" *ngIf="order.deliveryMethod == 'ADDRESS'">
+                    <i class="material-icons"
+                      *ngIf="order.deliveryStreetAddress || order.deliveryPostCode || order.deliveryCity"
+                    >
+                      room
+                    </i>
+                    <ng-container *ngIf="order.deliveryStreetAddress">
+                      <span class="ml-1">{{order.deliveryStreetAddress}}, </span>
+                    </ng-container>
+                    <ng-container *ngIf="order.floorNumber">
+                      <span>{{'admin.store.order.floor'|translate}} {{order.floorNumber}} - </span>
+                    </ng-container>
+                    <ng-container *ngIf="order.deliveryPostCode">{{order.deliveryPostCode}} - </ng-container>
+                    {{order.deliveryCity}}
+                  </div>
+                </div>
+                <div class="row m-0" *ngIf="(storeLocaleTimeZone$ | async) as storeLocaleTimeZone">
+                  <div class="col-md-6 mb-2" *ngIf="order.createdAt">
+                    <i class="fas fa-paper-plane"></i>
+                    <span class="ml-2">{{'admin.store.order.orderSent'|translate}}</span>
+                    <ng-container *ngIf="dayCheck(order.createdAt) as createdAtDay">
+                      <span class="space-nowrap" *ngIf="!isJapanese">
+                        {{ order.createdAt | localizedDate:'HH:mm':storeLocaleTimeZone.locale:storeLocaleTimeZone.timezone | async }}
+                      </span>
+                      <span *ngIf="createdAtDay === DayType.YESTERDAY" class="space-nowrap">{{ 'admin.store.order.yesterday' | translate }}</span>
+                      <span *ngIf="createdAtDay === DayType.TODAY" class="space-nowrap">{{ 'admin.store.order.today' | translate }}</span>
+                      <span *ngIf="createdAtDay === DayType.TOMORROW" class="space-nowrap">{{ 'admin.store.order.tomorrow' | translate }}</span>
+                      <span *ngIf="createdAtDay === DayType.DEFAULT" class="space-nowrap">
+                        <span *ngIf="!isJapanese">
+                          {{ order.createdAt | localizedDate:'ddd DD MMM':storeLocaleTimeZone.locale:storeLocaleTimeZone.timezone | async }}
+                        </span>
+                        <span *ngIf="isJapanese">
+                          {{ order.createdAt | localizedDate:'MMM DD(ddd)':storeLocaleTimeZone.locale:storeLocaleTimeZone.timezone | async }}
+                        </span>
+                      </span>
+                      <span class="space-nowrap" *ngIf="isJapanese">
+                        - {{ order.createdAt | localizedDate:'HH:mm':storeLocaleTimeZone.locale:storeLocaleTimeZone.timezone | async }}
+                      </span>
+                    </ng-container>
+                    <div *ngIf="order.wishTime" class="mt-2">
+                      <i class="fas fa-star"></i>
+                      <span class="ml-2">{{'admin.store.order.orderWish'|translate}}</span>
+                      <span *ngIf="dayCheck(order.wishTime) as wishTimeDay">
+                        <span class="space-nowrap" *ngIf="!isJapanese">
+                          {{ order.wishTime | localizedDate:'HH:mm':storeLocaleTimeZone.locale:storeLocaleTimeZone.timezone | async }}
+                        </span>
+                        <ng-container *ngIf="!order.slotEndTime || isJapanese || dayCheck(order.slotEndTime) !== wishTimeDay">
+                          <span *ngIf="wishTimeDay === DayType.YESTERDAY" class="space-nowrap">
+                            {{ 'admin.store.order.yesterday' | translate }}
+                          </span>
+                          <span *ngIf="wishTimeDay === DayType.TODAY" class="space-nowrap">
+                            {{ 'admin.store.order.today' | translate }}
+                          </span>
+                          <span *ngIf="wishTimeDay === DayType.TOMORROW" class="space-nowrap">
+                            {{ 'admin.store.order.tomorrow' | translate }}
+                          </span>
+                          <span *ngIf="wishTimeDay === DayType.DEFAULT" class="space-nowrap">
+                            <span *ngIf="!isJapanese">
+                              {{ order.wishTime | localizedDate:'ddd DD MMM':storeLocaleTimeZone.locale:storeLocaleTimeZone.timezone | async }}
+                            </span>
+                            <span *ngIf="isJapanese">
+                              {{ order.wishTime | localizedDate:'MMM DD(ddd)':storeLocaleTimeZone.locale:storeLocaleTimeZone.timezone | async }}
+                            </span>
+                          </span>
+                        </ng-container>
+                        <span class="space-nowrap" *ngIf="isJapanese">
+                          {{ order.wishTime | localizedDate:'HH:mm':storeLocaleTimeZone.locale:storeLocaleTimeZone.timezone | async }}
+                        </span>
+                        <span class="space-nowrap" *ngIf="order.slotEndTime && dayCheck(order.slotEndTime) as endTimeDay">
+                          - 
+                          <span class="space-nowrap" *ngIf="!isJapanese">
+                            {{ order.slotEndTime | localizedDate:'HH:mm':storeLocaleTimeZone.locale:storeLocaleTimeZone.timezone | async }}
+                          </span>
+                          <ng-container *ngIf="!isJapanese || endTimeDay !== wishTimeDay">
+                            <span *ngIf="endTimeDay === DayType.YESTERDAY" class="space-nowrap">
+                              {{ 'admin.store.order.yesterday' | translate }}
+                            </span>
+                            <span *ngIf="endTimeDay === DayType.TODAY" class="space-nowrap">
+                              {{ 'admin.store.order.today' | translate }}
+                            </span>
+                            <span *ngIf="endTimeDay === DayType.TOMORROW" class="space-nowrap">
+                              {{ 'admin.store.order.tomorrow' | translate }}
+                            </span>
+                            <span *ngIf="endTimeDay === DayType.DEFAULT" class="space-nowrap">
+                              <span *ngIf="!isJapanese">
+                                {{ order.slotEndTime | localizedDate:'ddd DD MMM':storeLocaleTimeZone.locale:storeLocaleTimeZone.timezone | async }}
+                              </span>
+                              <span *ngIf="isJapanese">
+                                {{ order.slotEndTime | localizedDate:'MMM DD(ddd)':storeLocaleTimeZone.locale:storeLocaleTimeZone.timezone | async }}
+                              </span>
+                            </span>
+                          </ng-container>
+                          <span class="space-nowrap" *ngIf="isJapanese">
+                            {{ order.slotEndTime | localizedDate:'HH:mm':storeLocaleTimeZone.locale:storeLocaleTimeZone.timezone | async }}
+                          </span>
+                        </span>
+                      </span>
+                    </div>
+                    <div *ngIf="order.estimatedTime!=null && !order.isReady && order.status == 'CLOSED'" class="mt-2">
+                      <i class="fas fa-clock mr-2"></i>{{'admin.store.order.orderExpected'|translate}}
+                      {{ order.estimatedTime | localizedDate:'HH:mm':storeLocaleTimeZone.locale:storeLocaleTimeZone.timezone | async }}
+                      <ng-container *ngIf="dayCheck(order.estimatedTime) as estimatedTimeDay">
+                        <ng-container *ngIf="estimatedTimeDay === DayType.YESTERDAY" class="space-nowrap"> - {{ 'admin.store.order.yesterday' | translate }}</ng-container>
+                        <ng-container *ngIf="estimatedTimeDay === DayType.TODAY" class="space-nowrap"> - {{ 'admin.store.order.today' | translate }}</ng-container>
+                        <ng-container *ngIf="estimatedTimeDay === DayType.TOMORROW" class="space-nowrap"> - {{ 'admin.store.order.tomorrow' | translate }}</ng-container>
+                        <ng-container *ngIf="estimatedTimeDay === DayType.DEFAULT" class="space-nowrap"> - {{ order.estimatedTime | localizedDate:'ddd DD MMM':storeLocaleTimeZone.locale:storeLocaleTimeZone.timezone | async }}</ng-container>
+                      </ng-container>
+                    </div>
+                  </div>
+                  <div class="col-md-6"
+                    *ngIf="shouldDisplayTotal()"
+                    [ngClass]="{ 'phoneNumberSpacing': order.status =='DRAFT' || order.status =='SUBMITTED'|| order.status =='RECEIVED' }"
+                  >
+                    {{order.formattedTotalDiscountedPrice}}
+                    {{!order.paymentStatus || order.paymentStatus == 'NO_PAYMENT' ? ('admin.store.payment.notPaid'|translate) : ('admin.store.payment.paid'|translate)}}
+                  </div>
+                  <div class="col-md-6 mb-2" *ngIf="order.status === 'CLOSED' || order.status==='CANCELLED'">
+                    <div *ngIf="order.isReady && order.status == 'CLOSED'">
+                      <i class="fas fa-check"></i>
+                      <span class="ml-1"> {{'admin.store.orderIsReady'|translate}}</span>
+                    </div>
+                    
+                    <div class="ml-2" *ngIf="order.rejectReason!=null && order.status == 'CANCELLED'">
+                      <i class="fas fa-exclamation"></i><span class="ml-2"> {{order.rejectReason}}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div *ngIf="isOrderChangeable">
+                <button type="button" class="btn btn-primary" (click)="changeOrder()">
+                  <i class="fa fas fa-pen" style="margin-right: 5px;font-size: 20px;"></i>
+                  <span class="d-none d-md-inline-block d-lg-inline-block d-xl-inline-block ml-1">{{'admin.store.order.changeOrder'|translate}}</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="content pb-4 mx-auto pt-md-4 mt-4">
+              <div class="item-list px-lg-3" *ngIf="orderItems.length">
+                <ng-container *ngFor="let item of orderItems; last as isLastItem">
+                  <div class="item-wrapper d-flex flex-row mb-4" [ngClass]="(!shouldDisplayTotal() && isLastItem) ? 'no-border-bottom' : ''">
+                    <div class="qty" *ngIf="item.hierarchyLevel === 'PARENT'">
+                      <span>{{item.quantity}} x</span>
+                    </div>
+                    <div class="item flex-fill mb-3">
+                      <div class="p-0 mb-0 item-name">
+                        {{item.itemName}}
+                        <span *ngIf="item.offerPrice && isShowParentItemPrice(item)">( {{item.formattedOfferPrice}} )</span>
+                      </div>
+                      <div class="item-specs p-0 mb-0" *ngIf="item.priceDescription">
+                        <span>{{item.priceDescription}}</span>
+                      </div>
+                      <ng-container>
+                        <div class="item-specs p-0 mb-0" *ngIf="item.discountValue">
+                          <span class="discount">{{'admin.global.discount'|translate}} (- {{item.formattedDiscountValue}} )</span>
+                          <span class="discount-percentage" *ngIf="item.discountType==='PERCENTILE'">-{{item.discountValue}}%</span>
+                        </div>
+                        <div class="item-specs p-0 mb-0" *ngIf="item.childOrderItems?.length">
+                          <div *ngFor="let childItem of item.childOrderItems">
+                            <div>
+                              {{childItem.quantity > 1 ? childItem.quantity + ' x' : ''}} {{childItem.itemName}}
+                              <span *ngIf="childItem.offerPrice">( {{childItem.formattedOfferPrice}} )</span>
+                            </div>
+                          </div>
+                        </div>
+                      </ng-container>
+                      <div class="item-specs p-0 mb-0" *ngIf="item.comment">
+                        <span>"{{item.comment}}"</span>
+                      </div>
+                    </div>
+                    <div class="price text-right" *ngIf="item.hierarchyLevel === 'PARENT' || item.hierarchyLevel === 'RULE'">
+                      <div [ngClass]="{'striked':item.totalDiscountedPrice}" *ngIf="item.totalNonDiscountedPrice !== 0">
+                        {{item.formattedTotalNonDiscountedPrice}}</div>
+                      <div *ngIf="item.totalDiscountedPrice && item.totalDiscountedPrice > 0">{{item.formattedTotalDiscountedPrice}}
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
+                <div class="cart-total-wrapper d-flex flex-row mb-4" *ngIf="order.deliveryFee && shouldDisplayTotal()">
+                  <div class="total flex-fill">{{'admin.store.deliveryFee'|translate}}</div>
+                  <div class="price-normal text-right">{{order.formattedDeliveryFee}}</div>
+                </div>
+                <div class="cart-total-wrapper d-flex flex-row mb-4" *ngIf="order.voucherDiscount && shouldDisplayTotal()">
+                  <div class="total discount" [ngClass]="{'flex-fill': order.voucherDiscountType !== 'PERCENTILE'}">
+                    {{'admin.store.discountVoucher'|translate}}
+                    <span class="font-weight-normal pr-1">[{{order.voucherCode}}]</span>
+                    <span class="font-weight-normal">(- {{order.formattedVoucherDiscount}})</span>
+                  </div>
+                  <div class="total flex-fill discount-percentage" *ngIf="order.voucherDiscountType === 'PERCENTILE'">
+                    -{{order.voucherDiscountPercentage}}%
+                  </div>
+                  <div class="price-normal text-right">- {{order.formattedVoucherDiscount}}</div>
+                </div>
+                <div class="cart-total-wrapper d-flex flex-row mb-4" *ngIf="shouldDisplayTotal()">
+                  <div class="total flex-fill mb-3">{{'admin.store.statistics.total'|translate}}</div>
+                  <div class="price text-right"
+                    *ngIf="order.formattedTotalDiscountedPrice; else showNonDiscountedPrice"
+                  >
+                    {{order.formattedTotalDiscountedPrice}}
+                  </div>
+                  <ng-template #showNonDiscountedPrice>
+                    <div class="price text-right">
+                      {{order.formattedTotalNonDiscountedPrice}}
+                    </div>
+                  </ng-template>
+                </div>
+              </div>
+              <div class="option-wrapper" *ngIf="order.comment">
+                <div class="variant-wrapper my-2">
+                  <div class="px-lg-3 my-3 store-note section-title font-weight-bold">{{'admin.store.note'|translate}}</div>
+                  <div class="mx-3 row">
+                    <span class="col-md-12 pl-0">{{ order.comment }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="print-space"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #rejectOrder>
+  <div mat-dialog-title class="text-blue col-lg-12 mat-dialog-title">{{'admin.store.rejectOrder'|translate}}</div>
+  <mat-dialog-content>
+    <div class="row m-0">
+      <div class="col-md-12">
+        <label for="reject-without-reason" class="radio-container">{{'admin.store.rejectWithoutReason' | translate}}
+          <input type="radio" name="rejectOrderType" checked value="0" id="reject-without-reason" (click)="checkRejectWithReason(false)" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+    <div class="row m-0">
+      <div class="col-md-12">
+        <label for="reject-with-reason" class="radio-container">{{'admin.store.rejectWithReason' | translate}}
+          <input type="radio" [checked]="rejectWithReason" name="rejectOrderType" value="1" id="reject-with-reason" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+    <div class="row m-0">
+      <div class="col-md-10 reject-reason">
+        <input type="text" #rejectReason class="col-md-9" placeholder="Rejection Reason"
+          (click)="checkRejectWithReason(true)" />
+      </div>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <div class="float-right">
+        <a (click)="onNoClick()" type="button"
+          class="text-decoration-underline">{{'admin.global.cancel' | translate}}</a>
+        <button (click)="updateStatus(order.uuid, 'CANCELLED',rejectReason.value)"
+          class="btn btn-primary submit-btn ml-15">{{'admin.global.reject' | translate}}</button>
+      </div>
+    </div>
+  </mat-dialog-actions>
+</ng-template>
+
+<ng-template #closeOrder>
+  <div mat-dialog-title class="text-blue col-lg-12 mat-dialog-title">{{'admin.store.closeOrder'|translate}}</div>
+  <mat-dialog-content (keyup.enter)="updateStatus(order.uuid, 'CLOSED','')">
+    <div class="row m-0">
+      <div class="col-md-12">
+        <label for="accept-order" class="radio-container">{{'admin.store.acceptOrder' | translate}}
+          <input type="radio" name="acceptOrderType" checked value="0" id="accept-order"
+            (click)="setAcceptOrderType(0)" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+    <div class="row m-0">
+      <div class="col-md-12">
+        <label for="accept-order-mark-ready" class="radio-container">{{'admin.store.acceptOrderMarkReady' | translate}}
+          <input type="radio" name="acceptOrderType" value="1" (click)="setAcceptOrderType(1)"
+            id="accept-order-mark-ready" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+    <div class="row m-0">
+      <div class="col-md-12">
+        <label for="accept-order-estimated-time"
+          class="radio-container">{{'admin.store.acceptOrderEstimatedTime' | translate}}
+          <input 
+            type="radio" 
+            name="acceptOrderType" 
+            [checked]="acceptOrderEstimatedTime" 
+            value="2"
+            id="accept-order-estimated-time"
+            (click)="calculateEstimatedTime(minutesInput.value)" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+    <div class="row m-0 pl-35 py-1">
+      <div class="col-md-12">
+        <div class="py-1">{{'admin.store.inputMinutes'|translate}}</div>
+        <div class="d-flex flex-wrap align-items-center">
+          <form [formGroup]="minutesForm" class="d-flex flex-wrap align-items-center form-horizontal">
+            <input type="text" 
+              class="form-control input-field mr-3 px-2" 
+              [class.is-invalid]="invalidEnteredMinutes"
+              (click)="onClickMinutesInput()"
+              (input)="calculateEstimatedTime(minutesInput.value)"
+              #minutesInput 
+              formControlName="minutesInput" />
+            <span>{{'admin.store.minutes'|translate}}</span>
+          </form>
+          <div class="invalid-minutes" *ngIf="invalidEnteredMinutes">{{'admin.store.minutesValidationMsg'|translate}}</div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="py-1">{{'admin.store.selectMinutes'|translate}}</div>
+        <div class="btn-group d-flex flex-wrap">
+          <label *ngFor="let minuteItem of minutesArray" class="btn btn-primary align-middle" [(ngModel)]="minutesSelected" btnRadio="{{ minuteItem }}" tabindex="0" role="button" (click)="calculateEstimatedTime(minutesSelected, true)">{{ minuteItem }}</label>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="py-1">{{'admin.store.estimatedTime'|translate}}</div>
+        <app-go-timepicker
+          [inputTime]="estimatedTime"
+          [hoursStep]="1"
+          [minutesStep]="1"
+          [disabled]="acceptOrderType !== 2"
+          (timeChanged)="timePickerChange($event)"
+        >
+        </app-go-timepicker>
+        <div class="invalid-minutes" *ngIf="invalidEstimatedTimeSelected">
+          {{'admin.store.timeShouldFuture'|translate}}
+        </div>
+      </div>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <div class="col-lg-12 col-md-12 col-sm-12 mt-10">
+      <div class="float-right">
+        <a (click)="onNoClick()" type="button"
+          class="text-decoration-underline">{{'admin.global.cancel' | translate}}</a>
+        <button id="btnSubmit" (click)="updateStatus(order.uuid, 'CLOSED','')" [disabled]="invalidEnteredMinutes || invalidEstimatedTimeSelected"
+          class="btn btn-primary submit-btn ml-15">{{'admin.global.close' | translate}}</button>
+      </div>
+    </div>
+  </mat-dialog-actions>
+</ng-template>

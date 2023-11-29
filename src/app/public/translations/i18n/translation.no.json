@@ -1,0 +1,296 @@
+{
+	"public": {
+		"global": {
+			"poweredBy": "Leveres av",
+			"thankYou": "Takk",
+			"discount": "Rabatt",
+			"viewOrder": "Se bestilling",
+			"errorH2": "Noe gikk galt",
+			"errorUnexpected": "Noe uventet skjedde",
+			"errorExpected": "Noe uventet skjedde",
+			"errorMustSelectOne": "Du må velge en veri",
+			"errorTrialExceeded": "Denne funksjonen er ikke tilgjengelig. Forsøksrestriksjonene er overskredet",
+			"emptyCart": "Det er ingen varer i din ordre",
+			"optional": "(valgfritt)",
+			"cookies": "Denne siden bruker informasjonskapsler. Ved å fortsette å bruke denne internettsiden så samtykker du deres bruk",
+			"more": "mer",
+			"less": "mindre",
+			"chooseFrom": "Velge fra",
+			"standard": "Standard",
+			"days": {
+				"mon": "Mandag",
+				"tue": "Tirsdag",
+				"wed": "Onsdag",
+				"thu": "Torsdag",
+				"fri": "Fredag",
+				"sat": "Lørdag",
+				"sun": "Søndag"
+			},
+			"opentimelist": "Åpningstider",
+			"newVersionAvailable": "Du kjører en eldre versjon av applikasjonen. Last applikasjonen på nytt for å motta den siste oppdateringen",
+			"reloadApplication": "Last applikasjonen på nytt",
+			"poweredByGonnaOrder": "Drevet av Gonnaorder",
+			"recents": "Nylig",
+			"information": "Informasjon",
+			"yes": "Ja",
+			"no": "Nei",
+			"error": "Feil",
+			"errorQRScanner": "Det oppsto en feil med QR-skanner!",
+			"confirm": "Bekrefte"
+		},
+		"select": {
+			"selectAtLeast": "Du må velge minst {{x}}",
+			"selectAtmost": "Du kan velge maksimalt {{x}}",
+			"selectAtleastAtMost": "Du må velge minst {{x}} oh mest {{y}}",
+			"selectBetween": "Du må velge mellom {{childCategory.min}} og {{childCategory.max}} verdier."
+		},
+		"load": {
+			"loadingMessage": "Et øyeblikk ..."
+		},
+		"itemDetails": {
+			"removeFromOrder": "Slett dette fra ordren din",
+			"addToOrder": "Legg til din ordre",
+			"updateOrder": "Oppdater din ordre"
+		},
+		"checkout": {
+			"yourOrder": "Din ordre",
+			"total": "Sum",
+			"specialNote": "Legg en spesiell beskjed til din ordre",
+			"howToReceiveYourOrder": "Hvordan ønsker du å motta din ordre",
+			"option": {
+				"pickup": "Jeg plukker det opp selv",
+				"addressDelivery": "Jeg vil motta det på min addresse",
+				"serve": {
+					"location": "Jeg sitter ved et bord"
+				}
+			},
+			"errors": {
+				"couldNotWriteOrderDetails": "Vi kunne ikke lagre bestillingsdetaljene dine",
+				"fieldRequired": "Dette feltet er obligatorisk",
+				"selectFutureTime": "Velg tid i fremtiden",
+				"orderSubmissionFailed": "Bestillingen kan ikke sendes inn",
+				"ORDER_LOCATION_NOT_PRESENT": "Tabellnummer eller stedsnavn mangler",
+				"ORDER_CUSTOMER_INFO_NOT_PRESENT": "Noe nødvendig kundeinformasjon mangler",
+				"ORDER_WISH_TIME_INVALID": "Ønsket ønsket tid er i fortiden",
+				"ORDER_DELIVERY_METHOD_NOT_PRESENT": "Bestillingsleveringsmetoden mangler",
+				"ORDER_ADDRESS_DELIVERY_NOT_SUPPORTED": "Levering på adresse støttes ikke",
+				"ORDER_IN_STORE_LOCATION_DELIVERY_NOT_SUPPORTED": "Å levere ordren støttes ikke",
+				"ORDER_PICKUP_DELIVERY_NOT_SUPPORTED": "Henting av bestillingen støttes ikke",
+				"ORDER_DELIVERY_POSTCODE_NOT_SUPPORTED": "Levering med angitt postnummer støttes ikke",
+				"OPENING_TIME_SCHEDULE_ERROR": "Butikken er stengt til ønsket bestillingsønsketid",
+				"PROMOTION_NOT_ELIGIBLE": "En kampanje er valgt, men den er ikke kvalifisert",
+				"offersUnavailableExplanation": "Elementene nedenfor er ikke tilgjengelige på datoen og tidspunktet du spesifiserte. Klikk på oppdater bestillingen for å fjerne dem fra bestillingen",
+				"offersOutOfStockExplanation": "Det er ikke nok varer tilgjengelig",
+				"invalidVoucherCode": "Kupongkoden er ugyldig",
+				"INVALID_INPUT": "Feil ved behandling av oppgitte detaljer.",
+				"slotUnavailableExplanation": "Det valgte tidsrommet er ikke tilgjengelig. Velg et annet tidsspor, eller velg en annen leveringsmetode.",
+				"ORDER_STORE_SAME_DAY_ORDERING_DISABLED": "Det er ikke mulig å be om en bestilling for samme dag for denne butikken.",
+				"ORDER_STORE_ZONE_SAME_DAY_ORDERING_DISABLED": "Det er ikke mulig å be om en bestilling for samme dag for ditt område.",
+				"ORDER_STORE_CATALOG_CATEGORY_OFFER_SAME_DAY_ORDERING_DISABLED": "Det er ikke mulig å be om en bestilling for samme dag for følgende varer:",
+				"ZONE_AVAIABILITY_SCHEDULE_ERROR": "Det er ikke mulig å levere til postnummeret ditt for ønsket tid og dag.",
+				"ADDRESS_DELIVERY_HOURS_SCHEDULE_ERROR": "Det er ikke mulig å levere bestillinger til spesifikk tid og dato. Velg et alternativ.",
+				"PICKUP_HOURS_SCHEDULE_ERROR": "Det er ikke mulig å hente bestillinger til spesifikk tid og dato. Velg et alternativ.",
+				"INTERNAL_ERROR": "Uventet feil oppstod. Last inn programmet på nytt for å prøve igjen.",
+				"ORDER_MINIMUM_AMOUNT_NOT_MET": "Minimum leveringsbestillingsbeløp ikke oppfylt. Legg til en annen {{AMOUNT_MISSING}} verdi i bestillingen din for å fortsette.",
+				"paymentFailed": "Du klarte ikke å betale online ved hjelp av denne betalingsmåten. Vær så snill, prøv på nytt.",
+				"REQUIRED_PROMOTIONS_NOT_APPLIED": "Nødvendige kampanjer er ikke brukt",
+				"INVALID_CUSTOMER_VOUCHER": "Ugyldig kundekupong",
+				"slotUnavailable": "Den valgte tiden er ikke tilgjengelig",
+				"slotUnavailableExplanationWithSuggestion": "Den valgte tiden er tidligere eller ikke tilgjengelig lenger. Neste tilgjengelige tid:",
+				"socialLoginFailed": "Vi kunne ikke koble til kontoen din",
+				"customerDetailsUpdateFailed": "Kunne ikke oppdatere profildata",
+				"ORDER_DELIVERY_LOCATION_NOT_SUPPORTED": "Butikken leverer ikke til dette stedet",
+				"ORDER_GPS_COORDINATES_NOT_PRESENT": "Vi finner ikke adressen du oppga. Oppdater adressen og prøv på nytt, eller kontakt butikken.",
+				"SERVING_HOURS_SCHEDULE_ERROR": "Det er ikke mulig å sende inn bestillinger på bestemt tidspunkt og dato. Velg et alternativ.",
+				"MISSING_LOCATION_TAP_ID": "Tap-ID er obligatorisk",
+				"invalidPin": "Ugyldig kunde-pinkode"
+			},
+			"title": {
+				"serve": {
+					"known": {
+						"location": "Din ordre vil bli servert til deg"
+					},
+					"unknown": {
+						"location": "Din ordre vil bli servert til deg"
+					}
+				},
+				"pickup": "Hent ordren",
+				"addressDelivery": "Vennligst, din informasjon"
+			},
+			"yourInformationPlease": "Vennligst, din informasjon",
+			"locationCode": "Bord",
+			"yourName": "Ditt navn",
+			"email": "E-post",
+			"phoneNumber": "Telefon nummer",
+			"fullName": "Fult navn",
+			"streetAddress": "Gate adresse",
+			"zip": "Postnummer",
+			"town": "Sted / By",
+			"minimumAmount": "En minimums ordre på {{amount}} er nødvendig for levering",
+			"deliveryFee": "Leveringskostnad",
+			"deliveryFeeApplicable": "Gjeldende for ordre under {{amount}}",
+			"field": {
+				"generalValidation": "Felt formatet er ikke gyldig"
+			},
+			"acceptTerm": "Ved å fortsette godtar du {{Vilkår for bruk}} og {{Personvernregler}}",
+			"termsAndPolicy": "Ved å fortsette godtar du ",
+			"acceptTerms": {
+				"and": "og",
+				"after": ""
+			},
+			"termsOfUse": "Vilkår for bruk",
+			"privacyPolicy": "Personvernregler",
+			"yourTable": "Ditt bord",
+			"allowedCharacters": "Tillatte tegn",
+			"wishTimeHeading": "Når vil du motta bestillingen?",
+			"asSoonAsPossible": "Jeg vil motta det så snart som mulig",
+			"specifyWishTime": "Jeg vil spesifisere når jeg skal motta den",
+			"specialNoteExample": "Beskjed",
+			"cardDisabledNote": "Venligst del din ordre  når du er klar",
+			"cardHolderName": "Kortholders navn",
+			"cardNumber": "Kortnummeret ditt",
+			"cvv": "CVV",
+			"itemsOutOfStock": "Noen varer er utsolgt",
+			"floor": "Gulv",
+			"storeClosedAtOrderWishDate": "Butikken er stengt på ønsket dato eller tidspunkt",
+			"offersNotAvailableAtOrderWishDate": "Noen tilbud er ikke tilgjengelige på ønsket dato eller tidspunkt",
+			"updateOrder": "Oppdater ordren",
+			"offers": {
+				"availableQuantity": "Tilgjengelig for øyeblikket"
+			},
+			"voucherCode": "Skriv inn en kupongkode",
+			"validVoucherCode": "Kupongkoden er gyldig",
+			"yourRoom": "Rommet ditt",
+			"yourLocation": "Posisjonen din",
+			"serveOption": {
+				"location": "Jeg vil motta den på stedet",
+				"room": "jeg er på rommet mitt"
+			},
+			"social": {
+				"connect": "Koble til en sosial konto"
+			},
+			"remainingValidVoucher": "Gjenværende saldo på kupongen:",
+			"paymentsense": {
+				"declined": "Den elektroniske betalingen via Paymentsense er avvist"
+			},
+			"saveCustomerDetailsForFuture": "Lagre profildataene dine for fremtidige bestillinger",
+			"customerDetailsUpdateSuccess": "Profildataene dine er oppdatert",
+			"logout": "Logg ut",
+			"expiry": "Utløpsdato (MMÅÅ)",
+			"enterPin": "Skriv inn PIN-nummeret"
+		},
+		"payment": {
+			"payOnlineNow": "Valg betaling på nett nå",
+			"chooseYourPaymentMethod": "Velg din betalingsmetode",
+			"creditCard": "Kreditt Kort",
+			"paypal": "PayPal",
+			"submitOrder": "Send inn din ordre",
+			"proceedToPayment": "Fortsett til betaling",
+			"errorCouldNotConnect": "Vi kunne ikke koble til valgt betalingsbehandler. Gå tilbake til kassen og velg en annen betalingsmåte, eller prøv igjen senere.",
+			"enterCreditCardInfo": "Angi kreditt- eller debetkortinformasjonen din",
+			"yourOrderIsReady": "Din ordre er klar",
+			"yourOrderIsExpected": "Din ordre kan forventes",
+			"errors": {
+				"valueNotValid": "Verdien gitt er ikkje gyldig",
+				"zipNotAvailable": "Du kan ikke legge inn en online leveringsordre til dette postnummeret. Ta kontakt med butikken for mer informasjon",
+				"addressNotAvailable": "Adressen ble ikke funnet. Velg en gateadresse fra forslagene."
+			},
+			"ideal": "iDEAL",
+			"bancontact": "Bancontact",
+			"payNow": "Betal online nå",
+			"digitalWallets": "Digitale lommebøker",
+			"creditCardSecure": "Sikker kredittkortbetalinger",
+			"trustPayments": ""
+		},
+		"thankyou": {
+			"yourOrderNumber": "Ditt ordrenummer",
+			"orderStatus": "Ordrestatus",
+			"notSubmitted": "Ikke sendt inn ennå",
+			"sent": "Sendt",
+			"ready": "Klar",
+			"rejected": "Avvist",
+			"startNewOrder": "Start en ny ordre",
+			"errors": {
+				"emailProperFormat": "Venligst legg til en gyldig e-post"
+			},
+			"fiilEmailAddress": "Fyll inn din e-post adresse for å motta en kopi av din ordre",
+			"failedEmail": "E-posten kunne ikke sendes",
+			"emailSent": "E-post sendt",
+			"received": "Mottat",
+			"accepted": "Akseptert",
+			"mobileAppPromotion": "Neste gang du bestiller via GonnaOrder-mobilappen"
+		},
+		"dialog": {
+			"ok": "OK",
+			"cancel": "Avbryt"
+		},
+		"store": {
+			"currently": {
+				"closed": "Butikken er for øyeblikket stengt"
+			},
+			"time": {
+				"closed": "Butikken er stengt på det valgte tidspunktet"
+			},
+			"catalog": {
+				"offer": {
+					"characteristics": {
+						"vegetarian": "Vegetarisk",
+						"vegan": "Vegansk",
+						"celery": "Selleri",
+						"wheat": "Hvete",
+						"crustaceans": "Krepsdyr",
+						"eggs": "Egg",
+						"fish": "Fisk",
+						"lupin": "Lupin",
+						"milk": "Melk",
+						"molluscs": "Bløtdyr",
+						"mustard": "Sennep",
+						"nuts": "Nøtter",
+						"peanuts": "Peanøtter",
+						"sesame": "Sesam",
+						"soya": "Soya",
+						"sulphurDioxide": "Svoveldioksid",
+						"halal": "Halal",
+						"barley": "Bygg",
+						"spicy": ""
+					}
+				}
+			},
+			"cookie": "Dette nettstedet bruker informasjonskapsler for å forbedre opplevelsen din, men du kan velge bort det hvis du ønsker det.",
+			"dashboard": {
+				"placeOrderInOpeningTimes": ""
+			}
+		},
+		"action": {
+			"apply": "Søke om"
+		},
+		"cookie": {
+			"accept": "Aksepterer",
+			"reject": "Avstå",
+			"readMore": "Les mer"
+		},
+		"connect": {
+			"social": {
+				"google": "Koble til Google",
+				"facebook": "Koble til Facebook"
+			}
+		},
+		"dashboard": {
+			"basket": {
+				"emptyCart": "Handlekurven din er tom",
+				"proceed": "Fortsette"
+			}
+		},
+		"main": {
+			"typeUrl": "Skriv inn en URL eller et butikknavn",
+			"invalidUrl": "URL er ugyldig",
+			"scanQRCode": "Skann en QR-kode",
+			"storeNotFound": "Butikken ble ikke funnet",
+			"storeSaved": "Lagringsinformasjon er lagret!",
+			"navigateStoreConfirm": "Navigere til butikken?"
+		},
+		"recents": {
+			"nothingFound": "Ingenting funnet her"
+		}
+	}
+}
